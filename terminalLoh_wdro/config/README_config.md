@@ -88,3 +88,17 @@ These probabilities are transparent and reproducible engineering candidates.
 They have not been calibrated against real typhoon observations, have not been
 accepted as final parameters, and are not connected to the formal path
 generator yet.
+
+### Run-002 Extension
+
+Run-002 preserves the run-001 adjacent intensity probabilities and adds rare
+two-level transitions. For `a=3:6`, `P(a->a-2)=0.02`; for `a=2:4`,
+`P(a->a+2)=0.005`. These probabilities are deducted only from the stay
+probability. State `a=1` remains absorbing, and two-level enhancement remains
+less likely than two-level weakening.
+
+The run-002 lfw kernel is backward/stay/forward-one/forward-two =
+`0.05/0.18/0.75/0.02`. Invalid boundary probability is added to the stay
+state, producing the exact rows documented in the run-002 audit. The loc and
+Window candidate files are unchanged from run-001. Run-001 remains archived as
+the adjacent-transition comparison case.

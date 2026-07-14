@@ -1,0 +1,11 @@
+key,value,expected,pass
+W,3,3,1
+slice_duration_h,1,1,1
+Hres_total_h,3,3,1
+lfw_initial,0,0,1
+lfw_min,0,0,1
+lfw_max,3,3,1
+y_base,-89.9999703886000,-89.9999703886000,1
+Wstep,40,40,1
+P,20,20,1
+P_role,legacy_diagnostic_sample_count,legacy_diagnostic_sample_count,1

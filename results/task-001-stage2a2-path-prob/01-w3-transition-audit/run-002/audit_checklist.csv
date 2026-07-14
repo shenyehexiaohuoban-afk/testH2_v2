@@ -1,0 +1,49 @@
+check_id,category,description,passed,observed,expected,required
+FILE-01,files,"legacy intensity required fields",1,"present","present",1
+FILE-02,files,"legacy location required fields",1,"present","present",1
+FILE-03,files,"legacy window required fields",1,"present","present",1
+FILE-04,files,"candidate required fields",1,"present","present",1
+FILE-05,files,"candidate primary keys unique",1,"unique","unique",1
+FILE-06,files,"all candidate numeric values finite",1,"finite numeric whitelist; P_role checked as text","finite numeric whitelist; no numeric check on P_role",1
+INT-PROB-01,probability,"INT-PROB probabilities are nonnegative",1,"0.005",">=0",1
+INT-PROB-02,probability,"INT-PROB probabilities do not exceed 1",1,"1","<=1",1
+INT-PROB-03,probability,"INT-PROB row sums equal 1",1,"0","<=1e-10",1
+LOC-PROB-01,probability,"LOC-PROB probabilities are nonnegative",1,"0.04",">=0",1
+LOC-PROB-02,probability,"LOC-PROB probabilities do not exceed 1",1,"0.4375","<=1",1
+LOC-PROB-03,probability,"LOC-PROB row sums equal 1",1,"1.11022302462516e-15","<=1e-10",1
+LFW-PROB-01,probability,"LFW-PROB probabilities are nonnegative",1,"0.02",">=0",1
+LFW-PROB-02,probability,"LFW-PROB probabilities do not exceed 1",1,"0.95","<=1",1
+LFW-PROB-03,probability,"LFW-PROB row sums equal 1",1,"0","<=1e-10",1
+INT-01,intensity,"a=1 is absorbing",1,"1->1","1->1 with probability 1",1
+INT-02,intensity,"intensity changes by at most two levels",1,"2","<=2",1
+INT-03,intensity,"a=2:5 enhancement probability reduced",1,"all reduced","candidate up < legacy up",1
+INT-04,intensity,"legacy positive enhancement remains positive",1,"all positive",">0 when legacy >0",1
+INT-05,intensity,"a=2:5 weakening probability increased",1,"all increased","candidate down > legacy down",1
+INT-06,intensity,"run-001 adjacent probabilities retained and long jumps deducted from stay",1,"formula match","exact within tolerance",1
+INT-07,intensity,"a=6 has only transitions to 4, 5, and 6",1,"4,5,6","4,5,6",1
+INT-08,intensity,"a=6 probabilities are 0.02, 0.60, and 0.38",1,"0.02,0.60,0.38","0.02,0.60,0.38",1
+INT-09,intensity,"two-level weakening is 0.02 for a=3:6 only",1,"0.02 for a=3:6","0.02 for a=3:6",1
+INT-10,intensity,"two-level enhancement is 0.005 for a=2:4 only",1,"0.005 for a=2:4","0.005 for a=2:4",1
+INT-11,intensity,"two-level enhancement is lower than two-level weakening",1,"0.005","<0.02",1
+INT-12,intensity,"serialized intensity matrix exactly matches run-002 candidate",1,"exact matrix","exact matrix",1
+LOC-01,location,"loc states cover -2:10",1,"-2:10","-2:10",1
+LOC-02,location,"loc jumps do not exceed 3",1,"3","<=3",1
+LOC-03,location,"internal loc kernel ordering",1,"all internal states","near > far and adjacent > stay",1
+LOC-04,location,"loc targets remain in -2:10",1,"-2:10","-2:10",1
+LOC-05,location,"boundary rows equal deletion plus renormalization",1,"exact generated matrix","kernel truncation and renormalization",1
+LOC-06,location,"no boundary probability accumulation",1,"0.333333333333333","no clamping; renormalization only",1
+LFW-01,lfw,"lfw states cover 0:3",1,"0:3","0:3",1
+LFW-02,lfw,"lfw transitions use only -1, 0, +1, or +2",1,"-1,0,1,2","-1,0,1,2",1
+LFW-03,lfw,"lfw rows match the specified run-002 probabilities",1,"all four rows exact","specified run-002 matrix",1
+LFW-04,lfw,"lfw invalid boundary mass is added to stay",1,"exact generated matrix","invalid mass added to stay",1
+LFW-05,lfw,"lfw targets remain in 0:3",1,"0:3","0:3",1
+LFW-06,lfw,"y = y_base + lfw*Wstep",1,"7.105427357601e-15","max error <= 1e-09",1
+LFW-07,lfw,"nominal path 0->1->2->3 maps to approximately -90,-50,-10,30",1,"-89.999970,-49.999970,-9.999970,30.000030","approximately -90,-50,-10,30",1
+WIN-01,window,"W=3",1,"3","3",1
+WIN-02,window,"slice duration is 1 hour",1,"1","1",1
+WIN-03,window,"Hres total is 3 hours",1,"3","3",1
+WIN-04,window,"lfw initial is 0",1,"0","0",1
+WIN-05,window,"Wstep is 40",1,"40","40",1
+WIN-06,window,"P role is legacy diagnostic sample count",1,"legacy_diagnostic_sample_count","legacy_diagnostic_sample_count",1
+WIN-07,window,"all required window values match",1,"10","10",1
+PROTECT-01,protection,"legacy configurations unchanged by bytes and SHA-256",1,"14ad7472c97451555c27344506763b83b2e978ee3bc9a67e9f4540c0de301957 | 0790ada7e5ca84eb087ffa77f8cdca0b9ff27dafb1e17505911600b1850e7687 | 2a33bf43e08c8bceea32b569adc31e046cedc6ea16e90cff5c1cc114b75287a6","14ad7472c97451555c27344506763b83b2e978ee3bc9a67e9f4540c0de301957 | 0790ada7e5ca84eb087ffa77f8cdca0b9ff27dafb1e17505911600b1850e7687 | 2a33bf43e08c8bceea32b569adc31e046cedc6ea16e90cff5c1cc114b75287a6",1

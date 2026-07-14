@@ -828,3 +828,16 @@
 - 本地原始输出目录：`terminalLoh_wdro/output/stage2a2_W3_transition_audit/run-001/`，共 12 个文件、10895 字节。
 - 候选概率是透明、可复现的工程候选，尚未经过真实台风数据校准，也尚未被用户接受为最终参数。
 - 未接入正式路径生成器；未运行 Foundation、Persistence、B3、WDRO、Gurobi、MSP 或 OOS evaluation；未修改 legacy 配置、Vmax 映射、Rmax 支持点或径向风场公式。
+
+### 2026-07-14 - task-001 step-01 W3 扩展转移审计 run-002
+
+- 当前分支：`task/001-stage2a2-path-prob`。保留 `run-001` 原始输出和 Git 归档，不覆盖、不删除。
+- 修改强度候选矩阵：保留 run-001 的相邻转移概率；`a=3:6` 新增 `a->a-2=0.02`，`a=2:4` 新增 `a->a+2=0.005`，新增概率仅从保持分支扣除；`a=1` 继续吸收。
+- 修改 lfw 候选矩阵：基础后退/保持/前进一级/前进两级为 `0.05/0.18/0.75/0.02`；边界无效概率并入保持，精确得到用户指定的四行概率。
+- loc 和 Window 候选保持 run-001 内容不变；三个 legacy 配置运行前后 SHA-256 完全一致。
+- 更新审计入口以允许强度最多变化两级、lfw 变化 `-1/0/+1/+2`，并逐行验证强度跨两级概率、lfw 精确概率及所有行和。
+- MATLAB 实际命令：`cd('C:/Users/chaos/Desktop/biye/test/testH2_v2'); run('terminalLoh_wdro/src/run_stage2a2_W3_transition_audit_h2.m');`。
+- run-002 最终审计：PASS=48、FAIL=0；最大 loc 自循环概率仍为 `0.333333333333`，对应 `loc=10`。
+- 本地输出目录：`terminalLoh_wdro/output/stage2a2_W3_transition_audit/run-002/`；12 个文件、11809 字节，最大文件 `audit_checklist.csv` 为 4626 字节。
+- 候选概率仍是未经过真实台风数据校准、尚未被用户接受为最终参数的工程候选；尚未接入正式路径生成。
+- 未运行 Foundation、Persistence、B3、WDRO、Gurobi、MSP 或 OOS evaluation；未修改 `.gitignore`、main、legacy 配置、Vmax/Rmax 或径向风场公式。
