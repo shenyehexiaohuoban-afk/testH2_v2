@@ -1,0 +1,88 @@
+# Generated research and optimization outputs
+/terminalLoh_wdro/output/
+/output_h2/
+
+# Archives and media are local transfer/presentation artifacts
+*.zip
+*.rar
+*.7z
+*.tar
+*.tar.gz
+*.tgz
+*.gz
+*.bz2
+*.xz
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.wmv
+*.webm
+*.mpeg
+*.mpg
+*.m4v
+
+# MATLAB generated and local working files
+*.asv
+*.autosave
+*.m~
+*.mlx~
+*.mexw32
+*.mexw64
+*.mexa64
+*.mexmaci64
+slprj/
+codegen/
+
+# Python and notebook caches
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+
+# Editor, operating-system, and temporary files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.tmp
+*.temp
+*.bak
+*.orig
+*.rej
+~$*
+
+# Local logs and scratch directories
+*.log
+/tmp/
+/temp/
+/cache/
+/.cache/
+
+# Local credentials, licenses, and secrets
+.env
+.env.*
+!.env.example
+.envrc
+.netrc
+.npmrc
+.pypirc
+*.lic
+*.license
+*.pem
+*.pfx
+*.p12
+*.key
+*.crt
+*.cer
+id_rsa
+id_ed25519
+licenses/
+secrets/
+credentials/
+
+# Source, configuration, documentation, checks, and required input data are
+# intentionally not excluded. In particular, do not add broad rules for
+# MATLAB files, CSV files, MAT inputs, or FIG files.
