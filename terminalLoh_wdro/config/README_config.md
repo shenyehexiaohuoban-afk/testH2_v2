@@ -49,3 +49,42 @@ Downstream WDRO consequence samples should keep reachability `A` binary:
 Roads that remain passable but become slow should be represented by a larger
 service cost / impedance / travel time `C`, not by fractional values such as
 `A=0.3`.
+
+## Post-Landfall W3 Transition Candidates
+
+The three legacy files above remain unchanged and are retained for comparison.
+Task-001 step-01 adds four separate engineering-candidate files:
+
+1. `lookahead_intensity_postlandfall_W3.csv`
+2. `lookahead_location_postlandfall_W3.csv`
+3. `lookahead_lfw_postlandfall_W3.csv`
+4. `lookahead_window_postlandfall_W3.csv`
+
+The post-landfall intensity candidate reduces each existing `a=2:5`
+enhancement probability to 20% of its legacy value. The removed probability
+mass is allocated two-thirds to weakening and one-third to staying at the same
+intensity. Enhancement remains possible but less likely. State `a=1` remains
+absorbing, while `a=6` uses `6->5=0.60` and `6->6=0.40`.
+
+The loc candidate uses the displacement kernel
+`[-3,-2,-1,0,+1,+2,+3]` with probabilities
+`[0.04,0.10,0.22,0.18,0.28,0.13,0.05]`. Most mass is assigned to adjacent
+states, and farther moves in the same direction are less likely. Invalid
+boundary targets are deleted and the remaining mass is renormalized; no
+probability is clamped onto a boundary state.
+
+The lfw candidate uses states `0:3` and a backward/stay/forward kernel of
+`0.10/0.20/0.70`. Boundary rows delete invalid targets and renormalize the
+remaining mass. A backward lfw transition is spatial trajectory variation; it
+does not reverse time or restore previously damaged equipment.
+
+`W1`, `W2`, and `W3` are consecutive one-hour time windows. They are not fixed
+lfw states. The actual x coordinate is determined by loc, while the actual y
+coordinate is determined by
+`y = -89.9999703886 + lfw * 40`. The window value `P=20` is only the legacy
+diagnostic sample count and is not the complete path count.
+
+These probabilities are transparent and reproducible engineering candidates.
+They have not been calibrated against real typhoon observations, have not been
+accepted as final parameters, and are not connected to the formal path
+generator yet.

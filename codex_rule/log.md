@@ -813,3 +813,18 @@
 - 在备份父目录新增 `VERSION_INFO.txt`，记录版本 `foundation-persistence-v2-baseline`、Foundation + Persistence v2 已验收、`Wstep=40`、`Hres=3 h`、主损坏口径 `persistent_fixed_resistance`、下一阶段 Stage2A2、GitHub 初始建库前完整备份及源/目标目录。
 - robocopy 日志位于 `D:\biye_backup\2026-07-14_foundation-persistence-v2-baseline\ROBOCOPY_LOG.txt`。本日志更新后再次使用相同非镜像参数增量同步，并执行最终文件数、字节数、目录和关键路径复核。
 - 明确禁止项：未压缩备份，未删除、移动或重命名源项目，未修改模型、代码、参数、数据或输出，未执行 Git、MATLAB、Gurobi、WDRO 或 MSP，未进入 GitHub 建库或 Stage2A2。
+
+### 2026-07-14 - task-001 step-01 W3 候选转移矩阵与审计 run-001
+
+- 任务：`task-001-stage2a2-path-prob`；步骤：`01-w3-transition-audit`；运行：`run-001`；代码分支：`task/001-stage2a2-path-prob`。
+- MATLAB 实际命令：`cd('C:/Users/chaos/Desktop/biye/test/testH2_v2'); run('terminalLoh_wdro/src/run_stage2a2_W3_transition_audit_h2.m');`。
+- 新增配置：`lookahead_intensity_postlandfall_W3.csv`、`lookahead_location_postlandfall_W3.csv`、`lookahead_lfw_postlandfall_W3.csv`、`lookahead_window_postlandfall_W3.csv`。
+- 新增审计入口：`terminalLoh_wdro/src/run_stage2a2_W3_transition_audit_h2.m`；修改配置说明：`terminalLoh_wdro/config/README_config.md`。
+- 强度候选由 legacy 矩阵自动计算：`a=2:5` 增强概率乘 0.2，被削减质量按 2/3 加到减弱、1/3 加到维持；`a=1` 吸收，`a=6` 使用 0.60/0.40。
+- loc 状态为 `-2:10`，基础位移核为 `[-3:0.04,-2:0.10,-1:0.22,0:0.18,+1:0.28,+2:0.13,+3:0.05]`；边界删除无效目标后重新归一化，不进行边界堆积。最大自循环概率为 `0.333333333333`，对应 `loc=10`。
+- lfw 状态为 `0:3`，基础后退/停留/前进概率为 `0.10/0.20/0.70`；`y=-89.9999703886+lfw*40`。W1/W2/W3 是连续三个 1 h 时间窗口，不固定对应某个 lfw。
+- 首次 run-001 因 Window CSV 回读时 `value` 被自动推断为数值，得到 PASS=41、FAIL=3；仅修复审计脚本的双 string 导入及数值/文本键分离检查，未改变任何候选概率或矩阵内容。
+- 最终重审计 PASS=44、FAIL=0；原失败项 `FILE-06`、`WIN-06`、`WIN-07` 全部通过。三个 legacy 配置运行前后字节和 SHA-256 完全一致。
+- 本地原始输出目录：`terminalLoh_wdro/output/stage2a2_W3_transition_audit/run-001/`，共 12 个文件、10895 字节。
+- 候选概率是透明、可复现的工程候选，尚未经过真实台风数据校准，也尚未被用户接受为最终参数。
+- 未接入正式路径生成器；未运行 Foundation、Persistence、B3、WDRO、Gurobi、MSP 或 OOS evaluation；未修改 legacy 配置、Vmax 映射、Rmax 支持点或径向风场公式。

@@ -1,0 +1,15 @@
+key,value
+W,3
+slice_duration_h,1
+Hres_total_h,3
+lfw_initial,0
+lfw_min,0
+lfw_max,3
+y_base,-89.9999703886000
+Wstep,40
+P,20
+P_role,legacy_diagnostic_sample_count
+loc_min,1
+loc_max,7
+halo_width,3
+lf_terminal,7
