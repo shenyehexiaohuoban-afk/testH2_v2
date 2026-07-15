@@ -1,0 +1,11 @@
+Recommendation criteria:
+p95_max_abs_error <= 0.02
+worst_max_abs_error <= 0.05
+mean_joint_tv <= 0.03
+
+N=15000: p95=0.0074, worst=0.0154716666667, mean_joint_tv=0.0296189473265, meets_all=1
+N=20000: p95=0.00643333333333, worst=0.014045, mean_joint_tv=0.0256099632021, meets_all=1
+N=30000: p95=0.00549612577778, worst=0.0121283333333, mean_joint_tv=0.0208151363803, meets_all=1
+
+recommended_N=15000
+main_sample_seed=20260706

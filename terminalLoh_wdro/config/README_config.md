@@ -119,3 +119,19 @@ was `0.0359742731`, above the required `0.03`. Thresholds were not relaxed, so
 no `main_path_samples.csv` was generated. The run is an ordinary sampling
 audit only; it does not perform risk screening, tail enrichment, B3, WDRO,
 Gurobi, or MSP execution.
+
+### Run-002 Extension
+
+Run-002 retains the same matrices, five convergence seeds, exact-distribution
+method, and fixed thresholds. It tests nested samples at
+`N=[15000,20000,30000]` and adds empirical transition-frequency checks against
+all three configured matrices. The first passing sample size is `N=15000`,
+with p95 maximum absolute error `0.0074`, worst maximum absolute error
+`0.0154716667`, and mean joint-state total variation `0.0296189473`.
+
+The largest empirical transition-probability error at the recommended N is
+`0.00206671047`; no unsupported transition is observed. The fixed seed
+`20260706` produces 15,000 paths for each of the 35 initial states, or 525,000
+rows total. The resulting `main_path_samples.csv` is 64,519,633 bytes, so it is
+kept in the ignored local output directory and represented in the Git archive
+by `LARGE_FILE_MANIFEST.md` with its row count, size, and SHA-256.

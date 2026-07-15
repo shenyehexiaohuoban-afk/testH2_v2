@@ -854,3 +854,16 @@
 - 没有候选 N 同时满足 `p95<=0.02`、`worst<=0.05`、`mean_joint_tv<=0.03`。阈值未放宽，`recommended_N=NONE`，因此按任务要求未生成 `main_path_samples.csv`。
 - 本地原始结果：`terminalLoh_wdro/output/stage2a2_W3_path_sampling/run-001/`；Git 归档：`results/task-001-stage2a2-path-prob/02-w3-main-path-sampling/run-001/`。两处均为 8 个文件、2354063 字节，最大文件 `exact_state_distributions.csv` 为 1324844 字节，无文件超过 50 MiB。
 - 明确禁止项：未运行风险筛查、尾部加密、正式路径筛选、B3、WDRO、Gurobi、MSP、Foundation 或 Persistence；未修改 main、legacy 配置和默认保护模块。
+
+### 2026-07-15 - task-001 step-02A W3 路径抽样收敛审计 run-002
+
+- 当前分支：`task/001-stage2a2-path-prob`；在现有审计脚本中将运行配置切换为 `run-002`，测试 `N=[15000,20000,30000]`，种子保持 `20260721:20260725`，较小 N 使用同一批 30000 条最大样本的嵌套前缀。
+- 保持三项标准不变：p95 最大绝对误差不超过 0.02、最坏最大绝对误差不超过 0.05、平均联合状态 TV 不超过 0.03；没有放宽阈值。
+- MATLAB 实际命令：`cd('C:/Users/chaos/Desktop/biye/test/testH2_v2'); run('terminalLoh_wdro/src/run_stage2a2_W3_path_sampling_convergence_h2.m');`。运行成功，仅出现既有 MATLAB 用户搜索路径 warning。
+- 自动审计结果：PASS=15、FAIL=0；三张候选矩阵运行前后 SHA-256 和字节一致，run-001 的 8 个文件运行前后快照一致。
+- 收敛结果：N=15000/20000/30000 的 p95 最大绝对误差分别为 `0.0074/0.0064333333/0.0054961258`；最坏最大绝对误差为 `0.0154716667/0.014045/0.0121283333`；平均联合状态 TV 为 `0.0296189473/0.0256099632/0.0208151364`。三个 N 均通过，按最小通过规则推荐 `N=15000`。
+- 新增转移频率诊断：推荐 N 下 intensity/loc/lfw 的最大概率误差分别为 `0.0006246013/0.0020667105/0.0005007707`；所有 from 状态均有样本，配置概率为 0 的转移观测数为 0。
+- 使用固定种子 `20260706` 为 35 个初始状态各生成 15000 条主体完整路径，共 525000 行。`main_path_samples.csv` 为 64519633 字节（61.531 MiB），SHA-256 为 `972a8c58620c09ac19cfcfb29e8d6a3ed2819ef1a22dbd522043436418eb805d`。
+- 因主体路径单文件超过 50 MiB，只保留在 `terminalLoh_wdro/output/stage2a2_W3_path_sampling/run-002/`；Git 归档 `results/task-001-stage2a2-path-prob/02-w3-main-path-sampling/run-002/` 不包含该 CSV，使用 `LARGE_FILE_MANIFEST.md` 记录行数、大小和哈希。
+- 本地 run-002 共 13 个文件、66581362 字节；归档包含其余 12 个诊断文件和 1 个大文件清单。未覆盖 run-001。
+- 明确禁止项：未运行尾部补充、风险筛查、B3、WDRO、Gurobi、MSP、Foundation 或 Persistence；未修改三张候选矩阵、legacy 配置、`.gitignore`、main 或默认保护模块。

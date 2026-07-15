@@ -1,0 +1,6 @@
+main_path_generated=true
+recommended_N=15000
+file=C:\Users\chaos\Desktop\biye\test\testH2_v2\terminalLoh_wdro\output\stage2a2_W3_path_sampling\run-002\main_path_samples.csv
+rows=525000
+size_bytes=64519633
+sha256=972a8c58620c09ac19cfcfb29e8d6a3ed2819ef1a22dbd522043436418eb805d

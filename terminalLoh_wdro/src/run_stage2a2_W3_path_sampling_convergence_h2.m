@@ -9,11 +9,14 @@ addpath(fullfile(rootDir, 'fa_h2', 'fuzhu', 'terminalLoh_windmc'));
 
 taskId = "task-001";
 stepId = "02-w3-main-path-sampling";
-runId = "run-001";
+runId = "run-002";
 runCommand = "cd('C:/Users/chaos/Desktop/biye/test/testH2_v2'); " + ...
     "run('terminalLoh_wdro/src/run_stage2a2_W3_path_sampling_convergence_h2.m');";
 outputDir = fullfile(moduleDir, 'output', ...
+    'stage2a2_W3_path_sampling', 'run-002');
+run001Dir = fullfile(moduleDir, 'output', ...
     'stage2a2_W3_path_sampling', 'run-001');
+run001SummaryFile = fullfile(run001Dir, 'convergence_summary.csv');
 configDir = fullfile(moduleDir, 'config');
 intensityFile = fullfile(configDir, ...
     'lookahead_intensity_postlandfall_W3.csv');
@@ -26,7 +29,7 @@ windowFile = fullfile(configDir, ...
 nearInputFile = fullfile(rootDir, 'data', 'yuanqi', ...
     'near_stage_msp_input.mat');
 
-NValues = [500, 1000, 2000, 5000, 10000];
+NValues = [15000, 20000, 30000];
 baseSeeds = 20260721:20260725;
 mainSeed = 20260706;
 aInitialValues = 2:6;
@@ -40,13 +43,15 @@ worstThreshold = 0.05;
 meanJointTvThreshold = 0.03;
 
 requiredFiles = {intensityFile, locationFile, lfwFile, windowFile, ...
-    nearInputFile};
+    nearInputFile, run001SummaryFile};
 for ii = 1:numel(requiredFiles)
     if ~isfile(requiredFiles{ii})
         error('run_stage2a2_W3_path_sampling_convergence_h2:MissingInput', ...
             'Missing required input: %s', requiredFiles{ii});
     end
 end
+
+run001SnapshotBefore = snapshot_directory(run001Dir);
 if isfolder(outputDir)
     existing = dir(outputDir);
     existing = existing(~ismember({existing.name},{'.','..'}));
@@ -193,6 +198,9 @@ empA=cell(nN,nInitial,nStages,nSeeds);
 empLoc=cell(nN,nInitial,nStages,nSeeds);
 empLfw=cell(nN,nInitial,nStages,nSeeds);
 empJoint=cell(nN,nInitial,nStages,nSeeds);
+transitionCountsA=repmat({zeros(nA)},nN,1);
+transitionCountsLoc=repmat({zeros(nLoc)},nN,1);
+transitionCountsLfw=repmat({zeros(nLfw)},nN,1);
 errorRows=cell(nN*nInitial*nStages*nSeeds*4,12);
 rr=0;
 for seedIdx=1:nSeeds
@@ -207,6 +215,13 @@ for seedIdx=1:nSeeds
         lfwPath=sample_chain(PLfw,lfwInitial+1,rand(maxN,W));
         for nIdx=1:nN
             N=NValues(nIdx);
+            transitionCountsA{nIdx}=transitionCountsA{nIdx}+ ...
+                count_chain_transitions(a0,aPath(1:N,:),nA);
+            transitionCountsLoc{nIdx}=transitionCountsLoc{nIdx}+ ...
+                count_chain_transitions(loc0-locStates(1)+1, ...
+                locPath(1:N,:),nLoc);
+            transitionCountsLfw{nIdx}=transitionCountsLfw{nIdx}+ ...
+                count_chain_transitions(lfwInitial+1,lfwPath(1:N,:),nLfw);
             for ss=1:nStages
                 dA=accumarray(aPath(1:N,ss),1,[nA,1])/N;
                 dLoc=accumarray(locPath(1:N,ss),1,[nLoc,1])/N;
@@ -275,6 +290,17 @@ seedStability=cell2table(stabilityRows,'VariableNames', ...
     'mean_max_abs_error','std_max_abs_error','mean_tv_to_exact', ...
     'std_tv_to_exact','seed_count'});
 
+%% Empirical transition frequencies versus the three configured matrices.
+[transitionA,transitionSummaryA]=build_transition_frequency_tables( ...
+    "intensity",PA,aStates,transitionCountsA,NValues);
+[transitionLoc,transitionSummaryLoc]=build_transition_frequency_tables( ...
+    "loc",PLoc,locStates,transitionCountsLoc,NValues);
+[transitionLfw,transitionSummaryLfw]=build_transition_frequency_tables( ...
+    "lfw",PLfw,lfwStates,transitionCountsLfw,NValues);
+transitionFrequencyComparison=[transitionA;transitionLoc;transitionLfw];
+transitionFrequencySummary=[transitionSummaryA;transitionSummaryLoc; ...
+    transitionSummaryLfw];
+
 %% Aggregate recommendation criteria.
 summaryRows=cell(nN,13);
 recommendedN=NaN;
@@ -308,9 +334,45 @@ if ~isnan(recommendedN)
     convergenceSummary.recommended(convergenceSummary.N==recommendedN)=true;
 end
 
+run001Summary=readtable(run001SummaryFile);
+requiredComparisonVars={'N','p95_max_abs_error','worst_max_abs_error', ...
+    'mean_joint_tv','meets_all_criteria','recommended'};
+require_vars(run001Summary,requiredComparisonVars,run001SummaryFile);
+run001RunIds=repmat("run-001",height(run001Summary),1);
+run002RunIds=repmat("run-002",height(convergenceSummary),1);
+runComparison=table([run001RunIds;run002RunIds], ...
+    [double(run001Summary.N);double(convergenceSummary.N)], ...
+    [double(run001Summary.p95_max_abs_error); ...
+    double(convergenceSummary.p95_max_abs_error)], ...
+    [double(run001Summary.worst_max_abs_error); ...
+    double(convergenceSummary.worst_max_abs_error)], ...
+    [double(run001Summary.mean_joint_tv); ...
+    double(convergenceSummary.mean_joint_tv)], ...
+    [logical(run001Summary.meets_all_criteria); ...
+    logical(convergenceSummary.meets_all_criteria)], ...
+    [logical(run001Summary.recommended); ...
+    logical(convergenceSummary.recommended)], ...
+    'VariableNames',{'run_id','N','p95_max_abs_error', ...
+    'worst_max_abs_error','mean_joint_tv','meets_all_criteria', ...
+    'recommended'});
+
+if isnan(recommendedN)
+    transitionAuditN=max(NValues);
+else
+    transitionAuditN=recommendedN;
+end
+transitionAuditRows=transitionFrequencySummary( ...
+    transitionFrequencySummary.N==transitionAuditN,:);
+transitionMaxError=max(transitionAuditRows.max_abs_error);
+transitionFrequencyPass=all(transitionAuditRows.all_from_states_observed) && ...
+    all(transitionAuditRows.zero_probability_leak_count==0) && ...
+    transitionMaxError<=p95Threshold;
+
 %% Generate the main sample only if a recommendation exists.
 mainPathFile=fullfile(outputDir,'main_path_samples.csv');
 mainRowCount=0;
+mainFileBytes=0;
+mainFileHash="";
 if ~isnan(recommendedN)
     rowsPerInitial=recommendedN;
     mainRows=zeros(nInitial*rowsPerInitial,23);
@@ -348,6 +410,10 @@ if ~isnan(recommendedN)
         'y_W1','y_W2','y_W3','path_probability'});
     writetable(mainPathSamples,mainPathFile);
     mainRowCount=height(mainPathSamples);
+    clear mainPathSamples mainRows
+    mainFileInfo=dir(mainPathFile);
+    mainFileBytes=mainFileInfo.bytes;
+    mainFileHash=sha256_file(mainPathFile);
 end
 
 %% Matrix protection and audit checklist.
@@ -359,6 +425,8 @@ for ii=1:3
         matrixHashAfter(ii)==matrixHashBefore(ii) && ...
         isequal(read_file_bytes(matrixFiles{ii}),matrixBytesBefore{ii});
 end
+run001SnapshotAfter=snapshot_directory(run001Dir);
+run001Unchanged=isequal(run001SnapshotBefore,run001SnapshotAfter);
 checkRows={};
 checkRows=add_check(checkRows,"AUDIT-01","three matrices row-stochastic", ...
     max([aRowError,locRowError,lfwRowError])<=rowTolerance, ...
@@ -399,6 +467,19 @@ checkRows=add_check(checkRows,"AUDIT-11", ...
     (~isnan(recommendedN)&&isfile(mainPathFile)&& ...
     mainRowCount==nInitial*recommendedN),mainRowCount, ...
     conditional_expected_rows(recommendedN,nInitial));
+checkRows=add_check(checkRows,"AUDIT-12","run-001 output unchanged", ...
+    run001Unchanged,height(run001SnapshotAfter),height(run001SnapshotBefore));
+checkRows=add_check(checkRows,"AUDIT-13", ...
+    "transition frequencies have no unsupported transitions", ...
+    all(transitionAuditRows.zero_probability_leak_count==0), ...
+    sum(transitionAuditRows.zero_probability_leak_count),0);
+checkRows=add_check(checkRows,"AUDIT-14", ...
+    "transition frequencies match configured matrices at audit N", ...
+    transitionFrequencyPass,transitionMaxError,p95Threshold);
+checkRows=add_check(checkRows,"AUDIT-15","run-001 and run-002 compared", ...
+    all(ismember(["run-001","run-002"],unique(runComparison.run_id))) && ...
+    height(runComparison)==height(run001Summary)+height(convergenceSummary), ...
+    height(runComparison),height(run001Summary)+height(convergenceSummary));
 auditChecklist=cell2table(checkRows,'VariableNames', ...
     {'check_id','description','passed','observed','expected','required'});
 passCount=sum(auditChecklist.passed);
@@ -413,17 +494,26 @@ writetable(exactStateDistributions, ...
     fullfile(outputDir,'exact_state_distributions.csv'));
 writetable(samplingError, ...
     fullfile(outputDir,'sampling_error_by_initial_state.csv'));
+writetable(transitionFrequencyComparison, ...
+    fullfile(outputDir,'transition_frequency_comparison.csv'));
+writetable(transitionFrequencySummary, ...
+    fullfile(outputDir,'transition_frequency_summary.csv'));
+writetable(runComparison,fullfile(outputDir,'run001_run002_comparison.csv'));
 writetable(auditChecklist,fullfile(outputDir,'audit_checklist.csv'));
 write_recommendation(fullfile(outputDir,'recommended_sample_size.txt'), ...
     recommendedN,convergenceSummary,p95Threshold,worstThreshold, ...
     meanJointTvThreshold,mainSeed);
+write_main_path_info(fullfile(outputDir,'main_path_file_info.txt'), ...
+    mainPathFile,mainRowCount,mainFileBytes,mainFileHash,recommendedN);
 write_audit_summary(fullfile(outputDir,'audit_summary.md'),taskId,stepId, ...
     runId,runCommand,auditStatus,passCount,failCount,recommendedN, ...
     convergenceSummary,NValues,baseSeeds,mainSeed,yBase,Wstep, ...
-    matricesUnchanged,mainRowCount);
+    matricesUnchanged,mainRowCount,transitionAuditN,transitionAuditRows, ...
+    run001Unchanged);
 write_manifest(fullfile(outputDir,'run_manifest.txt'),taskId,stepId,runId, ...
     runCommand,auditStatus,passCount,failCount,matrixFiles,matrixHashBefore, ...
-    matrixHashAfter,recommendedN,mainRowCount,outputDir);
+    matrixHashAfter,recommendedN,mainRowCount,mainFileBytes,mainFileHash, ...
+    transitionAuditN,transitionMaxError,run001Unchanged,outputDir);
 
 fprintf('\nStage2A2 W3 main path sampling convergence audit finished.\n');
 fprintf('Status: %s; PASS=%d; FAIL=%d\n',auditStatus,passCount,failCount);
@@ -463,6 +553,57 @@ if maxRowError>tol || any(sum(P,2)==0)
     error('run_stage2a2_W3_path_sampling_convergence_h2:BadRowSum', ...
         'Transition row sum error %.12g exceeds tolerance.',maxRowError);
 end
+end
+
+function counts=count_chain_transitions(initialIndex,paths,stateCount)
+counts=zeros(stateCount);
+previous=repmat(initialIndex,size(paths,1),1);
+for ss=1:size(paths,2)
+    current=paths(:,ss);
+    counts=counts+accumarray([previous,current],1, ...
+        [stateCount,stateCount]);
+    previous=current;
+end
+end
+
+function [details,summary]=build_transition_frequency_tables( ...
+    matrixName,P,states,countCells,NValues)
+nN=numel(NValues);
+nStates=numel(states);
+detailRows=cell(nN*nStates*nStates,9);
+summaryRows=cell(nN,9);
+rr=0;
+for nIdx=1:nN
+    counts=double(countCells{nIdx});
+    fromCounts=sum(counts,2);
+    empirical=nan(size(P));
+    observed=fromCounts>0;
+    empirical(observed,:)=counts(observed,:)./fromCounts(observed);
+    absError=abs(empirical-P);
+    rowTv=0.5*sum(absError,2);
+    zeroLeak=(P==0 & counts>0);
+    for fromIdx=1:nStates
+        for toIdx=1:nStates
+            rr=rr+1;
+            detailRows(rr,:)={NValues(nIdx),matrixName,states(fromIdx), ...
+                states(toIdx),P(fromIdx,toIdx),counts(fromIdx,toIdx), ...
+                fromCounts(fromIdx),empirical(fromIdx,toIdx), ...
+                absError(fromIdx,toIdx)};
+        end
+    end
+    finiteErrors=absError(isfinite(absError));
+    finiteRowTv=rowTv(isfinite(rowTv));
+    summaryRows(nIdx,:)={NValues(nIdx),matrixName,max(finiteErrors), ...
+        percentile_nearest(finiteErrors,95),mean(finiteRowTv), ...
+        max(finiteRowTv),min(fromCounts),all(observed),sum(zeroLeak,'all')};
+end
+details=cell2table(detailRows,'VariableNames', ...
+    {'N','matrix','from_state','to_state','config_probability', ...
+    'transition_count','from_count','sample_probability','abs_error'});
+summary=cell2table(summaryRows,'VariableNames', ...
+    {'N','matrix','max_abs_error','p95_abs_error','mean_row_tv', ...
+    'max_row_tv','min_from_count','all_from_states_observed', ...
+    'zero_probability_leak_count'});
 end
 
 function paths=sample_chain(P,initialIndex,uniforms)
@@ -563,6 +704,24 @@ end
 value=string(tbl.value(mask));
 end
 
+function snapshot=snapshot_directory(folder)
+files=dir(fullfile(folder,'**','*'));
+files=files(~[files.isdir]);
+relativePaths=strings(numel(files),1);
+sizes=zeros(numel(files),1);
+hashes=strings(numel(files),1);
+prefixLength=strlength(string(folder))+1;
+for ii=1:numel(files)
+    fullName=fullfile(files(ii).folder,files(ii).name);
+    relativePaths(ii)=extractAfter(string(fullName),prefixLength);
+    sizes(ii)=files(ii).bytes;
+    hashes(ii)=sha256_file(fullName);
+end
+snapshot=table(relativePaths,sizes,hashes, ...
+    'VariableNames',{'relative_path','bytes','sha256'});
+snapshot=sortrows(snapshot,'relative_path');
+end
+
 function bytes=read_file_bytes(fileName)
 fid=fopen(fileName,'rb');
 if fid<0,error('run_stage2a2_W3_path_sampling_convergence_h2:OpenFailed', ...
@@ -572,11 +731,31 @@ bytes=fread(fid,Inf,'*uint8');
 end
 
 function hash=sha256_file(fileName)
-bytes=read_file_bytes(fileName);
+fid=fopen(fileName,'rb');
+if fid<0,error('run_stage2a2_W3_path_sampling_convergence_h2:OpenFailed', ...
+        'Could not open %s.',fileName);end
+cleanup=onCleanup(@()fclose(fid));
 md=java.security.MessageDigest.getInstance('SHA-256');
-md.update(typecast(bytes,'int8'));
+while true
+    bytes=fread(fid,1024*1024,'*uint8');
+    if isempty(bytes),break;end
+    md.update(typecast(bytes,'int8'));
+end
 digest=typecast(md.digest(),'uint8');
 hash=lower(string(reshape(dec2hex(digest,2).',1,[])));
+end
+
+function write_main_path_info(fileName,mainPathFile,rowCount,fileBytes, ...
+    fileHash,recommendedN)
+fid=fopen(fileName,'w');if fid<0,error('main path info open failed');end
+cleanup=onCleanup(@()fclose(fid));
+if isnan(recommendedN)
+    fprintf(fid,'main_path_generated=false\nrecommended_N=NONE\n');
+else
+    fprintf(fid,'main_path_generated=true\nrecommended_N=%d\n',recommendedN);
+    fprintf(fid,'file=%s\nrows=%d\nsize_bytes=%d\nsha256=%s\n', ...
+        mainPathFile,rowCount,fileBytes,fileHash);
+end
 end
 
 function write_recommendation(fileName,recommendedN,summary,p95Limit, ...
@@ -604,7 +783,8 @@ end
 
 function write_audit_summary(fileName,taskId,stepId,runId,runCommand,status, ...
     passCount,failCount,recommendedN,summary,NValues,seeds,mainSeed,yBase, ...
-    Wstep,matricesUnchanged,mainRowCount)
+    Wstep,matricesUnchanged,mainRowCount,transitionAuditN,transitionSummary, ...
+    run001Unchanged)
 fid=fopen(fileName,'w');if fid<0,error('summary open failed');end
 cleanup=onCleanup(@()fclose(fid));
 fprintf(fid,'# W3 Main Path Sampling Convergence Audit\n\n');
@@ -616,7 +796,7 @@ fprintf(fid,'## Design\n\n');
 fprintf(fid,'- initial states: a0=2:6, loc0=1:7, lfw0=0 (35 states).\n');
 fprintf(fid,'- N candidates: %s.\n',strjoin(string(NValues),', '));
 fprintf(fid,'- convergence seeds: %s.\n',strjoin(string(seeds),', '));
-fprintf(fid,'- each seed/state generates 10000 paths once; N candidates use nested prefixes.\n');
+fprintf(fid,'- each seed/state generates %d paths once; N candidates use nested prefixes.\n',max(NValues));
 fprintf(fid,'- exact W1-W3 distributions use transition-matrix multiplication.\n\n');
 fprintf(fid,'## Convergence\n\n');
 for ii=1:height(summary)
@@ -624,6 +804,16 @@ for ii=1:height(summary)
         'mean joint TV %.6g; pass=%d.\n'],summary.N(ii), ...
         summary.p95_max_abs_error(ii),summary.worst_max_abs_error(ii), ...
         summary.mean_joint_tv(ii),summary.meets_all_criteria(ii));
+end
+fprintf(fid,'\n## Transition Frequency Check\n\n');
+fprintf(fid,'- audit N: %d.\n',transitionAuditN);
+for ii=1:height(transitionSummary)
+    fprintf(fid,['- %s: max probability error %.6g; p95 error %.6g; ' ...
+        'mean row TV %.6g; minimum from-state count %d.\n'], ...
+        transitionSummary.matrix(ii),transitionSummary.max_abs_error(ii), ...
+        transitionSummary.p95_abs_error(ii), ...
+        transitionSummary.mean_row_tv(ii), ...
+        transitionSummary.min_from_count(ii));
 end
 if isnan(recommendedN)
     fprintf(fid,'\n- recommended N: none; criteria were not relaxed.\n');
@@ -635,13 +825,15 @@ fprintf(fid,'\n## Coordinates and Scope\n\n');
 fprintf(fid,'- y = %.13f + lfw * %g.\n',yBase,Wstep);
 fprintf(fid,'- x uses the existing NearStageInput loc layout and halo extrapolation.\n');
 fprintf(fid,'- candidate matrices unchanged during run: %d.\n',matricesUnchanged);
+fprintf(fid,'- run-001 output unchanged during run: %d.\n',run001Unchanged);
 fprintf(fid,'- ordinary probability sampling only; no risk screening or tail enrichment.\n');
 fprintf(fid,'- formal path generator, B3, WDRO, Gurobi, MSP, Foundation, and Persistence were not run.\n');
 end
 
 function write_manifest(fileName,taskId,stepId,runId,runCommand,status, ...
     passCount,failCount,matrixFiles,hashBefore,hashAfter,recommendedN, ...
-    mainRowCount,outputDir)
+    mainRowCount,mainFileBytes,mainFileHash,transitionAuditN, ...
+    transitionMaxError,run001Unchanged,outputDir)
 fid=fopen(fileName,'w');if fid<0,error('manifest open failed');end
 cleanup=onCleanup(@()fclose(fid));
 fprintf(fid,'task_id=%s\nstep_id=%s\nrun_id=%s\n',taskId,stepId,runId);
@@ -657,6 +849,11 @@ end
 if isnan(recommendedN),fprintf(fid,'recommended_N=NONE\n');
 else,fprintf(fid,'recommended_N=%d\n',recommendedN);end
 fprintf(fid,'main_sample_rows=%d\n',mainRowCount);
+fprintf(fid,'main_sample_size_bytes=%d\n',mainFileBytes);
+fprintf(fid,'main_sample_sha256=%s\n',mainFileHash);
+fprintf(fid,'transition_audit_N=%d\n',transitionAuditN);
+fprintf(fid,'transition_max_abs_error=%.15g\n',transitionMaxError);
+fprintf(fid,'run001_unchanged=%d\n',run001Unchanged);
 fprintf(fid,'risk_screening=false\ntail_enrichment=false\n');
 fprintf(fid,'B3_run=false\nWDRO_run=false\nGurobi_run=false\nMSP_run=false\n');
 end
