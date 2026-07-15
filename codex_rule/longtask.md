@@ -253,6 +253,23 @@ Codex 默认不要直接修改本文件。
 - `output_h2/benchmark/`
 - `output_h2/details/`
 
+### 4.6 GitHub 任务分支与结果归档
+
+当前协作结构：
+
+- `main` 仅保存已验收稳定版本；开发在用户指定的 `task/...` 分支完成；
+- Codex 默认不执行 Git 写操作，只有任务明确授权且审计全部通过后，才 Commit 和
+  Push 当前任务分支；
+- Codex 不修改 `main`，不创建或合并 PR，不删除分支，不 force push；
+- 小型审计结果归档到 `results/task-xxx/step-xx/run-xxx/`；
+- 大型结果保留在 `terminalLoh_wdro/output/`，Git 记录路径、行数、字节数和 SHA-256；
+- 同一步重跑使用新 run 编号，旧 run 不覆盖；
+- GitHub 只能看到已 Push 内容，本地未 Push 内容必须明确标记为本地状态；
+- 审计失败或任务与固定规则冲突时停止，不执行 Commit 或 Push。
+
+后续任务提示词只需明确任务目标、允许修改文件、验收条件、输出/run 编号以及是否授权
+Commit 和 Push；固定 Git 安全规则由 `core.md` 和 `AGENTS.md` 持续生效。
+
 ---
 
 ## 5. 当前建模口径

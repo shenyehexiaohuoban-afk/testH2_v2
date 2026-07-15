@@ -879,3 +879,14 @@
 - 首次运行在脚本自身 `fileread` 路径处失败，因为 `mfilename('fullpath')` 未包含 `.m` 扩展名；失败发生在结果写出前。仅修正自身文件路径后重跑成功，未改变任何审计口径或输入。
 - 本地输出：`terminalLoh_wdro/output/stage2a2_W3_path_sampling/run-003/`；Git 归档：`results/task-001-stage2a2-path-prob/02-w3-main-path-sampling/run-003/`。两处均为 9 个文件、57184 字节，逐文件 SHA-256 一致；归档不包含 `main_path_samples.csv`，由 `source_sample_manifest.txt` 记录源路径、行数、大小和哈希。
 - 明确禁止项：未运行 B3、尾部补充、风险筛查、WDRO、Gurobi、MSP、Foundation 或 Persistence；未修改三张转移矩阵、legacy 配置、`.gitignore`、main、core、longtask 或默认保护模块。
+
+### 2026-07-15 - Codex 与 GitHub 工作规则对齐
+
+- 本次仅更新规则文件：`AGENTS.md`、`codex_rule/core.md`、`codex_rule/longtask.md`、`codex_rule/log.md`；未修改模型、程序、配置、数据或结果。
+- 固定 `main` 仅保存已验收稳定版本，开发只在用户指定的 `task/...` 分支进行。
+- Git 写操作默认禁止；只有任务明确授权且全部审计通过后，才允许 Commit 和 Push 当前任务分支。Codex 不修改 `main`、不创建或合并 PR、不删除分支、不 force push。
+- 小型结果统一归档到 `results/task-xxx/step-xx/run-xxx/`；大型结果保留在 `terminalLoh_wdro/output/`，Git 记录路径、行数、字节数和 SHA-256。
+- 同一步骤重跑必须使用新 run 编号，不覆盖旧 run；GitHub 只能审查已 Push 内容，本地未 Push 内容必须明确区分。
+- 后续任务提示词可只提供任务目标、允许修改文件、验收条件、输出/run 编号和 Commit/Push 授权，不再重复固定 Git 安全规则。
+- 审计失败或新任务与固定规则冲突时必须停止，不得 Commit、Push、绕过或自行解释规则。
+- 本次未运行 MATLAB、B3、WDRO、Gurobi 或 MSP。
