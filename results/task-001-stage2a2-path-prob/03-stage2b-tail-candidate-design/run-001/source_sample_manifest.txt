@@ -1,0 +1,11 @@
+source_file=C:\Users\chaos\Desktop\biye\test\testH2_v2\terminalLoh_wdro\output\stage2a2_W3_path_sampling\run-002\main_path_samples.csv
+source_rows=525000
+source_size_bytes=64519633
+source_sha256=972a8c58620c09ac19cfcfb29e8d6a3ed2819ef1a22dbd522043436418eb805d
+aggregated_frequency=525000
+observed_unique_path_count=256884
+source_preserved=true
+source_copied_to_git=false
+resampling=false
+empirical_weight=frequency/15000
+path_probability_weighting=false

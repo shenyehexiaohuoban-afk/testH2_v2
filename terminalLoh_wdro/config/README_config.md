@@ -153,3 +153,24 @@ reweight these already sampled records. Within each initial state, every main
 sample record has the same empirical weight `1/15000`. Any downstream use that
 weights the records again by `path_probability` would double-count the Markov
 transition probabilities and change the intended empirical distribution.
+
+## Step-02B-1 Observed Tail-Risk Coverage Audit
+
+Step-02B-1 aggregates repeated records in the accepted 525,000-row main sample
+without resampling. It evaluates each observed unique W1-W3 path with the
+accepted Foundation wind model: `Rmax_ref=40`, radial decay `B=0.6`, the
+existing intensity-to-Vmax mapping, and point-to-segment grid/road distances.
+Grid and road exceedance thresholds are 25 m/s and 30 m/s.
+
+The sample contains 256,884 observed unique paths. Across the 35 initial states,
+the observed theoretical probability-mass coverage ranges from
+`0.5887886837` to `0.7892712024`; path-count coverage ranges from
+`0.0101094767` to `0.0174146284`. The equal-state mean theoretical mass
+coverage is `0.6675433091`.
+
+Risk quantiles use empirical mass `frequency/15000` within each initial state.
+They never use `path_probability` as an empirical weight, and no artificial
+combined risk score is formed. High-exposure paths are identified separately
+for each risk proxy at the state-specific 99% and 99.5% quantiles. Pareto
+candidates separately minimize theoretical path probability and maximize each
+risk proxy. The audit does not generate supplemental paths or run B3/WDRO.

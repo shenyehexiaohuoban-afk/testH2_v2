@@ -1,0 +1,2 @@
+Rmax_ref,wind_decay_B,grid_threshold_mps,road_threshold_mps,Rmax_source,wind_decay_source,Vmax_map_source,distance_function,wind_function
+40,0.6,25,30,foundation_fix_parameter_snapshot.csv,run_stage2_foundation_fix_Hres3h_h2.m,evaluate_foundation_fix_chain_h2.m,compute_point_to_segment_distance_h2,compute_wind_speed_radial_h2

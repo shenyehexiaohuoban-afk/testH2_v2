@@ -1,0 +1,21 @@
+check_id,description,passed,observed,expected,required
+AUDIT-01,source sample row count,1,525000,525000,1
+AUDIT-02,source sample SHA-256,1,972a8c58620c09ac19cfcfb29e8d6a3ed2819ef1a22dbd522043436418eb805d,972a8c58620c09ac19cfcfb29e8d6a3ed2819ef1a22dbd522043436418eb805d,1
+AUDIT-03,35 initial states,1,35,35,1
+AUDIT-04,15000 rows per initial state,1,15000,15000,1
+AUDIT-05,unique frequencies preserve sample rows,1,525000,525000,1
+AUDIT-06,empirical mass sums to one by state,1,8.21565038222616e-15,1e-10,1
+AUDIT-07,path probability recomputation,1,4.98732999343332e-18,1e-12,1
+AUDIT-08,legal path count covers observed paths,1,415781,0,1
+AUDIT-09,coverage and theoretical mass bounded,1,1,1,1
+AUDIT-10,observed plus unobserved mass equals one,1,0,1e-12,1
+AUDIT-11,risk proxies finite and nonnegative,1,1,1,1
+AUDIT-12,coordinates uniquely mapped,1,1,1,1
+AUDIT-13,accepted risk parameters loaded,1,40.6,40.6,1
+AUDIT-14,transition matrices row-stochastic,1,1.11022302462516e-15,1e-10,1
+AUDIT-15,overall aggregation uses 35 equal states,1,equal_weight_35_initial_states,equal_weight_35_initial_states,1
+AUDIT-16,no path_probability empirical weighting,1,frequency/15000,frequency/15000,1
+AUDIT-17,no combined artificial risk score,1,no combined score,no combined score,1
+AUDIT-18,audit script has no sampling calls,1,,none,1
+AUDIT-19,source sample unchanged,1,972a8c58620c09ac19cfcfb29e8d6a3ed2819ef1a22dbd522043436418eb805d,972a8c58620c09ac19cfcfb29e8d6a3ed2819ef1a22dbd522043436418eb805d,1
+AUDIT-20,candidate matrices unchanged,1,ea6c71ed9765a57577940560f45e9ad6003a69ef4bb9abae54b9deaaf78889e5 | 42d167a61478e05e2ff4eb9012e6c25d92a53060d2f00fb7ff60ee45f0139ca1 | 45cf74286b0aec48fe4a0ba77c66ab0847c2227402740bcc18a376da0eff6c29,ea6c71ed9765a57577940560f45e9ad6003a69ef4bb9abae54b9deaaf78889e5 | 42d167a61478e05e2ff4eb9012e6c25d92a53060d2f00fb7ff60ee45f0139ca1 | 45cf74286b0aec48fe4a0ba77c66ab0847c2227402740bcc18a376da0eff6c29,1
