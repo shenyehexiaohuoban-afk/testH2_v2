@@ -135,3 +135,21 @@ The largest empirical transition-probability error at the recommended N is
 rows total. The resulting `main_path_samples.csv` is 64,519,633 bytes, so it is
 kept in the ignored local output directory and represented in the Git archive
 by `LARGE_FILE_MANIFEST.md` with its row count, size, and SHA-256.
+
+### Run-003 Fixed-Seed Sample Audit
+
+Run-003 reads the accepted run-002 `main_path_samples.csv` without resampling
+or rewriting it. The source has 525,000 rows, exactly 15,000 rows for each of
+the 35 initial states, and SHA-256
+`972a8c58620c09ac19cfcfb29e8d6a3ed2819ef1a22dbd522043436418eb805d`.
+
+Against exact W1-W3 matrix distributions, the fixed sample has p95 maximum
+absolute error `0.00806666667`, worst maximum absolute error
+`0.01313333333`, and mean joint-state total variation `0.02954596508`.
+Nonconfigured transition records are zero. All acceptance criteria pass.
+
+`path_probability` is retained only as an audit field. It must not be used to
+reweight these already sampled records. Within each initial state, every main
+sample record has the same empirical weight `1/15000`. Any downstream use that
+weights the records again by `path_probability` would double-count the Markov
+transition probabilities and change the intended empirical distribution.

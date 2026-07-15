@@ -1,0 +1,2 @@
+fixed_seed,samples_per_initial_state,empirical_weight,reported_path_probability_min,reported_path_probability_max,recomputed_max_abs_error,path_probability_used_for_empirical_weighting,weighting_rule
+20260706,15000,6.66666666666667e-05,3.7856e-12,0.00707144900613735,4.98732999343332e-18,0,audit_only_uniform_empirical_weight

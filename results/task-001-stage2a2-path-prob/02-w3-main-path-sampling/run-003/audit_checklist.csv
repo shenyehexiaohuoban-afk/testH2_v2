@@ -1,0 +1,19 @@
+check_id,description,passed,observed,expected,required
+AUDIT-01,source SHA-256 matches accepted hash,1,972a8c58620c09ac19cfcfb29e8d6a3ed2819ef1a22dbd522043436418eb805d,972a8c58620c09ac19cfcfb29e8d6a3ed2819ef1a22dbd522043436418eb805d,1
+AUDIT-02,source total row count,1,525000,525000,1
+AUDIT-03,all 35 initial states present,1,35,35,1
+AUDIT-04,15000 rows per initial state,1,15000,15000,1
+AUDIT-05,fixed base seed is 20260706,1,20260706,20260706,1
+AUDIT-06,derived seeds match initial states,1,1,1,1
+AUDIT-07,sample states are within supports,1,1,1,1
+AUDIT-08,path ids are complete per state,1,1,1,1
+AUDIT-09,p95 maximum absolute error,1,0.00806666666666667,0.02,1
+AUDIT-10,worst maximum absolute error,1,0.0131333333333333,0.05,1
+AUDIT-11,mean joint-state TV,1,0.0295459650799673,0.03,1
+AUDIT-12,no nonconfigured stage transitions,1,0,0,1
+AUDIT-13,path probability recomputes from matrices,1,4.98732999343332e-18,1e-12,1
+AUDIT-14,empirical distribution weight is uniform 1/15000,1,6.66666666666667e-05,6.66666666666667e-05,1
+AUDIT-15,audit script has no sampling calls,1,,none,1
+AUDIT-16,source sample unchanged by audit,1,972a8c58620c09ac19cfcfb29e8d6a3ed2819ef1a22dbd522043436418eb805d,972a8c58620c09ac19cfcfb29e8d6a3ed2819ef1a22dbd522043436418eb805d,1
+AUDIT-17,candidate matrices unchanged,1,ea6c71ed9765a57577940560f45e9ad6003a69ef4bb9abae54b9deaaf78889e5 | 42d167a61478e05e2ff4eb9012e6c25d92a53060d2f00fb7ff60ee45f0139ca1 | 45cf74286b0aec48fe4a0ba77c66ab0847c2227402740bcc18a376da0eff6c29,ea6c71ed9765a57577940560f45e9ad6003a69ef4bb9abae54b9deaaf78889e5 | 42d167a61478e05e2ff4eb9012e6c25d92a53060d2f00fb7ff60ee45f0139ca1 | 45cf74286b0aec48fe4a0ba77c66ab0847c2227402740bcc18a376da0eff6c29,1
+AUDIT-18,transition matrices row-stochastic,1,1.11022302462516e-15,1e-10,1

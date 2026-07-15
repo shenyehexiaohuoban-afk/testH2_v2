@@ -1,0 +1,11 @@
+source_file=C:\Users\chaos\Desktop\biye\test\testH2_v2\terminalLoh_wdro\output\stage2a2_W3_path_sampling\run-002\main_path_samples.csv
+source_rows=525000
+source_size_bytes=64519633
+source_sha256=972a8c58620c09ac19cfcfb29e8d6a3ed2819ef1a22dbd522043436418eb805d
+fixed_seed=20260706
+samples_per_initial_state=15000
+empirical_weight=6.66666666666667e-05
+path_probability_role=audit_only
+path_probability_used_for_empirical_weighting=false
+source_copied_to_git=false
+source_preserved=true

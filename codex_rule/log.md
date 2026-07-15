@@ -867,3 +867,15 @@
 - 因主体路径单文件超过 50 MiB，只保留在 `terminalLoh_wdro/output/stage2a2_W3_path_sampling/run-002/`；Git 归档 `results/task-001-stage2a2-path-prob/02-w3-main-path-sampling/run-002/` 不包含该 CSV，使用 `LARGE_FILE_MANIFEST.md` 记录行数、大小和哈希。
 - 本地 run-002 共 13 个文件、66581362 字节；归档包含其余 12 个诊断文件和 1 个大文件清单。未覆盖 run-001。
 - 明确禁止项：未运行尾部补充、风险筛查、B3、WDRO、Gurobi、MSP、Foundation 或 Persistence；未修改三张候选矩阵、legacy 配置、`.gitignore`、main 或默认保护模块。
+
+### 2026-07-15 - task-001 step-02A 固定种子主体路径样本审计 run-003
+
+- 当前分支：`task/001-stage2a2-path-prob`；新增只读审计入口 `terminalLoh_wdro/src/run_stage2a2_W3_fixed_seed_sample_audit_h2.m`。脚本不调用 `rand/rng/sample_chain`，不重新抽样，也不写入或覆盖 run-002 主体样本。
+- 审计源文件：`terminalLoh_wdro/output/stage2a2_W3_path_sampling/run-002/main_path_samples.csv`；固定种子 `20260706`，总行数 525000，35 个初始状态各 15000 行，路径编号和 derived seed 均完整一致。
+- 源文件大小 64519633 字节；运行前后 SHA-256 均为 `972a8c58620c09ac19cfcfb29e8d6a3ed2819ef1a22dbd522043436418eb805d`，确认审计未修改原文件。
+- 固定样本与精确 W1-W3 矩阵分布比较：p95 最大绝对误差 `0.00806666666667`，最坏最大绝对误差 `0.0131333333333`，平均联合状态 TV `0.02954596508`，非配置 stage 转移记录数和 component 转移数均为 0；四项验收标准全部通过。
+- `path_probability` 逐行由三张矩阵重算，最大绝对误差 `4.98732999343332e-18`。该字段仅用于审计；经验分布使用未加权计数，每个初始状态内每条记录的经验权重固定为 `1/15000=6.66666666666667e-05`，后续不得再次按 `path_probability` 加权。
+- 自动检查：PASS=18、FAIL=0；三张候选矩阵运行前后哈希一致，矩阵行随机检查通过。
+- 首次运行在脚本自身 `fileread` 路径处失败，因为 `mfilename('fullpath')` 未包含 `.m` 扩展名；失败发生在结果写出前。仅修正自身文件路径后重跑成功，未改变任何审计口径或输入。
+- 本地输出：`terminalLoh_wdro/output/stage2a2_W3_path_sampling/run-003/`；Git 归档：`results/task-001-stage2a2-path-prob/02-w3-main-path-sampling/run-003/`。两处均为 9 个文件、57184 字节，逐文件 SHA-256 一致；归档不包含 `main_path_samples.csv`，由 `source_sample_manifest.txt` 记录源路径、行数、大小和哈希。
+- 明确禁止项：未运行 B3、尾部补充、风险筛查、WDRO、Gurobi、MSP、Foundation 或 Persistence；未修改三张转移矩阵、legacy 配置、`.gitignore`、main、core、longtask 或默认保护模块。
