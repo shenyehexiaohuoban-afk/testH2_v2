@@ -841,3 +841,16 @@
 - 本地输出目录：`terminalLoh_wdro/output/stage2a2_W3_transition_audit/run-002/`；12 个文件、11809 字节，最大文件 `audit_checklist.csv` 为 4626 字节。
 - 候选概率仍是未经过真实台风数据校准、尚未被用户接受为最终参数的工程候选；尚未接入正式路径生成。
 - 未运行 Foundation、Persistence、B3、WDRO、Gurobi、MSP 或 OOS evaluation；未修改 `.gitignore`、main、legacy 配置、Vmax/Rmax 或径向风场公式。
+
+### 2026-07-15 - task-001 step-02A W3 主体完整路径抽样与收敛审计 run-001
+
+- 当前分支：`task/001-stage2a2-path-prob`；新增审计入口 `terminalLoh_wdro/src/run_stage2a2_W3_path_sampling_convergence_h2.m`。
+- 输入为已通过 step-01 run-002 审计的三张 postlandfall 矩阵；运行前后 SHA-256 和文件字节完全一致，未修改候选矩阵、legacy 配置、Window 配置或 `.gitignore`。
+- 初始状态为 `a0=2:6`、`loc0=1:7`、`lfw0=0`，共 35 个；测试 `N=[500,1000,2000,5000,10000]` 和种子 `20260721:20260725`。每个种子/初始状态一次生成 10000 条路径，较小 N 使用嵌套前缀。
+- 精确基准通过矩阵乘法计算 W1/W2/W3 的强度、loc、lfw 边缘分布和联合 `(a,loc,lfw)` 分布；抽样审计输出最大绝对误差、总变差距离和五个种子的稳定性。
+- MATLAB 实际命令：`cd('C:/Users/chaos/Desktop/biye/test/testH2_v2'); run('terminalLoh_wdro/src/run_stage2a2_W3_path_sampling_convergence_h2.m');`。运行成功；除既有 MATLAB 用户搜索路径 warning 外无运行错误。
+- 自动审计结果：PASS=11、FAIL=0；三张矩阵行随机、精确分布和为 1、35 个初始状态、全部 N/种子、误差边界、坐标映射和矩阵保护均通过。
+- 收敛结果：N=500/1000/2000/5000/10000 的 p95 最大绝对误差分别为 `0.0408/0.03004/0.0205/0.0133/0.0094`；最坏最大绝对误差为 `0.076/0.051/0.036005/0.023497/0.0163`；平均联合状态 TV 为 `0.1567151/0.1119734/0.0795619/0.0508741/0.0359743`。
+- 没有候选 N 同时满足 `p95<=0.02`、`worst<=0.05`、`mean_joint_tv<=0.03`。阈值未放宽，`recommended_N=NONE`，因此按任务要求未生成 `main_path_samples.csv`。
+- 本地原始结果：`terminalLoh_wdro/output/stage2a2_W3_path_sampling/run-001/`；Git 归档：`results/task-001-stage2a2-path-prob/02-w3-main-path-sampling/run-001/`。两处均为 8 个文件、2354063 字节，最大文件 `exact_state_distributions.csv` 为 1324844 字节，无文件超过 50 MiB。
+- 明确禁止项：未运行风险筛查、尾部加密、正式路径筛选、B3、WDRO、Gurobi、MSP、Foundation 或 Persistence；未修改 main、legacy 配置和默认保护模块。

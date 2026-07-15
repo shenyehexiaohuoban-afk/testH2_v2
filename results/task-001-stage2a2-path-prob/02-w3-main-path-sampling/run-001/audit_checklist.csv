@@ -1,0 +1,12 @@
+check_id,description,passed,observed,expected,required
+AUDIT-01,three matrices row-stochastic,1,"1.11022302462516e-15","1e-10",1
+AUDIT-02,exact distributions sum to one,1,"6.66133814775094e-16","1e-10",1
+AUDIT-03,requested N values evaluated,1,"500,1000,2000,5000,10000","500,1000,2000,5000,10000",1
+AUDIT-04,requested base seeds evaluated,1,"20260721,20260722,20260723,20260724,20260725","20260721,20260722,20260723,20260724,20260725",1
+AUDIT-05,all 35 initial states evaluated,1,"35","35",1
+AUDIT-06,sampling errors finite and bounded,1,"finite in [0,1]","finite in [0,1]",1
+AUDIT-07,seed stability rows complete,1,"2100","2100",1
+AUDIT-08,candidate matrices unchanged,1,"ea6c71ed9765a57577940560f45e9ad6003a69ef4bb9abae54b9deaaf78889e5 | 42d167a61478e05e2ff4eb9012e6c25d92a53060d2f00fb7ff60ee45f0139ca1 | 45cf74286b0aec48fe4a0ba77c66ab0847c2227402740bcc18a376da0eff6c29","ea6c71ed9765a57577940560f45e9ad6003a69ef4bb9abae54b9deaaf78889e5 | 42d167a61478e05e2ff4eb9012e6c25d92a53060d2f00fb7ff60ee45f0139ca1 | 45cf74286b0aec48fe4a0ba77c66ab0847c2227402740bcc18a376da0eff6c29",1
+AUDIT-09,loc x coordinates finite,1,"-101","all finite",1
+AUDIT-10,lfw y mapping finite,1,"-89.999970,-49.999970,-9.999970,30.000030","all finite",1
+AUDIT-11,main sample generated iff recommendation exists,1,"0","no main sample",1

@@ -1,0 +1,13 @@
+Recommendation criteria:
+p95_max_abs_error <= 0.02
+worst_max_abs_error <= 0.05
+mean_joint_tv <= 0.03
+
+N=500: p95=0.0408, worst=0.076, mean_joint_tv=0.156715062532, meets_all=0
+N=1000: p95=0.03004, worst=0.051, mean_joint_tv=0.111973432433, meets_all=0
+N=2000: p95=0.0205, worst=0.036005, mean_joint_tv=0.0795619363909, meets_all=0
+N=5000: p95=0.0133, worst=0.023497, mean_joint_tv=0.0508740733301, meets_all=0
+N=10000: p95=0.0094, worst=0.0163, mean_joint_tv=0.035974273122, meets_all=0
+
+recommended_N=NONE
+No tested N satisfies all criteria; thresholds were not relaxed.

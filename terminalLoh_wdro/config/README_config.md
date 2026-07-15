@@ -102,3 +102,20 @@ The run-002 lfw kernel is backward/stay/forward-one/forward-two =
 state, producing the exact rows documented in the run-002 audit. The loc and
 Window candidate files are unchanged from run-001. Run-001 remains archived as
 the adjacent-transition comparison case.
+
+## Step-02A Main Path Sampling Convergence Audit
+
+Step-02A samples the three independent post-landfall Markov chains jointly
+from each initial state `a0=2:6`, `loc0=1:7`, `lfw0=0`. It compares nested
+prefix samples at `N=[500,1000,2000,5000,10000]` for seeds
+`20260721:20260725` against exact W1-W3 matrix-product distributions for
+intensity, loc, lfw, and the joint `(a,loc,lfw)` state.
+
+Run-001 passed all 11 implementation and integrity checks, and the three
+candidate matrices remained byte-identical. No tested N met all convergence
+criteria. At `N=10000`, the p95 maximum absolute error was `0.0094` and the
+worst maximum absolute error was `0.0163`, but mean joint-state total variation
+was `0.0359742731`, above the required `0.03`. Thresholds were not relaxed, so
+no `main_path_samples.csv` was generated. The run is an ordinary sampling
+audit only; it does not perform risk screening, tail enrichment, B3, WDRO,
+Gurobi, or MSP execution.
