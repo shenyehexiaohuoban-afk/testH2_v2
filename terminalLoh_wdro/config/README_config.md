@@ -253,3 +253,36 @@ After reexport, the local and Git run-003 Pareto files both contain
 All 35 initial states and the three focus states match the unchanged run-003
 summary. Every repaired row also has `pareto_only_output=1`. Run-004 has 18
 passing checks and zero failures.
+
+### Run-005 Physical Tail-Path Deduplication and Labels
+
+Run-005 combines the run-002 observed Pareto detail and the corrected run-004
+unobserved Pareto detail. It defines a physical path only by the complete
+initial/W1/W2/W3 sequence
+`(a0,loc0,lfw0,a1,loc1,lfw1,a2,loc2,lfw2,a3,loc3,lfw3)`.
+No state from a different initial condition is merged, and no similarity-based
+path reduction is performed.
+
+The two inputs contain 1,595 observed source records and 2,410 unobserved
+source records, or 4,005 label records total. Exact physical-key deduplication
+produces 1,126 unique paths and removes 2,879 repeated proxy/quantile records.
+There are 268 observed paths and 858 unobserved paths, with zero physical-path
+overlap between the sources.
+
+The q95/q99/q99.5 sets contain 1,126 / 1,027 / 979 unique paths. Their labels
+are nested: 99 paths appear in one quantile level, 48 in two levels, and 979 in
+all three. `highest_listed_level` is only a reporting field; all individual
+level and proxy labels remain in `unique_tail_paths.csv`.
+
+Unique paths selected by each risk proxy are: grid peak wind 310, grid
+cumulative exceedance 779, road peak wind 310, and road cumulative exceedance
+811. Across the 35 initial states, candidate counts range from 19 to 53, with
+mean 32.1714 and median 33.
+
+All duplicate records have consistent `path_probability` within tolerance
+`1e-12`; the conflict count is zero. The accepted main sample remains 525,000
+rows with SHA-256
+`972a8c58620c09ac19cfcfb29e8d6a3ed2819ef1a22dbd522043436418eb805d`.
+Run-005 has 13 passing checks and zero failures. It does not select B3
+representatives or run sampling, wind calculations, path search, D/A/C, B3,
+WDRO, Gurobi, or MSP.

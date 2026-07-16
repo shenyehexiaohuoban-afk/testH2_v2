@@ -943,3 +943,17 @@
 - run-003 `combined_search_summary_by_state.csv` 哈希保持不变；2.12 GB 候选源文件的字节数和修改时间保持不变。run-004 自动审计 PASS=18、FAIL=0。
 - 本地新审计输出：`terminalLoh_wdro/output/stage2b_tail_candidate_design/run-004/`；Git 小型归档：`results/task-001-stage2a2-path-prob/03-stage2b-tail-candidate-design/run-004/`，均包含 8 个文件。
 - 明确禁止项：未生成补充样本，未运行 B3、WDRO、Gurobi、MSP、Foundation 或 Persistence；未修改三张矩阵、legacy 配置、`.gitignore`、main 或 run-003 搜索汇总。
+
+### 2026-07-16 - task-001 Step-02B-3 run-005 高风险候选物理去重与标签整理
+
+- 当前分支：`task/001-stage2a2-path-prob`；新增 `terminalLoh_wdro/src/run_stage2b_deduplicate_tail_paths_h2.m`。
+- 输入一为 run-002 `tail_pareto_candidate_paths.csv`，1595 行，SHA-256 为 `dc4f9b06e8acca654eb10d4d880f73e3225094f4706b97ec92220af2241f5b89`；输入二为 run-004 `reexported_unobserved_pareto_paths.csv`，2410 行，SHA-256 为 `c11670b10e311d48c12952817dfd589f2efdac97c98563bb28b228415e97489d`。两份本地输入均与对应 Git 归档逐字节一致。
+- 物理路径唯一键严格使用 `a0,loc0,lfw0` 和 W1-W3 的 `a,loc,lfw` 完整状态序列；不同初始状态不合并，不按距离或相似性删除路径。
+- 输入候选明细总计 4005 行，其中已观察 1595 行、未观察 2410 行。去重后得到 1126 条唯一物理路径，删除代理/层级重复记录 2879 条。
+- 已观察唯一候选 268 条，未观察唯一候选 858 条，两类物理路径重叠数为 0。全部 4005 条源记录均映射到且仅映射到一个 `unique_path_id`。
+- q95/q99/q99.5 各涉及 `1126/1027/979` 条唯一路径；仅进入 1/2/3 个分位层级的路径数为 `99/48/979`。每条路径保留全部 `listed_q*`、`pareto_q*`、最高层级和四代理分层标签，未强制归入单一层级。
+- 风险代理唯一路径数：电网最大风速 310、电网累计超限 779、道路最大风速 310、道路累计超限 811。
+- 35 个初始状态均有候选，状态级路径数范围 19–53，均值 `32.1714285714`，中位数 33；最少为 `(a0=5,loc0=4)` 的 19 条，最多为 `(a0=2,loc0=6)` 的 53 条。
+- 路径概率一致性容差为 `1e-12`，冲突数 0；已观察 frequency 和 empirical mass 在重复标签间一致。主体样本仍为 525000 行，SHA-256 仍为 `972a8c58620c09ac19cfcfb29e8d6a3ed2819ef1a22dbd522043436418eb805d`。
+- 最终自动审计 PASS=13、FAIL=0，物理路径键和 `unique_path_id` 均无重复。本地输出：`terminalLoh_wdro/output/stage2b_tail_candidate_design/run-005/`；Git 小型归档：`results/task-001-stage2a2-path-prob/03-stage2b-tail-candidate-design/run-005/`，均为 10 个文件、563924 字节，逐文件 SHA-256 一致。
+- 明确禁止项：未重新抽样、未搜索合法路径、未计算风场、未选择最终 B3 代表路径、未运行固定抗力 B3、未生成 D/A/C、未运行 WDRO、Gurobi、MSP、Foundation 或 Persistence；未修改主体样本、W 转移矩阵或旧 run 结果。

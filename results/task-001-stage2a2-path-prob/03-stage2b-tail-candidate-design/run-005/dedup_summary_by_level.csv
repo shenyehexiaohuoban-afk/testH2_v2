@@ -1,0 +1,4 @@
+quantile_level,level_label,input_record_count,observed_input_record_count,unobserved_input_record_count,unique_path_count,observed_unique_path_count,unobserved_unique_path_count
+0.95,q95,1462,604,858,1126,268,858
+0.99,q99,1314,526,788,1027,239,788
+0.995,q995,1229,465,764,979,215,764

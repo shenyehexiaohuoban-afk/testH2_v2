@@ -1,0 +1,14 @@
+check_id,description,passed,observed,expected
+AUDIT-01,local and Git input versions match,1,dc4f9b06e8acca654eb10d4d880f73e3225094f4706b97ec92220af2241f5b89 | c11670b10e311d48c12952817dfd589f2efdac97c98563bb28b228415e97489d,dc4f9b06e8acca654eb10d4d880f73e3225094f4706b97ec92220af2241f5b89 | c11670b10e311d48c12952817dfd589f2efdac97c98563bb28b228415e97489d
+AUDIT-02,observed input row count,1,1595,1595
+AUDIT-03,run-004 frozen level counts,1,858/788/764,858/788/764
+AUDIT-04,all input records map to one physical path,1,4005,4005
+AUDIT-05,unique_path_id has no duplicates,1,1126,1126
+AUDIT-06,physical path key has one output row,1,1126,1126
+AUDIT-07,path_probability consistency,1,0,0
+AUDIT-08,observed/unobserved physical overlap,1,0,0
+AUDIT-09,main sample row count and SHA-256,1,972a8c58620c09ac19cfcfb29e8d6a3ed2819ef1a22dbd522043436418eb805d,972a8c58620c09ac19cfcfb29e8d6a3ed2819ef1a22dbd522043436418eb805d
+AUDIT-10,35 initial states represented,1,35,35
+AUDIT-11,source record traceability conserved,1,4005,4005
+AUDIT-12,no non-Pareto source records,1,0,0
+AUDIT-13,observed frequency and mass consistent,1,0,0

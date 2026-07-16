@@ -1,0 +1,5 @@
+risk_proxy,proxy_label,source_label_record_count,observed_label_record_count,unobserved_label_record_count,unique_path_count,observed_unique_path_count,unobserved_unique_path_count,q95_unique_path_count,q99_unique_path_count,q995_unique_path_count
+grid_max_wind_mps,grid_max,859,313,546,310,117,193,310,284,265
+grid_cumulative_excess_mps,grid_excess,2137,472,1665,779,182,597,779,696,662
+road_max_wind_mps,road_max,859,313,546,310,117,193,310,284,265
+road_cumulative_excess_mps,road_excess,2267,497,1770,811,188,623,811,747,709
