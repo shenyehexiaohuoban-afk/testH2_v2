@@ -1,0 +1,6 @@
+file_role,audit_phase,path,data_rows,size_bytes,sha256
+local_run003_pareto,before,C:\Users\chaos\Desktop\biye\test\testH2_v2\terminalLoh_wdro\output\stage2b_tail_candidate_design\run-003\unobserved_pareto_paths.csv,2194,294228,3e266aff1e58432e3f373117b3b8fb5efd7ab9b63262b7e446c240c5909858cf
+archive_run003_pareto,before,C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-001-stage2a2-path-prob\03-stage2b-tail-candidate-design\run-003\unobserved_pareto_paths.csv,2194,294228,3e266aff1e58432e3f373117b3b8fb5efd7ab9b63262b7e446c240c5909858cf
+run004_reexport,after,C:\Users\chaos\Desktop\biye\test\testH2_v2\terminalLoh_wdro\output\stage2b_tail_candidate_design\run-004\reexported_unobserved_pareto_paths.csv,2410,325535,c11670b10e311d48c12952817dfd589f2efdac97c98563bb28b228415e97489d
+local_run003_pareto,after,C:\Users\chaos\Desktop\biye\test\testH2_v2\terminalLoh_wdro\output\stage2b_tail_candidate_design\run-003\unobserved_pareto_paths.csv,2410,325535,c11670b10e311d48c12952817dfd589f2efdac97c98563bb28b228415e97489d
+archive_run003_pareto,after,C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-001-stage2a2-path-prob\03-stage2b-tail-candidate-design\run-003\unobserved_pareto_paths.csv,2410,325535,c11670b10e311d48c12952817dfd589f2efdac97c98563bb28b228415e97489d

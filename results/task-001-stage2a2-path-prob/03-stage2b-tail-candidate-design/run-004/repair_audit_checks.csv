@@ -1,0 +1,19 @@
+check_id,description,passed,observed,expected
+AUDIT-01,"run-003 summary level counts",1,858/788/764,858/788/764
+AUDIT-02,"existing candidate table row count",1,15388410,15388410
+AUDIT-03,"reexported Pareto total",1,2410,2410
+AUDIT-04,"reexported level counts",1,858/788/764,858/788/764
+AUDIT-05,"all 35 initial states match summary",1,0,0
+AUDIT-06,"focus states match summary",1,0,0
+AUDIT-07,"reexported path keys are unique",1,0,0
+AUDIT-08,"every reexported row has a Pareto flag",1,0,0
+AUDIT-09,"pre-repair local and archive are identical subsets",1,local_missing=216; archive_missing=216; extras=0/0,identical subsets with no extras
+AUDIT-10,"Pareto-only output flag set on every row",1,0,0
+AUDIT-11,"no wind, sampling, or path search recomputation",1,stream existing run-003 candidate CSV only,no recomputation
+POST-01,"local repaired total",1,2410,2410
+POST-02,"Git archive repaired total",1,2410,2410
+POST-03,"local/archive/reexport SHA-256 equal",1,c11670b10e311d48c12952817dfd589f2efdac97c98563bb28b228415e97489d | c11670b10e311d48c12952817dfd589f2efdac97c98563bb28b228415e97489d | c11670b10e311d48c12952817dfd589f2efdac97c98563bb28b228415e97489d,all equal
+POST-04,"all local state counts match summary",1,0,0
+POST-05,"all archive state counts match summary",1,0,0
+POST-06,"run-003 summary unchanged",1,99990caded506ce80f7d2c8545ee3de2c90a6b471555f6ad431d22b2ddc70fa7,99990caded506ce80f7d2c8545ee3de2c90a6b471555f6ad431d22b2ddc70fa7
+POST-07,"run-003 large candidate source unchanged",1,2121759312 bytes; datenum 740179.470439815,2121759312 bytes; datenum 740179.470439815

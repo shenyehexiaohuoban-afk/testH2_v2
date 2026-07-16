@@ -1,0 +1,4 @@
+quantile_level,expected_count,summary_count,local_before_count,archive_before_count,reexported_count,reexported_minus_summary,local_before_minus_summary,archive_before_minus_summary,summary_matches_expected,reexport_matches_summary,local_archive_before_equal,local_after_count,archive_after_count,local_after_matches_summary,archive_after_matches_summary
+0.95,858,858,786,786,858,0,-72,-72,1,1,1,858,858,1,1
+0.99,788,788,716,716,788,0,-72,-72,1,1,1,788,788,1,1
+0.995,764,764,692,692,764,0,-72,-72,1,1,1,764,764,1,1

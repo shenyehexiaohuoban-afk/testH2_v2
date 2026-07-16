@@ -227,3 +227,29 @@ The 2,121,759,312-byte detailed candidate table remains local under
 `terminalLoh_wdro/output/`; Git stores the compact diagnostics, the small
 Pareto table, and a large-file manifest. This run does not generate
 supplemental samples or execute B3, WDRO, Gurobi, or MSP.
+
+### Run-004 Pareto Archive Consistency Repair
+
+Run-004 does not resample paths, recompute wind, or repeat the legal-path
+search. It streams the existing run-003
+`unobserved_high_risk_legal_paths.csv` and reexports rows whose stored Pareto
+flags are already true.
+
+Before repair, both the local and Git run-003 Pareto detail contained
+`786/716/692` rows at q95/q99/q99.5, or 2,194 rows total. The accepted run-003
+summary contained `858/788/764`, or 2,410 rows. The 216-row difference was
+exactly the 72 Pareto paths per quantile level from initial states
+`(a0,loc0,lfw0)=(2,1,0),(2,2,0),(2,3,0)`.
+
+The discrepancy came from run-003 execution handling rather than the search
+logic: after the outer command timed out, an incomplete-output cleanup attempt
+overlapped the still-running MATLAB process. The Pareto detail lost its early
+state blocks, while the large candidate table and the final summary remained
+complete.
+
+After reexport, the local and Git run-003 Pareto files both contain
+`858/788/764` rows, total 2,410, with SHA-256
+`c11670b10e311d48c12952817dfd589f2efdac97c98563bb28b228415e97489d`.
+All 35 initial states and the three focus states match the unchanged run-003
+summary. Every repaired row also has `pareto_only_output=1`. Run-004 has 18
+passing checks and zero failures.

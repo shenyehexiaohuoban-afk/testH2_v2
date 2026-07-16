@@ -1,0 +1,10 @@
+a0,loc0,lfw0,quantile_level,summary_count,local_before_count,archive_before_count,reexported_count,reexported_minus_summary,local_before_minus_summary,archive_before_minus_summary,reexport_matches_summary,local_before_matches_summary,archive_before_matches_summary,local_after_count,archive_after_count,local_after_matches_summary,archive_after_matches_summary
+2,1,0,0.95,29,0,0,29,0,-29,-29,1,0,0,29,29,1,1
+2,1,0,0.99,29,0,0,29,0,-29,-29,1,0,0,29,29,1,1
+2,1,0,0.995,29,0,0,29,0,-29,-29,1,0,0,29,29,1,1
+2,2,0,0.95,24,0,0,24,0,-24,-24,1,0,0,24,24,1,1
+2,2,0,0.99,24,0,0,24,0,-24,-24,1,0,0,24,24,1,1
+2,2,0,0.995,24,0,0,24,0,-24,-24,1,0,0,24,24,1,1
+2,3,0,0.95,19,0,0,19,0,-19,-19,1,0,0,19,19,1,1
+2,3,0,0.99,19,0,0,19,0,-19,-19,1,0,0,19,19,1,1
+2,3,0,0.995,19,0,0,19,0,-19,-19,1,0,0,19,19,1,1

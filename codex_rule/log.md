@@ -931,3 +931,15 @@
 - 最终自动审计 PASS=20、FAIL=0。主体样本仍为 525000 行，SHA-256 仍为 `972a8c58620c09ac19cfcfb29e8d6a3ed2819ef1a22dbd522043436418eb805d`；全部输入文件运行前后字节和 SHA-256 一致。
 - 本地输出目录：`terminalLoh_wdro/output/stage2b_tail_candidate_design/run-003/`。`unobserved_high_risk_legal_paths.csv` 有 15388410 行、2121759312 字节，SHA-256 为 `29a679e3388e5f58a71ecaef3e16d1980776bfe9e91a9e7603e5cec05f0a00f1`，仅保留本地；Git 归档复制其余 13 个小型结果并新增 `LARGE_FILE_MANIFEST.md`。
 - 明确禁止项：未生成补充样本，未运行固定抗力 B3、WDRO、Gurobi、MSP、Foundation 或 Persistence；未修改三张矩阵、legacy 配置、`.gitignore`、main、旧 run 或主体样本。
+
+### 2026-07-16 - task-001 Step-02B-2 run-004 run-003 Pareto 归档一致性修复
+
+- 当前分支：`task/001-stage2a2-path-prob`；新增只读重导出审计入口 `terminalLoh_wdro/src/run_stage2b_repair_pareto_archive_consistency_h2.m`。
+- 修复前 run-003 汇总的 q95/q99/q99.5 未观察 Pareto 数为 `858/788/764`，总计 2410；本地和 Git 归档明细均为 `786/716/692`，总计 2194，每层少 72 条。
+- 缺失记录完全来自前三个初始状态：`(2,1,0)` 每层 29 条、`(2,2,0)` 每层 24 条、`(2,3,0)` 每层 19 条；三者每层合计 72，三个层级共缺 216 行。其余初始状态没有额外或错误记录。
+- 差异原因是 run-003 执行时外层命令超时后，清理未完成目录的尝试与仍在运行的 MATLAB 进程发生并发；Pareto 明细早期状态块丢失，但大型候选表和最终汇总保持完整，搜索逻辑和汇总口径没有错误。
+- run-004 只流式读取 run-003 已有的 15388410 行候选表，筛选其中已存储的四类 Pareto 标记；未重新计算风场、未重新抽样、未运行动态规划剪枝或重新遍历合法路径空间。
+- 重导出结果按 35 个初始状态和三个分位层逐项匹配原 run-003 汇总；本地和 Git run-003 Pareto 明细均修复为 q95=`858`、q99=`788`、q99.5=`764`，总计 2410，且每行 `pareto_only_output=1`，SHA-256 均为 `c11670b10e311d48c12952817dfd589f2efdac97c98563bb28b228415e97489d`。
+- run-003 `combined_search_summary_by_state.csv` 哈希保持不变；2.12 GB 候选源文件的字节数和修改时间保持不变。run-004 自动审计 PASS=18、FAIL=0。
+- 本地新审计输出：`terminalLoh_wdro/output/stage2b_tail_candidate_design/run-004/`；Git 小型归档：`results/task-001-stage2a2-path-prob/03-stage2b-tail-candidate-design/run-004/`，均包含 8 个文件。
+- 明确禁止项：未生成补充样本，未运行 B3、WDRO、Gurobi、MSP、Foundation 或 Persistence；未修改三张矩阵、legacy 配置、`.gitignore`、main 或 run-003 搜索汇总。
