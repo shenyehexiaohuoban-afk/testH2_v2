@@ -174,3 +174,22 @@ combined risk score is formed. High-exposure paths are identified separately
 for each risk proxy at the state-specific 99% and 99.5% quantiles. Pareto
 candidates separately minimize theoretical path probability and maximize each
 risk proxy. The audit does not generate supplemental paths or run B3/WDRO.
+
+### Run-002 Corrected Observed Candidate Screening
+
+Run-002 reads the run-001 unique-path risk table and stored q95/q99/q99.5
+thresholds only. It does not recompute wind, quantiles, theoretical coverage,
+or legal paths. Candidate risk must be positive. Values strictly above the
+threshold and values tied at the threshold are reported separately; when a
+threshold is zero, zero-risk paths are excluded.
+
+Pareto screening is applied only inside the positive-risk candidate set for
+the same initial state, risk proxy, and quantile level. Its two objectives are
+lower `path_probability` and higher risk. Empirical mass remains
+`frequency/15000`; `path_probability` is never used as an empirical weight.
+
+After merging the four wind/exceedance proxies and removing duplicate paths,
+q95/q99/q99.5 contain `23510/7316/4310` high-risk paths and
+`268/239/215` Pareto paths. Boundary-tie path counts are
+`5541/2387/1497`. Both per-proxy and combined candidate sets satisfy
+`q99.5 subset q99 subset q95`.

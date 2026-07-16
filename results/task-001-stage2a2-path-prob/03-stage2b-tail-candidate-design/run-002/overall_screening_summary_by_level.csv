@@ -1,0 +1,4 @@
+quantile_level,initial_state_count,combined_high_risk_path_count_total,equal_state_mean_combined_high_risk_count,equal_state_mean_combined_high_risk_empirical_mass,combined_boundary_path_count_total,combined_pareto_path_count_total,equal_state_mean_combined_pareto_count,overall_aggregation_mode
+0.95,35,23510,671.714285714286,0.0831257142857141,5541,268,7.65714285714286,equal_weight_35_initial_states
+0.99,35,7316,209.028571428571,0.0212114285714286,2387,239,6.82857142857143,equal_weight_35_initial_states
+0.995,35,4310,123.142857142857,0.010767619047619,1497,215,6.14285714285714,equal_weight_35_initial_states

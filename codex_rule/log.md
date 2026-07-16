@@ -905,3 +905,16 @@
 - 本地输出：`terminalLoh_wdro/output/stage2b_tail_candidate_design/run-001/`，14个文件、128789346字节。`observed_unique_path_risk.csv` 为47387183字节，`high_exposure_paths.csv` 为81135594字节，两张路径级大表只保留本地。
 - Git小型归档：`results/task-001-stage2a2-path-prob/03-stage2b-tail-candidate-design/run-001/`，复制其余12个小型结果并新增 `LARGE_FILE_MANIFEST.md` 记录两张大表的路径、行数、大小和 SHA-256。
 - 明确禁止项：未运行固定抗力 B3、尾部补充、WDRO、Gurobi、MSP、Foundation 或 Persistence；未修改三张转移矩阵、legacy配置、`.gitignore`、main或旧run。
+
+### 2026-07-16 - task-001 Step-02B-1 run-002 已观察高风险路径筛选修正
+
+- 当前分支：`task/001-stage2a2-path-prob`；新增 `terminalLoh_wdro/src/run_stage2b_correct_observed_tail_screening_h2.m`。
+- 只读取 run-001 的 `observed_unique_path_risk.csv`、`tail_quantiles_by_initial_state.csv` 和覆盖摘要；未重新抽样、未重新计算风场、未重算分位数、未搜索全部合法路径。run-001 五个输入文件运行前后 SHA-256 和字节完全一致。
+- 仅处理四个风险代理：电网最大风速、电网累计超限、道路最大风速、道路累计超限。候选规则为风险值大于0，且严格高于阈值或在数值容差内等于阈值；阈值为0时零风险路径不入选。
+- 四代理合并去重后的高风险唯一路径数：q95=`23510`、q99=`7316`、q99.5=`4310`；对应35状态等权平均经验质量为 `0.0831257143/0.0212114286/0.0107676190`。
+- 合并边界并列路径数：q95=`5541`、q99=`2387`、q99.5=`1497`。状态/代理级输出同时分别记录严格高于与边界并列数量及经验质量。
+- Pareto 只在同一状态、同一代理、同一分位层的正风险候选内部筛选，目标为更低 `path_probability` 和更高风险；四代理合并去重后的 Pareto 数为 q95=`268`、q99=`239`、q99.5=`215`。
+- 每个代理及四代理合并集合均通过 `q99.5 subset q99 subset q95`；零风险误入数0，Pareto越界数0。`path_probability` 未作为经验权重，经验质量仍为 `frequency/15000`，未构造风险加权总分。
+- 最终自动审计 PASS=20、FAIL=0；没有风场函数、随机抽样函数、分位重算函数或全路径枚举调用。
+- 本地输出：`terminalLoh_wdro/output/stage2b_tail_candidate_design/run-002/`；小型Git归档：`results/task-001-stage2a2-path-prob/03-stage2b-tail-candidate-design/run-002/`。两处均为11个文件、8375561字节，逐文件SHA-256一致。
+- 明确禁止项：未运行全路径搜索、固定抗力B3、尾部补充、WDRO、Gurobi、MSP、Foundation或Persistence；未修改run-001、三张矩阵、legacy配置、`.gitignore`、main或旧run。

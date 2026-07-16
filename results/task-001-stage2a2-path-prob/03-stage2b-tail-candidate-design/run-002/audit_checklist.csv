@@ -1,0 +1,21 @@
+check_id,description,passed,observed,expected,required
+AUDIT-01,run-001 unique path SHA-256,1,95be36b0cfbd6981ed76b6d03f62eb80f427a913024af193abe1a20d1b1e31b0,95be36b0cfbd6981ed76b6d03f62eb80f427a913024af193abe1a20d1b1e31b0,1
+AUDIT-02,run-001 quantile SHA-256,1,b23de2697da1715eb849cc684cd443ec64bc5ee68ae8a2c2729123e64c6bced2,b23de2697da1715eb849cc684cd443ec64bc5ee68ae8a2c2729123e64c6bced2,1
+AUDIT-03,256884 observed unique paths,1,256884,256884,1
+AUDIT-04,35 initial states,1,35,35,1
+AUDIT-05,four risk proxies and three levels,1,420,420,1
+AUDIT-06,run-001 thresholds ordered,1,1,1,1
+AUDIT-07,strict plus boundary equals selected,1,1,1,1
+AUDIT-08,zero-risk paths excluded,1,0,0,1
+AUDIT-09,Pareto candidates are high-risk subset,1,0,0,1
+AUDIT-10,per-proxy candidate sets nested,1,1,1,1
+AUDIT-11,combined candidate sets nested,1,1,1,1
+AUDIT-12,empirical mass remains frequency/15000,1,frequency/15000,frequency/15000,1
+AUDIT-13,path_probability not empirical weight,1,frequency/15000,frequency/15000,1
+AUDIT-14,no artificial combined score,1,no score,no score,1
+AUDIT-15,no resampling calls,1,,none,1
+AUDIT-16,no wind recomputation calls,1,,none,1
+AUDIT-17,no full legal-path search,1,,none,1
+AUDIT-18,run-001 quantiles not recomputed,1,,none,1
+AUDIT-19,run-001 inputs unchanged,1,95be36b0cfbd6981ed76b6d03f62eb80f427a913024af193abe1a20d1b1e31b0 | b23de2697da1715eb849cc684cd443ec64bc5ee68ae8a2c2729123e64c6bced2 | d431984d24052f47a5610ee5e45b429cc99f0d15ba0d1c14f2af113435baf430 | 69a7f3e3cacb655dfcb59d8d8787b5d18e517bc3292e99942e8ff388a386ec66 | f7451f3f746bf23f734b2a5a405ad4a2087e43c972eb9a3900f6517942707562,95be36b0cfbd6981ed76b6d03f62eb80f427a913024af193abe1a20d1b1e31b0 | b23de2697da1715eb849cc684cd443ec64bc5ee68ae8a2c2729123e64c6bced2 | d431984d24052f47a5610ee5e45b429cc99f0d15ba0d1c14f2af113435baf430 | 69a7f3e3cacb655dfcb59d8d8787b5d18e517bc3292e99942e8ff388a386ec66 | f7451f3f746bf23f734b2a5a405ad4a2087e43c972eb9a3900f6517942707562,1
+AUDIT-20,35-state equal aggregation,1,equal_weight_35_initial_states,equal_weight_35_initial_states,1
