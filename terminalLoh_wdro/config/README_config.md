@@ -193,3 +193,37 @@ q95/q99/q99.5 contain `23510/7316/4310` high-risk paths and
 `268/239/215` Pareto paths. Boundary-tie path counts are
 `5541/2387/1497`. Both per-proxy and combined candidate sets satisfy
 `q99.5 subset q99 subset q95`.
+
+### Run-003 Unobserved Legal-Path Search
+
+Run-003 reads the run-001 joint-state wind-risk cache reference and quantile
+thresholds, the corrected run-002 observed candidate keys, and the three
+accepted postlandfall transition matrices. It does not resample the accepted
+525,000-row main sample and does not modify any transition matrix.
+
+The search constructs all nonzero joint transitions and caches the four
+single-window risk contributions once for each of the 312 reachable
+`(a,loc,lfw)` states. Reverse dynamic-programming upper bounds prune branches
+whose best possible future risk cannot reach the applicable q95, q99, or
+q99.5 threshold. Peak-wind proxies use a maximum recursion; cumulative
+exceedance proxies use an additive recursion.
+
+Across the 35 initial states there are 21,602,908 theoretical legal W1-W3
+paths. The search fully expands 18,548,379 paths, a pruning ratio of
+`0.141394343761`. Six representative weak/medium/strong and boundary/interior
+initial states were also evaluated by streaming full enumeration. The pruned
+search missed zero high-risk paths and added zero extra paths in those checks.
+
+The four-proxy union contains 7,534,166 / 4,521,704 / 3,332,540 unobserved
+high-risk legal paths at q95 / q99 / q99.5. The corresponding unobserved
+Pareto counts are 858 / 788 / 764. Pareto screening is performed only within
+the same initial state, risk proxy, and quantile level, minimizing theoretical
+`path_probability` and maximizing risk. The theoretical probability is not an
+empirical weight, and no combined risk score is constructed.
+
+All 20 automated checks pass. The main sample remains 525,000 rows with
+SHA-256 `972a8c58620c09ac19cfcfb29e8d6a3ed2819ef1a22dbd522043436418eb805d`.
+The 2,121,759,312-byte detailed candidate table remains local under
+`terminalLoh_wdro/output/`; Git stores the compact diagnostics, the small
+Pareto table, and a large-file manifest. This run does not generate
+supplemental samples or execute B3, WDRO, Gurobi, or MSP.

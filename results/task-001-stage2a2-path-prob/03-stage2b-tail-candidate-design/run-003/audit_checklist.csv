@@ -1,0 +1,21 @@
+check_id,description,passed,observed,expected,required
+AUDIT-01,input files printed and validated,1,11,11,1
+AUDIT-02,run-001 unique path rows,1,256884,256884,1
+AUDIT-03,run-002 observed candidate rows,1,35136,35136,1
+AUDIT-04,35 initial states,1,35,35,1
+AUDIT-05,joint-state wind cache matches run-001,1,5.11590769747272e-13,1e-09,1
+AUDIT-06,transition matrices row-stochastic,1,1.11022302462516e-15,1e-10,1
+AUDIT-07,run-002 observed candidates reproduced,1,0,0,1
+AUDIT-08,q99.5 subset q99 subset q95 by proxy,1,1,1,1
+AUDIT-09,q99.5 subset q99 subset q95 combined,1,1,1,1
+AUDIT-10,zero-risk paths excluded,1,0,0,1
+AUDIT-11,six-state full enumeration crosscheck,1,6,6,1
+AUDIT-12,full enumeration missed paths,1,0,0,1
+AUDIT-13,full enumeration extra paths,1,0,0,1
+AUDIT-14,main sample row count and SHA-256,1,972a8c58620c09ac19cfcfb29e8d6a3ed2819ef1a22dbd522043436418eb805d,972a8c58620c09ac19cfcfb29e8d6a3ed2819ef1a22dbd522043436418eb805d,1
+AUDIT-15,all source inputs unchanged,1,95be36b0cfbd6981ed76b6d03f62eb80f427a913024af193abe1a20d1b1e31b0 | b23de2697da1715eb849cc684cd443ec64bc5ee68ae8a2c2729123e64c6bced2 | a44b541deddbfec1cff3e1a5e8301af494d37dc1864f440bf832a7d2dde88d04 | c81e359c2f6919d8fcc610e9d341ada760d65bb3604a561a0097e0122a2f19c7 | 21378b88605db51deb04e6069327e0b6434b0210d6d2add043145446be45bd7d | ea6c71ed9765a57577940560f45e9ad6003a69ef4bb9abae54b9deaaf78889e5 | 42d167a61478e05e2ff4eb9012e6c25d92a53060d2f00fb7ff60ee45f0139ca1 | 45cf74286b0aec48fe4a0ba77c66ab0847c2227402740bcc18a376da0eff6c29 | 536b25868e6d7cc812a331c0d3e0ffbd5f6958e6883bd39bcae3901c372abf24 | 44ad261da479dbf3ad8ced6d49f587fa3cc53f0c5994cdb95df492562cbae351 | 972a8c58620c09ac19cfcfb29e8d6a3ed2819ef1a22dbd522043436418eb805d,95be36b0cfbd6981ed76b6d03f62eb80f427a913024af193abe1a20d1b1e31b0 | b23de2697da1715eb849cc684cd443ec64bc5ee68ae8a2c2729123e64c6bced2 | a44b541deddbfec1cff3e1a5e8301af494d37dc1864f440bf832a7d2dde88d04 | c81e359c2f6919d8fcc610e9d341ada760d65bb3604a561a0097e0122a2f19c7 | 21378b88605db51deb04e6069327e0b6434b0210d6d2add043145446be45bd7d | ea6c71ed9765a57577940560f45e9ad6003a69ef4bb9abae54b9deaaf78889e5 | 42d167a61478e05e2ff4eb9012e6c25d92a53060d2f00fb7ff60ee45f0139ca1 | 45cf74286b0aec48fe4a0ba77c66ab0847c2227402740bcc18a376da0eff6c29 | 536b25868e6d7cc812a331c0d3e0ffbd5f6958e6883bd39bcae3901c372abf24 | 44ad261da479dbf3ad8ced6d49f587fa3cc53f0c5994cdb95df492562cbae351 | 972a8c58620c09ac19cfcfb29e8d6a3ed2819ef1a22dbd522043436418eb805d,1
+AUDIT-16,no empirical path_probability weighting,1,path_probability is theoretical/Pareto only,frequency is not used here,1
+AUDIT-17,no artificial weighted risk score,1,no score,no score,1
+AUDIT-18,no resampling calls,1,,none,1
+AUDIT-19,only reachable states cached,1,312,312,1
+AUDIT-20,pruned expansion bounded by legal paths,1,18548379,21602908,1

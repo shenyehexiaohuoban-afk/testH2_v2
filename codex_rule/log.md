@@ -918,3 +918,16 @@
 - 最终自动审计 PASS=20、FAIL=0；没有风场函数、随机抽样函数、分位重算函数或全路径枚举调用。
 - 本地输出：`terminalLoh_wdro/output/stage2b_tail_candidate_design/run-002/`；小型Git归档：`results/task-001-stage2a2-path-prob/03-stage2b-tail-candidate-design/run-002/`。两处均为11个文件、8375561字节，逐文件SHA-256一致。
 - 明确禁止项：未运行全路径搜索、固定抗力B3、尾部补充、WDRO、Gurobi、MSP、Foundation或Persistence；未修改run-001、三张矩阵、legacy配置、`.gitignore`、main或旧run。
+
+### 2026-07-16 - task-001 Step-02B-2 run-003 未观察高风险合法路径搜索
+
+- 当前分支：`task/001-stage2a2-path-prob`；新增 `terminalLoh_wdro/src/run_stage2b_search_unobserved_high_risk_paths_h2.m`。
+- 运行前明确打印并校验 run-001 唯一路径风险表、分位阈值、联合状态风险参考、风险参数快照，run-002 已观察候选键，三张 postlandfall 转移矩阵，道路边、NearStageInput 和 525000 行主体样本的实际路径、字段名及行数；字段缺失或含义不唯一时直接报错。
+- 从 35 个初始状态的非零转移构造 W1-W3 合法路径；312 个可达联合状态的电网/道路风险只计算并缓存一次。缓存与 run-001 参考表的最大误差为 `5.11590769747272e-13`。
+- 使用反向动态规划风险上界剪枝：最大风速取当前和未来可达风险上界的最大值，累计超限取当前贡献与未来最大贡献之和。理论合法路径共 `21602908` 条，实际完整展开 `18548379` 条，剪枝比例 `0.141394343761`。
+- 选择 `(2,1,0)`、`(2,4,0)`、`(4,1,0)`、`(4,4,0)`、`(6,4,0)`、`(6,7,0)` 六个弱/中/强强度及边界/内部 loc 状态进行流式完整枚举对照；高风险集合漏检数和额外路径数均为 0。
+- 四代理合并后的未观察高风险合法路径数：q95=`7534166`、q99=`4521704`、q99.5=`3332540`；未观察 Pareto 数：q95=`858`、q99=`788`、q99.5=`764`。逐路径集合通过 `q99.5 subset q99 subset q95`，零风险误入数为 0。
+- `path_probability` 只用于理论概率和低概率/高风险 Pareto 目标，不作为经验权重；未构造风险加权总分。run-002 的 35136 条已观察候选键全部精确复现。
+- 最终自动审计 PASS=20、FAIL=0。主体样本仍为 525000 行，SHA-256 仍为 `972a8c58620c09ac19cfcfb29e8d6a3ed2819ef1a22dbd522043436418eb805d`；全部输入文件运行前后字节和 SHA-256 一致。
+- 本地输出目录：`terminalLoh_wdro/output/stage2b_tail_candidate_design/run-003/`。`unobserved_high_risk_legal_paths.csv` 有 15388410 行、2121759312 字节，SHA-256 为 `29a679e3388e5f58a71ecaef3e16d1980776bfe9e91a9e7603e5cec05f0a00f1`，仅保留本地；Git 归档复制其余 13 个小型结果并新增 `LARGE_FILE_MANIFEST.md`。
+- 明确禁止项：未生成补充样本，未运行固定抗力 B3、WDRO、Gurobi、MSP、Foundation 或 Persistence；未修改三张矩阵、legacy 配置、`.gitignore`、main、旧 run 或主体样本。
