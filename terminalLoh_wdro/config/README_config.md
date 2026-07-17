@@ -286,3 +286,47 @@ rows with SHA-256
 Run-005 has 13 passing checks and zero failures. It does not select B3
 representatives or run sampling, wind calculations, path search, D/A/C, B3,
 WDRO, Gurobi, or MSP.
+
+## Step-03A B3-Smoke Fixed-Resistance Consequence Chain
+
+Step-03A run-001 uses the accepted `persistent_fixed_resistance` convention
+with `Rmax=40`, `Wstep=40`, three 1 h slices, and no repair. It is a smoke test
+of the path-to-consequence chain only; it does not define a formal nominal
+distribution and does not run WDRO or MSP.
+
+Five initial states are selected deterministically from the run-005 candidate
+count distribution: `(5,4,0)` minimum count, `(2,6,0)` maximum count,
+`(2,1,0)` low-intensity/left-location, `(4,4,0)` medium/center, and `(6,7,0)`
+high-intensity/right-location. Each state contributes two ordinary main-sample
+paths, two observed candidates, and two unobserved candidates, giving 30 unique
+physical paths. Each path has 20 fixed-resistance repetitions, or 600 B3-smoke
+scenarios.
+
+Ordinary paths retain `frequency/15000`; observed candidates retain their
+existing main-sample weight and are not added again. Unobserved candidates have
+`empirical_weight=0` and `nominal_inclusion_status=pending_after_B3`. The 30
+selected paths must not be interpreted as an equal-weight probability model.
+
+Each line and road draws one fixed resistance threshold per path/repetition and
+reuses it across W1-W3. Failed lines, closed roads, and slowdown severity are
+persistent for the full 3 h. The path's actual stage-specific `a`, `loc`, and
+`lfw` determine Vmax and center coordinates. D is
+`P_loss_kW * 1 h / (eta_FC * LHV_H2)` in kg-H2. A is binary. C uses finite
+masked cost: current shortest-path `dist(n)` when A=1 and zero when A=0.
+
+The ordinary/observed/unobserved source groups have Hres3h D ranges
+`[0,607.9699]`, `[18.0018,607.9699]`, and `[22.9114,607.9699]` kg. Their mean
+site-node reachable shares are `0.95338`, `0.61340`, and `0.52947`. Overall
+masked C ranges from 0 to `102.9575 km`.
+
+Final-stage multi-line-failure shares are `0.395/1.000/0.990`, and road
+disconnection shares are `0.255/0.765/0.900` for ordinary/observed/unobserved.
+All 400 candidate scenarios have structural and full consequence signatures
+not present in the 200 selected ordinary smoke scenarios. This is a smoke-set
+comparison only, not a claim against every path in the full 525,000-row main
+sample.
+
+All 16 automatic checks pass. Fixed-threshold reuse, damage persistence, D/A/C
+domains, 20 repetitions per path, path traceability, same-seed replay, input
+hash preservation, and prohibited-call scans all pass. The 858 unobserved
+candidates remain `pending_after_B3`; run-001 does not decide their inclusion.

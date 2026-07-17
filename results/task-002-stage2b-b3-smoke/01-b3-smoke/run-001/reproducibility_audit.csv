@@ -1,0 +1,5 @@
+comparison,passed,method
+stage_results,1,same seed full replay
+scenario_results,1,same seed full replay
+resistance_audit,1,same seed full replay
+failure_audit,1,same seed full replay

@@ -1,0 +1,6 @@
+state_selection_id,a0,loc0,lfw0,candidate_count,observed_count,unobserved_count,state_selection_rule
+1,5,4,0,19,8,11,minimum_candidate_count
+2,2,6,0,53,6,47,maximum_candidate_count
+3,2,1,0,35,6,29,low_intensity_left_location
+4,4,4,0,23,11,12,medium_intensity_center_location
+5,6,7,0,38,10,28,high_intensity_right_location
