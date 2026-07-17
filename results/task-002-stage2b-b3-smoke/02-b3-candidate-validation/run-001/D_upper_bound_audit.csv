@@ -1,0 +1,5 @@
+source_category,P_loss_upper_kW,eta_FC,LHV_H2_kWh_per_kg,slice_duration_h,Hres_total_h,derived_D_upper_bound_kg,observed_D_max_kg,observed_minus_bound_kg,hit_count,scenario_count,hit_share,above_bound_count,clipping_assignment_scan_hits,clipping_applied,upper_bound_origin,D_formula,passed
+overall,3715,0.55,33.33,1,3,607.969887897881,607.969887897881,0,11761,45040,0.261123445825932,0,0,0,full non-source load outage over three 1 h slices,"P_loss*1h/(eta_FC*LHV_H2), summed over W1-W3",1
+main_reference,3715,0.55,33.33,1,3,607.969887897881,607.969887897881,0,1194,22520,0.0530195381882771,0,0,0,full non-source load outage over three 1 h slices,"P_loss*1h/(eta_FC*LHV_H2), summed over W1-W3",1
+observed_candidate,3715,0.55,33.33,1,3,607.969887897881,607.969887897881,0,1533,5360,0.286007462686567,0,0,0,full non-source load outage over three 1 h slices,"P_loss*1h/(eta_FC*LHV_H2), summed over W1-W3",1
+unobserved_candidate,3715,0.55,33.33,1,3,607.969887897881,607.969887897881,0,9034,17160,0.526456876456876,0,0,0,full non-source load outage over three 1 h slices,"P_loss*1h/(eta_FC*LHV_H2), summed over W1-W3",1

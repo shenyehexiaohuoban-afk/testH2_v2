@@ -1,0 +1,22 @@
+check_id,description,passed,observed,expected
+AUDIT-01,all 1126 candidates completed,1,1126,1126
+AUDIT-02,1126 matched references selected,1,1126,1126
+AUDIT-03,candidate/reference count matches in all 35 states,1,1,1
+AUDIT-04,reference and candidate physical paths do not overlap,1,0,0
+AUDIT-05,2252 selected physical paths are unique,1,2252,2252
+AUDIT-06,20 repeats per path and 45040 scenarios,1,45040,45040
+AUDIT-07,fixed resistance reused W1-W3,1,1,1
+AUDIT-08,failure closure and slowdown persist,1,1,1
+AUDIT-09,D is nonnegative kg-H2,1,0,0
+AUDIT-10,A counts are binary-derived and bounded,1,1,1
+AUDIT-11,reachable-only C is finite and nonnegative,1,0,0
+AUDIT-12,same-seed repeat-1 replay is identical,1,0,0
+AUDIT-13,all source inputs unchanged,1,1,1
+AUDIT-14,probability identity and pending status preserved,1,1,1
+AUDIT-15,reference paths cover low medium high risk,1,1,1
+AUDIT-16,W1-W3 each 1 h and Hres is 3 h,1,3,3
+AUDIT-17,stage rows use selected path states,1,1,1
+AUDIT-18,607.970 kg upper bound is physical and unclipped,1,1,1
+AUDIT-19,scenario counts match source path counts,1,1,1
+AUDIT-20,Step-03A accepted fixed-resistance input verified,1,1,1
+AUDIT-21,no WDRO Gurobi optimization or MSP calls,1,0,0

@@ -330,3 +330,43 @@ All 16 automatic checks pass. Fixed-threshold reuse, damage persistence, D/A/C
 domains, 20 repetitions per path, path traceability, same-seed replay, input
 hash preservation, and prohibited-call scans all pass. The 858 unobserved
 candidates remain `pending_after_B3`; run-001 does not decide their inclusion.
+
+## Step-03B Expanded B3 Candidate Validation
+
+Step-03B run-001 evaluates all 1,126 run-005 candidates and 1,126 matched
+non-candidate main-sample references. Each of the 35 initial states contributes
+the same number of references as candidates. Reference paths are selected
+deterministically across low, medium, and high values of an unweighted envelope
+of the four accepted wind-risk proxy percentile ranks. No candidate path is
+included in the reference set.
+
+All 2,252 paths use 20 `persistent_fixed_resistance` repetitions, producing
+45,040 scenarios and 135,120 W-stage summaries. The observed candidates retain
+their main-sample empirical identity. The 858 unobserved candidates keep
+`empirical_weight=0` and `nominal_inclusion_status=pending_after_B3`; this run
+does not form a formal expectation or change the nominal distribution.
+
+The repeated maximum `607.969887897881 kg-H2` is the physical consequence of
+all non-source-node load being unavailable for all three 1 h slices. It is
+derived from `P_loss * 3 h / (eta_FC * LHV_H2)`, not a capacity clip or a
+hardcoded D cap. There are 11,761 upper-bound hits: 1,194 matched-reference,
+1,533 observed-candidate, and 9,034 unobserved-candidate scenarios. No scenario
+exceeds the derived bound and the evaluator contains no D clipping assignment.
+
+Matched reference / observed candidate / unobserved candidate Hres3h mean D is
+`160.2241 / 478.4650 / 545.6251 kg`. Their site-node reachable shares are
+`0.92654 / 0.50413 / 0.35694`; A=0 shares are reported separately from C.
+Reachable-only mean C is `19.9383 / 22.0855 / 21.6891 km`. The unobserved
+candidate W3 reachable share falls to `0.18761`, with a mean 16.87 nodes per
+scenario unreachable from every site.
+
+Against all 22,520 matched-reference scenarios, candidate scenarios produce
+22,480 structural signatures and 22,485 full D/A/C signatures not present in
+the reference set. No candidate exceeds the reference D maximum because the
+reference set already reaches the physical full-outage bound. The informative
+difference is therefore the higher saturation frequency, lower accessibility,
+and new line/road/A/D/C combinations, not a higher numerical cap.
+
+All 21 automatic checks pass. The 66,314,882-byte stage summary remains under
+`terminalLoh_wdro/output/`; Git records its 135,120 rows and SHA-256 in a large
+file manifest. No WDRO, Gurobi, optimization, or MSP is run.

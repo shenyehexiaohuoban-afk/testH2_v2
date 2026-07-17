@@ -1,0 +1,5 @@
+comparison,passed,method
+stage_results,1,same-seed repeat-1 replay across all 2252 paths
+scenario_results,1,same-seed repeat-1 replay across all 2252 paths
+resistance_audit,1,same-seed repeat-1 replay across all 2252 paths
+failure_audit,1,same-seed repeat-1 replay across all 2252 paths
