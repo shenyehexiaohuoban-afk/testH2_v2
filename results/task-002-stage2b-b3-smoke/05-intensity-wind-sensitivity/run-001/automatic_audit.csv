@@ -1,0 +1,16 @@
+check_id,description,passed,observed,expected
+AUDIT-01,five accepted representative states each contain 15000 records,1,1,1
+AUDIT-02,5 states x 2000 paths x 3 seeds and four modes completed,1,60,60
+AUDIT-03,M0 exactly reproduces Step-03D N2000 metrics,1,4.54747350886464e-13,0
+AUDIT-04,all modes share paths and line/road resistance uniforms,1,1,1
+AUDIT-05,M1 uses one finite shared q per path across W1-W3,1,1,1
+AUDIT-06,no unobserved candidate path is mixed into the main sample,1,0,0
+AUDIT-07,D A and reachable C domains are valid,1,1,1
+AUDIT-08,a6 stays fixed at 55.5 and no upper bound is invented,1,1,1
+AUDIT-09,bounded grade intervals are ordered and finite,1,1,1
+AUDIT-10,607.969887897881 kg-H2 upper bound is preserved,1,607.969887897881,607.969887897881
+AUDIT-11,source inputs and formal mapping files remain unchanged,1,1,1
+AUDIT-12,accepted old run directories remain unchanged,1,1,1
+AUDIT-13,persistent fixed resistance mode is retained,1,persistent_fixed_resistance,persistent_fixed_resistance
+AUDIT-14,no WDRO Gurobi optimization or MSP calls,1,0,0
+AUDIT-15,main sample SHA-256 remains accepted,1,972a8c58620c09ac19cfcfb29e8d6a3ed2819ef1a22dbd522043436418eb805d,972a8c58620c09ac19cfcfb29e8d6a3ed2819ef1a22dbd522043436418eb805d

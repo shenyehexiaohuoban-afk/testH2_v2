@@ -1,0 +1,2 @@
+decision,reason,a6_used_in_tested_paths,a6_traceable_upper_bound_available,bounded_mode_changes_detected,max_paired_mean_change_across_metrics,max_absolute_mode_shift_in_step3d_comparison
+INCONCLUSIVE_NEEDS_A6_DATA,a6 occurs in the tested paths but GB/T 19201-2006 provides no finite upper bound; bounded-grade sensitivity is diagnostic only,1,0,1,102.713771377138,118.011801180118

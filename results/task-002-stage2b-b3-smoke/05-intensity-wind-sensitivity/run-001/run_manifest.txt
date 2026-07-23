@@ -1,0 +1,27 @@
+task_id=task-002
+step_id=05-intensity-wind-sensitivity
+run_id=run-001
+run_time=2026-07-23 21:21:43 *
+status=PASS
+pass_count=15
+fail_count=0
+representative_states=(5,4,0);(2,6,0);(2,1,0);(4,4,0);(6,7,0)
+paths_per_state_seed=2000
+base_seeds=20260723,20260724,20260725
+path_resistance_scenarios=30000
+mode_consequence_evaluations=120000
+parallel_used=1
+modes=M0,M1,M2L,M2H
+damage_mode=persistent_fixed_resistance
+M1_q_definition=Uniform(0,1) sensitivity assumption; one q shared by W1-W3 per path realization
+mapping_standard=GB/T 19201-2006 Grade of tropical cyclones
+mapping_source_url=https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=016555C8A7A7F9EDDF96CE84A88EAFC6&refer=outter
+a6_upper_bound_available=false
+a6_all_modes_mps=55.5
+D_upper_kg=607.969887897881
+decision=INCONCLUSIVE_NEEDS_A6_DATA
+formal_random_wind_adopted=false
+candidate_paths_added=0
+WDRO_run=false
+Gurobi_run=false
+MSP_run=false

@@ -451,3 +451,42 @@ sample-design recommendation, not a formal threshold PASS decision.
 All 15 automatic checks pass. Four PNGs report D, accessibility/full-loss,
 reachable C, and W3 damage-count convergence. No nominal probability change,
 candidate augmentation, WDRO, Gurobi optimization, or MSP is executed.
+
+## Step-03E Intensity-to-Vmax Mapping Sensitivity
+
+Step-03E run-001 uses the five Step-03A representative states
+`(5,4,0)`, `(2,6,0)`, `(2,1,0)`, `(4,4,0)`, and `(6,7,0)`. For each state
+and the three Step-03D resistance seeds, it reuses the exact first 2,000
+records of the Step-03D nested permutation. The same path, line resistance,
+and road resistance inputs are shared by all wind modes.
+
+The accepted fixed map is M0: `[0,20.8,28.55,37.05,46.20,55.50] m/s`.
+The bounded sensitivity intervals for `a=2:5` are
+`[17.2,24.4]`, `[24.5,32.6]`, `[32.7,41.4]`, and `[41.5,50.9] m/s`,
+referenced to the current national standard `GB/T 19201-2006 Grade of
+tropical cyclones`, supervised and administered by the China Meteorological
+Administration. M1 uses one `Uniform(0,1)` grade quantile per path consequence
+realization, shared across W1-W3. This is a sensitivity assumption, not an
+accepted wind-speed distribution. M2L and M2H use the bounded low and high
+endpoints. `a=1` remains 0; `a=6` remains 55.5 in every mode because the
+standard does not provide a finite upper bound.
+
+Across the 15 state/seed blocks, the mean M0/M1/M2L/M2H D values are
+`153.85/155.24/109.28/205.29 kg-H2`. Relative to M0, M1 changes mean D by
+`+1.39 kg-H2` on average, while M2L and M2H change it by `-44.57` and
+`+51.44 kg-H2`. M2H also raises mean A=0 share by `0.04`, W3 failed lines by
+`2.04`, and W3 closed roads by `1.47`; M2L lowers them by `0.03`, `1.60`, and
+`1.03` respectively.
+
+The endpoint effects are explained by threshold crossings. Relative to M0,
+M2H adds 282,749 grid-line observations above 25 m/s, 15,270 above 50 m/s,
+and 282,845 road-edge observations above 30 m/s. M2L removes 290,033 grid
+observations above 25 m/s and 295,291 road observations above 30 m/s. No road
+observation exceeds 60 m/s because the tested maximum remains 55.5 m/s.
+
+M0 reproduces all Step-03D N=2000 metrics with maximum absolute difference
+`4.55e-13`. All 15 automatic checks pass. Endpoint mapping shifts are often
+much larger than the Step-03D three-seed dispersion, but `a=6` occurs in the
+tested paths and lacks a traceable finite upper bound. The decision is therefore
+`INCONCLUSIVE_NEEDS_A6_DATA`; no random-wind model is adopted. No candidate
+path, WDRO, Gurobi optimization, or MSP is used.
