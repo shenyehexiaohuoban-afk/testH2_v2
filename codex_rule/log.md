@@ -1036,3 +1036,22 @@
 - 自动审计 PASS=15、FAIL=0。首次入口在计算前因漏传坐标构建器所需的 `sliceDurationH` 停止，未生成输出；补齐与 Step-03D 相同的 `sliceDurationH=1`、`HresTotalH=3` 后完整运行成功。
 - 本地输出：`terminalLoh_wdro/output/stage3e_intensity_wind_sensitivity/run-001/`；Git 小型归档：`results/task-002-stage2b-b3-smoke/05-intensity-wind-sensitivity/run-001/`。两处均包含 11 个文件、173331 字节，逐文件 SHA-256 一致。
 - 明确禁止项：未加入 1126 条候选，未重新抽样主体路径，未修改正式名义概率或正式风速映射，未运行 WDRO、Gurobi 优化或 MSP，未覆盖旧 run。
+
+### 2026-07-23 - task-002 Step-03F run-001 a=6 最高强度风速数据审计与小规模敏感性
+
+- 当前分支：`task/002-stage2b-b3-smoke`。新增 `audit_a6_historical_wind_data_h2.m`、`evaluate_a6_wind_sensitivity_block_h2.m` 和 `run_stage3f_a6_wind_audit_h2.m`；未修改正式 `a=6 -> 55.5 m/s` 映射、主体样本、候选池、W 转移矩阵、旧 run 或 MSP 文件。
+- 仓库来源审计发现 55.5 已存在于初始 Git 快照 `3dd7310...` 的 `fa_h2/fuzhu/terminalLoh_windmc/build_terminal_loh_wind_mc_preview_h2.m`，随后被 Foundation、Persistence 和 Step-03A/B/D 后果链复制使用。定义这些数值的源码附近没有文献、历史数据或配置引用；因此只能确认其仓库内起点为硬编码，无法从 Git 恢复建库前来源。
+- CMA 数据使用 1949–2024 共 76 个 `CHYYYYBST.txt` 原始年度文件。官方原始来源为中国气象局热带气旋资料中心 `tcdata.typhoon.org.cn`；因官网 WAF 阻止命令行直接下载，本次通过 ModelScope `ai4s/CMA` 镜像 Commit `19ad9ff02537c962bdaaba9c98f2a5980e251ba9` 获取原文件。RAR SHA-256 为 `1e36a4bf58088a2d9c32fc944c6cba8433a0d735894a6d64a68a5ec4d1aa2105`。
+- 风速口径依据中国气象局 2023-08-22 官方答复及 `GB/T 19201-2006`：我国台风强度是台风底层 10 m 高度中心附近最大 2 分钟平均风速。CMA 数据及项目 a=6 阈值均按该 2 分钟口径解释。
+- 按 `CMA category=6` 且风速 `>=51 m/s` 筛得 4084 条时间记录、454 个热带气旋，年份范围 1949–2024，75 个年份出现 a=6 记录。记录级 `min/mean/median/q75/q90/q95/q99/max = 52/62.087169/60/65/75/80/90/110 m/s`。历史 110 m/s 仅称为观测样本最大值，不称为物理上界。
+- 原文件存在两条分类边界不一致：1 条 `category=6` 但风速 50 m/s，按当前 `>=51` 定义排除；1 条 category=9 变性记录风速 55 m/s，因不是 a=6 排除。筛选规则没有为匹配结果而调整。
+- IBTrACS v04r01 仅用于 CMA 数据交叉核查。读取 NOAA/NCEI `IBTrACS.WP.v04r01.nc` 的 `cma_wind`，只保留 CMA agency index=3 且 `iflag=O` 的原始记录；排除 IBTrACS 插值记录、WMO 聚合、USA/JTWC 1 分钟和 JMA/Tokyo 10 分钟风速。NetCDF SHA-256 为 `77b686af554b33ddec7b11d9e32d726ada90c5ce8c4e1a37c2c1d89e39fab5cc`。
+- IBTrACS CMA 原始记录同样筛得 4084 条。其 knots 按 `0.514444 m/s` 换算并四舍五入后，与 CMA 4084 条整数 m/s 风速排序样本逐项完全一致，最大差为 0；因此数据口径可比，没有混用不同平均时段。IBTrACS 方法参考 Knapp et al. (2010), BAMS, doi:`10.1175/2009BAMS2755.1`；CMA 数据说明参考 Lu et al. (2021), AAS, doi:`10.1007/s00376-020-0211-7`。
+- 配对敏感性沿用 Step-03E 的 5 个代表状态、每状态 2000 条嵌套主体路径和 3 个抗力种子，共 30000 个路径-抗力记录、120000 个模式后果。四模式仅改变 a=6：M0=`55.5`、M6_MEDIAN=`60`、M6_Q90=`75`、M6_Q95=`80 m/s`；a=1:5、路径、线路抗力、道路抗力、径向风场和故障函数完全相同。
+- 实际含 a=6 的路径记录为 2495 条，不含 a=6 的为 27505 条；全部不含 a=6 的记录在四模式下 D/A/C、线路和道路后果逐场景完全一致。
+- 15 个状态/种子块的跨块平均：M0/Median/Q90/Q95 的 D mean=`153.849821/159.458900/168.676559/169.930475 kg-H2`，全失负荷率=`0.034633/0.041033/0.062700/0.071400`，A=0 share=`0.059838/0.065865/0.093147/0.101821`，reachable-only C mean=`20.035187/20.104458/19.991861/19.762412 km`，W3 故障线路数=`4.485067/4.662667/5.378600/5.610467`，W3 关闭道路数=`2.326967/2.491067/3.246200/3.531267`。
+- 只看 2495 条实际含 a=6 的记录，Median/Q90/Q95 相对 M0 的平均 D 增量为 `67.44/178.28/193.35 kg-H2`，全失负荷增量为 `0.08/0.34/0.44`，A=0 share 增量为 `0.07/0.40/0.50`，W3 故障线路增量为 `2.14/10.74/13.53`，W3 关闭道路增量为 `1.97/11.05/14.48`。高风速下 reachable-only C 下降同时伴随 A=0 大幅上升，不解释为更安全。
+- Q90/Q95 的主要后果变化超过 Step-03E M0 三种子范围，决策为 `REVISE_A6_MAPPING`。该结论只建议后续单独校准 a=6 代表值；未把 110 m/s 当上界，未自动修改正式 55.5，也未重跑全部 B3。
+- 自动审计 PASS=17、FAIL=0，M0 对 Step-03E 最大复现误差 `4.54747350886464e-13`。正式并行计算在结果完整移动后、MATLAB 关闭并行池的进程退出阶段报告 Windows heap corruption，命令返回非零；随后使用独立非并行只读 MATLAB 审计成功退出，确认 60 行模式指标、945 行配对表、4084 条历史记录、全部 17 项 PASS 和关键计数/误差均一致。该退出异常未隐藏。
+- 本地输出：`terminalLoh_wdro/output/stage3f_a6_wind_audit/run-001/`；Git 小型归档：`results/task-002-stage2b-b3-smoke/06-a6-wind-audit/run-001/`。两处均包含 15 个文件、507185 字节，逐文件 SHA-256 一致。
+- 明确禁止项：未加入 1126 条候选，未修改正式 55.5 m/s 映射，未重跑完整 B3，未运行 WDRO、Gurobi 优化或 MSP，未覆盖旧 run。

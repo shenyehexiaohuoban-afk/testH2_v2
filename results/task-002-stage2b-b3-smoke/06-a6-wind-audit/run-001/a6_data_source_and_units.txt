@@ -1,0 +1,27 @@
+CMA OFFICIAL BEST-TRACK DATA
+source_url=https://tcdata.typhoon.org.cn/zjljsjj.html
+release_url=https://www.cma.gov.cn/2011xwzx/2011xqxkj/2011xkjdt/202504/t20250411_6991129.html
+wind_period_source=https://www.cma.gov.cn/wmhd/gzly/20CMAckly/202308/t20230822_5727280.html
+wind_definition=maximum 2-minute mean wind near the 10 m lower-level cyclone center
+CMA_reference=Lu XQ et al. (2021), Western North Pacific Tropical Cyclone Database Created by the China Meteorological Administration, AAS 38, 690-699, doi:10.1007/s00376-020-0211-7
+download_transport=ModelScope mirror of CMA files
+mirror_url=https://www.modelscope.cn/datasets/ai4s/CMA
+mirror_commit=19ad9ff02537c962bdaaba9c98f2a5980e251ba9
+archive_sha256=1e36a4bf58088a2d9c32fc944c6cba8433a0d735894a6d64a68a5ec4d1aa2105
+annual_files=CH1949BST.txt through CH2024BST.txt
+combined_file_manifest_sha256=68c4ee7b9e80ccd1b2e5469e62f9f70494c2aabcdb5c0630d078647b3f911370
+
+IBTRACS CROSS-CHECK
+source_url=https://www.ncei.noaa.gov/data/international-best-track-archive-for-climate-stewardship-ibtracs/v04r01/access/netcdf/IBTrACS.WP.v04r01.nc
+file_sha256=77b686af554b33ddec7b11d9e32d726ada90c5ce8c4e1a37c2c1d89e39fab5cc
+version=v04r01
+field=cma_wind; unit=knots; conversion=0.514444 m/s per knot; required_iflag=O; agency_index=3 (CMA)
+Only the CMA agency field is used. USA/JTWC 1-minute, JMA/Tokyo 10-minute, WMO aggregate, and interpolated CMA records are excluded.
+IBTrACS_reference=Knapp KR, Kruk MC, Levinson DH, Diamond HJ, Neumann CJ (2010), The International Best Track Archive for Climate Stewardship (IBTrACS): Unifying Tropical Cyclone Best Track Data, BAMS 91, 363-376, doi:10.1175/2009BAMS2755.1
+
+COMPARABILITY
+CMA_selected_records=4084
+IBTrACS_CMA_original_records=4084
+rounded_multiset_match=1
+max_rounded_difference_mps=0
+Historical maximum is an observed sample maximum, not a physical upper bound.

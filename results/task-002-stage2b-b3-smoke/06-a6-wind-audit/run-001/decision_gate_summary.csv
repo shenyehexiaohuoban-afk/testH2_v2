@@ -1,0 +1,2 @@
+decision,reason,cma_a6_record_count,M0_a6_mps,M6_median_mps,M6_q90_mps,M6_q95_mps,contains_a6_path_records,no_a6_path_records,M6_q90_max_primary_mean_shift,M6_q95_max_primary_mean_shift,q90_shift_exceeds_step3e_seed_range,q95_shift_exceeds_step3e_seed_range
+REVISE_A6_MAPPING,CMA median/q90/q95 exceed 55.5 and higher a6 values create directional B3 shifts beyond observed Step-03E M0 seed ranges,4084,55.5,60,75,80,2495,27505,14.8267372191764,16.0806535198973,1,1

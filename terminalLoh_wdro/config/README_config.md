@@ -490,3 +490,55 @@ much larger than the Step-03D three-seed dispersion, but `a=6` occurs in the
 tested paths and lacks a traceable finite upper bound. The decision is therefore
 `INCONCLUSIVE_NEEDS_A6_DATA`; no random-wind model is adopted. No candidate
 path, WDRO, Gurobi optimization, or MSP is used.
+
+## Step-03F a=6 Wind-Data Audit and Sensitivity
+
+Step-03F run-001 traces the accepted `a=6 -> 55.5 m/s` value through the
+offline preview, Foundation, persistence, and B3 consequence chains. The value
+is already hardcoded in the initial Git snapshot. None of the defining source
+files links it to a paper, historical sample, or configuration record, so its
+pre-repository origin cannot be recovered from this repository.
+
+The historical audit uses the CMA best-track annual files from 1949 through
+2024. The files were obtained through the ModelScope `ai4s/CMA` mirror of the
+CMA Tropical Cyclone Data Center files; the original CMA source remains
+`tcdata.typhoon.org.cn`. The CMA archive SHA-256 is
+`1e36a4bf58088a2d9c32fc944c6cba8433a0d735894a6d64a68a5ec4d1aa2105`.
+The CMA operational definition is the maximum 2-minute mean wind near the
+10 m lower-level cyclone center, as confirmed by CMA under
+`GB/T 19201-2006`.
+
+Filtering `category=6` and wind `>=51 m/s` gives 4,084 time records from 454
+storms. The record-level distribution is: minimum `52`, mean `62.0872`, median
+`60`, q75 `65`, q90 `75`, q95 `80`, q99 `90`, and observed maximum `110 m/s`.
+The observed maximum is a sample maximum, not a physical upper bound. One CMA
+record marked category 6 at 50 m/s is excluded by the current threshold, as is
+one 55 m/s extratropical-category record.
+
+IBTrACS v04r01 is used only as a cross-check. The audit selects `cma_wind`,
+requires the CMA agency interpolation flag `O`, converts knots to m/s, and
+excludes USA/JTWC 1-minute, JMA/Tokyo 10-minute, WMO aggregate, and interpolated
+CMA winds. The 4,084 rounded IBTrACS CMA-source winds exactly match the sorted
+CMA source sample. The IBTrACS NetCDF SHA-256 is
+`77b686af554b33ddec7b11d9e32d726ada90c5ce8c4e1a37c2c1d89e39fab5cc`.
+
+The paired sensitivity reuses the Step-03E five states, N=2000 prefixes, and
+three fixed-resistance seeds. Only the a=6 value changes:
+`M0=55.5`, `M6_MEDIAN=60`, `M6_Q90=75`, and `M6_Q95=80 m/s`. Of the 30,000
+path records, 2,495 contain a=6 and 27,505 do not. Every no-a=6 consequence is
+bitwise identical across modes.
+
+Across all 15 state/seed blocks, M0/median/q90/q95 D means are
+`153.850/159.459/168.677/169.930 kg-H2`; full-loss shares are
+`0.03463/0.04103/0.06270/0.07140`; A=0 shares are
+`0.05984/0.06587/0.09315/0.10182`; W3 failed-line means are
+`4.485/4.663/5.379/5.610`; and W3 closed-road means are
+`2.327/2.491/3.246/3.531`.
+
+Within the 2,495 records that actually contain a=6, the median/q90/q95 modes
+increase mean D by `67.44/178.28/193.35 kg-H2`. Q90 and q95 changes exceed
+the accepted Step-03E M0 three-seed ranges for primary consequences. The
+decision is therefore `REVISE_A6_MAPPING`. This is a recommendation to perform
+a separate mapping-calibration task, not an automatic modification: the formal
+55.5 m/s value remains unchanged. No candidate paths, WDRO, Gurobi optimization,
+or MSP are used.

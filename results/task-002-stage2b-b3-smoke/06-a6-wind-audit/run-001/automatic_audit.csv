@@ -1,0 +1,18 @@
+check_id,description,passed,observed,expected
+AUDIT-01,complete CMA 1949-2024 annual file set,1,76,76
+AUDIT-02,CMA record-level a6 sample is sufficient,1,4084,>=30
+AUDIT-03,CMA 2-minute records match IBTrACS CMA original records after unit conversion,1,0,0
+AUDIT-04,CMA archive and IBTrACS hashes match downloaded source snapshots,1,1e36a4bf58088a2d9c32fc944c6cba8433a0d735894a6d64a68a5ec4d1aa2105 | 77b686af554b33ddec7b11d9e32d726ada90c5ce8c4e1a37c2c1d89e39fab5cc,1e36a4bf58088a2d9c32fc944c6cba8433a0d735894a6d64a68a5ec4d1aa2105 | 77b686af554b33ddec7b11d9e32d726ada90c5ce8c4e1a37c2c1d89e39fab5cc
+AUDIT-05,five representative states each contain 15000 main records,1,1,1
+AUDIT-06,all state seed and a6 mode evaluations completed,1,60,60
+AUDIT-07,M0 reproduces accepted Step-03E M0 metrics,1,4.54747350886464e-13,0
+AUDIT-08,all modes share paths and component resistance uniforms,1,1,1
+AUDIT-09,all paths without a6 have exactly identical consequences,1,0,0
+AUDIT-10,no unobserved candidate is mixed into main records,1,0,0
+AUDIT-11,D A and reachable C domains are valid,1,1,1
+AUDIT-12,607.969887897881 kg-H2 upper bound is preserved,1,607.969887897881,607.969887897881
+AUDIT-13,source inputs and formal mapping files remain unchanged,1,1,1
+AUDIT-14,accepted old run directories remain unchanged,1,1,1
+AUDIT-15,persistent fixed resistance mode is retained,1,persistent_fixed_resistance,persistent_fixed_resistance
+AUDIT-16,no WDRO Gurobi optimization or MSP calls,1,0,0
+AUDIT-17,main sample SHA-256 remains accepted,1,972a8c58620c09ac19cfcfb29e8d6a3ed2819ef1a22dbd522043436418eb805d,972a8c58620c09ac19cfcfb29e8d6a3ed2819ef1a22dbd522043436418eb805d

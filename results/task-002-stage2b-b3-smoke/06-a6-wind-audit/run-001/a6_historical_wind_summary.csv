@@ -1,0 +1,5 @@
+sample_scope,sample_count,unique_storm_count,year_min,year_max,years_with_records,minimum_mps,mean_mps,median_mps,q75_mps,q90_mps,q95_mps,q99_mps,maximum_mps,unit,wind_average_period,sample_definition
+CMA_record_level,4084,454,1949,2024,75,52,62.0871694417238,60,65,75,80,90,110,m/s,2-minute,category=6 and wind>=51 m/s; each CMA best-track time record
+CMA_storm_peak,454,454,1949,2024,75,52,64.7797356828194,60,70,78,85,100,110,m/s,2-minute,maximum selected a=6 record per CMA storm; secondary diagnostic
+IBTrACS_CMA_original,4084,NaN,1949,2024,NaN,51.958844,61.7826585621941,59.675504,64.819944,74.59438,79.73882,89.513256,109.576572,m/s converted from knots,CMA source 2-minute,cma_wind with CMA iflag=O only; no interpolated or other-agency winds
+IBTrACS_CMA_rounded_mps,4084,NaN,1949,2024,NaN,52,62.0871694417238,60,65,75,80,90,110,m/s rounded,CMA source 2-minute,cross-check representation matching integer CMA source files
