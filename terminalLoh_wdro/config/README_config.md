@@ -411,3 +411,43 @@ All 16 automatic checks pass. Probabilities are not renormalized, no candidate
 is assigned `1/15000` as theoretical probability, and all 858 unobserved paths
 remain `empirical_weight=0` and `pending_after_B3`. No wind/B3 rerun, WDRO,
 Gurobi, optimization, or MSP is executed.
+
+## Step-03D Nominal B3 Sample-Size Stability
+
+Step-03D run-001 uses only the accepted 525,000-row main Monte Carlo sample.
+For each of the 35 initial states and three reproducible seeds, the 15,000 main
+records are deterministically permuted once. The tested sizes
+`N=[500,1000,2000,5000,10000,15000]` are exact nested prefixes. Every selected
+record has weight `1/N`; `path_probability` is not applied as a second weight.
+
+Each record receives one `persistent_fixed_resistance` B3 scenario. The run
+evaluates 1,575,000 full scenarios plus 52,500 same-seed N=500 replay scenarios.
+The replay is identical for all 105 state/seed blocks. The 268 observed-tail
+paths appear only through their natural main-sample records; no candidate rows
+are appended and none of the 858 unobserved candidates appears.
+
+Relative to the same-state/same-seed N=15,000 reference, the p95 absolute
+errors for N=500/1000/2000/5000/10000 are:
+
+- D mean: `12.4923/9.7748/5.8828/3.3914/1.9514 kg`;
+- D q95: `50.7323/36.0036/29.4575/16.0925/7.0916 kg`;
+- D q99: `73.3710/42.5497/27.2755/22.9114/13.0922 kg`;
+- full-loss probability: `0.0252/0.0202/0.0092/0.0050/0.002833`;
+- A=0 share: `0.015970/0.009228/0.006277/0.003378/0.001618`;
+- reachable C mean: `0.16945/0.15413/0.09403/0.05037/0.02870 km`;
+- reachable C q95: `0.89813/0.67963/0.45014/0.21681/0.13709 km`.
+
+The slowest metrics are full-loss probability in relative terms and D q99 in
+absolute/seed-dispersion terms. Low-risk states can have a near-zero N=15,000
+full-loss reference, so small absolute count changes create relative errors of
+100% or more. At N=10,000 the D q99 p95 absolute error is still `13.0922 kg`
+and its p95 across-state seed standard deviation is `16.2771 kg`.
+
+No accepted B3 D/A/C stability threshold exists in the project. The run does
+not invent one. The conservative diagnostic recommendation is therefore
+`N=15000` per initial state, the largest tested and reference sample. This is a
+sample-design recommendation, not a formal threshold PASS decision.
+
+All 15 automatic checks pass. Four PNGs report D, accessibility/full-loss,
+reachable C, and W3 damage-count convergence. No nominal probability change,
+candidate augmentation, WDRO, Gurobi optimization, or MSP is executed.

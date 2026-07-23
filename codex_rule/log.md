@@ -1004,3 +1004,19 @@
 - 自动审计 PASS=16、FAIL=0。`checkcode` 分析器曾在长脚本上超时且未生成输出，遗留 MATLAB 进程已终止；随后正式只读审计入口在 28.1 秒内成功完成。
 - 本地输出：`terminalLoh_wdro/output/stage3c_tail_probability_audit/run-001/`；Git 小型归档：`results/task-002-stage2b-b3-smoke/03-tail-probability-audit/run-001/`，均包含 8 个文件，逐文件 SHA-256 一致。
 - 明确禁止项：未重新运行 B3、未重新抽样、未修改候选池、未给 858 条赋经验权重、未重新归一化候选概率、未形成正式期望、未运行 WDRO、Gurobi、优化或 MSP。858 条仍为 `pending_after_B3`。
+
+### 2026-07-23 - task-002 Step-03D run-001 主体 B3 样本量稳定性验证
+
+- 当前分支：`task/002-stage2b-b3-smoke`。新增 `evaluate_nominal_b3_stability_block_h2.m` 和 `run_stage3d_b3_sample_stability_h2.m`；未修改主体样本、候选池、转移矩阵、Step-03A/B/C 旧 run 或 MSP 文件。
+- 主体输入为 35 个初始状态、每状态 15000 条 Monte Carlo 抽样记录。每个状态和三个种子 `20260723/20260724/20260725` 使用一个确定性随机排列，测试 `N=[500,1000,2000,5000,10000,15000]` 的嵌套前缀；每条记录权重严格为 `1/N`，权重和为 1，不再次乘 `path_probability`。
+- 每条主体记录生成一个 `persistent_fixed_resistance` 场景。使用 12 个本地 MATLAB worker 完成 1575000 个正式场景，并对全部 105 个状态/种子块的 N=500 前缀复算 52500 个场景；同种子复算 105/105 一致。
+- 电网为 33 节点、32 线路径向网络，使用源节点到节点的线路路径矩阵批量计算持续故障后的失负荷；道路仍按 Step-03B 当前关闭边、持续慢行和四站到 33 节点的最短路计算 A/C，没有改变物理口径。
+- 只使用主体抽样记录。268 条已观察尾部路径仅按其在主体样本中的自然记录出现；外部候选追加数为 0，858 条未观察候选在主体记录中的命中数为 0。
+- 相对同状态同种子 N=15000，N=500/1000/2000/5000/10000 的 p95 绝对误差：D mean=`12.4923/9.7748/5.8828/3.3914/1.9514 kg`；D q95=`50.7323/36.0036/29.4575/16.0925/7.0916 kg`；D q99=`73.3710/42.5497/27.2755/22.9114/13.0922 kg`。
+- 对应 full-loss probability p95 绝对误差为 `0.0252/0.0202/0.0092/0.0050/0.002833`，A=0 share 为 `0.015970/0.009228/0.006277/0.003378/0.001618`，reachable C mean 为 `0.16945/0.15413/0.09403/0.05037/0.02870 km`，reachable C q95 为 `0.89813/0.67963/0.45014/0.21681/0.13709 km`。
+- 最难收敛指标：低概率全失负荷在相对误差口径下最不稳定，因为部分状态 N=15000 参考接近 0；D q99 在绝对误差和种子差异下最慢。N=10000 时 D q99 的 p95 绝对误差仍为 `13.0922 kg`，p95 seed std 为 `16.2771 kg`。
+- 项目没有现成的 B3 D/A/C 稳定性阈值；未借用 Stage2A2 路径分布阈值，也未新造门槛。`recommended_sample_size.csv` 保守建议正式 B3 使用每状态 `N=15000`，并明确标记为 diagnostic recommendation、不是 threshold acceptance。
+- 自动审计 PASS=15、FAIL=0。D 非负，A 由 0/1 可达性得到，reachable C 有限非负；嵌套关系、记录权重、输入哈希、旧 run 快照和禁止调用扫描全部通过。
+- 输出四张收敛图：`D_convergence.png`、`risk_accessibility_convergence.png`、`C_convergence.png`、`damage_count_convergence.png`。本地输出 `terminalLoh_wdro/output/stage3d_b3_sample_stability/run-001/`，Git 归档 `results/task-002-stage2b-b3-smoke/04-b3-sample-stability/run-001/`，共 13 个文件、2159208 字节，逐文件 SHA-256 一致。
+- 首次归档命令因 PowerShell `Copy-Item -LiteralPath` 不展开通配符而在复制前失败，目标目录保持空；随后改为同一 PowerShell 会话内枚举并复制全部文件，完整性检查通过。
+- 明确禁止项：未加入 858 条未观察候选、未修改名义概率、未按唯一路径等权、未重新搜索路径、未运行 WDRO、Gurobi 优化或 MSP，未覆盖旧 run。

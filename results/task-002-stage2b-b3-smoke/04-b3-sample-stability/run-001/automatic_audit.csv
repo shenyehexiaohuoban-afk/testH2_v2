@@ -1,0 +1,16 @@
+check_id,description,passed,observed,expected
+AUDIT-01,35 states each contain 15000 main records,1,1,1
+AUDIT-02,all state seed and N combinations completed,1,630,630
+AUDIT-03,nested prefix relationship holds,1,0,0
+AUDIT-04,record weights equal 1/N and sum to one,1,4.48530101948563e-14,0
+AUDIT-05,no external candidates or unobserved candidate records added,1,0 | 0,0 | 0
+AUDIT-06,natural observed-candidate records retain main-sample identity,1,268,>0 and not separately appended
+AUDIT-07,D A and reachable C domains valid,1,1,1
+AUDIT-08,same-seed N500 replay is identical for all 105 blocks,1,0,0
+AUDIT-09,N15000 reference errors equal zero,1,0,0
+AUDIT-10,source inputs unchanged,1,1,1
+AUDIT-11,accepted old run directories unchanged,1,1,1
+AUDIT-12,no B3 stability threshold was fabricated,1,1,1
+AUDIT-13,persistent fixed resistance mode used,1,persistent_fixed_resistance,persistent_fixed_resistance
+AUDIT-14,no WDRO Gurobi optimization or MSP calls,1,0,0
+AUDIT-15,main sample SHA-256 unchanged,1,972a8c58620c09ac19cfcfb29e8d6a3ed2819ef1a22dbd522043436418eb805d,972a8c58620c09ac19cfcfb29e8d6a3ed2819ef1a22dbd522043436418eb805d
