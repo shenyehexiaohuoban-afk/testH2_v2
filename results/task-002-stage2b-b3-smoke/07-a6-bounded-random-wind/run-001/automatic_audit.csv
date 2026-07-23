@@ -1,0 +1,20 @@
+check_id,description,passed,observed,expected
+AUDIT-01,five states each contain 15000 main records,1,1,1
+AUDIT-02,30000 base path-resistance scenarios completed,1,30000,30000
+AUDIT-03,two modes report 60000 consequence records,1,60000,60000
+AUDIT-04,M0 reproduces accepted Step-03E M0 metrics,1,4.54747350886464e-13,0
+AUDIT-05,sampled a6 winds stay within project interval 51 to 60,1,51.0523923789753 | 59.7820567865982,51 | 60
+AUDIT-06,one q is shared across W1-W3 within each scenario,1,1,1
+AUDIT-07,wind seeds are separate from resistance seeds,1,1,1
+AUDIT-08,wind quantile draws reproduce from their recorded seeds,1,1,1
+AUDIT-09,paths and component resistance inputs match Step-03F,1,0,0
+AUDIT-10,all no-a6 paths have exactly identical consequences,1,0,0
+AUDIT-11,accepted a6 path-record count remains 2495,1,2495,2495
+AUDIT-12,no unobserved candidate is mixed into main records,1,0,0
+AUDIT-13,D A and reachable C domains are valid,1,1,1
+AUDIT-14,607.969887897881 kg-H2 upper bound is preserved,1,607.969887897881,607.969887897881
+AUDIT-15,60 m/s is labeled only as a project computational limit,1,1,1
+AUDIT-16,source inputs and formal mapping files remain unchanged,1,1,1
+AUDIT-17,accepted old run directories remain unchanged,1,1,1
+AUDIT-18,no WDRO Gurobi optimization or MSP calls,1,0,0
+AUDIT-19,main sample SHA-256 remains accepted,1,972a8c58620c09ac19cfcfb29e8d6a3ed2819ef1a22dbd522043436418eb805d,972a8c58620c09ac19cfcfb29e8d6a3ed2819ef1a22dbd522043436418eb805d

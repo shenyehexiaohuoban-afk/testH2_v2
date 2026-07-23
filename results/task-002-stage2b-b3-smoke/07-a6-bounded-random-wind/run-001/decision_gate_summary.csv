@@ -1,0 +1,2 @@
+decision,reason,sampled_a6_record_count,sampled_a6_wind_mean_mps,sampled_a6_wind_median_mps,all_primary_risk_shifts_nonnegative,all_primary_shifts_exceed_existing_error,primary_comparisons_exceeding_existing_error,primary_comparison_count
+NEED_MORE_VALIDATION,"bounded random a6 changes some outcomes, but the all-record shifts do not all exceed existing N2000 stability-error benchmarks",2495,55.4715587027455,55.4356046967054,0,0,0,5

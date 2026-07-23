@@ -542,3 +542,43 @@ decision is therefore `REVISE_A6_MAPPING`. This is a recommendation to perform
 a separate mapping-calibration task, not an automatic modification: the formal
 55.5 m/s value remains unchanged. No candidate paths, WDRO, Gurobi optimization,
 or MSP are used.
+
+## Step-03G Bounded Random a=6 Wind Sensitivity
+
+Step-03G run-001 keeps the formal intensity mapping unchanged and compares the
+current `a=6 -> 55.5 m/s` value with the project-bounded sensitivity assumption
+`Triangular(51,55.5,60) m/s`. The value 60 m/s is only this study's
+computational limit; it is not an official or physical upper bound and is not
+used to reinterpret the Step-03F historical audit.
+
+The test reuses the Step-03E/03F five representative states, the N=2000 nested
+main-sample prefixes, and seeds `20260723:20260725`. This gives 30,000 base
+path-resistance scenarios and 60,000 reported mode consequences. Wind and
+component-resistance seeds are separate and reproducible. Each base scenario
+draws one wind quantile, shared across W1-W3, and only stages with `a=6` use the
+sampled value. All 27,505 no-a=6 records are exactly identical between modes.
+
+There are 2,495 a=6 records. Their sampled winds have minimum/mean/median/q90/
+q95/maximum values of `51.0524/55.4716/55.4356/57.9939/58.6354/59.7821 m/s`,
+all within `[51,60]`.
+
+Across all 15 state/seed blocks, M0/M1 mean D values are
+`153.849821/153.758503 kg-H2`; mean D q95 and q99 are unchanged at
+`341.215940/390.002637 kg-H2`. Full-loss shares are
+`0.0346333/0.0347667`, A=0 shares are `0.0598385/0.0599755`, reachable-only C
+means are `20.035187/20.033156 km`, W3 failed-line means are
+`4.485067/4.486367`, and W3 closed-road means are `2.326967/2.330933`.
+
+Within the a=6 blocks, M0/M1 mean D values are `384.422058/384.055026 kg-H2`,
+full-loss shares are `0.103809/0.107230`, A=0 shares are
+`0.271925/0.271061`, reachable-only C means are `21.520843/21.567995 km`, W3
+failed-line means are `15.112341/15.370288`, and W3 closed-road means are
+`10.063788/10.218124`.
+
+All 19 automatic checks pass. M0 matches the accepted Step-03E metrics within
+`4.55e-13`, and the random-input identities match Step-03F. The decision is
+`NEED_MORE_VALIDATION`: bounded random a=6 winds change some outcomes, but the
+all-record shifts are mixed and none of the five primary comparisons exceeds
+the existing Step-03D N=2000 p95 stability-error benchmark. The formal 55.5
+m/s mapping is not modified. No candidate path, full B3 rerun, WDRO, Gurobi
+optimization, or MSP is used.
