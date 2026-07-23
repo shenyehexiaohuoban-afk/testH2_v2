@@ -370,3 +370,44 @@ and new line/road/A/D/C combinations, not a higher numerical cap.
 All 21 automatic checks pass. The 66,314,882-byte stage summary remains under
 `terminalLoh_wdro/output/`; Git records its 135,120 rows and SHA-256 in a large
 file manifest. No WDRO, Gurobi, optimization, or MSP is run.
+
+## Step-03C Tail Probability Mass and Path-Level Consequences
+
+Step-03C run-001 is a read-only audit of run-005 and the accepted Step-03B
+45,040 scenarios. It does not call the wind, damage, or B3 evaluators. Each of
+the 1,126 candidate paths is aggregated over exactly 20 resistance repetitions
+into one path-level row. The 268 observed and 858 unobserved identities remain
+unchanged.
+
+For each of the 35 conditional initial states, the observed candidate
+theoretical probability mass ranges from `5.80636056e-09` to
+`5.754577669888e-05`; the unobserved candidate mass ranges from
+`4.0679136e-12` to `3.49390100192e-07`; the combined candidate mass ranges
+from `5.84841098533333e-09` to `5.7609148814144e-05`. These are products of
+the three accepted intensity, loc, and lfw transition matrices. The maximum
+matrix-recomputation error against run-005 is `6.7763e-21`.
+
+Observed candidate path-average D ranges from `26.7572` to `607.9699 kg-H2`;
+unobserved candidate path-average D ranges from `112.2794` to
+`607.9699 kg-H2`. Their mean full-loss shares are `0.28601` and `0.52646`,
+mean A=0 shares are `0.49587` and `0.64306`, and path-level reachable-only C
+means range over `9.3959-30.6830 km` and `7.9596-33.3234 km` respectively.
+
+The equal-weight mean across the 35 conditional states gives unobserved-tail
+raw contributions of probability mass `2.99832e-08`, D `1.81499e-05 kg`,
+full-loss probability `2.62699e-08`, and A=0 probability `2.69712e-08`.
+These values are candidate-subset contributions only. They are not divided by
+candidate probability mass and are not a formal nominal expectation.
+
+The exact full D/A/C comparison marks 22,485 candidate scenarios as novel.
+After rounding D to 1 kg and reachable C to 1 km while retaining the A pattern,
+22,417 remain novel. Independent structural diagnostics find 21,446 novel A
+patterns, 22,225 novel line-failure combinations, 22,292 novel road-disconnect
+combinations, and 22,480 novel joint line-road/full structural scenarios.
+Therefore the novelty is not explained only by continuous floating-point C
+differences.
+
+All 16 automatic checks pass. Probabilities are not renormalized, no candidate
+is assigned `1/15000` as theoretical probability, and all 858 unobserved paths
+remain `empirical_weight=0` and `pending_after_B3`. No wind/B3 rerun, WDRO,
+Gurobi, optimization, or MSP is executed.

@@ -1,0 +1,17 @@
+check_id,description,passed,observed,expected
+AUDIT-01,accepted input hashes and row counts,1,1,1
+AUDIT-02,1126 candidate paths aggregate to 1126 rows,1,1126,1126
+AUDIT-03,268 observed and 858 unobserved classifications,1,268 | 858,268 | 858
+AUDIT-04,every candidate has 20 scenarios and 60 stage rows,1,0,0
+AUDIT-05,physical path and selection IDs are unique,1,1,1
+AUDIT-06,Step-03B probability matches run-005,1,0,0
+AUDIT-07,matrix recomputation matches run-005,1,6.7762635780344e-21,0
+AUDIT-08,probabilities finite nonnegative and not row-count weights,1,4.608e-16,0
+AUDIT-09,each initial-state candidate mass is at most one,1,5.7609148814144e-05,1
+AUDIT-10,path-level consequences finite and nonnegative,1,1,1
+AUDIT-11,858 unobserved paths remain empirical zero and pending,1,1,1
+AUDIT-12,all source inputs unchanged,1,1,1
+AUDIT-13,Step-03B automatic and probability audits remain PASS,1,1,1
+AUDIT-14,seven signature definitions and three source scopes produced,1,21,21
+AUDIT-15,candidate contribution is raw and never renormalized,1,0,0
+AUDIT-16,no wind B3 random WDRO Gurobi or MSP calls,1,0,0
