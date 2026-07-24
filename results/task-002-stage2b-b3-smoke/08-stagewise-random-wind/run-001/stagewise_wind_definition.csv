@@ -1,0 +1,7 @@
+intensity_level,M0_fixed_mps,M1_lower_mps,M1_mode_mps,M1_upper_mps,distribution,stagewise_sampling_rule,formal_mapping_modified
+1,0,0,0,0,fixed,fixed zero,0
+2,20.8,17.2,20.8,24.4,triangular,independent q per W stage,0
+3,28.55,24.5,28.55,32.6,triangular,independent q per W stage,0
+4,37.05,32.7,37.05,41.4,triangular,independent q per W stage,0
+5,46.2,41.5,46.2,50.9,triangular,independent q per W stage,0
+6,55.5,51,55.5,60,triangular,independent q per W stage,0

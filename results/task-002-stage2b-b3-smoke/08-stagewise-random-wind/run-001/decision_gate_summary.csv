@@ -1,0 +1,2 @@
+decision,reason,all_primary_risk_shifts_nonnegative,all_primary_shifts_exceed_existing_error,primary_comparisons_exceeding_existing_error,primary_comparison_count
+NEED_MORE_VALIDATION,"stagewise random wind changes outcomes, but directions or magnitudes are not uniformly beyond existing N2000 stability-error benchmarks",1,0,0,5

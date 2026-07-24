@@ -582,3 +582,53 @@ all-record shifts are mixed and none of the five primary comparisons exceeds
 the existing Step-03D N=2000 p95 stability-error benchmark. The formal 55.5
 m/s mapping is not modified. No candidate path, full B3 rerun, WDRO, Gurobi
 optimization, or MSP is used.
+
+## Step-03H Full-Intensity Stagewise Random Wind Sensitivity
+
+Step-03H run-001 compares the current fixed mapping with an isolated
+stagewise-random sensitivity mode. For each path-resistance scenario, M1 draws
+independent `q1/q2/q3 ~ Uniform(0,1)` values for W1-W3. Equal intensity levels
+in consecutive stages still receive new draws. Wind randomness remains part of
+the second-layer joint B3 consequence realization; no third Monte Carlo layer
+is introduced.
+
+M1 uses triangular distributions by intensity level:
+`a2=(17.2,20.8,24.4)`, `a3=(24.5,28.55,32.6)`,
+`a4=(32.7,37.05,41.4)`, `a5=(41.5,46.2,50.9)`, and
+`a6=(51,55.5,60) m/s`; a1 remains fixed at zero. The 60 m/s value retains the
+Step-03G interpretation as a project computational limit, not an official or
+physical upper bound.
+
+The 90,000 stage-level draws contain 9,660/27,519/6,483/18,033/24,593/3,712
+records for a1-a6. Their observed minimum/mean/median/q95/maximum speeds are:
+
+- a1: `0/0/0/0/0 m/s`;
+- a2: `17.2295/20.7934/20.7901/23.2651/24.3729 m/s`;
+- a3: `24.6029/28.5230/28.5173/31.2895/32.4979 m/s`;
+- a4: `32.7376/37.0596/37.0557/40.0742/41.3704 m/s`;
+- a5: `41.5259/46.1784/46.1708/49.3650/50.8578 m/s`;
+- a6: `51.2069/55.5386/55.4992/58.6818/59.9292 m/s`.
+
+Across all 15 state/seed blocks, M0/M1 D mean is
+`153.849821/155.874769 kg-H2`, D q95 is `341.215940/342.506978`, and D q99 is
+`390.002637/392.221040`. Full-loss share changes from
+`0.0346333` to `0.0353667`; A=0 share from `0.0598385` to `0.0612824`;
+reachable-only C from `20.035187` to `20.049725 km`; W3 failed lines from
+`4.485067` to `4.569500`; and W3 closed roads from `2.326967` to `2.393033`.
+
+The paired stage D increases are `0.592787/0.644683/0.787479 kg-H2` for
+W1/W2/W3. Failed-line increases are `0.036367/0.056133/0.084433`, and closed-
+road increases are `0.023367/0.040633/0.066067`.
+
+Relative to M0, M1 creates 54,438 upward and 50,866 downward grid-line
+crossings at 25 m/s, 471/214 at 50 m/s, 47,656/56,483 road-edge crossings at
+30 m/s, and no road-edge crossings at 60 m/s. The mixed up/down counts arise
+because symmetric bounded grade-level sampling moves individual stage winds
+both above and below the fixed representative values.
+
+All 20 automatic checks pass. M0 matches Step-03E within `4.55e-13`; paths and
+component resistance inputs match Step-03F. All five primary risk shifts are
+nonnegative, but none exceeds the corresponding Step-03D N=2000 p95 sampling-
+error benchmark. The decision is therefore `NEED_MORE_VALIDATION`. The formal
+fixed mapping remains unchanged, and no candidate path, full B3 rerun, WDRO,
+Gurobi optimization, or MSP is used.
