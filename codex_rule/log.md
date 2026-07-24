@@ -1132,4 +1132,5 @@
 - rho=0 目标重构误差最大约 `1.1e-11`；从既有 Gurobi 对偶量恢复的最坏权重非负至数值精度、总和为 1、行质量和及传输半径审计通过。未改变 LP 公式或距离定义。
 - R=15000 只做公式估算：距离矩阵 `225,000,000` 元素、`1,800,000,000` bytes（约 1.68 GiB）、LP 变量 `2,505,005`、约束 `225,570,000`、非零元上限量级 `682,005,000`；未强行运行 R=15000。证据边界结论为 `LIMITED_R_ONLY`，不是 `EXISTING_FORMULATION_FEASIBLE`。
 - 本地输出：`terminalLoh_wdro/output/stage3k_wdro_integration_scaling/run-001/`；本轮 Git 小型归档：`results/task-002-stage2b-b3-smoke/11-wdro-integration-scaling/run-001/`。自动审计 `PASS=13, FAIL=0`。
+- 最终提交后复核发现首版三组比较表曾把“全失负荷率”误按全部 A 均不可达统计为 0；在不重跑 B3、风场、loader 或 WDRO 基准的前提下，改为读取 Step-03J 冻结字段 `D_upper_bound_hit`，并同步修正本地与 Git 归档表。该修正不改变 105 块审计、八组求解结果、rho=0 一致性、规模估算或 `LIMITED_R_ONLY` 结论。
 - 明确禁止项：本轮未执行正式 WDRO、MSP、情景约简、稀疏传输、聚类或求解器重构；858 条未观察候选仍未进入名义分布。
