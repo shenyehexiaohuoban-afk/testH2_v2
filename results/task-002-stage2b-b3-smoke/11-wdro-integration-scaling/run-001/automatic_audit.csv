@@ -1,0 +1,14 @@
+check_id,status,observed,expected
+INPUT-01,PASS,6/6 hashes match,6/6
+LOAD-01,PASS,105 blocks,105 blocks
+LOAD-02,PASS,all block_pass,all block_pass
+LOAD-03,PASS,all state weights sum to one,all state weights sum to one
+LOAD-04,PASS,all roles share nominal path order,all roles share nominal path order
+LOAD-05,PASS,zero unobserved records,zero unobserved records
+WIND-01,PASS,stagewise winds in configured ranges,stagewise winds in configured ranges
+ROLE-01,PASS,15000 records per state,15000 records per state
+BENCH-01,PASS,R=100 solved,R=100 solved
+BENCH-02,PASS,all completed rho=0 checks consistent,all completed rho=0 checks consistent
+BENCH-03,PASS,LIMITED_R_ONLY,evidence-bounded decision
+BOUND-01,PASS,Step-03J inputs read only,Step-03J inputs read only
+BOUND-02,PASS,no formal WDRO or MSP run,no formal WDRO or MSP run

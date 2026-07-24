@@ -1,0 +1,2 @@
+decision,reason,largest_measured_R,target_R,formal_WDRO_executed
+LIMITED_R_ONLY,The existing dense O(R^2) formulation was measured only through R=1000. R=15000 was not executed and has an estimated 225 million distance entries and 225.57 million LP constraints.,1000,15000,0

@@ -1121,3 +1121,15 @@
 - 本地大文件：nominal CSV/MAT=`122068355/188959741` 字节，SHA-256=`366dc3c0b57bfd76aca92f51ae1db82b93c764c87fa15e8cb4dd32388d018168`/`6936a696f5cde137aca483f8c32adee33b52cbd90559a8e6395f3686c0712945`；validation-1=`124697225/188919247` 字节，SHA-256=`e39253d5af25d312b5d65cbb4efdf5ad4e907843f9203a46c47c7ca058ed3099`/`ca84afa01748d8c2929c372802861315254723424786b681a677e2f1420b6e3f`；validation-2=`124701276/188936785` 字节，SHA-256=`91c8e1233017d5d7dea9a87592f5bfb196e0d629733c10892fb539e4228c9b02`/`0bae20fa685940751edf5c5dd3d6c43a2d52293cbd1350c02b84736e914ec3b6`。
 - 六个大文件均超过 50 MiB，只保留于 `terminalLoh_wdro/output/stage3j_wdro_input_freeze/run-001/`。Git 归档 `results/task-002-stage2b-b3-smoke/10-wdro-input-freeze/run-001/` 仅保存 10 个小型审计文件及 `LARGE_FILE_MANIFEST.md`。
 - 自动审计 PASS=18、FAIL=0；输入和旧 run 未修改。明确未运行 WDRO、Gurobi 或 MSP，未生成优化结果。
+
+### 2026-07-24 - task-002 Step-03K run-001 WDRO 端到端接入与规模可行性审计
+
+- 当前分支：`task/002-stage2b-b3-smoke`。新增独立 runner `terminalLoh_wdro/src/run_stage3k_wdro_integration_scaling_h2.m`；未修改 Step-03J 冻结 CSV/MAT、frozen loader、WDRO 距离矩阵函数、WDRO 求解器核心、MSP、Step-03I 或旧 run。
+- 运行前对 Step-03J 六个大文件逐一复核 SHA-256：六个实际哈希与 `LARGE_FILE_MANIFEST` 完全一致。大文件继续只保留在本地，没有复制进本轮 Git 归档。
+- frozen loader 逐状态扫描 nominal、validation-1、validation-2，共 `3 x 35 = 105` 个条件数据块。全部通过 `R=15000,I=4,N=33`、D/A/C 行对齐、权重和、路径顺序、stagewise_random_triangular 风速范围、合法 D/A/C 和 858 条未观察候选命中为 0 审计。
+- 三组比较只作描述性状态级比较：validation-1/2 与 nominal 共享 canonical W 路径，仅重抽第二层风速和抗力，因此未称为完整路径样本外验证，也未自行设置偏差阈值。
+- 代表状态按 nominal 状态级 D 均值排序后的中位数确定。使用未修改的 `DAC_maskedC` 距离矩阵和 `solve_wdro_terminal_loh_lp_h2`，测试 `R=100,250,500,1000` 与 `rho=0,0.02`。八个组合均为 `OPTIMAL`；距离矩阵约 `80 KB/500 KB/2 MB/8 MB`，最大实测 R=1000 的 rho=0.02 求解调用总耗时约 `9.18 s`。
+- rho=0 目标重构误差最大约 `1.1e-11`；从既有 Gurobi 对偶量恢复的最坏权重非负至数值精度、总和为 1、行质量和及传输半径审计通过。未改变 LP 公式或距离定义。
+- R=15000 只做公式估算：距离矩阵 `225,000,000` 元素、`1,800,000,000` bytes（约 1.68 GiB）、LP 变量 `2,505,005`、约束 `225,570,000`、非零元上限量级 `682,005,000`；未强行运行 R=15000。证据边界结论为 `LIMITED_R_ONLY`，不是 `EXISTING_FORMULATION_FEASIBLE`。
+- 本地输出：`terminalLoh_wdro/output/stage3k_wdro_integration_scaling/run-001/`；本轮 Git 小型归档：`results/task-002-stage2b-b3-smoke/11-wdro-integration-scaling/run-001/`。自动审计 `PASS=13, FAIL=0`。
+- 明确禁止项：本轮未执行正式 WDRO、MSP、情景约简、稀疏传输、聚类或求解器重构；858 条未观察候选仍未进入名义分布。

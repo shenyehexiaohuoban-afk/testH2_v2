@@ -752,3 +752,30 @@ manifest only.
 All 18 automatic checks pass. Frozen N=15,000 metrics reproduce Step-03I with
 maximum absolute difference `5.12e-13`. No WDRO, Gurobi optimization, or MSP
 execution is performed.
+
+## Step-03K WDRO Integration and Scaling Audit
+
+Step-03K run-001 verifies the Step-03J frozen interface with the unchanged
+one-state-at-a-time loader. All 105 dataset-role/state blocks pass the
+`R=15000, I=4, N=33` shape, row-alignment, conditional-weight, domain, path
+order, stagewise-wind-range, and zero-unobserved-candidate checks. The three
+roles remain separate: nominal uses seed group 1, while validation-1 and
+validation-2 redraw second-layer wind and resistance on the same canonical W
+paths; they are not independent path-sample OOS datasets.
+
+The isolated benchmark runner calls the existing `DAC_maskedC` distance
+matrix and WDRO LP functions without changing their formulas. It uses the
+existing minimum positive radius `rho=0.02` together with `rho=0`, capacity
+fraction `0.8`, and the existing `gamma=0.001*M`. The nominal state is selected
+as the deterministic median of state-level nominal D means. R=`100, 250, 500,
+1000` all returned `OPTIMAL`; rho=0 objective reconstruction errors are below
+`1.1e-11`, and recovered worst-case weights are nonnegative to numerical
+precision, sum to one, and satisfy the tested transport radius.
+
+The R=15000 result is a formula estimate, not a run: 225,000,000 dense
+distance entries (1,800,000,000 bytes, about 1.68 GiB), 2,505,005 LP
+variables, 225,570,000 constraints, and an upper-order nonzero count of
+682,005,000. Since R=15000 was not executed, the evidence-bounded decision is
+`LIMITED_R_ONLY`; no formal WDRO or MSP run was performed. Full frozen CSV/MAT
+inputs remain local under the Step-03J output and their SHA-256 manifest is
+unchanged.

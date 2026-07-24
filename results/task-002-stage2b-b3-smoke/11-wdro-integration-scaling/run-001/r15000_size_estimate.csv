@@ -1,0 +1,2 @@
+R,distance_matrix_elements,distance_matrix_bytes,distance_matrix_GiB,LP_variables,LP_constraints,LP_nonzeros_upper_order,largest_measured_R,evidence_type
+15000,225000000,1800000000,1.67638063430786,2505005,225570000,682005000,1000,formula estimate; not measured at R=15000
