@@ -1,0 +1,15 @@
+Formal B3 stagewise random wind method
+
+Default mode: stagewise_random_triangular. Retained comparison mode: fixed_representative.
+For each main path-resistance record, W1, W2, and W3 receive independent Uniform(0,1) quantiles. Equal adjacent intensity levels are redrawn.
+The quantiles map through project-defined triangular distributions: a1 fixed 0; a2 Triangular(17.2,20.8,24.4); a3 Triangular(24.5,28.55,32.6); a4 Triangular(32.7,37.05,41.4); a5 Triangular(41.5,46.2,50.9); a6 Triangular(51,55.5,60) m/s.
+The 60 m/s a6 endpoint is this study's computational upper limit, not an official or physical upper bound.
+Wind quantiles and component resistance uniforms use separate reproducible seeds. They jointly define one second-layer B3 consequence realization; no third Monte Carlo layer is introduced.
+Line and road components retain persistent_fixed_resistance: one resistance draw per component and record is fixed across W1-W3, and damage does not recover within the 3 h horizon.
+The fixed_representative mode uses [0,20.8,28.55,37.05,46.2,55.5] m/s and remains available for controlled comparison and reproduction of accepted old runs.
+Main-sample records are weighted 1/N within each initial state. path_probability is not applied again.
+References for stochastic tropical-cyclone and wind-field simulation context:
+- Vickery, Skerlj and Twisdale (2000).
+- Jing and Lin (2020).
+These references motivate stochastic wind/hurricane simulation context; the grade-wise triangular parameters above are project assumptions and are not claimed to be distributions estimated by those papers.
+Run seeds: 20260723,20260724,20260725. Wind seed offset: 330000000.

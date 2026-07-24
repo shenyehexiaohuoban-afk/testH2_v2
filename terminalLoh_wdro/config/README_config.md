@@ -632,3 +632,73 @@ nonnegative, but none exceeds the corresponding Step-03D N=2000 p95 sampling-
 error benchmark. The decision is therefore `NEED_MORE_VALIDATION`. The formal
 fixed mapping remains unchanged, and no candidate path, full B3 rerun, WDRO,
 Gurobi optimization, or MSP is used.
+
+## Step-03I Formal Stagewise-Random B3 Wind Mode
+
+Step-03I run-001 adopts `stagewise_random_triangular` as the formal B3 default
+wind mode. The retained `fixed_representative` mode remains available for
+controlled comparison and reproduction of accepted old runs. The authoritative
+mode definitions are stored in `formal_b3_wind_modes.csv` and validated through
+`load_formal_b3_wind_config_h2.m`; no accepted old runner is rewritten.
+
+For each main path-resistance record, W1, W2, and W3 receive independent wind
+quantiles, including adjacent stages with the same intensity. The quantiles and
+component resistance uniforms use separate reproducible seeds but jointly form
+one second-layer B3 consequence realization. This is not a third Monte Carlo
+layer. Lines and roads retain `persistent_fixed_resistance`: each component's
+resistance is fixed across W1-W3 and damage does not recover within Hres=3 h.
+
+The formal stagewise distributions are: a1 fixed at 0;
+`a2=Triangular(17.2,20.8,24.4)`;
+`a3=Triangular(24.5,28.55,32.6)`;
+`a4=Triangular(32.7,37.05,41.4)`;
+`a5=Triangular(41.5,46.2,50.9)`; and
+`a6=Triangular(51,55.5,60) m/s`. The 60 m/s endpoint is this study's
+computational upper limit, not an official or physical upper bound.
+
+The full stability audit covers 35 initial states, 15,000 main records per
+state, three joint seeds, and nested N values 500/1,000/2,000/5,000/10,000/
+15,000. It evaluates 1,575,000 formal scenarios plus 52,500 reproducibility
+scenarios. Every prefix record has weight 1/N; `path_probability` is not used
+again. The 268 observed candidates occur only through their natural main-sample
+records, no candidate is appended, and all 858 unobserved candidates remain
+outside the nominal sample.
+
+Across 4,725,000 stage-level wind draws, a1-a6 counts are
+325,908/1,147,437/754,095/1,003,611/1,296,807/197,142. Observed
+minimum/mean/median/q95/maximum speeds are:
+
+- a1: `0/0/0/0/0 m/s`;
+- a2: `17.2088/20.7987/20.7980/23.2595/24.3907 m/s`;
+- a3: `24.5029/28.5501/28.5495/31.3197/32.5962 m/s`;
+- a4: `32.7060/37.0472/37.0471/40.0218/41.3994 m/s`;
+- a5: `41.5061/46.1998/46.1993/49.4132/50.8945 m/s`;
+- a6: `51.0139/55.5007/55.5063/58.5680/59.9931 m/s`.
+
+Relative to the same-state, same-seed N=15,000 reference, the random-wind
+p95 absolute errors at N=500/1,000/2,000/5,000/10,000 are:
+
+- D mean: `11.6319/8.2141/5.9531/3.5500/1.8790 kg-H2`;
+- D q95: `56.1874/34.9126/29.1847/19.6383/7.3644 kg-H2`;
+- D q99: `81.5536/45.8228/39.2767/33.0033/9.8192 kg-H2`;
+- full loss: `0.0234/0.0192/0.00937/0.00487/0.00277`;
+- A=0 share: `0.01500/0.00839/0.00584/0.00329/0.00154`;
+- reachable C mean: `0.2417/0.1791/0.1046/0.0570/0.0268 km`.
+
+The project still has no accepted B3 consequence-stability threshold. No new
+threshold is invented; the conservative diagnostic recommendation remains
+N=15,000 per initial state, unchanged from fixed wind.
+
+At N=15,000, fixed/random equal-state-seed averages are:
+D mean `176.4071/178.5336 kg-H2`, D q95 `372.8659/379.5367`, D q99
+`448.9592/451.4503`, full-loss share `0.052705/0.054023`, A=0 share
+`0.077236/0.079235`, reachable C mean `20.275796/20.281784 km`, W3 failed
+lines `5.246300/5.354404`, and W3 closed roads `2.887467/2.965335`.
+
+The method note records Vickery, Skerlj and Twisdale (2000) and Jing and Lin
+(2020) as stochastic tropical-cyclone and wind-field simulation context. The
+grade-wise triangular parameters remain explicit project assumptions and are
+not claimed to be distributions estimated by those references.
+
+All 24 automatic checks pass. No WDRO, Gurobi optimization, MSP execution,
+candidate augmentation, or nominal-probability change is performed.
