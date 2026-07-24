@@ -1134,3 +1134,18 @@
 - 本地输出：`terminalLoh_wdro/output/stage3k_wdro_integration_scaling/run-001/`；本轮 Git 小型归档：`results/task-002-stage2b-b3-smoke/11-wdro-integration-scaling/run-001/`。自动审计 `PASS=13, FAIL=0`。
 - 最终提交后复核发现首版三组比较表曾把“全失负荷率”误按全部 A 均不可达统计为 0；在不重跑 B3、风场、loader 或 WDRO 基准的前提下，改为读取 Step-03J 冻结字段 `D_upper_bound_hit`，并同步修正本地与 Git 归档表。该修正不改变 105 块审计、八组求解结果、rho=0 一致性、规模估算或 `LIMITED_R_ONLY` 结论。
 - 明确禁止项：本轮未执行正式 WDRO、MSP、情景约简、稀疏传输、聚类或求解器重构；858 条未观察候选仍未进入名义分布。
+
+### 2026-07-24 - task-002 Step-03L A=0 口径复核与 WDRO 原子无损聚合审计
+
+- 当前分支：`task/002-stage2b-b3-smoke`。新增独立 runner `terminalLoh_wdro/src/run_stage3l_exact_atom_aggregation_h2.m`；未修改 Step-03J 冻结文件、frozen loader、距离函数、WDRO 求解器、MSP、论文方法章节或任何旧 run。
+- Step-03J 六个大文件 SHA-256 再次全部匹配。nominal 的 35 个状态各 15000 条执行严格无损聚合；validation-1/2 只用于 A=0 口径复核，没有生成聚合集。
+- A=0 差异来自真实代码维度：Step-03I `A0_pair_share_W1_W2_W3` 分母为 `R*3*4*33`，105 个 N=15000 状态-种子块均值 `0.0792347603014264`；Step-03K nominal `A0_share_WDRO_aggregated_atom` 分母为 `R*4*33`，均值 `0.120302554112552`。Step-03J 会把需求相关 W1-W3 窗口聚合为一个保守 WDRO A 原子，因此两者不是同一指标；未覆盖旧结果。
+- 当前 `DAC_maskedC` 和 LP 实际使用完整节点级 D、完整 A，以及 A=1 位置的 C；路径、风速和种子只用于元数据追踪。loader 读取并返回 `sample_weight`，但求解器签名没有权重参数，且 `solve_wdro_terminal_loh_lp_h2.m` 将 `obj(alpha)` 固定为 `1/R`，因此不支持非等权精确原子。
+- 等价键严格使用 `D33 + A132 + Cmasked132` 的原始 double 值，仅把 A=0 或非有限 C 位置按现有掩膜规则置 0；未舍入、未设置近似容差、未按摘要字段分组。每类选择真实原始记录，类权重为 `class_size/15000`，完整 525000 行 path_id 映射保留。
+- 35 状态 `K_exact` 最小/均值/中位数/q95/最大为 `116/7100.343/8433/14550.6/14609`。总支撑从 525000 降至 248512，总压缩比例 `0.473356`；只有 7/35 状态不超过 Step-03K 实测 R=1000。最大等价类 14867 条，保留原子中单例类比例 `0.985562`。
+- 对全部 3588 个非单例类各检查一对真实成员，现有距离函数组内最大距离为 0；跨类抽查最小距离 `2.258e-8`。低/中/高风险状态的 R=100/250/500 嵌套前缀全部通过零距离映射检查。因求解器不支持非等权，本轮按任务要求只完成能力审计，没有修改核心或运行 Gurobi 对照。
+- 聚合前后 D、q95/q99、上限命中率、全部 A 指标、可达 C、W3 线路/道路摘要和权重和均保留。最大绝对误差 `4.3769e-12`，最大相对误差 `5.921e-14`；分位数使用按类计数恢复原始顺序统计量的线性插值。
+- 首次本地 run-001 采用绝对 `1e-12` 判据，因 D 均值求和顺序产生 `4.3769e-12` 误差而得到 PASS=14/FAIL=1，未 Commit/Push 且未覆盖。按固定规则保留失败 run-001，并使用 run-002；run-002 显式记录绝对/相对误差和 `1e-13*max(1,abs(value))` 尺度化机器精度判据，最终 PASS=15/FAIL=0。
+- 决策为 `EXACT_AGGREGATION_STILL_TOO_LARGE`。最大 K=14609 时估算距离矩阵 213422881 元素、约 1.707 GB，LP 约 2439708 变量、213978023 约束，仍远高于 Step-03K 实测规模；不得据此宣称正式 WDRO 可行。
+- 成功本地输出：`terminalLoh_wdro/output/stage3l_exact_atom_aggregation/run-002/`，共 119 个文件、281108937 字节；其中 70 个聚合数据文件、35 个完整映射文件及其 SHA-256 只保留本地。Git 小型归档：`results/task-002-stage2b-b3-smoke/12-exact-atom-aggregation/run-002/`，仅 14 个摘要、schema、manifest 和审计文件。
+- 明确禁止项：未实施近似聚类、尾部抽样、约束生成或求解器重构；未运行 Gurobi、正式 WDRO 或 MSP；未改变正式 WDRO 默认输入。

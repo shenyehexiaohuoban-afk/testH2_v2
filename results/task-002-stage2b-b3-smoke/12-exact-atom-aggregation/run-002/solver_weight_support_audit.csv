@@ -1,0 +1,7 @@
+check,value,evidence,conclusion
+loader_reads_sample_weight,1,"load_frozen_b3_wdro_dataset_h2.m:12-20,47",returns sampleWeights and verifies sum
+distance_uses_sample_weight,0,"build_wdro_distance_matrix_h2.m:1",distance is independent of probability weights
+solver_has_weight_argument,0,"solve_wdro_terminal_loh_lp_h2.m:1",signature has no probability vector
+solver_uses_uniform_1_over_R,1,"solve_wdro_terminal_loh_lp_h2.m:54-57",obj(alpha)=1/R
+solver_supports_non_equal_atoms,0,"solve_wdro_terminal_loh_lp_h2.m:54-57",cannot consume accumulated exact-class weights
+formal_aggregate_input_compatible_now,0,"capability audit",core solver would require an explicitly authorized weight interface change

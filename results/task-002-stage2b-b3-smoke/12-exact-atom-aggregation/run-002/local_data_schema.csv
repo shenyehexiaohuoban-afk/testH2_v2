@@ -1,0 +1,5 @@
+artifact,fields,rows_or_dimensions,storage_policy
+exact_aggregated_nominal/state-xxx.csv,scenario metadata plus aggregate_id representative_path_id class_size aggregate_weight and class summary fields,K_exact rows/state,local only; audit input is not formal WDRO default
+exact_aggregated_nominal/state-xxx_DAC.mat,unchanged representative D_node_kg Kx33 A_site_node Kx4x33 C_site_node_km Kx4x33 plus exact class weights,K_exact atoms/state,local only
+representative_to_original_map/state-xxx_map.csv,initial_state_id original_path_id aggregate_id representative_path_id original_sample_weight aggregate_weight,15000 rows/state,complete probability-mass traceability
+local_data_sha256_manifest.csv,relative path type state rows/dimensions bytes SHA-256,105 files,Git-auditable manifest for local-only data

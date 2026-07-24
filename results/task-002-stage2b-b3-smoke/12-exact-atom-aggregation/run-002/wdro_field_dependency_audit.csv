@@ -1,0 +1,14 @@
+component,field,used,usage,code_location,finding
+frozen_loader,D_node_kg / samples.D,1,restores R x 33 node demand,"load_frozen_b3_wdro_dataset_h2.m:27-39",WDRO model input
+frozen_loader,A_site_node / samples.A,1,restores R x 4 x 33 binary reachability,"load_frozen_b3_wdro_dataset_h2.m:27-39",WDRO model input
+frozen_loader,C_site_node_km / samples.C_raw,1,restores R x 4 x 33 service cost,"load_frozen_b3_wdro_dataset_h2.m:27-39",WDRO model input
+frozen_loader,sample_weight,1,checks sum and exposes samples.sampleWeights,"load_frozen_b3_wdro_dataset_h2.m:12-20,47",not consumed by current solver
+distance_DAC_maskedC,D,1,pairwise L1 normalized D component,"build_wdro_distance_matrix_h2.m:52-71,83-87",full node-level values
+distance_DAC_maskedC,A,1,pairwise L1 normalized A component and C overlap mask,"build_wdro_distance_matrix_h2.m:38-59,83-87,192-212",full binary array
+distance_DAC_maskedC,C_raw,1,compares C only where both atoms have A=1,"build_wdro_distance_matrix_h2.m:46-59,192-212",A=0 positions do not affect masked C distance
+distance_DAC_maskedC,sample_weight,0,not an argument and not referenced,"build_wdro_distance_matrix_h2.m:1-219",distance geometry only
+WDRO_loss_LP,D,1,demand RHS and y upper bounds,"solve_wdro_terminal_loh_lp_h2.m:64-68,94-102",full node-level values
+WDRO_loss_LP,A,1,y upper bounds and C masking,"solve_wdro_terminal_loh_lp_h2.m:31-37,64-68",full binary array
+WDRO_loss_LP,C_raw,1,Ceff is zeroed where A=0 or nonfinite,"solve_wdro_terminal_loh_lp_h2.m:31-37,115-130",reachable C only
+WDRO_loss_LP,sample_weight,0,objective hard-codes alpha coefficient 1/R,"solve_wdro_terminal_loh_lp_h2.m:54-57",non-equal weights unsupported
+WDRO_distance_and_loss,path / wind / random seeds,0,not passed to distance or solver,"build_wdro_distance_matrix_h2.m:1; solve_wdro_terminal_loh_lp_h2.m:1",metadata and traceability only

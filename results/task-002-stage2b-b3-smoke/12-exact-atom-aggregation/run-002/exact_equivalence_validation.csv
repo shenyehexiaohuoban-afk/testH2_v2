@@ -1,0 +1,45 @@
+initial_state_id,risk_tier,validation_scope,R_original,K_exact,all_member_key_match,within_group_pairs_checked,within_group_max_distance,cross_group_pairs_checked,cross_group_min_distance,distance_validation_pass,prefix_R,prefix_K,distribution_relation_finding,validation_pass
+1,not_selected,full_state,15000,255,1,22,0,50,1.91758478381671e-05,1,NaN,NaN,all exact classes mapped; current distance checked in batches,1
+2,not_selected,full_state,15000,264,1,24,0,50,0.000147586122967149,1,NaN,NaN,all exact classes mapped; current distance checked in batches,1
+3,not_selected,full_state,15000,219,1,24,0,50,1.62096829277687e-05,1,NaN,NaN,all exact classes mapped; current distance checked in batches,1
+4,not_selected,full_state,15000,240,1,25,0,50,7.15504742273901e-05,1,NaN,NaN,all exact classes mapped; current distance checked in batches,1
+5,not_selected,full_state,15000,187,1,21,0,50,3.32667191736734e-05,1,NaN,NaN,all exact classes mapped; current distance checked in batches,1
+6,not_selected,full_state,15000,159,1,13,0,50,2.92630463554818e-05,1,NaN,NaN,all exact classes mapped; current distance checked in batches,1
+7,low,full_state,15000,116,1,10,0,50,2.92791142380658e-06,1,NaN,NaN,all exact classes mapped; current distance checked in batches,1
+7,low,nested_prefix,100,2,1,1,0,1,0.749999999994736,1,100,2,original atoms map at zero distance to exact representatives; solver comparison skipped because weights unsupported,1
+7,low,nested_prefix,250,4,1,1,0,3,0.112412201038721,1,250,4,original atoms map at zero distance to exact representatives; solver comparison skipped because weights unsupported,1
+7,low,nested_prefix,500,6,1,1,0,5,0.089353690400631,1,500,6,original atoms map at zero distance to exact representatives; solver comparison skipped because weights unsupported,1
+8,not_selected,full_state,15000,2405,1,149,0,50,2.09693644262189e-06,1,NaN,NaN,all exact classes mapped; current distance checked in batches,1
+9,not_selected,full_state,15000,2500,1,150,0,50,3.16651248011051e-05,1,NaN,NaN,all exact classes mapped; current distance checked in batches,1
+10,not_selected,full_state,15000,2359,1,134,0,50,8.2510189295391e-05,1,NaN,NaN,all exact classes mapped; current distance checked in batches,1
+11,not_selected,full_state,15000,2176,1,141,0,50,3.28431775478869e-05,1,NaN,NaN,all exact classes mapped; current distance checked in batches,1
+12,not_selected,full_state,15000,1875,1,109,0,50,5.92092101808805e-07,1,NaN,NaN,all exact classes mapped; current distance checked in batches,1
+13,not_selected,full_state,15000,1400,1,101,0,50,2.20800667799441e-06,1,NaN,NaN,all exact classes mapped; current distance checked in batches,1
+14,not_selected,full_state,15000,1032,1,77,0,50,9.14456805678678e-06,1,NaN,NaN,all exact classes mapped; current distance checked in batches,1
+15,not_selected,full_state,15000,9136,1,164,0,50,5.23423742924589e-08,1,NaN,NaN,all exact classes mapped; current distance checked in batches,1
+16,not_selected,full_state,15000,9254,1,152,0,50,1.01684843992985e-06,1,NaN,NaN,all exact classes mapped; current distance checked in batches,1
+17,not_selected,full_state,15000,9103,1,166,0,50,2.22075591700859e-06,1,NaN,NaN,all exact classes mapped; current distance checked in batches,1
+18,median,full_state,15000,8433,1,142,0,50,6.2999878920456e-06,1,NaN,NaN,all exact classes mapped; current distance checked in batches,1
+18,median,nested_prefix,100,68,1,1,0,50,0.00927217965315729,1,100,68,original atoms map at zero distance to exact representatives; solver comparison skipped because weights unsupported,1
+18,median,nested_prefix,250,157,1,4,0,50,1.95466656355363e-05,1,250,157,original atoms map at zero distance to exact representatives; solver comparison skipped because weights unsupported,1
+18,median,nested_prefix,500,311,1,11,0,50,1.15973652401666e-05,1,500,311,original atoms map at zero distance to exact representatives; solver comparison skipped because weights unsupported,1
+19,not_selected,full_state,15000,7334,1,153,0,50,1.8577976984555e-06,1,NaN,NaN,all exact classes mapped; current distance checked in batches,1
+20,not_selected,full_state,15000,5940,1,139,0,50,1.1331240184838e-05,1,NaN,NaN,all exact classes mapped; current distance checked in batches,1
+21,not_selected,full_state,15000,4504,1,128,0,50,2.81287047494249e-06,1,NaN,NaN,all exact classes mapped; current distance checked in batches,1
+22,not_selected,full_state,15000,13407,1,97,0,50,2.49138682766297e-08,1,NaN,NaN,all exact classes mapped; current distance checked in batches,1
+23,not_selected,full_state,15000,13582,1,99,0,50,2.2583479072267e-08,1,NaN,NaN,all exact classes mapped; current distance checked in batches,1
+24,not_selected,full_state,15000,13363,1,106,0,50,2.56630501613205e-07,1,NaN,NaN,all exact classes mapped; current distance checked in batches,1
+25,not_selected,full_state,15000,12986,1,103,0,50,4.47366989565264e-05,1,NaN,NaN,all exact classes mapped; current distance checked in batches,1
+26,not_selected,full_state,15000,11918,1,134,0,50,7.80850199283007e-07,1,NaN,NaN,all exact classes mapped; current distance checked in batches,1
+27,not_selected,full_state,15000,10470,1,153,0,50,7.2243380058425e-06,1,NaN,NaN,all exact classes mapped; current distance checked in batches,1
+28,not_selected,full_state,15000,8656,1,191,0,50,8.94835237142666e-06,1,NaN,NaN,all exact classes mapped; current distance checked in batches,1
+29,not_selected,full_state,15000,14544,1,52,0,50,1.06824742187805e-06,1,NaN,NaN,all exact classes mapped; current distance checked in batches,1
+30,high,full_state,15000,14609,1,42,0,50,1.68982514905202e-06,1,NaN,NaN,all exact classes mapped; current distance checked in batches,1
+30,high,nested_prefix,100,99,1,1,0,50,0.027520589417324,1,100,99,original atoms map at zero distance to exact representatives; solver comparison skipped because weights unsupported,1
+30,high,nested_prefix,250,246,1,1,0,50,0.0232954463634588,1,250,246,original atoms map at zero distance to exact representatives; solver comparison skipped because weights unsupported,1
+30,high,nested_prefix,500,494,1,1,0,50,0.0164253999131079,1,500,494,original atoms map at zero distance to exact representatives; solver comparison skipped because weights unsupported,1
+31,not_selected,full_state,15000,14566,1,53,0,50,7.99033430337595e-06,1,NaN,NaN,all exact classes mapped; current distance checked in batches,1
+32,not_selected,full_state,15000,14257,1,69,0,50,5.0440575751131e-06,1,NaN,NaN,all exact classes mapped; current distance checked in batches,1
+33,not_selected,full_state,15000,13640,1,101,0,50,2.11325694894321e-06,1,NaN,NaN,all exact classes mapped; current distance checked in batches,1
+34,not_selected,full_state,15000,12557,1,143,0,50,7.37580890192375e-07,1,NaN,NaN,all exact classes mapped; current distance checked in batches,1
+35,not_selected,full_state,15000,11066,1,201,0,50,4.38081310592162e-06,1,NaN,NaN,all exact classes mapped; current distance checked in batches,1

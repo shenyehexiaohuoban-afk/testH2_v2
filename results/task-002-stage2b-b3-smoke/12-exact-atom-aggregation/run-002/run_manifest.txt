@@ -1,0 +1,25 @@
+task_id=task-002
+step_id=12-exact-atom-aggregation
+run_id=run-002
+status=PASS
+pass_count=15
+fail_count=0
+source=Step-03J frozen nominal
+source_records=525000
+initial_states=35
+records_per_state=15000
+key=D33+A132+Cmasked132 exact double
+K_min=116
+K_mean=7100.3429
+K_median=8433
+K_q95=14550.6
+K_max=14609
+max_metric_preservation_error=4.3769e-12
+max_metric_relative_error=5.921e-14
+metric_machine_precision_rule=absolute_error<=1e-13*max(1,abs(original_value))
+solver_non_equal_weight_support=false
+decision=EXACT_AGGREGATION_STILL_TOO_LARGE
+approximate_reduction=false
+formal_WDRO_run=false
+Gurobi_run=false
+MSP_run=false

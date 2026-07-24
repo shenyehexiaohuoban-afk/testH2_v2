@@ -779,3 +779,52 @@ variables, 225,570,000 constraints, and an upper-order nonzero count of
 `LIMITED_R_ONLY`; no formal WDRO or MSP run was performed. Full frozen CSV/MAT
 inputs remain local under the Step-03J output and their SHA-256 manifest is
 unchanged.
+
+## Step-03L Exact WDRO Atom Aggregation Audit
+
+Step-03L distinguishes two existing A=0 metrics that previously shared a
+short label. Step-03I `A0_pair_share_W1_W2_W3` counts unreachable site-node
+pairs over `R x 3 x 4 x 33`; its 105 state-seed N=15000 average is
+`0.0792347603`. Step-03K `A0_share_WDRO_aggregated_atom` counts zeros in the
+frozen WDRO A array over `R x 4 x 33`; the nominal average is
+`0.1203025541`. Step-03J constructs one conservative WDRO reachability atom
+from demand-relevant W1-W3 windows, so these are different metrics. Neither
+historical result is overwritten; future reports should use the
+dimension-explicit names.
+
+For each nominal initial state, exact equivalence uses all 33 node-level D
+doubles, all 132 binary A values, and all 132 C doubles after only A=0 or
+nonfinite C positions are set to zero. This matches the current
+`DAC_maskedC` exclusion rule. No rounding, tolerance grouping, summary-field
+grouping, approximate clustering, tail sampling, or probability deletion is
+used. Each class retains a real source representative and weight
+`class_size/15000`; all 525,000 original path IDs remain traceable.
+
+The exact support counts have min/mean/median/q95/max
+`116/7100.343/8433/14550.6/14609`. Across all states, 525,000 records reduce
+to 248,512 exact atoms, an overall support ratio of `0.473356`; only 7 of 35
+states have `K_exact <= 1000`. The largest class contains 14,867 records, but
+98.5562% of all retained classes are singletons. Low-risk states therefore
+compress strongly while high-risk states remain near the original size.
+
+All exact mappings pass current-distance checks. Maximum within-class
+distance is zero and minimum sampled cross-class distance is `2.258e-8`.
+Original versus aggregate metrics have maximum absolute difference
+`4.377e-12` and maximum relative difference `5.921e-14`; count-preserving
+linear order statistics reproduce q95/q99. The explicit machine-precision
+rule is `absolute_error <= 1e-13*max(1,abs(value))`.
+
+The frozen loader reads and returns `sample_weight`, but the current solver
+has no weight-vector argument and fixes `obj(alpha)=1/R`. The exact aggregate
+is therefore audit-only and cannot replace formal WDRO input without a
+separately authorized non-equal-weight interface. The decision is
+`EXACT_AGGREGATION_STILL_TOO_LARGE`: high-risk K remains far above Step-03K's
+measured R=1000, so no formal WDRO feasibility claim is made.
+
+The first local run used an absolute `1e-12` preservation threshold and
+stopped at PASS=14/FAIL=1 when summation-order error reached `4.377e-12`; it
+is preserved as failed run-001. Run-002 records absolute and relative error
+with the scale-aware rule above and passes all 15 checks. Complete aggregate
+CSV/MAT and mapping files remain local; Git stores only summaries, schema,
+manifest, and SHA-256 values. No Gurobi, formal WDRO, MSP, solver refactoring,
+or approximate reduction is performed.

@@ -1,0 +1,2 @@
+decision,reason,K_min,K_mean,K_median,K_q95,K_max,all_states_within_R1000,formal_aggregate_adopted,formal_WDRO_run
+EXACT_AGGREGATION_STILL_TOO_LARGE,"Exact aggregation is valid, but at least one K_exact remains above Step-03K measured R=1000.",116,7100.34285714286,8433,14550.6,14609,0,0,0
