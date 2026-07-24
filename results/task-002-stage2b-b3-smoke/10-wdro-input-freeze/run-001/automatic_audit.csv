@@ -1,0 +1,19 @@
+check_id,description,passed,observed,expected
+AUDIT-01,35 source states each contain 15000 records,1,1,1
+AUDIT-02,nominal and both validation datasets each contain 525000 rows,1,525000 | 525000 | 525000,525000 | 525000 | 525000
+AUDIT-03,each role contains 35 states with 15000 records,1,105,105
+AUDIT-04,each initial-state weight sum equals one,1,3.19744231092045e-14,0
+AUDIT-05,all roles use identical canonical path order,1,a38f2311faeb69b597ec5eec406bce3475113338156884a0c84557e03d0543cf | a38f2311faeb69b597ec5eec406bce3475113338156884a0c84557e03d0543cf | a38f2311faeb69b597ec5eec406bce3475113338156884a0c84557e03d0543cf,a38f2311faeb69b597ec5eec406bce3475113338156884a0c84557e03d0543cf
+AUDIT-06,seed groups map to nominal validation-1 validation-2,1,20260723 | 20260724 | 20260725,20260723 | 20260724 | 20260725
+AUDIT-07,frozen consequences exactly reproduce Step-03I N15000,1,5.11590769747272e-13,0
+AUDIT-08,formal wind mode remains stagewise_random_triangular,1,stagewise_random_triangular,stagewise_random_triangular
+AUDIT-09,wind and resistance seeds are separate and recorded,1,0,0
+AUDIT-10,W1 W2 and W3 wind quantiles are independent,1,0,0
+AUDIT-11,sampled winds stay inside grade bounds and a6 is at most 60,1,0 | 0,0 | 0
+AUDIT-12,all frozen D A C values satisfy the interface domains,1,0,0
+AUDIT-13,268 observed candidates occur naturally and 858 unobserved do not enter,1,0 | 0 | 0,0 | 0 | 0
+AUDIT-14,WDRO loader restores D A C array contract,1,1,1
+AUDIT-15,source inputs and formal configuration remain unchanged,1,1,1
+AUDIT-16,Step-03I and accepted old runs remain unchanged,1,1,1
+AUDIT-17,no WDRO Gurobi optimization or MSP calls,1,0,0
+AUDIT-18,main sample SHA-256 remains accepted,1,972a8c58620c09ac19cfcfb29e8d6a3ed2819ef1a22dbd522043436418eb805d,972a8c58620c09ac19cfcfb29e8d6a3ed2819ef1a22dbd522043436418eb805d

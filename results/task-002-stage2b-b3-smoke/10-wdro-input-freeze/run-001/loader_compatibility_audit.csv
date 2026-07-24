@@ -1,0 +1,4 @@
+dataset_role,R,I,N,weight_sum,finite_reachable_C,metadata_row_count_pass
+nominal,15000,4,33,0.999999999999968,1,1
+validation-1,15000,4,33,0.999999999999968,1,1
+validation-2,15000,4,33,0.999999999999968,1,1

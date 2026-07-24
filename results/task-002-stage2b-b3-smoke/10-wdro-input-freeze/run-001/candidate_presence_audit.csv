@@ -1,0 +1,4 @@
+dataset_role,record_count,observed_candidate_record_count,unobserved_candidate_record_count,external_candidate_rows_appended,observed_count_matches_268,unobserved_count_is_zero,definition
+nominal,525000,268,0,0,1,1,candidate identity follows canonical main records
+validation-1,525000,268,0,0,1,1,candidate identity follows canonical main records
+validation-2,525000,268,0,0,1,1,candidate identity follows canonical main records

@@ -702,3 +702,53 @@ not claimed to be distributions estimated by those references.
 
 All 24 automatic checks pass. No WDRO, Gurobi optimization, MSP execution,
 candidate augmentation, or nominal-probability change is performed.
+
+## Step-03J Frozen Formal B3 Datasets for WDRO
+
+Step-03J run-001 freezes the three accepted Step-03I joint random streams into
+separate datasets. Seed group 1 (`20260723`) is the formal nominal dataset;
+groups 2 and 3 (`20260724`, `20260725`) are independent `validation-1` and
+`validation-2` datasets. They are not pooled into a 45,000-record nominal
+sample. Each role has 525,000 rows: 35 initial states times 15,000 canonical
+main-sample records.
+
+Within each initial state, every record has weight `1/15000` and the weight sum
+is one. Records are not deduplicated or reweighted by physical path, and
+`path_probability` is not applied again. The 268 observed candidates occur only
+through their natural main-sample records in each role; none of the 858
+unobserved candidates enters any dataset.
+
+The three datasets are sorted by the same `initial_state_id + path_id` order.
+The original Step-03I `joint_stream_position` is retained per row, so reordering
+does not change which wind and resistance draws belong to a record. All three
+roles have canonical path-order SHA-256
+`a38f2311faeb69b597ec5eec406bce3475113338156884a0c84557e03d0543cf`.
+
+Actual state-specific seeds are recorded in `dataset_role_and_seed_map.csv`.
+Nominal wind/resistance seeds range from `350360742-353761388` and
+`20360726-23760828`; validation-1 ranges are `350360743-353761389` and
+`20360727-23760829`; validation-2 ranges are `350360744-353761390` and
+`20360728-23760830`.
+
+Each role uses a two-file interface:
+
+- a 525,000-row scenario CSV containing initial/path identity, W1-W3 states,
+  actual W1-W3 winds, wind/resistance seeds, D/A/C summaries, W3 component
+  damage, `sample_weight`, candidate identity, and `dataset_role`;
+- a row-aligned MAT sidecar containing exact `D_node_kg (R x 33)`, binary
+  `A_site_node (R x 4 x 33)`, and `C_site_node_km (R x 4 x 33)` arrays.
+
+`load_frozen_b3_wdro_dataset_h2.m` restores one initial state's arrays as the
+existing WDRO algorithm contract: `samples.D`, `samples.A`, and
+`samples.C_raw`. The old expanded `H_node_kg_s/reachable/scenario_service_cost`
+semantics are preserved without modifying the distance-matrix or WDRO solver.
+
+The nominal CSV/MAT files are 122,068,355/188,959,741 bytes; validation-1 is
+124,697,225/188,919,247 bytes; validation-2 is
+124,701,276/188,936,785 bytes. These six files exceed 50 MiB and remain in the
+local output directory. Git stores schema, audits, and their exact SHA-256
+manifest only.
+
+All 18 automatic checks pass. Frozen N=15,000 metrics reproduce Step-03I with
+maximum absolute difference `5.12e-13`. No WDRO, Gurobi optimization, or MSP
+execution is performed.

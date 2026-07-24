@@ -1105,3 +1105,19 @@
 - 首次完整计算已完成 1575000+52500 个场景，但汇总时因 evaluator 缺少 runner 兼容别名字段 `derived_seed` 停止，未创建输出；补回等同于抗力种子的兼容字段后，第二次完整计算和全部审计成功。
 - 本地输出：`terminalLoh_wdro/output/stage3i_formal_stagewise_random_b3/run-001/`；Git 归档：`results/task-002-stage2b-b3-smoke/09-formal-stagewise-random-b3/run-001/`。两处均为 14 个文件、2379310 字节，最大文件 `stability_error_vs_N15000.csv` 为 1632154 字节，逐文件 SHA-256 一致。
 - 明确禁止项：未修改 MSP 主模型，未追加候选路径，未给 858 条未观察候选赋概率，未运行 WDRO、Gurobi 或 MSP，未覆盖旧固定风速结果和旧 run。
+
+### 2026-07-24 - task-002 Step-03J run-001 冻结正式 B3 场景集与 WDRO 输入接口
+
+- 当前分支：`task/002-stage2b-b3-smoke`。新增 `evaluate_frozen_wdro_dataset_block_h2.m`、`load_frozen_b3_wdro_dataset_h2.m` 和 `run_stage3j_wdro_input_freeze_h2.m`；未修改 WDRO 距离矩阵、求解算法、MSP、Step-03I 或任何旧 run。
+- 读取现有 WDRO reader 后确认旧接口需要 `D(R×33)`、`A(R×4×33)`、`C(R×4×33)`，旧 CSV 通过 `H_node_kg_s/reachable/scenario_service_cost` 每场景展开 132 行。为保持每组 525000 条场景记录，采用场景级 CSV + 精确 DAC MAT sidecar 的双层接口；新 loader 恢复相同 `samples.D/A/C_raw` 数组契约，不修改 WDRO 算法。
+- seed group 1=`20260723` 冻结为 nominal；group 2=`20260724` 为 validation-1；group 3=`20260725` 为 validation-2。每组均为 35 状态×每状态 15000 条=`525000` 行，未合并为每状态 45000 条名义样本。
+- 三组均按 `initial_state_id + path_id` 规范排序，路径顺序 SHA-256 均为 `a38f2311faeb69b597ec5eec406bce3475113338156884a0c84557e03d0543cf`。每行保留 Step-03I 原始 `joint_stream_position`，因此重排未改变路径对应的随机输入。
+- nominal 的状态级 wind/resistance seed 范围为 `350360742-353761388` / `20360726-23760828`；validation-1 为 `350360743-353761389` / `20360727-23760829`；validation-2 为 `350360744-353761390` / `20360728-23760830`。完整逐状态种子及 q/permutation 哈希见 `dataset_role_and_seed_map.csv`。
+- 场景 CSV 共 34 个字段，包含 initial state、path/record ID、W1-W3 的 a/loc/lfw、实际随机风速、风速/抗力种子、D 总量、WDRO 聚合 A/C、Step-03I 阶段 A/C、W3 故障线路/关闭道路、上限命中、`sample_weight`、候选标志和 `dataset_role`。
+- DAC sidecar 保存精确 `D_node_kg (525000×33)`、二元 `A_site_node (525000×4×33)` 和 `C_site_node_km (525000×4×33)`。loader 对三组各抽查一个完整状态，均恢复 `R=15000,I=4,N=33`，可达 C 全部有限，权重和为 `0.999999999999968`。
+- 每状态每组严格 15000 条，权重为 `1/15000`，权重和最大误差 `3.20e-14`；不按唯一路径等权，不再次乘 `path_probability`。
+- 每组均自然包含 268 条已观察候选记录，外部追加数为 0；858 条未观察候选命中数均为 0，仍未进入名义分布或验证集。
+- 冻结场景后果逐状态逐种子复算 Step-03I N=15000 指标，最大绝对差为 `5.11590769747272e-13`。正式风速模式保持 `stagewise_random_triangular`，逐时 q 独立，风速区间和 a=6≤60 检查全部通过。
+- 本地大文件：nominal CSV/MAT=`122068355/188959741` 字节，SHA-256=`366dc3c0b57bfd76aca92f51ae1db82b93c764c87fa15e8cb4dd32388d018168`/`6936a696f5cde137aca483f8c32adee33b52cbd90559a8e6395f3686c0712945`；validation-1=`124697225/188919247` 字节，SHA-256=`e39253d5af25d312b5d65cbb4efdf5ad4e907843f9203a46c47c7ca058ed3099`/`ca84afa01748d8c2929c372802861315254723424786b681a677e2f1420b6e3f`；validation-2=`124701276/188936785` 字节，SHA-256=`91c8e1233017d5d7dea9a87592f5bfb196e0d629733c10892fb539e4228c9b02`/`0bae20fa685940751edf5c5dd3d6c43a2d52293cbd1350c02b84736e914ec3b6`。
+- 六个大文件均超过 50 MiB，只保留于 `terminalLoh_wdro/output/stage3j_wdro_input_freeze/run-001/`。Git 归档 `results/task-002-stage2b-b3-smoke/10-wdro-input-freeze/run-001/` 仅保存 10 个小型审计文件及 `LARGE_FILE_MANIFEST.md`。
+- 自动审计 PASS=18、FAIL=0；输入和旧 run 未修改。明确未运行 WDRO、Gurobi 或 MSP，未生成优化结果。

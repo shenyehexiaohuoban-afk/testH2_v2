@@ -1,0 +1,15 @@
+storage,field,unit_or_type,meaning,legacy_wdro_compatibility
+scenario_csv,initial_state_id / initial_state,integer / string,initial-state key,groups each role into 35 independent conditional datasets
+scenario_csv,path_id / scenario_id_in_state,integer,record identity,canonical order shared by all three roles
+scenario_csv,a_W1..a_W3 loc_W1..loc_W3 lfw_W1..lfw_W3,integer,W path states,formal W1-W3 physical path
+scenario_csv,wind_W1_mps..wind_W3_mps,m/s,actual sampled wind,stagewise_random_triangular realization
+scenario_csv,wind_seed / resistance_seed / joint_stream_position,integer,random-input identity,reproduces Step-03I joint stream assignment
+scenario_csv,D_Hres3h_total_kg,kg-H2,scenario total demand consequence,sum of sidecar D over 33 nodes
+scenario_csv,A_reachable_share,share,WDRO aggregated reachability summary,mean of binary sidecar A over 4 sites x 33 nodes
+scenario_csv,C_reachable_mean_km,km,WDRO aggregated reachable cost summary,mean finite sidecar C where A=1
+scenario_csv,W3_failed_line_count / W3_closed_road_count,count,persistent damage summary,W3 component damage counts
+scenario_csv,sample_weight,probability,conditional nominal or validation weight,1/15000 within each initial state
+scenario_csv,dataset_role,string,dataset split,nominal validation-1 or validation-2
+DAC_sidecar,D_node_kg,kg-H2,R x 33 demand array,maps to existing WDRO samples.D and H_node_kg_s
+DAC_sidecar,A_site_node,binary,R x 4 x 33 reachability array,maps to existing WDRO samples.A and reachable
+DAC_sidecar,C_site_node_km,km,R x 4 x 33 service-cost array,maps to existing WDRO samples.C_raw and scenario_service_cost
