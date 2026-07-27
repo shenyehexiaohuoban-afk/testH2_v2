@@ -1,0 +1,42 @@
+Step-03T Ctilde Tier-1 structural diagnosis
+status=PASS
+conclusion=A. SERVICE_COUPLING_OMISSION_DOMINANT
+selected_pairs=24
+tier1_representatives=18
+low_regret_controls=6
+represented_states=7,11,18,21,30,31
+max_distance_chain_error=4.85722573273506e-16
+max_checkpoint_chain_error=4.656612873077393e-10
+max_checkpoint_relative_regret_normalized_error=2.913713455200188e-15
+max_replay_objective_error=1.047737896442413e-08
+max_replay_regret_error=1.251464709639549e-09
+replay_regret_machine_aware_tolerance_pass=true
+max_node_regret_reconstruction_error=1.746229827404022e-10
+tier1_raw_rows=7733
+tier1_unordered_unique_pairs=6321
+tier1_reverse_duplicate_classes=1412
+tier1_rows_in_reverse_duplicate_classes=2824
+tier1_exact_oriented_duplicate_rows=0
+tier1_unique_scenarios=3383
+tier1_nontail_tail=1636
+tier1_tail_tail=6097
+top1pct_incident_pair_share=0.0872882452
+top5pct_incident_pair_share=0.309065046
+top10pct_incident_pair_share=0.483900168
+remaining_after_top10pct_share=0.516099832
+remaining_after_top10pct_states=6
+service_coupling_representatives=15
+spatial_demand_representatives=0
+capacity_switch_representatives=0
+aggregation_scale_representatives=0
+mixed_representatives=3
+representative_multiple_optimum_count=0
+representative_both_capacity_saturated_count=1
+representative_local_dilution_count=0
+runtime_sec=8.417879
+peak_working_set_bytes=1603837952
+fixed_constants=kappa:1,weights:0.6/0.4,C_bound:357.1526447416079
+Step-03S was not rerun; all 7733 concentration statistics use its frozen rows.
+Only selected Step-03J nominal D/A/C rows were reread; validation was not used.
+Formal distance, loss, rho, WDRO, service constraints, MSP, and old runs remain unchanged.
+Diagnostic comparison rows=15, joint feature rows=24.

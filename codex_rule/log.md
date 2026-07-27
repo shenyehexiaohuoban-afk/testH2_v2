@@ -1243,3 +1243,12 @@
 - 最终结论为 `D. CTILDE_DISTANCE_REDESIGN_REQUIRED`：Step-03Q 的严格度量性质与 Step-03R 三状态 R=2000 的总体 near/far 排序证据不足以保证 35 状态尾部的最近邻决策一致性；当前不应直接冻结 Ctilde 或进入 rho 标定，应先检查 132 项平均对关键局部站台—节点变化的稀释，并重构距离后重复本审计。
 - Git 输出：`results/task-002-stage2b-b3-smoke/19-state-distribution-tail-regret-audit/run-001/`，17 个要求文件；本地 checkpoint：`terminalLoh_wdro/output/stage3s_state_distribution_tail_regret_audit/run-001/`，58 个文件、约 71.17 MB，含逐文件 SHA-256 清单。最终 checkpoint 重放耗时约 `675.7 s`；包含调试修复和可恢复重算的累计墙钟约 `4993.1 s`，观察到的峰值进程工作集约 `4.536 GB`。
 - 明确禁止项：未使用 validation 调参，未删除、聚类、合并或重写场景概率，未运行正式 R=5000/R=15000 WDRO、全部 35 状态 WDRO、MSP 或 PR/merge；已有未跟踪 Step-03P `run-001` 继续保留且不提交。
+### 2026-07-27 - task-002 Step-03T run-001 Ctilde Tier-1 representative structural diagnosis
+
+- 基线和执行分支均为 `task/002-stage2b-b3-smoke` 的远程 HEAD `e909d66256fc1d18168744faa433d349d811ba7b`。新增独立固定 T 明细 recourse helper 与 Step-03T runner；未修改正式距离、`kappa=1`、`0.6/0.4` 权重、`C_bound`、rho、WDRO 损失、供氢约束、MSP、Step-03J、Step-03S 或其他旧 run。
+- 只读取 Step-03S 冻结 CSV/checkpoint 和 Step-03J nominal 中入选场景行。按六状态各 3 个 Tier-1 代表加 1 个非零距离低后悔对照，共 24 对；执行 96 个固定 T recourse，全部 `OPTIMAL`。距离最大回算误差 `4.85722573273506e-16`，checkpoint 关键绝对误差 `4.656612873077393e-10`，相对后悔规范化误差 `2.913713455200188e-15`，固定 T 后悔最大误差 `1.251464709639549e-09`，节点损失贡献重构最大误差 `1.746229827404022e-10`。
+- Step-03S 的 `regret_obj` 基线是 tie-break 代表解目标 `own_operating_loss + holding_cost`，不是另存的第一阶段 `obj_star`；本轮按实际代码公式复核。固定 T 自身目标与 tie-break 代表值存在约 `1e-8` 的求解/表示差时，验收使用 `1e-8` 加减法操作数最多 4 ULP 的机器精度保护，不改变物理或统计口径。
+- 冻结 Tier-1 原始记录为 7733 行，对应 6321 个无序唯一对、3383 个唯一场景；不存在同向重复，存在 1412 个正反向重复无序对类（2824 行）。状态 7/18/30/31/11/21 分别有 `750/1927/531/586/1554/2385` 行；非尾部—尾部 1636，尾部—尾部 6097。移除参与次数最高的 10% 场景后仍保留 `51.6099832%` Tier-1 对并覆盖全部六状态，不能解释为少数异常场景反复配对造成。
+- 18 个 Tier-1 代表中，12 个主类型为站台身份/独占覆盖变化，3 个为道路阻抗排序变化，3 个为混合结构；15/18 归入需求—可达性—站台身份联合服务耦合家族。Tier-1 与对照的 `d_new` 中位数相近（`0.048943` 对 `0.046051`），但 A 变化涉及需求中位数约为 `148.106 kg` 对 `49.096 kg`，最大单站 T 差中位数约为 `96.318 kg` 对 `0.818 kg`。结论为 `A. SERVICE_COUPLING_OMISSION_DOMINANT`，支持 Step-03S 需要重构距离结构的结论，但本轮未提出或实现新距离。
+- 22 项机械验收全部 PASS；两个新增 MATLAB 文件 `checkcode=0`。正式运行耗时 `8.417879 s`，记录的峰值 MATLAB 进程工作集 `1603837952 bytes`。结果归档于 `results/task-002-stage2b-b3-smoke/20-ctilde-tier1-structural-diagnosis/run-001/`，本地 checkpoint 位于 `terminalLoh_wdro/output/stage3t_ctilde_tier1_structural_diagnosis/run-001/`。
+- 未重跑 Step-03S、未读取 validation、未运行正式 WDRO/R=2000/R=5000/R=15000、rho 标定、MSP、文献检索、权重扫描、聚类或场景约简。既有未跟踪 Step-03P `run-001` 历史保持不变且不纳入提交。
