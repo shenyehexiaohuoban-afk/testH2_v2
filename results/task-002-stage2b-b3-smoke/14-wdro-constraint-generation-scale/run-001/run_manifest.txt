@@ -1,0 +1,13 @@
+task=Step-03N WDRO constraint-generation R=2000 extension
+baseline_commit=dbbd04f7c261a018fb248247966e557424b05824
+nominal_csv_sha256=366dc3c0b57bfd76aca92f51ae1db82b93c764c87fa15e8cb4dd32388d018168
+nominal_mat_sha256=6936a696f5cde137aca483f8c32adee33b52cbd90559a8e6395f3686c0712945
+selected_states=7,18,30
+R_values=1000_regression,2000_target
+rho_values=0,0.02
+full_reference_gate=FULL_R2_REFERENCE_ATTEMPTED
+gurobi_time_limit_sec=300
+full_reference_not_modified=true
+R5000_run=false
+R15000_run=false
+MSP_run=false
