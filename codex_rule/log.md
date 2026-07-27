@@ -1216,3 +1216,15 @@
 - 距离与损失差 Spearman 范围为 `0.06156-0.99998`；complex 状态 kappa=1/1.5 将相关性从旧距离 `0.07427` 提高至 `0.20724/0.30922`，小距离大损失异常占比从 `0.12%` 降至 `0.031%/0.017%`。各距离按自身 q05/q95 选择 near/far 对；near 扰动的 T 变化最大 `1.01e-10 kg`，far 最大 `45.7908 kg`，未发现近距离但 TerminalLOH 剧烈变化的反例。
 - 自动验收 `PASS=17, FAIL=0`，结论为 `A. CTILDE_STRICT_METRIC_RECOMMENDED`。候选若正式采用，可恢复基于严格底层距离的 1-Wasserstein 表述；但当前正式默认仍是旧 D+A+masked-C。本轮中位数匹配仅用于公平比较，正式替换时必须固定长期尺度并重新校准/验证 rho。
 - 输出：`results/task-002-stage2b-b3-smoke/17-dctilde-strict-metric-audit/run-001/`。未运行完整 R2 模型、R=5000、R=15000、全部35状态、MSP、场景约简或聚类；已有未跟踪的 Step-03P 失败历史 run-001 保持原样且不会提交。本轮结果支持在独立资源保护下继续 R=5000 算法规模测试，但不能推断 R=15000 可行。
+
+### 2026-07-27 - task-002 Step-03R run-001 Ctilde 真实储氢决策一致性审计
+
+- 基线为 `45fc03faed0c7a687de6f1198b1ecde01c194fe3`，当前分支为 `task/002-stage2b-b3-smoke`。新增独立单场景 LP 构造器、两阶段确定性 tie-break 求解器、最优范围求解器和 Step-03R runner；未修改正式距离、正式 WDRO 求解器、WDRO 损失、MSP、Step-03J、Step-03Q 或旧 run。
+- 使用 Step-03Q 的 simple/medium/complex 状态 `7/18/30`、Step-03J nominal 前 `R=2000`，`d_new=0.6*d_D+0.4*d_Ctilde`、`kappa=1`、完整容量 `[300,200,100,150] kg`。未使用 validation 调参，未运行 R=5000、R=15000 或全部 35 状态。
+- 6000 条场景均求解 `gamma*sum(T)+L(T,D_r,A_r,C_r)`，先取得主目标，再在 `obj<=obj_star+1e-8` 下最小化 `T1+2*T2+3*T3+4*T4`。全部主/次级模型和 24000 个站点最优范围均通过；重复求解最大 T/目标误差 `8.2778e-11`，没有场景出现超过 `1e-5 kg` 的多重最优范围。
+- 公共 T 库包含 46 个唯一向量：0/25/50/75/100% 容量、Step-03Q 新旧 WDRO T、三状态单场景代表 T 和固定种子可行 T。对每个状态完整评估 2000×46 条损失曲线，并对全部 `1999000` 个无序场景对分块计算 `d_T` 和完整损失曲线差异。
+- `Spearman(d_new,d_T)` 在 simple/medium/complex 为 `0.99999825/0.87597683/0.42021983`；`Spearman(d_new,d_loss_profile)` 为 `0.99999788/0.91929961/0.77086007`。near 的 d_T 中位数范围 `0-0.34819164`，far 为 `0.21899917-0.43376838`；near 损失曲线差中位数范围 `0-491068.98`，far 为 `273300.06-1185391.27`，三个状态均满足 near 中位数严格低于 far。
+- 按“距离最低 1% 且 d_T 或损失曲线差最高 1%”定义，三状态均无正式 false-near 对。零距离对最大 `d_T=2.6290e-15`、最大损失曲线差 `2.2737e-13`，满足 `1e-8`。有限反事实共 12 对，覆盖最低距离压力对和 Step-03Q near 扰动对。
+- Step-03Q near 扰动 T 不变的原因被区分为：simple 两场景不是 WDRO 关键场景；medium 被更严重活动场景覆盖；complex 的正式 WDRO 四站 T 达到完整容量上界，容量饱和掩盖了继续调整。不能仅用 `Delta T≈0` 证明场景相似。
+- 自动验收 `PASS=17, FAIL=0`，新增 4 个 MATLAB 文件 `checkcode=0`，最大独立约束违反量 `1.164153218269348e-10`。结论为 `A. CTILDE_DECISION_SIMILARITY_VALIDATED`：Ctilde 在本轮三状态 R=2000 审计中反映了储氢预布局相关相似性；正式替换仍需后续冻结定义并重新标定 rho，本轮没有修改正式默认距离。
+- 输出：`results/task-002-stage2b-b3-smoke/18-ctilde-decision-similarity-audit/run-001/`，共 10 个结果文件。Step-03J nominal MAT SHA-256 保持 `6936a696f5cde137aca483f8c32adee33b52cbd90559a8e6395f3686c0712945`；已有未跟踪 Step-03P 失败历史 `run-001` 保持原样且不提交。未进行场景约简、聚类、正式 WDRO、MSP、R=5000 或 R=15000。

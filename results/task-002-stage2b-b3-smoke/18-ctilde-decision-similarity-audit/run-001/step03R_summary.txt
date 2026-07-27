@@ -1,0 +1,31 @@
+Step-03R Ctilde decision-similarity audit
+
+decision=A. CTILDE_DECISION_SIMILARITY_VALIDATED
+states=simple 7, medium 18, complex 30; R=2000 each; nominal only
+single_scenario_count=6000
+spearman_dnew_dT_range=[0.420219825191,0.999998249823]
+spearman_dnew_dloss_profile_range=[0.770860065479,0.999997875213]
+near_dT_median_range=[0,0.348191637246]
+far_dT_median_range=[0.218999167013,0.433768376893]
+near_loss_profile_median_range=[0,491068.978306]
+far_loss_profile_median_range=[273300.057278,1185391.2664]
+formal_false_near_count=0
+zero_distance_max_dT=2.629008122312371e-15
+zero_distance_max_loss_profile=2.273736754432321e-13
+counterfactual_pair_count=12
+mechanical_FAIL=0
+
+Required answers:
+1. Near single-scenario ideal T is usually closer than far T: YES.
+2. Near complete loss profiles are usually closer than far profiles: YES.
+3. Far T differences are materially larger in the median comparison: YES.
+4. Small-distance opposite-layout counterexamples: none under the specified 1% by 1% definitions.
+5. Step-03Q near DeltaT explanations: CAPACITY_SATURATION, DOMINATED_BY_MORE_SEVERE_ACTIVE_SCENARIOS, SCENARIOS_NOT_WDRO_KEY.
+6. Complex full capacity masking present: YES.
+7. Multiple optima affect some comparisons: NO.
+8. Ctilde reflects pre-layout similarity under this audit: YES.
+9. Formal replacement recommendation: supported after freezing the candidate definition and recalibrating rho; this run does not replace it.
+10. Rho recalibration and R=5000 may proceed only after accepted replacement and separate resource protection: YES.
+
+Formal distance, kappa, WDRO loss, MSP, Step-03J, Step-03Q, and the untracked Step-03P failed history were not modified.
+No validation data, scenario reduction, clustering, R=5000, R=15000, or all-35-state run was used.
