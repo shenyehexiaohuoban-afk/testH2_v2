@@ -1,0 +1,38 @@
+Step-03S 35-state distribution and tail cross-regret audit
+
+decision=D. CTILDE_DISTANCE_REDESIGN_REQUIRED
+nominal_rows=525000; states=35; rows_per_state=15000
+selected_states=7,18,30,31,11,21
+bulk_energy_range=[0.000100983481676,9.07924665397]
+tail95_energy_range=[0.00342205561726,22.3966814692]
+bulk_close_tail_far_pair_count=0
+meanD_close_tail_far_pair_count=0
+tier0_count=0
+tier1_count=7733
+tier2_count=29286
+tier3_count=11080
+tier1_states=7,11,18,21,30,31
+zero_distance_max_regret=1.818989403545856e-12
+mechanical_FAIL=0
+accepted_checkpoint_replay_elapsed_sec=675.728702
+cumulative_all_attempts_elapsed_sec=4993.1
+matlab_phase_snapshot_peak_memory_bytes=2508804096
+observed_process_working_set_peak_bytes=4535660544
+
+Required answers:
+1. The 35 conditional distributions are not treated as identical; bulk and tail energy ranges and close-bulk/far-tail pairs quantify the remaining heterogeneity.
+2. Similarity is reported separately for bulk and tail95; tail similarity is not inferred from mean demand.
+3. States 7/18/30 cover the major structure only when no state exceeds the bulk q75 coverage distance. Uncovered state IDs: none.
+4. Additional mandatory selections explicitly cover bulk outliers, fixed-T loss tails, unreachable-demand tails, bulk-close/tail-far pairs, and spatial modes.
+5. Ctilde nearest layouts are cross-usable when both directional relative regrets remain below 5%; counts are in step03S_tail_cross_regret.csv.
+6. Non-tail/tail false-near count at Tier-1=1636.
+7. Tail/tail false-near count at Tier-1=6097.
+8. Similar-loss/different-layout near count=0; bidirectional regret determines whether it is a true conflict.
+9. Large T differences with small two-way regret are optimizer switching and practical substitutability, not severe distance failure.
+10. True bidirectional high-regret counterexamples are exactly the Tier-1 rows: 7733.
+11. Local 132-item dilution is reported by max_local_Ctilde, changed_local_count, and local_dilution_ratio; it is not inferred from T difference alone.
+12. Ctilde tail-risk suitability follows the decision gate: D. CTILDE_DISTANCE_REDESIGN_REQUIRED.
+13. Formal freeze is supported only by decision A; decision B requires an explicit limitation record, and C/D require further work.
+14. Recommended next step: distance redesign before rho calibration.
+
+No validation tuning, scenario deletion, clustering, probability rewriting, formal R=5000/R=15000 WDRO, MSP, or modification of the formal distance was performed.

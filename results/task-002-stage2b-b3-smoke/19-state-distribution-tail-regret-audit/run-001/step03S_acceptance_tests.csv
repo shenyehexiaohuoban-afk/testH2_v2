@@ -1,0 +1,21 @@
+check_id,status,observed,expected
+DATA-01,PASS,525000,35 x 15000 nominal rows
+PROB-01,PASS,1,code-level empirical-mass audit complete
+FEATURE-01,PASS,1,no NaN/Inf in risk-decision features
+PROFILE-01,PASS,1015,35 states x (16 features + 13 state audits)
+ENERGY-01,PASS,0,<=1e-10 symmetry error
+ENERGY-02,PASS,0,<=1e-10 diagonal
+ENERGY-03,PASS,0,<=1e-12 fixed-seed reproduction
+SELECT-01,PASS,1,all mandatory state-selection rules applied
+SOLVE-01,PASS,1,all required two-stage atom solves OPTIMAL
+REGRET-01,PASS,-1.05937942862511e-08,>=-1e-7
+ZERO-01,PASS,1.81898940354586e-12,<=1e-8
+DIAG-01,PASS,7743,all Tier-1 and top-20 pairs diagnosed
+TUNE-01,PASS,nominal only,validation not used for selection/scaling/tuning
+CORE-01,PASS,1,formal distance/rho/loss/MSP unchanged
+SCOPE-01,PASS,no formal WDRO; no R=5000/R=15000 solve,scope restriction
+CODE-01,PASS,0,0 checkcode warnings
+RESOURCE-01,PASS,669.721683,complete phase timing and memory records
+DATA-02,PASS,1,Step-03J unchanged
+OLD-01,PASS,1,Step-03P/Q/R history unchanged
+DOMAIN-01,PASS,1,finite output domain

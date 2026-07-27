@@ -1,0 +1,7 @@
+initial_state_id,selection_rule_count,selection_rules,selection_details,mean_bulk_energy_distance,q995_loss_T50,cvar995_loss_T50,q995_unreachable_D,q995_affected_site_mode,q995_affected_node_mode
+7,2,BASE_STATE_7;BULK_CLOSE_TAIL_FAR,"Step-03R retained simple reference | pair=7-11, bulk=0.27895, tail95=6.721",3.26437151068737,248.627083900055,19524.4281472974,0,3,25
+18,1,BASE_STATE_18,"Step-03R retained medium reference",1.52617515877882,617743.210380905,683425.098597034,189.025720753892,2,25
+30,4,BASE_STATE_30;BULK_OUTLIER;CVAR995_LOSS_MAX;Q995_UNREACHABLE_D_MAX,"Step-03R retained complex reference | largest mean bulk energy distance=4.3638 | highest CVaR99.5 fixed-50%-capacity loss | highest q99.5 unreachable demand",4.36375176322908,859944.729694787,901282.048312069,426.315358808608,3,25
+31,1,Q995_LOSS_MAX,"highest q99.5 fixed-50%-capacity loss",4.26534106075331,859968.148203308,900084.628741005,425.772577257725,3,25
+11,1,BULK_CLOSE_TAIL_FAR,"pair=7-11, bulk=0.27895, tail95=6.721",2.17453609568442,283827.433466741,422747.206257834,49.6467828601033,3,25
+21,1,SPATIAL_TAIL_MODE,"distinct q99.5 affected site/node mode=3/7; audited tail rows=1295",1.71909346160011,434938.792643565,526472.427579075,90.8299920901177,3,7
