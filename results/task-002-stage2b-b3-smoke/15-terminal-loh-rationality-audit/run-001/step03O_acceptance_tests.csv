@@ -1,0 +1,15 @@
+check_id,status,observed,expected
+DEF-01,PASS,[240 160 80 120],[240 160 80 120] upper bounds
+OBJ-01,PASS,0,<=1e-8
+END-01,PASS,8.73114913702011e-10,Step-03N endpoint match
+RHO-01,PASS,5252.75473962013,worst objective nondecreasing
+RHO-02,PASS,1.16415321826935e-10,<=1e-8
+OPT-01,PASS,5.82076609134674e-11,<=1e-8
+OPT-02,PASS,-1.81898940354586e-11,objective cap respected
+FIX-01,PASS,157.454370769497,cross-fixed feasible and not better than optimum
+DATA-01,PASS,1,Step-03J hashes unchanged
+CORE-01,PASS,1,formal WDRO and CG core unchanged
+OLD-01,PASS,1,Step-03N archive unchanged
+DOM-01,PASS,1,finite audit outputs
+BOUND-01,PASS,R<=2000 only,R=5000/R=15000 not run
+MSP-01,PASS,not run,MSP not run

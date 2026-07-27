@@ -1,0 +1,22 @@
+Step-03O TerminalLOH rationality audit
+PASS=14
+FAIL=0
+decision=B. RESULTS_REASONABLE_BUT_MULTIPLE_OPTIMA
+TerminalLOH_upper_bounds_kg=240,160,80,120
+exact_bound_vector_240_160_80_120=true
+TerminalLOH_meaning=site-level prepositioned reserve/service-volume limit in each consequence atom
+rho_sweep_objective_nondecreasing=true
+max_rho_sweep_independent_violation=1.164153218269348e-10
+multiple_optimal_terminal_loh=true
+optimal_range_label=MULTIPLE_OPTIMAL_TERMINALLOH
+max_optimal_T_range_kg=3.56887792776206e-05
+medium_rho0_T=240,160,80,120
+medium_rho002_T=204.2343,112.089,69.80018,119.7774
+medium_rho0_T_fixed_in_rho002_objective_gap=157.4543707694975
+rho_increase_explanation=rho changes the tradeoff among gamma*sum(T), rho*lambda, and mean(alpha); T has no monotonicity constraint
+R5000_recommendation=may_continue_algorithm_scaling test, but interpret bound-saturated TerminalLOH before substantive use
+R5000_tested=false
+R15000_tested=false
+formal_model_modified=false
+constraint_generation_core_modified=false
+MSP_run=false

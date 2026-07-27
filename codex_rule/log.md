@@ -1174,3 +1174,16 @@
 - 结论：R=2000 结果提供了进入 R=5000 的证据，但只建议在重新估算内存和时间、保持单案例资源保护的条件下进入；不能据此推断 R=15000 可行。R=5000 本轮未运行。
 - 本地结果：`terminalLoh_wdro/output/stage2_foundation_step03N_wdro_constraint_generation_scale/run-001/`；Git 归档：`results/task-002-stage2b-b3-smoke/14-wdro-constraint-generation-scale/run-001/`。两处均为 6 个小型审计结果文件及 manifest/summary，归档内容与本地内容一致。
 - Step-03J 输入哈希、Step-03M 回归结果哈希和受保护 WDRO 核心哈希保持不变；本轮运行了明确授权的小规模 WDRO/Gurobi 对照，没有运行正式 WDRO、MSP 或其他优化流程。
+
+### 2026-07-27 - task-002 Step-03O run-001 TerminalLOH 结果合理性审计
+
+- 基线为 `96449fa9e66c545b3ea7ba0de3882c57b94297f1`，当前分支为 `task/002-stage2b-b3-smoke`。新增独立审计求解器 `solve_wdro_terminal_loh_audit_cg_h2.m` 和 runner `run_step03O_terminal_loh_audit_h2.m`；未修改正式 WDRO 求解器、Step-03M 约束生成算法、MSP、Step-03J 冻结数据或旧 run。
+- 代码审计确认四个 `T_i` 是各站点在每个后果原子内可用于服务的 TerminalLOH 预置储氢/服务量上限。约束为 `sum_n y^s_{i,n} <= T_i`，需求平衡为 `sum_i y^s_{i,n}+u^s_n=D^s_n`；增大 `T_i` 可放宽可服务量并减少缺氢，但同时产生 `gamma*sum(T)` 持有成本。
+- 原始储罐容量为 `[300,200,100,150] kg`，正式 WDRO 使用 `capacity_fraction=0.8`，所以 `0 <= T <= [240,160,80,120] kg`。因此多次出现的 `[240,160,80,120]` 正是四站上界，不是偶然的内部解。
+- 正式目标为 `gamma*sum(T)+rho*lambda+mean(alpha)`，本轮 `gamma=2`、缺氢罚值 `M=2000`。场景损失由运输服务成本和 `M*sum(u)` 缺氢罚值构成；`D/A/C` 继续按现有 `DAC_maskedC` 距离进入 Wasserstein 对偶约束。
+- simple/medium/complex 在 rho=`0/0.02` 的目标值分别为 `767.392774/16840.813159`、`19751.622066/77239.335725`、`186610.352917/330021.692888`。全部目标分解重构误差为 0，Step-03N 端点目标最大复现误差 `8.73115e-10`，TerminalLOH 最大复现误差 `4.68958e-13 kg`。
+- medium 的 rho 扫描目标值为 `19751.622066, 25004.376805, 39327.572567, 53623.933885, 77239.335725`，随 rho=`0,0.001,0.005,0.01,0.02` 严格非降。`T` 在 rho<=0.005 时保持全上界；rho=0.01 时为 `[225.9951,145.7722,80,120]`；rho=0.02 时为 `[204.2343,112.0890,69.8002,119.7774]`。complex 在全部扫描半径始终为全上界。
+- rho 增大不要求 TerminalLOH 单调增加。rho 改变 `gamma*sum(T)`、`rho*lambda` 与 `mean(alpha)` 的最优权衡；medium 在 rho=0.02 采用较小 `T` 时，总目标更低。将 rho=0 的全上界 `T` 固定到 rho=0.02，目标升至 `77396.790095`，比自由最优值差 `157.454371`；反向固定则比 rho=0 最优值差 `4814.201988`，两组均可行。
+- 在 `z*+1e-6` 目标容差下，对 medium 四站分别求最小/最大 `T_i`。rho=0 的区间宽度均低于 `3.7e-8 kg`；rho=0.02 的最大区间宽度为 `3.56888e-5 kg`，站点 2、3 超过本轮 `1e-5 kg` 报告阈值，因此结论标记为 `B. RESULTS_REASONABLE_BUT_MULTIPLE_OPTIMA`。该区间很窄，属于数值近等价最优范围，不是大幅运营歧义。
+- 14 项自动验收全部 PASS、FAIL=0；rho 扫描和所有二级/交叉固定求解均做完整独立场景对扫描，最大违反量 `1.16415e-10 <= 1e-8`。Step-03J CSV/MAT、正式 WDRO 核心、Step-03M 约束生成核心和 Step-03N 归档哈希均保持不变。
+- 输出：`results/task-002-stage2b-b3-smoke/15-terminal-loh-rationality-audit/run-001/`。本轮只运行三个状态的 R=2000 审计；未运行 R=5000、R=15000、全部 35 状态、MSP、场景约简或聚类。结果支持在重新做资源保护后继续 R=5000 算法规模测试，但边界饱和的 TerminalLOH 必须按容量约束解释，不能据此推断 R=15000 可行。

@@ -1,0 +1,13 @@
+task=Step-03O TerminalLOH rationality audit
+baseline_commit=96449fa9e66c545b3ea7ba0de3882c57b94297f1
+R=2000
+states=7,18,30
+rho_sweep=0,0.001,0.005,0.01,0.02
+objective_cap_tolerance=1e-06
+optimal_range_width_threshold=1e-05
+decision=B. RESULTS_REASONABLE_BUT_MULTIPLE_OPTIMA
+Step03J_csv_sha256=366dc3c0b57bfd76aca92f51ae1db82b93c764c87fa15e8cb4dd32388d018168
+Step03J_mat_sha256=6936a696f5cde137aca483f8c32adee33b52cbd90559a8e6395f3686c0712945
+R5000_run=false
+R15000_run=false
+MSP_run=false
