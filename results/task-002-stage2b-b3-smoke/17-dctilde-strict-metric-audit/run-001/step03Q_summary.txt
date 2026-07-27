@@ -1,0 +1,25 @@
+Step-03Q D + Ctilde strict metric audit
+PASS=17
+FAIL=0
+decision=A. CTILDE_STRICT_METRIC_RECOMMENDED
+C_bound_km=357.1526447416079
+recommended_kappa=1
+new_metric_random_triangle_max_violation=2.983724378680108e-16
+new_metric_directed_triangle_max_violation=-0.00291293912642164
+zero_distance_positive_loss_count=0
+max_independent_constraint_violation=1.164153218269348e-10
+kappa1_max_T_difference_vs_old_kg=21.82036385456728
+kappa1_validation_total_cost_delta_range=-3485.29896312..7.73158130206
+near_T_change_range=0..1.00982333606e-10
+far_T_change_range=0..45.7908102306
+distance_loss_spearman_range=0.0615559416785..0.999983074487
+kappa1_state_validation_delta_mean_range=-3463.76668889..7.70690830746
+formal_distance_modified=false
+A_removed_from_loss_model=false
+Step03J_modified=false
+Step03P_modified=false
+MSP_run=false
+R5000_run=false
+R15000_run=false
+validation_note=validation roles reuse the same W paths and mainly redraw second-layer wind/resistance
+rho_note=median matching is audit-only; a formal replacement requires radius recalibration or a frozen permanent scale

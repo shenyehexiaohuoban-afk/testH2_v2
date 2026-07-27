@@ -1,0 +1,18 @@
+check_id,status,observed,expected
+BASE-01,PASS,e6d735446ab47bbc6b379128b653ad96deb3ed1b,e6d735446ab47bbc6b379128b653ad96deb3ed1b
+CBOUND-01,PASS,129.0248,357.1526
+PROOF-01,PASS,[0.5 1 1.5],all kappa >= 0.5
+METRIC-01,PASS,2.9837e-16,<=1e-10 and no true violations
+IDENTITY-01,PASS,0,0
+RHO0-01,PASS,1.1369e-13,<=1e-8
+SOLVE-01,PASS,true,all OPTIMAL and converged
+SOLVE-02,PASS,1.1642e-10,<=1e-8
+EVAL-01,PASS,true,all fixed-T evaluations OPTIMAL
+NEAR-01,PASS,false,false
+VALID-01,PASS,false,main candidate not uniformly worse
+CORE-01,PASS,true,formal WDRO/MSP unchanged
+DATA-01,PASS,true,Step-03J unchanged
+OLD-01,PASS,true,Step-03P run-001/run-002 unchanged
+DOMAIN-01,PASS,true,finite reported results
+SCOPE-01,PASS,3 states and R=2000,no R=5000/R=15000/all-35-state run
+MSP-01,PASS,not run,MSP and formal distance not modified

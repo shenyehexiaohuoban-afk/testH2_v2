@@ -1202,3 +1202,17 @@
 - 完整容量下 simple 无站点饱和，medium 在 rho=0/0.02 分别有 `2/1` 个站点触及上界，complex 在两半径下均为 `4/4` 个站点全上界，强状态仍存在明确容量饱和。13 项机械验收全部 PASS、FAIL=0；最大独立约束违反量 `2.328306436538696e-10`，5 个新增 MATLAB 文件 `checkcode` 均为 0 警告。
 - 首次本地 `run-001` 的候选判定逻辑把每个状态都要求出现 A 独立场景对，并在 q95=0 时把零损失并列误计为异常，导致过严结论；该 run 未 Commit/Push、未覆盖。按固定规则保留本地历史并使用新 `run-002`，修正后结论为 `B. DAC_VALID_AS_KANTOROVICH_COST_NOT_STRICT_METRIC`。
 - 成功输出：`results/task-002-stage2b-b3-smoke/16-dac-transport-cost-audit/run-002/`。Step-03J 六个大文件 SHA-256 再次全部匹配；未引入车辆调度、站台损坏、场景约简或聚类，未运行 MSP、R=5000 或 R=15000。现有证据支持固定 D/A/C 表征口径后，在单独资源保护下进入 R=5000 约束生成规模测试，但不能据此推断 R=15000 可行。
+
+### 2026-07-27 - task-002 Step-03Q run-001 D + Ctilde 严格距离候选审计
+
+- 基线为 `e6d735446ab47bbc6b379128b653ad96deb3ed1b`，当前分支为 `task/002-stage2b-b3-smoke`。新增独立 `build_step03Q_distance_matrix_h2.m` 和 `run_step03Q_dctilde_strict_metric_audit_h2.m`；显式 method 可选择 old 或 Ctilde，缺省 method 与原距离逐元素完全一致。未修改正式距离函数、正式 WDRO 求解器、MSP、Step-03J、Step-03P run-001/run-002 或其他旧 run。
+- 代码链确认 A=1 表示全部需求关键 W1-W3 窗口均存在可服务路径，A=0 表示至少一个关键窗口不可达；C 是当前道路状态下的最短通行阻抗，单位 km。道路关闭将边成本设为 Inf，未关闭道路的 `pClose` 同时进入 `roadLength*(1+pClose)` 减速阻抗，因此 C 同时包含封路绕行和可通行道路减速。
+- Ctilde 只取消场景距离中的独立 d_A：双方不可达距离为 0，双方可达距离为 `abs(C_r/C_bound-C_s/C_bound)`，一方不可达距离为 kappa；4×33 个局部距离取平均。A 仍完整保留在供氢可行性上界 `y_i,n^s <= A_i,n^s D_n^s` 中，A=0 继续严格禁止供氢，未从损失模型删除。
+- 正式道路边脆弱概率被截断到 `[0,1]`，有限边阻抗不超过 `2*roadLength`；正边权最短路可取不重复边的简单路径。因此严格模型上界为 `C_bound=2*sum(all 41 road lengths)=357.1526447416079 km`，不是 R=2000 样本最大值。nominal/validation-1/validation-2 全部 525000 条的可达 C 最大值为 `129.024752116107/124.252824333777/124.303582800442 km`，超界数均为 0。
+- 从正式代码读取旧权重 D/A/C=`0.6/0.25/0.15`，新方案使用 `w_D=0.6`、`w_Ctilde=0.4`。kappa=`0.5/1.0/1.5` 均满足局部距离三角不等式；kappa=0.5 是数学允许的临界值，kappa=1 使可达性切换等于最大归一化连续 C 差异，kappa=1.5 额外强化类别切换，本轮先验主候选为 kappa=1，未使用 validation 反向调参。
+- 对 simple/medium/complex 状态 `7/18/30` 的 R=2000 样本，每个新距离执行 200000 个随机三元组检查，并重新生成 Step-03P masked-C 违反三元组 `1/6095/42456` 个做定向检查。Ctilde 和 D+Ctilde 均无超过 `1e-10` 的真实违反，随机最大数值残差 `2.9837e-16`；零距离正损失差为 0。因此候选可作为联合 `(D,Ctilde)` 表征上的严格底层距离。
+- 所有 old/new、rho=`0/0.02` 案例均为 OPTIMAL。rho=0 新旧 T/目标最大误差 `1.1369e-13`；rho=0.02 独立全约束扫描最大违反量 `1.164153218269348e-10`。活动约束比例约 `0.1043%-0.1497%`，单案例总调用时间约 `1.71-12.64 s`；记录的 MATLAB 内存快照峰值约 `2.32-2.82 GB`。
+- kappa=1 相对旧距离的 TerminalLOH 最大绝对差为 `21.8203638546 kg`。simple 的 validation 综合成本增加约 `7.68-7.73`，medium 降低约 `3442.23-3485.30`，complex 因四站全容量饱和而完全不变；不存在全面、明显恶化。kappa=1.5 在 medium 数值更低，但本轮禁止用 validation 调参，因此不据此改选 kappa。
+- 距离与损失差 Spearman 范围为 `0.06156-0.99998`；complex 状态 kappa=1/1.5 将相关性从旧距离 `0.07427` 提高至 `0.20724/0.30922`，小距离大损失异常占比从 `0.12%` 降至 `0.031%/0.017%`。各距离按自身 q05/q95 选择 near/far 对；near 扰动的 T 变化最大 `1.01e-10 kg`，far 最大 `45.7908 kg`，未发现近距离但 TerminalLOH 剧烈变化的反例。
+- 自动验收 `PASS=17, FAIL=0`，结论为 `A. CTILDE_STRICT_METRIC_RECOMMENDED`。候选若正式采用，可恢复基于严格底层距离的 1-Wasserstein 表述；但当前正式默认仍是旧 D+A+masked-C。本轮中位数匹配仅用于公平比较，正式替换时必须固定长期尺度并重新校准/验证 rho。
+- 输出：`results/task-002-stage2b-b3-smoke/17-dctilde-strict-metric-audit/run-001/`。未运行完整 R2 模型、R=5000、R=15000、全部35状态、MSP、场景约简或聚类；已有未跟踪的 Step-03P 失败历史 run-001 保持原样且不会提交。本轮结果支持在独立资源保护下继续 R=5000 算法规模测试，但不能推断 R=15000 可行。
