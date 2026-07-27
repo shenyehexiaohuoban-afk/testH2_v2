@@ -1,0 +1,13 @@
+complexity_label,initial_state_id,cost_component,nonnegative_pass,min_cost,zero_diagonal_pass,max_diagonal_abs,symmetry_pass,max_symmetry_abs,identity_violation_count,triangle_test_count,triangle_violation_count,triangle_max_violation,triangle_example_i,triangle_example_j,triangle_example_k
+simple,7,D_component,1,0,1,0,1,0,0,200000,0,1.11022302462516e-16,155,1168,86
+simple,7,A_component,1,0,1,0,1,0,0,200000,0,0,185,1852,1118
+simple,7,C_masked_component,1,0,1,0,1,0,0,200000,1,0.00360598210390639,755,224,1949
+simple,7,DAC_total,1,0,1,0,1,0,0,200000,0,2.22044604925031e-16,1121,1297,424
+medium,18,D_component,1,0,1,0,1,0,0,200000,0,3.33066907387547e-16,48,1733,707
+medium,18,A_component,1,0,1,0,1,0,0,200000,0,1.11022302462516e-16,1670,1608,1142
+medium,18,C_masked_component,1,0,1,0,1,0,0,200000,6095,0.829304587006334,1635,3,1396
+medium,18,DAC_total,1,0,1,0,1,0,0,200000,0,1.33226762955019e-15,977,627,1873
+complex,30,D_component,1,0,1,0,1,0,0,200000,0,4.44089209850063e-16,1008,1283,1464
+complex,30,A_component,1,0,1,0,1,0,0,200000,0,1.11022302462516e-16,1291,250,596
+complex,30,C_masked_component,1,0,1,0,1,0,0,200000,42456,0.938320405756543,1369,200,1732
+complex,30,DAC_total,1,0,1,0,1,0,0,200000,0,8.88178419700125e-16,1304,419,257
