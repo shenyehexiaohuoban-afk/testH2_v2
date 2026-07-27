@@ -1,0 +1,22 @@
+Step-03M exact WDRO constraint-generation validation
+PASS=123
+FAIL=0
+case_count=24
+exact_small_scale_match=true
+max_objective_abs_error=1.455191522836685e-11
+max_TerminalLOH_abs_error=9.947598300641403e-14
+max_independent_constraint_violation=1.164153218269348e-10
+active_constraint_ratio_min=0.001999
+active_constraint_ratio_mean=0.008688083333333334
+active_constraint_ratio_max=0.0223
+constraint_generation_gurobi_time_sec=13.676935
+complete_separation_time_sec=18.3300582
+dominant_time_component=FULL_SEPARATION_SCAN
+next_scale_recommendation=TEST_R2000_NEXT; TEST_R5000_ONLY_AFTER_R2000_RESOURCE_REVIEW
+Step03J_input_unchanged=true
+protected_WDRO_core_unchanged=true
+Step03K_old_result_unchanged=true
+R15000_tested=false
+all_35_states_tested=false
+formal_WDRO_run=false
+MSP_run=false

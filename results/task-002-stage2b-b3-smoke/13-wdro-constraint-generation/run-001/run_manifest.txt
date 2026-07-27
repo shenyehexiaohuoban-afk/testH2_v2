@@ -1,0 +1,17 @@
+task=Step-03M exact WDRO constraint generation validation
+branch=task/002-stage2b-b3-smoke
+nominal_csv_sha256=366dc3c0b57bfd76aca92f51ae1db82b93c764c87fa15e8cb4dd32388d018168
+nominal_mat_sha256=6936a696f5cde137aca483f8c32adee33b52cbd90559a8e6395f3686c0712945
+selected_state_ids=7,18,30
+R_values=100,250,500,1000
+rho_values=0,0.02
+distance_mode=DAC_maskedC
+capacity_fraction=0.8
+gamma=2
+M=2000
+violation_tolerance=1e-8
+full_solver_temporary_gurobi_env=OptimalityTol_1e-9,FeasibilityTol_1e-9,NumericFocus_3
+full_pair_scan=true
+R15000_run=false
+MSP_run=false
+formal_WDRO_run=false

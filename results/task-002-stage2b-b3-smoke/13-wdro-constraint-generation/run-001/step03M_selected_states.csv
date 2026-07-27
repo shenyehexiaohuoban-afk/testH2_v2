@@ -1,0 +1,4 @@
+initial_state_id,a0,loc0,lfw0,nominal_D_mean_kg,record_count,complexity_label,selection_rule
+7,2,7,0,1.03757648492122,15000,simple,minimum nominal D mean; tie break state ID
+18,4,4,0,162.475920319304,15000,medium,median nominal D mean; tie break state ID
+30,6,2,0,470.772004473174,15000,complex,maximum nominal D mean; tie break state ID

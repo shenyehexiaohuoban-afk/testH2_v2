@@ -1149,3 +1149,16 @@
 - 决策为 `EXACT_AGGREGATION_STILL_TOO_LARGE`。最大 K=14609 时估算距离矩阵 213422881 元素、约 1.707 GB，LP 约 2439708 变量、213978023 约束，仍远高于 Step-03K 实测规模；不得据此宣称正式 WDRO 可行。
 - 成功本地输出：`terminalLoh_wdro/output/stage3l_exact_atom_aggregation/run-002/`，共 119 个文件、281108937 字节；其中 70 个聚合数据文件、35 个完整映射文件及其 SHA-256 只保留本地。Git 小型归档：`results/task-002-stage2b-b3-smoke/12-exact-atom-aggregation/run-002/`，仅 14 个摘要、schema、manifest 和审计文件。
 - 明确禁止项：未实施近似聚类、尾部抽样、约束生成或求解器重构；未运行 Gurobi、正式 WDRO 或 MSP；未改变正式 WDRO 默认输入。
+
+### 2026-07-27 - task-002 Step-03M run-001 WDRO 约束生成小规模精确验证
+
+- 当前分支：`task/002-stage2b-b3-smoke`。新增独立实验程序 `run_stage2_foundation_step03M_wdro_constraint_generation_h2.m` 和 `solve_wdro_terminal_loh_lp_constraint_generation_h2.m`；未修改正式 WDRO 距离矩阵、正式求解器、MSP、Step-03J 冻结数据或旧 run。
+- 先审计现有数学形式：目标为 `gamma*sum(T)+rho*lambda+(1/R)*sum(alpha)`；四个 `T` 为 TerminalLOH；`D/A/C` 分别进入现有 `DAC_maskedC` 距离和场景损失；`alpha_r+lambda*d(r,s)>=L_s` 产生恰好 `R^2` 对偶约束。该有限 LP 适合精确 exchange/cutting-surface 分离。
+- 从 Step-03J 原始 nominal 数据按 nominal D 均值确定性选择简单/中等/复杂状态 `7/18/30`，测试 `R=100,250,500,1000`、`rho=0,0.02`，共 24 组；未运行 R=15000，未测试全部 35 个状态。
+- 新算法从 `(r,r)` 约束开始，每轮对全部 `R^2` 有序场景对分块计算最严重违反并为每个 r 加入一个违反最严重的 s；收敛后再次独立分块扫描全部 `R^2`，未保存完整 R×R 距离矩阵，未使用聚类、抽样、近似最近邻或场景约简。
+- 为满足题设 `1e-8` 目标比较，完整旧求解器仍原样调用，仅通过仓库外临时 `gurobi.env` 设置 `OptimalityTol=1e-9`、`FeasibilityTol=1e-9`、`NumericFocus=3`；该设置用于消除已实测默认数值容差造成的 `2.29e-6` alpha/L 目标松弛，不改变旧求解器源码或正式配置。
+- 24/24 组均为 `OPTIMAL` 且精确一致：最大目标值绝对误差 `1.455191522836685e-11`，最大四站台 TerminalLOH 绝对误差 `9.947598300641403e-14`，最大收敛后独立全扫描违反量 `1.164153218269348e-10`；自动验收 `PASS=123, FAIL=0`。
+- 最终活动约束数占 `R^2` 的比例范围为 `0.001999` 至 `0.0223`，均值 `0.008688083333333334`。约束生成总 Gurobi 求解时间 `13.676935 s`，完整分离及独立复核扫描 `18.3300582 s`，本轮主要耗时为完整分离检查。
+- 结论：小规模下与完整 R² 模型精确一致；下一步值得先测试 `R=2000`，`R=5000` 仅在 R=2000 资源和时间结果可接受后继续，不测试 R=15000。
+- 本地结果：`terminalLoh_wdro/output/stage2_foundation_step03M_wdro_constraint_generation/`；Git 小型归档：`results/task-002-stage2b-b3-smoke/13-wdro-constraint-generation/run-001/`，8 个文件、28190 字节，逐文件 SHA-256 一致。
+- Step-03J nominal CSV/MAT、WDRO 核心文件和 Step-03K 旧结果哈希保持不变；本轮仅运行了明确授权的小规模 WDRO/Gurobi 对比，没有运行正式 WDRO、R=15000、MSP 或其他优化流程。
