@@ -1,0 +1,22 @@
+check_id,status,observed,expected
+1,PASS,36,36
+2,PASS,24/12,24/12
+3,PASS,96,96
+4,PASS,96,96
+5,PASS,48,48
+6,PASS,1,1 batched recourse invocation
+7,PASS,true,true
+8,PASS,true,true
+9,PASS,1.0012e-08,machine-aware frozen replay tolerance
+10,PASS,1.0245e-08,machine-aware frozen replay tolerance
+11,PASS,3.5527e-15,1e-08
+12,PASS,5.0804e-12,1e-08
+13,PASS,36,36 finite nonnegative pair rows
+14,PASS,5,5
+15,PASS,6,6
+16,PASS,1.0361e-08,near numerical zero
+17,PASS,frozen inputs and protected source unchanged,unchanged
+18,PASS,Step-03P history unchanged,unchanged
+19,PASS,0,0
+20,PASS,9.2697,600
+21,PASS,1441181696,finite memory and no validation/formal WDRO/MSP

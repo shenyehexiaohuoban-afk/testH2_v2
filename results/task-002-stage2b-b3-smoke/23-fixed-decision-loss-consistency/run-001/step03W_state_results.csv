@@ -1,0 +1,7 @@
+initial_state_id,pair_count,step03T_tier_large_share,step03T_control_large_share,step03T_tier_minus_control_pp,holdout_tier_large_share,holdout_control_large_share,holdout_tier_minus_control_pp,combined_tier_large_share,combined_control_large_share,combined_tier_minus_control_pp,tier_higher_direction,small_distance_high_loss_count,PairRelDeltaQ_median,PairRelDeltaQ_max,spearman_dnew_DeltaQ_Tr,spearman_dnew_DeltaQ_Ts
+7,6,1,1,0,1,0,100,1,0.5,50,1,2,0.998246766580588,1,0.550782483869826,0.898645105261295
+18,6,1,0,100,1,0,100,1,0,100,1,2,0.288397108876765,0.987147398169383,0.714285714285714,0.885714285714286
+30,6,1,0,100,1,0,100,1,0,100,1,0,0.150580530354936,0.345569905094311,0.314285714285714,0.257142857142857
+31,6,1,0,100,1,0,100,1,0,100,1,0,0.153002078584853,0.397267687687835,0.2,0.2
+11,6,1,1,0,1,0,100,1,0.5,50,1,1,0.626886290731863,0.998624177044338,0.6,0.828571428571429
+21,6,1,1,0,1,0,100,1,0.5,50,1,2,0.336783508765864,0.987868094762194,0.314285714285714,0.828571428571429

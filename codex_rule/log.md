@@ -1272,3 +1272,15 @@
 - 输出包含 36 行 pair 结果、30 行六状态五特征结果及逐对首选/次选站台、独占覆盖、可服务站台数和责任差变化诊断。19 项机械验收全部 PASS，新增 MATLAB 文件 `checkcode=0`；正式回放耗时 `6.254339 s`，峰值工作集 `1378287616 bytes`。
 - 最终结论为 `C. NOT_BETTER_THAN_ORIGINAL_SERVICE_FEATURE`。当前 `d_G` 对 Step-03T 代表对有局部排序改善，但未稳定改善留出组，也没有充分消除与 Ctilde/原 d_S 的重复，因此不进入少量权重组合试验，不确定权重且不修改正式距离或正式模型。
 - 输出归档于 `results/task-002-stage2b-b3-smoke/22-relative-service-responsibility-small-test/run-001/`。Step-03J、Step-03S、Step-03T、Step-03U、正式距离、供氢约束、MSP 和既有旧 run 哈希保持不变；未使用 validation、rho 标定、GW/FGW/FUGW、聚类或场景约简。既有未跟踪 Step-03P `run-001` 保持原样且不纳入提交。
+
+### 2026-07-28 - task-002 Step-03W run-001 fixed-decision loss consistency audit
+
+- 本地与远程基线均为 `518e40d19b7f4e1edb93569164fc788d3290d744`，分支为 `task/002-stage2b-b3-smoke`。新增独立 `run_step03W_fixed_decision_loss_consistency_h2.m`，完整沿用 Step-03U/03V 冻结的 36 对场景；未重新选对、运行近邻搜索、优化 TerminalLOH、运行正式 WDRO/MSP、使用 validation、标定 rho 或修改正式距离。
+- 代码链确认本轮固定决策运行损失 `Q(T,xi)` 使用 `evaluate_step03T_fixed_T_recourse_h2` 的 `operating_loss=service_cost+shortage_loss`，不包含 `gamma*sum(T)` TerminalLOH 持有成本。Step-03T 已有 24 对共 96 条固定 T 重放全部直接复用；仅对 12 个留出对新增 48 条固定 T recourse 评价，并由一个含 48 个独立块的批量 Gurobi LP 完成。48 条均为 `OPTIMAL`，需求平衡最大误差 `3.5527e-15`，容量约束最大违反 `5.0804e-12`。
+- Step-03T Tier-1 的 `PairRelDeltaQ` 中位数/q90/最大值为 `0.686680/0.998859/1.0`，18/18 达到 10% 大失配；Step-03T 低后悔对照为 `0.168917/0.993204/0.997534`，3/6 大失配，Tier-1 高 `50` 个百分点。留出 Tier-1 为 `0.305448/0.935727/1.0`，6/6 大失配；留出对照为 `0.013309/0.055887/0.056221`，0/6 大失配，Tier-1 高 `100` 个百分点。
+- 六个状态合并 Tier-1 与对照后，状态 `7/18/30/31/11/21` 的大失配比例差分别为 `50/100/100/100/50/50` 个百分点，六状态方向一致。最低正 `d_new` 四分位阈值为 `0.00463618802316999`，10 个小距离对中 7 个仍为大固定损失失配，覆盖状态 `7/11/18/21`；因此不是少数单一状态造成。
+- `LossSlope` 中位数在 Step-03T Tier-1/对照为 `1.9112e6/3.0402e5`，留出 Tier-1/对照为 `9.2956e5/1.0535e5`。全体 `Spearman(d_new,DeltaQ_Tr/DeltaQ_Ts)` 为 `0.520754/0.778042`；分组相关性不完全稳定，但高交叉后悔 Tier-1 在代表组和留出组均全部表现为大固定损失失配。
+- 从 Step-03S 冻结表另行复核 `12844` 条 `d_new<1e-12` 记录，最大 `PairRelDeltaQ=1.11397e-14`、最大绝对固定损失差 `1.03610e-08`、10% 大失配数为 0，说明零距离场景的固定 T 损失差异仍处于数值零量级。
+- 旧 Step-03T 重放相对冻结值最大误差 `1.00117e-08`，新增留出重放相对冻结值最大误差 `1.02445e-08`，均通过 `1e-8` 加浮点 ULP 的机器精度容差。21 项机械验收全部 PASS；新增 MATLAB 文件最终 `checkcode=0`。正式成功运行耗时 `9.269720 s`，峰值工作集 `1441181696 bytes`。
+- 最终结论为 `C. CURRENT_DISTANCE_FIXED_LOSS_MISALIGNED`：代表组和留出组方向一致且均超过题设 20 个百分点门槛，六状态全部同向，支持继续重构当前 ground cost；该证据针对当前 Ctilde 候选距离，不构成怀疑或放弃 Wasserstein/最优传输 DRO 框架本身的理由。
+- 输出归档于 `results/task-002-stage2b-b3-smoke/23-fixed-decision-loss-consistency/run-001/`。首次尝试在固定 T LP 完成后因状态汇总函数参数名错误停止，未发布最终目录；部分临时结果保存在本地未跟踪 `run-001.failed-001/` 且不纳入提交。Step-03J、Step-03S、Step-03T、Step-03U、Step-03V、正式模型、距离、MSP、旧 run 和既有未跟踪 Step-03P 历史哈希保持不变。

@@ -1,0 +1,32 @@
+Step-03W fixed-decision loss consistency audit
+status=PASS
+conclusion=C. CURRENT_DISTANCE_FIXED_LOSS_MISALIGNED
+fixed_operating_loss_definition=transport/service cost + shortage penalty; TerminalLOH holding cost excluded
+frozen_pair_count=36
+Step03T_reused_fixed_T_rows=96
+new_holdout_fixed_T_recourse_evaluations=48
+new_gurobi_batch_invocations=1
+step03T_large_mismatch_share_tier1=1.000000000
+step03T_large_mismatch_share_control=0.500000000
+step03T_tier_minus_control_pp=50.000000
+holdout_large_mismatch_share_tier1=1.000000000
+holdout_large_mismatch_share_control=0.000000000
+holdout_tier_minus_control_pp=100.000000
+states_with_tier_higher_large_mismatch=6
+small_distance_q25_threshold=0.00463618802316999
+small_distance_high_fixed_loss_pair_count=7
+small_distance_high_fixed_loss_states=7;11;18;21
+zero_distance_cross_rows=12844
+zero_distance_max_fixed_loss_difference=1.03609636425972e-08
+1_close_distance_same_T_loss_close=NO; lowest-positive-distance quartile large-mismatch share=0.700000
+2_high_cross_regret_implies_fixed_loss_mismatch=YES_IN_BOTH_SETS
+3_representative_and_holdout_consistent=YES_DIRECTIONALLY; both Tier-1 minus control gaps are at least 20 percentage points, although their magnitudes differ.
+4_evidence_interpretation=the chosen distance is systematically misaligned with fixed-decision operating-loss changes in both frozen sets.
+5_reason_to_continue_distance_redesign=YES
+6_reason_to_doubt_Wasserstein_framework_itself=NO; this audit tests the chosen ground cost against fixed-decision loss, not the optimal-transport framework.
+max_reused_frozen_error=1.00117176771164e-08
+max_new_frozen_error=1.02445483207703e-08
+runtime_sec=9.269720
+peak_working_set_bytes=1441181696
+formal_distance_modified=NO
+formal_WDRO_MSP_validation_used=NO
