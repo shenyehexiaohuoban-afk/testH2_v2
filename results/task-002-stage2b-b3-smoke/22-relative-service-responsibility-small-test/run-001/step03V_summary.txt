@@ -1,0 +1,27 @@
+Step-03V relative service responsibility small test
+status=PASS
+conclusion=C. NOT_BETTER_THAN_ORIGINAL_SERVICE_FEATURE
+frozen_pair_count=36
+d_G_range=[1.48628881282794e-08, 0.0201511985369205]
+spearman_dG_dD=0.041581040229
+spearman_dG_dCtilde=0.817046539639
+spearman_dG_dS=0.945410138760
+original_spearman_dS_dCtilde=0.846074646075
+step03T_separation_dG=0.740740741
+step03T_separation_dS=0.675925926
+step03T_separation_baseline_d_new=0.472222222
+holdout_separation_dG=0.527777778
+holdout_separation_dS=0.555555556
+holdout_separation_baseline_d_new=0.555555556
+states_improved_vs_dS=3
+states_not_degraded_vs_dS=6
+1_dG_reduces_Ctilde_duplication=NO; Spearman is compared with the frozen d_S value 0.8461.
+2_dG_identifies_Tier1_better_than_dS=NO; both Step-03T and holdout separation must be no worse.
+3_low_regret_controls_broadly_overpulled=YES; diagnostics use within-feature Tier-1/control medians.
+4_cross_state_stable=YES; improvement must cover >=2 states and >=4 states must not degrade.
+5_worth_small_weight_test=NO; no weight is selected or adopted in this run.
+formal_distance_modified=NO
+optimization_or_validation_used=NO
+maximum_frozen_distance_replay_error=4.85722573273506e-16
+runtime_sec=6.254339
+peak_working_set_bytes=1378287616

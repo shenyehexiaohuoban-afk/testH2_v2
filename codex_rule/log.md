@@ -1262,3 +1262,13 @@
 - 分量范围为 `d_D=[0,0.19291161956]`、`d_Ctilde=[7.53585e-20,0.795848590576]`、`d_S=[7.03702e-08,0.0217514625497]`。`Spearman(d_S,d_D)=0.189080`，`Spearman(d_S,d_Ctilde)=0.846075`，表明当前 S 主要重复了 Ctilde 信息，且尺度明显小于 Ctilde；所有非基线 Tier-1 中位距离均低于基线，改善主要表现为有限的排序分离，而不是绝对拉远。
 - 结论为 `B. SERVICE_FEATURE_PROMISING_BUT_WEIGHT_SENSITIVE`：方向存在局部信号，但跨状态不稳定，当前没有权重通过预设的下一轮小范围验证门槛，不确定最终权重，也不正式采用 S。18 项机械验收全部 PASS，新增 MATLAB 文件 `checkcode=0`；运行时间 `15.262258 s`，峰值工作集 `1489178624 bytes`。
 - 输出归档于 `results/task-002-stage2b-b3-smoke/21-service-feature-small-weight-test/run-001/`。未使用 validation、未标定 rho、未运行 WDRO/Gurobi/MSP、未扫描额外权重；既有未跟踪 Step-03P `run-001` 保持不变且不提交。
+
+### 2026-07-28 - task-002 Step-03V run-001 relative service responsibility small test
+
+- 本地与远程基线均为 `1aedab93463b5dd9691e9e6f2e0234a8fb83a130`，分支为 `task/002-stage2b-b3-smoke`。新增独立 `run_step03V_relative_service_responsibility_small_test_h2.m`，只回读 Step-03U 冻结的 36 对场景、Step-03J nominal 对应 D/A/C 行和 Step-03S 固定 `Dscale`；未重新选择场景、求 TerminalLOH、计算交叉后悔或运行 WDRO/Gurobi/MSP。
+- 按任务定义令 `q=A/(1+C/C_bound)`、逐节点归一为四站相对责任 `p`、`G=D_bar*p`，并计算 `d_G=sum(abs(G_r-G_s))/(2*33)`。A=0 位置先直接置零，节点无任何可达站台时四站责任均为零；`C_bound=357.1526447416079`、`D_bar=D/(frozen Dscale+1e-9)`，没有使用本轮 36 对重新缩放。
+- 冻结距离最大回放误差为 `4.85722573273506e-16`，36 对 path_id 全部一致。`d_G` 范围为 `[1.48628881282794e-08, 0.0201511985369205]`；`Spearman(d_G,d_D)=0.0415810`、`Spearman(d_G,d_Ctilde)=0.8170465`、`Spearman(d_G,d_S)=0.9454101`。相对原 `Spearman(d_S,d_Ctilde)=0.8460746` 只降低约 `0.0290`，未达到运行前固定的 `0.10` 明显降重门槛，且 `d_G` 与 `d_S` 仍高度重复。
+- Step-03T 代表组 separation rate 从 `d_S=0.675926` 提高到 `d_G=0.740741`，但留出组从 `0.555556` 降到 `0.527778`；留出 Tier-1/对照的 `d_G` 中位数分别约为 `0.0001129523/0.0001174425`，对照被轻微拉远。六状态合并口径相对 `d_S` 有 3 个状态改善、6 个状态均未下降，但改善没有同时通过代表组和留出组要求。
+- 输出包含 36 行 pair 结果、30 行六状态五特征结果及逐对首选/次选站台、独占覆盖、可服务站台数和责任差变化诊断。19 项机械验收全部 PASS，新增 MATLAB 文件 `checkcode=0`；正式回放耗时 `6.254339 s`，峰值工作集 `1378287616 bytes`。
+- 最终结论为 `C. NOT_BETTER_THAN_ORIGINAL_SERVICE_FEATURE`。当前 `d_G` 对 Step-03T 代表对有局部排序改善，但未稳定改善留出组，也没有充分消除与 Ctilde/原 d_S 的重复，因此不进入少量权重组合试验，不确定权重且不修改正式距离或正式模型。
+- 输出归档于 `results/task-002-stage2b-b3-smoke/22-relative-service-responsibility-small-test/run-001/`。Step-03J、Step-03S、Step-03T、Step-03U、正式距离、供氢约束、MSP 和既有旧 run 哈希保持不变；未使用 validation、rho 标定、GW/FGW/FUGW、聚类或场景约简。既有未跟踪 Step-03P `run-001` 保持原样且不纳入提交。

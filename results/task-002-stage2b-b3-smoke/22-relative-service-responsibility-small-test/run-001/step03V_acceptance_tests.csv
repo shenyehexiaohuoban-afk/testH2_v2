@@ -1,0 +1,20 @@
+check_id,status,observed,expected
+1,PASS,36,36
+2,PASS,18/6,18/6
+3,PASS,6/6,6/6
+4,PASS,36,36
+5,PASS,true,true
+6,PASS,4.8572e-16,1e-08
+7,PASS,true,true
+8,PASS,finite nonnegative d_G,finite nonnegative d_G
+9,PASS,36,36
+10,PASS,30,30
+11,PASS,0.0415810402294/0.817046539639/0.94541013876,finite correlations
+12,PASS,finite pair distances,finite pair distances
+13,PASS,frozen inputs and protected code unchanged,unchanged
+14,PASS,Step-03P history unchanged,unchanged
+15,PASS,nominal selected rows only,no validation
+16,PASS,no optimization invoked,no WDRO/Gurobi/MSP/T solve
+17,PASS,0,0
+18,PASS,6.2543,300
+19,PASS,1378287616,>0 finite
