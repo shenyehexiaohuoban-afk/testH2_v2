@@ -1,0 +1,36 @@
+Step-03U service-feature small weight test
+status=PASS
+conclusion=B. SERVICE_FEATURE_PROMISING_BUT_WEIGHT_SENSITIVE
+D_bar_definition=D_node_kg/(frozen_Step03S_state_Dscale+1e-9)
+C_bar_definition=C_site_node_km/357.1526447416079
+S_definition=A*D_bar/(1+C_bar), with S=0 when A=0
+evaluated_pairs=36
+step03T_pairs=24
+holdout_pairs=12
+weight_count=8
+d_D_range=[0,0.19291161956]
+d_Ctilde_range=[7.53585279654e-20,0.795848590576]
+d_S_range=[7.03702058711e-08,0.0217514625497]
+spearman_dS_dD=0.18907992118
+spearman_dS_dCtilde=0.846074646075
+zero_distance_checked_states=5
+zero_distance_max_d_S=0
+baseline_step03T_separation=0.472222222
+baseline_holdout_separation=0.555555556
+maximum_step03T_separation_improvement=0.0277777778
+maximum_holdout_separation_improvement=0.138888889
+maximum_control_median_amplification=0.766896568
+maximum_improved_state_count=3
+combined_nonbaseline_separation_spread=0.0243055556
+weights_worth_next_small_validation=NONE
+answer_1_dS_improves_service_coupling=YES
+answer_2_low_regret_neighbors_harmed=YES
+answer_3_cross_state_stability=LIMITED_STATES
+answer_4_next_small_validation_weights=NONE
+answer_5_stop_and_modify_S=NO
+No final weight is adopted. Formal distance, rho, WDRO, Step-03J, MSP, and service constraints are unchanged.
+No TerminalLOH, cross-regret, nearest-neighbor, validation, or optimization calculation was run.
+runtime_sec=15.262258
+peak_working_set_bytes=1489178624
+state_result_rows=48
+fixed_weight_rows=8

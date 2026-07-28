@@ -1252,3 +1252,13 @@
 - 18 个 Tier-1 代表中，12 个主类型为站台身份/独占覆盖变化，3 个为道路阻抗排序变化，3 个为混合结构；15/18 归入需求—可达性—站台身份联合服务耦合家族。Tier-1 与对照的 `d_new` 中位数相近（`0.048943` 对 `0.046051`），但 A 变化涉及需求中位数约为 `148.106 kg` 对 `49.096 kg`，最大单站 T 差中位数约为 `96.318 kg` 对 `0.818 kg`。结论为 `A. SERVICE_COUPLING_OMISSION_DOMINANT`，支持 Step-03S 需要重构距离结构的结论，但本轮未提出或实现新距离。
 - 22 项机械验收全部 PASS；两个新增 MATLAB 文件 `checkcode=0`。正式运行耗时 `8.417879 s`，记录的峰值 MATLAB 进程工作集 `1603837952 bytes`。结果归档于 `results/task-002-stage2b-b3-smoke/20-ctilde-tier1-structural-diagnosis/run-001/`，本地 checkpoint 位于 `terminalLoh_wdro/output/stage3t_ctilde_tier1_structural_diagnosis/run-001/`。
 - 未重跑 Step-03S、未读取 validation、未运行正式 WDRO/R=2000/R=5000/R=15000、rho 标定、MSP、文献检索、权重扫描、聚类或场景约简。既有未跟踪 Step-03P `run-001` 历史保持不变且不纳入提交。
+
+### 2026-07-28 - task-002 Step-03U run-001 demand-weighted service feature small weight test
+
+- 基线为本地和远程共同 HEAD `88817866000de60317808a79cc7b8faa3af42e62`，分支为 `task/002-stage2b-b3-smoke`。新增独立 `run_step03U_service_feature_small_weight_test_h2.m`；未修改正式距离、WDRO、rho、Step-03J、MSP、供氢约束、Step-03S、Step-03T 或其他旧 run。
+- 使用 Step-03T 的 18 个 Tier-1 代表和 6 个低后悔对照，并从 Step-03S 冻结记录中按每状态“未使用最小 d_new Tier-1 + 未使用距离匹配低后悔近邻”确定 12 个留出对；36 对均只回读 Step-03J nominal 的对应 D/A/C 行，未重新运行近邻搜索、T_single、交叉后悔或任何优化。
+- 固定定义为 `D_bar=D/(Step-03S frozen state Dscale+1e-9)`、`C_bar=C/357.1526447416079`、`S=A*D_bar/(1+C_bar)`，A=0 时 S=0；没有按本轮 36 对重新缩放。距离最大回算误差 `4.85722573273506e-16`，5 个有冻结零距离对的状态实测最大 `d_S=0`。
+- 只测试任务指定的 8 组 `(w_D,w_C,w_S)`。基线 Step-03T/留出 separation rate 为 `0.472222/0.555556`；非基线最大改善分别为 `0.027778/0.138889`。组合 `(0.3,0.2,0.5)` 是唯一同时改善两组且没有相对误拉低后悔对照的组合，但只改善状态 30、31，并使状态 21 下降，因此未通过至少四状态改善的下一轮门槛。组合 `(0.4,0.3,0.3)` 同时改善两组，但对照中位距离相对变化大于 Tier-1，存在误拉对照。
+- 分量范围为 `d_D=[0,0.19291161956]`、`d_Ctilde=[7.53585e-20,0.795848590576]`、`d_S=[7.03702e-08,0.0217514625497]`。`Spearman(d_S,d_D)=0.189080`，`Spearman(d_S,d_Ctilde)=0.846075`，表明当前 S 主要重复了 Ctilde 信息，且尺度明显小于 Ctilde；所有非基线 Tier-1 中位距离均低于基线，改善主要表现为有限的排序分离，而不是绝对拉远。
+- 结论为 `B. SERVICE_FEATURE_PROMISING_BUT_WEIGHT_SENSITIVE`：方向存在局部信号，但跨状态不稳定，当前没有权重通过预设的下一轮小范围验证门槛，不确定最终权重，也不正式采用 S。18 项机械验收全部 PASS，新增 MATLAB 文件 `checkcode=0`；运行时间 `15.262258 s`，峰值工作集 `1489178624 bytes`。
+- 输出归档于 `results/task-002-stage2b-b3-smoke/21-service-feature-small-weight-test/run-001/`。未使用 validation、未标定 rho、未运行 WDRO/Gurobi/MSP、未扫描额外权重；既有未跟踪 Step-03P `run-001` 保持不变且不提交。
