@@ -1305,3 +1305,36 @@
 
 - 按用户授权整理 Step-03Y-A、Step-03Y-B 和 Step-03Y-B-A 的必要代码及轻量审计结果，供当前远程任务分支外部复核。提交范围限定为 4 个独立 MATLAB 审计文件、Step-03Y-A run-002 的 8 个 README/CSV/TXT、Step-03Y-B run-001 的 8 个 README/CSV/TXT、Step-03Y-B-A run-001 的 4 个 README/CSV/TXT，以及本日志。
 - 明确排除 `recovered_period_data.mat`、Step-03Y-A `run-001.failed-001/`、Step-03W `run-001.failed-001/`、Step-03P 历史未跟踪输出、Step-03X 系列结果与脚本及其他无关文件。未修改主模型、WDRO、MSP、Step-03J、正式 D/A/C 或既有接受结果。
+
+### 2026-07-28 - task-002 Step-03Y-B-B run-001 period-LP mathematical equivalence audit
+
+- 冻结基线、本地 HEAD 和 upstream 均为 `3942bda1f2f4e8b8620c31ca07a0cc0bf5cdf8c6`。新增独立 `run_step03YBB_period_lp_equivalence_audit_h2.m`，沿用原 144 个固定 TerminalLOH 评价，不新增场景、不重新优化 T；Step-03Y-B-A 原 FAIL 结果和所有旧 run 保持不变。
+- 分别按两个现有 helper 的实际索引与约束构造生成稀疏 LP，并将 99 节点模型的 71280 个变量列双射重排到三时段语义顺序。两模型均为 `71280` 个变量和 `14832` 条约束；目标系数、需求平衡系数、四站累计容量系数、RHS、约束方向、上下界的最大误差及不一致计数均为 `0`。
+- 将三时段最优解代入 99 节点模型、以及将 99 节点最优解代入三时段模型，各完成 144 次完整约束检查；两方向最大约束违反均为 `9.74196723291243e-10`，低于 `1e-9` 容差。使用同一运行损失函数重算后，operating loss、service cost、shortage kg、shortage loss 和四站累计供氢最大误差分别为 `1.16415321826935e-10`、`2.72848410531878e-12`、`5.6843418860808e-14`、`1.16415321826935e-10` 和 `5.6843418860808e-14`。
+- 26/144 个评价仍存在细分供氢或缺氢分配差异，最大为 `22.6536289992686 kg`；由于模型结构完全一致、两个解双向可行且目标及汇总量一致，该差异被确认是多重最优解，不是模型或时间节点映射不一致。最终结论为 `A. PASS_WITH_MULTIPLE_OPTIMA`。
+- 输出位于 `results/task-002-stage2b-b3-smoke/30-period-lp-equivalence-audit/run-001/`，运行时间 `13.965316 s`。本轮 `solver_call_count=2`，仅求解两组 144 块固定 T 运行层 LP；WDRO/MSP/validation 调用均为 0。未修改正式模型，未执行 git add、commit 或 push。
+
+### 2026-07-28 - task-002 Step-03Y-C run-001 aggregate versus period TerminalLOH
+
+- Frozen baseline/local/upstream: `3942bda1f2f4e8b8620c31ca07a0cc0bf5cdf8c6`; states 7 and 30, identical nominal prefixes R=100 and R=500. No validation, WDRO, MSP, distance/rho change, or new random scenarios.
+- State 7 R=100: aggregate T=`[19.638327 39.549409 8.1826364 54.55091]`, period T=`[19.638327 39.549409 8.1826364 54.55091]`, max site difference=`0 kg`, total difference=`0 kg`.
+- State 7 R=500: aggregate T=`[65.461092 51.55061 44.731746 82.099119]`, period T=`[65.461092 51.55061 44.731746 82.099119]`, max site difference=`7.105427358e-15 kg`, total difference=`0 kg`.
+- State 30 R=100: aggregate T=`[300 200 100 150]`, period T=`[300 195.95369 100 150]`, max site difference=`4.046313722 kg`, total difference=`4.046313722 kg`.
+- State 30 R=500: aggregate T=`[300 200 100 150]`, period T=`[300 200 100 150]`, max site difference=`0 kg`, total difference=`0 kg`.
+- Maximum cross relative regret=`0.001787687537`; maximum R=100 to R=500 capacity-relative change=`0.3654910946`.
+- Mechanical PASS; solver_call_count=`16`, runtime=`20.071813 s`, peak working set=`1745428480 bytes`; conclusion `C. INCONCLUSIVE_OR_UNSTABLE`. No git add/commit/push.
+
+### 2026-07-28 - task-002 Step-03Y-C-A run-001 SAA weight and capacity audit
+
+- Both aggregate and period SAA objectives were confirmed as `gamma*sum(T)+(1/R)*sum Q_r`: R=100/500 weights are `0.01/0.002`, each summing to 1; objective decomposition errors are within numerical tolerance.
+- The state 7 and 30 R=100 rows are exactly the first 100 R=500 nominal rows by scenario_id, path_id, order, stream position, seeds, D/A/C, and parameters. Deterministic replay maximum D/A/C error is `0/0`.
+- State 7 mean total demand changes from `1.21921283` to `1.283037395 kg`, positive-demand scenarios from `1` to `5`, and maximum demand from `121.921283` to `243.8425661 kg`. q99 decreases from `60.96064152` to `13.91048196 kg` because the sparse empirical quantile rank changes with R; the TerminalLOH shift is a sample-composition effect rather than a weighting or mapping error.
+- State 30 has `15` binding model/R/site rows; `15` show lower objective under the isolated +0.01 kg capacity audit relaxation, documenting where formal upper bounds mask additional TerminalLOH value. Formal capacities were not modified.
+- Mechanical PASS; solver_call_count=`24`, runtime=`30.121755 s`, peak working set=`1337368576 bytes`; conclusion `A. SAA_WEIGHTING_AND_MAPPING_CORRECT`. No WDRO/MSP/validation and no git add/commit/push.
+
+### 2026-07-28 - task-002 Step-03Y-D run-001 all-state aggregate versus period SAA
+
+- Deterministically replayed nominal first R=500 period data for all 35 states and used its exact first-100 prefix for R=100; no new random scenarios, validation, WDRO, MSP, distance, or rho calls.
+- Completed states=`35`, failed states=`0`; R=500 aggregate/period T is numerically identical in `12` states and passes the declared close diagnostic in `19/35` completed states.
+- Attention states selected from actual R=500 results: `NONE`; weak-time-compression control state: `7`. Selection requires substantial positive-demand support, no full four-site saturation in either model, and upper-quartile T difference; no count is forced.
+- Mechanical `PASS`; solver_call_count=`210`, runtime=`190.070672 s`, peak working set=`1666736128 bytes`. Formal capacities and models remain unchanged.

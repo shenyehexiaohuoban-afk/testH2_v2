@@ -1,0 +1,14 @@
+status=PASS
+completed_state_count=35
+failed_state_count=0
+R500_close_diagnostic_count=19
+R500_numerically_identical_T_count=12
+R500_both_models_fully_saturated_count=7
+recommended_attention_states=NONE
+recommended_control_state=7
+solver_call_count=210
+runtime_sec=190.070672
+peak_working_set_bytes=1666736128
+WDRO_call_count=0
+MSP_call_count=0
+validation_file_count=0

@@ -1,0 +1,8 @@
+selection_basis=R500 actual results only
+attention_positive_demand_q75_threshold=457.75
+attention_T_difference_q75_among_unsaturated_states_kg=46.42418787
+attention_states=NONE
+control_state=7
+attention_rule=positive count at or above all-state q75; neither model fully capacity-saturated; T difference at or above eligible-state q75
+control_rule=eligible state minimizing capacity-normalized T difference plus maximum cross relative regret; ties favor more positive-demand samples
+no_forced_state_count=true
