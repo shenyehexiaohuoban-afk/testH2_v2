@@ -1,0 +1,32 @@
+Step-03Y-B mechanical audit
+status=PASS
+solver_call_count=5
+gurobi_call_count=5
+wdro_call_count=0
+msp_call_count=0
+validation_file_count=0
+fixed_T_period_evaluation_count=144
+
+Checks:
+branch_matches_frozen|PASS|observed=task/002-stage2b-b3-smoke
+local_HEAD_matches_frozen|PASS|observed=2ae3d68a52c044086f37d21fd264005e796e1c9e
+upstream_matches_frozen|PASS|observed=2ae3d68a52c044086f37d21fd264005e796e1c9e
+tracked_worktree_clean|PASS|observed=
+Step03YA_run002_PASS|PASS|observed=B.PERIOD_DATA_DETERMINISTICALLY_RECOVERABLE
+mechanical_tests_pass|PASS|observed=4
+six_states_only|PASS|observed=[7 11 18 21 30 31]
+frozen_pair_count_36|PASS|observed=36
+fixed_T_evaluation_count_144|PASS|observed=144
+recovered_final_DAC_exact|PASS|observed=0
+random_stream_hashes_match|PASS|observed=6
+all_period_LPs_OPTIMAL|PASS|observed=OPTIMAL
+period_demand_balance|PASS|observed=7.9936e-14
+period_cumulative_T_capacity|PASS|observed=9.742e-10
+no_T_optimization_variables|PASS|observed=T supplied as RHS only
+Q_agg_reused_not_resolved|PASS|observed=Step03W frozen columns
+input_files_unchanged|PASS|observed=15
+protected_untracked_paths_unchanged|PASS|observed=9
+validation_file_count_zero|PASS|observed=0
+WDRO_call_count_zero|PASS|observed=0
+MSP_call_count_zero|PASS|observed=0
+solver_calls_within_allowed_scope|PASS|observed=5

@@ -1,0 +1,34 @@
+Step-03Y-A mechanical audit
+status=PASS
+conclusion=B. PERIOD_DATA_DETERMINISTICALLY_RECOVERABLE
+solver_call_count=0
+gurobi_call_count=0
+wdro_call_count=0
+msp_call_count=0
+validation_file_count=0
+other_state_count=0
+tested_scenario_count=18
+
+Checks:
+branch_matches_frozen|PASS|observed=task/002-stage2b-b3-smoke
+local_HEAD_matches_frozen|PASS|observed=2ae3d68a52c044086f37d21fd264005e796e1c9e
+upstream_matches_frozen|PASS|observed=2ae3d68a52c044086f37d21fd264005e796e1c9e
+tracked_worktree_clean|PASS|observed=
+nominal_MAT_has_no_period_DAC|PASS|observed=A_site_node,C_site_node_km,D_node_kg,initial_state_id,path_id
+nominal_CSV_has_no_period_DAC|PASS|observed=only path/wind/seeds plus final summaries
+six_requested_states_only|PASS|observed=[7 11 18 21 30 31]
+three_scenarios_per_state|PASS|observed=18
+all_stream_hashes_match|PASS|observed=six state streams
+saved_winds_within_CSV_precision|PASS|observed=4.9738e-14
+D_remerge_exact|PASS|observed=0
+A_remerge_exact|PASS|observed=0
+C_remerge_exact|PASS|observed=0
+stage_summaries_within_CSV_precision|PASS|observed=4.9738e-14
+W3_damage_summaries_exact|PASS|observed=0
+persistent_damage_pass|PASS|observed=18 scenarios
+all_final_DAC_exact|PASS|observed=18
+input_files_unchanged|PASS|observed=13
+protected_untracked_paths_unchanged|PASS|observed=8
+solver_call_count_zero|PASS|observed=0
+validation_file_count_zero|PASS|observed=0
+other_state_count_zero|PASS|observed=0

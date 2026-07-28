@@ -1284,3 +1284,24 @@
 - 旧 Step-03T 重放相对冻结值最大误差 `1.00117e-08`，新增留出重放相对冻结值最大误差 `1.02445e-08`，均通过 `1e-8` 加浮点 ULP 的机器精度容差。21 项机械验收全部 PASS；新增 MATLAB 文件最终 `checkcode=0`。正式成功运行耗时 `9.269720 s`，峰值工作集 `1441181696 bytes`。
 - 最终结论为 `C. CURRENT_DISTANCE_FIXED_LOSS_MISALIGNED`：代表组和留出组方向一致且均超过题设 20 个百分点门槛，六状态全部同向，支持继续重构当前 ground cost；该证据针对当前 Ctilde 候选距离，不构成怀疑或放弃 Wasserstein/最优传输 DRO 框架本身的理由。
 - 输出归档于 `results/task-002-stage2b-b3-smoke/23-fixed-decision-loss-consistency/run-001/`。首次尝试在固定 T LP 完成后因状态汇总函数参数名错误停止，未发布最终目录；部分临时结果保存在本地未跟踪 `run-001.failed-001/` 且不纳入提交。Step-03J、Step-03S、Step-03T、Step-03U、Step-03V、正式模型、距离、MSP、旧 run 和既有未跟踪 Step-03P 历史哈希保持不变。
+
+### 2026-07-28 - task-002 Step-03Y-B run-001 period versus aggregate operating-loss audit
+
+- 冻结基线、本地 HEAD 和上游均为 `2ae3d68a52c044086f37d21fd264005e796e1c9e`，分支为 `task/002-stage2b-b3-smoke`。新增独立三时段固定 TerminalLOH 运行层 helper 和审计 runner；未修改正式 D/A/C 合并规则、WDRO、MSP、Step-03J、Step-03W、Step-03Y-A 或其他旧 run。
+- 只使用 Step-03W 的 36 组冻结 pair、其固定 `T_r/T_s` 和既有 `Q_agg`。按 Step-03Y-A run-002 的冻结随机流确定性恢复 70 个唯一场景端点的 `D1/D2/D3`、`reachTau` 和 `costTau`；六状态随机流哈希全部一致，重新合并后的最终 D/A/C 与 nominal 逐项完全一致，最大误差为 `0`，未读取 validation。
+- 三时段 LP 按 W1/W2/W3 分别平衡需求，以当期 `reachTau` 限制服务、以当期 `costTau` 计服务成本，并令每站三段累计供氢不超过固定 `T_i`；不允许提前供氢和缺氢跨段积压。4 项机械测试全部 PASS，随后一次块对角求解完成 144 个固定 T 评价，全部 `OPTIMAL`；需求平衡最大误差 `7.9936e-14`，累计容量最大违反 `9.742e-10`。
+- 144 个评价中，聚合与三时段损失相对差不小于 10% 的有 `15` 个；聚合模型高估/低估/数值相等分别为 `74/4/66`。15 个大差异中 `13` 个实际使用了被聚合 A/C 隐藏的逐时可服务关系，说明时间可达性压缩是主要来源。36 个 pair 中有 `21` 个的聚合损失差与三时段损失差相对变化不小于 10%。
+- 结论：聚合与三时段运行损失并非普遍足够接近；总体方向为聚合模型高估，时间压缩是当前损失失配的重要来源，值得继续做小规模固定样本 TerminalLOH 对比。结果位于 `results/task-002-stage2b-b3-smoke/28-period-vs-aggregate-loss/run-001/`，运行时间 `17.020104 s`。
+- 本轮仅调用 Gurobi `5` 次：4 次机械测试和 1 次 144 块固定 T 运行层 LP；`solver_call_count=5`、`WDRO_call_count=0`、`MSP_call_count=0`、`validation_file_count=0`。未执行 Git add、commit 或 push，受保护未跟踪目录哈希保持不变。
+
+### 2026-07-28 - task-002 Step-03Y-B-A run-001 independent three-period LP cross-check
+
+- 新增独立 `run_step03YBA_period_lp_independent_crosscheck_h2.m`，重新确定性恢复 Step-03Y-B 的 144 个固定 T 评价，将 W1-W3 的 D/reachTau/costTau 按时间段展开为 99 个时间段—节点槽，并直接调用既有 `evaluate_step03T_fixed_T_recourse_h2` 与三时段 helper 对照。两种写法共用同一行四站 T、`M=2000`、`objectiveScale=1` 和 `1e-9` 可行性/最优性容差；costTau 未平均、未缩放，比较使用 operating_loss，不含 holding_cost。
+- 场景、path、pair、T 来源及四站 T 数值与 Step-03Y-B run-001 的 144 行映射全部一致。两种 LP 的 operating_loss、service_cost、shortage_kg、shortage_loss 和四站累计供氢最大误差分别为 `3.49246e-10`、`4.54747e-12`、`1.70530e-13`、`3.49246e-10` 和 `1.42109e-13`，均不超过 `1e-9`。
+- 逐时间段—站点—节点的最优供氢量并不逐项唯一：26/144 个评价的 `y` 差异超过容差，10 个评价的逐节点缺氢 `u` 也因等价最优分配而不同；最大差异均为 `22.6536289992686 kg`。首个不一致评价为 evaluation `18`、状态 `18`、scenario/path `8139`、`T_source=T_r`、`replay_case=T_R_ON_S`，其 operating loss 完全一致到 `1.82e-12`，但逐关系供氢最大差 `1.09101819272807 kg`。
+- 因用户要求完整 `y/u` 逐项误差不超过求解容差，本次机械结论为 `FAIL`，不得仅凭目标和总量一致放行。结果保存在 `results/task-002-stage2b-b3-smoke/29-period-lp-independent-crosscheck/run-001/`。本轮调用 Gurobi `2` 次，仅为两个 144 块固定 T 运行层 LP；未运行 WDRO/MSP、未读取 validation、未重新优化 TerminalLOH、未修改 Step-03Y-B 正式结果，也未执行 Git add、commit 或 push。
+
+### 2026-07-28 - task-002 Step-03Y external-review archive
+
+- 按用户授权整理 Step-03Y-A、Step-03Y-B 和 Step-03Y-B-A 的必要代码及轻量审计结果，供当前远程任务分支外部复核。提交范围限定为 4 个独立 MATLAB 审计文件、Step-03Y-A run-002 的 8 个 README/CSV/TXT、Step-03Y-B run-001 的 8 个 README/CSV/TXT、Step-03Y-B-A run-001 的 4 个 README/CSV/TXT，以及本日志。
+- 明确排除 `recovered_period_data.mat`、Step-03Y-A `run-001.failed-001/`、Step-03W `run-001.failed-001/`、Step-03P 历史未跟踪输出、Step-03X 系列结果与脚本及其他无关文件。未修改主模型、WDRO、MSP、Step-03J、正式 D/A/C 或既有接受结果。

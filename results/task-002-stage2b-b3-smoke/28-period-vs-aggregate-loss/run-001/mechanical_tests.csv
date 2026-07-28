@@ -1,0 +1,5 @@
+test_name,passed,observed,expected,note
+T_ZERO_SHORTAGE_EQUALS_TOTAL_DEMAND,1,13,13,period fixed-T LP
+IDENTICAL_PERIOD_AC_EQUALS_STATIC_TOTAL_MODEL,1,8005,8005,period LP versus existing static fixed-T LP
+REACH_SEQUENCE_110_SERVES_ONLY_FIRST_TWO,1,[1 1 0],[1 1 0],one site and one node
+THIRD_PERIOD_UNREACHABLE_RETAINS_PRIOR_COST,1,4,4,cost 2 in each of periods 1 and 2

@@ -1,0 +1,19 @@
+actual_variable_name,source_file,source_lines,shape_or_unit,physical_meaning,storage_status
+permutation,evaluate_frozen_wdro_dataset_block_h2.m,"15-20",15000x1,"original main-sample row permutation; maps stream position to path record",not saved directly; SHA-256 saved
+lineU / roadU,evaluate_frozen_wdro_dataset_block_h2.m,"15-24",15000 x component,"persistent line and road resistance uniform thresholds",not saved; deterministically replayed from resistance_seed after randperm
+q,evaluate_frozen_wdro_dataset_block_h2.m,"22-24",15000x3,"independent W1/W2/W3 triangular-wind quantiles",not saved; per-stage SHA-256 and wind_seed saved
+vmax{1..3},evaluate_frozen_wdro_dataset_block_h2.m,"26-40",15000x1 per period,"actual maximum wind speed in W1/W2/W3",saved as wind_W1_mps..wind_W3_mps
+pFail{1..3},evaluate_frozen_wdro_dataset_block_h2.m,"37-44",15000 x grid line,"period line-failure probability before fixed resistance threshold",not saved
+failed1 / failed2 / failed3,evaluate_frozen_wdro_dataset_block_h2.m,"43-47",15000 x grid line,"persistent failed-line status in W1/W2/W3",only W3 failed count saved
+outage1 / outage2 / outage3,evaluate_frozen_wdro_dataset_block_h2.m,"45-52",15000x33,"node outage implied by persistent radial line failures",not saved
+D1 / D2 / D3,evaluate_frozen_wdro_dataset_block_h2.m,"50-53",15000x33 kg-H2,"node hydrogen demand generated in each one-hour period",not saved
+Dnode,evaluate_frozen_wdro_dataset_block_h2.m,"53",15000x33 kg-H2,"three-period merged demand D1+D2+D3",saved as D_node_kg
+pClose{1..3},evaluate_frozen_wdro_dataset_block_h2.m,"37-40,56-58",15000 x road edge,"period road closure probability and slowdown input",not saved
+closed1 / closed2 / closed3,evaluate_frozen_wdro_dataset_block_h2.m,"56-59",15000 x road edge,"persistent closed-road status in W1/W2/W3",only W3 closed count saved
+slow1 / slow2 / slow3,evaluate_frozen_wdro_dataset_block_h2.m,"58",15000 x road edge,"persistent maximum road slowdown in W1/W2/W3",not saved
+reachTau,evaluate_frozen_wdro_dataset_block_h2.m,"65-80",3x4x33 per scenario,"period site-to-node reachability",not saved
+costTau,evaluate_frozen_wdro_dataset_block_h2.m,"65-80",3x4x33 km per scenario,"period shortest-path service impedance; Inf when unreachable",not saved
+dTau / critical,evaluate_frozen_wdro_dataset_block_h2.m,"81-95",3x33 / period index,"period demands and demand-positive periods used by the merge rule",not saved
+Aagg,evaluate_frozen_wdro_dataset_block_h2.m,"82-96",4x33,"reachable in every demand-critical period; all three periods used if node demand is zero",saved as A_site_node
+Cagg,evaluate_frozen_wdro_dataset_block_h2.m,"82-96",4x33 km,"mean period cost over demand-critical periods when all are reachable",saved as C_site_node_km
+joint_stream_position,evaluate_frozen_wdro_dataset_block_h2.m / Step-03J CSV,"100-107 / 147-154",integer,"row in selected=stateSample(permutation,:) and in lineU/roadU/q streams",saved directly

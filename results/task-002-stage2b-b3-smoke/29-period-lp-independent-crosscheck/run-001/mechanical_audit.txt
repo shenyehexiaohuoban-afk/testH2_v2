@@ -1,0 +1,19 @@
+Step-03Y-B-A independent period-LP cross-check
+status=FAIL
+evaluation_count=144
+flat_node_count=99
+solver_tolerance=1.0000000000000001e-09
+maximum_required_error=22.653628999268584
+scenario_and_fixed_T_mapping_match=true
+shared_T_capacity_period_max_violation=9.742e-10
+shared_T_capacity_flat_max_violation=9.7418e-10
+holding_cost_excluded_from_comparison=true
+costTau_averaging_count=0
+costTau_rescaling_count=0
+solver_call_count=2
+wdro_call_count=0
+msp_call_count=0
+validation_file_count=0
+first_mismatch_evaluation_id=18
+first_mismatch_state_scenario_T=18/8139/T_r
+first_mismatch_max_error=1.0910181927280718

@@ -1,0 +1,19 @@
+initial_state_id,scenario_id,path_id,joint_stream_position,a0,loc0,lfw0,a_W1,loc_W1,lfw_W1,a_W2,loc_W2,lfw_W2,a_W3,loc_W3,lfw_W3,wind_W1_mps,wind_W2_mps,wind_W3_mps,wind_seed,resistance_seed,base_joint_seed,dataset_role,selection_pool,selection_rule,data_source
+7,1,1,13818,2,7,0,1,6,1,1,9,0,1,8,1,0,0,0,350960856,20960744,20260723,nominal,Step-03W frozen pair endpoint,min/middle/max unique endpoint,Step-03J nominal
+7,7008,7008,12174,2,7,0,4,6,1,4,5,2,4,8,3,35.2295099266934,35.7812500178778,37.851995854519,350960856,20960744,20260723,nominal,Step-03W frozen pair endpoint,min/middle/max unique endpoint,Step-03J nominal
+7,13663,13663,6717,2,7,0,2,7,1,4,5,1,4,4,3,23.1117563585266,36.5723842703289,36.8118933590331,350960856,20960744,20260723,nominal,Step-03W frozen pair endpoint,min/middle/max unique endpoint,Step-03J nominal
+11,3251,3251,10507,3,4,0,3,2,1,4,3,2,2,4,1,29.1582657235496,35.0618811404772,23.3232861916109,351360932,21360756,20260723,nominal,Step-03W frozen pair endpoint,min/middle/max unique endpoint,Step-03J nominal
+11,8359,8359,4820,3,4,0,4,2,2,4,4,3,4,5,3,36.9704554963228,36.9960680270429,37.1207037544023,351360932,21360756,20260723,nominal,Step-03W frozen pair endpoint,min/middle/max unique endpoint,Step-03J nominal
+11,14693,14693,1218,3,4,0,4,7,1,4,4,2,4,2,3,34.5073604378736,37.0616236645823,36.7683023579873,351360932,21360756,20260723,nominal,Step-03W frozen pair endpoint,min/middle/max unique endpoint,Step-03J nominal
+18,1303,1303,4670,4,4,0,4,4,1,4,5,2,4,4,3,40.6015823101305,35.3889197114658,38.2716151662639,352061065,22060777,20260723,nominal,Step-03W frozen pair endpoint,min/middle/max unique endpoint,Step-03J nominal
+18,8139,8139,10681,4,4,0,4,2,1,4,3,2,4,5,2,37.0962448205548,33.6653889649449,37.5545286645906,352061065,22060777,20260723,nominal,Step-03W frozen pair endpoint,min/middle/max unique endpoint,Step-03J nominal
+18,13105,13105,13346,4,4,0,5,3,1,4,4,2,3,6,3,46.7257599114422,34.6535587665068,30.124968176789,352061065,22060777,20260723,nominal,Step-03W frozen pair endpoint,min/middle/max unique endpoint,Step-03J nominal
+21,353,353,6789,4,7,0,4,5,1,4,4,2,4,5,3,38.3202513668934,38.9682101236501,38.9880731010964,352361122,22360786,20260723,nominal,Step-03W frozen pair endpoint,min/middle/max unique endpoint,Step-03J nominal
+21,8542,8542,3699,4,7,0,6,4,1,6,6,1,5,5,0,55.5046532258721,56.856274917224,44.1489225942308,352361122,22360786,20260723,nominal,Step-03W frozen pair endpoint,min/middle/max unique endpoint,Step-03J nominal
+21,14463,14463,62,4,7,0,4,7,1,5,7,2,4,9,3,38.3250246282652,47.5671033838178,40.5153867214465,352361122,22360786,20260723,nominal,Step-03W frozen pair endpoint,min/middle/max unique endpoint,Step-03J nominal
+30,2508,2508,12862,6,2,0,6,4,1,6,6,2,5,6,2,55.3526485932571,57.6878912484587,47.7051781543584,353261293,23260813,20260723,nominal,Step-03W frozen pair endpoint,min/middle/max unique endpoint,Step-03J nominal
+30,6378,6378,6354,6,2,0,6,3,1,6,3,1,5,4,2,58.0589084207878,55.5346767846551,44.3061803753612,353261293,23260813,20260723,nominal,Step-03W frozen pair endpoint,min/middle/max unique endpoint,Step-03J nominal
+30,11691,11691,5353,6,2,0,6,2,1,5,3,2,5,4,3,58.5020754709232,48.8886177109481,44.1028610949339,353261293,23260813,20260723,nominal,Step-03W frozen pair endpoint,min/middle/max unique endpoint,Step-03J nominal
+31,1040,1040,9963,6,3,0,6,5,2,6,6,2,6,5,3,56.2467295625963,55.6004219257095,55.7527216843161,353361312,23360816,20260723,nominal,Step-03W frozen pair endpoint,min/middle/max unique endpoint,Step-03J nominal
+31,6188,6188,9303,6,3,0,6,1,1,5,0,2,5,0,3,55.8105040776382,46.6894591604046,44.8902566996884,353361312,23360816,20260723,nominal,Step-03W frozen pair endpoint,min/middle/max unique endpoint,Step-03J nominal
+31,12300,12300,14960,6,3,0,6,4,1,6,3,2,6,5,3,56.5459565920577,55.4555800691751,54.8439036298386,353361312,23360816,20260723,nominal,Step-03W frozen pair endpoint,min/middle/max unique endpoint,Step-03J nominal

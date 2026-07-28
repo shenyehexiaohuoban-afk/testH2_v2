@@ -1,0 +1,10 @@
+1. Aggregate and period losses are not generally close under the 10% diagnostic.
+2. The aggregate model generally overestimates operating loss.
+3. Temporal reachability compression is an important source of the observed loss differences.
+4. A small fixed-sample TerminalLOH comparison is worth performing.
+large_relative_difference_count=15/144
+aggregate_overestimate_count=74
+aggregate_underestimate_count=4
+numerically_equal_count=66
+large_difference_temporal_masking_count=13
+pair_gap_change_ge_10pct_count=21/36

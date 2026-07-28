@@ -1,0 +1,9 @@
+metric,maximum_absolute_error,solver_tolerance,passed
+operating_loss,3.49245965480804e-10,1e-09,1
+service_cost,4.54747350886464e-12,1e-09,1
+shortage_kg,1.70530256582424e-13,1e-09,1
+shortage_loss,3.49245965480804e-10,1e-09,1
+site_service,1.4210854715202e-13,1e-09,1
+period_site_node_service,22.6536289992686,1e-09,0
+period_node_shortage,22.6536289992686,1e-09,0
+flat_objective_decomposition,5.58202373213135e-11,1e-09,1

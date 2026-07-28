@@ -1,0 +1,19 @@
+Code and configuration:
+- terminalLoh_wdro/src/evaluate_frozen_wdro_dataset_block_h2.m
+- terminalLoh_wdro/src/evaluate_formal_stagewise_b3_stability_block_h2.m
+- terminalLoh_wdro/src/run_stage3i_formal_stagewise_random_b3_h2.m
+- terminalLoh_wdro/src/run_stage3j_wdro_input_freeze_h2.m
+- terminalLoh_wdro/src/load_frozen_b3_wdro_dataset_h2.m
+- terminalLoh_wdro/src/build_foundation_fix_coordinates_h2.m
+- terminalLoh_wdro/src/load_formal_b3_wind_config_h2.m
+- terminalLoh_wdro/config/formal_b3_wind_modes.csv
+Frozen data and metadata:
+- terminalLoh_wdro/output/stage3j_wdro_input_freeze/run-001/wdro_nominal_input.csv
+- terminalLoh_wdro/output/stage3j_wdro_input_freeze/run-001/wdro_nominal_input_DAC.mat
+- terminalLoh_wdro/output/stage3j_wdro_input_freeze/run-001/dataset_role_and_seed_map.csv
+- terminalLoh_wdro/output/stage3j_wdro_input_freeze/run-001/wdro_schema_description.csv
+- terminalLoh_wdro/output/stage2a2_W3_path_sampling/run-002/main_path_samples.csv
+- results/task-002-stage2b-b3-smoke/23-fixed-decision-loss-consistency/run-001/step03W_pair_results.csv
+MAT fields found: A_site_node, C_site_node_km, D_node_kg, initial_state_id, path_id
+Nominal CSV fields found: initial_state_id, initial_state, a0, loc0, lfw0, path_id, scenario_id_in_state, joint_stream_position, a_W1, loc_W1, lfw_W1, a_W2, loc_W2, lfw_W2, a_W3, loc_W3, lfw_W3, wind_W1_mps, wind_W2_mps, wind_W3_mps, wind_seed, resistance_seed, base_joint_seed, D_Hres3h_total_kg, A_reachable_share, C_reachable_mean_km, A0_stage_pair_share, C_stage_reachable_mean_km, W3_failed_line_count, W3_closed_road_count, D_upper_bound_hit, sample_weight, is_observed_candidate, dataset_role
+Validation paths read: NONE

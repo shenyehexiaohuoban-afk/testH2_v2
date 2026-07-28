@@ -1,0 +1,6 @@
+B. PERIOD_DATA_DETERMINISTICALLY_RECOVERABLE
+The nominal files do not directly store period D/A/C arrays.
+The original path order, path_id, joint_stream_position, W1-W3 path states, base/resistance/wind seeds, full random-stream hashes, and formal model inputs are sufficient for deterministic replay without drawing a replacement scenario.
+All 18 replayed scenarios reproduce final D, A, and C exactly after applying the original merge rule.
+solver_call_count=0
+validation_file_count=0
