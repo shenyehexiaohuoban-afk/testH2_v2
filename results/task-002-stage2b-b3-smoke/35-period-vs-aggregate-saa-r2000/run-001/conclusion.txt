@@ -1,0 +1,19 @@
+status=PASS
+conclusion=C. STATE_DEPENDENT_OR_UNSTABLE
+completed_state_count=4
+failed_state_count=0
+solver_call_count=16
+total_state_runtime_sec=139.495094
+peak_working_set_bytes=1414336512
+state_7_consistent_R2000=true
+state_11_close_diagnostic_R2000=true
+state_11_continues_monotonic_convergence=false
+state_19_site2_difference_R2000_kg=-54.0054005401
+state_9_R2000_effect_type=SITE_REALLOCATION_DOMINANT
+WDRO_call_count=0
+MSP_call_count=0
+validation_file_count=0
+state_7_max_site_diff_500_1000_2000=7.1054273576e-15,1.42108547152e-14,1.42108547152e-14;total_diff=0,0,2.84217094304e-14
+state_9_max_site_diff_500_1000_2000=85.9176826774,29.4574912037,29.4574912037;total_diff=-1.63652728909,-73.6437280092,-58.5972233587
+state_11_max_site_diff_500_1000_2000=77.4622916837,6.00060006001,18.00180018;total_diff=82.9473856477,1.13686837722e-13,-29.9729972997
+state_19_max_site_diff_500_1000_2000=97.7170444317,81.2358508578,54.0054005401;total_diff=-138.256552928,-84.4529907536,-91.2268499577

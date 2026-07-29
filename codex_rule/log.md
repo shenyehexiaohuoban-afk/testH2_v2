@@ -1338,3 +1338,13 @@
 - Completed states=`35`, failed states=`0`; R=500 aggregate/period T is numerically identical in `12` states and passes the declared close diagnostic in `19/35` completed states.
 - Attention states selected from actual R=500 results: `NONE`; weak-time-compression control state: `7`. Selection requires substantial positive-demand support, no full four-site saturation in either model, and upper-quartile T difference; no count is forced.
 - Mechanical `PASS`; solver_call_count=`210`, runtime=`190.070672 s`, peak working set=`1666736128 bytes`. Formal capacities and models remain unchanged.
+
+### 2026-07-29 - task-002 Step-03Y-F run-001 R=2000 aggregate versus period SAA final audit
+
+- Frozen baseline/local/upstream: `f46321afbe78469962f97f26f4f8ccea0329f89d`; states `7,9,11,19`; exact nominal prefix R=2000. Each state ran in an independent MATLAB process and released large arrays before the next state.
+- Aggregate and period SAA used identical gamma, shortage penalty, service costs, capacities, order, and 1/R weights. Deterministic replay D/A/C error was zero; no new scenarios or validation were used.
+- State 7 max site difference R=500/1000/2000: `7.1054273576e-15/1.42108547152e-14/1.42108547152e-14 kg`; total difference: `0/0/2.84217094304e-14 kg`; R=2000 type `NUMERICALLY_IDENTICAL`.
+- State 9 max site difference R=500/1000/2000: `85.9176826774/29.4574912037/29.4574912037 kg`; total difference: `-1.63652728909/-73.6437280092/-58.5972233587 kg`; R=2000 type `SITE_REALLOCATION_DOMINANT`.
+- State 11 max site difference R=500/1000/2000: `77.4622916837/6.00060006001/18.00180018 kg`; total difference: `82.9473856477/1.13686837722e-13/-29.9729972997 kg`; R=2000 type `SMALL_MIXED_DIFFERENCE`.
+- State 19 max site difference R=500/1000/2000: `97.7170444317/81.2358508578/54.0054005401 kg`; total difference: `-138.256552928/-84.4529907536/-91.2268499577 kg`; R=2000 type `TOTAL_AND_SITE_DIFFER`.
+- Conclusion: `C. STATE_DEPENDENT_OR_UNSTABLE`; solver calls=`16`; total isolated-state runtime=`139.495094 s`; maximum process working set=`1414336512 bytes`. WDRO/MSP/validation calls were zero; formal model and capacities were unchanged.
