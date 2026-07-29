@@ -1,0 +1,27 @@
+Step-03Z-B regression consistency check
+status=PASS
+solver_call_count=0
+R2000_rerun_count=0
+validation_file_count=0
+random_scenario_generation_count=0
+gamma=2
+scenario_weight=1/R
+shortage_penalty_M=2000
+capacity_upper_kg=[300,200,100,150]
+period_demand_balance=unchanged
+reachTau_service_bound=unchanged
+costTau_usage=unchanged
+shared_three_period_T=unchanged
+
+Step-03Y-F frozen TerminalLOH values:
+state_7_R2000_aggregate_T=[66.2793552082481, 50.7323459618689, 44.7317459018629, 87.2814554182691];period_T=[66.2793552082481, 50.7323459618689, 44.7317459018629, 87.2814554182691]
+state_9_R2000_aggregate_T=[300.0, 128.194637645583, 88.3724736109975, 150.0];period_T=[274.936584567548, 124.118320923001, 58.9149824073316, 150.0]
+state_11_R2000_aggregate_T=[300.0, 107.465291983744, 54.5509096364181, 140.741346861959];period_T=[289.665330169381, 89.4634918037258, 62.7335460818809, 130.922183127404]
+state_19_R2000_aggregate_T=[300.0, 193.382974661103, 100.0, 150.0];period_T=[272.769549682241, 139.377574121048, 90.00900090009, 150.0]
+
+Frozen file SHA-256:
+terminalLoh_wdro/src/solve_step03Y_saa_audit_h2.m|a5a7c022ebb31a4ccda2aa0dabf1056499cd7eb73c5413107de51fd7b3eb25e2|matched_HEAD=True
+terminalLoh_wdro/src/evaluate_step03Y_period_fixed_T_recourse_h2.m|9c7de15cb1c82ad9d6068c768d951b0631f839feff68cf8fad5755ce6fcdb56a|matched_HEAD=True
+terminalLoh_wdro/src/recover_step03Y_prefix_entries_h2.m|295362bb9149b2365a043d2dc66c81fc4edbaf40898a7981584ec22cc84b9a47|matched_HEAD=True
+terminalLoh_wdro/src/run_step03YF_r2000_state_h2.m|6cc030d1be5e3e6335514241fc60ade7b869704abc765e83c95646e114aeb77f|matched_HEAD=True
+results/task-002-stage2b-b3-smoke/35-period-vs-aggregate-saa-r2000/run-001/terminalLOH_r2000.csv|80c590e38b20924638022465699a2c85f953c9c6eccfe7eea7147537de54cf32|matched_HEAD=True

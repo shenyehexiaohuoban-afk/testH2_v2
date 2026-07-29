@@ -1,0 +1,17 @@
+conclusion=A. TWO_STAGE_THREE_PERIOD_MODEL_FROZEN
+audit_status=PASS
+formal_name_cn=两阶段、完整场景信息下的三时间段运行模型
+formal_name_en=two-stage three-period operational model under full scenario information
+first_stage_variable=T[1:4]
+second_stage_inputs=Dperiod,Aperiod,Cperiod
+second_stage_decisions=y,u
+W1_can_use_W2_W3_information=true
+shared_three_period_T=true
+advance_service_allowed=false
+shortage_backlog_allowed=false
+nonanticipativity_constraints_exist=false
+scenario_tree_exists=false
+formal_solver_logic_modified=false
+regression_consistency=PASS
+solver_call_count=0
+validation_file_count=0

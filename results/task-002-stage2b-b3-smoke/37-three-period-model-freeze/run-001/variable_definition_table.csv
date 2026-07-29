@@ -1,0 +1,7 @@
+﻿symbol,role,stage,definition,index_scope,unit,matlab_mapping
+T_i,decision,first stage,site i pre-disaster reserve/service-capacity target,shared by all scenarios and periods,kg,idx.T
+D_r^tau(n),input,second-stage scenario,period node hydrogen demand,scenario-period-node,kg,D / Dperiod
+"A_r^tau(i,n)",input,second-stage scenario,period site-node reachability,scenario-period-site-node,binary,A / Aperiod
+"C_r^tau(i,n)",input,second-stage scenario,reachable service impedance/cost,scenario-period-site-node,cost coefficient,C / Cperiod
+"y_r^tau(i,n)",decision,second-stage recourse,actual site-node hydrogen service,scenario-period-site-node,kg,idx.y
+u_r^tau(n),decision,second-stage recourse,same-period unmet demand,scenario-period-node,kg,idx.u

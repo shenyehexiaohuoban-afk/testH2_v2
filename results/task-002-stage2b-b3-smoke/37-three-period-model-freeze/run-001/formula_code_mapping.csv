@@ -1,0 +1,11 @@
+﻿model_item,formula,source_file,source_lines,implementation,status
+one shared first-stage T,T_i,terminalLoh_wdro/src/solve_step03Y_saa_audit_h2.m,105-119,idx.T is one I-vector; ub is Cap,PASS
+scenario-period service,"y_r,tau,i,n",terminalLoh_wdro/src/solve_step03Y_saa_audit_h2.m,108-121,"idx.y has R,K,I,N indices",PASS
+scenario-period shortage,"u_r,tau,n",terminalLoh_wdro/src/solve_step03Y_saa_audit_h2.m,110-121,"idx.u has R,K,N indices",PASS
+SAA objective,gamma sum T + mean(Cy+Mu),terminalLoh_wdro/src/solve_step03Y_saa_audit_h2.m,"113-116,162-167",gamma and 1/R coefficients,PASS
+period demand balance,sum_i y+u=D,terminalLoh_wdro/src/solve_step03Y_saa_audit_h2.m,132-145,D is RHS input,PASS
+reachability,y<=A D,terminalLoh_wdro/src/solve_step03Y_saa_audit_h2.m,117-121,unreachable service upper bound is zero,PASS
+shared three-period reserve,"sum_tau,n y<=T_i",terminalLoh_wdro/src/solve_step03Y_saa_audit_h2.m,147-155,one capacity row per scenario-site,PASS
+period model entry,"PERIOD(Dperiod,Aperiod,Cperiod)",terminalLoh_wdro/src/run_step03YF_r2000_state_h2.m,79-100,aggregate comparator is separate,PASS
+no nonanticipativity,none,terminalLoh_wdro/src/solve_step03Y_saa_audit_h2.m,123-159,no history or cross-scenario recourse rows,PASS
+no advance/backlog,same-period balance only,terminalLoh_wdro/src/solve_step03Y_saa_audit_h2.m,132-145,no cross-period demand state,PASS

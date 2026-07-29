@@ -1,0 +1,66 @@
+Step-03Z-B mechanical audit
+status=PASS
+conclusion=A. TWO_STAGE_THREE_PERIOD_MODEL_FROZEN
+branch=task/002-stage2b-b3-smoke
+local_head=68635008b3431f1806fafb932bf17d4b349ebf28
+upstream_head=68635008b3431f1806fafb932bf17d4b349ebf28
+frozen_head=68635008b3431f1806fafb932bf17d4b349ebf28
+solver_call_count=0
+gurobi_call_count=0
+wdro_call_count=0
+msp_call_count=0
+validation_file_count=0
+random_scenario_generation_count=0
+R2000_rerun_count=0
+formal_solver_logic_modified=false
+scenario_data_modified=false
+parameter_modified=false
+tracked_worktree_clean_at_start=true
+staged_worktree_clean_at_start=true
+protected_untracked_paths_written_count=0
+
+Checks:
+canonical_chinese_name|PASS|observed=两阶段、完整场景信息下的三时间段运行模型
+canonical_english_name|PASS|observed=two-stage three-period operational model under full scenario information
+D_is_input|PASS|observed=It is scenario input data, not a decision variable
+y_is_decision|PASS|observed=`y_r^tau(i,n)` is the optimized hydrogen service
+u_is_decision|PASS|observed=`u_r^tau(n)` is optimized unmet demand
+full_information_W1|PASS|observed=W1 operating decisions may therefore use
+no_nonanticipativity|PASS|observed=no nonanticipativity constraints are imposed
+no_advance_service|PASS|observed=Advance service for future-period demand is not allowed
+no_backlog|PASS|observed=is not carried to a later period
+no_node_inventory|PASS|observed=No node-side inter-period hydrogen inventory variable exists
+one_T_vector|PASS|observed=idx.T = next:(next + I - 1);
+scenario_period_y|PASS|observed=idx.y = reshape(next:(next + R * K * I * N - 1), [R, K, I, N]);
+scenario_period_u|PASS|observed=idx.u = reshape(next:(next + R * K * N - 1), [R, K, N]);
+gamma_T_cost|PASS|observed=obj(idx.T) = gamma;
+service_cost_1_over_R|PASS|observed=obj(idx.y(:)) = Ceff(:) / R;
+shortage_cost_1_over_R|PASS|observed=obj(idx.u(:)) = M / R;
+T_capacity_upper_bound|PASS|observed=ub(idx.T) = Cap(:);
+reachability_bound|PASS|observed=yUpper = A .* reshape(D, [R, K, 1, N]);
+period_demand_input_rhs|PASS|observed=rhs(row) = D(scenario, period, node);
+shared_T_row|PASS|observed=cols = [reshape(idx.y(scenario, :, site, :), 1, []), idx.T(site)];
+shared_T_coefficients|PASS|observed=val(positions) = [ones(1, K * N), -1];
+period_D_recovery|PASS|observed=Dperiod(outRow, :, :) = Dtau;
+period_A_recovery|PASS|observed=Aperiod(outRow, :, :, :) = reachTau;
+period_C_recovery|PASS|observed=Cperiod(outRow, :, :, :) = costTau;
+formal_capacity|PASS|observed=formalCap = [300; 200; 100; 150];
+formal_period_entry|PASS|observed=period = solve_step03Y_saa_audit_h2("PERIOD",
+formal_period_inputs|PASS|observed=Dperiod, Aperiod, Cperiod, formalCap, context.M, context.gamma, config);
+period_solver_absent_nonanticipativity|PASS|observed=nonanticip
+period_solver_absent_scenario_tree_token|PASS|observed=scenario_tree
+period_solver_absent_scenario_tree_phrase|PASS|observed=scenario tree
+period_solver_absent_backlog|PASS|observed=backlog
+period_solver_absent_inventory_state|PASS|observed=inventory_state
+period_solver_absent_replenishment|PASS|observed=replenish
+step03ZA_implementation_classification|PASS|observed=implemented_information_structure=TWO_STAGE_FULL_SCENARIO_INFORMATION
+step03YF_pass|PASS|observed=status=PASS
+step03YF_capacity|PASS|observed=formal_capacity_upper_kg=[300,200,100,150]
+step03YF_no_validation|PASS|observed=validation_file_count=0
+step03YF_no_new_scenarios|PASS|observed=new_random_scenario_count=0
+unchanged_solve_step03Y_saa_audit_h2.m|PASS|observed=terminalLoh_wdro/src/solve_step03Y_saa_audit_h2.m
+unchanged_evaluate_step03Y_period_fixed_T_recourse_h2.m|PASS|observed=terminalLoh_wdro/src/evaluate_step03Y_period_fixed_T_recourse_h2.m
+unchanged_recover_step03Y_prefix_entries_h2.m|PASS|observed=terminalLoh_wdro/src/recover_step03Y_prefix_entries_h2.m
+unchanged_run_step03YF_r2000_state_h2.m|PASS|observed=terminalLoh_wdro/src/run_step03YF_r2000_state_h2.m
+unchanged_terminalLOH_r2000.csv|PASS|observed=results/task-002-stage2b-b3-smoke/35-period-vs-aggregate-saa-r2000/run-001/terminalLOH_r2000.csv
+step03YF_16_T_rows_unchanged|PASS|observed=16

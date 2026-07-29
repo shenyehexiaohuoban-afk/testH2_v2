@@ -1,0 +1,21 @@
+Step-03Z-B intended changed files
+
+terminalLoh_wdro/docs/FORMAL_TWO_STAGE_THREE_PERIOD_MODEL.md
+terminalLoh_wdro/src/run_step03ZB_model_freeze_audit.py
+results/task-002-stage2b-b3-smoke/37-three-period-model-freeze/run-001/README.md
+results/task-002-stage2b-b3-smoke/37-three-period-model-freeze/run-001/formal_model_decision.md
+results/task-002-stage2b-b3-smoke/37-three-period-model-freeze/run-001/frozen_model_assumptions.md
+results/task-002-stage2b-b3-smoke/37-three-period-model-freeze/run-001/variable_definition_table.csv
+results/task-002-stage2b-b3-smoke/37-three-period-model-freeze/run-001/formula_code_mapping.csv
+results/task-002-stage2b-b3-smoke/37-three-period-model-freeze/run-001/terminology_consistency_audit.md
+results/task-002-stage2b-b3-smoke/37-three-period-model-freeze/run-001/regression_consistency_check.txt
+results/task-002-stage2b-b3-smoke/37-three-period-model-freeze/run-001/changed_files_manifest.txt
+results/task-002-stage2b-b3-smoke/37-three-period-model-freeze/run-001/mechanical_audit.txt
+results/task-002-stage2b-b3-smoke/37-three-period-model-freeze/run-001/conclusion.txt
+codex_rule/log.md
+
+Explicit exclusions:
+- all Step-03Y-E local audit files
+- all historical untracked outputs and failed directories
+- recovered_period_data.mat and all other MAT/binary files
+- all SAA, WDRO, MSP, scenario-generation, distance, and rho logic
