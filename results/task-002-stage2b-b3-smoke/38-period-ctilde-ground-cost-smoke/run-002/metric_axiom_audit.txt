@@ -1,0 +1,19 @@
+STEP03ZC_METRIC_AXIOM_AUDIT
+analytic_nonnegativity=PASS; all local terms and weights are nonnegative
+analytic_symmetry=PASS; absolute differences and reachability XOR are symmetric
+analytic_identity=PASS_ON_EFFECTIVE_SCENARIO; unreachable C payload is outside the effective representation
+analytic_distinguishability=PASS; a different D or effective reachability-aware Ctilde coordinate gives positive distance
+analytic_triangle=PASS; D is scaled L1 and each local Ctilde coordinate is a metric on {unreachable} union reachable normalized C
+reachability_jump_compatibility=PASS; reachable-reachable distance <=1 because reachable C is in [0,C_bound], matching kappa=1
+period_extension=PASS; a positive weighted mean over fixed W1/W2/W3 coordinates preserves the metric
+triangle_tolerance=1e-10
+program_audit_status=PASS
+FORMAL_STATE_AGGREGATE,state=7,n=22,triples=10648,diag=0,sym=0,triangle=5.5511151231257827e-17,pass=true
+FORMAL_STATE_PERIOD,state=7,n=22,triples=10648,diag=0,sym=0,triangle=2.7755575615628914e-17,pass=true
+FORMAL_STATE_AGGREGATE,state=9,n=56,triples=175616,diag=0,sym=0,triangle=2.2204460492503131e-16,pass=true
+FORMAL_STATE_PERIOD,state=9,n=56,triples=175616,diag=0,sym=0,triangle=5.5511151231257827e-17,pass=true
+FORMAL_STATE_AGGREGATE,state=11,n=57,triples=185193,diag=0,sym=0,triangle=2.2204460492503131e-16,pass=true
+FORMAL_STATE_PERIOD,state=11,n=57,triples=185193,diag=0,sym=0,triangle=5.5511151231257827e-17,pass=true
+FORMAL_STATE_AGGREGATE,state=19,n=59,triples=205379,diag=0,sym=0,triangle=2.2204460492503131e-16,pass=true
+FORMAL_STATE_PERIOD,state=19,n=59,triples=205379,diag=0,sym=0,triangle=1.1102230246251565e-16,pass=true
+SYNTHETIC_PERIOD_ENDPOINTS,state=0,n=24,triples=13824,diag=0,sym=0,triangle=1.3877787807814457e-17,pass=true

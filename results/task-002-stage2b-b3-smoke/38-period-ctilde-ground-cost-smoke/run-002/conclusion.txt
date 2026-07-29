@@ -1,0 +1,29 @@
+conclusion=C. METRIC_VALID_BUT_SCALE_NOT_FROZEN
+formula=d_period=0.6*mean_tau(d_D_tau)+0.4*mean_tau(d_Ctilde_tau)
+Ctilde_both_unreachable=0
+Ctilde_reachability_mismatch=1
+Ctilde_both_reachable=abs(C1-C2)/357.1526447416079
+standalone_A_component=false
+period_alignment=W1-W1,W2-W2,W3-W3
+D_scale=state-specific exact nominal R15000 aggregate-D L1 diameter
+C_bound=global deterministic road-network bound
+triangle_inequality_pass=true
+max_triangle_violation=2.2204460492503131e-16
+solver_call_count=5
+WDRO_call_count=0
+MSP_call_count=0
+validation_file_count=0
+runtime_sec=80.014604
+peak_working_set_bytes=1428611072
+T=ZERO,aggregate_spearman=0.860122,period_spearman=0.792086,aggregate_low_mismatch_share=0.85587,period_low_mismatch_share=0.887175
+T=HALF_CAPACITY,aggregate_spearman=0.883533,period_spearman=0.892545,aggregate_low_mismatch_share=0.910121,period_low_mismatch_share=0.922078
+T=FULL_CAPACITY,aggregate_spearman=0.802001,period_spearman=0.86428,aggregate_low_mismatch_share=0.919028,period_low_mismatch_share=0.922078
+T=STEP03YF_PERIOD_R2000,aggregate_spearman=0.805459,period_spearman=0.867401,aggregate_low_mismatch_share=0.919838,period_low_mismatch_share=0.923701
+period_zero_distance_pair_rows=1208
+period_zero_distance_max_absolute_loss_difference=0
+state=7,period_spearman_range=[0.796777,0.925589],low_mismatch_share_range=[0.966667,0.983333]
+state=9,period_spearman_range=[0.785835,0.916567],low_mismatch_share_range=[0.875648,0.92487]
+state=11,period_spearman_range=[0.786445,0.9013],low_mismatch_share_range=[0.874036,0.935733]
+state=19,period_spearman_range=[0.755565,0.861408],low_mismatch_share_range=[0.854762,0.909524]
+interpretation=The three-period representation can improve some fixed-loss diagnostics, but this task cannot freeze or expand the ground cost while Dscale remains state/sample dependent.
+next_gate=Freeze a state-independent D scale in a separately authorized task before any expanded audit or WDRO use.
