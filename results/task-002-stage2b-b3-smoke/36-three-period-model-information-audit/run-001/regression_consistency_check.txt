@@ -1,0 +1,28 @@
+Step-03Z-A regression consistency check
+status=PASS
+solver_call_count=0
+R2000_rerun_count=0
+validation_file_count=0
+
+name|source|expected|audit
+Step-03Y-A|results/task-002-stage2b-b3-smoke/27-period-data-recoverability/run-002/mechanical_audit.txt|status=PASS|PASS
+Step-03Y-B|results/task-002-stage2b-b3-smoke/28-period-vs-aggregate-loss/run-001/mechanical_audit.txt|status=PASS|PASS
+Step-03Y-B-A retained failure|results/task-002-stage2b-b3-smoke/29-period-lp-independent-crosscheck/run-001/mechanical_audit.txt|status=FAIL|PASS
+Step-03Y-B-B superseding audit|results/task-002-stage2b-b3-smoke/30-period-lp-equivalence-audit/run-001/mechanical_audit.txt|status=PASS|PASS
+Step-03Y-C|results/task-002-stage2b-b3-smoke/31-period-vs-aggregate-terminalLOH/run-001/mechanical_audit.txt|status=PASS|PASS
+Step-03Y-C-A|results/task-002-stage2b-b3-smoke/32-saa-weight-capacity-audit/run-001/mechanical_audit.txt|status=PASS|PASS
+Step-03Y-D|results/task-002-stage2b-b3-smoke/33-all-state-period-vs-aggregate-saa/run-001/mechanical_audit.txt|status=PASS|PASS
+Step-03Y-E retained partial stop|results/task-002-stage2b-b3-smoke/34-period-vs-aggregate-saa-stability/run-001/mechanical_audit.txt|status=PARTIAL_STOP|PASS
+Step-03Y-F|results/task-002-stage2b-b3-smoke/35-period-vs-aggregate-saa-r2000/run-001/mechanical_audit.txt|status=PASS|PASS
+
+Frozen candidate versus Step-03Y-F:
+objective=gamma*sum(T)+(1/R)*sum(service_cost+M*shortage)
+scenario_weight=1/R
+gamma=2
+shortage_penalty_M=2000
+capacity_upper_kg=[300,200,100,150]
+period_demand_balance=per scenario-period-node
+reachability=service upper bound Aperiod*Dperiod
+service_cost=Cperiod on reachable arcs
+shared_T=sum over all periods and nodes per scenario-site
+comparison_result=CONSISTENT

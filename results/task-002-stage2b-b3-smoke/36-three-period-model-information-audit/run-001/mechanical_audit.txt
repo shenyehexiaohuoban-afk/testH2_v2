@@ -1,0 +1,60 @@
+Step-03Z-A mechanical audit
+status=PASS
+branch=task/002-stage2b-b3-smoke
+local_head=61122dee2cde34736111f0987905da6a3c63d35a
+upstream_head=61122dee2cde34736111f0987905da6a3c63d35a
+frozen_head=61122dee2cde34736111f0987905da6a3c63d35a
+solver_call_count=0
+gurobi_call_count=0
+wdro_call_count=0
+msp_call_count=0
+validation_file_count=0
+random_scenario_generation_count=0
+R2000_rerun_count=0
+tracked_worktree_clean_at_start=true
+staged_worktree_clean_at_start=true
+protected_untracked_paths_written_count=0
+conclusion=B. USER_DECISION_REQUIRED_ON_INFORMATION_STRUCTURE
+
+Checks:
+one_common_T_vector|PASS|observed=idx.T = next:(next + I - 1);
+scenario_period_service_variables|PASS|observed=idx.y = reshape(next:(next + R * K * I * N - 1), [R, K, I, N]);
+scenario_period_shortage_variables|PASS|observed=idx.u = reshape(next:(next + R * K * N - 1), [R, K, N]);
+holding_cost_coefficient|PASS|observed=obj(idx.T) = gamma;
+equal_weight_service_cost|PASS|observed=obj(idx.y(:)) = Ceff(:) / R;
+equal_weight_shortage_cost|PASS|observed=obj(idx.u(:)) = M / R;
+terminal_capacity_upper_bounds|PASS|observed=ub(idx.T) = Cap(:);
+period_reachability_service_bound|PASS|observed=yUpper = A .* reshape(D, [R, K, 1, N]);
+period_demand_balance_rhs|PASS|observed=rhs(row) = D(scenario, period, node);
+shared_inventory_constraint|PASS|observed=cols = [reshape(idx.y(scenario, :, site, :), 1, []), idx.T(site)];
+shared_inventory_coefficients|PASS|observed=val(positions) = [ones(1, K * N), -1];
+persistent_line_damage_W2|PASS|observed=failed(2, :) = failed(1, :) | lineU(pos, :) <= pFail{2};
+persistent_line_damage_W3|PASS|observed=failed(3, :) = failed(2, :) | lineU(pos, :) <= pFail{3};
+persistent_road_closure_W2|PASS|observed=closed(2, :) = closed(1, :) | roadU(pos, :) <= pClose{2};
+persistent_road_closure_W3|PASS|observed=closed(3, :) = closed(2, :) | roadU(pos, :) <= pClose{3};
+persistent_road_slowdown_W3|PASS|observed=slow(3, :) = max(slow(2, :), pClose{3});
+period_demand_retained|PASS|observed=Dperiod(outRow, :, :) = Dtau;
+period_reachability_retained|PASS|observed=Aperiod(outRow, :, :, :) = reachTau;
+period_cost_retained|PASS|observed=Cperiod(outRow, :, :, :) = costTau;
+frozen_capacity_vector|PASS|observed=formalCap = [300; 200; 100; 150];
+step03YF_period_solver_entry|PASS|observed=period = solve_step03Y_saa_audit_h2("PERIOD",
+step03YF_period_inputs|PASS|observed=Dperiod, Aperiod, Cperiod, formalCap, context.M, context.gamma, config);
+period_solver_absent_nonanticip|PASS|observed=nonanticip
+period_solver_absent_scenario_tree_token|PASS|observed=scenario_tree
+period_solver_absent_scenario_tree_phrase|PASS|observed=scenario tree
+period_solver_absent_history_node|PASS|observed=history_node
+period_solver_absent_backlog|PASS|observed=backlog
+period_solver_absent_carryover|PASS|observed=carryover
+period_solver_absent_inventory_state|PASS|observed=inventory_state
+period_solver_absent_replenish|PASS|observed=replenish
+Step-03Y-A_evidence|PASS|observed=status=PASS
+Step-03Y-B_evidence|PASS|observed=status=PASS
+Step-03Y-B-A retained failure_evidence|PASS|observed=status=FAIL
+Step-03Y-B-B superseding audit_evidence|PASS|observed=status=PASS
+Step-03Y-C_evidence|PASS|observed=status=PASS
+Step-03Y-C-A_evidence|PASS|observed=status=PASS
+Step-03Y-D_evidence|PASS|observed=status=PASS
+Step-03Y-E retained partial stop_evidence|PASS|observed=status=PARTIAL_STOP
+Step-03Y-F_evidence|PASS|observed=status=PASS
+existing_docs_do_not_explicitly_choose_full_information|PASS|observed=False
+existing_docs_do_not_explicitly_choose_sequential_revelation|PASS|observed=False

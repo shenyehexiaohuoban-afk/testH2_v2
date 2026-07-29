@@ -1,0 +1,16 @@
+﻿concept,mathematical_form,matlab_variable,source_file,source_lines,evidence,status
+period scenario,"xi_r={D^tau_r,A^tau_r,C^tau_r}_{tau=1..3}",D/A/C arguments in PERIOD mode,terminalLoh_wdro/src/solve_step03Y_saa_audit_h2.m,94-103,PERIOD arrays are R x K x N and R x K x I x N,CONFIRMED
+TerminalLOH,T_i >= 0,idx.T,terminalLoh_wdro/src/solve_step03Y_saa_audit_h2.m,105-119,one I-vector; lower bound zero and upper bound Cap,CONFIRMED
+service,"y_{r,tau,i,n} >= 0",idx.y,terminalLoh_wdro/src/solve_step03Y_saa_audit_h2.m,108-121,scenario-period-site-node service,CONFIRMED
+shortage,"u_{r,tau,n} >= 0",idx.u,terminalLoh_wdro/src/solve_step03Y_saa_audit_h2.m,110-121,scenario-period-node shortage,CONFIRMED
+objective,"gamma sum_i T_i + (1/R) sum_r,tau,i,n C y + (M/R) sum_r,tau,n u",obj,terminalLoh_wdro/src/solve_step03Y_saa_audit_h2.m,113-116,equal SAA weights,CONFIRMED
+demand balance,"sum_i y_{r,tau,i,n}+u_{r,tau,n}=D_{r,tau,n}",model rows,terminalLoh_wdro/src/solve_step03Y_saa_audit_h2.m,132-145,one equality per scenario-period-node,CONFIRMED
+reachability,"0<=y_{r,tau,i,n}<=A_{r,tau,i,n}D_{r,tau,n}",ub(idx.y),terminalLoh_wdro/src/solve_step03Y_saa_audit_h2.m,117-121,unreachable arcs have zero upper bound,CONFIRMED
+shared reserve,"sum_tau,n y_{r,tau,i,n}<=T_i",capacity rows,terminalLoh_wdro/src/solve_step03Y_saa_audit_h2.m,147-155,"one row per scenario-site, one common T_i",CONFIRMED
+capacity,"0<=T<=[300,200,100,150] kg",formalCap,terminalLoh_wdro/src/run_step03YF_r2000_state_h2.m,"18-21,67-68",same frozen upper bounds as Step-03Y-F,CONFIRMED
+period damage,failed/closed persist; slowdown is cumulative maximum,"failed,closed,slow",terminalLoh_wdro/src/recover_step03Y_prefix_entries_h2.m,276-287,reconstructed before D/A/C,CONFIRMED
+period DAC retention,"D^tau,A^tau,C^tau","Dperiod,Aperiod,Cperiod",terminalLoh_wdro/src/recover_step03Y_prefix_entries_h2.m,338-362,returned to the SAA runner,CONFIRMED
+damage-array retention,not a formal solver field,"failed,closed,slow",terminalLoh_wdro/src/recover_step03Y_prefix_entries_h2.m,"276-287,360-362",intermediate arrays are not returned after D/A/C are derived,NOT_RETAINED_AS_SOLVER_INPUT
+nonanticipativity,none,none,terminalLoh_wdro/src/solve_step03Y_saa_audit_h2.m,123-159,no cross-scenario history rows or scenario-tree node variables,ABSENT
+backlog/node inventory,none,none,terminalLoh_wdro/src/solve_step03Y_saa_audit_h2.m,105-159,only y and same-period u exist,ABSENT
+replenishment,none,none,terminalLoh_wdro/src/solve_step03Y_saa_audit_h2.m,105-159,no inventory transition or supply-restoration variable,ABSENT
