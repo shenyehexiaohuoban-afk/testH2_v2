@@ -1,0 +1,28 @@
+conclusion=B. D_SCALE_FORMULA_MISMATCH
+Dscale_source=state-specific nominal R15000 aggregate-three-period-D exact L1 diameter
+D_current_formula=sum_tau Delta_D_tau/(3*(Dscale_state_R15000_aggregate+1e-9))
+D_matched_total_formula=sum_tau Delta_D_tau/(Dscale_total+1e-9)
+D_current_to_matched_ratio=0.33333333333333331
+D_single_period_physical_upper_kg=202.65662929929354
+D_three_period_physical_upper_kg=607.96988789788065
+D_assessment=extra one-third shrinkage; numerator and scale/average convention are mismatched
+Cscale_source=2*sum(41 road lengths) with maximum finite slowdown multiplier 2
+C_bound_km=357.1526447416079
+C_bound_type=topology-and-model-derived maximum finite path-value upper bound
+C_contains_slowdown=true
+C_contains_closure_detours=true
+nominal_maximum_finite_C_km=129.02475211610735
+nominal_maximum_same_coordinate_finite_difference_km=117.808534620188
+nominal_maximum_difference_fraction_of_C_bound=0.32985485717295998
+C_assessment=matched to abs(C1-C2), conservative but not too small
+ground_cost_unit_interval_required=false
+Ctilde_theoretical_maximum=1
+Ctilde_weighted_theoretical_maximum=0.40000000000000002
+solver_call_count=0
+validation_file_count=0
+runtime_sec=4.962332
+peak_working_set_bytes=1285427200
+state=7,Dscale=423.587813326787,current_D_physical_max=0.47842884739101499,current_D_weighted_physical_max=0.28705730843460897,observed_D_weighted_max=0.19137153895640577,observed_Ctilde_weighted_max=0.068715031637430798,observed_total_max=0.22426679660010401
+state=9,Dscale=607.96988789788099,current_D_physical_max=0.33333333333278492,current_D_weighted_physical_max=0.19999999999967094,observed_D_weighted_max=0.19999999999967097,observed_Ctilde_weighted_max=0.25314263270863963,observed_total_max=0.45246561584634198
+state=11,Dscale=607.96988789788099,current_D_physical_max=0.33333333333278492,current_D_weighted_physical_max=0.19999999999967094,observed_D_weighted_max=0.19999999999967097,observed_Ctilde_weighted_max=0.20764658576973882,observed_total_max=0.345504240427839
+state=19,Dscale=607.96988789788099,current_D_physical_max=0.33333333333278492,current_D_weighted_physical_max=0.19999999999967094,observed_D_weighted_max=0.19999999999967097,observed_Ctilde_weighted_max=0.35393129952501162,observed_total_max=0.55393129952468301

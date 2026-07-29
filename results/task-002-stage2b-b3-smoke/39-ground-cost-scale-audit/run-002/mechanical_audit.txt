@@ -1,0 +1,25 @@
+STEP03ZD_MECHANICAL_AUDIT
+status=PASS
+branch=task/002-stage2b-b3-smoke
+frozen_head=4aebdf3e60599fe9ce066c7d3f49aea644db133b
+audit_type=STATIC_AND_MINIMAL_NOMINAL_SCAN
+solver_call_count=0
+Gurobi_call_count=0
+WDRO_call_count=0
+MSP_call_count=0
+validation_file_count=0
+TerminalLOH_optimization_count=0
+random_scenario_generation_count=0
+formal_ground_cost_modification_count=0
+runner_checkcode_count=0
+nominal_record_count=525000
+nominal_reachable_C_value_count=60963033
+C_bound_violation_count=0
+same_coordinate_C_difference_violation_count=0
+road_bound_reproduction_error=0
+D_single_period_physical_upper_kg=202.65662929929354
+D_three_period_physical_upper_kg=607.96988789788065
+current_D_to_matched_D_ratio=0.33333333333333331
+runtime_sec=4.962332
+peak_working_set_bytes=1285427200
+conclusion=B. D_SCALE_FORMULA_MISMATCH
