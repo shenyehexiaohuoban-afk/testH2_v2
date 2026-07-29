@@ -1,0 +1,24 @@
+STEP03ZE_METRIC_AXIOM_AUDIT
+analytic_nonnegative=PASS; corrected D is nonnegative scaled L1 and Ctilde is unchanged
+analytic_symmetry=PASS; absolute differences are symmetric
+analytic_identity=PASS on the effective period D/A/C representation
+analytic_triangle=PASS; corrected D is one global scaled L1 sum and Ctilde is the unchanged average of metric coordinates
+distance_tolerance=9.9999999999999998e-13
+triangle_tolerance=1e-10
+program_record_count=8
+max_diagonal_error=0
+max_symmetry_error=0
+max_nonnegative_violation=0
+max_triangle_violation=2.7755575615628914e-15
+all_program_checks_pass=true
+zero_pair_identity_match=true
+corrected_zero_distance_max_absolute_fixed_loss_difference=0
+corrected_zero_distance_max_relative_fixed_loss_difference=0
+scope=FORMAL_SELECTED_PERIOD_OLD,state=7,scenarios=22,ordered_triples=10648,triangle=6.9388939039072284e-16,pass=true
+scope=FORMAL_SELECTED_PERIOD_CORRECTED,state=7,scenarios=22,ordered_triples=10648,triangle=1.7763568394002505e-15,pass=true
+scope=FORMAL_SELECTED_PERIOD_OLD,state=9,scenarios=56,ordered_triples=175616,triangle=9.9920072216264089e-16,pass=true
+scope=FORMAL_SELECTED_PERIOD_CORRECTED,state=9,scenarios=56,ordered_triples=175616,triangle=2.3314683517128287e-15,pass=true
+scope=FORMAL_SELECTED_PERIOD_OLD,state=11,scenarios=57,ordered_triples=185193,triangle=9.1593399531575415e-16,pass=true
+scope=FORMAL_SELECTED_PERIOD_CORRECTED,state=11,scenarios=57,ordered_triples=185193,triangle=2.2204460492503131e-15,pass=true
+scope=FORMAL_SELECTED_PERIOD_OLD,state=19,scenarios=59,ordered_triples=205379,triangle=9.4368957093138306e-16,pass=true
+scope=FORMAL_SELECTED_PERIOD_CORRECTED,state=19,scenarios=59,ordered_triples=205379,triangle=2.7755575615628914e-15,pass=true

@@ -1,0 +1,15 @@
+STEP03ZE_PHYSICAL_DSCALE_VERIFICATION
+status=PASS
+node_count=33
+source_node_load_kW=0
+non_source_load_kW=3715
+total_load_kW=3715
+eta_FC=0.55000000000000004
+LHV_kWh_per_kg=33.329999999999998
+period_duration_hours=1
+one_period_all_non_source_outage_upper_kg=202.65662929929354
+period_count=3
+derived_three_period_all_non_source_outage_upper_kg=607.96988789788065
+frozen_Dscale_global_kg=607.96988789788054
+absolute_error_kg=1.1368683772161603e-13
+formula=3*sum_non_source_P_kW/(eta_FC*LHV_kWh_per_kg)

@@ -1,0 +1,29 @@
+conclusion=B. D_SCALE_FIX_CORRECT_BUT_ALIGNMENT_STILL_POOR
+old_D_formula=mean_tau(sum_n abs(D1-D2)/(Dscale_state+1e-9))
+corrected_D_formula=sum_tau sum_n abs(D1-D2)/(Dscale_global+1e-9)
+Dscale_global_kg=607.96988789788054
+Dscale_physical_source=three one-hour periods of complete non-source load outage divided by eta_FC*LHV
+Dscale_physical_reproduction_error_kg=1.1368683772161603e-13
+Ctilde_period_averaging_unchanged=true
+Ctilde_reason=each period is already a dimensionless average over the same 132 service relations; equal period averaging preserves equal period weight
+weight_D=0.59999999999999998
+weight_Ctilde=0.40000000000000002
+metric_pass=true
+max_triangle_violation=2.7755575615628914e-15
+zero_distance_pair_identity_match=true
+zero_distance_max_fixed_loss_difference=0
+material_mismatch_share_threshold=0.01
+materially_improved_pooled_fixed_T_count=2
+materially_improved_state_mean_count=1
+solver_call_count=0
+fixed_loss_recomputation_count=0
+runtime_sec=3.692390
+peak_working_set_bytes=1286602752
+T=ZERO,old_mismatch_share=0.88717532467532467,corrected_mismatch_share=0.84172077922077926,old_spearman=0.79189657276112413,corrected_spearman=0.91010167852554169
+T=HALF_CAPACITY,old_mismatch_share=0.92207792207792205,corrected_mismatch_share=0.9107142857142857,old_spearman=0.89251364984042381,corrected_spearman=0.91203103432996235
+T=FULL_CAPACITY,old_mismatch_share=0.92207792207792205,corrected_mismatch_share=0.92775974025974028,old_spearman=0.86424604816517525,corrected_spearman=0.75792115570962537
+T=STEP03YF_PERIOD_R2000,old_mismatch_share=0.92370129870129869,corrected_mismatch_share=0.9285714285714286,old_spearman=0.86736799227435779,corrected_spearman=0.76489503104424283
+state=7,old_mean_mismatch_share=0.97916666666666663,corrected_mean_mismatch_share=0.97058823529411764,old_to_corrected_total_rank_spearman=0.99179047641699691
+state=9,old_mean_mismatch_share=0.91126943005181338,corrected_mean_mismatch_share=0.90408415841584155,old_to_corrected_total_rank_spearman=0.95522182515728959
+state=11,old_mean_mismatch_share=0.91902313624678666,corrected_mean_mismatch_share=0.9177377892030848,old_to_corrected_total_rank_spearman=0.95739809957490218
+state=19,old_mean_mismatch_share=0.89166666666666661,corrected_mean_mismatch_share=0.85059523809523807,old_to_corrected_total_rank_spearman=0.93921898207511412
