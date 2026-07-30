@@ -1,0 +1,7 @@
+status=PASS
+maximum_empirical_leaf_absolute_reconstruction_error=8.6736173798840355e-19
+maximum_stored_theoretical_path_probability_error=9.9638179651417857e-17
+absolute_pass_threshold=1e-12
+positive_support_parent_conditional_sum_max_error=1.1102230246251565e-16
+zero_probability_observed_edges=0
+epsilon_probability_smoothing_calls=0

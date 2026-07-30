@@ -1,0 +1,29 @@
+{
+  "phase": "prepare",
+  "python": "3.9.7 (default, Sep 16 2021, 16:59:28) [MSC v.1916 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "runtime_sec": 99.17782720000001,
+  "process_rss_bytes": 652554240,
+  "random_call_count": 0,
+  "node_test_count": 7,
+  "node_test_pass_count": 7,
+  "tree_test_count": 6,
+  "tree_test_pass_count": 6,
+  "microtree_test_count": 2,
+  "microtree_test_pass_count": 2,
+  "flat_test_count": 4,
+  "flat_test_pass_count": 4,
+  "read_initial_state_count": 35,
+  "read_path_record_count": 525000,
+  "unique_leaf_count": 256884,
+  "tree_node_count": 315572,
+  "tree_edge_count": 315537,
+  "protected_sha256_before": {
+    "terminalLoh_wdro\\output\\stage2a2_W3_path_sampling\\run-002\\main_path_samples.csv": "972a8c58620c09ac19cfcfb29e8d6a3ed2819ef1a22dbd522043436418eb805d",
+    "terminalLoh_wdro\\output\\stage3j_wdro_input_freeze\\run-001\\wdro_nominal_input.csv": "366dc3c0b57bfd76aca92f51ae1db82b93c764c87fa15e8cb4dd32388d018168",
+    "terminalLoh_wdro\\config\\lookahead_intensity_postlandfall_W3.csv": "ea6c71ed9765a57577940560f45e9ad6003a69ef4bb9abae54b9deaaf78889e5",
+    "terminalLoh_wdro\\config\\lookahead_location_postlandfall_W3.csv": "42d167a61478e05e2ff4eb9012e6c25d92a53060d2f00fb7ff60ee45f0139ca1",
+    "terminalLoh_wdro\\config\\lookahead_lfw_postlandfall_W3.csv": "45cf74286b0aec48fe4a0ba77c66ab0847c2227402740bcc18a376da0eff6c29",
+    "terminalLoh_wdro\\docs\\FORMAL_TWO_STAGE_THREE_PERIOD_MODEL.md": "a16e76e9b259dbc155410aec60e071a4195817f6b07023e1ad99e97f3ce6be24"
+  }
+}

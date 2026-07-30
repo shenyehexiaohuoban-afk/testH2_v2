@@ -1,0 +1,9 @@
+
+status=PASS
+selection_is_deterministic=true
+random_sampling_calls=0
+selected_states=7,19
+records_per_state=200
+ancestor_closure_preserved=true
+probabilities_renormalized_within_selected_prefix=true
+results_must_not_be_interpreted_as_full_R15000_results=true

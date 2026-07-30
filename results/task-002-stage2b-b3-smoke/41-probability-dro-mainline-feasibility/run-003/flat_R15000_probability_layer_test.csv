@@ -1,0 +1,2 @@
+R,loss_source,eta_values,eta0_absolute_error,radius_monotonicity_pass,all_probability_checks_pass,runtime_sec_all_eta,rss_before_bytes,rss_after_bytes,observed_working_set_bytes,constructed_R_by_R_matrix,pass
+15000,deterministic_synthetic_probability_layer_only,0.0;0.001;0.01;0.05;0.1,1.4210854715202004e-14,True,True,0.01771659999999997,649293824,652189696,652189696,False,True

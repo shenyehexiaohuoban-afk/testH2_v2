@@ -1,0 +1,3 @@
+microtree,eta,recursion_value,direct_global_value,absolute_error,global_method,enumerated_points,pass_1e_8
+two_stage_binary,0.08,6.599733707995977,6.599733707995977,0.0,complete_binary_interval_endpoint_enumeration,8,True
+three_stage_binary_8_leaves,0.05,7.489044990401356,7.489044990401356,0.0,complete_binary_interval_endpoint_enumeration,128,True

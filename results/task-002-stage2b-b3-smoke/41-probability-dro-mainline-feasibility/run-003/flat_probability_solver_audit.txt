@@ -1,0 +1,7 @@
+
+status=PASS
+tested_R=1,200,500,15000
+eta_values=0.0,0.001,0.01,0.05,0.1
+R_by_R_matrix_constructed=false
+random_calls=0
+all_tests_pass=true

@@ -1,0 +1,7 @@
+structured_status=S-C. TREE_RECOVERABLE_BUT_STATISTICALLY_WEAK
+flat_status=F-A. FLAT_CHI2_DRO_FEASIBLE
+overall_conclusion=B. FLAT_CHI2_DRO_MAINLINE_FEASIBLE
+next_stage=Step-04B-Flat
+wasserstein_ground_cost_mainline_stopped=true
+formal_two_stage_three_period_model_modified=false
+old_wdro_code_or_results_modified=false

@@ -1,0 +1,8 @@
+test_name,branch_count,eta,worst_value,reference_value,absolute_value_error,divergence_used,probability_sum_residual,minimum_probability,method_used,reference_method,pass
+eta_zero,3,0.0,2.4,2.4,0.0,0.0,0.0,0.2,eta_zero_degenerate,independent_scipy_slsqp_convex_nlp,True
+binary,2,0.08,7.494351629426243,7.494351629433623,7.38076266770804e-12,0.07999999999999997,0.0,0.21509262436767956,kkt_active_set,independent_scipy_slsqp_convex_nlp,True
+three_branch,3,0.12,4.141109970338747,4.1411099703401915,1.4441781104324036e-12,0.11999999999999994,0.0,0.08468148173108665,kkt_active_set,independent_scipy_slsqp_convex_nlp,True
+five_branch,5,0.3,4.440773166264003,4.440773166264003,0.0,0.29999999999999993,0.0,0.03420925696618521,kkt_active_set,independent_scipy_slsqp_convex_nlp,True
+constant,3,0.5,7.0,7.0,0.0,0.0,0.0,0.2,constant_value_degenerate,independent_scipy_slsqp_convex_nlp,True
+single,1,10.0,11.0,11.0,0.0,0.0,0.0,1.0,single_child_degenerate,independent_scipy_slsqp_convex_nlp,True
+eta_monotonicity,3,,2.75213633723318,,0.0,,0.0,,deterministic_eta_grid,monotonic_sequence,True

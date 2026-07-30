@@ -1,0 +1,6 @@
+object,probability_kind,formula,provenance,actual_use
+main_path_record,empirical,1/15000,ordinary Monte Carlo record weight,used by SAA and frozen WDRO nominal input
+stored_path_probability,theoretical,product over W1-W3 of PA*PLoc*PLfw,explicit derived audit field,not used as a second empirical weight
+aggregated_observed_leaf,empirical,frequency/15000,duplicates retain all path IDs and aggregate probability mass,Step-04A prototype nominal q_leaf
+conditional_tree_edge,empirical,child record count / parent record count,observed-support factorization,Step-04A structured prototype
+importance_sampling_weight,none,not present,"ordinary MC, no IS correction",not applicable

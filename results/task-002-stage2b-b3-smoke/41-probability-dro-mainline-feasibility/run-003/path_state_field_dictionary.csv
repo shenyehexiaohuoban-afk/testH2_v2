@@ -1,0 +1,11 @@
+field,storage_type,state_role,meaning
+a0/loc0/lfw0,integer,native discrete,initial conditional typhoon state
+a_W1..a_W3,integer,native discrete,sampled intensity state
+loc_W1..loc_W3,integer,native discrete,sampled location state id
+lfw_W1..lfw_W3,integer,native discrete,sampled landfall/window state
+x_W1..x_W3,coordinate,derived continuous,exact lookup from discrete loc id
+y_W1..y_W3,coordinate,derived continuous,y_base + lfw*Wstep
+path_id,integer,record identity,1..15000 within initial state
+base_random_seed/derived_seed,integer,sampling provenance,MT19937 deterministic seed identity
+path_probability,probability,derived,product of three component transition probabilities over W1-W3
+sample_weight,probability,formal empirical nominal,1/15000 in Step-03J SAA/WDRO inputs

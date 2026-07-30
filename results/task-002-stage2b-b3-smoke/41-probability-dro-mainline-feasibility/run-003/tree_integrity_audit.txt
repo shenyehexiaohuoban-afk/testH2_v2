@@ -1,0 +1,10 @@
+status=PASS
+path_ids_lost=0
+path_ids_multiply_mapped=0
+cycle_count=0
+bad_leaf_depth_count=0
+original_path_mapping_rows=525000
+unique_leaf_rows=256884
+all_paths_map_to_exactly_one_root_to_leaf_chain=true
+all_leaf_depths=3
+native_state_rounding_or_clustering_calls=0

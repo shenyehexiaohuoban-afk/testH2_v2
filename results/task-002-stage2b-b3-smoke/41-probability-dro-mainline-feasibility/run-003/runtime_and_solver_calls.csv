@@ -1,0 +1,6 @@
+component,runtime_sec,solver_calls,scenario_LP_evaluations
+python_finalize,3.6736018999999995,0,0
+fixed_T_formal_recourse,1.0164626,10,2000
+prototype_SAA_optimization,0.0514061,1,100
+prototype_flat_chi2_QCP_optimization,0.0763305,1,0
+prototype_optimized_T_recourse_evaluation,,2,200

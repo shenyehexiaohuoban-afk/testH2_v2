@@ -1,0 +1,3 @@
+initial_state_id,requested_R,selected_record_count,selection_rule,reason,ancestor_closure_preserved,full_15000_result
+7,200,200,deterministic_first_200_frozen_nominal_prefix,preserves exact frozen replay identity and keeps added recourse evaluations at 2000,True,False
+19,200,200,deterministic_first_200_frozen_nominal_prefix,preserves exact frozen replay identity and keeps added recourse evaluations at 2000,True,False

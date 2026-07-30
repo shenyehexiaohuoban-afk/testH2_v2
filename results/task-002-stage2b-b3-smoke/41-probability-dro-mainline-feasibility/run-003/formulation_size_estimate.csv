@@ -1,0 +1,6 @@
+scope,R,path_or_leaf_count,tree_node_count_estimate,tree_edge_count_estimate,recourse_variable_count,probability_primal_variable_count,probability_dual_variable_count,main_constraint_count_estimate,avoids_R_squared_pairs,memory_order,runtime_order
+single_state_flat,200,200,not_required,not_required,99000,0,402,21000,True,O(R*3*4*33),single convex QCP/SOCP; decomposition recommended at R=15000
+single_state_flat,500,500,not_required,not_required,247500,0,1002,52500,True,O(R*3*4*33),single convex QCP/SOCP; decomposition recommended at R=15000
+single_state_flat,15000,15000,not_required,not_required,7425000,0,30002,1575000,True,O(R*3*4*33),single convex QCP/SOCP; decomposition recommended at R=15000
+all_35_states_separate_flat,525000,525000,not_required,not_required,259875000,0,1050070,55125000,True,35 independent O(R) models,parallel/sequential state solves; no cross-state coupling required
+observed_unique_structured_all_states,256884,256884,315572,315537,127157580,0,117376,O(recourse + tree_edges),True,O(unique_leaves*recourse + tree_edges),convex but statistically unsupported at many late parents
