@@ -1,0 +1,8 @@
+metric,value,expected_historical,passed
+observed_source_label_records,1595,1595,True
+unobserved_source_label_records,2410,2410,True
+source_label_records_total,4005,4005,True
+unique_physical_paths,1126,1126,True
+duplicate_proxy_or_level_labels_removed,2879,2879,True
+support_in_unique_paths,268,268,True
+support_out_unique_paths,858,858,True

@@ -1,0 +1,1127 @@
+unique_path_id,a0,loc0,lfw0,in_nominal_path_support,path_probability,sampling_coverage_R15000,absence_probability_R15000,absence_interpretation
+1,2,1,0,True,2.088326521875e-08,0.00031319992421238003,0.9996868000757876,appeared once in the realized nominal sample
+2,2,1,0,True,6.206390775e-09,9.309152862861328e-05,0.9999069084713714,appeared once in the realized nominal sample
+3,2,1,0,False,2.592e-15,3.8879999999244215e-11,0.99999999996112,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+4,2,1,0,False,1.0368e-13,1.5551999987907572e-09,0.9999999984448,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+5,2,1,0,False,2.7e-14,4.049999999179929e-10,0.999999999595,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+6,2,1,0,False,5.76e-16,8.63999999996268e-12,0.99999999999136,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+7,2,1,0,False,1.44e-15,2.1599999999766734e-11,0.9999999999784,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+8,2,1,0,False,7.2e-16,1.0799999999941683e-11,0.9999999999892,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+9,2,1,0,False,1.0368e-13,1.5551999987907572e-09,0.9999999984448,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+10,2,1,0,False,2.88e-14,4.319999999066943e-10,0.999999999568,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+11,2,1,0,False,2.7e-14,4.049999999179929e-10,0.999999999595,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+12,2,1,0,False,1.44e-15,2.1599999999766734e-11,0.9999999999784,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+13,2,1,0,False,1.8e-15,2.6999999999635524e-11,0.999999999973,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+14,2,1,0,False,3.168e-15,4.751999999887099e-11,0.99999999995248,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+15,2,1,0,False,7.2e-16,1.0799999999941683e-11,0.9999999999892,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+16,2,1,0,False,1.8e-15,2.6999999999635524e-11,0.999999999973,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+17,2,1,0,True,2.1756976744186e-10,3.2635411866208e-06,0.9999967364588134,appeared once in the realized nominal sample
+18,2,1,0,False,4.8384e-13,7.257599973665377e-09,0.9999999927424,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+19,2,1,0,False,4.43232e-11,6.648477790033516e-07,0.999999335152221,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+20,2,1,0,False,2.736e-12,4.103999915791536e-08,0.9999999589600008,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+21,2,1,0,True,1.846553436e-07,0.002765997968703145,0.9972340020312969,appeared once in the realized nominal sample
+22,2,1,0,True,9.3665754e-07,0.013951630879894542,0.9860483691201054,appeared once in the realized nominal sample
+23,2,1,0,True,6.912675e-08,0.0010363638894589024,0.9989636361105411,appeared once in the realized nominal sample
+24,2,1,0,False,4.8384e-13,7.257599973665377e-09,0.9999999927424,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+25,2,1,0,False,1.344e-13,2.0159999979680073e-09,0.999999997984,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+26,2,1,0,False,6.72e-15,1.0079999999492003e-10,0.9999999998992,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+27,2,1,0,False,8.4e-15,1.259999999920625e-10,0.999999999874,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+28,2,1,0,False,1.4784e-14,2.2175999997541293e-10,0.99999999977824,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+29,2,1,0,False,8e-16,1.1999999999928002e-11,0.999999999988,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+30,2,1,0,False,1e-15,1.499999999988751e-11,0.999999999985,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+31,2,1,0,False,8e-15,1.1999999999280048e-10,0.99999999988,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+32,2,1,0,False,2.736e-12,4.103999915791536e-08,0.9999999589600008,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+33,2,1,0,False,7.6e-13,1.1399999935024332e-08,0.9999999886000001,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+34,2,1,0,False,4.75e-14,7.124999997461889e-10,0.9999999992875,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+35,2,1,0,False,8.36e-14,1.2539999992137946e-09,0.999999998746,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+36,2,2,0,True,3.742931052e-08,0.0005612820905480902,0.9994387179094519,appeared once in the realized nominal sample
+37,2,2,0,False,3.168e-15,4.751999999887099e-11,0.99999999995248,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+38,2,2,0,False,1.2672e-13,1.9007999981935996e-09,0.9999999980992,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+39,2,2,0,True,4.8244541860465e-08,0.0007234063607233971,0.9992765936392766,appeared once in the realized nominal sample
+40,2,2,0,True,3.756324e-10,5.634470127371813e-06,0.9999943655298726,appeared once in the realized nominal sample
+41,2,2,0,False,2.69568e-13,4.043519991825517e-09,0.99999999595648,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+42,2,2,0,False,7.488e-14,1.123199999369253e-09,0.9999999988768,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+43,2,2,0,True,6.37875e-09,9.5676673000322e-05,0.9999043233269996,appeared once in the realized nominal sample
+44,2,2,0,False,5.76e-16,8.63999999996268e-12,0.99999999999136,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+45,2,2,0,False,3.168e-15,4.751999999887099e-11,0.99999999995248,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+46,2,2,0,False,7.2e-16,1.0799999999941683e-11,0.9999999999892,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+47,2,2,0,False,1.44e-15,2.1599999999766734e-11,0.9999999999784,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+48,2,2,0,True,4.9063014e-08,0.000735674486785486,0.9992643255132145,appeared once in the realized nominal sample
+49,2,2,0,False,5.9136e-13,8.870399960660623e-09,0.9999999911296,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+50,2,2,0,False,5.41728e-11,8.125916698692204e-07,0.9999991874083302,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+51,2,2,0,False,2.1736e-13,3.2603999946852504e-09,0.9999999967396,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+52,2,2,0,False,3.344e-12,5.0159998742071086e-08,0.9999999498400013,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+53,2,2,0,True,2.116688574e-07,0.003169998109393162,0.9968300018906069,appeared once in the realized nominal sample
+54,2,2,0,True,3.0584736e-10,4.587699877174303e-06,0.9999954123001228,appeared once in the realized nominal sample
+55,2,2,0,True,4.9063014e-08,0.000735674486785486,0.9992643255132145,appeared once in the realized nominal sample
+56,2,2,0,False,3.4944e-13,5.241599986263731e-09,0.9999999947584001,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+57,2,2,0,False,7.1136e-12,1.0670399430750792e-07,0.9999998932960057,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+58,2,2,0,False,1.976e-12,2.963999956076449e-08,0.9999999703600004,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+59,2,2,0,False,1.235e-13,1.852499998284236e-09,0.9999999981475,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+60,2,2,0,True,4.50613333333332e-10,6.7591771581820095e-06,0.9999932408228418,appeared once in the realized nominal sample
+61,2,2,0,False,2.688e-15,4.03199999991872e-11,0.99999999995968,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+62,2,2,0,False,3.36e-15,5.039999999873001e-11,0.9999999999496,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+63,2,2,0,False,6.72e-15,1.0079999999492003e-10,0.9999999998992,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+64,2,2,0,False,1.52e-14,2.279999999740098e-10,0.999999999772,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+65,2,2,0,False,1.9e-14,2.8499999995939024e-10,0.999999999715,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+66,2,2,0,False,1.976e-12,2.963999956076449e-08,0.9999999703600004,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+67,2,2,0,False,7.6e-13,1.1399999935024332e-08,0.9999999886000001,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+68,2,2,0,False,3.8e-14,5.699999998375609e-10,0.99999999943,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+69,2,3,0,False,6e-16,8.999999999959502e-12,0.999999999991,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+70,2,3,0,False,1.44e-15,2.1599999999766734e-11,0.9999999999784,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+71,2,3,0,False,5.76e-14,8.63999999626777e-10,0.999999999136,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+72,2,3,0,False,1.872e-15,2.807999999960579e-11,0.99999999997192,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+73,2,3,0,False,5.76e-16,8.63999999996268e-12,0.99999999999136,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+74,2,3,0,False,1.44e-15,2.1599999999766734e-11,0.9999999999784,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+75,2,3,0,False,1.44e-15,2.1599999999766734e-11,0.9999999999784,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+76,2,3,0,False,5.76e-14,8.63999999626777e-10,0.999999999136,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+77,2,3,0,False,2.8e-15,4.199999999911806e-11,0.999999999958,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+78,2,3,0,False,1.5833333333333302e-14,2.374999999717983e-10,0.9999999997625,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+79,2,3,0,False,2.688e-13,4.031999991872029e-09,0.999999995968,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+80,2,3,0,False,2.4624e-11,3.6935993179115115e-07,0.9999996306400682,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+81,2,3,0,False,9.88e-14,1.4819999989019112e-09,0.999999998518,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+82,2,3,0,False,1.52e-12,2.279999974009733e-08,0.9999999772000002,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+83,2,3,0,True,7.4977056e-10,1.1246495161915286e-05,0.9999887535048381,appeared once in the realized nominal sample
+84,2,3,0,True,5.05659e-09,7.58459737404562e-05,0.9999241540262596,appeared once in the realized nominal sample
+85,2,3,0,False,1.53216e-11,2.2982397359222716e-07,0.9999997701760264,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+86,2,3,0,False,8.736e-15,1.3103999999141484e-10,0.99999999986896,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+87,2,3,0,False,4.94e-14,7.409999997254778e-10,0.999999999259,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+88,2,3,0,False,2.688e-15,4.03199999991872e-11,0.99999999995968,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+89,2,3,0,False,1.52e-14,2.279999999740098e-10,0.999999999772,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+90,2,4,0,True,2.8334472656250103e-09,4.250080585974815e-05,0.9999574991941402,appeared once in the realized nominal sample
+91,2,4,0,False,1.4976e-15,2.2463999999747698e-11,0.999999999977536,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+92,2,4,0,False,5.76e-16,8.63999999996268e-12,0.99999999999136,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+93,2,4,0,False,2.304e-14,3.455999999402843e-10,0.9999999996544,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+94,2,4,0,True,4.13437500000001e-08,0.0006199640056698494,0.9993800359943301,appeared once in the realized nominal sample
+95,2,4,0,True,3.3960465e-08,0.0005092772579410159,0.999490722742059,appeared once in the realized nominal sample
+96,2,4,0,False,5.76e-16,8.63999999996268e-12,0.99999999999136,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+97,2,4,0,False,2.304e-14,3.455999999402843e-10,0.9999999996544,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+98,2,4,0,False,6.9888e-15,1.0483199999450548e-10,0.999999999895168,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+99,2,4,0,False,1.0752e-13,1.6127999986995247e-09,0.9999999983872,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+100,2,4,0,False,9.8496e-12,1.4774398908658338e-07,0.999999852256011,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+101,2,4,0,False,3.952e-14,5.927999998243059e-10,0.9999999994072,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+102,2,4,0,False,8e-16,1.1999999999928002e-11,0.999999999988,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+103,2,4,0,False,6.08e-13,9.119999958415573e-09,0.99999999088,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+104,2,4,0,True,7.4844e-10,1.1226536986163217e-05,0.9999887734630138,appeared once in the realized nominal sample
+105,2,4,0,True,4.075918e-09,6.113690118808049e-05,0.999938863098812,appeared once in the realized nominal sample
+106,2,4,0,False,9.8496e-12,1.4774398908658338e-07,0.999999852256011,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+107,2,4,0,True,2.930799564e-07,0.004386550848073566,0.9956134491519264,appeared once in the realized nominal sample
+108,2,4,0,True,1.01900106e-06,0.01516880062408087,0.9848311993759191,appeared once in the realized nominal sample
+109,2,4,0,True,1.29691044e-06,0.01926566767225713,0.9807343323277429,appeared once in the realized nominal sample
+110,2,5,0,True,5.58095484375e-08,0.0008367929432714497,0.9991632070567286,appeared once in the realized nominal sample
+111,2,5,0,False,2.16e-14,3.2399999994751556e-10,0.999999999676,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+112,2,5,0,False,2.0736e-15,3.11039999995163e-11,0.999999999968896,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+113,2,5,0,False,3.2256e-15,4.8383999998829566e-11,0.999999999951616,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+114,2,5,0,False,1.4976e-15,2.2463999999747698e-11,0.999999999977536,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+115,2,5,0,False,5.9904e-14,8.985599995963218e-10,0.99999999910144,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+116,2,5,0,False,5.76e-16,8.63999999996268e-12,0.99999999999136,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+117,2,5,0,False,7.2e-16,1.0799999999941683e-11,0.9999999999892,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+118,2,5,0,False,2.304e-14,3.455999999402843e-10,0.9999999996544,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+119,2,5,0,False,2.16e-14,3.2399999994751556e-10,0.999999999676,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+120,2,5,0,False,7.92e-15,1.1879999999294375e-10,0.9999999998812,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+121,2,5,0,False,2.0736e-15,3.11039999995163e-11,0.999999999968896,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+122,2,5,0,False,2.592e-15,3.8879999999244215e-11,0.99999999996112,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+123,2,5,0,False,5.184e-15,7.77599999969769e-11,0.99999999992224,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+124,2,5,0,False,3.2256e-15,4.8383999998829566e-11,0.999999999951616,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+125,2,5,0,False,2.79552e-13,4.193279991208788e-09,0.99999999580672,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+126,2,5,0,False,1.5808e-12,2.3711999718889277e-08,0.9999999762880003,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+127,2,5,0,False,8e-16,1.1999999999928002e-11,0.999999999988,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+128,2,5,0,False,1e-15,1.499999999988751e-11,0.999999999985,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+129,2,5,0,False,6.08e-13,9.119999958415573e-09,0.99999999088,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+130,2,5,0,False,5.7e-13,8.549999963451187e-09,0.9999999914500001,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+131,2,5,0,False,3.696e-14,5.543999998463306e-10,0.9999999994456,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+132,2,5,0,False,1.20384e-11,1.80575983697242e-07,0.9999998194240163,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+133,2,5,0,False,3.344e-12,5.0159998742071086e-08,0.9999999498400013,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+134,2,5,0,False,2.09e-13,3.1349999950862155e-09,0.999999996865,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+135,2,5,0,True,5.77368e-10,8.660482500305059e-06,0.9999913395174997,appeared once in the realized nominal sample
+136,2,5,0,False,9.6768e-15,1.4515199998946614e-10,0.999999999854848,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+137,2,5,0,False,2.4192e-14,3.628799999341634e-10,0.99999999963712,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+138,2,5,0,False,1.2096e-14,1.8143999998354086e-10,0.99999999981856,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+139,2,5,0,False,2.4192e-14,3.628799999341634e-10,0.99999999963712,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+140,2,5,0,False,5.472e-14,8.207999996631661e-10,0.9999999991792,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+141,2,5,0,False,6.84e-14,1.0259999994736972e-09,0.999999998974,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+142,2,5,0,False,1.368e-13,2.0519999978947885e-09,0.999999997948,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+143,2,6,0,True,3.00570515930667e-08,0.00045075416047680696,0.9995492458395232,appeared once in the realized nominal sample
+144,2,6,0,True,1.10151657e-06,0.016387005584350283,0.9836129944156498,appeared once in the realized nominal sample
+145,2,6,0,False,2.25e-14,3.3749999994305065e-10,0.9999999996625,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+146,2,6,0,False,5.4e-14,8.099999996719719e-10,0.99999999919,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+147,2,6,0,False,6e-16,8.999999999959502e-12,0.999999999991,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+148,2,6,0,False,2.25e-14,3.3749999994305065e-10,0.9999999996625,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+149,2,6,0,False,1.152e-15,1.7279999999850708e-11,0.99999999998272,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+150,2,6,0,False,1.44e-15,2.1599999999766734e-11,0.9999999999784,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+151,2,6,0,False,2.0736e-13,3.110399995163029e-09,0.9999999968896,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+152,2,6,0,False,5.76e-14,8.63999999626777e-10,0.999999999136,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+153,2,6,0,False,2.0736e-15,3.11039999995163e-11,0.999999999968896,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+154,2,6,0,False,3.2256e-15,4.8383999998829566e-11,0.999999999951616,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+155,2,6,0,False,1.29024e-13,1.935359998127316e-09,0.99999999806464,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+156,2,6,0,False,5.76e-16,8.63999999996268e-12,0.99999999999136,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+157,2,6,0,False,1.44e-15,2.1599999999766734e-11,0.9999999999784,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+158,2,6,0,False,7.2e-16,1.0799999999941683e-11,0.9999999999892,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+159,2,6,0,False,5.4e-14,8.099999996719719e-10,0.99999999919,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+160,2,6,0,True,9.4527e-10,1.4178949484447074e-05,0.9999858210505156,appeared once in the realized nominal sample
+161,2,6,0,False,1.152e-15,1.7279999999850708e-11,0.99999999998272,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+162,2,6,0,False,1.44e-15,2.1599999999766734e-11,0.9999999999784,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+163,2,6,0,False,2.0736e-13,3.110399995163029e-09,0.9999999968896,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+164,2,6,0,False,5.76e-14,8.63999999626777e-10,0.999999999136,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+165,2,6,0,False,3.6e-15,5.39999999985421e-11,0.999999999946,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+166,2,6,0,False,6.336e-15,9.503999999548398e-11,0.99999999990496,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+167,2,6,0,False,1.44e-15,2.1599999999766734e-11,0.9999999999784,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+168,2,6,0,False,3.168e-15,4.751999999887099e-11,0.99999999995248,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+169,2,6,0,False,2.0736e-15,3.11039999995163e-11,0.999999999968896,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+170,2,6,0,False,3.2256e-15,4.8383999998829566e-11,0.999999999951616,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+171,2,6,0,False,1.29024e-13,1.935359998127316e-09,0.99999999806464,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+172,2,6,0,True,1.95590131578947e-08,0.00029334216700826424,0.9997066578329917,appeared once in the realized nominal sample
+173,2,6,0,False,9.6768e-15,1.4515199998946614e-10,0.999999999854848,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+174,2,6,0,False,8.33333333333333e-16,1.2499999999921877e-11,0.9999999999875,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+175,2,6,0,False,5.472e-14,8.207999996631661e-10,0.9999999991792,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+176,2,6,0,False,8e-16,1.1999999999928002e-11,0.999999999988,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+177,2,6,0,False,1.425e-12,2.1374999771569916e-08,0.9999999786250002,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+178,2,6,0,False,9.6768e-13,1.4515199894661506e-08,0.9999999854848001,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+179,2,6,0,False,2.688e-13,4.031999991872029e-09,0.999999995968,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+180,2,6,0,False,1.68e-14,2.5199999996825013e-10,0.999999999748,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+181,2,6,0,False,2.9568e-14,4.435199999016515e-10,0.99999999955648,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+182,2,6,0,False,9.6768e-13,1.4515199894661506e-08,0.9999999854848001,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+183,2,6,0,False,1.6e-15,2.3999999999712016e-11,0.999999999976,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+184,2,6,0,False,2e-15,2.999999999955003e-11,0.99999999997,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+185,2,6,0,False,1.6e-14,2.3999999997120196e-10,0.99999999976,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+186,2,6,0,False,5.472e-12,8.207999663166144e-08,0.9999999179200034,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+187,2,6,0,False,1.52e-12,2.279999974009733e-08,0.9999999772000002,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+188,2,6,0,False,9.5e-14,1.4249999989847553e-09,0.999999998575,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+189,2,6,0,False,1.672e-13,2.5079999968551776e-09,0.999999997492,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+190,2,6,0,True,7.55960205e-08,0.001133297682940061,0.99886670231706,appeared once in the realized nominal sample
+191,2,6,0,False,1.4784e-14,2.2175999997541293e-10,0.99999999977824,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+192,2,6,0,False,8.36e-14,1.2539999992137946e-09,0.999999998746,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+193,2,6,0,False,9.6768e-15,1.4515199998946614e-10,0.999999999854848,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+194,2,6,0,False,5.472e-14,8.207999996631661e-10,0.9999999991792,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+195,2,6,0,True,2.2644468e-07,0.0033909084249478944,0.9966090915750521,appeared once in the realized nominal sample
+196,2,7,0,True,1.43621775e-08,0.00021540946009699805,0.999784590539903,appeared once in the realized nominal sample
+197,2,7,0,True,8.445937500000012e-09,0.00012668103831454282,0.9998733189616854,appeared once in the realized nominal sample
+198,2,7,0,False,2.16e-14,3.2399999994751556e-10,0.999999999676,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+199,2,7,0,False,4.608e-16,6.911999999976114e-12,0.999999999993088,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+200,2,7,0,False,1.152e-15,1.7279999999850708e-11,0.99999999998272,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+201,2,7,0,False,2.0736e-15,3.11039999995163e-11,0.999999999968896,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+202,2,7,0,False,5.76e-16,8.63999999996268e-12,0.99999999999136,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+203,2,7,0,False,8.2944e-14,1.2441599992260844e-09,0.99999999875584,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+204,2,7,0,False,2.304e-14,3.455999999402843e-10,0.9999999996544,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+205,2,7,0,False,2.16e-14,3.2399999994751556e-10,0.999999999676,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+206,2,7,0,False,1.152e-15,1.7279999999850708e-11,0.99999999998272,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+207,2,7,0,False,1.44e-15,2.1599999999766734e-11,0.9999999999784,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+208,2,7,0,False,2.5344e-15,3.801599999927744e-11,0.999999999961984,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+209,2,7,0,False,2.0736e-15,3.11039999995163e-11,0.999999999968896,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+210,2,7,0,False,5.76e-16,8.63999999996268e-12,0.99999999999136,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+211,2,7,0,False,1.44e-15,2.1599999999766734e-11,0.9999999999784,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+212,2,7,0,False,1.152e-15,1.7279999999850708e-11,0.99999999998272,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+213,2,7,0,False,1.44e-15,2.1599999999766734e-11,0.9999999999784,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+214,2,7,0,False,2.5344e-15,3.801599999927744e-11,0.999999999961984,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+215,2,7,0,False,2.0736e-15,3.11039999995163e-11,0.999999999968896,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+216,2,7,0,False,8.2944e-14,1.2441599992260844e-09,0.99999999875584,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+217,2,7,0,False,3.87072e-13,5.806079983145841e-09,0.99999999419392,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+218,2,7,0,False,1.0752e-13,1.6127999986995247e-09,0.9999999983872,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+219,2,7,0,False,5.376e-15,8.06399999967488e-11,0.99999999991936,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+220,2,7,0,False,6.72e-15,1.0079999999492003e-10,0.9999999998992,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+221,2,7,0,False,1.18272e-14,1.7740799998426425e-10,0.999999999822592,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+222,2,7,0,False,3.87072e-13,5.806079983145841e-09,0.99999999419392,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+223,2,7,0,False,6.4e-16,9.599999999953925e-12,0.9999999999904,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+224,2,7,0,False,8e-16,1.1999999999928002e-11,0.999999999988,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+225,2,7,0,False,6.4e-15,9.599999999539231e-11,0.999999999904,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+226,2,7,0,False,2.1888e-12,3.283199946106583e-08,0.9999999671680005,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+227,2,7,0,False,6.08e-13,9.119999958415573e-09,0.99999999088,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+228,2,7,0,False,3.8e-14,5.699999998375609e-10,0.99999999943,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+229,2,7,0,False,6.688e-14,1.0031999994968285e-09,0.9999999989968,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+230,2,7,0,True,3.7850736e-09,5.677449237495482e-05,0.999943225507625,appeared once in the realized nominal sample
+231,2,7,0,True,1.90509868421053e-08,0.0002857239784806946,0.9997142760215193,appeared once in the realized nominal sample
+232,2,7,0,True,5.734638e-08,0.00085982586238111,0.9991401741376189,appeared once in the realized nominal sample
+233,2,7,0,True,3.4155387288e-09,5.123176862761163e-05,0.9999487682313724,appeared once in the realized nominal sample
+234,2,7,0,True,5.9590705263158e-07,0.008898777857274796,0.9911012221427252,appeared once in the realized nominal sample
+235,3,1,0,True,2.501296875e-08,0.0003751241592743864,0.9996248758407256,appeared once in the realized nominal sample
+236,3,1,0,True,8.30699999999998e-11,1.2460492237317729e-06,0.9999987539507763,appeared once in the realized nominal sample
+237,3,1,0,True,3.20945625e-07,0.004802615531765256,0.9951973844682347,appeared once in the realized nominal sample
+238,3,1,0,True,1.00794694e-08,0.00015118061282121725,0.9998488193871787,appeared once in the realized nominal sample
+239,3,1,0,True,4.36450781250001e-08,0.0006544619324654828,0.9993455380675346,appeared once in the realized nominal sample
+240,3,1,0,False,3.6e-15,5.39999999985421e-11,0.999999999946,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+241,3,1,0,False,5.318784e-11,7.978172817648404e-07,0.9999992021827182,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+242,3,1,0,False,2.13408e-13,3.201119994876757e-09,0.99999999679888,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+243,3,1,0,False,2.6e-15,3.899999999923955e-11,0.999999999961,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+244,3,1,0,False,8e-16,1.1999999999928002e-11,0.999999999988,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+245,3,1,0,False,3.6e-15,5.39999999985421e-11,0.999999999946,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+246,3,1,0,False,2.5e-15,3.749999999929692e-11,0.9999999999625,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+247,3,1,0,False,3.6e-15,5.39999999985421e-11,0.999999999946,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+248,3,1,0,False,2.5e-15,3.749999999929692e-11,0.9999999999625,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+249,3,1,0,False,3.528e-14,5.29199999859983e-10,0.9999999994708,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+250,3,1,0,False,3.528e-14,5.29199999859983e-10,0.9999999994708,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+251,3,1,0,True,1.5210678e-08,0.00022813414518269752,0.9997718658548173,appeared once in the realized nominal sample
+252,3,1,0,False,9.6e-16,1.4399999999896331e-11,0.9999999999856,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+253,3,1,0,False,1.2e-15,1.799999999983801e-11,0.999999999982,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+254,3,1,0,False,9.6e-15,1.439999999896327e-10,0.999999999856,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+255,3,1,0,False,3.12e-14,4.679999998904953e-10,0.999999999532,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+256,3,1,0,False,1.2e-14,1.7999999998380111e-10,0.99999999982,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+257,3,1,0,False,4.8e-14,7.19999999740817e-10,0.99999999928,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+258,3,1,0,False,3.2832e-12,4.9247998787398113e-08,0.9999999507520012,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+259,3,1,0,False,5.928e-13,8.891999960468803e-09,0.9999999911080001,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+260,3,1,0,False,2.28e-13,3.4199999941521898e-09,0.99999999658,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+261,3,1,0,False,9.12e-13,1.3679999906435037e-08,0.9999999863200001,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+262,3,1,0,False,8.55e-13,1.282499991776517e-08,0.999999987175,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+263,3,1,0,False,2.4e-15,3.5999999999352045e-11,0.999999999964,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+264,3,1,0,False,3e-15,4.499999999898756e-11,0.999999999955,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+265,3,1,0,False,4.56e-14,6.839999997660876e-10,0.999999999316,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+266,3,1,0,False,5.7e-14,8.549999996345118e-10,0.999999999145,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+267,3,1,0,False,5.28e-15,7.91999999968639e-11,0.9999999999208,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+268,3,1,0,False,1.0032e-13,1.504799998867864e-09,0.9999999984952,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+269,3,2,0,True,1.76877421875e-08,0.00026528094194564513,0.9997347190580543,appeared once in the realized nominal sample
+270,3,2,0,True,4.71915755208333e-09,7.078485808198278e-05,0.999929215141918,appeared once in the realized nominal sample
+271,3,2,0,True,6.77062790697675e-09,0.00010155426196525476,0.9998984457380348,appeared once in the realized nominal sample
+272,3,2,0,True,8.7607575e-08,0.0013132506132762576,0.9986867493867237,appeared once in the realized nominal sample
+273,3,2,0,True,4.04024414062501e-07,0.006042040449925938,0.993957959550074,appeared once in the realized nominal sample
+274,3,2,0,True,1.84338e-07,0.0027612509691054186,0.9972387490308946,appeared once in the realized nominal sample
+275,3,2,0,False,4.4e-15,6.599999999782215e-11,0.999999999934,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+276,3,2,0,False,6.500736e-11,9.75109924611703e-07,0.9999990248900754,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+277,3,2,0,False,2.60832e-13,3.91247999234676e-09,0.99999999608752,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+278,3,2,0,False,4.0128e-12,6.019199818858236e-08,0.9999999398080018,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+279,3,2,0,True,2.85768e-08,0.00042856014797910236,0.9995714398520209,appeared once in the realized nominal sample
+280,3,2,0,True,8.97999069767442e-10,1.3469895332704853e-05,0.9999865301046673,appeared once in the realized nominal sample
+281,3,2,0,False,2.08e-15,3.119999999951331e-11,0.9999999999688,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+282,3,2,0,False,8.53632e-12,1.2804479180281144e-07,0.9999998719552082,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+283,3,2,0,False,5.928e-13,8.891999960468803e-09,0.9999999911080001,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+284,3,2,0,False,2.3712e-12,3.556799936750086e-08,0.9999999644320007,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+285,3,2,0,False,7.8e-15,1.1699999999315594e-10,0.999999999883,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+286,3,2,0,False,1.482e-13,2.2229999975293003e-09,0.999999997777,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+287,3,2,0,False,8e-16,1.1999999999928002e-11,0.999999999988,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+288,3,2,0,False,4.4e-15,6.599999999782215e-11,0.999999999934,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+289,3,2,0,False,1e-15,1.499999999988751e-11,0.999999999985,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+290,3,2,0,False,7.84e-15,1.175999999930856e-10,0.9999999998824,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+291,3,2,0,False,4.312e-14,6.467999997908388e-10,0.9999999993532,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+292,3,2,0,False,9.8e-15,1.469999999891962e-10,0.999999999853,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+293,3,2,0,False,4.312e-14,6.467999997908388e-10,0.9999999993532,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+294,3,2,0,False,9.6e-16,1.4399999999896331e-11,0.9999999999856,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+295,3,2,0,False,1.2e-15,1.799999999983801e-11,0.999999999982,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+296,3,2,0,False,1.824e-14,2.73599999962574e-10,0.9999999997264,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+297,3,2,0,False,2.28e-14,3.4199999994152185e-10,0.999999999658,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+298,3,2,0,False,9.6e-15,1.439999999896327e-10,0.999999999856,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+299,3,2,0,False,2.3712e-12,3.556799936750086e-08,0.9999999644320007,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+300,3,2,0,False,9.12e-13,1.3679999906435037e-08,0.9999999863200001,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+301,3,2,0,False,2.4e-15,3.5999999999352045e-11,0.999999999964,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+302,3,2,0,False,7.8e-15,1.1699999999315594e-10,0.999999999883,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+303,3,2,0,False,4.56e-14,6.839999997660876e-10,0.999999999316,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+304,3,2,0,False,2.4e-14,3.599999999352043e-10,0.99999999964,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+305,3,3,0,True,2.4457125e-07,0.003661848219934563,0.9963381517800655,appeared once in the realized nominal sample
+306,3,3,0,True,3.898125e-07,0.005830127102366057,0.9941698728976339,appeared once in the realized nominal sample
+307,3,3,0,True,1.92375e-09,2.8855833690177932e-05,0.9999711441663098,appeared once in the realized nominal sample
+308,3,3,0,False,8.33333333333333e-16,1.2499999999921877e-11,0.9999999999875,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+309,3,3,0,False,8.16666666666667e-15,1.2249999999249744e-10,0.9999999998775,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+310,3,3,0,False,1e-15,1.499999999988751e-11,0.999999999985,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+311,3,3,0,False,1.9e-14,2.8499999995939024e-10,0.999999999715,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+312,3,3,0,False,7.6e-13,1.1399999935024332e-08,0.9999999886000001,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+313,3,3,0,True,1.4017212e-09,2.1025596973773765e-05,0.9999789744030262,appeared once in the realized nominal sample
+314,3,3,0,False,2e-15,2.999999999955003e-11,0.99999999997,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+315,3,3,0,True,1.77896750625e-07,0.0026648943447668562,0.9973351056552331,appeared once in the realized nominal sample
+316,3,3,0,False,2.95488e-11,4.432319017792601e-07,0.9999995567680983,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+317,3,3,0,False,6.24e-15,9.35999999956198e-11,0.9999999999064,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+318,3,3,0,False,1.1856e-13,1.7783999984187518e-09,0.9999999982216,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+319,3,3,0,False,2.4e-15,3.5999999999352045e-11,0.999999999964,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+320,3,3,0,False,1.71e-12,2.5649999671060682e-08,0.9999999743500003,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+321,3,3,0,False,1.824e-12,2.7359999625740158e-08,0.9999999726400004,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+322,3,3,0,False,1.14e-12,1.7099999853804748e-08,0.9999999829000001,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+323,3,3,0,True,2.1463464e-09,3.219467777478901e-05,0.9999678053222252,appeared once in the realized nominal sample
+324,3,3,0,True,1.29833418e-08,0.00019473116568903223,0.999805268834311,appeared once in the realized nominal sample
+325,3,3,0,False,1.838592e-11,2.7578876197280777e-07,0.9999997242112381,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+326,3,3,0,False,6.24e-15,9.35999999956198e-11,0.9999999999064,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+327,3,3,0,False,3.12e-15,4.679999999890495e-11,0.9999999999532,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+328,3,3,0,False,5.928e-14,8.89199999604688e-10,0.9999999991108,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+329,3,3,0,False,8e-16,1.1999999999928002e-11,0.999999999988,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+330,3,3,0,False,2e-15,2.999999999955003e-11,0.99999999997,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+331,3,3,0,False,2e-15,2.999999999955003e-11,0.99999999997,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+332,3,3,0,False,7.84e-15,1.175999999930856e-10,0.9999999998824,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+333,3,3,0,False,1.96e-14,2.9399999995678485e-10,0.999999999706,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+334,3,3,0,False,9.6e-16,1.4399999999896331e-11,0.9999999999856,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+335,3,3,0,False,1.824e-14,2.73599999962574e-10,0.9999999997264,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+336,3,3,0,False,9.6e-15,1.439999999896327e-10,0.999999999856,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+337,3,4,0,True,4.44675e-08,0.0006667901114340842,0.9993332098885659,appeared once in the realized nominal sample
+338,3,4,0,True,2.3477025e-08,0.00035209337970627813,0.9996479066202937,appeared once in the realized nominal sample
+339,3,4,0,True,3.189375e-07,0.0047726378594692915,0.9952273621405308,appeared once in the realized nominal sample
+340,3,4,0,False,2.08e-15,3.119999999951331e-11,0.9999999999688,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+341,3,4,0,False,8e-16,1.1999999999928002e-11,0.999999999988,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+342,3,4,0,False,3.456e-14,5.183999998656396e-10,0.9999999994816,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+343,3,4,0,False,1.181952e-11,1.7729278428468024e-07,0.9999998227072158,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+344,3,4,0,False,6.72e-15,1.0079999999492003e-10,0.9999999998992,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+345,3,4,0,False,2.496e-15,3.743999999929917e-11,0.99999999996256,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+346,3,4,0,False,8.112e-15,1.2167999999259747e-10,0.99999999987832,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+347,3,4,0,False,4.7424e-14,7.113599997470004e-10,0.99999999928864,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+348,3,4,0,False,9.6e-16,1.4399999999896331e-11,0.9999999999856,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+349,3,4,0,False,6.84e-13,1.025999994736971e-08,0.99999998974,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+350,3,4,0,False,1.824e-14,2.73599999962574e-10,0.9999999997264,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+351,3,4,0,False,9.6e-15,1.439999999896327e-10,0.999999999856,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+352,3,4,0,False,3.84e-14,5.759999998341231e-10,0.999999999424,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+353,3,4,0,False,7.296e-13,1.0943999940118427e-08,0.9999999890560001,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+354,3,4,0,False,4.56e-13,6.83999997660876e-09,0.99999999316,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+355,3,4,0,False,3.456e-14,5.183999998656396e-10,0.9999999994816,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+356,3,4,0,False,1.181952e-11,1.7729278428468024e-07,0.9999998227072158,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+357,3,4,0,True,7.303296e-11,1.0954937999862324e-06,0.9999989045062,appeared once in the realized nominal sample
+358,3,4,0,False,8e-16,1.1999999999928002e-11,0.999999999988,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+359,3,4,0,False,7.84e-15,1.175999999930856e-10,0.9999999998824,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+360,3,5,0,True,1.3047034e-08,0.0001956863622023297,0.9998043136377976,appeared once in the realized nominal sample
+361,3,5,0,True,6.5690625e-08,0.000984874100197346,0.9990151258998027,appeared once in the realized nominal sample
+362,3,5,0,True,2.0010375e-08,0.00030011058580927107,0.9996998894141907,appeared once in the realized nominal sample
+363,3,5,0,True,8.9718354e-09,0.00013456847645390858,0.9998654315235461,appeared once in the realized nominal sample
+364,3,5,0,True,7.59375e-09,0.0001138997633618523,0.9998861002366382,appeared once in the realized nominal sample
+365,3,5,0,True,1.069453125e-07,0.0016028937646621775,0.9983971062353378,appeared once in the realized nominal sample
+366,3,5,0,True,5.5130625e-07,0.008235496980154846,0.9917645030198452,appeared once in the realized nominal sample
+367,3,5,0,True,3.86820622222222e-09,5.8021410138426495e-05,0.9999419785898616,appeared once in the realized nominal sample
+368,3,5,0,False,2.08e-15,3.119999999951331e-11,0.9999999999688,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+369,3,5,0,False,8e-16,1.1999999999928002e-11,0.999999999988,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+370,3,5,0,False,2.496e-15,3.743999999929917e-11,0.99999999996256,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+371,3,5,0,False,2.496e-14,3.74399999929917e-10,0.9999999996256,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+372,3,5,0,False,1.89696e-12,2.8454399595200555e-08,0.9999999715456004,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+373,3,5,0,False,9.6e-16,1.4399999999896331e-11,0.9999999999856,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+374,3,5,0,False,1.2e-15,1.799999999983801e-11,0.999999999982,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+375,3,5,0,False,9.6e-15,1.439999999896327e-10,0.999999999856,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+376,3,5,0,False,3.84e-14,5.759999998341231e-10,0.999999999424,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+377,3,5,0,False,2.4e-14,3.599999999352043e-10,0.99999999964,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+378,3,5,0,False,7.296e-13,1.0943999940118427e-08,0.9999999890560001,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+379,3,5,0,False,3.6e-14,5.399999998542097e-10,0.99999999946,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+380,3,5,0,False,6.84e-13,1.025999994736971e-08,0.99999998974,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+381,3,5,0,True,4.118352336e-08,0.0006175620931056028,0.9993824379068944,appeared once in the realized nominal sample
+382,3,5,0,False,2e-15,2.999999999955003e-11,0.99999999997,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+383,3,5,0,True,5.2837092e-08,0.0007922424110708919,0.9992077575889291,appeared once in the realized nominal sample
+384,3,5,0,True,1.30977e-07,0.0019627264570399906,0.99803727354296,appeared once in the realized nominal sample
+385,3,5,0,False,4.224e-14,6.335999997992888e-10,0.9999999993664,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+386,3,5,0,False,1.444608e-11,2.166911765240288e-07,0.9999997833088234,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+387,3,5,0,False,4.0128e-12,6.019199818858236e-08,0.9999999398080018,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+388,3,5,0,False,2.508e-13,3.76199999292415e-09,0.999999996238,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+389,3,5,0,False,4.41408e-13,6.621119978081846e-09,0.99999999337888,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+390,3,5,0,False,3.6e-15,5.39999999985421e-11,0.999999999946,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+391,3,5,0,False,3.528e-14,5.29199999859983e-10,0.9999999994708,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+392,3,5,0,False,3.456e-15,5.183999999865639e-11,0.99999999994816,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+393,3,5,0,False,8.64e-15,1.2959999999160249e-10,0.9999999998704,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+394,3,5,0,False,4.32e-15,6.479999999790061e-11,0.9999999999352,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+395,3,5,0,False,6.5664e-14,9.849599995149594e-10,0.99999999901504,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+396,3,5,0,False,8.208e-14,1.2311999992421237e-09,0.9999999987688,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+397,3,5,0,False,8.64e-15,1.2959999999160249e-10,0.9999999998704,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+398,3,5,0,False,1.6416e-13,2.4623999969684952e-09,0.9999999975376,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+399,3,5,0,False,2.08e-15,3.119999999951331e-11,0.9999999999688,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+400,3,5,0,False,2.0384e-14,3.0575999995325854e-10,0.99999999969424,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+401,3,6,0,True,2.258025e-09,3.386980144356343e-05,0.9999661301985564,appeared once in the realized nominal sample
+402,3,6,0,True,4.455e-10,6.682477673635127e-06,0.9999933175223263,appeared once in the realized nominal sample
+403,3,6,0,True,2.027025e-08,0.00030400753342378015,0.9996959924665763,appeared once in the realized nominal sample
+404,3,6,0,False,4.48e-15,6.719999999774223e-11,0.9999999999328,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+405,3,6,0,False,8e-16,1.1999999999928002e-11,0.999999999988,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+406,3,6,0,False,9.999999999999989e-16,1.4999999999887494e-11,0.999999999985,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+407,3,6,0,False,1e-14,1.4999999998875073e-10,0.99999999985,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+408,3,6,0,False,7.125e-13,1.068749994289248e-08,0.9999999893125,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+409,3,6,0,False,1.92e-14,2.8799999995853074e-10,0.999999999712,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+410,3,6,0,False,3.456e-15,5.183999999865639e-11,0.99999999994816,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+411,3,6,0,False,6.5664e-14,9.849599995149594e-10,0.99999999901504,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+412,3,6,0,False,9.6e-16,1.4399999999896331e-11,0.9999999999856,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+413,3,6,0,False,9.6e-15,1.439999999896327e-10,0.999999999856,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+414,3,6,0,False,1.71e-12,2.5649999671060682e-08,0.9999999743500003,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+415,3,6,0,False,5e-15,7.499999999718769e-11,0.999999999925,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+416,3,6,0,False,5e-15,7.499999999718769e-11,0.999999999925,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+417,3,6,0,False,1.92e-15,2.8799999999585308e-11,0.9999999999712,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+418,3,6,0,False,2.4e-15,3.5999999999352045e-11,0.999999999964,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+419,3,6,0,False,1.92e-14,2.8799999995853074e-10,0.999999999712,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+420,3,6,0,False,6.24e-14,9.359999995619813e-10,0.9999999990640001,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+421,3,6,0,False,2.4e-14,3.599999999352043e-10,0.99999999964,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+422,3,6,0,False,6.5664e-12,9.849599514959255e-08,0.9999999015040049,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+423,3,6,0,False,1.1856e-12,1.7783999841875213e-08,0.9999999822160002,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+424,3,6,0,False,4.56e-13,6.83999997660876e-09,0.99999999316,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+425,3,6,0,False,1.824e-12,2.7359999625740158e-08,0.9999999726400004,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+426,3,6,0,False,1.71e-12,2.5649999671060682e-08,0.9999999743500003,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+427,3,6,0,False,4.8e-15,7.199999999740816e-11,0.999999999928,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+428,3,6,0,False,6e-15,8.999999999595027e-11,0.99999999991,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+429,3,6,0,False,1.14e-13,1.7099999985380477e-09,0.99999999829,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+430,3,6,0,False,1.056e-14,1.5839999998745554e-10,0.9999999998416,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+431,3,6,0,False,2.0064e-13,3.0095999954714554e-09,0.9999999969904,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+432,3,6,0,True,1.7302799745e-05,0.22859692086935995,0.7714030791306401,appeared once in the realized nominal sample
+433,3,6,0,False,4.4e-15,6.599999999782215e-11,0.999999999934,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+434,3,6,0,False,4.224e-15,6.335999999799289e-11,0.99999999993664,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+435,3,6,0,False,5.28e-15,7.91999999968639e-11,0.9999999999208,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+436,3,6,0,False,1.0032e-13,1.504799998867864e-09,0.9999999984952,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+437,3,6,0,False,3.456e-15,5.183999999865639e-11,0.99999999994816,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+438,3,6,0,False,6.5664e-14,9.849599995149594e-10,0.99999999901504,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+439,3,6,0,False,3.456e-14,5.183999998656396e-10,0.9999999994816,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+440,3,6,0,False,4.48e-15,6.719999999774223e-11,0.9999999999328,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+441,3,6,0,False,4.3904e-14,6.585599997831639e-10,0.99999999934144,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+442,3,7,0,True,6.158249999999991e-09,9.236948396092584e-05,0.999907630516039,appeared once in the realized nominal sample
+443,3,7,0,True,1.00051875e-07,0.0014996525956395405,0.9985003474043604,appeared once in the realized nominal sample
+444,3,7,0,True,1.477575e-08,0.00022161169213785964,0.9997783883078621,appeared once in the realized nominal sample
+445,3,7,0,False,6.4e-16,9.599999999953925e-12,0.9999999999904,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+446,3,7,0,False,2.88e-15,4.3199999999066944e-11,0.9999999999568,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+447,3,7,0,False,2e-15,2.999999999955003e-11,0.99999999997,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+448,3,7,0,False,2e-15,2.999999999955003e-11,0.99999999997,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+449,3,7,0,False,2.8224e-14,4.233599999103891e-10,0.99999999957664,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+450,3,7,0,False,7.68e-16,1.1519999999933649e-11,0.99999999998848,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+451,3,7,0,False,1.92e-15,2.8799999999585308e-11,0.9999999999712,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+452,3,7,0,False,9.6e-16,1.4399999999896331e-11,0.9999999999856,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+453,3,7,0,False,7.68e-15,1.1519999999336494e-10,0.9999999998848,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+454,3,7,0,False,2.496e-14,3.74399999929917e-10,0.9999999996256,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+455,3,7,0,False,9.6e-15,1.439999999896327e-10,0.999999999856,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+456,3,7,0,False,3.84e-14,5.759999998341231e-10,0.999999999424,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+457,3,7,0,False,2.62656e-12,3.939839922393479e-08,0.9999999606016008,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+458,3,7,0,False,4.7424e-13,7.113599974700035e-09,0.9999999928864001,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+459,3,7,0,False,1.824e-13,2.735999996257402e-09,0.999999997264,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+460,3,7,0,False,7.296e-13,1.0943999940118427e-08,0.9999999890560001,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+461,3,7,0,False,6.84e-13,1.025999994736971e-08,0.99999998974,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+462,3,7,0,False,1.92e-15,2.8799999999585308e-11,0.9999999999712,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+463,3,7,0,False,2.4e-15,3.5999999999352045e-11,0.999999999964,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+464,3,7,0,False,3.648e-14,5.471999998502962e-10,0.9999999994528,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+465,3,7,0,False,4.56e-14,6.839999997660876e-10,0.999999999316,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+466,3,7,0,False,4.224e-15,6.335999999799289e-11,0.99999999993664,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+467,3,7,0,False,8.0256e-14,1.2038399992754329e-09,0.99999999879616,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+468,3,7,0,True,3.792096e-10,5.688127823618085e-06,0.9999943118721764,appeared once in the realized nominal sample
+469,3,7,0,False,2.8224e-14,4.233599999103891e-10,0.99999999957664,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+470,4,1,0,False,3.6e-15,5.39999999985421e-11,0.999999999946,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+471,4,1,0,False,3.6e-15,5.39999999985421e-11,0.999999999946,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+472,4,1,0,False,3.6e-15,5.39999999985421e-11,0.999999999946,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+473,4,1,0,True,1.03842659883721e-08,0.00015575186005378373,0.9998442481399462,appeared once in the realized nominal sample
+474,4,1,0,True,3.1151249999999903e-09,4.672578338935657e-05,0.9999532742166106,appeared once in the realized nominal sample
+475,4,1,0,True,1.01833654692e-07,0.0015263388563358574,0.9984736611436641,appeared once in the realized nominal sample
+476,4,1,0,True,1.18832175e-07,0.0017808950520419864,0.9982191049479581,appeared once in the realized nominal sample
+477,4,1,0,True,6.03095625e-07,0.00900564120267132,0.9909943587973287,appeared once in the realized nominal sample
+478,4,1,0,True,9.38148750000001e-07,0.013973686731722296,0.9860263132682777,appeared once in the realized nominal sample
+479,4,1,0,False,9.36e-15,1.403999999901446e-10,0.9999999998596,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+480,4,1,0,False,3.6e-15,5.39999999985421e-11,0.999999999946,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+481,4,1,0,False,1.44e-13,2.1599999976673556e-09,0.99999999784,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+482,4,1,0,False,5.184e-12,7.775999697689283e-08,0.999999922240003,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+483,4,1,0,False,3.3685632e-09,5.052717154457183e-05,0.9999494728284555,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+484,4,1,0,True,3.563746875e-07,0.0053313588567955,0.9946686411432045,appeared once in the realized nominal sample
+485,4,1,0,False,2.6e-15,3.899999999923955e-11,0.999999999961,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+486,4,1,0,True,2.885625e-08,0.0004327500929008157,0.9995672499070992,appeared once in the realized nominal sample
+487,4,1,0,False,8e-16,1.1999999999928002e-11,0.999999999988,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+488,4,1,0,False,2e-15,2.999999999955003e-11,0.99999999997,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+489,4,1,0,False,4.4e-15,6.599999999782215e-11,0.999999999934,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+490,4,1,0,False,3.6e-15,5.39999999985421e-11,0.999999999946,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+491,4,1,0,False,4e-14,5.99999999820012e-10,0.9999999994,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+492,4,1,0,False,3.75e-14,5.624999998418076e-10,0.9999999994375,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+493,4,1,0,False,2e-15,2.999999999955003e-11,0.99999999997,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+494,4,1,0,False,2.5e-15,3.749999999929692e-11,0.9999999999625,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+495,4,1,0,False,4.4e-15,6.599999999782215e-11,0.999999999934,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+496,4,1,0,False,3.6e-15,5.39999999985421e-11,0.999999999946,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+497,4,1,0,False,2.5e-15,3.749999999929692e-11,0.9999999999625,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+498,4,1,0,False,1.44e-12,2.1599999766735555e-08,0.9999999784000002,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+499,4,1,0,False,2.07936e-10,3.119035136124076e-06,0.9999968809648638,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+500,4,1,0,False,5.776e-11,8.663996247006502e-07,0.9999991336003753,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+501,4,2,0,False,4.4e-15,6.599999999782215e-11,0.999999999934,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+502,4,2,0,False,4.4e-15,6.599999999782215e-11,0.999999999934,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+503,4,2,0,True,4.01144542655999e-09,6.016987123976851e-05,0.9999398301287602,appeared once in the realized nominal sample
+504,4,2,0,True,2.20238853488372e-08,0.0003303037215811171,0.9996696962784188,appeared once in the realized nominal sample
+505,4,2,0,True,7.540218455e-08,0.0011303934343561812,0.9988696065656438,appeared once in the realized nominal sample
+506,4,2,0,True,1.678820715e-07,0.0025150631993645384,0.9974849368006354,appeared once in the realized nominal sample
+507,4,2,0,True,2.8279125e-07,0.0042328853294940245,0.9957671146705059,appeared once in the realized nominal sample
+508,4,2,0,True,2.0575296e-07,0.0030815370057909177,0.996918462994209,appeared once in the realized nominal sample
+509,4,2,0,True,3.7856e-12,5.6783998387896184e-08,0.9999999432160016,appeared once in the realized nominal sample
+510,4,2,0,True,1.03892441860465e-07,0.0015571730548214074,0.9984428269451786,appeared once in the realized nominal sample
+511,4,2,0,False,1.144e-14,1.7159999998527767e-10,0.9999999998284,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+512,4,2,0,False,4.4e-15,6.599999999782215e-11,0.999999999934,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+513,4,2,0,False,1.76e-13,2.6399999965154326e-09,0.99999999736,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+514,4,2,0,False,6.336e-12,9.503999548400044e-08,0.9999999049600046,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+515,4,2,0,False,4.1171328e-09,6.175508520334806e-05,0.9999382449147967,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+516,4,2,0,False,2.54144e-10,3.8121527342117175e-06,0.9999961878472657,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+517,4,2,0,True,5.1597e-08,0.0007736555940327963,0.9992263444059672,appeared once in the realized nominal sample
+518,4,2,0,True,3.241134e-08,0.0004860519463414598,0.9995139480536586,appeared once in the realized nominal sample
+519,4,2,0,False,2.08e-15,3.119999999951331e-11,0.9999999999688,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+520,4,2,0,False,1.144e-14,1.7159999998527767e-10,0.9999999998284,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+521,4,2,0,False,1.04e-13,1.5599999987832812e-09,0.99999999844,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+522,4,2,0,False,9.75e-14,1.462499998930618e-09,0.9999999985375,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+523,4,2,0,False,6.5e-15,9.74999999952472e-11,0.9999999999025,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+524,4,2,0,False,3.744e-12,5.615999842313236e-08,0.9999999438400016,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+525,4,2,0,False,1.50176e-10,2.2526374629775662e-06,0.999997747362537,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+526,4,2,0,True,1.02749625e-07,0.0015400573468998678,0.9984599426531001,appeared once in the realized nominal sample
+527,4,2,0,True,9.3814875e-07,0.01397368673172228,0.9860263132682777,appeared once in the realized nominal sample
+528,4,2,0,False,8e-16,1.1999999999928002e-11,0.999999999988,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+529,4,2,0,False,2e-15,2.999999999955003e-11,0.99999999997,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+530,4,2,0,False,4.4e-15,6.599999999782215e-11,0.999999999934,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+531,4,2,0,False,1e-15,1.499999999988751e-11,0.999999999985,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+532,4,2,0,False,4e-14,5.99999999820012e-10,0.9999999994,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+533,4,2,0,False,2e-15,2.999999999955003e-11,0.99999999997,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+534,4,2,0,False,3.6e-14,5.399999998542097e-10,0.99999999946,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+535,4,2,0,False,3.744e-12,5.615999842313236e-08,0.9999999438400016,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+536,4,2,0,False,1.44e-12,2.1599999766735555e-08,0.9999999784000002,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+537,4,2,0,False,7.2e-14,1.079999999416839e-09,0.99999999892,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+538,4,2,0,False,2.888e-12,4.3319999061751365e-08,0.999999956680001,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+539,4,2,0,False,1.444e-12,2.165999976543784e-08,0.9999999783400002,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+540,4,2,0,False,1.50176e-10,2.2526374629775662e-06,0.999997747362537,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+541,4,2,0,False,5.776e-11,8.663996247006502e-07,0.9999991336003753,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+542,4,2,0,False,2.888e-12,4.3319999061751365e-08,0.999999956680001,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+543,4,3,0,False,2e-15,2.999999999955003e-11,0.99999999997,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+544,4,3,0,False,8e-16,1.1999999999928002e-11,0.999999999988,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+545,4,3,0,False,2e-15,2.999999999955003e-11,0.99999999997,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+546,4,3,0,False,2e-15,2.999999999955003e-11,0.99999999997,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+547,4,3,0,True,3.3048499737e-07,0.004945008766817652,0.9950549912331823,appeared once in the realized nominal sample
+548,4,3,0,True,3.027888864e-08,0.00045408021083775686,0.9995459197891623,appeared once in the realized nominal sample
+549,4,3,0,True,1.1675664e-07,0.0017498169842567212,0.9982501830157433,appeared once in the realized nominal sample
+550,4,3,0,False,8.33333333333333e-16,1.2499999999921877e-11,0.9999999999875,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+551,4,3,0,False,3e-14,4.499999998987567e-10,0.99999999955,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+552,4,3,0,True,7.5178125e-09,0.00011276082994353792,0.9998872391700565,appeared once in the realized nominal sample
+553,4,3,0,False,1.296e-12,1.9439999811055796e-08,0.9999999805600002,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+554,4,3,0,False,5.2e-15,7.79999999969582e-11,0.999999999922,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+555,4,3,0,False,7.5e-14,1.1249999993672295e-09,0.999999998875,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+556,4,3,0,False,2e-15,2.999999999955003e-11,0.99999999997,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+557,4,3,0,False,8e-14,1.199999999280048e-09,0.9999999988,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+558,4,3,0,False,7.5e-14,1.1249999993672295e-09,0.999999998875,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+559,4,3,0,False,4.6656e-11,6.998397551283701e-07,0.9999993001602449,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+560,4,3,0,True,1.3170762e-07,0.001973664188433468,0.9980263358115665,appeared once in the realized nominal sample
+561,4,3,0,False,2.88e-12,4.3199999066942224e-08,0.999999956800001,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+562,4,3,0,True,6.174e-10,9.260957119930723e-06,0.99999073904288,appeared once in the realized nominal sample
+563,4,3,0,False,1.871424e-09,2.8070966029326537e-05,0.9999719290339707,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+564,4,3,0,False,1.1552e-10,1.7327984988030336e-06,0.9999982672015012,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+565,4,3,0,True,1.20619125e-06,0.01793018618991819,0.9820698138100818,appeared once in the realized nominal sample
+566,4,3,0,True,2.2743e-07,0.003405638002491874,0.9965943619975082,appeared once in the realized nominal sample
+567,4,3,0,False,2.6e-15,3.899999999923955e-11,0.999999999961,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+568,4,3,0,False,8e-16,1.1999999999928002e-11,0.999999999988,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+569,4,3,0,False,2e-15,2.999999999955003e-11,0.99999999997,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+570,4,3,0,False,2e-15,2.999999999955003e-11,0.99999999997,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+571,4,4,0,False,8e-16,1.1999999999928002e-11,0.999999999988,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+572,4,4,0,False,8e-16,1.1999999999928002e-11,0.999999999988,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+573,4,4,0,True,1.45548525375e-06,0.021595695114056325,0.9784043048859437,appeared once in the realized nominal sample
+574,4,4,0,True,6.43566000000001e-08,0.0009648832315858202,0.9990351167684142,appeared once in the realized nominal sample
+575,4,4,0,True,1.74685896e-07,0.002616858708992032,0.9973831412910079,appeared once in the realized nominal sample
+576,4,4,0,True,6.216279552e-09,9.32398464651139e-05,0.9999067601535349,appeared once in the realized nominal sample
+577,4,4,0,False,5.184e-13,7.775999969768927e-09,0.999999992224,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+578,4,4,0,False,2.08e-15,3.119999999951331e-11,0.9999999999688,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+579,4,4,0,False,8e-16,1.1999999999928002e-11,0.999999999988,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+580,4,4,0,False,3.2e-14,4.799999998848078e-10,0.99999999952,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+581,4,4,0,False,3e-14,4.499999998987567e-10,0.99999999955,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+582,4,4,0,True,1.5632372093023201e-09,2.344828324257158e-05,0.9999765517167575,appeared once in the realized nominal sample
+583,4,4,0,False,1.86624e-11,2.7993596082053375e-07,0.9999997200640391,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+584,4,4,0,False,1.152e-12,1.727999985071075e-08,0.9999999827200001,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+585,4,4,0,False,7.485696e-10,1.1228480964338396e-05,0.9999887715190356,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+586,4,4,0,False,4.6208e-11,6.931197598084022e-07,0.9999993068802402,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+587,4,4,0,True,8.46093750000003e-08,0.001268335660256014,0.998731664339744,appeared once in the realized nominal sample
+588,4,4,0,True,7.37352e-08,0.001105416617201089,0.9988945833827989,appeared once in the realized nominal sample
+589,4,4,0,True,2.66342076e-07,0.003987161750658471,0.9960128382493415,appeared once in the realized nominal sample
+590,4,4,0,True,9.37375488000001e-09,0.000140596439253135,0.9998594035607469,appeared once in the realized nominal sample
+591,4,4,0,True,2.8019376e-07,0.0041940871359028515,0.9958059128640971,appeared once in the realized nominal sample
+592,4,4,0,True,4.181463e-07,0.006252566651951907,0.993747433348048,appeared once in the realized nominal sample
+593,4,4,0,False,8e-16,1.1999999999928002e-11,0.999999999988,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+594,4,5,0,False,2.08e-15,3.119999999951331e-11,0.9999999999688,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+595,4,5,0,False,2.08e-15,3.119999999951331e-11,0.9999999999688,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+596,4,5,0,True,4.382378e-10,6.573545395596174e-06,0.9999934264546044,appeared once in the realized nominal sample
+597,4,5,0,True,4.108104e-08,0.0006160257908091455,0.9993839742091909,appeared once in the realized nominal sample
+598,4,5,0,True,1.439100432e-07,0.0021563225922466406,0.9978436774077534,appeared once in the realized nominal sample
+599,4,5,0,False,2.08e-15,3.119999999951331e-11,0.9999999999688,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+600,4,5,0,False,8.32e-14,1.2479999992213e-09,0.999999998752,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+601,4,5,0,False,8e-16,1.1999999999928002e-11,0.999999999988,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+602,4,5,0,False,1e-15,1.499999999988751e-11,0.999999999985,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+603,4,5,0,False,3.2e-14,4.799999998848078e-10,0.99999999952,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+604,4,5,0,False,2.9952e-12,4.492799899080471e-08,0.999999955072001,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+605,4,5,0,False,1.201408e-10,1.8021103763053984e-06,0.9999981978896237,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+606,4,5,0,True,2.388015e-06,0.03518631398383133,0.9648136860161687,appeared once in the realized nominal sample
+607,4,5,0,False,2e-15,2.999999999955003e-11,0.99999999997,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+608,4,5,0,False,1.936e-14,2.903999999578367e-10,0.9999999997096,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+609,4,5,0,False,6.336e-13,9.503999954840004e-09,0.9999999904960001,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+610,4,5,0,False,1.76e-13,2.6399999965154326e-09,0.99999999736,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+611,4,5,0,False,1.65e-13,2.4749999969373917e-09,0.999999997525,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+612,4,5,0,False,1.1e-14,1.649999999863884e-10,0.999999999835,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+613,4,5,0,True,1.305832e-09,1.9587288179354868e-05,0.9999804127118207,appeared once in the realized nominal sample
+614,4,5,0,False,1.936e-14,2.903999999578367e-10,0.9999999997096,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+615,4,5,0,False,2.28096e-11,3.4214394147265033e-07,0.9999996578560585,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+616,4,5,0,False,6.336e-12,9.503999548400044e-08,0.9999999049600046,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+617,4,5,0,False,9.149184e-10,1.3723681835694923e-05,0.9999862763181643,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+618,4,5,0,False,2.54144e-10,3.8121527342117175e-06,0.9999961878472657,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+619,4,5,0,False,2.88e-15,4.3199999999066944e-11,0.9999999999568,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+620,4,5,0,False,7.2e-15,1.079999999941684e-10,0.999999999892,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+621,4,5,0,False,3.6e-15,5.39999999985421e-11,0.999999999946,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+622,4,5,0,False,1.44e-13,2.1599999976673556e-09,0.99999999784,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+623,4,5,0,False,7.2e-15,1.079999999941684e-10,0.999999999892,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+624,4,5,0,False,1.296e-13,1.9439999981105577e-09,0.999999998056,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+625,4,5,0,False,2.08e-15,3.119999999951331e-11,0.9999999999688,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+626,4,5,0,True,8.0028e-09,0.00012003479572769024,0.9998799652042724,appeared once in the realized nominal sample
+627,4,6,0,False,4.48e-15,6.719999999774223e-11,0.9999999999328,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+628,4,6,0,False,4.48e-15,6.719999999774223e-11,0.9999999999328,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+629,4,6,0,True,1.99367168e-09,2.9904628077505586e-05,0.9999700953719225,appeared once in the realized nominal sample
+630,4,6,0,False,7.354368e-11,1.1031545915650913e-06,0.9999988968454084,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+631,4,6,0,True,3.3891858e-07,0.005070879024599029,0.994929120975401,appeared once in the realized nominal sample
+632,4,6,0,True,2.10672e-09,3.160030073326509e-05,0.9999683996992668,appeared once in the realized nominal sample
+633,4,6,0,True,3.7740384e-09,5.6608973758398436e-05,0.9999433910262416,appeared once in the realized nominal sample
+634,4,6,0,False,8.33333333333333e-16,1.2499999999921877e-11,0.9999999999875,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+635,4,6,0,False,2.88e-15,4.3199999999066944e-11,0.9999999999568,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+636,4,6,0,False,4.48e-15,6.719999999774223e-11,0.9999999999328,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+637,4,6,0,False,8e-16,1.1999999999928002e-11,0.999999999988,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+638,4,6,0,False,1e-15,1.499999999988751e-11,0.999999999985,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+639,4,6,0,True,2.475e-10,3.712493109139823e-06,0.9999962875068908,appeared once in the realized nominal sample
+640,4,6,0,True,1.89054e-07,0.002831793156275232,0.9971682068437248,appeared once in the realized nominal sample
+641,4,6,0,True,1.315845e-07,0.001971821031451876,0.9980281789685481,appeared once in the realized nominal sample
+642,4,6,0,False,1.6e-15,2.3999999999712016e-11,0.999999999976,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+643,4,6,0,False,8.8e-15,1.3199999999128856e-10,0.999999999868,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+644,4,6,0,False,2.88e-13,4.319999990669421e-09,0.99999999568,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+645,4,6,0,False,8e-14,1.199999999280048e-09,0.9999999988,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+646,4,6,0,False,7.5e-14,1.1249999993672295e-09,0.999999998875,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+647,4,6,0,False,5e-15,7.499999999718769e-11,0.999999999925,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+648,4,6,0,False,8.8e-15,1.3199999999128856e-10,0.999999999868,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+649,4,6,0,False,2.88e-13,4.319999990669421e-09,0.99999999568,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+650,4,6,0,False,5e-15,7.499999999718769e-11,0.999999999925,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+651,4,6,0,False,1.0368e-11,1.5551998790757165e-07,0.9999998444800121,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+652,4,6,0,False,2.88e-12,4.3199999066942224e-08,0.999999956800001,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+653,4,6,0,False,2.7e-12,4.049999917992968e-08,0.9999999595000009,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+654,4,6,0,False,1.0368e-11,1.5551998790757165e-07,0.9999998444800121,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+655,4,6,0,False,4.15872e-10,6.238060544516527e-06,0.9999937619394554,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+656,4,6,0,False,1.1552e-10,1.7327984988030336e-06,0.9999982672015012,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+657,4,6,0,True,3.37566768e-08,0.0005062219869382951,0.9994937780130617,appeared once in the realized nominal sample
+658,4,6,0,False,4.4e-15,6.599999999782215e-11,0.999999999934,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+659,4,6,0,False,2.88e-15,4.3199999999066944e-11,0.9999999999568,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+660,4,6,0,False,4.48e-15,6.719999999774223e-11,0.9999999999328,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+661,4,7,0,False,2.88e-15,4.3199999999066944e-11,0.9999999999568,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+662,4,7,0,True,1.24773e-08,0.00018714198792079114,0.9998128580120792,appeared once in the realized nominal sample
+663,4,7,0,True,5.39068612500001e-07,0.008053427353538496,0.9919465726464615,appeared once in the realized nominal sample
+664,4,7,0,True,5.65013735e-08,0.0008471615822765257,0.9991528384177235,appeared once in the realized nominal sample
+665,4,7,0,False,2.9417472e-11,4.4126198265039315e-07,0.9999995587380174,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+666,4,7,0,True,7.4844e-08,0.0011220300949880563,0.998877969905012,appeared once in the realized nominal sample
+667,4,7,0,True,2.444904e-08,0.0003666683652012997,0.9996333316347987,appeared once in the realized nominal sample
+668,4,7,0,True,8.5995e-09,0.0001289841813797434,0.9998710158186203,appeared once in the realized nominal sample
+669,4,7,0,True,6.14061e-07,0.009168627268975089,0.990831372731025,appeared once in the realized nominal sample
+670,4,7,0,True,8.80308e-09,0.00013203748286538062,0.9998679625171346,appeared once in the realized nominal sample
+671,4,7,0,False,6.4e-16,9.599999999953925e-12,0.9999999999904,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+672,4,7,0,False,1.6e-15,2.3999999999712016e-11,0.999999999976,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+673,4,7,0,False,3.52e-15,5.279999999860617e-11,0.9999999999472,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+674,4,7,0,False,2.88e-15,4.3199999999066944e-11,0.9999999999568,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+675,4,7,0,False,1.152e-13,1.7279999985071078e-09,0.999999998272,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+676,4,7,0,False,3.2e-14,4.799999998848078e-10,0.99999999952,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+677,4,7,0,False,3e-14,4.499999998987567e-10,0.99999999955,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+678,4,7,0,False,1.6e-15,2.3999999999712016e-11,0.999999999976,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+679,4,7,0,False,2e-15,2.999999999955003e-11,0.99999999997,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+680,4,7,0,False,3.52e-15,5.279999999860617e-11,0.9999999999472,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+681,4,7,0,False,3e-14,4.499999998987567e-10,0.99999999955,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+682,4,7,0,False,2e-15,2.999999999955003e-11,0.99999999997,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+683,4,7,0,False,3e-14,4.499999998987567e-10,0.99999999955,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+684,4,7,0,False,4.1472e-12,6.22079980652114e-08,0.9999999377920019,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+685,4,7,0,False,1.152e-12,1.727999985071075e-08,0.9999999827200001,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+686,4,7,0,False,1.08e-12,1.619999986878875e-08,0.9999999838000001,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+687,4,7,0,False,4.1472e-12,6.22079980652114e-08,0.9999999377920019,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+688,4,7,0,False,1.663488e-10,2.4952288871187613e-06,0.9999975047711129,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+689,4,7,0,False,4.6208e-11,6.931197598084022e-07,0.9999993068802402,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+690,4,7,0,True,9.828225e-08,0.0014731476735752546,0.9985268523264248,appeared once in the realized nominal sample
+691,5,1,0,False,4.32e-15,6.479999999790061e-11,0.9999999999352,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+692,5,1,0,False,4.32e-15,6.479999999790061e-11,0.9999999999352,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+693,5,1,0,False,4.32e-15,6.479999999790061e-11,0.9999999999352,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+694,5,1,0,True,7.54600000000001e-10,1.1318935944631822e-05,0.9999886810640554,appeared once in the realized nominal sample
+695,5,1,0,True,4.05559639534883e-08,0.0006081544706982047,0.9993918455293018,appeared once in the realized nominal sample
+696,5,1,0,True,3.1130892e-09,4.669524781566064e-05,0.9999533047521844,appeared once in the realized nominal sample
+697,5,1,0,True,1.88581365e-06,0.027890893584212435,0.9721091064157875,appeared once in the realized nominal sample
+698,5,1,0,True,4.789368e-09,7.183793970366049e-05,0.9999281620602963,appeared once in the realized nominal sample
+699,5,1,0,True,6.63022674418604e-08,0.0009940396595227504,0.9990059603404773,appeared once in the realized nominal sample
+700,5,1,0,True,1.84172965116279e-08,0.00027622129409022163,0.9997237787059098,appeared once in the realized nominal sample
+701,5,1,0,True,6.9944472e-09,0.00010491120480154359,0.9998950887951985,appeared once in the realized nominal sample
+702,5,1,0,False,1.1232e-14,1.684799999858082e-10,0.99999999983152,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+703,5,1,0,False,4.32e-15,6.479999999790061e-11,0.9999999999352,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+704,5,1,0,False,1.728e-13,2.591999996640992e-09,0.999999997408,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+705,5,1,0,False,6.2208e-12,9.33119956467257e-08,0.9999999066880043,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+706,5,1,0,False,4.04227584e-09,6.063229951037427e-05,0.9999393677004896,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+707,5,1,0,False,2.495232e-10,3.742840996020125e-06,0.999996257159004,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+708,5,1,0,True,3.7253034e-06,0.054347066434749264,0.9456529335652507,appeared once in the realized nominal sample
+709,5,1,0,True,8.030309625e-07,0.01197321302007559,0.9880267869799244,appeared once in the realized nominal sample
+710,5,1,0,False,3.12e-15,4.679999999890495e-11,0.9999999999532,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+711,5,1,0,True,4.617e-09,6.92526020877114e-05,0.9999307473979123,appeared once in the realized nominal sample
+712,5,1,0,False,9.6e-16,1.4399999999896331e-11,0.9999999999856,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+713,5,1,0,False,2.4e-15,3.5999999999352045e-11,0.999999999964,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+714,5,1,0,False,5.28e-15,7.91999999968639e-11,0.9999999999208,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+715,5,1,0,False,4.32e-15,6.479999999790061e-11,0.9999999999352,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+716,5,1,0,False,4.8e-14,7.19999999740817e-10,0.99999999928,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+717,5,1,0,False,4.5e-14,6.749999997722027e-10,0.999999999325,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+718,5,1,0,False,2.4e-15,3.5999999999352045e-11,0.999999999964,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+719,5,1,0,False,3e-15,4.499999999898756e-11,0.999999999955,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+720,5,1,0,False,5.28e-15,7.91999999968639e-11,0.9999999999208,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+721,5,1,0,False,3e-15,4.499999999898756e-11,0.999999999955,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+722,5,1,0,False,1.728e-12,2.5919999664099198e-08,0.9999999740800003,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+723,5,1,0,False,2.495232e-10,3.742840996020125e-06,0.999996257159004,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+724,5,1,0,False,6.9312e-11,1.0396794595689674e-06,0.9999989603205405,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+725,5,2,0,False,5.28e-15,7.91999999968639e-11,0.9999999999208,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+726,5,2,0,False,9.6e-16,1.4399999999896331e-11,0.9999999999856,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+727,5,2,0,False,5.28e-15,7.91999999968639e-11,0.9999999999208,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+728,5,2,0,True,3.3549516e-07,0.005019786791785373,0.9949802132082146,appeared once in the realized nominal sample
+729,5,2,0,True,2.7449604e-07,0.004108976126321633,0.9958910238736783,appeared once in the realized nominal sample
+730,5,2,0,True,2.59684526315789e-10,3.895260308696467e-06,0.9999961047396912,appeared once in the realized nominal sample
+731,5,2,0,True,2.40593023255814e-08,0.0003608244264284132,0.9996391755735716,appeared once in the realized nominal sample
+732,5,2,0,True,2.5088778e-07,0.0037562447686969643,0.996243755231303,appeared once in the realized nominal sample
+733,5,2,0,False,1.3728e-14,2.0591999997879988e-10,0.99999999979408,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+734,5,2,0,False,5.28e-15,7.91999999968639e-11,0.9999999999208,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+735,5,2,0,False,2.112e-13,3.167999994982222e-09,0.999999996832,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+736,5,2,0,False,7.6032e-12,1.1404799349696067e-07,0.9999998859520065,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+737,5,2,0,False,4.94055936e-09,7.410564462412433e-05,0.9999258943553758,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+738,5,2,0,True,7.0785792e-08,0.0010612234213058453,0.9989387765786941,appeared once in the realized nominal sample
+739,5,2,0,False,3.049728e-10,4.574581537267532e-06,0.9999954254184628,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+740,5,2,0,True,2.520882e-07,0.003774183275634552,0.9962258167243655,appeared once in the realized nominal sample
+741,5,2,0,True,1.842183e-06,0.027254477883662604,0.9727455221163374,appeared once in the realized nominal sample
+742,5,2,0,True,6.3862344e-07,0.009533618797479316,0.9904663812025207,appeared once in the realized nominal sample
+743,5,2,0,True,3.7253034e-06,0.054347066434749264,0.9456529335652507,appeared once in the realized nominal sample
+744,5,2,0,False,2.496e-15,3.743999999929917e-11,0.99999999996256,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+745,5,2,0,False,1.248e-13,1.8719999982479245e-09,0.999999998128,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+746,5,2,0,False,1.17e-13,1.75499999846009e-09,0.999999998245,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+747,5,2,0,False,7.8e-15,1.1699999999315594e-10,0.999999999883,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+748,5,2,0,False,4.4928e-12,6.739199772931059e-08,0.9999999326080022,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+749,5,2,0,False,1.802112e-10,2.703164346688244e-06,0.9999972968356533,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+750,5,2,0,False,9.6e-16,1.4399999999896331e-11,0.9999999999856,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+751,5,2,0,False,2.4e-15,3.5999999999352045e-11,0.999999999964,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+752,5,2,0,False,5.28e-15,7.91999999968639e-11,0.9999999999208,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+753,5,2,0,False,1.2e-15,1.799999999983801e-11,0.999999999982,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+754,5,2,0,False,4.8e-14,7.19999999740817e-10,0.99999999928,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+755,5,2,0,False,2.4e-15,3.5999999999352045e-11,0.999999999964,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+756,5,2,0,False,4.32e-14,6.47999999790062e-10,0.999999999352,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+757,5,2,0,False,1.728e-12,2.5919999664099198e-08,0.9999999740800003,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+758,5,2,0,False,8.64e-14,1.2959999991602482e-09,0.999999998704,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+759,5,2,0,False,3.4656e-12,5.198399864892198e-08,0.9999999480160013,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+760,5,2,0,False,1.7328e-12,2.599199966223049e-08,0.9999999740080003,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+761,5,2,0,False,1.802112e-10,2.703164346688244e-06,0.9999972968356533,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+762,5,2,0,False,6.9312e-11,1.0396794595689674e-06,0.9999989603205405,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+763,5,2,0,False,3.4656e-12,5.198399864892198e-08,0.9999999480160013,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+764,5,3,0,False,2.4e-15,3.5999999999352045e-11,0.999999999964,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+765,5,3,0,False,9.6e-16,1.4399999999896331e-11,0.9999999999856,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+766,5,3,0,False,2.4e-15,3.5999999999352045e-11,0.999999999964,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+767,5,3,0,True,1.432939921875e-08,0.0002149178916616284,0.9997850821083384,appeared once in the realized nominal sample
+768,5,3,0,True,5.2997175e-08,0.0007946417509490271,0.999205358249051,appeared once in the realized nominal sample
+769,5,3,0,True,1.64634525e-07,0.0024664713270329637,0.9975335286729671,appeared once in the realized nominal sample
+770,5,3,0,True,1.065368304e-08,0.00015979247827301022,0.999840207521727,appeared once in the realized nominal sample
+771,5,3,0,True,2.1347610075e-07,0.0031970204647458855,0.9968029795352541,appeared once in the realized nominal sample
+772,5,3,0,True,2.99335500000001e-08,0.00044890246984296943,0.999551097530157,appeared once in the realized nominal sample
+773,5,3,0,True,4.715055830016e-08,0.0007070083429133212,0.9992929916570866,appeared once in the realized nominal sample
+774,5,3,0,True,9.72840375e-07,0.014486656568607996,0.985513343431392,appeared once in the realized nominal sample
+775,5,3,0,False,1e-15,1.499999999988751e-11,0.999999999985,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+776,5,3,0,False,3.6e-14,5.399999998542097e-10,0.99999999946,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+777,5,3,0,False,1.5552e-12,2.332799972792035e-08,0.9999999766720002,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+778,5,3,0,False,6.24e-15,9.35999999956198e-11,0.9999999999064,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+779,5,3,0,False,9.6e-14,1.439999998963269e-09,0.99999999856,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+780,5,3,0,False,9e-14,1.3499999990888106e-09,0.99999999865,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+781,5,3,0,False,5.59872e-11,8.398076473848694e-07,0.9999991601923526,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+782,5,3,0,False,3.456e-12,5.1839998656396806e-08,0.9999999481600014,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+783,5,3,0,False,2.2457088e-09,3.3685064683291757e-05,0.9999663149353167,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+784,5,3,0,False,1.38624e-10,2.0793578382766178e-06,0.9999979206421618,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+785,5,3,0,True,7.076322e-07,0.010558351880887206,0.9894416481191128,appeared once in the realized nominal sample
+786,5,3,0,True,7.64242776e-07,0.011398188795379627,0.9886018112046204,appeared once in the realized nominal sample
+787,5,3,0,True,1.08074736e-06,0.016080524539552773,0.9839194754604472,appeared once in the realized nominal sample
+788,5,3,0,True,5.1581124e-06,0.07445440743099656,0.9255455925690035,appeared once in the realized nominal sample
+789,5,3,0,True,1.76849568e-07,0.002649228339040511,0.9973507716609595,appeared once in the realized nominal sample
+790,5,3,0,False,3.12e-15,4.679999999890495e-11,0.9999999999532,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+791,5,3,0,True,6.3900252e-09,9.584578480549655e-05,0.9999041542151945,appeared once in the realized nominal sample
+792,5,3,0,False,9.6e-16,1.4399999999896331e-11,0.9999999999856,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+793,5,4,0,False,9.6e-16,1.4399999999896331e-11,0.9999999999856,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+794,5,4,0,False,9.6e-16,1.4399999999896331e-11,0.9999999999856,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+795,5,4,0,True,1.06203825e-07,0.0015917892171100603,0.99840821078289,appeared once in the realized nominal sample
+796,5,4,0,True,1.17306e-07,0.0017580429321349407,0.998241957067865,appeared once in the realized nominal sample
+797,5,4,0,True,2.2931493984e-07,0.003433815416838188,0.9965661845831618,appeared once in the realized nominal sample
+798,5,4,0,True,1.49688e-09,2.2452947945595976e-05,0.9999775470520544,appeared once in the realized nominal sample
+799,5,4,0,False,6.2208e-13,9.331199956467255e-09,0.9999999906688001,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+800,5,4,0,False,2.496e-15,3.743999999929917e-11,0.99999999996256,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+801,5,4,0,False,9.6e-16,1.4399999999896331e-11,0.9999999999856,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+802,5,4,0,False,3.84e-14,5.759999998341231e-10,0.999999999424,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+803,5,4,0,False,3.6e-14,5.399999998542097e-10,0.99999999946,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+804,5,4,0,False,2.239488e-11,3.3592314358156967e-07,0.9999996640768564,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+805,5,4,0,False,1.3824e-12,2.0735999785023486e-08,0.9999999792640002,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+806,5,4,0,False,8.9828352e-10,1.347416202871523e-05,0.9999865258379713,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+807,5,4,0,False,5.54496e-11,8.317436541241151e-07,0.9999991682563458,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+808,5,4,0,True,1.9513494e-07,0.002922744826181991,0.997077255173818,appeared once in the realized nominal sample
+809,5,4,0,True,5.17621104e-08,0.0007761303310173833,0.9992238696689826,appeared once in the realized nominal sample
+810,5,4,0,True,9.690912e-10,1.4536262354558052e-05,0.9999854637376454,appeared once in the realized nominal sample
+811,5,4,0,True,3.04210368e-08,0.0004562114628302909,0.9995437885371697,appeared once in the realized nominal sample
+812,5,5,0,True,1.167474e-08,0.00017510576821728067,0.9998248942317827,appeared once in the realized nominal sample
+813,5,5,0,True,1.0144721664e-08,0.00015215924833901793,0.999847840751661,appeared once in the realized nominal sample
+814,5,5,0,True,2.04687e-07,0.003065596747010211,0.9969344032529898,appeared once in the realized nominal sample
+815,5,5,0,False,2.496e-15,3.743999999929917e-11,0.99999999996256,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+816,5,5,0,False,9.984e-14,1.4975999988786718e-09,0.9999999985024,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+817,5,5,0,False,9.6e-16,1.4399999999896331e-11,0.9999999999856,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+818,5,5,0,False,3.84e-14,5.759999998341231e-10,0.999999999424,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+819,5,5,0,False,3.59424e-12,5.3913598546758775e-08,0.9999999460864014,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+820,5,5,0,False,1.4416896e-10,2.162532061880055e-06,0.9999978374679381,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+821,5,5,0,True,9.64953e-08,0.0014463825488792168,0.9985536174511208,appeared once in the realized nominal sample
+822,5,5,0,True,4.002768e-09,6.0039717664171206e-05,0.9999399602823358,appeared once in the realized nominal sample
+823,5,5,0,False,2.4e-15,3.5999999999352045e-11,0.999999999964,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+824,5,5,0,False,2.3232e-14,3.4847999993928486e-10,0.99999999965152,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+825,5,5,0,False,7.6032e-13,1.1404799934969604e-08,0.9999999885952001,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+826,5,5,0,False,2.112e-13,3.167999994982222e-09,0.999999996832,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+827,5,5,0,False,1.98e-13,2.9699999955898434e-09,0.99999999703,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+828,5,5,0,False,1.32e-14,1.9799999998039927e-10,0.999999999802,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+829,5,5,0,False,2.3232e-14,3.4847999993928486e-10,0.99999999965152,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+830,5,5,0,False,7.6032e-13,1.1404799934969604e-08,0.9999999885952001,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+831,5,5,0,False,2.737152e-11,4.1057271572061847e-07,0.9999995894272843,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+832,5,5,0,False,7.6032e-12,1.1404799349696067e-07,0.9999998859520065,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+833,5,5,0,False,1.09790208e-09,1.6468395603524734e-05,0.9999835316043965,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+834,5,5,0,False,3.049728e-10,4.574581537267532e-06,0.9999954254184628,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+835,5,5,0,True,6.9476616e-07,0.010367380382383344,0.9896326196176166,appeared once in the realized nominal sample
+836,5,5,0,False,3.456e-15,5.183999999865639e-11,0.99999999994816,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+837,5,5,0,False,8.64e-15,1.2959999999160249e-10,0.9999999998704,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+838,5,5,0,False,4.32e-15,6.479999999790061e-11,0.9999999999352,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+839,5,5,0,False,1.728e-13,2.591999996640992e-09,0.999999997408,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+840,5,5,0,False,8.64e-15,1.2959999999160249e-10,0.9999999998704,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+841,5,5,0,False,1.5552e-13,2.3327999972792037e-09,0.9999999976672,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+842,5,6,0,False,5.376e-15,8.06399999967488e-11,0.99999999991936,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+843,5,6,0,False,5.376e-15,8.06399999967488e-11,0.99999999991936,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+844,5,6,0,True,6.2272287e-07,0.009297355773814625,0.9907026442261854,appeared once in the realized nominal sample
+845,5,6,0,True,1.389257521344e-07,0.0020817166429049918,0.997918283357095,appeared once in the realized nominal sample
+846,5,6,0,True,1.9649952e-07,0.0029431534965211493,0.9970568465034788,appeared once in the realized nominal sample
+847,5,6,0,False,3.456e-15,5.183999999865639e-11,0.99999999994816,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+848,5,6,0,False,5.376e-15,8.06399999967488e-11,0.99999999991936,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+849,5,6,0,False,9.6e-16,1.4399999999896331e-11,0.9999999999856,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+850,5,6,0,False,9e-14,1.3499999990888106e-09,0.99999999865,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+851,5,6,0,False,3.456e-12,5.1839998656396806e-08,0.9999999481600014,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+852,5,6,0,True,1.4309568e-09,2.146412165780172e-05,0.9999785358783422,appeared once in the realized nominal sample
+853,5,6,0,False,1.92e-15,2.8799999999585308e-11,0.9999999999712,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+854,5,6,0,False,1.056e-14,1.5839999998745554e-10,0.9999999998416,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+855,5,6,0,False,3.456e-13,5.183999986563968e-09,0.999999994816,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+856,5,6,0,False,9.6e-14,1.439999998963269e-09,0.99999999856,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+857,5,6,0,False,9e-14,1.3499999990888106e-09,0.99999999865,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+858,5,6,0,False,6e-15,8.999999999595027e-11,0.99999999991,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+859,5,6,0,False,1.056e-14,1.5839999998745554e-10,0.9999999998416,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+860,5,6,0,False,6e-15,8.999999999595027e-11,0.99999999991,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+861,5,6,0,False,1.24416e-11,1.8662398258690334e-07,0.9999998133760174,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+862,5,6,0,False,3.456e-12,5.1839998656396806e-08,0.9999999481600014,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+863,5,6,0,False,3.24e-12,4.8599998819098745e-08,0.9999999514000012,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+864,5,6,0,False,1.24416e-11,1.8662398258690334e-07,0.9999998133760174,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+865,5,6,0,False,4.990464e-10,7.485667984115451e-06,0.9999925143320159,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+866,5,6,0,False,1.38624e-10,2.0793578382766178e-06,0.9999979206421618,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+867,5,6,0,True,3.809025e-08,0.0005711905694029685,0.999428809430597,appeared once in the realized nominal sample
+868,5,6,0,True,1.5439248e-07,0.002313207780550598,0.9976867922194494,appeared once in the realized nominal sample
+869,5,6,0,False,1.056e-14,1.5839999998745554e-10,0.9999999998416,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+870,5,6,0,False,5.28e-15,7.91999999968639e-11,0.9999999999208,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+871,5,6,0,False,3.456e-15,5.183999999865639e-11,0.99999999994816,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+872,5,6,0,False,5.376e-15,8.06399999967488e-11,0.99999999991936,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+873,5,7,0,True,9.2169e-08,0.0013815798023903787,0.9986184201976096,appeared once in the realized nominal sample
+874,5,7,0,True,4.147605e-08,0.0006219472734655075,0.9993780527265345,appeared once in the realized nominal sample
+875,5,7,0,False,7.68e-16,1.1519999999933649e-11,0.99999999998848,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+876,5,7,0,False,1.92e-15,2.8799999999585308e-11,0.9999999999712,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+877,5,7,0,False,4.224e-15,6.335999999799289e-11,0.99999999993664,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+878,5,7,0,False,3.456e-15,5.183999999865639e-11,0.99999999994816,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+879,5,7,0,False,3.6e-14,5.399999998542097e-10,0.99999999946,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+880,5,7,0,False,1.3824e-13,2.0735999978502345e-09,0.9999999979264,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+881,5,7,0,False,3.84e-14,5.759999998341231e-10,0.999999999424,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+882,5,7,0,False,3.6e-14,5.399999998542097e-10,0.99999999946,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+883,5,7,0,False,1.92e-15,2.8799999999585308e-11,0.9999999999712,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+884,5,7,0,False,2.4e-15,3.5999999999352045e-11,0.999999999964,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+885,5,7,0,False,4.224e-15,6.335999999799289e-11,0.99999999993664,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+886,5,7,0,False,2.4e-15,3.5999999999352045e-11,0.999999999964,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+887,5,7,0,False,3.6e-14,5.399999998542097e-10,0.99999999946,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+888,5,7,0,False,4.97664e-12,7.464959721390444e-08,0.9999999253504028,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+889,5,7,0,False,1.3824e-12,2.0735999785023486e-08,0.9999999792640002,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+890,5,7,0,False,1.296e-12,1.9439999811055796e-08,0.9999999805600002,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+891,5,7,0,False,4.97664e-12,7.464959721390444e-08,0.9999999253504028,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+892,5,7,0,False,1.9961856e-10,2.994273917451762e-06,0.9999970057260825,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+893,5,7,0,False,5.54496e-11,8.317436541241151e-07,0.9999991682563458,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+894,5,7,0,True,3.46275e-08,0.0005192776376680242,0.999480722362332,appeared once in the realized nominal sample
+895,5,7,0,True,3.859812e-07,0.005772990992916554,0.9942270090070835,appeared once in the realized nominal sample
+896,5,7,0,True,2.347488e-08,0.00035206121603361014,0.9996479387839664,appeared once in the realized nominal sample
+897,5,7,0,False,3.456e-15,5.183999999865639e-11,0.99999999994816,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+898,6,1,0,True,1.91850365794573e-09,2.8777140826929944e-05,0.9999712228591731,appeared once in the realized nominal sample
+899,6,1,0,False,1.93536e-12,2.9030399578646036e-08,0.9999999709696005,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+900,6,1,0,False,4.8384e-14,7.257599997366537e-10,0.99999999927424,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+901,6,1,0,False,1.93536e-12,2.9030399578646036e-08,0.9999999709696005,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+902,6,1,0,False,5.376e-13,8.06399996748812e-09,0.9999999919360001,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+903,6,1,0,False,3.2e-14,4.799999998848078e-10,0.99999999952,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+904,6,1,0,False,3.04e-12,4.559999896038933e-08,0.999999954400001,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+905,6,1,0,False,1.9e-13,2.8499999959390208e-09,0.99999999715,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+906,6,1,0,False,1.0944e-10,1.6415986526652856e-06,0.9999983584013473,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+907,6,1,0,False,7.1136e-13,1.0670399943075077e-08,0.9999999893296001,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+908,6,1,0,False,1.0944e-11,1.6415998652664624e-07,0.9999998358400135,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+909,6,1,0,False,3.93984e-10,5.90974253856694e-06,0.9999940902574614,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+910,6,1,0,True,5.80580055e-06,0.08340289108819882,0.9165971089118012,appeared once in the realized nominal sample
+911,6,1,0,False,2.560108032e-07,0.0038327985447245906,0.9961672014552754,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+912,6,1,0,True,3.73349088e-07,0.005584585268264515,0.9944154147317354,appeared once in the realized nominal sample
+913,6,1,0,False,1.5803136e-08,0.00023701894844287827,0.9997629810515571,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+914,6,1,0,True,2.409100288e-08,0.0003612997630681072,0.9996387002369319,appeared once in the realized nominal sample
+915,6,1,0,True,1.677766272e-06,0.024852478368095753,0.9751475216319042,appeared once in the realized nominal sample
+916,6,1,0,True,8.78829952e-08,0.001317376482679471,0.9986826235173205,appeared once in the realized nominal sample
+917,6,1,0,True,7.19042688e-08,0.0010779826296086008,0.9989220173703914,appeared once in the realized nominal sample
+918,6,1,0,True,1.14912e-10,1.7236785145635176e-06,0.9999982763214854,appeared once in the realized nominal sample
+919,6,1,0,False,1.52e-13,2.2799999974009737e-09,0.99999999772,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+920,6,1,0,False,3.344e-13,5.0159999874207104e-09,0.999999994984,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+921,6,1,0,False,3.04e-12,4.559999896038933e-08,0.999999954400001,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+922,6,1,0,False,2.85e-12,4.2749999086279695e-08,0.9999999572500009,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+923,6,1,0,False,1.52e-13,2.2799999974009737e-09,0.99999999772,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+924,6,1,0,False,1.9e-13,2.8499999959390208e-09,0.99999999715,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+925,6,1,0,False,3.344e-13,5.0159999874207104e-09,0.999999994984,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+926,6,1,0,False,1.9e-13,2.8499999959390208e-09,0.99999999715,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+927,6,1,0,False,1.5803136e-08,0.00023701894844287827,0.9997629810515571,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+928,6,1,0,False,4.38976e-09,6.58442323179004e-05,0.9999341557676821,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+929,6,1,0,True,1.2996e-07,0.0019475012803159475,0.998052498719684,appeared once in the realized nominal sample
+930,6,1,0,True,1.0188864e-06,0.015167106809718566,0.9848328931902814,appeared once in the realized nominal sample
+931,6,2,0,False,5.9136e-14,8.870399996066063e-10,0.99999999911296,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+932,6,2,0,False,2.36544e-12,3.548159937057e-08,0.9999999645184007,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+933,6,2,0,False,7.90400000000001e-12,1.1855999297223217e-07,0.9999998814400071,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+934,6,2,0,False,5.9136e-14,8.870399996066063e-10,0.99999999911296,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+935,6,2,0,False,2.84544e-10,4.268150892025304e-06,0.999995731849108,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+936,6,2,0,True,1.7561016e-08,0.0002633805515640691,0.999736619448436,appeared once in the realized nominal sample
+937,6,2,0,False,2.736e-12,4.103999915791536e-08,0.9999999589600008,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+938,6,2,0,False,1.0944e-10,1.6415986526652856e-06,0.9999983584013473,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+939,6,2,0,False,8.6944e-13,1.3041599914964003e-08,0.9999999869584001,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+940,6,2,0,True,6.741504e-10,1.0112204874720191e-05,0.9999898877951253,appeared once in the realized nominal sample
+941,6,2,0,False,1.3376e-11,2.006399798731384e-07,0.9999997993600201,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+942,6,2,0,False,4.81536e-10,7.223013915648452e-06,0.9999927769860844,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+943,6,2,0,False,3.129020928e-07,0.004682534716690289,0.9953174652833097,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+944,6,2,0,False,1.9314944e-08,0.00028968219680570035,0.9997103178031943,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+945,6,2,0,True,4.62241728e-08,0.0006931222877182003,0.9993068777122818,appeared once in the realized nominal sample
+946,6,2,0,True,2.70409216e-09,4.056055985308953e-05,0.9999594394401469,appeared once in the realized nominal sample
+947,6,2,0,True,2.21243904e-07,0.0033131582652019802,0.996686841734798,appeared once in the realized nominal sample
+948,6,2,0,False,8.6944e-13,1.3041599914964003e-08,0.9999999869584001,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+949,6,2,0,False,7.904e-12,1.1855999297223202e-07,0.9999998814400071,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+950,6,2,0,False,7.41e-12,1.1114999382325078e-07,0.9999998888500061,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+951,6,2,0,False,4.94e-13,7.409999972547781e-09,0.99999999259,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+952,6,2,0,False,1.1413376e-08,0.0001711859869835228,0.9998288140130165,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+953,6,2,0,True,2.907200868e-06,0.042670916189650215,0.9573290838103498,appeared once in the realized nominal sample
+954,6,2,0,False,6.08e-14,9.119999995841558e-10,0.999999999088,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+955,6,2,0,False,1.52e-13,2.2799999974009737e-09,0.99999999772,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+956,6,2,0,False,7.6e-14,1.1399999993502434e-09,0.99999999886,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+957,6,2,0,False,3.04e-12,4.559999896038933e-08,0.999999954400001,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+958,6,2,0,False,1.52e-13,2.2799999974009737e-09,0.99999999772,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+959,6,2,0,False,2.736e-12,4.103999915791536e-08,0.9999999589600008,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+960,6,2,0,False,1.0944e-10,1.6415986526652856e-06,0.9999983584013473,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+961,6,2,0,False,5.472e-12,8.207999663166144e-08,0.9999999179200034,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+962,6,2,0,False,1.09744e-10,1.6461586451696984e-06,0.9999983538413548,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+963,6,2,0,False,4.38976e-09,6.58442323179004e-05,0.9999341557676821,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+964,6,2,0,False,2.19488e-10,3.2923145806817677e-06,0.9999967076854194,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+965,6,3,0,False,2.688e-14,4.0319999991872026e-10,0.9999999995968,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+966,6,3,0,False,1.0752e-12,1.612799986995248e-08,0.9999999838720002,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+967,6,3,0,False,9.8496e-11,1.4774389086588215e-06,0.9999985225610913,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+968,6,3,0,False,6.08e-12,9.119999584155737e-08,0.9999999088000041,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+969,6,3,0,False,2.688e-14,4.0319999991872026e-10,0.9999999995968,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+970,6,3,0,False,2.688e-14,4.0319999991872026e-10,0.9999999995968,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+971,6,3,0,False,2.28e-12,3.4199999415218997e-08,0.9999999658000006,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+972,6,3,0,False,3.545856e-09,5.318642564620851e-05,0.9999468135743538,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+973,6,3,0,False,2.1888e-10,3.2831946106640902e-06,0.9999967168053894,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+974,6,3,0,True,6.72864192e-08,0.0010087871537381543,0.9989912128462618,appeared once in the realized nominal sample
+975,6,3,0,True,2.96436672e-08,0.0004445561702006965,0.9995554438297993,appeared once in the realized nominal sample
+976,6,3,0,False,6.333333333333331e-14,9.499999995487798e-10,0.99999999905,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+977,6,3,0,False,2.28e-12,3.4199999415218997e-08,0.9999999658000006,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+978,6,3,0,True,1.3333896e-07,0.001998085697110231,0.9980019143028898,appeared once in the realized nominal sample
+979,6,3,0,False,3.952e-13,5.92799998243058e-09,0.999999994072,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+980,6,3,0,False,6.08e-12,9.119999584155737e-08,0.9999999088000041,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+981,6,3,0,False,5.7e-12,8.549999634511877e-08,0.9999999145000037,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+982,6,3,0,False,2.1888e-10,3.2831946106640902e-06,0.9999967168053894,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+983,6,3,0,True,3.94221025000001e-06,0.05741885729302639,0.9425811427069736,appeared once in the realized nominal sample
+984,6,3,0,False,1.42228224e-07,0.0021311493812916,0.9978688506187084,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+985,6,3,0,False,8.77952e-09,0.00013168412946188313,0.9998683158705381,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+986,6,3,0,True,3.63888e-08,0.0005456830707393786,0.9994543169292606,appeared once in the realized nominal sample
+987,6,3,0,False,3.952e-13,5.92799998243058e-09,0.999999994072,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+988,6,3,0,False,1.976e-13,2.9639999956076454e-09,0.999999997036,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+989,6,3,0,False,3.952e-13,5.92799998243058e-09,0.999999994072,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+990,6,3,0,False,6.08e-14,9.119999995841558e-10,0.999999999088,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+991,6,3,0,True,9.959268e-08,0.0014927749757613676,0.9985072250242386,appeared once in the realized nominal sample
+992,6,4,0,False,1.0752e-14,1.6127999998699526e-10,0.99999999983872,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+993,6,4,0,False,4.3008e-13,6.451199979192398e-09,0.9999999935488,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+994,6,4,0,False,1.0752e-14,1.6127999998699526e-10,0.99999999983872,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+995,6,4,0,False,1.4183424e-09,2.1274909700986442e-05,0.9999787250902991,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+996,6,4,0,True,1.00355112e-07,0.0015041943195131767,0.9984958056804868,appeared once in the realized nominal sample
+997,6,4,0,True,3.85596288e-09,5.783777064316096e-05,0.9999421622293568,appeared once in the realized nominal sample
+998,6,4,0,True,1.321488e-08,0.00019820355638902696,0.999801796443611,appeared once in the realized nominal sample
+999,6,4,0,False,3.93984e-11,5.909758253853598e-07,0.9999994090241746,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1000,6,4,0,False,1.5808e-13,2.3711999971888923e-09,0.9999999976288,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1001,6,4,0,False,6.08e-14,9.119999995841558e-10,0.999999999088,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1002,6,4,0,False,2.432e-12,3.6479999334649174e-08,0.9999999635200006,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1003,6,4,0,False,2.28e-12,3.4199999415218997e-08,0.9999999658000006,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1004,6,4,0,False,1.4183424e-09,2.1274909700986442e-05,0.9999787250902991,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1005,6,4,0,False,8.7552e-11,1.3132791377056884e-06,0.9999986867208623,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1006,6,4,0,False,5.68912896e-08,0.0008530053521893763,0.9991469946478106,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1007,6,4,0,False,3.511808e-09,5.267573267736712e-05,0.9999473242673226,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1008,6,4,0,True,2.4445476e-05,0.3069732095855639,0.693026790414436,appeared once in the realized nominal sample
+1009,6,4,0,True,2.2470084e-05,0.2861304574426348,0.7138695425573651,appeared once in the realized nominal sample
+1010,6,4,0,True,4.025355048e-06,0.05859368999245079,0.9414063100075492,appeared once in the realized nominal sample
+1011,6,4,0,True,2.17362432e-07,0.0032551273821182273,0.9967448726178818,appeared once in the realized nominal sample
+1012,6,4,0,True,8.409856e-09,0.00012613988422616773,0.9998738601157738,appeared once in the realized nominal sample
+1013,6,4,0,True,6.261663408e-06,0.08964918719571445,0.9103508128042855,appeared once in the realized nominal sample
+1014,6,5,0,False,2.79552e-14,4.193279999120879e-10,0.999999999580672,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1015,6,5,0,False,6.3232e-12,9.484799550222846e-08,0.9999999051520045,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1016,6,5,0,False,2.432e-12,3.6479999334649174e-08,0.9999999635200006,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1017,6,5,0,False,2.28e-12,3.4199999415218997e-08,0.9999999658000006,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1018,6,5,0,True,1.300266e-08,0.0001950208822229864,0.999804979117777,appeared once in the realized nominal sample
+1019,6,5,0,False,4.81536e-11,7.223037391559195e-07,0.9999992776962608,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1020,6,5,0,False,1.3376e-11,2.006399798731384e-07,0.9999997993600201,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1021,6,5,0,False,2.79552e-14,4.193279999120879e-10,0.999999999580672,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1022,6,5,0,True,6.1236e-08,0.0009181182993670241,0.999081881700633,appeared once in the realized nominal sample
+1023,6,5,0,True,3.901365e-07,0.005834958758091631,0.9941650412419084,appeared once in the realized nominal sample
+1024,6,5,0,False,2.276352e-10,3.414522170894536e-06,0.9999965854778291,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1025,6,5,0,True,1.93171176e-07,0.0028933740216177816,0.9971066259783822,appeared once in the realized nominal sample
+1026,6,5,0,False,1.7335296e-09,2.600260594891983e-05,0.9999739973940511,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1027,6,5,0,False,4.81536e-10,7.223013915648452e-06,0.9999927769860844,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1028,6,5,0,True,9.824976e-08,0.0014726610413473738,0.9985273389586526,appeared once in the realized nominal sample
+1029,6,5,0,False,6.3232e-12,9.484799550222846e-08,0.9999999051520045,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1030,6,5,0,False,2.736e-13,4.103999991579153e-09,0.999999995896,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1031,6,5,0,False,2.276352e-10,3.414522170894536e-06,0.9999965854778291,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1032,6,5,0,False,9.1307008e-09,0.00013695113396243716,0.9998630488660376,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1033,6,5,0,False,1.47136e-12,2.2070399756464962e-08,0.9999999779296003,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1034,6,5,0,False,1.3376e-11,2.006399798731384e-07,0.9999997993600201,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1035,6,5,0,False,8.36e-13,1.2539999921379441e-08,0.9999999874600001,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1036,6,5,0,False,1.47136e-12,2.2070399756464962e-08,0.9999999779296003,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1037,6,5,0,True,6.86830848e-07,0.010249577636102226,0.9897504223638978,appeared once in the realized nominal sample
+1038,6,5,0,True,1.9231263744e-06,0.02843482297737041,0.9715651770226296,appeared once in the realized nominal sample
+1039,6,5,0,False,6.95337984e-08,0.001042463269507238,0.9989575367304928,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1040,6,5,0,False,1.9314944e-08,0.00028968219680570035,0.9997103178031943,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1041,6,5,0,True,1.1770044e-07,0.0017639491137198492,0.9982360508862802,appeared once in the realized nominal sample
+1042,6,5,0,False,2.1888e-13,3.2831999946106577e-09,0.9999999967168,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1043,6,5,0,False,5.472e-13,8.207999966316615e-09,0.999999991792,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1044,6,5,0,False,2.736e-13,4.103999991579153e-09,0.999999995896,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1045,6,5,0,False,5.472e-13,8.207999966316615e-09,0.999999991792,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1046,6,5,0,True,7.093632672e-06,0.10093942600801303,0.899060573991987,appeared once in the realized nominal sample
+1047,6,5,0,True,2.839296768e-06,0.04169531806991865,0.9583046819300813,appeared once in the realized nominal sample
+1048,6,6,0,False,2.688e-14,4.0319999991872026e-10,0.9999999995968,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1049,6,6,0,False,6.02112e-14,9.031679995921709e-10,0.999999999096832,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1050,6,6,0,False,2.688e-14,4.0319999991872026e-10,0.9999999995968,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1051,6,6,0,False,5.9136e-14,8.870399996066063e-10,0.99999999911296,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1052,6,6,0,False,3.33333333333333e-14,4.999999998750079e-10,0.9999999995,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1053,6,6,0,False,2.688e-14,4.0319999991872026e-10,0.9999999995968,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1054,6,6,0,False,3.87072e-12,5.806079831458416e-08,0.9999999419392017,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1055,6,6,0,False,1.0752e-12,1.612799986995248e-08,0.9999999838720002,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1056,6,6,0,False,3.87072e-12,5.806079831458416e-08,0.9999999419392017,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1057,6,6,0,False,2.688e-14,4.0319999991872026e-10,0.9999999995968,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1058,6,6,0,False,2.1888e-11,3.2831994610658785e-07,0.9999996716800539,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1059,6,6,0,False,6.08e-12,9.119999584155737e-08,0.9999999088000041,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1060,6,6,0,False,3.87072e-14,5.806079998314584e-10,0.999999999419392,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1061,6,6,0,False,2.1888e-13,3.2831999946106577e-09,0.9999999967168,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1062,6,6,0,False,6.02112e-14,9.031679995921709e-10,0.999999999096832,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1063,6,6,0,True,7.75656e-07,0.011567421447861848,0.9884325785521382,appeared once in the realized nominal sample
+1064,6,6,0,False,7.87968e-10,1.181945015440533e-05,0.9999881805498456,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1065,6,6,0,False,2.1888e-10,3.2831946106640902e-06,0.9999967168053894,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1066,6,6,0,True,4.3609104e-07,0.006520018859124995,0.993479981140875,appeared once in the realized nominal sample
+1067,6,6,0,True,2.07765e-07,0.0031116241553495526,0.9968883758446504,appeared once in the realized nominal sample
+1068,6,6,0,True,1.3827744e-06,0.02052800227345195,0.979471997726548,appeared once in the realized nominal sample
+1069,6,6,0,False,2.1888e-13,3.2831999946106577e-09,0.9999999967168,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1070,6,6,0,True,1.3827744e-06,0.02052800227345195,0.979471997726548,appeared once in the realized nominal sample
+1071,6,6,0,False,1.216e-13,1.8239999983366228e-09,0.999999998176,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1072,6,6,0,False,6.688e-13,1.0031999949682843e-08,0.9999999899680001,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1073,6,6,0,False,5.7e-12,8.549999634511877e-08,0.9999999145000037,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1074,6,6,0,False,6.08e-12,9.119999584155737e-08,0.9999999088000041,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1075,6,6,0,False,5.7e-12,8.549999634511877e-08,0.9999999145000037,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1076,6,6,0,False,3.8e-13,5.6999999837560825e-09,0.9999999943,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1077,6,6,0,False,6.688e-13,1.0031999949682843e-08,0.9999999899680001,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1078,6,6,0,False,3.8e-13,5.6999999837560825e-09,0.9999999943,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1079,6,6,0,False,3.1606272e-08,0.0004739817226481469,0.9995260182773519,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1080,6,6,0,False,8.77952000000001e-09,0.00013168412946188327,0.9998683158705381,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1081,6,6,0,True,7.27776e-07,0.01085727365256816,0.9891427263474318,appeared once in the realized nominal sample
+1082,6,6,0,True,3.94090704e-06,0.057400431322738164,0.9425995686772618,appeared once in the realized nominal sample
+1083,6,6,0,True,5.76156e-08,0.0008638606822313433,0.9991361393177687,appeared once in the realized nominal sample
+1084,6,6,0,False,3.344e-13,5.0159999874207104e-09,0.999999994984,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1085,6,6,0,False,6.688e-13,1.0031999949682843e-08,0.9999999899680001,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1086,6,6,0,True,6.5187936e-07,0.009730542492538836,0.9902694575074612,appeared once in the realized nominal sample
+1087,6,6,0,True,8.47443168e-07,0.01263120109901665,0.9873687989009834,appeared once in the realized nominal sample
+1088,6,6,0,True,2.1348096e-08,0.0003201701780038877,0.9996798298219961,appeared once in the realized nominal sample
+1089,6,7,0,False,2.1504e-14,3.22559999947981e-10,0.99999999967744,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1090,6,7,0,False,1.0752e-14,1.6127999998699526e-10,0.99999999983872,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1091,6,7,0,False,1.548288e-12,2.322431973033346e-08,0.9999999767756803,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1092,6,7,0,False,4.3008e-13,6.451199979192398e-09,0.9999999935488,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1093,6,7,0,False,2.1504e-14,3.22559999947981e-10,0.99999999967744,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1094,6,7,0,False,2.688e-14,4.0319999991872026e-10,0.9999999995968,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1095,6,7,0,False,4.73088e-14,7.09631999748228e-10,0.999999999290368,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1096,6,7,0,False,1.548288e-12,2.322431973033346e-08,0.9999999767756803,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1097,6,7,0,False,1.0752e-14,1.6127999998699526e-10,0.99999999983872,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1098,6,7,0,False,2.56e-14,3.839999999262769e-10,0.999999999616,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1099,6,7,0,False,8.7552e-12,1.3132799137705348e-07,0.9999998686720086,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1100,6,7,0,False,2.432e-12,3.6479999334649174e-08,0.9999999635200006,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1101,6,7,0,False,2.1504e-14,3.22559999947981e-10,0.99999999967744,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1102,6,7,0,False,3.87072e-14,5.806079998314584e-10,0.999999999419392,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1103,6,7,0,True,3.102624e-07,0.004643123938970805,0.9953568760610292,appeared once in the realized nominal sample
+1104,6,7,0,False,3.151872e-10,4.72779682467844e-06,0.9999952722031753,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1105,6,7,0,False,8.7552e-11,1.3132791377056884e-06,0.9999986867208623,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1106,6,7,0,True,2.3085e-07,0.003456761993635313,0.9965432380063647,appeared once in the realized nominal sample
+1107,6,7,0,True,2.037123e-05,0.2632978172662679,0.7367021827337321,appeared once in the realized nominal sample
+1108,6,7,0,False,4.864e-14,7.295999997338595e-10,0.9999999992704,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1109,6,7,0,False,1.216e-13,1.8239999983366228e-09,0.999999998176,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1110,6,7,0,False,2.6752e-13,4.012799991949255e-09,0.9999999959872,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1111,6,7,0,False,8.7552e-12,1.3132799137705348e-07,0.9999998686720086,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1112,6,7,0,False,2.432e-12,3.6479999334649174e-08,0.9999999635200006,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1113,6,7,0,False,2.28e-12,3.4199999415218997e-08,0.9999999658000006,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1114,6,7,0,False,1.216e-13,1.8239999983366228e-09,0.999999998176,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1115,6,7,0,False,1.52e-13,2.2799999974009737e-09,0.99999999772,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1116,6,7,0,False,2.6752e-13,4.012799991949255e-09,0.9999999959872,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1117,6,7,0,False,1.52e-13,2.2799999974009737e-09,0.99999999772,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1118,6,7,0,True,2.747323392e-07,0.004112506044818546,0.9958874939551815,appeared once in the realized nominal sample
+1119,6,7,0,True,8.57736e-09,0.0001286521241574001,0.9998713478758426,appeared once in the realized nominal sample
+1120,6,7,0,False,1.26425088e-08,0.00018961965311936962,0.9998103803468806,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1121,6,7,0,False,3.511808e-09,5.267573267736712e-05,0.9999473242673226,absence is plausible under its theoretical path probability; this does not create a formal D/A/C realization
+1122,6,7,0,True,1.41240528e-06,0.020963245408219925,0.9790367545917801,appeared once in the realized nominal sample
+1123,6,7,0,True,1.23462e-06,0.018348882680209393,0.9816511173197906,appeared once in the realized nominal sample
+1124,6,7,0,True,5.61952512e-07,0.008393863194029775,0.9916061368059702,appeared once in the realized nominal sample
+1125,6,7,0,True,2.1729312e-06,0.032068543305238485,0.9679314566947615,appeared once in the realized nominal sample
+1126,6,7,0,True,2.13342336e-07,0.0031950204057921727,0.9968049795942078,appeared once in the realized nominal sample

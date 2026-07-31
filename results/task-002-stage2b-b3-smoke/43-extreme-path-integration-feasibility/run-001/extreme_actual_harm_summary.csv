@@ -1,0 +1,3 @@
+partition,path_count,formal_recourse_evaluated_count,formal_loss_mean,formal_loss_median,formal_loss_q90,formal_loss_q95,formal_loss_q99,formal_loss_max,historical_fixed_representative_D_mean_kg,historical_fixed_representative_D_q95_kg,historical_fixed_representative_D_max_kg,historical_A0_pair_share_mean,historical_road_disconnection_share_mean,interpretation
+support_in,268,0,,,,,,,478.46495979313005,607.969887897881,607.969887897881,0.4958747927031506,0.9401119402985073,historical B3 consequence diagnostics only; not formal recourse harm
+support_out,858,0,,,,,,,545.6250806263088,607.969887897881,607.969887897881,0.6430620305620297,0.9859557109557109,historical B3 consequence diagnostics only; not formal recourse harm

@@ -1,0 +1,9 @@
+file,function_or_block,line_start,line_end,evidence
+terminalLoh_wdro/src/run_stage2b_observed_tail_coverage_audit_h2.m,risk construction,181,192,grid/road maximum wind and cumulative threshold exceedance are computed over W1-W3
+terminalLoh_wdro/src/run_stage2b_correct_observed_tail_screening_h2.m,corrected screening,29,34,"four proxies; levels 0.95, 0.99, 0.995"
+terminalLoh_wdro/src/run_stage2b_correct_observed_tail_screening_h2.m,threshold and Pareto,105,129,positive values at/above weighted threshold; Pareto minimizes path probability and maximizes risk
+terminalLoh_wdro/src/run_stage2b_search_unobserved_high_risk_paths_h2.m,legal search,456,467,only positive component transitions create outgoing legal joint states
+terminalLoh_wdro/src/run_stage2b_search_unobserved_high_risk_paths_h2.m,path probability,540,573,three joint transition products form path_probability
+terminalLoh_wdro/src/run_stage2b_deduplicate_tail_paths_h2.m,exact physical key,138,145,findgroups on exact a/loc/lfw initial plus W1-W3 fields
+terminalLoh_wdro/src/recover_step03Y_prefix_entries_h2.m,formal stream recovery,222,256,"formal D/A/C needs frozen permutation, joint_stream_position, path_id, wind and resistance streams"
+terminalLoh_wdro/src/evaluate_b3_candidate_validation_h2.m,historical B3 signature,115,126,historical full consequence signature serializes D/C at 6 decimals; not byte-exact formal D/A/C

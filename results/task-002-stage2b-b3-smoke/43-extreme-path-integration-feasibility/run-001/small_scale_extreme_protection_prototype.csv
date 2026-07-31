@@ -1,0 +1,2 @@
+state_id,nominal_R,eta,epsilon,model,status,T1,T2,T3,T4,LB,UB,gap,iterations,runtime_sec
+19,NOT_RUN,NOT_RUN,NOT_RUN,chi-square plus extreme max,SKIPPED_FORMAL_SUPPORT_OUT_DAC_UNRESOLVED,,,,,,,,0,0

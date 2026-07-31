@@ -1,0 +1,2 @@
+phase,runtime_sec,MATLAB_calls,Gurobi_calls,LP_calls,QCP_calls,random_calls,formal_recourse_scenarios_evaluated
+read-only provenance/count/legality/probability audit,4.3189894,0,0,0,0,0,0

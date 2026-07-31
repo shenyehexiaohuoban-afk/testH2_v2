@@ -71,3 +71,31 @@ The `eta=0.01` value is an implementation test radius, not a calibrated formal r
 ## 12. Unique next task
 
 Proceed only to **Step-04C: chi-square radius calibration, independent OOS validation, and Markov transition probability perturbation stress tests**. Do not return to Wasserstein ground-cost tuning and do not run all 35 final states before Step-04C defines the validation protocol.
+
+## 13. Step-04C-A support-out extreme-path audit
+
+Step-04C-A is archived at `results/task-002-stage2b-b3-smoke/43-extreme-path-integration-feasibility/run-001/` with mechanical audit `PASS`.
+
+Live source/data reconstruction confirmed:
+
+- 1,595 observed and 2,410 unobserved proxy/quantile-labelled Pareto records, 4,005 rows total;
+- exact 12-field physical-path deduplication yields 1,126 unique paths and removes 2,879 repeated proxy/level labels;
+- all 1,126 paths are legal positive-probability Markov paths;
+- exact nominal path overlap is 268 support-in paths and 858 support-out paths, with no physical-path duplicates;
+- recomputed path probability matches the stored value with maximum absolute error `1.0164395367051604e-20` and maximum relative error `3.6642270354059247e-15`.
+
+The selected-path probability sums are conditional theoretical mass for a directed proxy-selected subset. They are not a complete extreme-event probability, cannot be summed across initial states without an initial-state distribution, and do not replace equal empirical nominal record weights.
+
+The support-out paths do not have the frozen `path_id`, `joint_stream_position`, wind stream, and resistance stream identity required by the formal three-period D/A/C replay. Historical Step-03B used fixed representative wind and retained summaries plus six-decimal consequence signatures rather than byte-exact formal three-period D/A/C arrays. Therefore no formal recourse harm evaluation, exact formal D/A/C duplicate audit, or state-19 enhanced solver prototype was run. No eta or epsilon was selected.
+
+The mathematical candidate remains a convex combination of the existing nominal chi-square risk and a separately defined support-out extreme risk, preferably extreme maximum first. Equal-weight append and direct theoretical-path-probability append are rejected.
+
+Classifications:
+
+- `E-D. INPUT_OR_PROVENANCE_UNRESOLVED`;
+- `I-B. FIXED_T_ONLY_FULL_INTEGRATION_UNRESOLVED`;
+- `C. RESOLVE_EXTREME_INPUT_OR_PROBABILITY_FIRST`.
+
+## 14. Superseding unique next task
+
+Before any extreme-aware calibration or optimization, define and freeze a non-random, auditable mapping from every selected support-out path to formal stagewise wind quantiles, persistent resistance draws, and complete byte-exact three-period D/A/C. The design must also state whether the paths are deterministic stress scenarios or part of a probability-complete stochastic augmentation. Only then run fixed-T harm evaluation and the state-19 extreme-max prototype.

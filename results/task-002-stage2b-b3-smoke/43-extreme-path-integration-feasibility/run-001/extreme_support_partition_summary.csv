@@ -1,0 +1,3 @@
+partition,unique_path_count,nominal_record_count,formal_stream_identity_count,formal_DAC_status
+support_in,268,268,268,existing nominal record identities available
+support_out,858,0,0,unresolved; discrete path alone does not determine D/A/C

@@ -1,0 +1,27 @@
+status=PASS
+FREEZE-01|PASS|observed=task/002-stage2b-b3-smoke|expected=task/002-stage2b-b3-smoke
+COUNT-01|PASS|observed=1595/2410|expected=1595/2410
+COUNT-02|PASS|observed=1126/268/858|expected=1126/268/858
+PATH-01|PASS|observed=duplicates=0; legal=1|expected=duplicates=0; legal=1
+PROB-01|PASS|observed=abs=1.01643953670516e-20; rel=3.664227035405925e-15|expected=<=1e-12
+DAC-01|PASS|observed=0|expected=0 support-out formal identities; unresolved gate recorded
+MODEL-01|PASS|observed=no eta/epsilon selected; no candidate weights assigned|expected=true
+SOLVER-01|PASS|observed=LP=0; QCP=0; Gurobi=0; MATLAB=0|expected=all zero after failed precondition
+INPUT-01|PASS|observed=True|expected=True
+maximum_path_probability_absolute_error=1.0164395367051604e-20
+maximum_path_probability_relative_error=3.6642270354059247e-15
+formal_DAC_byte_duplicate_check=NOT_APPLICABLE_NO_SUPPORT_OUT_FORMAL_DAC
+formal_harm_evaluation=SKIPPED_GATE_FAILED
+prototype=SKIPPED_GATE_FAILED
+formal_eta_selected=false
+formal_epsilon_selected=false
+production_solver_core_modified=false
+formal_model_modified=false
+path_generator_modified=false
+transition_matrices_modified=false
+random_calls=0
+MATLAB_calls=0
+Gurobi_calls=0
+LP_calls=0
+QCP_calls=0
+runtime_sec=4.318989400

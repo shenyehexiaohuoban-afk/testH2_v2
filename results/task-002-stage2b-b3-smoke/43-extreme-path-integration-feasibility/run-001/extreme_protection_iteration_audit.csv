@@ -1,0 +1,2 @@
+iteration,status,reason,LB,UB,gap
+0,NOT_RUN,support-out paths have no frozen formal three-period D/A/C identity,,,

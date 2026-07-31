@@ -1,0 +1,7 @@
+
+extreme_set_status=E-D. INPUT_OR_PROVENANCE_UNRESOLVED
+integration_status=I-B. FIXED_T_ONLY_FULL_INTEGRATION_UNRESOLVED
+overall_conclusion=C. RESOLVE_EXTREME_INPUT_OR_PROBABILITY_FIRST
+prototype_run=false
+formal_harm_evaluation_run=false
+next_task=Define and freeze a non-random, auditable formal D/A/C identity for support-out paths before any extreme-aware optimization.
