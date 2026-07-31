@@ -1,0 +1,17 @@
+Step-04C-A2 mechanical audit
+
+support_in_count_268=PASS
+support_out_path_count_858=PASS
+five_replicas_per_path=PASS
+identity_count_4290=PASS
+recourse_rows_17160=PASS
+four_fixed_decisions=PASS
+stream_collision_audit=PASS
+byte_exact_reproducibility=PASS
+DAC_domain_and_business_logic=PASS
+all_recourse_optimal=PASS
+nominal_support_replay=PASS
+state19_DRO_period_detail=PASS
+required_outputs_present=PASS
+
+overall=PASS

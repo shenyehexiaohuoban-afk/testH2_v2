@@ -99,3 +99,25 @@ Classifications:
 ## 14. Superseding unique next task
 
 Before any extreme-aware calibration or optimization, define and freeze a non-random, auditable mapping from every selected support-out path to formal stagewise wind quantiles, persistent resistance draws, and complete byte-exact three-period D/A/C. The design must also state whether the paths are deterministic stress scenarios or part of a probability-complete stochastic augmentation. Only then run fixed-T harm evaluation and the state-19 extreme-max prototype.
+
+## 15. Step-04C-A2 formal consequence freeze and harm validation
+
+Step-04C-A2 is accepted at `results/task-002-stage2b-b3-smoke/44-extreme-formal-consequence-freeze/run-003/` with mechanical audit `PASS`.
+
+The 858 support-out paths were sorted by the exact 12-field physical key and assigned five deterministic conditional consequence replicas each. Namespace `STEP04CA2_SUPPORT_OUT_V1` therefore contains 4,290 identities. The mapping uses path rank, replica rank, fixed wind seed `1704202601`, fixed resistance seed `2704202601`, and joint stream position `5*(path_rank-1)+replica_rank`. The namespace has zero seed/stream identity collision with nominal, validation-1, or validation-2. Byte-exact replay, identity uniqueness, D/A/C domains, persistent damage, source-demand, reachability, and service-cost business-logic audits all passed.
+
+The 268 support-in paths were replayed from their existing nominal formal identities. Against each path's one existing formal consequence realization, the historical composite proxy has Spearman `0.526366`, q95 hit rate `0.166667`, and obvious-false-positive share `0.416667`. The proxy is directionally informative but is not precise enough to serve as the final formal-loss ranking by itself.
+
+Under the formal state-19 SAA TerminalLOH, 3,919/4,290 replicas and 787/858 paths satisfy the conservative verified-harm rule: theoretical path probability below `1/15000`, formal loss at or above the state-19 nominal q95, and positive shortage; a path must satisfy the replica rule in at least three of five replicas and have mean loss above the same q95. The support-out set is therefore formally harmful rather than merely proxy-high. The main failure mechanism is road-network interruption in 4,215 replicas.
+
+State-19 SAA mean loss and shortage across the 4,290 replicas are `419577.004127` and `208.386979 kg`; the Step-04B DRO T values give `418595.750349` and `207.890628 kg`. DRO reduces loss on `21.5152%` of replicas and shortage on `7.4126%`; the two fixed decisions leave nearly the same zero-shortage share, so the existing DRO T is not a general extreme-path cure. All six state-19 support-in paths also retain complete SAA/DRO total and W1-W3 shortage detail; DRO improves formal loss on one and worsens none.
+
+The five consequence replicas are frozen stress realizations, not empirical probabilities. No eta or epsilon was calibrated, no probability mass was assigned to the replicas, and no enhanced DRO or all-state optimization was run.
+
+Classifications:
+
+- `A. FORMAL_CONSEQUENCE_IDENTITIES_FROZEN`;
+- `H-A. SUPPORT_OUT_EXTREMES_ACTUALLY_HARMFUL`;
+- `A. PROCEED_TO_STEP04C_B_EXTREME_AWARE_DRO`.
+
+The unique next task is Step-04C-B: define and audit the convex nominal chi-square plus frozen extreme-risk protection model while preserving the replicas as a separate stress set rather than empirical probability augmentation.

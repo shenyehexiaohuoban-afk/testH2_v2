@@ -1,0 +1,10 @@
+stage,runtime_sec,cumulative_solver_calls,cumulative_scenario_evaluations,status
+identity_design,2.5243563,0,0,PASS
+support_out_DAC_generation_and_replay,5.2629219,0,0,PASS
+support_in_formal_replay,2.4718089,0,0,PASS
+fixed_T_recovery,0.0482022,0,0,PASS
+support_in_fixed_T_recourse,0.2808351,2,274,PASS
+nominal_loss_reference,282.1089904,5,47774,PASS
+support_out_fixed_T_recourse,12.2565094,9,64934,PASS
+state19_support_in_DRO_period_detail,4.3245382,10,64940,PASS
+TOTAL,312.3409991,10,64940,PASS

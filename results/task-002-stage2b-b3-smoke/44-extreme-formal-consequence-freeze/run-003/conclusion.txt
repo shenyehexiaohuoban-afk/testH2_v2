@@ -1,0 +1,12 @@
+formal_identity_status=A. FORMAL_CONSEQUENCE_IDENTITIES_FROZEN
+extreme_harm_status=H-A. SUPPORT_OUT_EXTREMES_ACTUALLY_HARMFUL
+overall_conclusion=A. PROCEED_TO_STEP04C_B_EXTREME_AWARE_DRO
+mechanical_audit=PASS
+support_in_paths=268
+support_out_paths=858
+replicas_per_support_out_path=5
+verified_harmful_support_out_paths=787
+verified_harmful_support_out_replicas=3919
+total_runtime_sec=312.340999100
+solver_calls=10
+scenario_evaluations=64940

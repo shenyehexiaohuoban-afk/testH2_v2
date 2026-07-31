@@ -1,0 +1,11 @@
+proxy,level,record_count,spearman_rho,proxy_threshold,formal_loss_threshold,proxy_high_count,formal_high_count,joint_high_count,quantile_hit_rate,obvious_false_positive_count,obvious_false_positive_share,false_positive_definition
+grid_max_wind_mps,q95,268,0.42349717648772583,55.4927759888396,670691.654282393,23,14,2,0.08695652173913043,15,0.6521739130434783,proxy at/above listed quantile and formal loss at/below median
+grid_max_wind_mps,q99,268,0.42349717648772583,55.4927759888396,840804.439316648,23,3,1,0.043478260869565216,15,0.6521739130434783,proxy at/above listed quantile and formal loss at/below median
+grid_cumulative_excess_mps,q95,268,0.7434669050646207,1967.60329863029,670691.654282393,14,14,4,0.2857142857142857,0,0.0,proxy at/above listed quantile and formal loss at/below median
+grid_cumulative_excess_mps,q99,268,0.7434669050646207,2189.6974808581,840804.439316648,3,3,1,0.3333333333333333,0,0.0,proxy at/above listed quantile and formal loss at/below median
+road_max_wind_mps,q95,268,0.42349717648772583,55.4927759888396,670691.654282393,23,14,2,0.08695652173913043,15,0.6521739130434783,proxy at/above listed quantile and formal loss at/below median
+road_max_wind_mps,q99,268,0.42349717648772583,55.4927759888396,840804.439316648,23,3,1,0.043478260869565216,15,0.6521739130434783,proxy at/above listed quantile and formal loss at/below median
+road_cumulative_excess_mps,q95,268,0.7621680855730301,1914.41539442219,670691.654282393,14,14,4,0.2857142857142857,0,0.0,proxy at/above listed quantile and formal loss at/below median
+road_cumulative_excess_mps,q99,268,0.7621680855730301,2189.85794862887,840804.439316648,3,3,1,0.3333333333333333,0,0.0,proxy at/above listed quantile and formal loss at/below median
+historical_proxy_composite,q95,268,0.5263657320605543,0.9589552238805971,670691.654282393,36,14,6,0.16666666666666666,15,0.4166666666666667,proxy at/above listed quantile and formal loss at/below median
+historical_proxy_composite,q99,268,0.5263657320605543,0.9925373134328358,840804.439316648,3,3,1,0.3333333333333333,0,0.0,proxy at/above listed quantile and formal loss at/below median

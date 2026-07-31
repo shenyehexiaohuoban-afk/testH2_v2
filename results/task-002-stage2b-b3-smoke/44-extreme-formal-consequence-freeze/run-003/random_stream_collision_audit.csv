@@ -1,0 +1,5 @@
+audit_scope,support_out_identity_count,comparison_identity_count,wind_seed_collision_count,resistance_seed_collision_count,total_identity_collision_count,passed
+support_out_vs_nominal,4290,35,0,0,0,1
+support_out_vs_validation-1,4290,35,0,0,0,1
+support_out_vs_validation-2,4290,35,0,0,0,1
+within_support_out_namespace,4290,4290,0,0,0,1
