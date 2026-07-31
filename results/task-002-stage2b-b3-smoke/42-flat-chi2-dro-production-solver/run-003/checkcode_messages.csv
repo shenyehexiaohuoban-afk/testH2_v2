@@ -1,0 +1,17 @@
+file,id,line,column_1,column_2,message
+aggregate_exact_period_scenarios_h2.m,PREALL,32,1,12,赋给变量 'multiplicity' 的预分配值可能未使用。
+solve_flat_chi2_worst_probability_h2.m,FNDSB,66,19,21,对于数组或元胞数组，可以使用逻辑索引而不是 'find' 来改善性能。
+solve_terminal_loh_flat_chi2_core_h2.m,ASGLU,37,6,7,此处赋给 'kU' 的值似乎未使用。请考虑将其替换为 ~。
+solve_terminal_loh_flat_chi2_core_h2.m,ASGLU,37,10,14,此处赋给 'nUsub' 的值似乎未使用。请考虑将其替换为 ~。
+solve_terminal_loh_flat_chi2_core_h2.m,SPRIX,142,9,9,此稀疏索引表达式可能速度较慢。
+solve_terminal_loh_flat_chi2_core_h2.m,SPRIX,143,9,9,此稀疏索引表达式可能速度较慢。
+solve_terminal_loh_flat_chi2_core_h2.m,SPRIX,144,9,9,此稀疏索引表达式可能速度较慢。
+evaluate_terminal_loh_period_fixed_T_sparse_h2.m,NASGU,66,30,31,赋给变量 'nz' 的值可能未使用。
+solve_terminal_loh_flat_chi2_decomposition_h2.m,NASGU,30,29,37,赋给变量 'iteration' 的值可能未使用。
+solve_terminal_loh_flat_chi2_decomposition_h2.m,MSNU,129,103,113,此处之前隐藏了一条代码分析器消息，但该消息不再产生。
+solve_terminal_loh_flat_chi2_decomposition_h2.m,MSNU,130,83,93,此处之前隐藏了一条代码分析器消息，但该消息不再产生。
+solve_terminal_loh_flat_chi2_decomposition_h2.m,SPRIX,139,5,5,此稀疏索引表达式可能速度较慢。
+solve_terminal_loh_flat_chi2_decomposition_h2.m,SPRIX,139,32,32,此稀疏索引表达式可能速度较慢。
+run_step04B_flat_chi2_production_h2.m,NASGU,667,1,5,赋给变量 'bytes' 的值可能未使用。
+run_step04B_flat_chi2_production_h2.m,NOCOMMA,667,12,12,不必要的额外逗号。
+run_step04B_flat_chi2_production_h2.m,NOCOMMA,667,104,104,不必要的额外逗号。

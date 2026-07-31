@@ -1,0 +1,7 @@
+status=PASS
+maximum_mechanical_residual=1.38509228515625e-07
+maximum_strong_duality_gap=0.00098891456218552776
+maximum_probability_sum_residual=3.1752378504279477e-14
+maximum_divergence_excess=1.2592357712115643e-14
+maximum_demand_balance_error=1.9539925233402755e-14
+maximum_site_capacity_violation=4.4828425416199025e-09

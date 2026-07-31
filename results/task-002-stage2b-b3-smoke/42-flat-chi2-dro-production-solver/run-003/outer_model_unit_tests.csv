@@ -1,0 +1,8 @@
+test_name,evidence,pass
+eta_zero_direct_saa,all eta-zero cases use SAA and pass independent audit,1
+all_probability_audits,every optimized T passes fixed-T probability audit,1
+radius_monotonicity,worst recourse is nondecreasing on each eta ladder,1
+exact_aggregation_equivalence,fixed-T and outer grouped/ungrouped checks,1
+decomposition_vs_direct_QCP,obj_gap=6.84e-05 T_gap=0.00186 certified_gap=7.75e-06,1
+no_R_squared_matrix,all interfaces report constructed_R_by_R_matrix=false,1
+formal_R15000_state19_present,SAA and eta=0.01 rows both present,1

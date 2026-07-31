@@ -1,0 +1,13 @@
+check,evidence,pass
+divergence_direction,"sum((p-q)^2/q)",1
+nominal_probability,"q_r=1/R; path_probability not reused",1
+conjugate,"f*(s)=-1+(max(s+2,0))^2/4",1
+dual_objective,"nu+lambda*(eta-1)+sum(q*h)",1
+risk_linear_row,"t>=z-nu+2*lambda",1
+rotated_cone,"t^2<=4*lambda*h",1
+lambda_zero_closure,"t=0 and nu>=max(z)",1
+eta_zero,"direct weighted SAA LP",1
+strong_duality,"Slater p=q for eta>0",1
+convexity,"linear recourse plus convex QCP epigraph",1
+scenario_pairs,"no R-by-R matrix or variables",1
+formal_recourse,"frozen three-period D/A/C and shared T",1

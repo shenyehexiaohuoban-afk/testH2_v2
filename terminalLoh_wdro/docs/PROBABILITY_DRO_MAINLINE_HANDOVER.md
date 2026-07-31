@@ -45,3 +45,29 @@ This step recovers provenance and trees, verifies probability factorization, imp
 Formal eta calibration, production R=15,000 decomposition tolerances, and treatment of theoretical positive paths absent from the stored consequence support remain unresolved.
 
 Current classification: `S-C. TREE_RECOVERABLE_BUT_STATISTICALLY_WEAK`; `F-A. FLAT_CHI2_DRO_FEASIBLE`; `B. FLAT_CHI2_DRO_MAINLINE_FEASIBLE`.
+
+## 11. Step-04B production solver result
+
+Step-04B is accepted at `results/task-002-stage2b-b3-smoke/42-flat-chi2-dro-production-solver/run-003/` with `A. FULL_R15000_FLAT_CHI2_SOLVER_VERIFIED`.
+
+The production implementation provides:
+
+- direct weighted SAA for `eta=0`;
+- the exact conjugate/rotated-cone QCP for small and medium exact support;
+- a certified large-support convex cutting-plane decomposition with explicit lower and upper bounds;
+- byte-exact aggregation over every formal three-period D/A/C input;
+- independent fixed-T recourse, probability, divergence, strong-duality, and objective reconstruction audits;
+- a unified state/R/eta/time-limit/output MATLAB entry point.
+
+For state 19 at original `R=15000`, byte-exact D/A/C aggregation produced `7334` groups from `15000` records, with zero hash-collision splits. The grouped and ungrouped fixed-T and outer objectives passed numerical equivalence checks. No `R x R` scenario matrix was constructed.
+
+The formal state-19 results are:
+
+- SAA: `T=[294.589913536808, 138.832065024684, 93.0093009300931, 150]`, total `676.431279491585 kg`, complete objective `11444.8775967693`;
+- flat chi-square test at `eta=0.01`: `T=[300, 143.468740452331, 100, 150]`, total `693.468740452331 kg`, worst expected recourse `13916.4637289198`, complete robust objective `15303.4012098245`.
+
+The `eta=0.01` value is an implementation test radius, not a calibrated formal radius. Step-04B makes no out-of-sample superiority claim.
+
+## 12. Unique next task
+
+Proceed only to **Step-04C: chi-square radius calibration, independent OOS validation, and Markov transition probability perturbation stress tests**. Do not return to Wasserstein ground-cost tuning and do not run all 35 final states before Step-04C defines the validation protocol.

@@ -1,0 +1,5 @@
+solver_status=A. FULL_R15000_FLAT_CHI2_SOLVER_VERIFIED
+next_stage=Step-04C: chi-square radius calibration, independent OOS validation, and Markov transition probability perturbation stress tests
+mechanical_audit_pass=true
+formal_eta_selected=false
+OOS_superiority_claimed=false
