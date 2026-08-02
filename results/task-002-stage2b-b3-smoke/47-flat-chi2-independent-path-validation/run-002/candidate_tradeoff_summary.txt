@@ -1,0 +1,23 @@
+Step-04C-C2 state19 independent typhoon-path validation
+status=PASS
+namespace=independent-path-C2
+datasets=3 independent state19 Monte Carlo distributions; each has R=15000 and weights 1/15000
+dataset_pooling_interpretation=seedwise results are primary; any cross-seed summary is equal-weight descriptive only
+fixed_decisions_source=Step-04C-C1 accepted run-003 nominal optimizations
+test_set_optimization_performed=false
+chi_square_worst_probability_constructed=false
+CVaR_role=evaluation_metric_only
+candidate_judgement=4. NEITHER_SHOWS_STABLE_VALUE_RETURN_TO_SAA_OR_RADIUS_REVIEW
+judgement_rationale=both candidates reduce mean shortage and CVaR99.5 in all three seeds, but improvements are small; q99.5 is unchanged in two seeds for eta=0.003 and one seed for eta=0.01, while mean total cost worsens in two seeds
+eta_0.01_inventory_tradeoff=the additional 17.0368707551 kg versus SAA does not buy a sufficiently large or uniformly quantile-visible tail improvement
+formal_eta_frozen=false
+Markov_transition_probability_perturbation_completed=false
+paired_difference_direction=candidate_minus_SAA; negative means improvement
+paired_CI_method=two-sided Student t interval, df=14999, scenario-paired within each dataset
+maximum_fixed_T_mechanical_residual=5.11590769747272e-13
+dataset-001: path=98661732, wind=59333257, resistance=1707588495
+dataset-002: path=341739613, wind=1254046069, resistance=1872944571
+dataset-003: path=1766178367, wind=619431891, resistance=538665406
+ETA_0.003: inventory_increment_kg=4.62183570688603; mean_cost_pattern=IMPROVE/WORSEN/WORSEN; mean_shortage_pattern=IMPROVE/IMPROVE/IMPROVE; q995_pattern=IMPROVE/EQUAL/EQUAL; CVaR995_pattern=IMPROVE/IMPROVE/IMPROVE; stable_tail_value=false
+ETA_0.01: inventory_increment_kg=17.0368707551011; mean_cost_pattern=IMPROVE/WORSEN/WORSEN; mean_shortage_pattern=IMPROVE/IMPROVE/IMPROVE; q995_pattern=IMPROVE/IMPROVE/EQUAL; CVaR995_pattern=IMPROVE/IMPROVE/IMPROVE; stable_tail_value=false
+development_history=run-001 preserved; preparation passed, but the first fixed-T process was rejected because the certificate used an over-strict 1e-14 floating weight-sum tolerance; run-002 froze 1e-12 before rerunning all datasets from scratch

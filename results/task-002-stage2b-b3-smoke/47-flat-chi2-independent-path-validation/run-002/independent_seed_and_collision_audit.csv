@@ -1,0 +1,10 @@
+dataset_id,namespace,stream_type,derivation_text,seed,stream_position_start,stream_position_end,C2_internal_collision_count,same_stream_historical_collision_count,any_historical_seed_collision_count,historical_scope,status
+1,independent-path-C2,path,independent-path-C2|dataset_id=1|stream=path,98661732,1,15000,0,0,0,historical main/convergence + Step03J + Step04CA2,PASS
+1,independent-path-C2,wind,independent-path-C2|dataset_id=1|stream=wind,59333257,1,15000,0,0,0,historical main/convergence + Step03J + Step04CA2,PASS
+1,independent-path-C2,resistance,independent-path-C2|dataset_id=1|stream=resistance,1707588495,1,15000,0,0,0,historical main/convergence + Step03J + Step04CA2,PASS
+2,independent-path-C2,path,independent-path-C2|dataset_id=2|stream=path,341739613,1,15000,0,0,0,historical main/convergence + Step03J + Step04CA2,PASS
+2,independent-path-C2,wind,independent-path-C2|dataset_id=2|stream=wind,1254046069,1,15000,0,0,0,historical main/convergence + Step03J + Step04CA2,PASS
+2,independent-path-C2,resistance,independent-path-C2|dataset_id=2|stream=resistance,1872944571,1,15000,0,0,0,historical main/convergence + Step03J + Step04CA2,PASS
+3,independent-path-C2,path,independent-path-C2|dataset_id=3|stream=path,1766178367,1,15000,0,0,0,historical main/convergence + Step03J + Step04CA2,PASS
+3,independent-path-C2,wind,independent-path-C2|dataset_id=3|stream=wind,619431891,1,15000,0,0,0,historical main/convergence + Step03J + Step04CA2,PASS
+3,independent-path-C2,resistance,independent-path-C2|dataset_id=3|stream=resistance,538665406,1,15000,0,0,0,historical main/convergence + Step03J + Step04CA2,PASS

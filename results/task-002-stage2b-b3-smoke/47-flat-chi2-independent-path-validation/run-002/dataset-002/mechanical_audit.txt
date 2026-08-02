@@ -1,0 +1,10 @@
+status=PASS
+dataset_id=2
+scenario_count=15000
+decision_count=3
+TerminalLOH_optimization_calls=0
+chi2_worst_probability_calls=0
+CVaR_objective_calls=0
+maximum_mechanical_residual=5.11590769747272e-13
+weight_sum=1
+fixed_T_source=C1_run-003_nominal_optimization

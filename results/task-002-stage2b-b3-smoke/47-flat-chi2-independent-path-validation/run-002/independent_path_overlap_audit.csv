@@ -1,0 +1,10 @@
+comparison_type,left_dataset_id,right_dataset_id,left_row_count,right_row_count,same_row_position_count,same_row_position_share,exact_whole_batch_reuse,left_unique_path_count,right_unique_path_count,unique_path_overlap_count,left_rows_whose_path_occurs_in_right_share
+C2_vs_nominal,1,0,15000,15000,4,0.000266666666666667,0,8359,8464,3160,0.5998
+C2_vs_nominal,2,0,15000,15000,10,0.000666666666666667,0,8424,8464,3180,0.592533333333333
+C2_vs_nominal,3,0,15000,15000,0,0,0,8409,8464,3146,0.591866666666667
+C2_pairwise,1,2,15000,15000,3,0.0002,0,8359,8424,3128,0.5924
+C2_pairwise,1,3,15000,15000,3,0.0002,0,8359,8409,3108,0.588666666666667
+C2_pairwise,2,3,15000,15000,3,0.0002,0,8424,8409,3179,0.591666666666667
+C2_vs_A2_state19_pressure_paths,1,0,15000,27,0,0,0,8359,27,0,0
+C2_vs_A2_state19_pressure_paths,2,0,15000,27,0,0,0,8424,27,0,0
+C2_vs_A2_state19_pressure_paths,3,0,15000,27,0,0,0,8409,27,0,0

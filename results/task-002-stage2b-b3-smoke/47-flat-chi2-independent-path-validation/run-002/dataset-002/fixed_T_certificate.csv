@@ -1,0 +1,4 @@
+dataset_id,decision_id,decision_label,eta,solver_status,exitflag,sample_count,sample_weight,weight_sum,max_demand_balance_error,max_site_capacity_violation,objective_reconstruction_abs_error,maximum_mechanical_residual,solve_runtime_sec,certificate_pass
+2,1,SAA,0,OPTIMAL,1,15000,6.66666666666667e-05,1,1.77635683940025e-15,5.11590769747272e-13,2.50339508056641e-06,5.11590769747272e-13,4.5063112,1
+2,2,ETA_0.003,0.003,OPTIMAL,1,15000,6.66666666666667e-05,1,1.77635683940025e-15,2.8421709430404e-14,2.32458114624023e-06,2.8421709430404e-14,4.3985184,1
+2,3,ETA_0.01,0.01,OPTIMAL,1,15000,6.66666666666667e-05,1,1.77635683940025e-15,5.6843418860808e-14,2.02655792236328e-06,5.6843418860808e-14,4.452249,1

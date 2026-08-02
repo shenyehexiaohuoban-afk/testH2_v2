@@ -175,3 +175,35 @@ Development history remains local. `run-001` stopped at eta `0.001` because the 
 ## 19. Current decision boundary after Step-04C-C1
 
 Formal eta is not frozen. Proceed to different typhoon-path random seeds using SAA plus eta `{0.003,0.01}`, followed by Markov transition-probability perturbation. Only after those two evidence layers may a formal eta be selected. Do not describe validation-1/2 as independent-path validation and do not use the frozen extreme replicas as empirical probability mass.
+
+## 20. Step-04C-C2 accepted independent-path validation
+
+Step-04C-C2 `run-002` is accepted at `results/task-002-stage2b-b3-smoke/47-flat-chi2-independent-path-validation/run-002/`. It evaluates three frozen C1 nominal-optimization decisions on three genuinely different state-19 typhoon-path Monte Carlo sets. The C2 sets are evaluation-only: TerminalLOH and eta were not optimized or selected on them, no chi-square worst probability was constructed, and CVaR appears only as an evaluation metric.
+
+The frozen decisions are SAA eta `0`, `T=[294.589913536808,138.832065024684,93.0093009300931,150]`; eta `0.003`, `T=[299.211738691929,137.483280118695,94.3580963878466,150]`; and eta `0.01`, `T=[300,143.468150246686,100,150]`. They are byte-source-audited against C1 accepted `run-003` and remain fixed across all three C2 sets.
+
+Namespace `independent-path-C2` freezes the following path/wind/resistance seeds:
+
+- dataset 1: `98661732 / 59333257 / 1707588495`;
+- dataset 2: `341739613 / 1254046069 / 1872944571`;
+- dataset 3: `1766178367 / 619431891 / 538665406`.
+
+Each dataset contains exactly 15000 scenarios with separate weights `1/15000`. The three sets are not pooled or reinterpreted as one probability distribution. All seeds are distinct and collision-free against the accepted main/convergence path streams, Step-03J nominal/validation streams, and Step-04C-A2 wind/resistance streams. Two complete generations of each dataset match on physical-path sequence and all formal consequence hashes.
+
+No dataset exactly reuses the nominal path batch or another C2 batch. Same-position path matches against nominal are only `4`, `10`, and `0`; because the path support is discrete, around `59%` of rows have a physical path value that also occurs somewhere in nominal. This ordinary support overlap is reported separately and is not called a random-stream collision. None of the three C2 sets contains any of the 27 fixed state-19 A2 pressure paths.
+
+All nine fixed-T recourse evaluations are `OPTIMAL`; the maximum mechanical residual is `5.11590769747272e-13`. The key seedwise `(mean total cost, mean shortage kg, q99.5 loss, CVaR99.5 loss)` results are:
+
+- dataset 1: SAA `(11693.786461,4.720568,278961.188361,396783.160623)`; eta 0.003 `(11689.444935,4.713680,277243.358358,396370.687006)`; eta 0.01 `(11682.601102,4.697828,277243.358358,395801.459711)`;
+- dataset 2: SAA `(11220.198642,4.489693,262951.013517,361437.221483)`; eta 0.003 `(11221.061242,4.485483,262951.013517,361352.370944)`; eta 0.01 `(11226.968236,4.476177,262779.597273,360587.344598)`;
+- dataset 3: SAA `(11122.897910,4.443133,248516.182252,358576.156349)`; eta 0.003 `(11127.247526,4.440681,248516.182252,358560.800963)`; eta 0.01 `(11133.674598,4.431552,248516.182252,357516.630150)`.
+
+Within every dataset, candidate-minus-SAA paired operating-loss and shortage mean differences have 95% CIs below zero. Total-cost results are mixed. Eta 0.003 gives total-cost differences `-4.3415 [-10.1395,1.4564]`, `+0.8626 [-4.0316,5.7568]`, and `+4.3496 [0.5763,8.1229]`; eta 0.01 gives `-11.1854 [-25.5022,3.1315]`, `+6.7696 [-3.3106,16.8498]`, and `+10.7767 [1.0931,20.4603]`.
+
+Both candidates reduce mean shortage and CVaR99.5 on all three seeds, but the gains are small. Eta 0.003 adds `4.621835706886 kg` and changes q99.5 on only one seed; eta 0.01 adds `17.036870755101 kg` and changes q99.5 on two seeds. Mean total cost worsens on two seeds for each candidate, and eta 0.003 slightly worsens dataset-2 maximum loss/shortage. The accepted C2 candidate judgement is option 4: neither candidate shows sufficient stable value to justify selection; return to SAA or recheck the radius range. This is not a formal eta freeze.
+
+Development `run-001` remains local and preserved. Its three dataset preparations passed, but the first fixed-T process was rejected by an over-strict `1e-14` floating weight-sum tolerance. `run-002` froze `1e-12`, regenerated all three datasets from scratch, and passed all processes. Full MAT/scenario/paired files remain local and are recorded by size and SHA-256 in the accepted large-file manifest.
+
+## 21. Current decision boundary after Step-04C-C2
+
+Formal eta remains unfrozen and Markov transition-probability perturbation has not been performed. C2 does not support advancing eta `0.003` or `0.01` as the selected radius: the robust candidates buy consistent but very small mean-shortage/CVaR reductions, with mixed mean cost and limited quantile movement. Before Markov perturbation, decide whether to carry SAA as the primary reference or reopen the eta range; do not silently select either C1 candidate.
