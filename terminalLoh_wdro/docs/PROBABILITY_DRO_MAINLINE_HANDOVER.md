@@ -121,3 +121,28 @@ Classifications:
 - `A. PROCEED_TO_STEP04C_B_EXTREME_AWARE_DRO`.
 
 The unique next task is Step-04C-B: define and audit the convex nominal chi-square plus frozen extreme-risk protection model while preserving the replicas as a separate stress set rather than empirical probability augmentation.
+
+## 16. Step-04C-B accepted extreme-aware decision-value audit
+
+Step-04C-B `run-014` is accepted as the first complete formal run at `results/task-002-stage2b-b3-smoke/45-extreme-aware-dro-decision-value/run-014/`. It used the frozen Step-04C-A/A2 inputs and existing audit definitions without assigning empirical probability mass to the frozen extreme replicas.
+
+The isolated formal grid contains all 30 combinations of eta `{0,0.01}`, extreme-risk design `{R1_MAX,R2_TOPK_5PCT(k=2),R2_TOPK_10PCT(k=3)}`, and kappa `{0,0.001,0.005,0.01,0.05}`. Every combination was recomputed from scratch, certified by LB/UB bounds, and independently reevaluated at fixed TerminalLOH. All 30 optimization cases, all 30 fixed-T audits, and all six FULL_CAPACITY eta/risk audits passed. The maximum absolute and relative certificate gaps were `2.14564443012932e-05` and `1.40207029843264e-09`.
+
+The nominal support remains the state-19 R=15000 set with 7334 byte-exact D/A/C groups. The extreme stress input contains only the 27 state-19 physical paths and 135 frozen consequence replicas selected by the Step-04C-B state-19 gate; the other-initial-state path count is zero.
+
+The accepted decisions are:
+
+- SAA: `T=[294.589913536808,138.832065024684,93.0093009300931,150]`, total `676.431279491585 kg`;
+- pure chi-square at eta `0.01`: `T=[300,143.468740452331,100,150]`, total `693.468740452331 kg`;
+- every positive-kappa extreme-enhanced solution coincides with its corresponding eta baseline;
+- FULL_CAPACITY: `T=[300,200,100,150]`, total `750 kg`.
+
+Across SAA, pure chi-square, every enhanced decision, and FULL_CAPACITY, the three extreme-risk values remain exactly `899141.407567379` for R1, `879011.626917991` for R2 with k=2, and `872171.138280415` for R2 with k=3. FULL_CAPACITY therefore provides zero recoverable-risk denominator. Headroom is zero and ClosedRatio is correctly undefined, rather than zero or a claimed numerical improvement.
+
+The accepted mechanical/model status is `M-A. EXTREME_AWARE_CONVEX_MODEL_VERIFIED`. The computed decision-value and overall method candidates remain `V-C. EXTREME_RISK_LARGELY_IRREDUCIBLE_BY_TERMINALLOH` and `B. KEEP_EXTREMES_AS_STRESS_VALIDATION_AND_CALIBRATE_PURE_CHI2`. Accepting `run-014` confirms the run and evidence; it does not independently freeze those method candidates.
+
+Development history remains local and is not part of the accepted Git archive. In particular, run-011 completed the 30 combinations but failed FULL_CAPACITY table assembly because of a 42/43-column mismatch; run-013 completed the 30 combinations, 30 fixed-T audits, and six FULL_CAPACITY audits but its finalizer rejected the valid all-zero recoverable denominator. Run-014 corrected both output defects and repeated all combinations from scratch.
+
+## 17. Current decision boundary
+
+Do not rerun Step-04C-B merely to reproduce the accepted grid. The next action requires the user's research judgment on whether to freeze the candidate conclusion, keep the extreme replicas as stress-validation evidence, and proceed with pure chi-square radius calibration and independent validation.

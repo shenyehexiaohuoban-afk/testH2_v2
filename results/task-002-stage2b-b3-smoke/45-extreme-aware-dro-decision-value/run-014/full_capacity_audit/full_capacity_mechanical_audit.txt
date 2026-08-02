@@ -1,0 +1,5 @@
+status=PASS
+state19_extreme_paths=27
+state19_extreme_replicas=135
+maximum_mechanical_residual=3.82959842681885e-06
+runtime_sec=6.636921000

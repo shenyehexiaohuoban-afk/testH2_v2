@@ -1,0 +1,5 @@
+site_id,TerminalLOH,capacity,capacity_slack,capacity_binding
+1,300,300,0,1
+2,200,200,0,1
+3,100,100,0,1
+4,150,150,0,1
