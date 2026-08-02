@@ -1,0 +1,8 @@
+status=PASS
+all_frozen_input_hashes_pass=1
+electricity_price_read_from_live_MSP_vector=1
+price_count=24
+c_H2=32.5213675213675
+M_H2=1283.205
+C_y_primary=0
+MSP_called=0

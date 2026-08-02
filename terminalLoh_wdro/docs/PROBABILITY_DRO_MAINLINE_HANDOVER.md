@@ -269,3 +269,39 @@ The seedwise fixed-decision break-even coefficient is `gamma_break_even=(SAA ope
 C4 changes the interpretation of the existing evidence, not the frozen decisions. Pearson chi-square inventories consistently reduce modeled operating loss and shortage, and their value becomes much stronger under intensity and combined Markov shifts. However, the current offline total is not a verified monetary system cost, and extra TerminalLOH cost cannot be reduced to `2 yuan/kg` or `34 yuan` without additional calibration and MSP integration.
 
 Retain eta `0.003` as a mild resilience alternative and eta `0.01` as a conservative upper resilience alternative for transparent comparison, but do not freeze either as the formal eta and do not claim that DRO全面优于SAA. SAA remains the formal state19 reference under the current evidence. Reopening the chi-square selection mainline requires an explicitly authorized research question plus monetary calibration for preload/service terms, storage loss/salvage assumptions, and a documented link from reserve shortage to electric VOLL. TerminalLOH inventory also cannot replace road restoration, network hardening, or other resilience measures.
+
+## 26. Step-04C-C5B accepted unified-economic state19 recalculation
+
+Step-04C-C5B accepted `run-003` is at `results/task-002-stage2b-b3-smoke/51-unified-economic-terminal-loh/run-003/`. It independently reoptimizes state19 SAA and flat Pearson eta `0.003/0.01` under a yuan-consistent primary objective. It does not run the MSP, modify the historical formal solvers, change D/A/C, use validation data for optimization, use the old Wasserstein route, or run other initial states.
+
+The frozen economic conversion is:
+
+- live MSP 24-hour electricity price min/max/mean: `0.3/0.98/0.634166666666667 yuan/kWh`;
+- `k_H2=0.0195 kg/kWh`, so `SEC_H2=51.2820512821 kWh/kg`;
+- local preparation cost `c_H2=32.5213675214 yuan/kg`; no repeated eta-EL multiplication;
+- `LHV=33.33 kWh/kg`, `eta_FC=0.55`, so `18.3315 kWh/kg-H2`;
+- VOLL-derived shortage penalty `M_H2=70*18.3315=1283.205 yuan/kg-H2`.
+
+The primary objective contains only `c_H2*sum(T)` and expected/worst-case `M_H2*shortage`. `C*y` is not currency, transport cost, or Pearson loss. A strict second LP fixes each scenario's primary-optimal shortage by equality and then minimizes `sum(C*y)`; the maximum observed shortage-preservation error is `1.1368683772e-13 kg`.
+
+The new decisions are:
+
+- SAA: `T=[222.840465864768,119.193737555574,36.003600360036,133.376974061042]`, total `511.414777841420 kg`;
+- eta `0.003`: `T=[225.290752999455,121.925712142017,41.462552723036,137.464508019752]`, total `526.143525884259 kg`;
+- eta `0.01`: `T=[226.659147502450,121.966076719698,44.414041094008,139.650354720371]`, total `532.689620036528 kg`.
+
+No site reaches capacity. Relative to SAA, eta `0.003` adds `14.728748042839 kg` and `478.999028 yuan` preparation cost; eta `0.01` adds `21.274842195108 kg` and `691.886962 yuan`. On nominal state19, their mean EENS reductions are `6.362986918676` and `8.915826503816 kWh`, with economic premiums `33.589944` and `67.779107 yuan`. Their nominal incremental costs per additionally restored kWh are `5.278959` and `7.602111 yuan/kWh`.
+
+Both candidates reduce mean EENS in all 25 empirical validation cells: state19 nominal, all three separate C2 independent-path sets, and all 21 C3 distribution-seed cells. C2 and C3 nominal/location-only cells retain small positive economic premiums. Intensity-only and combined mild/medium/strong cells are economically favorable for both candidates on every seed. Under combined-strong, mean changes across seeds are eta `0.003`: `-19.110154 kWh` EENS and `-858.711741 yuan`; eta `0.01`: `-27.005124 kWh` and `-1198.471740 yuan`.
+
+The state19 fixed pressure set remains a 27-path/135-replica descriptive stress test with no empirical probability. Eta `0.003/0.01` reduce q95 shortage by `4.913443/7.864932 kg`, but maximum shortage is unchanged at `449.226740855904 kg`. This is continuing evidence that inventory alone does not solve completely unreachable road/service configurations.
+
+All optimization and validation certificates pass. Eta `0.003` LB/UB are `26171.6135975414/26171.6138457859` with relative gap `9.4852556077e-09`; eta `0.01` LB/UB are `27448.9846575327/27448.9847293963` with relative gap `2.6180795517e-09`. Strong-duality, probability conservation/nonnegativity, divergence, EENS identity, and recourse mechanics all pass. No R-by-R matrix was built.
+
+Development `run-001` is preserved after a 52-versus-51 output-column assembly error following three successful optimizations. `run-002` is preserved after all 30 MATLAB processes passed but the Python plot finalizer encountered local Matplotlib style/API incompatibility. `run-003` repeated every process from scratch and all 31 isolated processes exited zero. Neither failed run is eligible for Git.
+
+## 27. Current decision boundary after Step-04C-C5B
+
+The unified yuan objective materially changes inventory levels: historical mixed-unit totals `676.431279/681.053115/693.468150 kg` become `511.414778/526.143526/532.689620 kg`. The historical statement that eta `0.01` adds only `17.036871 kg` no longer applies; the new increment is `21.274842 kg`.
+
+Use SAA as the economic benchmark, eta `0.003` as the lower-premium mild-resilience scheme, and eta `0.01` as the higher-guarantee scheme. This is candidate judgement option 3; neither radius is formally frozen and neither DRO scheme全面支配SAA. The evidence supports carrying all three schemes into the 35-state calculation because both DRO decisions improve mean EENS in every empirical validation cell and show increasing economic value under intensity/combined probability shifts. Preserve the explicit limitation that fixed-pressure maximum shortage is unchanged and TerminalLOH cannot replace road restoration or network hardening.

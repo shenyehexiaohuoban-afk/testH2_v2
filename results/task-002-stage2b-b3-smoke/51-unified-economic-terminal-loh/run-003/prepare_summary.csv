@@ -1,0 +1,2 @@
+initial_state_id,nominal_R,price_count,price_min,price_max,price_mean,SEC_H2,c_H2,M_H2,frozen_input_count,all_hash_pass,prepare_runtime_sec
+19,15000,24,0.3,0.98,0.634166666666667,51.2820512820513,32.5213675213675,1283.205,30,1,5.2503856

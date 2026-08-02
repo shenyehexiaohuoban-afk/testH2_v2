@@ -1,0 +1,10 @@
+Step-04C-C5B candidate positioning
+
+Accepted bounded judgment: 3. 两个 DRO 方案分别代表不同保障等级，均保留
+
+- SAA remains the economic reference under the newly unified yuan objective.
+- eta=0.003 improves mean EENS in 25/25 empirical validation cells; its mean economic increment is -183.810922 yuan and mean EENS change is -9.46871357 kWh (candidate minus SAA).
+- eta=0.01 improves mean EENS in 25/25 empirical validation cells; its mean economic increment is -241.321867 yuan and mean EENS change is -13.3315547 kWh.
+- Fixed pressure q95 shortage changes are -4.91344327 kg and -7.86493164 kg; maximum-shortage changes are 0 kg and 0 kg.
+
+These results do not freeze eta, do not claim full lifecycle economics, do not price C*y as transportation, and do not show that DRO resolves complete road inaccessibility.

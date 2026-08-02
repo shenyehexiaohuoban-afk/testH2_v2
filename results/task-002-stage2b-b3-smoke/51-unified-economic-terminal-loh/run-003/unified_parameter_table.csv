@@ -1,0 +1,12 @@
+parameter,value,unit,role,source
+LHV,33.33,kWh/kg,active_physical,NearStageInput.HydrogenDevice.h2_lhv_kWh_per_kg
+eta_FC,0.55,dimensionless,active_physical,NearStageInput.HydrogenDevice.eta_FC
+electricity_per_kg_H2,18.3315,kWh/kg,active_conversion,LHV*eta_FC
+k_H2,0.0195,kg/kWh,active_MSP_balance,NearStageInput.HydrogenDevice.k_H2_kg_per_kWh
+SEC_H2,51.2820512820513,kWh/kg,active_derived,1/k_H2
+average_electricity_price,0.634166666666667,yuan/kWh,active_live_MSP_price,NearStageInput.Cost.electricity_price_yuan_per_kWh
+c_H2,32.5213675213675,yuan/kg,active_primary_inventory_cost,SEC_H2*average_electricity_price
+VOLL,70,yuan/kWh,user_frozen_literature_benchmark,Wen et al. 2023 DOI 10.19929/j.cnki.nmgdljs.2023.0003
+M_H2,1283.205,yuan/kg-H2,active_primary_shortage_penalty,VOLL*LHV*eta_FC
+historical_gamma,2,historical_objective_units/kg,comparison_only,C1 historical objective
+historical_M,2000,historical_penalty_units/kg,comparison_only,C1 historical objective
