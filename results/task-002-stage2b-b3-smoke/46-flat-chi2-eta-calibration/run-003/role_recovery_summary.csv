@@ -1,0 +1,4 @@
+dataset_role,base_joint_seed,recovery_runtime_sec,replay_pass,max_DAC_error,same_typhoon_path_order_as_nominal
+nominal,20260723,117.1231044,1,0,1
+validation-1,20260724,107.6733941,1,0,1
+validation-2,20260725,113.1873525,1,0,1

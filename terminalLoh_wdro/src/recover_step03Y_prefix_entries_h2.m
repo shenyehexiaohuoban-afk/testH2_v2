@@ -1,9 +1,18 @@
 function [entries, context] = recover_step03Y_prefix_entries_h2( ...
-        rootDir, stateIds, sampleSizes, continueOnStateFailure)
+        rootDir, stateIds, sampleSizes, continueOnStateFailure, datasetRole)
 %RECOVER_STEP03Y_PREFIX_ENTRIES_H2 Deterministically replay frozen prefixes.
 
 if nargin < 4 || isempty(continueOnStateFailure)
     continueOnStateFailure = false;
+end
+if nargin < 5 || isempty(datasetRole)
+    datasetRole = "nominal";
+end
+datasetRole = string(datasetRole);
+validRoles = ["nominal", "validation-1", "validation-2"];
+if ~isscalar(datasetRole) || ~ismember(datasetRole, validRoles)
+    error('recover_step03Y_prefix_entries_h2:BadDatasetRole', ...
+        'datasetRole must be nominal, validation-1, or validation-2.');
 end
 
 moduleDir = fullfile(rootDir, 'terminalLoh_wdro');
@@ -12,18 +21,23 @@ addpath(rootDir); addpath(thisDir);
 addpath(fullfile(rootDir, 'fa_h2', 'fuzhu', 'terminalLoh_windmc'));
 
 rowsPerState = 15000;
-baseSeed = 20260723;
 windSeedOffset = 330000000;
 demandToleranceKg = 1e-10;
-config = build_config(rootDir, moduleDir);
+config = build_config(rootDir, moduleDir, datasetRole);
 
 nominalOptions = detectImportOptions(config.nominalCsv);
 nominalOptions = setvartype(nominalOptions, 'initial_state', 'string');
 nominal = readtable(config.nominalCsv, nominalOptions);
 mainSample = readtable(config.mainSampleFile);
 seedMap = readtable(config.seedMapFile, 'TextType', 'string');
-seedMap = seedMap(seedMap.dataset_role == "nominal" & ...
+seedMap = seedMap(seedMap.dataset_role == datasetRole & ...
     ismember(double(seedMap.initial_state_id), stateIds), :);
+baseSeeds = unique(double(seedMap.base_joint_seed));
+if numel(baseSeeds) ~= 1
+    error('recover_step03Y_prefix_entries_h2:SeedMap', ...
+        'Frozen dataset role does not map to one base seed.');
+end
+baseSeed = baseSeeds(1);
 windConfig = load_formal_b3_wind_config_h2(config.formalWindConfigFile);
 rawNear = load(config.nearInputFile, 'NearStageInput');
 near = rawNear.NearStageInput;
@@ -367,13 +381,23 @@ audit = struct('all_final_DAC_exact', ...
     'stream_match_count', streamMatches);
 end
 
-function config = build_config(rootDir, moduleDir)
+function config = build_config(rootDir, moduleDir, datasetRole)
 config.mainSampleFile = fullfile(moduleDir, 'output', ...
     'stage2a2_W3_path_sampling', 'run-002', 'main_path_samples.csv');
+if datasetRole == "nominal"
+    csvName = 'wdro_nominal_input.csv';
+    matName = 'wdro_nominal_input_DAC.mat';
+elseif datasetRole == "validation-1"
+    csvName = 'wdro_validation_1.csv';
+    matName = 'wdro_validation_1_DAC.mat';
+else
+    csvName = 'wdro_validation_2.csv';
+    matName = 'wdro_validation_2_DAC.mat';
+end
 config.nominalCsv = fullfile(moduleDir, 'output', ...
-    'stage3j_wdro_input_freeze', 'run-001', 'wdro_nominal_input.csv');
+    'stage3j_wdro_input_freeze', 'run-001', csvName);
 config.nominalMat = fullfile(moduleDir, 'output', ...
-    'stage3j_wdro_input_freeze', 'run-001', 'wdro_nominal_input_DAC.mat');
+    'stage3j_wdro_input_freeze', 'run-001', matName);
 config.seedMapFile = fullfile(moduleDir, 'output', ...
     'stage3j_wdro_input_freeze', 'run-001', 'dataset_role_and_seed_map.csv');
 config.nearInputFile = fullfile(rootDir, 'data', 'yuanqi', ...

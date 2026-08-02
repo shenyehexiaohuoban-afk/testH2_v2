@@ -1,0 +1,2 @@
+initial_state_id,nominal_R,nominal_exact_group_count,hash_collision_split_count,stress_path_count,stress_replica_count,replicas_per_path,prepared_input_bytes,prepared_input_sha256,prepare_runtime_sec
+19,15000,7334,0,27,135,5,35925873,5914afb37254ae908c5a8b10f24bc0ae01520e56b35b928a1afc13cf4602f19b,347.3572953

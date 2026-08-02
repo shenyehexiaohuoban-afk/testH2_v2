@@ -1,0 +1,17 @@
+status=PASS
+initial_state_id=19
+nominal_R=15000
+nominal_exact_groups=7334
+hash_collision_splits=0
+validation_interpretation=same_typhoon_paths_second_layer_wind_and_resistance_redraw
+same_typhoon_path_order=1
+stress_empirical_probability_assigned=0
+stress_paths=27
+stress_replicas=135
+replicas_per_path=5
+other_initial_states=0
+eta_grid=0,0.0001,0.0003,0.001,0.003,0.01,0.03,0.1
+R_by_R_matrix_constructed=0
+old_WDRO_called=0
+extreme_aware_solver_called=0
+MSP_called=0

@@ -146,3 +146,32 @@ Development history remains local and is not part of the accepted Git archive. I
 ## 17. Current decision boundary
 
 Do not rerun Step-04C-B merely to reproduce the accepted grid. The next action requires the user's research judgment on whether to freeze the candidate conclusion, keep the extreme replicas as stress-validation evidence, and proceed with pure chi-square radius calibration and independent validation.
+
+## 18. Step-04C-C1 accepted eta initial screening
+
+Step-04C-C1 `run-003` is accepted at `results/task-002-stage2b-b3-smoke/46-flat-chi2-eta-calibration/run-003/`. It is a state-19-only initial screening of the pure flat Pearson chi-square radius, not a formal eta calibration.
+
+The frozen grid is `eta={0,0.0001,0.0003,0.001,0.003,0.01,0.03,0.1}`. Every eta was optimized on the nominal R=15000 state-19 distribution in an isolated MATLAB process, then independently reevaluated at fixed TerminalLOH on nominal, validation-1, validation-2, and the isolated 27-path/135-replica state-19 stress set. All process exit codes, solver statuses, LB/UB certificates, probability recovery, strong duality, divergence, probability conservation, and formal three-period recourse residuals passed. No R-by-R matrix, Wasserstein solver, Step-04C-B extreme-aware solver, MSP, or other initial state was used.
+
+The TerminalLOH decisions are:
+
+- eta `0`: `[294.589913536808,138.832065024684,93.0093009300931,150]`, total `676.431279491585 kg`;
+- eta `0.0001`: `[297.847966567418,137.998799867703,93.8425660904143,150]`, total `679.689332525535 kg`;
+- eta `0.0003`: `[297.848292841337,137.999286473295,93.8422374510755,150]`, total `679.689816765707 kg`;
+- eta `0.001`: `[298.697267638016,137.997293570043,93.8438898641278,150]`, total `680.538451072186 kg`;
+- eta `0.003`: `[299.211738691929,137.483280118695,94.3580963878466,150]`, total `681.053115198470 kg`;
+- eta `0.01`: `[300,143.468150246686,100,150]`, total `693.468150246686 kg`;
+- eta `0.03`: `[300,153.848478776362,100,150]`, total `703.848478776362 kg`;
+- eta `0.1`: `[300,174.391416112881,100,150]`, total `724.391416112881 kg`.
+
+Eta zero returns to the Step-04B SAA reference with maximum TerminalLOH error `1.99e-13 kg` and objective error `1.73e-10`. Across the eight cases, the maximum absolute LB/UB gap is `1.23689203974209e-4`, the maximum relative gap is `9.76551225047717e-9`, the maximum strong-duality gap is `1.73167791217566e-9`, the maximum probability-sum residual is `4.39648317751562e-14`, and the maximum mechanical residual is `1.60071067512035e-10`. Positive eta cases use the requested divergence to numerical tolerance.
+
+Validation-1 and validation-2 remain second-layer wind-speed and resistance redraws on the same typhoon paths. They are not independent-path out-of-sample samples. The 27 state-19 paths and 135 frozen consequence replicas remain a fixed reproducible stress set with no empirical probability and no contribution to the optimization objective. Their q95 and maximum operating loss remain exactly `820195.36161099` and `899141.407567379` for every eta, although mean stress loss falls gradually as inventory rises.
+
+No eta is strictly dominated across every tracked nominal, redraw-validation, and stress metric. However eta `0.0001` and `0.0003` are effectively the same low-radius decision plateau. Eta `0.03` and `0.1` add `27.4172` and `47.9601 kg` relative to SAA while leaving stress q95 and maximum loss unchanged; their average validation CVaR99.5 improvements remain only `0.3868%` and `0.5928%`. The recommended two-point set for the next different-path-seed validation is therefore `{0.003,0.01}`: eta `0.003` is the upper edge of the at-most-5-kg inventory plateau, and eta `0.01` is retained only as the first capacity-binding structural-jump upper candidate.
+
+Development history remains local. `run-001` stopped at eta `0.001` because the C1 outer certificate incorrectly required both absolute and relative gaps, even though the accepted Step-04B solver stops when either tolerance is met. `run-002` completed all cases mechanically but its automatic shortlist was too broad. `run-003` froze the corrected certificate and two-point screening rules before execution, repeated all eight eta cases from scratch, and reproduced run-002's non-runtime numerical results exactly.
+
+## 19. Current decision boundary after Step-04C-C1
+
+Formal eta is not frozen. Proceed to different typhoon-path random seeds using SAA plus eta `{0.003,0.01}`, followed by Markov transition-probability perturbation. Only after those two evidence layers may a formal eta be selected. Do not describe validation-1/2 as independent-path validation and do not use the frozen extreme replicas as empirical probability mass.

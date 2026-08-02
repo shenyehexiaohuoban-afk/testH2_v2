@@ -1,0 +1,16 @@
+Step-04C-C1 state19 pure flat Pearson chi-square DRO eta initial screening
+status=PASS
+scope=initial eta screening only; formal eta is not frozen
+eta_grid=0,0.0001,0.0003,0.001,0.003,0.01,0.03,0.1
+eta_grid_status=user-frozen logarithmic initial screening grid; no adaptive changes
+validation_interpretation=validation-1/2 are second-layer wind-speed and resistance redraws on the same typhoon paths, not independent-path OOS samples
+stress_interpretation=27 state19 paths and 135 frozen replicas form an isolated reproducible stress set and receive no empirical probability in optimization
+dominated_schemes=none
+recommendation_status=PRELIMINARY_TWO_POINT_CANDIDATE_SET_FOR_INDEPENDENT_PATH_VALIDATION
+recommended_eta_candidates_for_next_independent_path_validation=0.003, 0.01
+candidate_rationale=eta=0.003 represents the upper edge of the <=5 kg low-inventory plateau; eta=0.01 is the first capacity-binding structural jump and is retained only as an upper-bound validation candidate
+excluded_high_eta_rationale=eta=0.03 and 0.1 add substantial inventory while state19 stress q95 and maximum loss remain unchanged
+selection_boundary=not chosen by nominal objective alone and not chosen by stress result alone
+required_next_evidence=different typhoon-path random seeds plus Markov transition-probability perturbations
+formal_eta_frozen=false
+proceed_to_independent_path_validation=true
