@@ -1,0 +1,7 @@
+﻿audit_item,symbol,value,unit,source_path,line_or_field,status_or_formula
+input electrical load,P_load_base_kw,3715,kW,data/yuanqi/near_stage_msp_input.mat,NearStageInput.Grid.P_load_base_kw,active
+fuel-cell efficiency,eta_FC,0.55,dimensionless,data/yuanqi/near_stage_msp_input.mat,NearStageInput.HydrogenDevice.eta_FC,active
+hydrogen lower heating value,LHV_H2,33.33,kWh/kg,data/yuanqi/near_stage_msp_input.mat,NearStageInput.HydrogenDevice.h2_lhv_kWh_per_kg,active
+formal period duration,Delta_tau,1,h per period,terminalLoh_wdro/src/generate_step04CA2_formal_consequences_h2.m,terminalLoh_wdro/src/generate_step04CA2_formal_consequences_h2.m:86,three periods
+forward conversion,D,0.0545509096364182,kg-H2/kWh-unserved,terminalLoh_wdro/src/generate_step04CA2_formal_consequences_h2.m,terminalLoh_wdro/src/generate_step04CA2_formal_consequences_h2.m:214,D=outage*P*1h/(eta_FC*LHV)
+inverse conversion,E_unrestored,18.3315,kWh/kg-H2-shortage,terminalLoh_wdro/src/generate_step04CA2_formal_consequences_h2.m,terminalLoh_wdro/src/generate_step04CA2_formal_consequences_h2.m:114,E=shortage*eta_FC*LHV

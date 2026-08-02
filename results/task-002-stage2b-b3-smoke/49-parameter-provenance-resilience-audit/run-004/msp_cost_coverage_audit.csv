@@ -1,0 +1,12 @@
+﻿cost_or_physical_item,covered_by_offline_gamma_2,covered_by_offline_recourse,represented_in_MSP,effective_value_or_formula,source,audit_conclusion
+electrolyzer electricity,False,False,True,electricity price * kWh,load_data_h2_near.m:246-248; fa_h2/build_stage_model_h2.m:36,Only MSP
+electrolyzer O&M,False,False,True,0.012,NearStageInput.Cost.el_om_yuan_per_kWh,Only MSP
+external hydrogen purchase,False,False,False,,static scan found no purchase variable,Not modeled
+HTT transport/redispatch,False,False,True,0.8,NearStageInput.HTT.transport_cost_yuan_per_kg_km; update_rhs_h2.m:44-45,"Offline C is road impedance, not HTT bill"
+normal hydrogen load shortage,False,False,True,200.0,NearStageInput.Cost.normal_shortage_penalty_yuan_per_kg,Only MSP
+storage capacity occupation/holding,False,False,True,0.05,NearStageInput.Cost.h2_holding_cost_yuan_per_kg,Offline gamma is distinct
+cross-stage inventory carry,False,False,True,state balance,fa_h2/build_stage_model_h2.m:54-78,"Physical state, holding charged"
+liquid hydrogen/boil-off loss,False,False,False,,no storage-loss term found,Unmodeled
+unused terminal hydrogen salvage,False,False,False,0,terminal value penalizes shortage only,No salvage or future-use credit
+terminal reserve shortfall,False,True,True,2000.0,M*u offline; terminal_value_and_subgradient_h2.m:15 MSP,"Same numeric field, different surrounding objective"
+offline preload weight,True,False,False,2.0,gamma=0.001*M,Does not cover MSP system costs

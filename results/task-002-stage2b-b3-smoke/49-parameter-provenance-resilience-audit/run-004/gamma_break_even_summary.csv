@@ -1,0 +1,17 @@
+﻿source_step,evaluation_scope,distribution_label,decision_label,eta,seed_count,positive_break_even_seed_count,gamma_break_even_min,gamma_break_even_mean,gamma_break_even_max,gamma_2_economic_seed_count,interpretation
+C2,independent-typhoon-path-seeds,independent-path-nominal,ETA_0.003,0.003,3,3,1.05889849476695,1.93720450642004,2.93935089158684,1,Fixed-decision ex-post threshold; not a reoptimized sensitivity result
+C2,independent-typhoon-path-seeds,independent-path-nominal,ETA_0.01,0.01,3,3,1.36744909769738,1.87554591998277,2.65653831717008,1,Fixed-decision ex-post threshold; not a reoptimized sensitivity result
+C3,markov-transition-perturbation,combined-medium,ETA_0.003,0.003,3,3,7.84768292619459,8.47011007933843,9.29658350730473,3,Fixed-decision ex-post threshold; not a reoptimized sensitivity result
+C3,markov-transition-perturbation,combined-medium,ETA_0.01,0.01,3,3,6.45344638515727,6.90741385150383,7.51184599084786,3,Fixed-decision ex-post threshold; not a reoptimized sensitivity result
+C3,markov-transition-perturbation,combined-mild,ETA_0.003,0.003,3,3,4.65422592011556,4.98959743890935,5.64848064142761,3,Fixed-decision ex-post threshold; not a reoptimized sensitivity result
+C3,markov-transition-perturbation,combined-mild,ETA_0.01,0.01,3,3,3.39994282751476,3.74288539872895,3.9583946536312,3,Fixed-decision ex-post threshold; not a reoptimized sensitivity result
+C3,markov-transition-perturbation,combined-strong,ETA_0.003,0.003,3,3,14.9352126753376,15.6986651976575,16.9096842646706,3,Fixed-decision ex-post threshold; not a reoptimized sensitivity result
+C3,markov-transition-perturbation,combined-strong,ETA_0.01,0.01,3,3,11.0487906529746,12.2560567077444,12.9269544364397,3,Fixed-decision ex-post threshold; not a reoptimized sensitivity result
+C3,markov-transition-perturbation,intensity-only,ETA_0.003,0.003,3,3,6.15895747029573,7.48673929872789,8.48757946935751,3,Fixed-decision ex-post threshold; not a reoptimized sensitivity result
+C3,markov-transition-perturbation,intensity-only,ETA_0.01,0.01,3,3,4.96157057354518,5.49880467544501,6.00522124034831,3,Fixed-decision ex-post threshold; not a reoptimized sensitivity result
+C3,markov-transition-perturbation,lfw-only,ETA_0.003,0.003,3,3,2.72320692885086,3.26785196051014,4.26380100474867,3,Fixed-decision ex-post threshold; not a reoptimized sensitivity result
+C3,markov-transition-perturbation,lfw-only,ETA_0.01,0.01,3,3,2.41006310992328,2.64969497400123,2.95124658790669,3,Fixed-decision ex-post threshold; not a reoptimized sensitivity result
+C3,markov-transition-perturbation,location-only,ETA_0.003,0.003,3,3,1.45360149359982,1.94387435267699,2.30509181992976,2,Fixed-decision ex-post threshold; not a reoptimized sensitivity result
+C3,markov-transition-perturbation,location-only,ETA_0.01,0.01,3,3,1.5936487365364,1.6646701770654,1.74374411801572,0,Fixed-decision ex-post threshold; not a reoptimized sensitivity result
+C3,markov-transition-perturbation,nominal,ETA_0.003,0.003,3,3,1.6439690434112,2.00632545725726,2.61361538886051,1,Fixed-decision ex-post threshold; not a reoptimized sensitivity result
+C3,markov-transition-perturbation,nominal,ETA_0.01,0.01,3,3,1.40349904596132,1.54544062425747,1.64119936430519,0,Fixed-decision ex-post threshold; not a reoptimized sensitivity result

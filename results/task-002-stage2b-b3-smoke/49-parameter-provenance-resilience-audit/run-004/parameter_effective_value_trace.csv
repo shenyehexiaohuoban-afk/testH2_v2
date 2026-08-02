@@ -1,0 +1,9 @@
+﻿parameter,step_order,path,line_or_field,value,unit,action,override_relation,is_effective,notes
+M,1,data/yuanqi/near_stage_msp_input.mat,NearStageInput.Cost.reserve_shortage_penalty_yuan_per_kg,2000.0,declared yuan/kg,load,primary live MAT field,True,Effective source
+M,2,terminalLoh_wdro/src/build_terminal_loh_wdro_from_joint_samples_h2.m,terminalLoh_wdro/src/build_terminal_loh_wdro_from_joint_samples_h2.m:253,2000,declared yuan/kg,fallback,used only if MAT fields absent,False,Not effective in C1/C2/C3
+M,3,terminalLoh_wdro/src/recover_step03Y_prefix_entries_h2.m,terminalLoh_wdro/src/recover_step03Y_prefix_entries_h2.m:108,2000.0,declared yuan/kg,copy,MAT value propagated,True,C1 context
+gamma,1,terminalLoh_wdro/src/recover_step03Y_prefix_entries_h2.m,terminalLoh_wdro/src/recover_step03Y_prefix_entries_h2.m:192,2.0,objective-unit/kg,derive,0.001*M,True,C1 effective
+gamma,2,terminalLoh_wdro/src/run_step04CC2_fixed_T_dataset_h2.m,line 47,2.0,objective-unit/kg,freeze,hard-coded equality to C1,True,C2 effective
+gamma,3,terminalLoh_wdro/src/run_step04CC3_fixed_T_dataset_h2.m,line 46,2.0,objective-unit/kg,freeze,hard-coded equality to C1,True,C3 effective
+C,1,terminalLoh_wdro/src/generate_step04CA2_formal_consequences_h2.m,terminalLoh_wdro/src/generate_step04CA2_formal_consequences_h2.m:117,scenario dependent,km,construct,current-road-state edge impedance,True,No monetary multiplier
+C,2,terminalLoh_wdro/src/evaluate_step03T_fixed_T_recourse_h2.m,terminalLoh_wdro/src/evaluate_step03T_fixed_T_recourse_h2.m:91,scenario dependent,kg*km after multiplying y,objective,service term,True,Not MSP HTT cost

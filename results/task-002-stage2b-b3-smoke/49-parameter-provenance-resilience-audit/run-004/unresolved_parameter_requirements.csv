@@ -1,0 +1,9 @@
+﻿missing_parameter_or_evidence,required_unit_or_definition,formula_position,why_needed,status
+offline gamma monetary calibration,currency/kg of prepositioned H2,gamma*DeltaInventory,Required before calling 34.073742 a currency amount,unresolved
+reserve shortage penalty calibration,empirical/source-backed yuan/kg or outage-value mapping,M*shortage,Field declares yuan/kg but value 2000 lacks engineering citation,unresolved
+offline service impedance monetization,"yuan/(kg*km), yuan/(kg*h), or explicit normalization",C*y conversion,Required for dimensional consistency of total objective,unresolved
+inventory creation pathway,marginal production/purchase/transport/storage mix,MSP endogenous cost,Needed to turn extra TerminalLOH into full-system incremental cost,requires MSP integration
+storage loss,fraction per hour/stage and storage technology,x_next=(1-loss)*x+...,No loss/boil-off term exists,unresolved
+unused hydrogen salvage/future value,yuan/kg or continuation value,-salvage*x_terminal or continuation function,Current terminal surplus has zero explicit value,unresolved
+critical-load/electric-service interpretation,documented load coverage and critical weighting,EENS and service-rate reporting,Formal D uses full P_load_base rather than CriticalLoad template,partially resolved
+shortage CVaR in C1 summaries,scenario-level shortage or frozen summary statistic,CVaR99.5 equivalent unserved energy,Not present in C1 lightweight tables; C2/C3 can be recomputed read-only,partially unresolved

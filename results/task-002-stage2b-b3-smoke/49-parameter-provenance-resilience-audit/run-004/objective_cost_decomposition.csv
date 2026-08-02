@@ -1,0 +1,14 @@
+﻿model_scope,cost_component,implemented_formula,effective_coefficient,unit,enters_objective,audit_note
+offline C1/C2/C3,preload inventory,gamma*sum_i(T_i),2.0,objective-unit/kg,yes,Derived trade-off weight; not MSP production cost
+offline C1/C2/C3,service impedance,"sum_tau,i,n C_i,n^tau*y_i,n^tau",,kg*km,yes,Current-road shortest-path impedance; not monetized
+offline C1/C2/C3,hydrogen shortage penalty,"M*sum_tau,n u_n^tau",2000.0,declared yuan/kg but used as model penalty,yes,Dominant penalty term; calibration source unresolved
+offline C1/C2/C3,full objective,gamma*sum(T)+service_impedance+M*shortage,,mixed objective units,yes,Not dimensionally a pure currency objective
+near-stage MSP,hydrogen inventory holding,c_hold*sum(xAfter),0.05,yuan/kg,yes,Applied in each ordinary stage objective
+near-stage MSP,electrolyzer electricity,price_t*dt_h*sum(e),0.3..0.98,yuan/kWh,yes,Stage-average electricity price
+near-stage MSP,electrolyzer O&M,c_EL_OM*dt_h*sum(e),0.012,yuan/kWh,yes,Added to electricity coefficient
+near-stage MSP,HTT transfer,c_ij_base*(1+lambda_beta*beta)*f_ij,0.8,yuan/(kg*km) base rate,yes,Capacity also falls with beta
+near-stage MSP,normal H2 shortage,c_normal_short*sum(z_normal),200.0,yuan/kg,yes,Ordinary-stage load shortage
+near-stage MSP,terminal reserve shortage,"c_reserve_short*sum(max(0,T-x))",2000.0,yuan/kg,yes,Terminal convex penalty
+near-stage MSP,surplus salvage,none,,none,no,No reward or later-use terminal value found
+near-stage MSP,storage/boil-off loss,none,,none,no,Balance contains no multiplicative inventory loss
+near-stage MSP,external hydrogen purchase,none,,none,no,No purchase/procurement decision found
