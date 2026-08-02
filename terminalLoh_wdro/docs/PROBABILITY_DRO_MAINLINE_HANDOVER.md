@@ -207,3 +207,43 @@ Development `run-001` remains local and preserved. Its three dataset preparation
 ## 21. Current decision boundary after Step-04C-C2
 
 Formal eta remains unfrozen and Markov transition-probability perturbation has not been performed. C2 does not support advancing eta `0.003` or `0.01` as the selected radius: the robust candidates buy consistent but very small mean-shortage/CVaR reductions, with mixed mean cost and limited quantile movement. Before Markov perturbation, decide whether to carry SAA as the primary reference or reopen the eta range; do not silently select either C1 candidate.
+
+## 22. Step-04C-C3 accepted Markov transition-probability perturbation diagnostic
+
+Step-04C-C3 `run-001` is accepted at `results/task-002-stage2b-b3-smoke/48-markov-transition-perturbation/run-001/`. It evaluates the three frozen C1 decisions on state19 only. TerminalLOH was never reoptimized on C3 data, the chi-square adversary was not constructed, and CVaR is an evaluation metric only.
+
+The frozen decisions remain:
+
+- SAA eta `0`: `T=[294.589913536808,138.832065024684,93.0093009300931,150]`, total `676.431279491585 kg`;
+- eta `0.003`: `T=[299.211738691929,137.483280118695,94.3580963878466,150]`, total `681.053115198470 kg`;
+- eta `0.01`: `T=[300,143.468150246686,100,150]`, total `693.468150246686 kg`.
+
+The seven distribution scenarios are nominal; intensity-only/location-only/lfw-only at delta `0.05`; and combined mild/medium/strong at delta `0.02/0.05/0.10`. Every matrix row uses `P_delta=(1-delta)P_nominal+delta*P_stress`, stays on original positive support, remains nonnegative and normalized, and leaves deterministic rows unchanged. The maximum row-sum error is `1.33226762955019e-15`; support, formula, and deterministic-row errors are zero.
+
+Location perturbation was not blocked. Before C3 outcomes were observed, the repository's accepted Wstep=40 fixed geometry was converted to a location-only exposure ordering by equally averaging `d_system_min` over lfw `0:3`; smaller mean distance is higher exposure. The resulting highest-risk order begins `loc=3,2,4,1,0`. The rule uses no TerminalLOH, loss, or C3 result.
+
+Namespace `markov-perturbation-C3` freezes three path/wind/resistance seed triplets:
+
+- seed 1: `1113527767 / 664410789 / 1303781022`;
+- seed 2: `326796064 / 69348633 / 697256691`;
+- seed 3: `1029622182 / 840401885 / 272840227`.
+
+All seeds are collision-free against the audited historical namespaces. Each distribution-seed dataset has exactly 15000 state19 scenarios with a separate `1/15000` probability law. Within a seed, all seven distributions reuse identical path-uniform blocks and identical wind/resistance streams for common-random-number pairing; the three seed triplets are independent. Every path and formal D/A/C generation was replayed exactly. No whole path batch reused nominal, C2, or another C3 distribution unchanged.
+
+All 63 fixed-decision evaluations are `OPTIMAL`, and the maximum formal three-period recourse residual is `5.6843418860808e-13`. Actual transition frequencies contain no transition outside original support. The only 21 unvisited row-frequency cases are location `from_state=-2`, which can first appear only at the final W3 state from state19 and therefore has no outgoing transition inside the modeled horizon.
+
+For both eta candidates, paired mean operating-loss and shortage differences have 95% intervals below zero in all 21 distribution-seed cells. However, the additional inventory is not economically recovered consistently across perturbation directions:
+
+- total-cost paired intervals are below zero in 13/21 cells for each candidate;
+- all three seeds show significant total-cost improvement for intensity-only, combined-mild, combined-medium, and combined-strong;
+- nominal and location-only do not recover the inventory cost; lfw-only does so on only one seed;
+- mean total-cost, operating-loss, and shortage advantages grow monotonically along nominal -> combined mild -> combined medium -> combined strong for both candidates and all three seeds;
+- q99.5 and CVaR99.5 advantages do not increase monotonically.
+
+Across seeds, eta `0.003` mean total-cost changes versus SAA are `-25.3588` for intensity-only, `-13.8174/-29.9038/-63.3130` for combined mild/medium/strong, and `-0.0292/+0.2594/-5.8598` for nominal/location-only/lfw-only. Eta `0.01` changes are `-59.6087`, `-29.6933/-83.6070/-174.7311`, and `+7.7443/+5.7130/-11.0688`, respectively. Negative means the candidate is cheaper than SAA after inventory cost.
+
+The accepted C3 judgement is option 4. Pearson chi-square decisions show real operating-risk value, especially under intensity and combined probability shifts, but do not show enough cross-direction total-economic stability to select eta or justify continuing the chi-square mainline. Formal eta remains unfrozen. The recommended formal reference is SAA unless the research question is explicitly redesigned.
+
+## 23. Current decision boundary after Step-04C-C3
+
+The planned C1 initial screening, C2 independent-path validation, and C3 Markov probability perturbation layers are complete. C1 identified `{0.003,0.01}` only as validation candidates; C2 found consistent but small risk reductions with mixed total cost; C3 found stronger risk and economic value under intensity/combined shifts but not under nominal/location-only shifts. Do not freeze either eta. The current recommendation is to stop the Pearson chi-square selection mainline and return to SAA as the formal state19 reference. Any further eta or ambiguity-set work requires a new, explicitly authorized research question rather than an automatic continuation.

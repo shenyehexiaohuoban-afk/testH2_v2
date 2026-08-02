@@ -1,0 +1,8 @@
+distribution_id,distribution_label,intensity_delta,location_delta,lfw_delta,contamination_rule,support_rule,location_risk_rule
+1,nominal,0,0,0,P_delta=(1-delta)*P_nominal+delta*P_stress,existing_positive_support_only,location risk=-equal-weight mean Wstep40 d_system_min over lfw 0:3
+2,intensity-only,0.05,0,0,P_delta=(1-delta)*P_nominal+delta*P_stress,existing_positive_support_only,location risk=-equal-weight mean Wstep40 d_system_min over lfw 0:3
+3,location-only,0,0.05,0,P_delta=(1-delta)*P_nominal+delta*P_stress,existing_positive_support_only,location risk=-equal-weight mean Wstep40 d_system_min over lfw 0:3
+4,lfw-only,0,0,0.05,P_delta=(1-delta)*P_nominal+delta*P_stress,existing_positive_support_only,location risk=-equal-weight mean Wstep40 d_system_min over lfw 0:3
+5,combined-mild,0.02,0.02,0.02,P_delta=(1-delta)*P_nominal+delta*P_stress,existing_positive_support_only,location risk=-equal-weight mean Wstep40 d_system_min over lfw 0:3
+6,combined-medium,0.05,0.05,0.05,P_delta=(1-delta)*P_nominal+delta*P_stress,existing_positive_support_only,location risk=-equal-weight mean Wstep40 d_system_min over lfw 0:3
+7,combined-strong,0.1,0.1,0.1,P_delta=(1-delta)*P_nominal+delta*P_stress,existing_positive_support_only,location risk=-equal-weight mean Wstep40 d_system_min over lfw 0:3

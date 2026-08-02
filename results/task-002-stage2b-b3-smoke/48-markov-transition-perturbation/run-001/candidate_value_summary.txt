@@ -1,0 +1,16 @@
+status=PASS
+judgement=4. 两者在各类扰动下仍无足够稳定价值，建议停止chi-square主线并回到SAA
+formal_eta_frozen=0
+TerminalLOH_reoptimized_on_C3=0
+CVaR_role=evaluation_metric_only
+location_perturbation=executed_with_decision_and_loss_independent_fixed_geometry_ranking
+reasonable_range=intensity-only/location-only/lfw-only delta=0.05 plus combined delta=0.02 and 0.05
+stable_value_rule=all 15 reasonable distribution-seed cells weakly improve mean operating loss, mean shortage, CVaR99.5, and mean total cost
+strong_only_rule=all three combined-strong seeds improve mean operating loss and CVaR99.5 without worsening mean shortage
+maximum_mechanical_residual=5.6843418860808e-13
+paired_difference_direction=candidate_minus_SAA; negative means improvement
+paired_CI_method=two-sided Student t interval with 14999 degrees of freedom
+ETA_0.003: inventory_increment_kg=4.62183570688603; stable_risk_reasonable=0; stable_economic_reasonable=0; strong_risk_value=0; reasonable_total_cost_improvement_cells=14/15
+ETA_0.003: paired_CI95_strictly_negative_counts=total_cost:13/21,operating_loss:21/21,shortage:21/21; all_three_seed_total_cost_distributions=intensity-only,combined-mild,combined-medium,combined-strong
+ETA_0.01: inventory_increment_kg=17.0368707551011; stable_risk_reasonable=1; stable_economic_reasonable=0; strong_risk_value=1; reasonable_total_cost_improvement_cells=12/15
+ETA_0.01: paired_CI95_strictly_negative_counts=total_cost:13/21,operating_loss:21/21,shortage:21/21; all_three_seed_total_cost_distributions=intensity-only,combined-mild,combined-medium,combined-strong
