@@ -1,0 +1,7 @@
+case_id,eta,decision_label,grid_role,state_id,nominal_R,c_H2_yuan_per_kg,M_H2_yuan_per_kg,electricity_per_kg_H2_kWh
+1,0,SAA,economic_baseline,19,15000,32.5213675213675,1283.205,18.3315
+2,0.0003,ETA_0.0003,small_radius_reference,19,15000,32.5213675213675,1283.205,18.3315
+3,0.001,ETA_0.001,transition_point,19,15000,32.5213675213675,1283.205,18.3315
+4,0.003,ETA_0.003,existing_mild_candidate,19,15000,32.5213675213675,1283.205,18.3315
+5,0.01,ETA_0.01,existing_safety_candidate,19,15000,32.5213675213675,1283.205,18.3315
+6,0.03,ETA_0.03,saturation_probe,19,15000,32.5213675213675,1283.205,18.3315

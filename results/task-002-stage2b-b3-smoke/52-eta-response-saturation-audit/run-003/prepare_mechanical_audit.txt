@@ -1,0 +1,7 @@
+status=PASS
+eta_grid=0,0.0003,0.001,0.003,0.01,0.03
+all_frozen_input_hashes_pass=1
+C5B_economic_parameters_reproduced=1
+MSP_called=0
+C5B_solver_modified=0
+validation_reoptimization=0

@@ -1,0 +1,18 @@
+Step-04C-C5C eta response and saturation judgment
+
+Judgment: B
+eta=0.03 retains a larger adjacent gain in at least one strong-shift or tail dimension and may be carried as an additional high-guarantee candidate; eta remains unfrozen.
+
+0.003->0.01 inventory increment: 6.54609415227 kg
+0.01->0.03 inventory increment: 10.2720162506 kg
+0.003->0.01 nominal EENS improvement: 2.55283958514 kWh
+0.01->0.03 nominal EENS improvement: 3.36862954528 kWh
+0.01->0.03 combined-strong EENS improvement: 10.8975381125 kWh
+0.01->0.03 pressure q95 shortage improvement: 3.04525028967 kg
+0.01->0.03 pressure q99.5 shortage improvement: 0 kg
+0.01->0.03 maximum-shortage improvement: 0 kg
+SAA category-D share: 0.115666666667
+
+The comparison uses adjacent measured changes, not a fixed saturation threshold.
+Maximum-shortage invariance and category D are treated as a physical reachability ceiling, not evidence that eta is too small.
+Eta is not formally frozen, and inventory cannot replace road restoration or network hardening.

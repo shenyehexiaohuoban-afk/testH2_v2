@@ -1,0 +1,4 @@
+eta,maximum_T_abs_difference_kg,total_inventory_abs_difference_kg,nominal_EENS_abs_difference_kWh,nominal_economic_total_abs_difference_yuan,LB_abs_difference_yuan,UB_abs_difference_yuan,reproduction_pass
+0,0,0,0,0,0,0,True
+0.003,0,0,0,0,0,0,True
+0.01,0,0,0,0,0,0,True

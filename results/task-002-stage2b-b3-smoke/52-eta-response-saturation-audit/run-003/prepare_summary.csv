@@ -1,0 +1,2 @@
+state_id,nominal_R,eta_count,C2_dataset_count,C3_combined_dataset_count,pressure_replica_count,average_price,c_H2,M_H2,electricity_per_kg_H2,frozen_input_count,all_hash_pass,prepare_runtime_sec
+19,15000,6,3,6,135,0.634166666666667,32.5213675213675,1283.205,18.3315,14,1,3.8362947
