@@ -336,3 +336,32 @@ Development `run-001` failed at eta `0.0003` with MATLAB native heap corruption.
 The accepted judgment is option B. Eta `0.03` still provides measurable additional mean EENS and pressure q95 value, especially under combined-medium/strong probability shifts, so it may be carried as an additional high-guarantee candidate into a 35-state experiment. This does not make eta `0.03` universally superior: its nominal economic total is higher, its nominal marginal EENS gain per kilogram has declined, and the pressure q99.5 and maximum shortage remain flat.
 
 For a 35-state comparison, retain SAA as the economic reference, eta `0.003` as the mild-resilience candidate, eta `0.01` as the established higher-guarantee candidate, and optionally eta `0.03` as a fourth high-guarantee sensitivity candidate. Eta remains unfrozen. The finite gains arise because most nominal scenarios have no shortage, extra inventory acts only on a small serviceable-shortage subset, and road-limited/inventory-invariant cases impose a physical ceiling. Additional TerminalLOH cannot substitute for road restoration, network hardening, or other reachability measures.
+
+## 30. Step-04C-C6 accepted 35-state SAA versus eta 0.03 tables
+
+Step-04C-C6 accepted `run-024` is at `results/task-002-stage2b-b3-smoke/53-35state-saa-vs-eta003-terminal-loh/run-024/`. The token `eta003` in this directory and its filenames means eta `0.03`; it does not mean eta `0.003`.
+
+All 35 frozen initial states were optimized independently on their own 15000 nominal three-period scenarios for SAA and Pearson chi-square eta `0.03`. The result contains 70/70 passing state-method combinations and two complete 35x4 TerminalLOH lookup tables:
+
+- `terminal_loh_table_saa.csv`;
+- `terminal_loh_table_eta_003.csv`.
+
+Each accepted optimization case ran in one isolated Python 3.9/gurobipy 12.0.1 process. The case process performed SAA or DRO decomposition, independent fixed-T reconstruction, and the strict two-phase lexicographic replay, then exited before the next case started. The 70 recorded case intervals are non-overlapping. No MATLAB Gurobi MEX optimization case, state pooling, cross-state adversarial probability, repeated `path_probability`, validation reoptimization, old Wasserstein ground cost, or main-MSP execution was used.
+
+The state19 reproduction gate against C5C accepted `run-003` passed. Maximum SAA/eta `0.03` TerminalLOH differences were `3.97904e-13/4.55365e-08 kg`; the eta `0.03` nominal EENS and economic-total differences were `1.38888e-08 kWh` and `4.94547e-07 yuan`. All 70 certificates pass. The maximum absolute/relative LB-UB gaps are `9.1924968e-4 yuan` and `1.1905064e-8`; maximum strong-duality gap is `6.91216e-11 yuan`; maximum probability-sum residual is `6.66134e-16`; maximum mechanical residual is `5.88625e-8`; and maximum lexicographic shortage error is `1.70530e-13 kg`.
+
+Eta `0.03` increases total TerminalLOH in 34/35 states and reduces nominal mean EENS in 32/35. State7 is identical under both methods. States26 and 35 keep nearly identical total inventory but reallocate inventory among stations and show small mean-EENS worsening of about `0.114/0.058 kWh`; these nonmonotone results are retained. Q95 shortage improves in 16/35 states and is unchanged in 19, with no worsening. Q99.5 improves in 28, is unchanged in six, and has one numerically small worsening. Maximum shortage improves in 17 and is unchanged in 18.
+
+No state has lower nominal economic total under eta `0.03`; 34 states pay a safety premium and state7 is unchanged. Equal-state descriptive means are `+31.992656 kg` inventory, `10.453878 kWh` mean-EENS improvement, `0.930579 kg` q95-shortage improvement, and `+308.673485 yuan` nominal economic cost. These are unweighted state descriptions, not expectations, because no new initial-state prior was created. Median inventory increment is `15.364593 kg`; state13 has the maximum increment (`114.556941 kg`) and maximum mean-EENS improvement (`39.220005 kWh`).
+
+Mean station increments are T1 `+13.943581 kg`, T2 `+6.150212 kg`, T3 `+6.170939 kg`, and T4 `+5.727924 kg`. Eight states increase total inventory while reducing at least one station. Both methods have 17 capacity-binding state cases: T1 binds in six and T4 in 17, while T2/T3 never bind. This confirms that the high-guarantee response is state- and station-dependent rather than a forced componentwise inventory increase.
+
+The accepted C6 judgment is option A. Eta `0.03` is suitable as a representative high-guarantee DRO lookup table for later comparison with SAA in the main MSP. This does not freeze eta or prove universal DRO superiority. Nominal economic cost is higher, q99.5 and maximum-shortage floors remain common, and inventory cannot remove road-inaccessibility constraints. C2 independent-path, C3 Markov-shift, and isolated pressure-set data were not regenerated in C6; their state19 conclusions remain those already accepted in C5B/C5C.
+
+Development evidence is preserved locally. `run-010` completed input preparation but did not satisfy the final frozen state19 solver gate. `run-017` and `run-020` encountered MATLAB native heap corruption. `run-021` stopped after 47 cases at the foreground two-hour invocation limit. `run-022` was stopped for a stale architecture-audit description. `run-023` passed all 70 numerical cases but failed the local Matplotlib finalizer API. After correcting that compatibility issue, `run-024` recomputed all 70 optimization cases from scratch and is the first complete accepted C6 run.
+
+## 31. Current decision boundary after Step-04C-C6
+
+Carry two explicit 35-state TerminalLOH tables into the next authorized main-MSP comparison: SAA as the economic reference and eta `0.03` as the representative high-guarantee Pearson chi-square alternative. Retain the state19 eta `0.003` and eta `0.01` C5B/C5C results as mild and intermediate guarantee evidence; C6 did not compute their 35-state tables and does not invalidate them.
+
+Eta remains unfrozen in a statistical sense. Do not describe eta `0.03` as uniquely calibrated, do not interpret equal-state descriptive summaries as a probability expectation, and do not claim that Pearson chi-square DRO dominates SAA in every state. Any main-MSP integration must preserve the two tables as separate comparison modes and must not infer station-to-station transport from TerminalLOH differences. Road restoration, network hardening, and other reachability mechanisms remain distinct resilience measures.

@@ -1,0 +1,18 @@
+Step-04C-C6 candidate judgment
+
+Judgment: A
+eta=0.03 gives stable mean-EENS or q95 improvement across most relevant states and is suitable as the representative high-guarantee DRO table for MSP comparison.
+
+inventory increase states: 34/35
+mean EENS improvement states: 32/35
+q95 improvement states: 16/35
+q99.5 improvement states: 28/35
+maximum shortage improvement states: 17/35
+nominal economic cost decrease states: 0/35
+safety premium states: 34/35
+
+eta003 in directory and file names means eta=0.03, not eta=0.003.
+Eta remains unfrozen and is not assigned a statistical confidence level.
+The 35-state equal-state summaries are descriptive and are not called expectations.
+This step does not prove eta=0.03 is superior in every state or scenario.
+TerminalLOH inventory cannot eliminate complete road inaccessibility.

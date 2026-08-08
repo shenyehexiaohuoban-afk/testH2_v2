@@ -1,0 +1,5 @@
+status=PASS
+controller=hidden_background_powershell
+case_process_type=PYTHON
+case_processes_sequential=1
+MATLAB_used_for_optimization_cases=0

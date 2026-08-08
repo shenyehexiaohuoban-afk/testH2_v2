@@ -1,0 +1,2 @@
+"state_count","optimization_case_count","total_original_records","total_exact_groups","minimum_exact_groups","maximum_exact_groups","c_H2","M_H2","electricity_per_kg_H2","all_frozen_hashes_pass","prepare_runtime_sec"
+"35","70","525000","248524","116","14611","32.5213675213675","1283.205","18.3315","True","3685.2364136"

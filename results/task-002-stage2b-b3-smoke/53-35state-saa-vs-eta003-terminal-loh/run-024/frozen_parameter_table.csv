@@ -1,0 +1,13 @@
+parameter_name,value,unit,source
+LHV,33.33,kWh/kg,C5B/C5C accepted frozen parameter
+eta_FC,0.55,ratio,C5B/C5C accepted frozen parameter
+electricity_per_kg_H2,18.3315,kWh/kg-H2,C5B/C5C accepted frozen parameter
+k_H2,0.0195,kg/kWh,C5B/C5C accepted frozen parameter
+SEC_H2,51.2820512820513,kWh/kg,C5B/C5C accepted frozen parameter
+average_electricity_price,0.634166666666667,yuan/kWh,C5B/C5C accepted frozen parameter
+c_H2,32.5213675213675,yuan/kg,C5B/C5C accepted frozen parameter
+VOLL,70,yuan/kWh,C5B/C5C accepted frozen parameter
+M_H2,1283.205,yuan/kg-H2,C5B/C5C accepted frozen parameter
+eta_SAA,0,radius,C5B/C5C accepted frozen parameter
+eta_DRO,0.03,radius,C5B/C5C accepted frozen parameter
+nominal_record_weight,6.66666666666667e-05,probability,C5B/C5C accepted frozen parameter
