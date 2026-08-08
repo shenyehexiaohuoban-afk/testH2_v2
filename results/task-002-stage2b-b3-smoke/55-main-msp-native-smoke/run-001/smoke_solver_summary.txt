@@ -1,0 +1,44 @@
+Step-05A0B native FA-MSP smoke summary
+
+Process status: MATLAB exit code 0
+Policy: H2-FA-MSP-R
+Solver: Gurobi
+State/model size: Ni=4, T=8, K=336
+Initial state: k_init=65 = [a=2,loc=2,lf=1]
+Seed: 20260513
+OOS input: protected output_h2/details/h2_OOS.csv, read only
+OOS paths evaluated: 10000
+
+Timing
+- MATLAB wall interval: 405.4357576 seconds (approximately 6.76 minutes)
+- training: 301.9270866 seconds
+- evaluation: 51.7290659 seconds
+
+Training
+- iterations: 162
+- completed backward passes: 161
+- stop_flag: 2, configured 300-second training limit
+- first LB: 7.56191403363393
+- final LB: 9618.82143485971
+- LB trace rows: 162
+
+Cuts
+- base constraint rows across the model library: 7355
+- final constraint rows: 210376
+- appended cut rows: 203021
+- per completed backward pass: 1261 appended rows
+- stage 1 received 161 cuts on k_init
+- stages 2-7 each received 33810 cuts across 210 ordinary states
+- stage 8 correctly received no future-stage cuts
+- iteration 2 and every later forward pass received the modelLib returned by a prior backward pass
+
+Evaluation
+- OOS mean: 11229.6283114802
+- 95% CI: [10703.1083010759,11756.1483218845]
+- mean terminal shortage: 2.16472126049597 kg
+- maximum terminal shortage: 229.134166594947 kg
+- mean terminal cost: 4329.44252099194
+- paths reaching lf=7: 6053/10000
+- paths with positive terminal shortage: 760/10000
+
+The result is a short smoke and is not required or expected to reproduce the one-hour historical LB/OOS benchmark.

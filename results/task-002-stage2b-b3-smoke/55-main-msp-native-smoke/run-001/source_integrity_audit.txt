@@ -1,0 +1,33 @@
+Pre-run branch/local/upstream/remote:
+task/002-stage2b-b3-smoke
+eb83882ef7d24462297de650bf87b4e935f64f60
+
+Pre-run tracked modifications: 0
+Pre-run staged files: 0
+Pre-run protected MSP diffs: 0
+
+Authorized new source:
+run_main_msp_h2_native_smoke.m
+
+Core files remain read only:
+main_msp_h2_near.m
+run_h2_with_options.m
+load_data_h2_near.m
+fa_h2/define_models_h2.m
+fa_h2/train_models_h2.m
+fa_h2/forward_pass_h2.m
+fa_h2/backward_pass_h2.m
+fa_h2/add_cut_h2.m
+fa_h2/eval_h2.m
+
+Post-run status: PASS
+
+- hashes of all 15 checked protected source/input files match the pre-run hashes;
+- hashes of all 6 checked historical output_h2 files match the pre-run hashes;
+- tracked MSP/config/input diffs remain zero;
+- staged files remain zero before Git archival;
+- no core MSP file was modified;
+- no new TerminalLOH or penalty input was introduced;
+- authorized launcher SHA-256: 2C742D9F5FD59371E89A5D7A412510356310C1A15FBC8D5325886D9E48BDEBE9.
+
+The failed first post-audit log and successful corrected post-audit log are both retained. Neither audit changed the saved workspace or any source file.

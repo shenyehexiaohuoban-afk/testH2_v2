@@ -1,0 +1,13 @@
+FINAL JUDGMENT: A / PASS
+
+The thin launcher safely called the native h2_default_options -> run_h2_with_options chain with only the authorized output/OOS path isolation and 300-second training time limit difference.
+
+The smoke completed 162 forward iterations and 161 backward passes. The final model library contains 203021 appended cut rows relative to a freshly rebuilt base library. Because train_models_h2 passes the updated modelLib from every backward pass into the next forward pass, iterations 2-162 used previously generated cuts. The LB evolved from 7.56191403363393 to 9618.82143485971.
+
+The active TerminalLOH remained terminal_impact_template.csv -> build_terminal_loh_h2 -> params.TerminalLOH. It remained 4x336 with 35 nonzero lf=7 columns. The reserve penalty remained 2000. Runtime OOS evaluation recorded 6053 paths reaching lf=7 and 760 paths with positive terminal shortage. The analytic terminal value/subgradient returned four nonzero site gradients on an audited positive-target lf=7 state and is the same function called by backward_pass_h2.
+
+The original eval_h2 processed 10000 OOS paths. MATLAB exited zero with no unexplained solver or model error. All native outputs are under run-001/native_output. Protected output_h2 and all checked core/input hashes are unchanged.
+
+The initial post-run audit expression failed on empty absorbing-state cells; its log is retained. The corrected read-only audit succeeded and did not require a smoke rerun.
+
+Step-05A0B is accepted. The repository now has a safe native smoke/replay entry and may proceed to Step-05A1, subject to Step-05A1's own frozen-input and Git gates.

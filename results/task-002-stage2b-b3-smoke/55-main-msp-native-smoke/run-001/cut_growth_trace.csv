@@ -1,0 +1,10 @@
+scope,stage,base_constraint_rows,final_constraint_rows,added_cut_rows,states_with_added_cuts,max_added_cuts_per_state
+stage,1,5,166,161,1,161
+stage,2,1050,34860,33810,210,161
+stage,3,1050,34860,33810,210,161
+stage,4,1050,34860,33810,210,161
+stage,5,1050,34860,33810,210,161
+stage,6,1050,34860,33810,210,161
+stage,7,1050,34860,33810,210,161
+stage,8,1050,1050,0,0,0
+total,all,7355,210376,203021,1261,161

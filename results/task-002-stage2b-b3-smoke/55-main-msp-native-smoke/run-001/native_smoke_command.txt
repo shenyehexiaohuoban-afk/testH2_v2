@@ -1,0 +1,7 @@
+PowerShell environment:
+$env:STEP05A0B_RUN_ID='run-001'
+
+MATLAB command:
+matlab -batch "cd('C:/Users/chaos/Desktop/biye/test/testH2_v2'); run_main_msp_h2_native_smoke"
+
+The process log is captured as matlab_diary.txt in this run directory.

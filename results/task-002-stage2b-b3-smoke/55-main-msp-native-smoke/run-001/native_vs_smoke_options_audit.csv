@@ -1,0 +1,21 @@
+option,formal_value,smoke_value,difference_class,reason,allowed
+entry,main_msp_h2_near.m,run_main_msp_h2_native_smoke.m,launcher-only,"isolate output while calling the same run_h2_with_options",true
+time_limit_sec,3600,300,smoke stopping limit,"target approximately 5 minutes of training",true
+max_iter,100000,100000,none,"unchanged",true
+seed,20260513,20260513,none,"frozen native seed",true
+outputDir,output_h2,results/task-002-stage2b-b3-smoke/55-main-msp-native-smoke/run-001/native_output,path isolation,"protect historical output_h2",true
+oosFile,output_h2/details/h2_OOS.csv,output_h2/details/h2_OOS.csv,none in data content,"read the exact protected native OOS file without regeneration",true
+regenOOS,false,false,none,"unchanged",true
+runTraining,true,true,none,"unchanged",true
+runEvaluation,true,true,none,"original eval_h2 remains active",true
+runSelectedPathDiagnostics,true,true,none,"unchanged",true
+k_init,65,65,none,"unchanged",true
+nbOS,10000,10000,none,"unchanged",true
+stall,500,500,none,"unchanged",true
+cutviol_maxiter,100000,100000,none,"unchanged",true
+eps_tol,1e-5,1e-5,none,"unchanged",true
+terminal_load_mode,node_load,node_load,none,"historical TerminalLOH convention",true
+terminal_impact_template_file,data/yuanqi/terminal_impact_template.csv,data/yuanqi/terminal_impact_template.csv,none,"historical active TerminalLOH",true
+beta_enabled,true,true,none,"unchanged",true
+normal_shortage_penalty_multiplier,1,1,none,"unchanged",true
+reserve_shortage_penalty_yuan_per_kg,2000,2000,none,"unchanged MAT field",true

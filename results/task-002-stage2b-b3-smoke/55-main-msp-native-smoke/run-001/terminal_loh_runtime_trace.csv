@@ -1,0 +1,8 @@
+record_type,path_id,t,k,a,loc,lf,target_total_kg,shortage_kg,terminal_cost,penalty_yuan_per_kg,details
+backward_subgradient_audit,NA,NA,63,2,1,7,50.0861274938683,50.0861274938683,100172.254987737,2000,"four nonzero subgradient components; same function called by backward_pass_h2"
+selected_oos_terminal,3,5,87,2,4,7,40.0151903302218,0,0,2000,"runtime selected path reached loh_demand_stage"
+selected_oos_terminal,4,6,71,2,2,7,97.3076328611882,0,0,2000,"runtime selected path reached loh_demand_stage"
+selected_oos_terminal,7071,6,239,5,2,7,389.230531444753,229.134166594947,458268.333189894,2000,"runtime maximum-shortage selected path"
+selected_oos_terminal,4782,5,183,4,2,7,291.922898583565,195.485918484534,390971.836969068,2000,"runtime high-shortage selected path"
+eval_aggregate,all,all,all,all,all,7,NA,2.16472126049597,4329.44252099194,2000,"6053/10000 paths reached lf=7; 760 had positive shortage; maximum shortage 229.134166594947 kg"
+table_structure,NA,NA,all,2_to_6,1_to_7,7,NA,NA,NA,2000,"params.TerminalLOH is 4x336 with exactly 35 nonzero columns; terminal_load_mode=node_load"

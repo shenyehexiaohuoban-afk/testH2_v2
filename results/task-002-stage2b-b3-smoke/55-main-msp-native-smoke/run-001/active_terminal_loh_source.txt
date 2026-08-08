@@ -1,0 +1,16 @@
+Frozen active TerminalLOH chain retained by the smoke:
+
+data/yuanqi/terminal_impact_template.csv
+  -> h2_default_options.terminal_impact_template_file
+  -> run_h2_with_options
+  -> load_data_h2_near
+  -> build_terminal_loh_h2
+  -> params.TerminalLOH [4 x 336]
+  -> lf=7 eval_terminal_loh_h2 in forward/eval
+  -> terminal_value_and_subgradient_h2 in backward
+  -> add_cut_h2
+  -> later forward theta decisions
+
+The launcher does not set, load, or reference terminal_loh_table_saa.csv or terminal_loh_table_eta_003.csv.
+
+The reserve shortage penalty remains NearStageInput.Cost.reserve_shortage_penalty_yuan_per_kg=2000.

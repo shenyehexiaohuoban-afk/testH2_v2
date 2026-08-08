@@ -1,0 +1,17 @@
+Final status: PASS
+
+Protected output root:
+C:\Users\chaos\Desktop\biye\test\testH2_v2\output_h2
+
+Smoke output root:
+C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\55-main-msp-native-smoke\run-001\native_output
+
+The launcher refuses to start if native_output already exists.
+The only protected output consumed is output_h2/details/h2_OOS.csv, opened as an existing OOS input with regenOOS=false.
+
+Post-run findings:
+- all benchmark, detail, diagnostic and workspace outputs were written under run-001/native_output;
+- no file was written under output_h2;
+- all six protected historical output hashes checked after the run exactly match their pre-run values;
+- protected h2_OOS.csv retained SHA-256 6E4ED488423E3CBB838C4A6F8B45019CF4ECF32A82850880399A08AAFC7AFF85;
+- historical H2results_readable.csv retained SHA-256 0374965477279F1C53D8B2D95E00C1F14D787B98F6066F0854756705606043F1.
