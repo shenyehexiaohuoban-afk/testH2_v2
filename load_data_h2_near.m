@@ -134,6 +134,12 @@ beta_transport_multiplier = get_required_scalar(NearStageInput.HTT, 'beta_transp
 [beta, betaMode] = build_beta_h2(S, NearStageInput, opts);
 [TerminalLOH, terminalMode, terminalTemplateUsed, terminalLoadInfo] = build_terminal_loh_h2( ...
     S, NearStageInput, opts);
+terminalLookupAudit = struct();
+requestedTerminalMode = lower(string(getOpt(opts, 'terminal_loh_mode', 'legacy')));
+if requestedTerminalMode ~= "legacy"
+    [TerminalLOH, terminalMode, terminalTemplateUsed, terminalLookupAudit] = ...
+        load_terminal_loh_lookup_h2(S, NearStageInput, opts);
+end
 
 cost_electricity_stage = build_electricity_cost_h2( ...
     get_required_value(NearStageInput.Cost, 'electricity_price_yuan_per_kWh'), ...
@@ -205,6 +211,7 @@ params.base_target_loh_by_site_kg = base_target_loh_by_site_kg;
 params.TerminalLOH = TerminalLOH;
 params.terminal_loh_mode = terminalMode;
 params.terminal_impact_template_used = terminalTemplateUsed;
+params.terminal_loh_lookup_audit = terminalLookupAudit;
 params.use_nonterminal_targetloh = false;
 % Deprecated compatibility fields. They are intentionally zero and are not
 % used by the v2 non-terminal LP, forward pass, evaluation, or cuts.

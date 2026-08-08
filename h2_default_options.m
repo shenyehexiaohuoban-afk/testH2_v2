@@ -26,6 +26,8 @@ opts.eps_tol = 1e-5;
 opts.normal_demand_mode = 'repeat_template';
 opts.electricity_price_mode = 'stage_average_repeat_hourly';
 opts.terminal_load_mode = 'node_load';
+opts.terminal_loh_mode = 'legacy';
+opts.terminal_loh_lookup_file = '';
 
 opts.beta_enabled = true;
 opts.use_beta_capacity = true;

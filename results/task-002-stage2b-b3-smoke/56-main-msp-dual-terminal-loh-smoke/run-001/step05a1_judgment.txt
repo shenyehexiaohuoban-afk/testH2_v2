@@ -1,0 +1,13 @@
+A / PASS
+
+Both frozen 35x4 TerminalLOH tables were mapped to the exact 35 lf=7 columns of params.TerminalLOH [4x336].
+The chi2_eta003 label was mechanically verified as eta=0.03, not eta=0.003.
+State7 is an exact zero negative control in both tables and has identical terminal value/subgradient.
+State13 and state19 differ as frozen; state19 maps to k=207 and matches C6 exactly.
+Both cases completed forward/backward/cut/next-forward cycles and native eval_h2 with MATLAB exit code 0.
+SAA completed 164 iterations and 205543 added cut rows; eta=0.03 completed 163 iterations and 204282 added cut rows.
+The first no-cut forward LB matched: 1. After the first backward cuts, iteration-2 LB differed by 140.549941024.
+1156 stage-state first cuts differed between the two frozen tables.
+The terminal shortage identity terminal_cost=2000*shortage passed in both OOS evaluations.
+The existing allow_zero_terminal_loh validation permission was enabled identically for both lookup modes solely because frozen state7 is exactly zero; no model equation changed.
+Conclusion: dual-table propagation is verified and Step-05A1 can proceed to a formal SAA versus eta=0.03 A/B run.

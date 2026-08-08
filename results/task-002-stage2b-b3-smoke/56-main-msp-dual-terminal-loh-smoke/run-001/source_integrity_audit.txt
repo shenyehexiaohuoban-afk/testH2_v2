@@ -1,0 +1,38 @@
+Step-05A1 source and output integrity audit
+
+Frozen branch and pre-run heads:
+- branch: task/002-stage2b-b3-smoke
+- Local HEAD: afcdd440907aff969a9915bceeb497837a6a8937
+- upstream HEAD: afcdd440907aff969a9915bceeb497837a6a8937
+- remote branch HEAD: afcdd440907aff969a9915bceeb497837a6a8937
+
+Frozen lookup inputs:
+- terminal_loh_table_saa.csv SHA-256: 2A47FBE844633E20F588ADD221B75FA2C2D8293694AB5D9ED80E299FE29086D4
+- terminal_loh_table_eta_003.csv SHA-256: 077D8B86F7F4AB896A61DBFE5E446476F3ADCEDC4AD7FFC98E29855B834EA1AA
+- eta_003 was validated from the table eta column as eta=0.03, not eta=0.003.
+
+Protected core FA-MSP algorithms were not modified. Current SHA-256 values:
+- fa_h2/define_models_h2.m: A16117E0C7500369F032FDB35FA06A53042542B725B850E339427BB492D3DE52
+- fa_h2/train_models_h2.m: 79081414CD1473EE805E9FC971B3A122F0E23D794E00625B0D5EDD84843DA434
+- fa_h2/forward_pass_h2.m: 096A35BF429A833E75A564837FA61BC814087BD999D565EAC333441FFE1BDA9D
+- fa_h2/backward_pass_h2.m: 81D08EC578C04DEC9D06FFA4A9ADA9BD7FE63EED9F962A726E808612977D4E3B
+- fa_h2/add_cut_h2.m: FC3FBCC0ADD4D86E498944CB55FB008C1E31B7F3F7949D70715E5821424477D4
+- fa_h2/eval_h2.m: 0639BA80FCBB929118849510CFBE647E1D5DA1E9EEAC4931371DEEDD78DEAE93
+- git diff for all six files was empty after both smoke runs.
+
+Authorized Step-05A1 source changes are limited to:
+- h2_default_options.m: legacy-default lookup options only;
+- load_data_h2_near.m: optional lookup dispatch and audit field only;
+- fa_h2/fuzhu/load_terminal_loh_lookup_h2.m: frozen 35x4 to 4x336 loader and mechanical checks;
+- run_main_msp_h2_native_smoke.m: shared safe launcher mode selection and isolated output paths;
+- run_step05a1_finalize_h2.m: read-only post-run audit generation.
+
+Historical output protection:
+- protected output root: output_h2
+- both smoke outputs were written only below run-001/case-saa/native_output and run-001/case-chi2_eta003/native_output;
+- protected output_h2/details/h2_OOS.csv was read with regenOOS=false;
+- h2_OOS.csv retained SHA-256 6E4ED488423E3CBB838C4A6F8B45019CF4ECF32A82850880399A08AAFC7AFF85, identical to the Step-05A0B accepted audit;
+- historical output_h2/benchmark/H2results_readable.csv retained its existing file and was not targeted;
+- no accepted or failed historical run was overwritten, moved, or deleted.
+
+Post-run result: PASS.

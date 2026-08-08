@@ -1,0 +1,11 @@
+Case A / SAA:
+$env:STEP05A0B_RUN_ID='run-001'
+$env:STEP05A1_TERMINAL_MODE='saa'
+matlab -batch "cd('C:/Users/chaos/Desktop/biye/test/testH2_v2'); run_main_msp_h2_native_smoke"
+
+Case B / Pearson chi-square eta=0.03:
+$env:STEP05A0B_RUN_ID='run-001'
+$env:STEP05A1_TERMINAL_MODE='chi2_eta003'
+matlab -batch "cd('C:/Users/chaos/Desktop/biye/test/testH2_v2'); run_main_msp_h2_native_smoke"
+
+Both cases use seed 20260513, time_limit=300, max_iter=100000, nbOS=10000 and the same protected OOS input.
