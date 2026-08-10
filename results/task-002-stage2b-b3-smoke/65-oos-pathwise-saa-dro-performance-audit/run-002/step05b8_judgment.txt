@@ -1,0 +1,34 @@
+Step-05B-8 judgment
+
+Common-sample pathwise result
+- Mean production delta DRO-SAA: +15.270633318 kg/path.
+- Mean HTT delta: +8.763033783 kg/path.
+- Mean final inventory delta: +15.514788166 kg/path.
+- Inventory increased/equal/decreased paths: 5600/4397/3.
+- Mean increase conditional on inventory increasing: 27.708478427 kg.
+- Ordinary-shortage mean delta: +0.244154848 kg/path; DRO lower/equal/higher counts are 2/9718/280.
+- Mean operating-cost delta excluding terminal gap penalty: +809.155643307 yuan/path.
+- Mean reported-objective delta: +3182.176550928 yuan/path; terminal-gap penalty is kept separate.
+- Descriptive mean operating-cost increase per mean additional final-inventory kg: 52.153831214 yuan/kg.
+
+Distribution
+- Paths within 1 kg of unchanged inventory: 4405 (44.050000%).
+- Top 1%/5%/10% paths account for 3.814181%/16.018264%/29.487348% of positive inventory gain.
+- Their mean inventory gains are 59.183690394/49.710272173/45.754774156 kg.
+- The top 10% terminal-hit share is 87.000000%, but only 0.114943% of those hits are in the seven largest Step-05B-7 conditional-capacity-gap states.
+- Dominant terminal states inside the top 10% are state7=226, state5=127, state4=127, state6=90, state2=86, state3=84, state1=64; 130 paths do not hit a terminal check.
+- This is descriptive association only; terminal-state membership is not a causal explanation.
+
+TerminalLOH input versus MSP output on 6053 terminal-hit paths
+- Mean TerminalLOH input delta: +50.599078035 kg.
+- Mean final-inventory output delta: +20.710360856 kg.
+- Mean input-output difference compression: 29.888717179 kg; the output difference is descriptively 40.930313% of the input difference.
+- This is not an increment-realization ratio. The compression is consistent with the previously audited combination of pre-existing SAA inventory surplus, production limits, ordinary-service competition, and sequential information.
+- Mechanism classification: C, both limited input differences outside terminal-hit paths and material compression within terminal-hit paths matter.
+
+Bounded paper interpretation
+- DRO behaves as a higher-reserve policy with a measurable operating-cost premium, not as a uniformly superior physical-service policy.
+- The reserve increase has a mixed distribution: a majority of paths increase, a large minority is essentially unchanged, and the top 10% is material but does not dominate total positive gain.
+- Terminal-gap mean delta on terminal-hit paths is +1.960202303 kg, but terminal gap is a target shortfall rather than W-stage disaster shortage.
+- Reported objective cannot be called actual economic cost because it contains the historical 2000 yuan/kg soft TerminalLOH-gap penalty.
+- No evidence from this audit justifies changing 200 or 2000.

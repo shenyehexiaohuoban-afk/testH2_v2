@@ -1,0 +1,11 @@
+Step-05B-8 run-001 is not accepted.
+
+The 10000-path paired production, HTT, shortage, inventory, and cost values are
+mechanically correct. However, the state-mechanism outputs labeled the main-MSP
+internal state index k (for example k=207) as if it were the 35-state C6 state
+ID (state19). This is a reporting/mapping failure for the required state-level
+interpretation.
+
+No source data, historical run, model, TerminalLOH table, or penalty parameter
+was modified. The run is preserved. Corrected output must use a new run and
+retain both terminal_state in 1..35 and terminal_state_k.
