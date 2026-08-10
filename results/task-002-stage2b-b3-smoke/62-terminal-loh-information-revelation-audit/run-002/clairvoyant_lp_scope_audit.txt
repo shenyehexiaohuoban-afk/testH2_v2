@@ -1,0 +1,19 @@
+Step-05B-4 diagnostic LP information-scope audit
+
+Mechanical source evidence
+- run_step05B4_system_feasibility_replay_h2.m:132-165 first selects a realized OOS path, finds its realized terminal time/state, and loads the realized terminal target.
+- Lines 167-187 reconstruct the complete realized ordinary-service matrix along that path.
+- Line 243 calls solve_physical_path(p, OOS(s,:), tTerm, servedMatrix, target), passing the complete realized path, realized terminal time, realized service quantities, and realized target into a new optimization of all preceding production/inventory/HTT decisions.
+- solve_physical_path at lines 314 onward jointly reoptimizes decisions for all pre-terminal stages.
+
+Audit conclusion
+- YES: the 1298 Step-05B-4 diagnostic LPs are ex-post perfect-information / clairvoyant physical-feasibility diagnostics.
+- They prove only: given the complete realized future path and final TerminalLOH state, the preserved physical constraints can or cannot realize the target while maintaining the saved DRO policy's ordinary H2 service quantities.
+- They do NOT prove that the original FA-MSP policy, which observes uncertainty sequentially, should have selected the same station allocation before the terminal state was known.
+
+True FA-MSP information node used in Step-05B-5
+- forward_pass_h2.m:14-15 samples and observes current Markov state k_t from P_joint.
+- forward_pass_h2.m:51-53 selects modelLib.models{t,k_t}; the endogenous state is the incoming four-station inventory vector.
+- backward_pass_h2.m:42 uses P_joint(n,:) for future-value aggregation.
+- Therefore the exogenous recombining information node is (decision stage t, current Markov state k), with current inventory x as the endogenous state. This audit never groups by a future terminal state when defining a node.
+- Empirical descendant frequencies are calculated from all 10000 frozen OOS paths reaching each (t,k) node. A no-terminal descendant is retained as outcome 0 with zero TerminalLOH rather than silently discarded.

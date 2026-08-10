@@ -1,0 +1,17 @@
+Step-05B-6 judgment
+
+System capacity classification: B
+SAA itself has a material system-total capacity gap in state16/17/18/19; DRO raises TerminalLOH and further amplifies path incidence and conditional gap magnitude.
+Across 255 paired paths: SAA-feasible/DRO-infeasible=14, both-infeasible=191, both-feasible=50.
+No path is SAA-infeasible but DRO-feasible.
+
+State19 eight-path training classification: F
+The eight fixed paths are all total-sufficient and station-target-feasible in the ex-post service-preserving diagnostic, and all eight retain a positive archived DRO terminal gap. Seven of eight actual policy paths already have enough total inventory. The archive lacks per-iteration sampled paths and therefore cannot establish low training visitation.
+The k222 archived value signal is anomalous: site1 is the realized and conditional target leader but ranks last in the DRO active marginal vector; the fixed-inventory cut envelope last improved at iteration 397 and remained unchanged for 801 later completed backward iterations.
+That static evidence warrants a targeted instrumented continuation test, but it is not strong enough to attribute the eight paths mainly to one-hour training or to declare the cut mechanism invalid.
+
+200/2000 judgment
+There is no evidence in this audit that requires changing either penalty. The system-total gaps arise under unchanged physical capacity and preserved ordinary service; the training-sufficiency question remains separate and unresolved.
+
+Recommended next step
+If additional computation is authorized, use a targeted continuation experiment that archives every iteration's sampled (t,k) nodes and the active cut envelope at the fixed state19 inventories. Do not globally change penalties or retrain from scratch solely on the present evidence.

@@ -1,0 +1,11 @@
+Step-05B-1 judgment: C
+
+The 2000-yuan/kg TerminalLOH gap penalty explains most of the reported objective increase, but eta also has independently higher ordinary shortage and positive non-terminal-cost deterioration. The mechanism is mixed.
+
+Mean reported objective delta eta-SAA: 3182.17655093
+Mean terminal gap penalty delta: 2373.02090762 (share 0.74572258)
+Mean diagnostic objective delta without terminal gap: 809.155643307
+Mean ordinary shortage delta kg: 0.244154847716
+Among ordinary-shortage-worse paths, eta leaves more final inventory share: 1.00000000
+
+This judgment concerns the current main-MSP execution and penalty mechanism only. It does not declare Pearson DRO successful or unsuccessful.

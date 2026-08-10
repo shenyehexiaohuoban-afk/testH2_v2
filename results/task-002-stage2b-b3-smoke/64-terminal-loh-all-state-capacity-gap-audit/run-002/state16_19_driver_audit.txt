@@ -1,0 +1,44 @@
+Step-05B-7 state16/17/18/19 driver audit
+
+State 16 (a=4, loc=2, lf=7)
+- Target: SAA 571.966288, DRO 585.059146, delta +13.092858 kg.
+- Actual final inventory: SAA 502.744966, DRO 505.691718, delta +2.946752 kg.
+- Maximum feasible inventory: SAA 506.023747, DRO 507.278916, delta +1.255169 kg.
+- Unconditional capacity gap: SAA 74.008643, DRO 84.039010, delta +10.030367 kg.
+- Target ranks among 35 states: SAA 15, DRO 15.
+- Normal service delta DRO-SAA: -1.255169 kg; production delta: +1.691583 kg.
+- DRO utilization: production mean 99.535% (>=99% stages 98.775%), storage mean 47.804%, HTT mean 12.085%.
+
+State 17 (a=4, loc=3, lf=7)
+- Target: SAA 562.147124, DRO 578.512356, delta +16.365232 kg.
+- Actual final inventory: SAA 490.218930, DRO 494.023446, delta +3.804516 kg.
+- Maximum feasible inventory: SAA 495.599433, DRO 496.425891, delta +0.826458 kg.
+- Unconditional capacity gap: SAA 72.359466, DRO 86.012540, delta +13.653073 kg.
+- Target ranks among 35 states: SAA 17, DRO 17.
+- Normal service delta DRO-SAA: -0.826458 kg; production delta: +2.978058 kg.
+- DRO utilization: production mean 99.277% (>=99% stages 98.779%), storage mean 46.310%, HTT mean 11.993%.
+
+State 18 (a=4, loc=4, lf=7)
+- Target: SAA 546.327360, DRO 571.966288, delta +25.638927 kg.
+- Actual final inventory: SAA 483.590486, DRO 487.317733, delta +3.727248 kg.
+- Maximum feasible inventory: SAA 488.816358, DRO 490.063579, delta +1.247221 kg.
+- Unconditional capacity gap: SAA 64.512151, DRO 85.675170, delta +21.163019 kg.
+- Target ranks among 35 states: SAA 18, DRO 18.
+- Normal service delta DRO-SAA: -1.247221 kg; production delta: +2.480027 kg.
+- DRO utilization: production mean 99.163% (>=99% stages 98.438%), storage mean 46.212%, HTT mean 11.637%.
+
+State 19 (a=4, loc=5, lf=7)
+- Target: SAA 511.414778, DRO 542.961636, delta +31.546858 kg.
+- Actual final inventory: SAA 495.639884, DRO 501.639009, delta +5.999125 kg.
+- Maximum feasible inventory: SAA 505.149042, DRO 507.046341, delta +1.897298 kg.
+- Unconditional capacity gap: SAA 32.960679, DRO 50.943534, delta +17.982854 kg.
+- Target ranks among 35 states: SAA 19, DRO 19.
+- Normal service delta DRO-SAA: -1.897298 kg; production delta: +4.101827 kg.
+- DRO utilization: production mean 98.576% (>=99% stages 97.783%), storage mean 47.114%, HTT mean 11.901%.
+
+Bounded cause interpretation
+- All four focus states share intensity index a=4 and locations 2 through 5; this is a mapping commonality, not by itself a causal mechanism.
+- Their TerminalLOH totals rank 15th through 19th among 35 states rather than being the global maxima. Their targets nevertheless exceed the pathwise achievable terminal reserve on many paths while electrolyzer production is already near its available capacity.
+- The full-state scan shows that states15, 22, and 33 have still larger conditional mean gaps, but they have only 34, 9, and 1 reached OOS paths. State16-19 are prominent partly because they combine persistent shortfall with materially larger path counts.
+- DRO actual inventory and maximum feasible inventory both increase in every focus state, but by much less than the target increase. The larger gap is therefore target growth outrunning achievable reserve growth, not inventory falling.
+- Ordinary-service differences and production changes affect the exact maximum feasible inventory, but the comparison is descriptive and does not prove a single causal driver.

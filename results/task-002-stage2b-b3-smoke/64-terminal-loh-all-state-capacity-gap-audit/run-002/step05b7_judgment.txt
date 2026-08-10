@@ -1,0 +1,35 @@
+Step-05B-7 judgment
+
+Mechanical scope
+- 6053 common terminal-hit OOS paths, 31 reached terminal states, two archived policies.
+- 12106/12106 service-preserving maximum-terminal-inventory LPs are OPTIMAL.
+- The diagnostic is ex-post perfect-information physical feasibility, not non-anticipative policy attainability.
+
+Main focus-state answer
+- State16/17/18/19 DRO actual inventory changes are +2.946752, +3.804516, +3.727248, and +5.999125 kg.
+- Actual inventory increases in all four states, and maximum feasible inventory also increases. Capacity gaps grow because targets rise much faster than either actual or maximum feasible inventory.
+
+All-state direction
+- Reached states with positive/zero/negative DRO actual-inventory change: 28/3/0 of 31.
+- Reached states with positive/zero target change: 30/1 of 31.
+- Path feasibility classes: A both feasible=5451, B SAA feasible/DRO infeasible=175, C both infeasible=426, D SAA infeasible/DRO feasible=1.
+- Paths with SAA capacity gap greater than DRO: 3.
+- Reverse-gap output rows: 3.
+
+Reverse cases and mechanism
+- path 719, state16, C_both_infeasible: target delta +13.092858 kg, maximum-feasible-inventory delta +18.056502 kg, capacity-gap delta -4.963644 kg, ordinary-service delta -18.056502 kg, production delta +0.000000 kg.
+- path 2154, state15, D_SAA_infeasible_DRO_feasible: target delta +9.271508 kg, maximum-feasible-inventory delta +13.350683 kg, capacity-gap delta -3.938401 kg, ordinary-service delta -13.350683 kg, production delta +0.000000 kg.
+- path 1318, state25, C_both_infeasible: target delta +14.160795 kg, maximum-feasible-inventory delta +17.259470 kg, capacity-gap delta -3.098675 kg, ordinary-service delta -17.259470 kg, production delta +0.000000 kg.
+- In the observed reverse cases, DRO preserves substantially more hydrogen by serving less ordinary H2 while cumulative production is unchanged. The maximum feasible inventory therefore rises more than the TerminalLOH target, reducing the system gap. This is a path-specific service/reserve tradeoff, not evidence that the DRO target is lower.
+
+Ranked states
+- Largest SAA conditional mean gap: state22 (109.481880 kg).
+- Largest DRO conditional mean gap: state22 (111.668823 kg).
+- Largest unconditional gap increase: state18 (+21.163019 kg).
+- State-level mean gap decreases: 0; minimum state-level change is state1 (+0.000000 kg).
+- Largest actual inventory increase: state7 (+27.922246 kg).
+
+Bounded interpretation
+- Across reached states, DRO generally changes both the target and the policy's actual reserve. It is not a pure target-only change, but target growth is usually larger than reserve growth.
+- No evidence from this audit justifies changing 200 or 2000.
+- State19 retains the Step-05B-6 training-sufficiency classification F. This all-state audit adds no direct training-history evidence, so further state19 training audit is optional and should only be an instrumented causal test, not a prerequisite for the present capacity conclusion.

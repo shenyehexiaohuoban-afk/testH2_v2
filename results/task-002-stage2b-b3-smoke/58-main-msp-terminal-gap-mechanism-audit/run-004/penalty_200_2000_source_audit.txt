@@ -1,0 +1,30 @@
+Step-05B-1 penalty source audit
+
+Effective values from the saved workspace
+- reserve/TerminalLOH gap penalty: 2000 yuan/kg
+- normal shortage base penalty: 200 yuan/kg
+- normal shortage multiplier: 1
+- effective normal shortage penalty: 200 yuan/kg
+
+Source and call chain
+- Data source file: data/yuanqi/near_stage_msp_input.mat, struct NearStageInput.Cost.
+- load_data_h2_near.m:257 reads NearStageInput.Cost.normal_shortage_penalty_yuan_per_kg; lines 263-265 form params.cost_normal_shortage.
+- load_data_h2_near.m:266 reads NearStageInput.Cost.reserve_shortage_penalty_yuan_per_kg into params.cost_reserve_shortage.
+- build_stage_model_h2.m:28 defines z_normal; line 38 assigns params.cost_normal_shortage in every ordinary-stage LP objective.
+- eval_terminal_loh_h2.m:10-12 computes shortage=max(0,TerminalLOH(:,k)-prev_x) and cost=params.cost_reserve_shortage*sum(shortage).
+- forward_pass_h2.m:34-40 calls eval_terminal_loh_h2 at lf=Nc-1.
+- terminal_value_and_subgradient_h2.m:14-17 uses the same value and subgradient -params.cost_reserve_shortage for deficient stations.
+- backward_pass_h2.m:22-24 calls that terminal value/subgradient; lines 42-52 probability-weight it and add the cut.
+- eval_h2.m:68-76 uses the same terminal evaluator and records terminal shortage/cost; ordinary shortage is sol.z_normal at lines 92-95.
+- add_cut_h2.m:4-8 installs theta >= alpha + g'x.
+
+Mathematical expressions
+- ordinary stage: 200 * sum_i z_normal_i, with u_normal_i + z_normal_i >= D_normal_i.
+- terminal stage: 2000 * sum_i max(0, TerminalLOH_i(k) - x_i).
+- terminal demand is a check/penalty, not a physical withdrawal from inventory.
+
+Other numeric 200/2000 occurrences
+- build_terminal_loh_h2.m includes node base-load entries equal to 200 kW; these are physical load data, not shortage penalties.
+- site/input tables include engineering capacities equal to 200; these are not objective coefficients.
+- no second active 2000 objective coefficient was found in the audited main MSP call chain.
+- terminalLoh_wdro offline audit/solver scripts contain separate numeric M=2000 settings; they are not called by this main-MSP evaluation chain.

@@ -1,0 +1,44 @@
+Step-05B-6 t=5,k=222 detailed audit
+
+Fixed object
+- path_id: 8650
+- decision stage t: 5
+- Markov state k: 222 = (a=4, loc=7, lf=6)
+- frozen-OOS node occurrence: 33/10000 (0.330000%)
+- realized state19 descendant probability at this node: 6.060606%
+
+Archived training evidence boundary
+- Both archived trainings stopped at stop_flag=2 (one-hour time limit), not a formal convergence flag.
+- trainInfo and console logs do not archive every iteration's in_sample path, so exact k222 training visits cannot be reconstructed.
+- OOS frequency is reported only as a static rarity indicator and is not relabeled as training frequency.
+- Every eligible ordinary model receives one shared cut per completed backward iteration; saved cut count therefore measures global shared-cut coverage, not local node visits.
+
+saa saved-cut envelope at archived inventory
+- training iterations / completed backward iterations: 1113 / 1112
+- final active face count: 4
+- final active face first source iteration: 746
+- last strict envelope update iteration: 746
+- completed backward iterations since last update: 366
+- node appears in the single archived last-forward path: False
+- site1: realized target=231.297622 kg, node mean target=237.251710 kg, marginal=560.000000, rank=3
+- site2: realized target=121.918688 kg, node mean target=103.569494 kg, marginal=752.160000, rank=1
+- site3: realized target=50.095285 kg, node mean target=37.288532 kg, marginal=596.720000, rank=2
+- site4: realized target=139.650042 kg, node mean target=121.287318 kg, marginal=-0.000000, rank=4
+
+chi2_eta003 saved-cut envelope at archived inventory
+- training iterations / completed backward iterations: 1199 / 1198
+- final active face count: 3
+- final active face first source iteration: 397
+- last strict envelope update iteration: 397
+- completed backward iterations since last update: 801
+- node appears in the single archived last-forward path: False
+- site1: realized target=231.297622 kg, node mean target=237.251710 kg, marginal=779.840000, rank=4
+- site2: realized target=121.918688 kg, node mean target=103.569494 kg, marginal=1033.280000, rank=1
+- site3: realized target=50.095285 kg, node mean target=37.288532 kg, marginal=866.000000, rank=3
+- site4: realized target=139.650042 kg, node mean target=121.287318 kg, marginal=1033.280000, rank=2
+
+Bounded interpretation
+- For DRO, site1 has the largest realized and conditional-mean TerminalLOH but the lowest archived active marginal rank; this reproduces the Step-05B-5 anomaly mechanically.
+- At the fixed archived inventory, the DRO cut envelope last improved at iteration 397 and did not improve during the remaining 801 completed backward iterations.
+- This is a targeted value-signal anomaly candidate, but it does not prove low training visitation or global cut failure because visit history is absent and the marginal also reflects all conditional future costs and transfer options.
+- Classification for k222: evidence is insufficient to distinguish low local training coverage from a legitimate conditional value surface; targeted instrumented continuation is the appropriate causal test.

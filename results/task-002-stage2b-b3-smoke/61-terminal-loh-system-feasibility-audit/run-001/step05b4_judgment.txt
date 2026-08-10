@@ -1,0 +1,24 @@
+Step-05B-4 judgment
+
+Scope and mechanical status
+- This audit replays the two saved fixed policies on the unchanged frozen 10000x8 OOS table and analyzes only the 649 paths reaching states 12, 13, 14, 16, 17, 18, or 19.
+- All 649 maximum-total and 649 minimum-gap diagnostic LPs are OPTIMAL. Ordinary H2 service is fixed to the actual DRO replay service; initial inventory, station tank limits, electrolyzer limits, inventory conservation, beta-dependent aggregate HTT capacity, and the original time horizon remain enforced.
+- The diagnostic LPs contain no cuts, theta, or monetary objective and are not replacement MSP policies.
+
+System-total and spatial feasibility
+- State12: total hydrogen is physically sufficient on 86.32% of paths; classification A/C mixed, C-dominant. The saved DRO policy has enough total terminal inventory yet a station gap on 48.72% of paths. Site1 target/mean inventory is 234.531627/213.354889 kg, while site2 mean inventory is 91.936211 kg against a 39.276547 kg target.
+- State16: total sufficient on 19.23%; 63/78 paths are class A. System total supply is the dominant limitation.
+- State17: total sufficient on 14.10%; 67/78 paths are class A. System total supply is the dominant limitation.
+- State18: total sufficient on 10.91%; 49/55 paths are class A. System total supply is the dominant limitation.
+- State19: total sufficient on 40.91%; 26/44 paths are class A and 18/44 are class C. It is primarily a system-total capability problem, with a material minority of physically feasible paths where the saved policy still fails to allocate/retain the target inventory.
+- State13 and state14 are physically total-sufficient on 94.38% and 100.00% of paths. Their remaining saved-policy gaps are mainly class C strategy/value-signal outcomes rather than proven physical infeasibility.
+- Across all paths, class counts are A=226, B=0, C=423, D=0, E=0. Maximum spatial-excess gap is 2.558e-13 kg. Whenever the system-total bound is sufficient, the minimum-gap LP reaches all four site targets under the current HTT constraints; no independent HTT capacity/timing infeasibility was found.
+
+Resource utilization and bottlenecks
+- DRO electrolyzer mean utilization spans 95.19% to 99.54% across the seven states, with q95=100% for every state and >=99% shares from 92.52% to 98.78%. Electrolyzer production is a persistent high-utilization resource and a credible system-total bottleneck, especially in states16-19.
+- DRO storage mean utilization spans 44.62% to 50.71%; >=99% shares are at most 2.63%. Tank capacity is not the dominant system bottleneck in these paths.
+- DRO aggregate HTT mean utilization spans 10.41% to 12.08%; q95 spans 37.25% to 47.58%, maximum observed utilization is 77.13%, and >=99% share is 0.00%. HTT capacity is not saturated. Nevertheless, the saved policy can still allocate HTT in the wrong direction or too late; capacity headroom alone does not prove that the policy's spatial allocation is effective.
+
+Penalty implication and next step
+- The results do not provide evidence that the 200 or 2000 penalty should be changed. The dominant class-A cases are physical total-supply limitations under fixed ordinary service, while class-C cases require examination of the saved one-hour policy's cuts/value signal and HTT allocation before changing penalties.
+- Recommended next step: keep 200/2000 frozen; first audit state12/13/14 class-C paths for cut/value propagation and HTT direction/timing, and separately test whether additional system production capability changes state16-19 feasibility. Do not infer Pearson DRO success or failure from this mechanism audit.

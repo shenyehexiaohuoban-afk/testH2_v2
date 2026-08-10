@@ -1,0 +1,22 @@
+Step-05B-6 independent recompute audit
+
+An independent CSV-only recomputation, separate from the finalizer functions,
+verified the following:
+
+- state16 SAA: 62/78 insufficient, conditional mean/median/max gap
+  93.1076478749133 / 87.7435363314904 / 200.251186028147 kg.
+- state17 SAA: 65/78 insufficient, conditional mean/median/max gap
+  86.8313596478806 / 89.0587145312431 / 190.432022293592 kg.
+- state18 SAA: 44/55 insufficient, conditional mean/median/max gap
+  80.6401881345863 / 73.2389507366817 / 174.612258499031 kg.
+- state19 SAA: 20/44 insufficient, conditional mean/median/max gap
+  72.5134947664565 / 49.6096763317234 / 139.699676331723 kg.
+- Each SAA/DRO target total matches the corresponding accepted C6 table to
+  below 1e-7 kg.
+- Path transitions are exactly: both infeasible 191, both feasible 50,
+  SAA feasible/DRO infeasible 14, SAA infeasible/DRO feasible 0.
+- The fixed state19 path IDs 1529, 2134, 5371, 8092, 8289, 8650, 9095, and
+  9913 are all total-sufficient, station-target-feasible, and actual-gap-positive
+  in the accepted Step-05B-4 physical audit.
+
+Independent recompute PASS: 1

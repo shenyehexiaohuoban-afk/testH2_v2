@@ -1,0 +1,13 @@
+Step-05B-5 final integrity audit
+
+History nodes: 289
+Node-outcome rows: 3221
+Node-site dispersion rows: 1156
+Selected paired trace rows: 4200
+Cut request rows: 24
+Cut site rows: 96
+Maximum node probability-sum error: 1.99840144433e-15
+Maximum active-cut RHS reconstruction residual: 0
+Capacity-gap path-level reproduction maximum error: 4.26325641456e-14
+Core MSP was not called or modified.
+Final PASS: 1

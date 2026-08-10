@@ -1,0 +1,16 @@
+Step-05B-5 prepare integrity audit
+
+Frozen OOS: C:\Users\chaos\Desktop\biye\test\testH2_v2\output_h2\details\h2_OOS.csv
+OOS SHA-256: 6e4ed488423e3cbb838c4a6f8b45019cf4ecf32a82850880399a08aafc7aff85
+OOS shape: 10000 x 8
+Terminal-hit paths: 6053
+Active path-stage observations: 35728
+Recombining (t,k) information nodes: 289
+Node-outcome rows: 3221
+Node-site dispersion rows: 1156
+Physical-feasible actual-unmet selected paths: 129
+Selected counts by state: {12: 68, 13: 11, 14: 42, 19: 8}
+Selected trace rows: 4200
+Representative cut request rows: 24
+No training, sampling, cut generation, TerminalLOH change, or penalty change was performed.
+Prepare PASS: 1

@@ -1,0 +1,34 @@
+Step-05B-5 bounded judgment
+
+1. Service-preserving system-total capacity gaps
+- State16: 63/78 paths insufficient (80.77%); conditional mean/median/q95/max gaps are 104.048298/89.702053/179.792053/213.344045 kg.
+- State17: 67/78 paths insufficient (85.90%); conditional mean/median/q95/max gaps are 100.134001/105.423947/173.245263/206.797255 kg.
+- State18: 49/55 paths insufficient (89.09%); conditional mean/median/q95/max gaps are 96.166007/76.609194/166.699194/200.251186 kg.
+- State19: 26/44 paths insufficient (59.09%); conditional mean/median/q95/max gaps are 86.212134/81.156535/171.246535/171.246535 kg.
+- These state16/17/18 paths and the insufficient state19 subset are class E: system-total type. This is not an HTT spatial-physics conclusion.
+
+2. Information-scope correction
+- Step-05B-4 is an ex-post perfect-information diagnostic: it reoptimizes every pre-terminal decision after the entire OOS path, terminal state, target vector, and realized ordinary-service quantities are known.
+- It proves physical feasibility with clairvoyance, not policy attainability under sequential information. The true FA-MSP exogenous information node is (decision stage t, current Markov state k), with inventory x as the endogenous state.
+
+3. Information revelation and policy timing
+- For state12/13/14 feasible-unmet paths, the exact target-vector share remains zero through every observed lf=1..6 node. At their latest lf=6 observations, the realized terminal-state probabilities are only 5.19%, 4.59%, and 5.92%; mean maximum site-target ranges remain 233.876, 215.426, and 208.252 kg.
+- SAA/DRO station inventories begin materially diverging at decision stage 2 for all four states, before the final target vector is resolved. Much of the later difference is therefore compatible with nonanticipativity rather than evidence of an avoidable ex-post allocation mistake.
+- State19 is different in degree: on the feasible-unmet subset, the positive-target top station is certain on all latest lf=6 observations, but the exact terminal state remains only 8.38% likely and secondary-site/magnitude dispersion remains material.
+
+4. Existing saved-cut value signals
+- Existing workspaces were sufficient for a limited read-only audit. No solve or new cut was used. The representative SAA models contain 1112 saved cuts and the representative DRO models contain 1198 saved cuts.
+- DRO top-marginal station agrees with the realized target leader in 100% of state12, 67% of state13, 100% of state14, and 67% of state19 representative nodes.
+- State12 and state14 show no representative top-direction cut defect. State13 retains one mismatched representative node but has only 11 feasible-unmet paths and already-close inventory distribution. State19 retains one mismatched late representative node after the top-site direction becomes clear, which justifies targeted follow-up.
+
+5. Final classifications
+- State12: A information type.
+- State13: A information type.
+- State14: A information type.
+- State19 physical-feasible/actual-unmet subset: C mixed type.
+- State16/17/18 and the total-insufficient state19 subset: E system-total type.
+
+6. Next step
+- Do not globally retrain or change 200/2000 based on this audit.
+- If further work is authorized, first perform a narrowly targeted state19 late-node cut/training-budget audit, especially the representative node where site2 marginal value exceeds site1 despite site1 leading the realized and node-mean targets.
+- State12/13/14 do not presently justify a full retraining campaign; their ex-post gaps are mainly explained by unresolved target-vector information and the saved cuts generally point in the correct station direction.

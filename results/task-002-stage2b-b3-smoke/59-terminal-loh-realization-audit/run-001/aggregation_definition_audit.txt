@@ -1,0 +1,29 @@
+Step-05B-2 aggregation definition audit
+
+Frozen sources
+- Step-05B-1 accepted rowwise audit: C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\58-main-msp-terminal-gap-mechanism-audit\run-004\terminal_target_vs_final_inventory.csv
+- C6 SAA 35x4 table: C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\53-35state-saa-vs-eta003-terminal-loh\run-024\terminal_loh_table_saa.csv
+- C6 eta=0.03 35x4 table: C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\53-35state-saa-vs-eta003-terminal-loh\run-024\terminal_loh_table_eta_003.csv
+
+Mechanical gates
+- Row count: 20000 = 2 methods x 10000 common OOS paths.
+- Common terminal-hit paths: 6053.
+- Unreached frozen terminal states: 4 of 35; their targets remain reported, while realized inventory/gap statistics are NaN.
+- Four-station reconstruction max errors: target=1.19371179608e-12, final=1.70530256582e-12, gap=5.96855898038e-13 kg.
+- The Step-05B-1 ordinary-shortage-worse subset was reproduced exactly: 280 path IDs.
+
+Units and aggregation
+- station-level quantities are one station on one path, in kg.
+- four-station total quantities are sums across T1..T4 or I1..I4 on one path, in kg.
+- state_station_realization_table.csv has 35 states x 4 sites x 2 methods = 280 rows.
+- equal-state summaries are descriptive only and are not probability expectations.
+- OOS-weighted summaries use arrival_count/10000. Conditional terminal-hit summaries use arrival_count/6053.
+- T=0 is labeled zero_target. Attainment and relative gap are undefined and are never divided by zero.
+- DeltaT=0 and DeltaT<0 are not assigned an increment realization ratio. DeltaI is never clipped.
+
+The earlier 98.12 versus 380.25 question
+- SAA mean TerminalLOH target on 6053 terminal-hit paths = 98.116437321456 kg.
+- SAA mean final inventory on the same 6053 terminal-hit paths = 380.252607798618 kg.
+- Both numbers are four-station totals per terminal-hit path. They are not a per-station versus four-station unit mismatch.
+- They are nevertheless not an attainment ratio: many reached SAA terminal states have zero TerminalLOH target, while final inventory remains physical inventory. Proper attainment is computed only for T>0 using min(I,T)/T.
+- Eta corresponding values are target=148.715515356075 kg and final=400.962968654621 kg, also four-station totals.

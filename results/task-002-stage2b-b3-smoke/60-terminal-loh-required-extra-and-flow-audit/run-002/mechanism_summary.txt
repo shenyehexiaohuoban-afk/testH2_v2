@@ -1,0 +1,39 @@
+Step-05B-3 mechanism summary
+
+Necessary-extra accounting
+- Positive DRO target increment across terminal-hit path-site rows: 306571.548997425998 kg.
+- Directly covered by SAA surplus: 286024.557133449998 kg (93.297815%).
+- Positive-DeltaT path-site rows requiring no extra inventory: 83.584521%.
+- Required extra on positive-DeltaT rows: 44642.733247756900 kg; realized: 13531.775935937299 kg; effective realization: 30.311262%.
+- Required extra across all target-positive/deficient rows, including pre-existing SAA gaps: 56112.839618933198 kg; realized: 14609.905672768200 kg; effective realization: 26.036654%.
+- States 1, 2, 3, and 4 have 100% surplus coverage, zero required extra, and zero remaining gap. Their low Step-05B-2 DeltaI/DeltaT ratios were entirely denominator artifacts rather than unmet hydrogen targets.
+
+A/B/C/D path-site classification
+- A: 21351 (88.183545%); B: 554 (2.288122%); C: 1367 (5.645961%); D: 940 (3.882372%).
+- Within A, 185 rows start with enough SAA inventory for the DRO target but the DRO policy subsequently falls below that target; their total remaining gap is 541.286430 kg.
+- C contributes 22330.450746438699 kg remaining gap. D contributes 24778.879311686698 kg and has negative aggregate actual-extra because DRO inventory does not increase.
+
+State and site findings
+- State13: surplus coverage 92.974676%, required extra 728.779685 kg, effective realization 58.476999%.
+- State14: surplus coverage 89.378915%, required extra 2271.091809 kg, effective realization 65.419116%.
+- State19: surplus coverage only 29.612796%, required extra 2781.807596 kg, effective realization 20.849269%; this is a genuinely difficult target rather than a surplus artifact.
+- Site1 has the largest required extra (19923.120764 kg) and remaining gap (15653.621276 kg), but site4 has the lowest effective realization (18.287396%) and nearly as much remaining gap. Site1 is important but not the sole bottleneck.
+
+Selected C/D deterministic replay
+- Saved-policy replay exactly uses the frozen 10000x8 OOS table. See replay_integrity_audit.txt.
+- Descriptive binding rates over the 11 selected pair subsets (paths may appear in more than one pair): electrolyzer 94.092040% SAA / 96.890547% DRO; tank 0.419855%/0.244473%; aggregate HTT 0.000000%/0.000000%; ordinary shortage positive 36.577529%/37.012852%.
+- The dominant physical ceiling is electrolyzer production capability. Tank capacity is rarely active, and aggregate HTT capacity is never active in the selected C/D subsets.
+- HTT is nevertheless important as a redistribution mechanism. The model has no pairwise hard road-reachability constraint; beta affects aggregate HTT capacity and cost. Several low-realization focal sites receive less net HTT under DRO even when total system inventory increases.
+- State14/site1: focal final inventory delta 18.978384 kg, local production delta 0.550871 kg, net HTT inflow delta 18.427513 kg. Most of its realized increment is supplied by redistribution.
+- State13/site2: focal final inventory delta -3.421108 kg despite local production delta 7.656130 kg, because net HTT inflow changes by -11.077238 kg. This is a clear export/reallocation mechanism.
+- State19/site4: focal final inventory delta 2.160326 kg, production delta 1.837944 kg, net HTT inflow delta 0.201510 kg, and normal shortage delta 0.120872 kg.
+- Material production and inventory divergence begins at stage 3 for every selected pair. In 8 of 11 selected pairs, DRO also serves slightly less normal demand from stage 4 onward, preserving some inventory but increasing ordinary shortage. Thus normal-demand competition exists, but the missing reserve is not mainly caused by DRO serving more normal demand.
+
+State7 spillover control
+- State7 has DeltaT=0 for all sites. Inventory divergence begins at stage 3.
+- Cumulative extra production is 27.748811052753 kg/path and normal served load changes by -0.173434878508 kg/path, producing final inventory delta 27.922245931262 kg/path.
+- This proves a multistage cut/policy spillover: different TerminalLOH tables at other states change pre-terminal production and allocation even on a terminal state whose own target is identical.
+
+Penalty implication
+- The replay does not provide evidence that changing 200 or 2000 is currently necessary. The 2000 terminal-gap signal already drives near-continuous electrolyzer capacity use and some sacrifice of ordinary service.
+- Raising or otherwise changing the penalty would not remove the observed production ceiling and could intensify ordinary-service competition. The next audit should focus on production capacity and state/site-specific HTT/cut allocation before any penalty sensitivity experiment.

@@ -1,0 +1,16 @@
+Step-05B-1 mechanism summary
+
+Mean reported objective delta eta-SAA: 3182.17655093
+Terminal gap penalty contribution: 2373.02090762 (74.572258%)
+Ordinary shortage penalty contribution: 48.8309695432 (1.534515%)
+Objective delta after removing terminal gap penalty: 809.155643307
+Mean ordinary shortage delta kg: 0.244154847716
+Mean final inventory delta kg: 15.5147881656
+Mean TerminalLOH target delta on common terminal-hit paths kg: 50.5990780346
+Mean absolute terminal gap delta kg: 1.18651045381
+Ordinary-shortage-worse scenario count/share: 280 / 0.02800000
+Within those scenarios, eta leaves more final inventory share: 1.00000000
+Within those scenarios, mean/median final inventory delta kg: 11.6477069371 / 9.8509784195
+Within those scenarios, eta produces more share: 0.22857143; uses more HTT share: 0.51785714
+
+Component table source: objective_component_difference.csv (8 rows).

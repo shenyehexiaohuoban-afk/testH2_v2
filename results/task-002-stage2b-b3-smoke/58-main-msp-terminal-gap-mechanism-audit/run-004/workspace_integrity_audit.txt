@@ -1,0 +1,16 @@
+Step-05B-1 workspace integrity audit
+
+SAA workspace: C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\57-main-msp-converged-terminal-loh-ab\run-003\case-saa\native_output\h2_workspace.mat
+eta workspace: C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\57-main-msp-converged-terminal-loh-ab\run-003\case-chi2_eta003\native_output\h2_workspace.mat
+OOS file: C:\Users\chaos\Desktop\biye\test\testH2_v2\output_h2\details\h2_OOS.csv
+SAA workspace loaded: 1
+eta workspace loaded: 1
+SAA original/replay OOS rows: 10000/10000
+eta original/replay OOS rows: 10000/10000
+SAA replay max errors: path_cost=0, normal=0, terminal=0, final=0, production=0, transport=0
+eta replay max errors: path_cost=0, normal=0, terminal=0, final=0, production=0, transport=0
+SAA mechanical max errors: gap=0, terminal_cost=0, components=1.16415321827e-10
+eta mechanical max errors: gap=0, terminal_cost=0, components=5.82076609135e-11
+SAA stop flag/iterations/time: 2/1113/3603.05237 s
+eta stop flag/iterations/time: 2/1199/3600.8621352 s
+Conclusion: both saved workspaces are reloadable and deterministic fixed-policy replay reproduces the saved OOS outputs. The SAA post-save process exit did not corrupt the saved policy or OOS result.

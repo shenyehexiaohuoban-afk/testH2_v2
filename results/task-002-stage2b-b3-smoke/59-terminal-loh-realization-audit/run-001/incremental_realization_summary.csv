@@ -1,0 +1,4 @@
+scope,eligible_unit_count,weighted_DeltaT_kg_per_terminal_hit_path,weighted_DeltaI_kg_per_terminal_hit_path,increment_realization_ratio,interpretation
+positive_DeltaT_state_station_cells_frequency_weighted,85,50.6478686597432,12.0019762849762,0.236969029548046,Primary strict station-level ratio; only cells with DeltaT>0 are eligible.
+positive_DeltaT_state_totals_frequency_weighted,30,50.5990780346148,15.9913029363498,0.316039413315203,"Four-station state-total ratio, excluding states with DeltaT=0."
+raw_all_terminal_hit_path_total_association,6053,50.5990780346148,20.7103608560058,0.409303126864048,"Diagnostic raw ratio; numerator includes state7 paths where DeltaT=0, so it is not the strict increment realization ratio."

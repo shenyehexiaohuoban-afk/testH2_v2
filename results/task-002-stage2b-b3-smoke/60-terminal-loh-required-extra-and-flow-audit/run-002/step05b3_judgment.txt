@@ -1,0 +1,9 @@
+Step-05B-3 judgment
+
+Most of the low DeltaI/DeltaT result from Step-05B-2 was a target-denominator artifact: SAA inventory surplus directly covers 93.30% of the positive DRO target increment, and 83.58% of positive-DeltaT path-site rows require no extra inventory. This is complete for states 1-4.
+
+The residual problem is still real. For rows that genuinely require extra inventory, only 26.04% is realized overall, or 30.31% when restricted to positive-DeltaT rows. C/D remaining gaps are concentrated in specific states/sites rather than being a uniform TerminalLOH interface failure.
+
+The selected deterministic replay supports a mixed physical/policy mechanism: electrolyzer production capacity is the dominant active ceiling; tank capacity and aggregate HTT capacity are not binding. HTT redistribution can nevertheless move hydrogen away from focal target sites, and DRO sometimes preserves inventory by serving slightly less ordinary demand. State7 confirms that cuts learned from the full TerminalLOH table create multistage spillover even when the realized terminal state's own target is unchanged.
+
+There is no present mechanical basis to change the 200/2000 penalties. Continue with targeted production-capacity and HTT/cut-allocation diagnostics for the leading C/D state-site pairs. This audit does not declare Pearson DRO successful or unsuccessful.

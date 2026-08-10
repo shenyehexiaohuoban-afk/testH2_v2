@@ -1,0 +1,21 @@
+Step-05B-7 run-002 raw LP reuse audit
+
+Run-001 completed all 12106 physical LPs and passed every MATLAB mechanical
+gate. Its finalizer failed only because the first reporting verification
+incorrectly rejected valid reverse-gap cases.
+
+To avoid rerunning unchanged LPs, run-002 copied only the three mechanically
+passing intermediate files from run-001 into a fresh directory. Source and
+destination SHA-256 values match exactly:
+
+- all_state_path_capacity_raw.csv
+  b161c0694d88dd29c73a76b390918f010aaa9b61054f08443472c1d2caff8b2d
+- resource_utilization_state_raw.csv
+  39ae25f9933a28647abb2e85c6b63d4908f97fdf1d0de98f2d6bdb209a81bd6d
+- matlab_readonly_integrity_audit.txt
+  416e7b8f4efda4bacd180e54066d802a76b1877902e75435bc575a99d1658650
+
+No numerical result was edited. Run-001 remains preserved with FAILURE.txt.
+Run-002 uses the corrected finalizer that retains and explains reverse cases.
+
+Raw LP reuse PASS: 1

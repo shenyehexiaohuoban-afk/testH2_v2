@@ -1,0 +1,13 @@
+Step-05B-5 existing saved-cut value-signal audit
+
+Request rows: 24
+Output site rows: 96
+Loaded methods: saa, chi2_eta003
+All requested models contain saved cuts: 1
+Minimum total cut count: 1112
+Maximum total cut count: 1198
+Maximum active RHS reconstruction residual: 0
+No Gurobi solve, forward pass, backward pass, cut generation, or training was called.
+The active saved cut is identified as the maximum existing affine cut RHS at the archived replay inventory x.
+When multiple cuts tie within tolerance, the first is reported and the min/max/mean marginal values across all tied cuts are retained.
+Cut audit PASS: 1

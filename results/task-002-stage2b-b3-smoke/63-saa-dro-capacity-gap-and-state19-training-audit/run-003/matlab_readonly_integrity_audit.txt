@@ -1,0 +1,17 @@
+Step-05B-6 MATLAB read-only audit
+
+Frozen OOS: C:\Users\chaos\Desktop\biye\test\testH2_v2\output_h2\details\h2_OOS.csv
+OOS SHA-256: 6e4ed488423e3cbb838c4a6f8b45019cf4ecf32a82850880399a08aafc7aff85
+Capacity LP rows: 510
+Expected capacity LP rows: 510
+Optimal LP rows: 510
+Maximum LP residual: 5.01820807131e-14
+Maximum DRO reproduction residual vs Step-05B-4: 5.68434188608e-13
+State19 archive node rows: 20
+State19 cut-site rows: 80
+SAA iterations/time/stop: 1113 / 3603.05237 / 2
+DRO iterations/time/stop: 1199 / 3600.8621352 / 2
+Per-iteration training paths were not archived; OOS node frequency is not training visit frequency.
+Cut insertion order maps one-to-one to completed backward iterations because every eligible ordinary model receives one shared cut per completed iteration.
+No eval_h2, forward pass, backward pass, add_cut, training, sampling, or parameter mutation was called.
+MATLAB audit PASS: 1

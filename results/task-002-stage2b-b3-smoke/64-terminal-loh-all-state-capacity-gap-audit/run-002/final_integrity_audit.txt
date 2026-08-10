@@ -1,0 +1,13 @@
+Step-05B-7 final integrity audit
+
+focus_rows: 1
+state_rows: 1
+path_rows: 1
+path_ids_unique: 1
+reverse_rows_match_union: 1
+reverse_gap_rows_are_strict: 1
+reverse_feasibility_is_subset: 1
+focus_actual_inventory_increases: 1
+focus_target_increase_exceeds_actual: 1
+Final integrity PASS: 1
+Frozen OOS SHA-256: 6e4ed488423e3cbb838c4a6f8b45019cf4ecf32a82850880399a08aafc7aff85

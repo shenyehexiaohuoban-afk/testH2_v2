@@ -1,0 +1,9 @@
+Step-05B-2 judgment: D
+
+SAA and eta=0.03 both show high own-target aggregate attainment, so the evidence does not support a global claim that the interface fails everywhere. On target-positive station-path cells, target-mass-weighted attainment is 93.974476% for SAA and 94.706516% for eta=0.03.
+
+On the 24 reached states where both methods have a positive four-station target, however, OOS-frequency-weighted mean attainment falls from 95.378031% to 93.763007%. More importantly, the strict positive-DeltaT station-cell realization ratio is only 23.696903%; the positive-DeltaT state-total ratio is 31.603941%. The raw all-terminal-hit ratio is 40.930313%, but it is inflated by state7 paths where DeltaT=0 and final inventory still rises.
+
+The non-realization is concentrated rather than uniform: the top five states contribute 87.388853% of OOS-weighted unrealized positive increment, and station 1 contributes 63.598767%. Therefore the bounded conclusion is D: continue targeted production, HTT, inventory, capacity, and cut diagnostics for the dominant states/sites rather than globally changing TerminalLOH, 200/2000, or the MSP.
+
+The 280 ordinary-shortage-worse paths contain 17 non-terminal-hit paths and 263 terminal-hit paths. The five largest terminal-state counts are state14=38, state21=31, state12=24, state13=19, state7=17. This is a mechanism association only and does not establish Pearson DRO success or failure.

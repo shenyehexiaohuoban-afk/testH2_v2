@@ -1,0 +1,3 @@
+method,terminal_loh_mode,training_budget_seconds,iterations,completed_backward_passes,stop_flag,formal_convergence,final_lb,oos_mean,oos_ci95_lower,oos_ci95_upper,eval_paths,training_time_seconds,eval_time_seconds
+saa,saa,3600,1113,1112,2,0,19196.3735603,19418.144140,18616.108261,20220.180020,10000,3603.05237,122.38
+chi2_eta003,eta_0.03,3600,1199,1198,2,0,22503.1276124,22600.320691,21685.339707,23515.301675,10000,3600.8621352,111.93

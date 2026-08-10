@@ -1,0 +1,16 @@
+Step-05B-7 MATLAB read-only all-state audit
+
+Frozen OOS: C:\Users\chaos\Desktop\biye\test\testH2_v2\output_h2\details\h2_OOS.csv
+OOS SHA-256: 6e4ed488423e3cbb838c4a6f8b45019cf4ecf32a82850880399a08aafc7aff85
+Path rows: 12106 (expected 12106)
+SAA terminal-hit rows: 6053
+DRO terminal-hit rows: 6053
+Reached states SAA/DRO: 31/31
+Optimal LP rows: 12106
+Maximum LP residual: 5.68434188608e-14
+Maximum Step-05B-6 reproduction residual: 1.93267624127e-12
+Maximum saved-evaluation replay residual: 0
+SAA/DRO deterministic eval seconds: 184.0789171 / 205.3397979
+Resource summary rows: 210
+No training, resampling, forward training pass, backward pass, add_cut, TerminalLOH change, or penalty change occurred.
+MATLAB audit PASS: 1
