@@ -1,0 +1,23 @@
+Stage-70 preparation-stage count x Delta I bin cross audit
+
+Status: PASS after independent mechanical verification
+
+Frozen sample gates
+- 10000 common-sample OOS paths; 6053 terminal-hit paths.
+- 4408 all-path Delta I <=1 kg paths; 1642 are terminal-hit.
+- Maximum Stage-65/68 Delta I identity error: 3.55e-15 kg.
+
+Small-change terminal-hit composition
+- Prep 2-3: 929/1642 (56.58%).
+- Prep 4-6: 713/1642 (43.42%).
+- Limited preparation opportunities explain a majority, but not all, of the small-change paths; a substantial 43.42% still have prep 4-6.
+
+20-50 kg terminal-hit composition
+- Prep 4: 1245 (41.08%); prep 5: 1324 (43.68%); prep 6: 282 (9.30%).
+- Prep 4-6 combined: 2851/3031 (94.06%).
+
+Larger inventory-gain concentration
+- Delta I >10 kg: prep 4-6 contains 3816/4055 (94.11%).
+- Delta I >20 kg: prep 4-6 contains 3019/3199 (94.37%).
+- The association is descriptive and is not a causal identification of preparation opportunities.
+- No model, TerminalLOH, eta, policy, OOS sample, optimization, training, or W-stage recourse was changed or run.

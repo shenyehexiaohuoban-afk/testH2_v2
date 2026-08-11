@@ -1,0 +1,17 @@
+Stage-70 independent mechanical audit: PASS
+
+total_paths: 10000
+terminal_hit_paths: 6053
+all_path_delta_i_le_1: 4408
+terminal_hit_delta_i_le_1: 1642
+small_change_prep_2_3: 929/1642
+small_change_prep_4_6: 713/1642
+terminal_hit_20_50_prep_4_5_6: 1245/1324/282
+terminal_hit_20_50_prep_4_6: 2851/3031
+terminal_hit_gt_10_prep_4_6: 3816/4055
+terminal_hit_gt_20_prep_4_6: 3019/3199
+cross_counts_row_percent_column_percent: PASS
+stage65_stage68_delta_i_identity: PASS
+stage68_stage69_preparation_identity: PASS
+figure_integrity: PASS (1916x1026)
+No model, optimization, training, resampling, regression, machine learning, or W-stage recourse was used.
