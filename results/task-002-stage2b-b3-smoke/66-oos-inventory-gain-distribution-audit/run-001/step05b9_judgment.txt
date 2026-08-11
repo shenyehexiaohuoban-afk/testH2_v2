@@ -1,0 +1,29 @@
+Step-05B-9 judgment
+
+Fixed-bin distribution
+- <=1 kg: 4408 paths (44.080000%), mean inventory delta -0.003349614 kg, mean operating-cost delta -2.105274093 yuan.
+- 1-10 kg: 487 paths (4.870000%), mean inventory delta 7.283886940 kg, mean operating-cost delta 907.279107897 yuan.
+- 10-20 kg: 1093 paths (10.930000%), mean inventory delta 15.364154099 kg, mean operating-cost delta 1029.112356891 yuan.
+- 20-30 kg: 1545 paths (15.450000%), mean inventory delta 24.795325738 kg, mean operating-cost delta 1455.009661462 yuan.
+- 30-50 kg: 2288 paths (22.880000%), mean inventory delta 37.834091530 kg, mean operating-cost delta 1704.373769913 yuan.
+- 50-100 kg: 179 paths (1.790000%), mean inventory delta 55.582087707 kg, mean operating-cost delta 2159.634844255 yuan.
+- >100 kg: 0 paths (0.000000%), mean inventory delta undefined, mean operating-cost delta undefined.
+
+Strict exceedance thresholds
+- DeltaI > 1 kg: 5592 paths (55.920000%), mean deltaI 27.747254427 kg, mean operating-cost delta 1448.647439426 yuan.
+- DeltaI > 10 kg: 5105 paths (51.050000%), mean deltaI 29.699391541 kg, mean operating-cost delta 1500.292175460 yuan.
+- DeltaI > 20 kg: 4012 paths (40.120000%), mean deltaI 33.604779009 kg, mean operating-cost delta 1628.656966511 yuan.
+- DeltaI > 30 kg: 2467 paths (24.670000%), mean deltaI 39.121846420 kg, mean operating-cost delta 1737.406494805 yuan.
+- DeltaI > 50 kg: 179 paths (1.790000%), mean deltaI 55.582087707 kg, mean operating-cost delta 2159.634844255 yuan.
+- DeltaI > 100 kg: 0 paths (0.000000%), mean deltaI undefined, mean operating-cost delta undefined.
+
+Interpretation
+- The largest fixed bin is <=1 kg with 4408 paths (44.080000%).
+- 5592 paths exceed 1 kg; therefore the 5600 positive paths are not all material increases, although only 8 positive paths fall at or below 1 kg.
+- The all-path mean is 15.514788166 kg, below the positive-path conditional mean 27.708478427 kg because 4397 paths are equal within solver tolerance and 3 paths decline.
+- The appropriate description is: part of the OOS paths receive a clear reserve increase, while a large minority is essentially unchanged.
+- The full-sample mean alone hides material path heterogeneity and must be accompanied by the fixed-bin or threshold shares.
+
+Paper-ready wording
+- Across 10,000 paired OOS paths, 51.05% gain more than 10 kg of terminal inventory, 40.12% gain more than 20 kg, and 1.79% gain more than 50 kg.
+- The mean gain of 15.515 kg reflects a mixed response: 44.08% of paths remain at or below 1 kg, while substantial shares fall in the 20-50 kg bands.

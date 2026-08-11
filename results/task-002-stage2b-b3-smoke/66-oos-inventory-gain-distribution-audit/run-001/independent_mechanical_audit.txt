@@ -1,0 +1,17 @@
+Step-05B-9 independent mechanical audit
+
+paired_paths: 10000
+fixed_bins_right_closed: PASS
+fixed_bin_counts: 4408/487/1093/1545/2288/179/0
+strict_threshold_counts: 5592/5105/4012/2467/179/0
+inventory_increase_equal_decrease: 5600/4397/3
+negative_lt_minus_1_near_zero_le_1_gt_1: 3/4405/5592
+negative_path_ids: 2275/6091/9717
+max_source_reproduction_error_kg: 7.1054273576e-15
+max_bin_metric_recompute_error: 4.54747350886e-13
+max_threshold_metric_recompute_error: 4.54747350886e-13
+inventory_gain_histogram.png_dimensions: 1781x990
+inventory_gain_bin_share.png_dimensions: 1781x990
+inventory_gain_exceedance_curve.png_dimensions: 1775x990
+required_outputs_present: PASS
+independent_mechanical_audit_PASS: 1

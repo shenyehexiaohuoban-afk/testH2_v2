@@ -1,0 +1,10 @@
+Step-05B-9 source integrity audit
+
+Step-05B-8 master SHA-256: 58336879de53ea1d216315af7c813c02944b1a0e9746246184ffecb519e9914b
+Step-05B-1 reconciliation source SHA-256: 1d23404cf46629bc3db4f983b47fe2e5b1a2260d0379a792b1674b4681419165
+Protected MSP/model/data/rule tracked files differ from frozen HEAD: no
+MATLAB/Gurobi invoked: no
+Training/resampling/cut generation: no
+TerminalLOH and 200/2000 modified: no
+Historical runs modified by this verifier: no
+Source integrity PASS: 1
