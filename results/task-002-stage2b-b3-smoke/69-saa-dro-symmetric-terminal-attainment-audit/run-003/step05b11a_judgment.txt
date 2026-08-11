@@ -1,0 +1,43 @@
+Step-05B-11A judgment
+
+Status: PASS after independent mechanical verification
+
+Overall symmetric own-target facts on 6053 common terminal-hit paths
+- SAA: mean target 98.116437 kg, mean actual inventory 380.252608 kg, mean stationwise terminal gap 5.912029 kg, gap-positive 714/6053 (11.795804%).
+- DRO: mean target 148.715515 kg, mean actual inventory 400.962969 kg, mean stationwise terminal gap 7.872231 kg, gap-positive 900/6053 (14.868660%).
+- These reproduce the previously accepted Stage-59 self-attainment facts; SAA target-realization pressure is not a new discovery.
+
+Q1. Does SAA show fewer opportunities -> harder own-target attainment?
+- In the unstratified all-terminal-hit sample, prep count versus SAA gap is essentially zero: rho 0.004. This raw aggregation mixes terminal states with very different targets, including many zero-target SAA paths.
+- SAA actual terminal inventory nevertheless rises strongly with preparation count: rho 0.685.
+- Restricting to positive-target SAA paths gives prep versus gap rho -0.236. More importantly, within fixed positive-target terminal states, 18/18 evaluable states have a negative prep-gap association; the path-count-weighted mean rho is -0.521.
+- Therefore SAA already exhibits path-level preparation dependence once target/state composition is held transparent; the earlier existence of SAA pressure remains an accepted prior fact.
+
+Q2. Does DRO show the same direction?
+- All-terminal-hit prep versus DRO gap is also weak in aggregate: rho -0.039; prep versus actual inventory is strong at 0.776.
+- Within fixed positive-target terminal states, 19/19 evaluable states have negative prep-gap association, with path-count-weighted mean rho -0.628.
+- DRO therefore shows the same conditioned direction: more usable preparation opportunities are associated with more actual inventory and smaller own-target gaps.
+
+Q3. Is the pattern sufficiently symmetric to be a shared FA-MSP implementation-layer constraint?
+- Yes, with an important qualification: the unconditional raw-gap correlation is weak for both methods because target/state composition changes across prep counts. The fixed-state and positive-target diagnostics show the common relationship clearly for both SAA and DRO.
+- The evidence supports: TerminalLOH-to-inventory implementation depends on available preparation opportunities under both policies and cannot be attributed uniquely to Pearson-DRO.
+- This does not identify an algorithm error, cut error, training failure, or MSP failure; current inventory, ordinary-service competition, production capacity, and sequential information remain simultaneous influences.
+
+Q4. At the same prep count, does the higher DRO target add raw gap pressure?
+- Prep 2 (n=79): Delta target +68.790 kg, Delta actual inventory +0.000 kg, Delta stationwise gap +2.671 kg; gap-positive shares SAA/DRO 7.59%/7.59%.
+- Prep 3 (n=1144): Delta target +56.690 kg, Delta actual inventory +5.764 kg, Delta stationwise gap +3.680 kg; gap-positive shares SAA/DRO 10.75%/15.30%.
+- Prep 4 (n=2557): Delta target +50.111 kg, Delta actual inventory +18.577 kg, Delta stationwise gap +2.220 kg; gap-positive shares SAA/DRO 12.51%/16.66%.
+- Prep 5 (n=1855): Delta target +48.135 kg, Delta actual inventory +30.899 kg, Delta stationwise gap +0.967 kg; gap-positive shares SAA/DRO 10.94%/12.83%.
+- Prep 6 (n=418): Delta target +44.415 kg, Delta actual inventory +33.366 kg, Delta stationwise gap -0.063 kg; gap-positive shares SAA/DRO 14.83%/13.16%.
+- DRO has a higher mean target at every prep count. Raw mean gap is higher for prep counts 2-5, but the gap difference narrows as preparation opportunities increase and is slightly negative at prep 6.
+- This is additional target pressure, not evidence of worse DRO implementation capability, because DRO actual inventory also rises relative to SAA at the same prep count.
+
+Terminal-gap definition audit
+- DRO_eta_0.03: stationwise positive gaps 900, aggregate-net-shortfall positives 617, and 501 paths where sum_i max(0,T_i-I_i) exceeds max(0,sum(T)-sum(I)); maximum difference 57.805720 kg.
+- SAA: stationwise positive gaps 714, aggregate-net-shortfall positives 512, and 385 paths where sum_i max(0,T_i-I_i) exceeds max(0,sum(T)-sum(I)); maximum difference 61.018555 kg.
+- All formal statistics use the stationwise gap sum. The aggregate net shortfall appears only as a negative-control audit and is never substituted.
+
+Evidence boundary
+- ordinary shortage, terminal gap, and offline W-stage shortage remain distinct.
+- No Delta I / Delta T quantity is called a realization or attainment ratio.
+- No optimization, training, resampling, model change, eta change, or W1-W3 validation was performed.

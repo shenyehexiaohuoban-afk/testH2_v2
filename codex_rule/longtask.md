@@ -233,6 +233,7 @@ SAA 是统一经济参考，eta=0.03 是当前 35 状态 FA-MSP 对照使用的�
 - Step-05B-8 对 10000 条完全共样本 OOS 路径完成 SAA/DRO 逐路径配对；
 - Step-05B-9 完成终端库存增量固定分档与累计覆盖统计；
 - Step-05B-11 使用独立路径风险、SAA 基准压力和正式离线 state 风险完成库存增量关联审计；
+- Step-05B-11A 对 6053 条共同 terminal-hit 路径完成 SAA/DRO own-target attainment 对称审计，并按实际 preparation-stage count 及固定 terminal state 检查 target、actual inventory 和逐站 terminal gap；
 - 机制审计不修改策略、TerminalLOH、200/2000 或核心 FA-MSP。
 
 当前主要结果：
@@ -243,6 +244,7 @@ SAA 是统一经济参考，eta=0.03 是当前 35 状态 FA-MSP 对照使用的�
 - 去掉历史 terminal-gap penalty 后，平均 modeled operating cost 增加 `809.155643307 yuan/path`；
 - `51.05%` 路径库存增加超过 10 kg，`40.12%` 超过 20 kg，`1.79%` 超过 50 kg，未出现超过 100 kg 的路径；
 - 20–50 kg 高增量路径并未表现出更高的独立台风风险；实际准备/生产机会数与库存增量的 Spearman 相关为 `0.746`，而 `Delta TerminalLOH` 仅为 `-0.062`；
+- SAA/DRO 全 terminal-hit 样本中 prep count 与 raw gap 的相关均较弱，但固定正 target terminal state 后，SAA `18/18`、DRO `19/19` 个可评价 state 均为负向 prep-gap 关联；TerminalLOH 向实际库存的转化对准备机会具有共同依赖性，不能简单归因于 Pearson-DRO；
 - 结果应解释为“部分路径明显提高、较大一部分基本不变”，不能只报告总体平均或高增量子集。
 
 当前意义：
@@ -344,7 +346,7 @@ SAA 与 DRO 不存在两套复制的 forward/backward/cut/model/eval 代码。
 - 当前 probability-DRO 交接：`terminalLoh_wdro/docs/PROBABILITY_DRO_MAINLINE_HANDOVER.md`；
 - 当前有限支撑求解主线：`terminalLoh_wdro/src/solve_terminal_loh_saa_c6_h2.m` 与 `solve_terminal_loh_flat_chi2_*`；
 - 35 状态表生产：`terminalLoh_wdro/src/run_step04CC6_*`；
-- Step-05B-1 至 B11 为读取既有策略/OOS 的机制、分布和独立风险特征关联审计。
+- Step-05B-1 至 B11A 为读取既有策略/OOS 的机制、分布、独立风险特征与对称 TerminalLOH attainment 审计。
 
 ### 4.5 当前结果阶段地图
 
@@ -357,6 +359,7 @@ SAA 与 DRO 不存在两套复制的 forward/backward/cut/model/eval 代码。
 - Stage 66 `run-001`：Step-05B-9 的终端库存增量分档与累计覆盖；
 - Stage 67 `run-001`：当前项目架构、调用链、接口和结果索引。
 - Stage 68 `run-004`：Step-05B-11 的 10000 条共样本库存增量与独立路径风险特征关联审计。
+- Stage 69 `run-003`：Step-05B-11A 的 SAA/DRO 对称 TerminalLOH 实现性与准备机会审计。
 
 ### 4.6 本地存储、保护与 Git 归档边界
 

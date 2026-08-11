@@ -1,0 +1,3 @@
+method,method_label,path_count,target_mean_kg,target_median_kg,actual_inventory_mean_kg,actual_inventory_median_kg,terminal_gap_mean_kg,terminal_gap_median_kg,terminal_gap_q95_kg,gap_positive_path_count,gap_positive_path_share
+chi2_eta003,DRO_eta_0.03,6053,148.7155153560748,79.48533710376344,400.96296865462085,382.9984092720469,7.87223137084402,0.0,67.9177127887603,900,0.14868660168511483
+saa,SAA,6053,98.11643732145596,0.0,380.25260779861827,366.3093582085421,5.912029068167286,0.0,50.54884313061009,714,0.11795803733685775

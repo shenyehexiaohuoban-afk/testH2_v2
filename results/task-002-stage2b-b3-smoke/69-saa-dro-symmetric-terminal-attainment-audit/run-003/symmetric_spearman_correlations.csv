@@ -1,0 +1,13 @@
+scope,method,method_label,response,response_label,n,spearman_rho,p_value,interpretation
+all_terminal_hit,chi2_eta003,DRO_eta_0.03,target_total_kg,TerminalLOH target,6053,0.04649015403121972,0.00029666934937343676,descriptive association only; not causal
+all_terminal_hit,chi2_eta003,DRO_eta_0.03,inventory_total_kg,actual terminal inventory,6053,0.7762777583758416,0.0,descriptive association only; not causal
+all_terminal_hit,chi2_eta003,DRO_eta_0.03,gap_total_kg,stationwise terminal gap,6053,-0.03921261424743339,0.0022783371843642704,descriptive association only; not causal
+all_terminal_hit,saa,SAA,target_total_kg,TerminalLOH target,6053,0.12530652586182808,1.2988257194532334e-22,descriptive association only; not causal
+all_terminal_hit,saa,SAA,inventory_total_kg,actual terminal inventory,6053,0.6850966245361426,0.0,descriptive association only; not causal
+all_terminal_hit,saa,SAA,gap_total_kg,stationwise terminal gap,6053,0.004167857439952618,0.7457881114055035,descriptive association only; not causal
+positive_target_only,chi2_eta003,DRO_eta_0.03,target_total_kg,TerminalLOH target,5030,0.08716638035137675,5.928911971325396e-10,descriptive association only; not causal
+positive_target_only,chi2_eta003,DRO_eta_0.03,inventory_total_kg,actual terminal inventory,5030,0.7684475218521165,0.0,descriptive association only; not causal
+positive_target_only,chi2_eta003,DRO_eta_0.03,gap_total_kg,stationwise terminal gap,5030,-0.04124897464907702,0.003433528245042152,descriptive association only; not causal
+positive_target_only,saa,SAA,target_total_kg,TerminalLOH target,1484,0.12162272931330485,2.6176756838170128e-06,descriptive association only; not causal
+positive_target_only,saa,SAA,inventory_total_kg,actual terminal inventory,1484,0.5494490647261964,8.345457393480205e-118,descriptive association only; not causal
+positive_target_only,saa,SAA,gap_total_kg,stationwise terminal gap,1484,-0.23612870069681197,2.989708486745927e-20,descriptive association only; not causal

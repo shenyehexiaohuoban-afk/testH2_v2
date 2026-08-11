@@ -1,0 +1,3 @@
+method,method_label,eligible_positive_target_states,gap_evaluable_states,negative_gap_correlation_states,positive_gap_correlation_states,path_count_weighted_mean_gap_rho,median_gap_rho,path_count_weighted_mean_actual_inventory_rho,median_actual_inventory_rho,weighting_note
+chi2_eta003,DRO_eta_0.03,25,19,19,0,-0.6283029861963471,-0.6663043241287739,0.8270220302640392,0.7393530471295243,diagnostic path-count weighting across evaluable states; not 35-state equal-weight main evaluation
+saa,SAA,19,18,18,0,-0.5214341625363239,-0.588311659655888,0.5605407910864411,0.6280789242039857,diagnostic path-count weighting across evaluable states; not 35-state equal-weight main evaluation

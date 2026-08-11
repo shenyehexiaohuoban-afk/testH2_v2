@@ -1,0 +1,19 @@
+Step-05B-11A independent mechanical audit: PASS
+
+common_terminal_hit_paths: 6053
+symmetric_method_rows: 6053/6053
+preparation_group_counts: 79/1144/2557/1855/418
+gap_positive_counts_saa_dro: 714/900
+maximum_site_gap_reconstruction_error_kg: 7.11e-15
+maximum_spearman_reproduction_error: 9.02e-17
+maximum_stage64_total_identity_error_kg: 1.71e-12
+within_state_negative_gap_correlations_saa: 18/18
+within_state_negative_gap_correlations_dro: 19/19
+stationwise_gap_exceeds_aggregate_counts_saa_dro: 385/501
+stationwise_gap_definition: PASS
+figure_integrity: PASS
+fig1_terminal_gap_by_prep_saa_dro.png:2147x981
+fig2_target_actual_by_prep_saa_dro.png:2147x981
+fig3_gap_positive_share_by_prep.png:1607x977
+fig4_within_state_prep_gap_correlation.png:2147x1031
+No optimization, training, resampling, model change, or W-stage recourse was performed.
