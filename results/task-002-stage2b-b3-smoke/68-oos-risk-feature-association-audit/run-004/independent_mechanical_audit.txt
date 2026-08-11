@@ -1,0 +1,17 @@
+Step-05B-11 independent mechanical audit: PASS
+
+Path identity: exact 1..10000
+SAA/DRO accepted path fields: exact reproduction
+Frozen OOS SHA-256: 6e4ed488423e3cbb838c4a6f8b45019cf4ecf32a82850880399a08aafc7aff85
+Fixed-bin counts: 4408/487/1093/1545/2288/179/0
+20-50 kg combined: 3833 paths (38.33%)
+Maximum independent path-feature error: 8.88e-16
+Maximum Spearman reproduction error: 8.33e-17
+Terminal-hit state-frequency total: 6053
+Figure integrity: PASS
+fig1_delta_i_bin_independent_risk_boxplots.png:2687x1422
+fig2_independent_risk_vs_delta_i_scatter.png:2146x1599
+fig3_terminal_hit_delta_i_distribution.png:1427x977
+fig4_preparation_stage_count_delta_i.png:1607x977
+fig5_terminal_state_frequency_and_delta_i.png:2507x1067
+No model solve, training, resampling, or W-stage recourse was used by this verifier.

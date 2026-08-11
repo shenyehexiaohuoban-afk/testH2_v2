@@ -1,0 +1,5 @@
+feature,data_source,scope,n,spearman_rho,p_value,interpretation
+delta_production,Stage-65 paired DRO-SAA response,all paths,10000,0.987525117633271,0.0,descriptive association only; not causal
+delta_htt,Stage-65 paired DRO-SAA response,all paths,10000,0.6661771014578746,0.0,descriptive association only; not causal
+delta_operating_cost,Stage-65 paired DRO-SAA response,all paths,10000,0.8842089635355497,0.0,descriptive association only; not causal
+delta_ordinary_shortage,Stage-65 paired DRO-SAA response,all paths,10000,0.01156233282845539,0.24762905526636803,descriptive association only; not causal

@@ -1,0 +1,24 @@
+feature,data_source,scope,n,spearman_rho,p_value,interpretation
+path_max_intensity,frozen 10000x8 OOS path,all paths,10000,-0.11151021614191309,4.855065706024954e-29,descriptive association only; not causal
+path_mean_intensity,frozen 10000x8 OOS path,all paths,10000,-0.1284312142761545,4.805830045425152e-38,descriptive association only; not causal
+preterminal_intensity,frozen 10000x8 OOS path,all paths,10000,-0.24324671749124452,1.2586344501387093e-134,descriptive association only; not causal
+appeared_intensity_ge5,frozen 10000x8 OOS path,all paths,10000,-0.1085828408928531,1.2986868326296061e-27,descriptive association only; not causal
+high_intensity_state_count_ge5,frozen 10000x8 OOS path,all paths,10000,-0.1085088956002924,1.4094915523671049e-27,descriptive association only; not causal
+intensity_change_count,frozen 10000x8 OOS path,all paths,10000,-0.09954618881486915,1.8994501967113093e-23,descriptive association only; not causal
+net_intensity_change,frozen 10000x8 OOS path,all paths,10000,-0.24324671749124452,1.2586344501387093e-134,descriptive association only; not causal
+loc_change_count,frozen 10000x8 OOS path,all paths,10000,0.6212521491999532,0.0,descriptive association only; not causal
+loc_span,frozen 10000x8 OOS path,all paths,10000,0.5305351039896138,0.0,descriptive association only; not causal
+terminal_hit_loc,frozen 10000x8 OOS path,all paths,6053,0.1312743055495786,1.1170935379494883e-24,descriptive association only; not causal
+preparation_stage_count,frozen 10000x8 OOS path,all paths,10000,0.7462928882158242,0.0,descriptive association only; not causal
+production_opportunity_count,frozen 10000x8 OOS path,all paths,10000,0.7462928882158242,0.0,descriptive association only; not causal
+saa_ordinary_shortage,Stage-65 run-002,all paths,10000,-0.16347608234784827,7.547933306730323e-61,descriptive association only; not causal
+saa_production,Stage-65 run-002,all paths,10000,0.6065916342124543,0.0,descriptive association only; not causal
+saa_final_inventory,Stage-65 run-002,all paths,10000,0.47822616773425475,0.0,descriptive association only; not causal
+saa_operating_cost,Stage-65 run-002,all paths,10000,0.4413820730170045,0.0,descriptive association only; not causal
+saa_surplus_total_kg,Stage-60 run-002,terminal-hit only,6053,0.5806639594721087,0.0,descriptive association only; not causal
+offline_saa_terminal_loh_total_kg,Stage-53 run-024,terminal-hit only,6053,-0.402738894324387,7.394883258383285e-235,descriptive association only; not causal
+offline_delta_terminal_loh_total_kg,Stage-53 run-024,all paths,6053,-0.061662104367642065,1.5791230966594206e-06,descriptive association only; not causal
+offline_saa_mean_eens_kwh,Stage-53 run-024,terminal-hit only,6053,-0.2906763774967753,3.5855419909316618e-118,descriptive association only; not causal
+offline_saa_q95_shortage_kg,Stage-53 run-024,terminal-hit only,6053,-0.35214421051741346,3.17423126836001e-176,descriptive association only; not causal
+offline_saa_q99_5_shortage_kg,Stage-53 run-024,terminal-hit only,6053,-0.12219302229710612,1.4207815439709995e-21,descriptive association only; not causal
+offline_saa_max_shortage_kg,Stage-53 run-024,terminal-hit only,6053,0.20808276411151047,3.391973818708772e-60,descriptive association only; not causal

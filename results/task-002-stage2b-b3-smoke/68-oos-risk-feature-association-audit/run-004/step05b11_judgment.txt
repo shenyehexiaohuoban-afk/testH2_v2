@@ -1,0 +1,47 @@
+Step-05B-11 judgment
+
+Status: PASS after independent mechanical verification
+
+Frozen sample and bin reproduction
+- Exact 10000x8 common-sample OOS identity: PASS; SHA-256 6e4ed488423e3cbb838c4a6f8b45019cf4ecf32a82850880399a08aafc7aff85.
+- Path IDs are exactly 1..10000 with strict SAA/DRO pairing.
+- Delta I bins reproduce 4408/487/1093/1545/2288/179/0 paths.
+- The 20-30 and 30-50 kg bins contain 1545 and 2288 paths; combined 3833 paths (38.33%).
+- The <=1 kg bin is a small-change bin, not a claim of exact equality.
+
+Q1. Are 20-50 kg inventory-gain paths independently higher risk?
+- No stable positive risk ordering is observed. The combined 20-50 kg group has lower mean maximum intensity (2.138 versus 2.364), lower mean path intensity (2.032 versus 2.182), and a lower a>=5 occurrence share (0.026% versus 3.085%) than the <=1 kg group.
+- Among terminal-hit paths, its accepted offline SAA mean EENS is also lower on average (40.993 versus 84.619 kWh), and its SAA TerminalLOH level is lower (32.478 versus 223.137 kg).
+- Path maximum/mean intensity correlations with Delta I are -0.112/-0.128; offline SAA mean EENS correlation is -0.291. These are descriptive and mostly weak or inverse.
+- The 20-30 and 30-50 kg subgroups are similar: mean maximum intensity 2.136/2.139, preparation-stage count 4.028/4.828.
+
+Q2. Are the <=1 kg paths mainly low risk, or explained by high SAA inventory/surplus?
+- They are not mainly low risk under the independent indicators. Of the 1642 terminal-hit paths in this bin, 1124 (68.45%) have offline SAA mean EENS at or above the all-hit median (50.811 kWh).
+- Their SAA ordinary-shortage-positive share is 21.10%, versus 7.88% in the 20-50 kg group.
+- High pre-existing SAA surplus is not the dominant explanation for the whole <=1 kg bin: terminal-hit mean surplus is 193.539 kg versus 335.039 kg in the 20-50 kg group, and only 94 low-bin hits (5.72%) are at or above the all-hit surplus median (345.304 kg).
+- A limited subset therefore combines non-low offline risk with high SAA surplus, but the dominant low-response pattern is more consistent with fewer preparation opportunities and higher baseline service pressure than with surplus alone.
+
+Q3. Is Delta I stably related to terminal-state risk or Delta TerminalLOH?
+- No stable positive one-to-one mapping appears. Spearman rho is -0.403 for SAA TerminalLOH, -0.062 for Delta TerminalLOH, -0.291 for offline mean EENS, -0.352 for q95, -0.122 for q99.5, and 0.208 for maximum shortage.
+- Delta TerminalLOH is very weak (-0.062); the mixed signs across risk metrics do not support a simple final-state risk-to-final-inventory mapping.
+- This pattern is consistent with broad FA-MSP future-value propagation/spillover plus path-specific preparation time and SAA baseline conditions; it is not causal identification of that mechanism.
+
+Q4. Do preparation/production opportunities affect the inventory response?
+- Yes, descriptively and strongly: Spearman rho between opportunity count and Delta I is 0.746 (very strong).
+- Mean/median Delta I by opportunity count are: 1 stages 0.000/0.000 kg (n=1099); 2 stages 0.000/0.000 kg (n=971); 3 stages 4.686/0.000 kg (n=2065); 4 stages 19.273/20.539 kg (n=3288); 5 stages 31.454/35.913 kg (n=2122); 6 stages 33.749/38.642 kg (n=455).
+- lf=7 is excluded from this count and is not treated as another ordinary production hour.
+
+Q5. Does larger Delta I co-move with production, HTT, cost, and ordinary shortage?
+- Delta production: rho 0.988 (very strong); Delta HTT: 0.666 (strong); Delta operating cost: 0.884 (very strong); Delta ordinary shortage: 0.012 (very weak).
+- Therefore larger inventory gains nearly track additional production, commonly accompany more continuous-flow HTT and higher modeled operating cost, but have essentially no monotone relationship with ordinary-shortage change.
+
+Required group comparisons
+- Terminal-hit versus non-hit mean Delta I: 20.710 versus 7.547 kg; mean Delta production 20.324 versus 7.521; mean Delta HTT 11.029 versus 5.289; mean Delta ordinary shortage 0.386 versus 0.026; mean Delta operating cost 1065.758 versus 415.639 yuan.
+- SAA shortage zero versus positive mean Delta I: 16.684 versus 9.586 kg; mean Delta production 16.684 versus 8.104; mean Delta ordinary shortage 0.000 versus 1.482 kg.
+
+Evidence boundary
+- Data facts: exact common-sample pairing, path features, accepted SAA baseline quantities, accepted offline state metrics, fixed-bin counts, group summaries, and correlations.
+- Descriptive association: all reported rho values and between-group differences.
+- Mechanism interpretation: preparation opportunity and multistage spillover are consistent with the observed pattern, but are not causally identified here.
+- Not established: that DRO lowers actual disaster-stage W1-W3 EENS, that HTT has no real-world travel constraints, or that reported objective is actual economic expenditure.
+- ordinary shortage, terminal gap, and offline W-stage shortage/EENS remain distinct quantities.

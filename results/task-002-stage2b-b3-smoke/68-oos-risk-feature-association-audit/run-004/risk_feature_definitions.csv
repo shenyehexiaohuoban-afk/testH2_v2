@@ -1,0 +1,24 @@
+feature,definition,data_source,independence_basis
+path_max_intensity,Maximum a over active revealed states through terminal check or first absorption,frozen 10000x8 OOS path,does not use Delta I
+path_mean_intensity,Mean a over the same active risk sequence,frozen 10000x8 OOS path,does not use Delta I
+preterminal_intensity,a at the last active ordinary lf=1..6 stage,frozen 10000x8 OOS path,does not use Delta I
+appeared_intensity_ge5,Indicator that active risk sequence contains a>=5,frozen 10000x8 OOS path,does not use Delta I
+high_intensity_state_count_ge5,Count of active revealed states with a>=5,frozen 10000x8 OOS path,does not use Delta I
+intensity_change_count,Number of adjacent intensity changes before stopping,frozen 10000x8 OOS path,does not use Delta I
+net_intensity_change,Last minus first preparation-stage intensity,frozen 10000x8 OOS path,does not use Delta I
+loc_change_count,Number of adjacent location changes before stopping,frozen 10000x8 OOS path,does not use Delta I
+loc_span,Maximum minus minimum loc over active risk sequence,frozen 10000x8 OOS path,does not use Delta I
+terminal_hit_loc,loc at the actual lf=7 check; missing for non-hit paths,frozen 10000x8 OOS path,does not use Delta I
+preparation_stage_count,Count of active ordinary states a>1 and lf=1..6 before stopping,frozen 10000x8 OOS path,does not use Delta I; lf=7 excluded
+production_opportunity_count,Same active ordinary-stage count; these stages contain production decisions,frozen 10000x8 OOS path,does not use Delta I; lf=7 excluded
+saa_ordinary_shortage,Accepted SAA ordinary-stage normal-demand shortage,Stage-65 run-002,SAA baseline only
+saa_production,Accepted SAA cumulative production,Stage-65 run-002,SAA baseline only
+saa_final_inventory,Accepted SAA final four-station inventory,Stage-65 run-002,SAA baseline only
+saa_operating_cost,Accepted SAA modeled operating cost excluding terminal-gap penalty,Stage-65 run-002,SAA baseline only
+saa_surplus_total_kg,"Sum over sites of accepted max(I_SAA-T_SAA,0)",Stage-60 run-002,SAA baseline definition; terminal-hit only
+offline_saa_terminal_loh_total_kg,Formal SAA TerminalLOH total for realized terminal state,Stage-53 run-024,offline state input; terminal-hit only
+offline_delta_terminal_loh_total_kg,Formal DRO minus SAA TerminalLOH total for realized terminal state,Stage-53 run-024,offline input difference; not Delta I
+offline_saa_mean_eens_kwh,Formal offline SAA mean EENS for realized terminal state,Stage-53 run-024,offline state risk; terminal-hit only
+offline_saa_q95_shortage_kg,Formal offline SAA q95 W-stage shortage,Stage-53 run-024,offline state risk; terminal-hit only
+offline_saa_q99_5_shortage_kg,Formal offline SAA q99.5 W-stage shortage,Stage-53 run-024,offline state risk; terminal-hit only
+offline_saa_max_shortage_kg,Formal offline SAA maximum W-stage shortage,Stage-53 run-024,offline state risk; terminal-hit only

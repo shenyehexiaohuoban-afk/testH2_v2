@@ -232,6 +232,7 @@ SAA 是统一经济参考，eta=0.03 是当前 35 状态 FA-MSP 对照使用的�
 - Step-05B-1 至 B7 完成 TerminalLOH gap penalty、目标兑现、必要新增库存、系统总量、信息逐步揭示、capacity gap 和 state19 训练证据审计；
 - Step-05B-8 对 10000 条完全共样本 OOS 路径完成 SAA/DRO 逐路径配对；
 - Step-05B-9 完成终端库存增量固定分档与累计覆盖统计；
+- Step-05B-11 使用独立路径风险、SAA 基准压力和正式离线 state 风险完成库存增量关联审计；
 - 机制审计不修改策略、TerminalLOH、200/2000 或核心 FA-MSP。
 
 当前主要结果：
@@ -241,6 +242,7 @@ SAA 是统一经济参考，eta=0.03 是当前 35 状态 FA-MSP 对照使用的�
 - 普通 shortage 改善/不变/恶化路径数为 `2/9718/280`；
 - 去掉历史 terminal-gap penalty 后，平均 modeled operating cost 增加 `809.155643307 yuan/path`；
 - `51.05%` 路径库存增加超过 10 kg，`40.12%` 超过 20 kg，`1.79%` 超过 50 kg，未出现超过 100 kg 的路径；
+- 20–50 kg 高增量路径并未表现出更高的独立台风风险；实际准备/生产机会数与库存增量的 Spearman 相关为 `0.746`，而 `Delta TerminalLOH` 仅为 `-0.062`；
 - 结果应解释为“部分路径明显提高、较大一部分基本不变”，不能只报告总体平均或高增量子集。
 
 当前意义：
@@ -342,7 +344,7 @@ SAA 与 DRO 不存在两套复制的 forward/backward/cut/model/eval 代码。
 - 当前 probability-DRO 交接：`terminalLoh_wdro/docs/PROBABILITY_DRO_MAINLINE_HANDOVER.md`；
 - 当前有限支撑求解主线：`terminalLoh_wdro/src/solve_terminal_loh_saa_c6_h2.m` 与 `solve_terminal_loh_flat_chi2_*`；
 - 35 状态表生产：`terminalLoh_wdro/src/run_step04CC6_*`；
-- Step-05B-1 至 B9 为读取既有策略/OOS 的机制和分布审计。
+- Step-05B-1 至 B11 为读取既有策略/OOS 的机制、分布和独立风险特征关联审计。
 
 ### 4.5 当前结果阶段地图
 
@@ -354,6 +356,7 @@ SAA 与 DRO 不存在两套复制的 forward/backward/cut/model/eval 代码。
 - Stage 65 `run-002`：Step-05B-8 的 10000 条 OOS 逐路径配对主结果；
 - Stage 66 `run-001`：Step-05B-9 的终端库存增量分档与累计覆盖；
 - Stage 67 `run-001`：当前项目架构、调用链、接口和结果索引。
+- Stage 68 `run-004`：Step-05B-11 的 10000 条共样本库存增量与独立路径风险特征关联审计。
 
 ### 4.6 本地存储、保护与 Git 归档边界
 
@@ -457,7 +460,7 @@ CVaR、终端灾后 recourse、MFCV/车辆路径/道路修复、灾后滚动优�
 1. 是否需要让 SAA 与 eta=0.03 都运行到正式原生收敛条件，还是一小时固定预算策略已足够支撑当前论文问题；
 2. 若继续训练，是否只针对 state19 可行子集、`t=5,k=222,lf=6` 等候选节点增加访问/cut/边际价值仪表并延长预算；
 3. 何时以及是否应让日常 `main_msp_h2_near.m` 显式暴露 lookup 模式；在决定前继续保持 legacy 默认；
-4. 如何在论文中准确表述 DRO 的“部分路径明显增加终端库存、另一部分基本不变”、运行成本溢价和普通 shortage 异质性；
+4. 如何在论文中准确表述 DRO 的“部分路径明显增加终端库存、另一部分基本不变”、准备机会主导的路径异质性、运行成本溢价和普通 shortage 异质性；
 5. `eta=0.03` 是否还需结合更多统计或决策标准继续校准，当前不能写成正式冻结；
 6. 对剩余未兑现目标，如何进一步区分系统总能力不足、信息逐步揭示、局部 cut 近似和固定训练预算；
 7. 根目录 README 是否需要补充当前入口、Stage-67 架构地图及 Stage-65/66 主结果导航；
@@ -491,8 +494,8 @@ CVaR、终端灾后 recourse、MFCV/车辆路径/道路修复、灾后滚动优�
 - Stage 53 `run-024` 已验收 35 状态 SAA 与 eta=0.03 TerminalLOH 表；
 - Stage 55/56 已验证输出隔离、lookup 映射和 `TerminalLOH -> backward -> cuts -> subsequent forward` 传播；
 - Stage 57 `run-003` 保存两套一小时固定预算策略及共同 10000 条 OOS 评价，两者均为 `stop_flag=2`，不是正式收敛结果；
-- Step-05B-1 至 B9 已完成 penalty、兑现率、required-extra、系统能力、信息逐步揭示、训练充分性、全状态能力、逐路径性能和库存增量分布审计；
-- Stage 65 `run-002` 与 Stage 66 `run-001` 是当前逐路径和库存分布主结果；
+- Step-05B-1 至 B11 已完成 penalty、兑现率、required-extra、系统能力、信息逐步揭示、训练充分性、全状态能力、逐路径性能、库存增量分布和独立风险特征关联审计；
+- Stage 65 `run-002`、Stage 66 `run-001` 与 Stage 68 `run-004` 是当前逐路径、库存分布和风险特征关联主结果；
 - Stage 67 `run-001` 冻结当前仓库架构、真实调用链、TerminalLOH 接口和结果阶段地图；
 - 日常 `main_msp_h2_near.m` 仍保持 legacy TerminalLOH 默认，SAA/DRO lookup 仅通过独立 launcher/options 显式接入；
 - 历史 Wasserstein、DAC/Ctilde、Dscale/Cscale、extreme-aware、wind_mc/roadSoft/RiskCap-Mean 代码和结果继续保留，但不再代表当前研究主线。
