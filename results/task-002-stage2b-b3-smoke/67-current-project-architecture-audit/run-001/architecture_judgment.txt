@@ -1,0 +1,84 @@
+Step-05B-10 architecture judgment: PASS
+
+1. Current FA-MSP entry
+- The daily native entry is root-level main_msp_h2_near.m.
+- The accepted SAA/DRO comparison does not replace this algorithm; it uses thin launchers and run_h2_with_options with a different TerminalLOH lookup option.
+
+2. Verified native call chain
+- main_msp_h2_near.m
+  -> h2_default_options.m
+  -> run_h2_with_options.m
+  -> load_data_h2_near.m
+  -> fa_h2/define_models_h2.m
+  -> fa_h2/train_models_h2.m
+  -> fa_h2/forward_pass_h2.m / fa_h2/backward_pass_h2.m / fa_h2/add_cut_h2.m
+  -> fa_h2/eval_h2.m.
+- Stage LP helpers are build_stage_model_h2.m, update_rhs_h2.m, and solve_stage_model_h2.m.
+
+3. Formal TerminalLOH tables
+- SAA: results/task-002-stage2b-b3-smoke/53-35state-saa-vs-eta003-terminal-loh/run-024/terminal_loh_table_saa.csv.
+- DRO: results/task-002-stage2b-b3-smoke/53-35state-saa-vs-eta003-terminal-loh/run-024/terminal_loh_table_eta_003.csv.
+- Both contain 35 rows and station columns T1_kg through T4_kg. eta_003 is proven to mean eta=0.03 by the CSV eta field, C6 README, and runtime loader assertion.
+
+4. TerminalLOH propagation to cuts
+- load_terminal_loh_lookup_h2 maps every 35-state row to its exact (a,loc,lf=7) column in params.TerminalLOH[4x336].
+- terminal_value_and_subgradient_h2 calculates 2000*sum(max(0,T-x)) and a station gradient of -2000 where deficient.
+- backward_pass_h2 probability-weights terminal values/gradients, forms alpha, and add_cut_h2 adds theta >= alpha+g'x to earlier ordinary models.
+- The next forward iteration uses the cut-enriched modelLib. Step-05A1 runtime evidence confirms mode-specific cut differences and subsequent forward response.
+
+5. Current B8/B9 result locations
+- B8 primary paired OOS result: results/task-002-stage2b-b3-smoke/65-oos-pathwise-saa-dro-performance-audit/run-002/.
+- B9 inventory-gain distribution: results/task-002-stage2b-b3-smoke/66-oos-inventory-gain-distribution-audit/run-001/.
+
+6. Current mainline directories
+- fa_h2/ and fa_h2/fuzhu/ for the H2 FA-MSP runtime.
+- data/ and data/yuanqi/ for active Markov/H2/runtime inputs.
+- terminalLoh_wdro/src/ current flat-chi2/C6 and Step-05 audit programs.
+- terminalLoh_wdro/docs/PROBABILITY_DRO_MAINLINE_HANDOVER.md and flat-chi2/model specifications.
+- results stages 53, 55-66 for the current table/interface/policy/audit chain.
+
+7. Historical-only or superseded navigation branches
+- Wasserstein ground-cost solvers and preview.
+- old DAC/Ctilde distance construction and Dscale/Cscale tuning audits.
+- historical extreme-aware candidate modules.
+- wind_mc/roadSoft/RiskCap-Mean preview as a non-current table source.
+- failed/development runs, retained as evidence and never overwritten or cleaned.
+
+8. Architecture/documentation differences found
+- main_msp_h2_near.m still defaults to legacy terminal_impact_template TerminalLOH. The current formal SAA/DRO research comparison is activated only through run_main_msp_h2_fixed_budget_ab.m or the smoke/convergence launchers. A future instruction that merely says run main_msp_h2_near would not reproduce the SAA/DRO A/B.
+- results directory 57 is named main-msp-converged-terminal-loh-ab, but accepted run-003 is explicitly a one-hour fixed-budget stop_flag=2 result and is not formally converged.
+- longtask.md still calls wind_mc/roadSoft/RiskCap-Mean offline preview the current stage and says those candidates are not connected to MSP. That snapshot is older than the accepted Pearson chi-square C6 and Step-05A/B integration chain.
+- eta003 is visually ambiguous but mechanically fixed to eta=0.03 in current C6/FA-MSP use.
+- repository root README remains minimal and does not describe the present mainline.
+- These are navigation/documentation drifts, not evidence of a changed mathematical core or corrupted accepted result.
+
+9. Minimum files for a future Codex task
+Always read first:
+- AGENTS.md
+- codex_rule/core.md
+- codex_rule/longtask.md
+- codex_rule/log.md
+- this audit README.md, current_mainline_call_chain.md, and terminal_loh_to_msp_interface.md
+- terminalLoh_wdro/docs/PROBABILITY_DRO_MAINLINE_HANDOVER.md
+
+For a main-MSP task also read:
+- main_msp_h2_near.m
+- h2_default_options.m
+- run_h2_with_options.m
+- load_data_h2_near.m
+- the relevant fa_h2 train/forward/backward/cut/eval files
+- the launcher actually named by the task
+
+For a TerminalLOH or result-interpretation task also read:
+- C6 run-024 README and the two table CSVs
+- the README/judgment of the latest accepted stage used as input
+- B8 run-002 and B9 run-001 when discussing current 10000-path performance
+
+10. Protection status
+- output_h2 and terminalLoh_wdro/output are local-only Git-ignored trees and must not be cleaned.
+- accepted and failed run directories, local MAT/workspaces/raw tables/process logs, and the 234 pre-existing untracked entries were preserved.
+- core.md and longtask.md remained unchanged.
+- No MATLAB/Gurobi/training/evaluation/resampling/cut generation occurred.
+- Post-audit tracked difference is only codex_rule/log.md; the index is empty.
+- The new architecture run is one additional untracked directory, so Git reports 235 untracked entries in total: 234 pre-existing entries plus this run.
+- No Commit or Push was performed.

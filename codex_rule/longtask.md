@@ -25,11 +25,13 @@ Codex 默认不要直接修改本文件。
 
 1. 复现原论文 FA-MSP / SDDP 框架；
 2. 迁移到 H2 临灾 LOH 预布局；
-3. 稳定主 MSP `node_load` 版本；
-4. 稳定 `wind_mc / roadSoft / RiskCap-Mean` 离线 TerminalLOH 预览；
-5. 研究基于 `lf=7` 终端状态条件灾后场景的 TerminalLOH 生成机制；
-6. 在离线结果和生成口径稳定后，再讨论是否新增 `terminal_load_mode` 并小规模接入 MSP；
-7. 后续再考虑风险规避、灾后响应 recourse、配电网运行约束、MFCV / 路径 / 修复 / 滚动优化等扩展。
+3. 稳定主 MSP `node_load` / legacy TerminalLOH baseline；
+4. 完成 `wind_mc / roadSoft / RiskCap-Mean` 等离线 TerminalLOH 预览和历史距离型 WDRO 诊断；
+5. 转向 finite-support SAA 与 flat Pearson chi-square probability DRO，建立统一经济口径和 35 状态 TerminalLOH 表；
+6. 通过独立 options/launcher 将 SAA 和 eta=0.03 两张表最小接入同一 H2 FA-MSP 主链；
+7. 在冻结 10000 条共样本 OOS 上完成一小时固定预算 A/B、逐路径性能和机制审计；
+8. 后续根据明确研究问题决定是否开展正式收敛训练、针对性 cut/训练覆盖测试或主入口默认模式调整；
+9. 更长期再考虑灾后响应 recourse、配电网运行约束、MFCV / 路径 / 修复 / 滚动优化等扩展。
 
 ---
 
@@ -147,51 +149,164 @@ Codex 默认不要直接修改本文件。
 
 ---
 
+### 2.8 probability DRO 主线建立阶段
+
+已实现内容：
+
+- 历史 Wasserstein ground-cost、DAC/Ctilde、Dscale/Cscale 路线完成审计并停止继续调参；
+- 建立 finite-support SAA 与 flat Pearson chi-square probability DRO；
+- 概率扰动直接作用于有限经验场景概率，不再依赖场景对距离；
+- 建立 R=15000 的分解求解、最坏概率、强对偶、LB/UB 和固定决策复核机制；
+- `terminalLoh_wdro/docs/PROBABILITY_DRO_MAINLINE_HANDOVER.md` 记录方法主线和历史边界。
+
+当前意义：
+
+当前 TerminalLOH 风险方法主线是 flat Pearson chi-square probability DRO。旧 Wasserstein 与距离调参代码继续保留作为历史证据，但不再作为当前两张正式查表的来源。
+
+---
+
+### 2.9 统一经济 TerminalLOH 与 eta 响应阶段
+
+已实现内容：
+
+- 在 state19 上统一制氢准备成本、VOLL 等效缺氢损失和 EENS 换算；
+- 保持 `C*y` 仅为严格词典序二级 tie-break，不进入人民币一级目标；
+- 完成 eta 网格 `[0,0.0003,0.001,0.003,0.01,0.03]` 的响应与饱和审计；
+- 识别大部分场景原本无缺氢、可服务缺氢场景较少、道路/服务不可达形成物理平台等边界；
+- eta=0.03 被保留为高保障比较候选，但 eta 未被统计意义正式冻结。
+
+当前意义：
+
+SAA 是统一经济参考，eta=0.03 是当前 35 状态 FA-MSP 对照使用的代表性高保障 Pearson chi-square 候选。不得写成 eta=0.03 唯一最优或已正式校准。
+
+---
+
+### 2.10 35 状态 SAA / eta=0.03 TerminalLOH 阶段
+
+已实现内容：
+
+- 35 个初始状态分别使用自己的 15000 条 nominal 三期记录；
+- 完成 35 个 SAA 与 35 个 eta=0.03 独立优化，共 70 个隔离求解组合；
+- 生成两张完整 35x4 TerminalLOH 查表；
+- state19 reproduction、概率、强对偶、LB/UB、映射、EENS 和词典序审计全部通过；
+- 文件名 token `eta003` 在当前 C6/FA-MSP 语义中明确表示 `eta=0.03`，不是 `0.003`。
+
+正式查表：
+
+- `results/task-002-stage2b-b3-smoke/53-35state-saa-vs-eta003-terminal-loh/run-024/terminal_loh_table_saa.csv`
+- `results/task-002-stage2b-b3-smoke/53-35state-saa-vs-eta003-terminal-loh/run-024/terminal_loh_table_eta_003.csv`
+
+当前意义：
+
+这两张表是当前 SAA/DRO FA-MSP 实验的唯一正式 TerminalLOH lookup 来源。
+
+---
+
+### 2.11 SAA / eta=0.03 FA-MSP 接入与固定预算 A/B 阶段
+
+已实现内容：
+
+- 建立安全、输出隔离的原生 FA-MSP smoke 入口；
+- 建立 `terminal_loh_mode='saa'|'chi2_eta003'` 和 `terminal_loh_lookup_file` 双表接口；
+- 35 状态表被严格映射到 `params.TerminalLOH[4x336]` 的 35 个 `lf=7` 列；
+- 双表均已验证进入 terminal value/subgradient、backward cuts 和后续 forward；
+- 使用相同 seed、模型、参数、2000 元/kg TerminalLOH gap penalty 和冻结 10000x8 OOS 数据完成一小时固定预算 A/B。
+
+重要状态：
+
+- accepted policy source 是 `results/task-002-stage2b-b3-smoke/57-main-msp-converged-terminal-loh-ab/run-003/`；
+- 尽管目录名含 `converged`，两套策略实际均由 3600 秒时间上限停止，`stop_flag=2`；
+- SAA 完成 1113 次 forward 迭代，DRO 完成 1199 次；
+- 当前不得把这两套策略称为正式收敛策略。
+
+当前意义：
+
+主算法未分叉。SAA 与 DRO 只在 TerminalLOH 表输入上不同，forward/backward/cut/eval 共用同一套核心代码。
+
+---
+
+### 2.12 共样本 OOS 与机制审计阶段
+
+已实现内容：
+
+- Step-05B-1 至 B7 完成 TerminalLOH gap penalty、目标兑现、必要新增库存、系统总量、信息逐步揭示、capacity gap 和 state19 训练证据审计；
+- Step-05B-8 对 10000 条完全共样本 OOS 路径完成 SAA/DRO 逐路径配对；
+- Step-05B-9 完成终端库存增量固定分档与累计覆盖统计；
+- 机制审计不修改策略、TerminalLOH、200/2000 或核心 FA-MSP。
+
+当前主要结果：
+
+- DRO 平均多制氢 `15.270633318 kg/path`，平均多 HTT `8.763033783 kg/path`，平均最终总库存增加 `15.514788166 kg/path`；
+- 最终库存增加/不变/下降路径数为 `5600/4397/3`；
+- 普通 shortage 改善/不变/恶化路径数为 `2/9718/280`；
+- 去掉历史 terminal-gap penalty 后，平均 modeled operating cost 增加 `809.155643307 yuan/path`；
+- `51.05%` 路径库存增加超过 10 kg，`40.12%` 超过 20 kg，`1.79%` 超过 50 kg，未出现超过 100 kg 的路径；
+- 结果应解释为“部分路径明显提高、较大一部分基本不变”，不能只报告总体平均或高增量子集。
+
+当前意义：
+
+DRO 表现为更高储备、带有运行成本溢价且路径响应异质的策略。现有证据不支持宣称其在所有物理服务指标上全面优于 SAA，也不支持立即修改 200/2000。
+
+---
+
 ## 3. 当前阶段定位
 
 当前阶段：
 
-**wind_mc / roadSoft / RiskCap-Mean 离线 TerminalLOH 预览稳定阶段。**
+**35 状态 SAA / eta=0.03 TerminalLOH 接入后的 H2 FA-MSP 共样本 OOS 解释与决策阶段。**
 
 当前阶段目标：
 
-1. 保持主 MSP `node_load` 版本稳定；
-2. 不急于把 `wind_mc / roadSoft / RiskCap-Mean` 接入主 MSP；
-3. 先验证离线 TerminalLOH 输出是否合理；
-4. 重点检查坐标统一、总量守恒、空间分配、未覆盖量、服务风险和容量利用率；
-5. 中期研究基于 `lf=7` 终端状态的条件灾后场景生成机制，增强 TerminalLOH 生成逻辑；
-6. 如果离线结果和生成口径稳定，再讨论是否新增新的 `terminal_load_mode` 并小规模接入 MSP。
+1. 保留已验收的 35 状态 SAA 与 Pearson chi-square `eta=0.03` TerminalLOH 表及其机械映射；
+2. 以相同的 10000 条冻结 OOS 路径解释两套一小时固定预算策略的库存、制氢、HTT、shortage 和运行成本差异；
+3. 区分 TerminalLOH 目标差异、系统总量能力、信息逐步揭示、cut 价值近似和固定训练预算的作用；
+4. 决定是否需要正式收敛训练或只针对 state19 等节点做有仪表的延长训练；
+5. 保持日常入口 `main_msp_h2_near.m` 的 legacy 默认不变，SAA/DRO 仍通过独立 launcher/options 显式切换；
+6. 为论文形成可复核、不过度外推的共同样本 OOS 结论。
 
 当前阶段不做：
 
-1. 不做 CVaR-MSP；
-2. 不做真实 MFCV 路径优化；
-3. 不做车辆路径 MILP；
-4. 不做电池 SOC；
-5. 不做配电网潮流；
-6. 不把 roadSoft 或 RiskCap-Mean 直接接入正式 MSP；
-7. 不把阶段 LP 改成 MILP；
-8. 不把 `lf>7` 灾后影响立即扩展为主 MSP 新阶段；
-9. 不转向完整灾后运营调度模型。
+1. 不把 Stage-57 `run-003` 写成正式收敛结果；两套策略均由 3600 秒时间上限停止，`stop_flag=2`；
+2. 不修改普通 shortage 的 200 元/kg 或 TerminalLOH gap 的 2000 元/kg 历史惩罚；
+3. 不把 `eta=0.03` 宣称为统计意义已校准、唯一最优或正式冻结半径；
+4. 不把 lookup 模式自动改为日常主入口默认值；
+5. 不恢复 Wasserstein、DAC/Ctilde、Dscale/Cscale 为当前主线；
+6. 未经单独授权，不扩展 CVaR、MFCV、真实车辆路径、道路修复、配电网潮流或灾后 recourse；
+7. 不把事后完全信息诊断 LP 的可行性等同于原 FA-MSP 在非预见性约束下应当实现；
+8. 不因局部异常节点直接宣布 Pearson DRO 或整个 cut 机制成功或失败。
 
 ---
 
 ## 4. 当前程序架构快照
 
-### 4.1 主 MSP 入口层
+### 4.1 日常入口与实验 launcher
 
-- `main_msp_h2_near.m`：日常 H2 MSP 主入口。
-- `h2_default_options.m`：默认参数。
-- `run_h2_with_options.m`：单次实验包装。
-- `run_h2_ablation_suite.m`：对照实验入口。
+- 日常原生入口：`main_msp_h2_near.m`；
+- 默认 options：`h2_default_options.m`，其中 `terminal_loh_mode='legacy'`、seed=`20260513`；
+- 统一执行包装：`run_h2_with_options.m`；
+- 安全 smoke：`run_main_msp_h2_native_smoke.m`；
+- accepted 一小时固定预算 A/B：`run_main_msp_h2_fixed_budget_ab.m`；
+- 正式收敛 launcher：`run_main_msp_h2_converged_ab.m`，但当前没有 accepted 的正式收敛 A/B；
+- `run_h2_ablation_suite.m` 是对照入口，不是日常主入口。
 
-当前状态：
+日常 `main_msp_h2_near.m` 没有自动切到 SAA/DRO lookup；它仍使用 `terminal_impact_template.csv -> build_terminal_loh_h2`。实验 launcher 只在 options 层设置 `terminal_loh_mode` 和 lookup 文件，继续调用同一正式主链。
 
-主 MSP 日常入口仍是 `main_msp_h2_near.m`。
+### 4.2 H2 FA-MSP 正式调用链
 
----
+```text
+main_msp_h2_near
+  -> h2_default_options
+  -> run_h2_with_options
+       -> load_data_h2_near
+       -> fa_h2/define_models_h2
+       -> fa_h2/train_models_h2
+            -> fa_h2/forward_pass_h2
+            -> fa_h2/backward_pass_h2
+                 -> fa_h2/add_cut_h2
+       -> fa_h2/eval_h2
+```
 
-### 4.2 H2 FA-MSP 主体层
+阶段模型公共组件包括：
 
 - `fa_h2/build_stage_model_h2.m`
 - `fa_h2/update_rhs_h2.m`
@@ -202,73 +317,54 @@ Codex 默认不要直接修改本文件。
 - `fa_h2/train_models_h2.m`
 - `fa_h2/eval_h2.m`
 
-当前状态：
+SAA 与 DRO 不存在两套复制的 forward/backward/cut/model/eval 代码。
 
-这些文件实现 H2 MSP 的阶段模型、forward/backward、cut、训练和 OOS 评估。
+### 4.3 TerminalLOH 接口层
 
----
+- legacy 构造：`fa_h2/fuzhu/build_terminal_loh_h2.m`；
+- 35×4 lookup 到 4×336 映射：`fa_h2/fuzhu/load_terminal_loh_lookup_h2.m`；
+- `lf=7` forward/eval 检查：`fa_h2/fuzhu/eval_terminal_loh_h2.m`；
+- backward 终端值和次梯度：`fa_h2/fuzhu/terminal_value_and_subgradient_h2.m`。
 
-### 4.3 数据与参数层
+两张正式 lookup 表位于：
 
-- `load_data_h2_near.m`
-- `data/yuanqi/near_stage_msp_input.mat`
-- `data/yuanqi/near_stage_msp_README.txt`
-- `data/yuanqi/stage1_road_edges.csv`
-- `data/yuanqi/stage1_site_nodes.csv`
+- `results/task-002-stage2b-b3-smoke/53-35state-saa-vs-eta003-terminal-loh/run-024/terminal_loh_table_saa.csv`
+- `results/task-002-stage2b-b3-smoke/53-35state-saa-vs-eta003-terminal-loh/run-024/terminal_loh_table_eta_003.csv`
 
-当前状态：
+`load_data_h2_near.m` 负责组装 Markov/H2 参数并将最终 4×336 数组写入 `params.TerminalLOH`。
 
-`load_data_h2_near.m` 负责主 MSP 参数构造。  
-`stage1_road_edges.csv` 和 `stage1_site_nodes.csv` 主要服务离线 TerminalLOH 预览中的道路拓扑和氢站道路锚点。
+### 4.4 当前输入、OOS 与离线 probability-DRO 层
 
----
+- 主 H2/MSP 输入：`data/yuanqi/near_stage_msp_input.mat`；
+- daily legacy 表：`data/yuanqi/terminal_impact_template.csv`；
+- accepted A/B 冻结共同 OOS：`output_h2/details/h2_OOS.csv`，10000×8 路径；
+- 离线 TerminalLOH 研究模块：`terminalLoh_wdro/`；
+- 当前 probability-DRO 交接：`terminalLoh_wdro/docs/PROBABILITY_DRO_MAINLINE_HANDOVER.md`；
+- 当前有限支撑求解主线：`terminalLoh_wdro/src/solve_terminal_loh_saa_c6_h2.m` 与 `solve_terminal_loh_flat_chi2_*`；
+- 35 状态表生产：`terminalLoh_wdro/src/run_step04CC6_*`；
+- Step-05B-1 至 B9 为读取既有策略/OOS 的机制和分布审计。
 
-### 4.4 wind_mc / roadSoft / RiskCap-Mean 离线预览层
+### 4.5 当前结果阶段地图
 
-- `generate_terminal_loh_wind_mc_preview.m`
-- `fa_h2/fuzhu/terminalLoh_windmc/*.m`
-- `fa_h2/fuzhu/terminalLoh_windmc/draw/*.m`
+- Stage 53 `run-024`：35 状态正式 SAA / eta=0.03 TerminalLOH；
+- Stage 55 `run-001`：原生安全 smoke；
+- Stage 56 `run-001`：双 lookup 映射和 cut 传播 smoke；
+- Stage 57 `run-003`：一小时固定预算 SAA/DRO A/B 策略和共同 OOS，不是正式收敛结果；
+- Stage 58–64：Step-05B-1 至 B7 机制、兑现、能力、信息和训练充分性审计；
+- Stage 65 `run-002`：Step-05B-8 的 10000 条 OOS 逐路径配对主结果；
+- Stage 66 `run-001`：Step-05B-9 的终端库存增量分档与累计覆盖；
+- Stage 67 `run-001`：当前项目架构、调用链、接口和结果索引。
 
-当前状态：
+### 4.6 本地存储、保护与 Git 归档边界
 
-`generate_terminal_loh_wind_mc_preview.m` 是离线 TerminalLOH 预览入口。  
-当前用于生成电网侧节点需氢量、roadSoft 分配、RiskCap-Mean 分配、CSV、MAT 和中文标注 figures，不接入主 MSP。
+- `output_h2/` 保存原生 MSP/OOS/benchmark 等本地受保护内容；
+- `terminalLoh_wdro/output/` 保存大型离线研究数据；
+- `results/` 同时包含可提交轻量证据和按 `LARGE_FILE_MANIFEST.md` 留在本地的 MAT、workspace、raw/replay/process 子树；
+- accepted、failed 和重跑 run 均原位保留，同一步重跑必须新建 `run-xxx`；
+- 不执行 `reset`、`clean`、覆盖、移动或删除来整理这些目录；
+- 只在用户明确授权且门禁通过后精确暂存本任务文件，Push 当前任务分支；不修改 `main`，不创建/合并 PR，不 force push。
 
----
-
-### 4.5 输出结构
-
-离线预览输出目录：
-
-- `output_h2/wind_terminal_loh_preview/`
-- `output_h2/wind_terminal_loh_preview/elec_grid/`
-- `output_h2/wind_terminal_loh_preview/road/`
-- `output_h2/wind_terminal_loh_preview/riskcap_mean/`
-- `output_h2/wind_terminal_loh_preview/figures/elec_grid/`
-- `output_h2/wind_terminal_loh_preview/figures/road/`
-- `output_h2/wind_terminal_loh_preview/figures/riskcap_mean/`
-
-正式 MSP 输出目录：
-
-- `output_h2/benchmark/`
-- `output_h2/details/`
-
-### 4.6 GitHub 任务分支与结果归档
-
-当前协作结构：
-
-- `main` 仅保存已验收稳定版本；开发在用户指定的 `task/...` 分支完成；
-- Codex 默认不执行 Git 写操作，只有任务明确授权且审计全部通过后，才 Commit 和
-  Push 当前任务分支；
-- Codex 不修改 `main`，不创建或合并 PR，不删除分支，不 force push；
-- 小型审计结果归档到 `results/task-xxx/step-xx/run-xxx/`；
-- 大型结果保留在 `terminalLoh_wdro/output/`，Git 记录路径、行数、字节数和 SHA-256；
-- 同一步重跑使用新 run 编号，旧 run 不覆盖；
-- GitHub 只能看到已 Push 内容，本地未 Push 内容必须明确标记为本地状态；
-- 审计失败或任务与固定规则冲突时停止，不执行 Commit 或 Push。
-
-后续任务提示词只需明确任务目标、允许修改文件、验收条件、输出/run 编号以及是否授权
-Commit 和 Push；固定 Git 安全规则由 `core.md` 和 `AGENTS.md` 持续生效。
+完整任务导航以 `results/task-002-stage2b-b3-smoke/67-current-project-architecture-audit/run-001/` 为当前架构快照。
 
 ---
 
@@ -280,7 +376,7 @@ Commit 和 Push；固定 Git 安全规则由 `core.md` 和 `AGENTS.md` 持续生
 
 - `x = [x1, x2, x3, x4]`
 
-当前 Benders cuts 主要关于 `x`。
+当前 Benders cuts 主要关于四站库存 `x` 的未来价值。SAA 与 DRO 共享相同的物理模型、Markov 模型、forward/backward/cut/eval 代码；已验收 A/B 的模型输入差异仅为 TerminalLOH lookup 表。
 
 ---
 
@@ -296,120 +392,61 @@ Commit 和 Push；固定 Git 安全规则由 `core.md` 和 `AGENTS.md` 持续生
 
 ---
 
-### 5.3 当前主程序 TerminalLOH 口径
+### 5.3 35 状态 lookup 与主 MSP 状态映射
 
-当前主 MSP 程序默认 TerminalLOH 使用：
+两张正式表均为 35 行、四站目标列 `T1_kg` 至 `T4_kg`。映射严格为：
 
-- `node_load`；
-- `impact_weight`；
-- `A_site_node`。
+```text
+state_id = (intensity - 2) * 7 + loc
+k = ((a - 1) * 7 + (loc - 1)) * 8 + 7
+```
 
-TerminalLOH 只在 `lf=7` 检查。  
-TerminalLOH 不是普通阶段库存出库量。  
-普通阶段不应重新加入每期 TargetLOH 约束。
+其中 `a=intensity=2..6`、`loc=1..7`，只写入 35 个 `lf=7` 列；其他列保持零。站点顺序固定为 site1、site2、site3、site4。
 
----
+### 5.4 TerminalLOH 值函数、次梯度与 cut
 
-### 5.4 beta 当前口径
+对 `lf=7` 状态 `k`：
 
-`beta(k)` 表示台风状态下 HTT 调拨风险、摩擦或成本增大。
+```text
+gap_i = max(0, TerminalLOH_i(k) - x_i)
+V_k(x) = 2000 * sum_i gap_i
+g_i = -2000,  当 x_i < TerminalLOH_i(k) - 1e-9
+g_i = 0,      其他情况
+```
 
-`beta` 高不等于吸收。  
-`beta` 高不等于 TerminalLOH 已触发。
+`eval_terminal_loh_h2.m` 用同一 gap 口径评价 forward/OOS；`terminal_value_and_subgradient_h2.m` 将值和次梯度交给 `backward_pass_h2.m`，经 Markov 概率加权后由 `add_cut_h2.m` 写入未来价值 cut，并在后续 forward 中使用。TerminalLOH 是终端储备充足性检查，不是 `lf=7` 的实际库存出库。
 
----
+### 5.5 200、2000 与 reported objective
 
-### 5.5 roadSoft 当前口径
+- 200 元/kg：普通 H2 shortage 的当前有效惩罚；
+- 2000 元/kg：`cost_reserve_shortage`，只惩罚 `lf=7` 的 TerminalLOH gap；
+- 离线统一经济 TerminalLOH 中的 1283.205 元/kg 不进入当前主 MSP；
+- 主 MSP reported objective 包含 2000×terminal gap，因此不能仅凭 reported objective 判断 SAA/DRO 的物理服务优劣；
+- Step-05B-1 的去 terminal-gap 指标仅用于机制诊断，不是新的正式优化目标。
 
-roadSoft 当前只是离线预览中的预部署软分配方法。
+这两个惩罚当前冻结。现有机制审计没有给出立即修改 200/2000 的充分证据。
 
-roadSoft 是：
+### 5.6 eta=0.03 与策略状态
 
-- 临灾预部署软分配；
-- 考虑路网可达性；
-- 用于把节点需氢量柔性分配给四个氢站。
+- 文件名 `terminal_loh_table_eta_003.csv` 和 mode `chi2_eta003` 中的 `eta003` 明确表示 `eta=0.03`，不是 `0.003`；
+- 证据来自 C6 README、CSV 的 `eta=0.03` 列及 loader 的 `expectedEta=0.03` 运行时断言；
+- `eta=0.03` 是当前 Pearson chi-square 高保障对照候选，仍未统计校准或正式冻结；
+- Stage-57 `run-003` 的 SAA/DRO 都是一小时固定预算策略，`stop_flag=2`，不是正式收敛策略；
+- 两套策略的正式解释使用同一冻结 10000 条 OOS 路径做逐行配对。
 
-roadSoft 不是：
+### 5.7 系统能力、信息与 HTT 解释边界
 
-- 灾后 MFCV 路径优化；
-- 节点硬指派；
-- 道路修复模型；
-- 车辆路径 MILP。
+- 事后完全信息诊断 LP 只证明给定整条已实现路径后，在现有物理约束下是否可重配；它不能证明非预见性 FA-MSP 在当时信息下必然应做到；
+- 总库存足够不能抵消逐站 terminal gap，仍需逐站计算 `max(0,T_i-I_i)`；
+- 当前 HTT 是阶段内进入库存平衡的站间调拨，不包含真实车辆位置和逐路段运输时间过程；
+- 资源诊断统一使用连续利用率和接近容量上限的阶段比例，不使用“绑定率”混代平均利用率；
+- 对总量可行但兑现不足的路径，应依次区分信息未揭示、库存价值/cut 近似、训练覆盖和固定预算，而不是预设为 2000 惩罚或 HTT 物理瓶颈。
 
-当前坐标口径：
+### 5.8 当前主线与长期扩展边界
 
-- `data/yuanqi/stage1_road_edges.csv` 提供道路拓扑；
-- `data/yuanqi/stage1_site_nodes.csv` 提供氢站道路锚点 `site_id / grid_node`；
-- 电网节点和道路节点坐标统一使用 `windMC.layout.nodes`；
-- 氢站坐标统一使用 `windMC.layout.sites`；
-- road edge midpoint、road wind speed、road close probability 和 road figures 使用 `windMC.layout` 坐标。
+当前主线是有限支撑 SAA、Pearson chi-square probability DRO、35 状态 TerminalLOH、H2 FA-MSP 和共同样本 OOS。Wasserstein ground-cost、DAC/Ctilde、Dscale/Cscale、extreme-aware candidate、wind_mc/roadSoft/RiskCap-Mean 均保留为历史模块或早期预览，不是当前正式表源。
 
-当前服务距离口径：
-
-- site-node 基础服务距离由程序基于道路拓扑、统一节点坐标和氢站锚点现场重算；
-- roadSoft 中的 `base_site_to_node_road_km` 使用现场重算的 site-node 最短路距离；
-- roadSoft 的 road service cost 在基础服务距离、可达概率和通行风险基础上形成；
-- 当前离线预览图片输出采用中文标注。
-
-当前守恒要求：
-
-roadSoft 应该只改变节点需氢量在四个氢站之间的分配，不改变总节点需氢量。
-
-应满足：
-
-`currentA TerminalLOH_total ≈ roadSoft TerminalLOH_total`
-
----
-
-### 5.6 RiskCap-Mean 当前口径
-
-RiskCap-Mean 当前只是离线预览中的状态级 TerminalLOH 分配方法。
-
-RiskCap-Mean 是：
-
-- 离线 TerminalLOH 候选生成方法；
-- 使用联合场景均值描述节点需氢量、道路可达性和通行风险；
-- 使用容量约束、可达性和服务风险成本生成状态级氢站 TerminalLOH；
-- 用于和 currentA、roadSoft 做离线对比。
-
-RiskCap-Mean 不是：
-
-- 主 MSP 的 forward/backward/cut 逻辑；
-- 正式 OOS policy evaluation 的组成部分；
-- 灾后车辆路径或 MFCV 调度模型；
-- 新的 `terminal_load_mode`。
-
-RiskCap-Mean 当前服务距离口径：
-
-- 与 roadSoft 使用同一套现场重算 site-node 最短路基础距离；
-- 服务风险成本基于基础距离、道路不可达风险和通行距离等离线诊断量；
-- 仍不覆盖 `params.TerminalLOH`，不改变主 MSP 当前 `node_load` 口径。
-
-### 5.7 TerminalLOH 条件灾后场景生成中期方向
-
-当前 TerminalLOH 仍可视为终端状态下的储氢准备目标，但单一 `lf=7` 状态直接生成需求的解释力有限。
-
-后续中期方向是研究基于 `lf=7` terminal state 的条件灾后场景生成机制：
-
-- 给定一个 `lf=7` terminal state；
-- 不直接把该单点状态等同于最终需求；
-- 在该 terminal state 条件下生成一组 post-impact / 灾后影响场景；
-- 在条件灾后场景中考虑台风登陆后继续移动、强度衰减，以及电网和道路继续受影响；
-- 统计节点累计需氢量、道路可达性和服务风险；
-- 再将统计结果转化为氢站层面的 TerminalLOH。
-
-这一路线定位为增强 TerminalLOH 生成逻辑，不是立即扩展主 MSP 阶段结构。  
-`lf>7` 的灾后影响暂时不作为主 MSP 的新阶段，而是作为离线 TerminalLOH 生成中的条件场景处理。  
-当前仍保持预部署研究定位，不转向完整灾后运营调度模型。
-
-### 5.8 中长期扩展方向
-
-以下方向属于中长期扩展，不作为当前主 MSP 的立即修改内容：
-
-- CVaR / 风险规避口径：可用于 TerminalLOH 生成、离线评估或未来 MSP 目标函数，当前先作为风险度量扩展方向；
-- 终端灾后响应 LP recourse：可将 `lf=7` 的简单 TerminalLOH 检查升级为给定库存 `x` 后的灾后连续分配 recourse，当前只作为长期模型扩展方向；
-- MFCV / 路径 / 修复 / 灾后滚动优化：包括 MFCV 配送、车辆路径、道路修复、电网修复和灾后滚动优化，当前不作为预部署主线；
-- 配电网运行约束与电解槽接入：当前电网侧主要用于生成节点失负荷和需氢量，后续可考虑 LinDistFlow / DistFlow、电压、线路容量、电解槽接入节点和制氢受电网状态约束。
+CVaR、终端灾后 recourse、MFCV/车辆路径/道路修复、灾后滚动优化、配电网潮流与电解槽电网耦合仍是独立中长期扩展，不因本阶段结果自动进入主 MSP。
 
 ---
 
@@ -417,13 +454,14 @@ RiskCap-Mean 当前服务距离口径：
 
 当前开放问题记录的是“这个阶段还需要关注的问题”，不是长期固定规则。
 
-1. `a=6, loc=5` 和 `a=6, loc=6` 的 `fallback_node_count` 偏高，需要看 road close probability 和 reachability；
-2. 继续验证 RiskCap-Mean 离线 TerminalLOH 分配结果的稳定性；
-3. 比较 currentA、roadSoft、RiskCap-Mean 在总量、空间分配、未覆盖量、服务风险和容量利用率上的差异；
-4. `terminal_loh_allocation_roadSoft.csv` 中 `H_node_kg` 会按 site 重复，统计时不能直接 sum 全表 `H_node_kg`；
-5. 研究如何在 `lf=7` terminal state 条件下生成 post-impact / 灾后影响场景，并把累计节点需氢量、道路可达性和服务风险转化为氢站层面的 TerminalLOH；
-6. 离线结果和生成口径稳定后，再讨论是否新增 `terminal_load_mode` 并小规模接入 MSP；主 MSP 接入仍属于后续阶段；
-7. CVaR / 风险规避、终端灾后响应 LP recourse、MFCV / 路径 / 修复 / 灾后滚动优化、配电网运行约束与电解槽接入仍作为中长期扩展方向。
+1. 是否需要让 SAA 与 eta=0.03 都运行到正式原生收敛条件，还是一小时固定预算策略已足够支撑当前论文问题；
+2. 若继续训练，是否只针对 state19 可行子集、`t=5,k=222,lf=6` 等候选节点增加访问/cut/边际价值仪表并延长预算；
+3. 何时以及是否应让日常 `main_msp_h2_near.m` 显式暴露 lookup 模式；在决定前继续保持 legacy 默认；
+4. 如何在论文中准确表述 DRO 的“部分路径明显增加终端库存、另一部分基本不变”、运行成本溢价和普通 shortage 异质性；
+5. `eta=0.03` 是否还需结合更多统计或决策标准继续校准，当前不能写成正式冻结；
+6. 对剩余未兑现目标，如何进一步区分系统总能力不足、信息逐步揭示、局部 cut 近似和固定训练预算；
+7. 根目录 README 是否需要补充当前入口、Stage-67 架构地图及 Stage-65/66 主结果导航；
+8. wind_mc/roadSoft、Wasserstein/Dscale、灾后 recourse、CVaR、MFCV/路径/修复、配电网运行约束等保留为历史或中长期独立课题，不与当前解释任务混做。
 
 ---
 
@@ -445,3 +483,16 @@ RiskCap-Mean 当前服务距离口径：
 - 阶段 4：在离线结果和生成口径稳定后讨论是否新增 `terminal_load_mode`；
 - 阶段 5：小规模 MSP 接入验证和对照实验；
 - 阶段 6：考虑风险规避、灾后响应 recourse、配电网运行约束、MFCV / 路径 / 修复 / 滚动优化等更长期扩展。
+
+### 2026-08-11：当前阶段更新为 35 状态 Pearson chi-square TerminalLOH 接入后的 FA-MSP 共样本 OOS 解释阶段
+
+当前状态：
+
+- Stage 53 `run-024` 已验收 35 状态 SAA 与 eta=0.03 TerminalLOH 表；
+- Stage 55/56 已验证输出隔离、lookup 映射和 `TerminalLOH -> backward -> cuts -> subsequent forward` 传播；
+- Stage 57 `run-003` 保存两套一小时固定预算策略及共同 10000 条 OOS 评价，两者均为 `stop_flag=2`，不是正式收敛结果；
+- Step-05B-1 至 B9 已完成 penalty、兑现率、required-extra、系统能力、信息逐步揭示、训练充分性、全状态能力、逐路径性能和库存增量分布审计；
+- Stage 65 `run-002` 与 Stage 66 `run-001` 是当前逐路径和库存分布主结果；
+- Stage 67 `run-001` 冻结当前仓库架构、真实调用链、TerminalLOH 接口和结果阶段地图；
+- 日常 `main_msp_h2_near.m` 仍保持 legacy TerminalLOH 默认，SAA/DRO lookup 仅通过独立 launcher/options 显式接入；
+- 历史 Wasserstein、DAC/Ctilde、Dscale/Cscale、extreme-aware、wind_mc/roadSoft/RiskCap-Mean 代码和结果继续保留，但不再代表当前研究主线。

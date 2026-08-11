@@ -1,0 +1,98 @@
+Step-05B-10 task-oriented repository tree
+Frozen commit: 091cde8c617e44f5190f1f277042ddfc7752d65b
+
+testH2_v2/
+|-- AGENTS.md                              [repository execution rules]
+|-- codex_rule/
+|   |-- core.md                            [stable permissions/protection rules; default read-only]
+|   |-- longtask.md                        [long-term architecture snapshot; default read-only; current-stage text is stale]
+|   `-- log.md                             [append-only execution history]
+|
+|-- main_msp_h2_near.m                     [daily H2 FA-MSP entry; legacy TerminalLOH default]
+|-- h2_default_options.m                   [shared default options, seed 20260513]
+|-- run_h2_with_options.m                  [single configured FA-MSP run wrapper]
+|-- load_data_h2_near.m                    [Markov/H2/TerminalLOH parameter assembly]
+|-- run_h2_ablation_suite.m                [alternate ablation entry, not daily main]
+|-- run_main_msp_h2_native_smoke.m         [safe isolated native/dual-table smoke launcher]
+|-- run_main_msp_h2_fixed_budget_ab.m      [accepted one-hour SAA/DRO A/B launcher]
+|-- run_main_msp_h2_converged_ab.m         [formal-convergence launcher exists; no accepted converged A/B result]
+|
+|-- fa_h2/                                 [current H2 FA-MSP algorithm]
+|   |-- define_models_h2.m
+|   |-- build_stage_model_h2.m
+|   |-- update_rhs_h2.m
+|   |-- solve_stage_model_h2.m
+|   |-- train_models_h2.m
+|   |-- forward_pass_h2.m
+|   |-- backward_pass_h2.m
+|   |-- add_cut_h2.m
+|   |-- eval_h2.m
+|   `-- fuzhu/
+|       |-- build_beta_h2.m
+|       |-- build_terminal_loh_h2.m        [legacy terminal-impact table builder]
+|       |-- load_terminal_loh_lookup_h2.m  [frozen 35x4 SAA/DRO table -> 4x336 mapper]
+|       |-- eval_terminal_loh_h2.m         [lf=7 terminal check]
+|       |-- terminal_value_and_subgradient_h2.m [terminal future value and gradient]
+|       |-- create_oos_paths_h2.m
+|       `-- terminalLoh_windmc/            [older physicalized offline preview helpers]
+|
+|-- utils/
+|   |-- mc_sample.m                        [training-path Markov sampling]
+|   `-- termination_check.m                [native stop flags]
+|
+|-- data/                                  [current tracked/runtime inputs]
+|   |-- intensity.csv
+|   |-- location.csv
+|   |-- landfall_7.csv
+|   |-- OOS*.csv                           [older/general scenario tables]
+|   `-- yuanqi/
+|       |-- near_stage_msp_input.mat       [protected main H2/MSP input]
+|       |-- beta_template_v2.csv
+|       |-- terminal_impact_template.csv   [daily legacy TerminalLOH source]
+|       |-- stage1_road_edges.csv
+|       `-- stage1_site_nodes.csv
+|
+|-- terminalLoh_wdro/                      [offline TerminalLOH research module]
+|   |-- src/                               [218 offline solver/audit programs; current and historical coexist]
+|   |   |-- solve_terminal_loh_saa_c6_h2.m
+|   |   |-- solve_terminal_loh_flat_chi2_* [current finite-support Pearson chi-square line]
+|   |   |-- run_step04CC6_*                [35-state SAA/eta=0.03 table production]
+|   |   |-- run_step05B1_* ... run_step05B9_* [post-MSP read-only audits]
+|   |   `-- solve_wdro_*/run_step03*       [retained historical distance/Wasserstein line]
+|   |-- docs/
+|   |   |-- PROBABILITY_DRO_MAINLINE_HANDOVER.md [primary probability-DRO handover]
+|   |   |-- FLAT_CHI2_DRO_SOLVER_SPEC.md
+|   |   |-- FORMAL_TWO_STAGE_THREE_PERIOD_MODEL.md
+|   |   `-- README_WDRO*.md                [historical Wasserstein documentation]
+|   |-- config/                            [offline look-ahead/W3 configuration lineage]
+|   |   |-- formal_b3_wind_modes.csv
+|   |   |-- lookahead_*_W3.csv
+|   |   `-- README_config.md
+|   `-- output/                            [4.34 GB local-only, Git-ignored research data]
+|
+|-- output_h2/                             [55.7 MB protected local native MSP inputs/outputs; Git-ignored]
+|   |-- details/h2_OOS.csv                 [frozen common 10000x8 OOS input]
+|   |-- benchmark/                         [historical native benchmark]
+|   |-- details/                           [historical path/evaluation output]
+|   |-- ablation/
+|   `-- wind_terminal_loh_preview/
+|
+|-- results/task-002-stage2b-b3-smoke/    [Git-reviewable lightweight results plus protected local-heavy subtrees]
+|   |-- 53-35state-saa-vs-eta003-terminal-loh/run-024/ [formal 35-state lookup source]
+|   |-- 55-main-msp-native-smoke/run-001/
+|   |-- 56-main-msp-dual-terminal-loh-smoke/run-001/
+|   |-- 57-main-msp-converged-terminal-loh-ab/run-003/ [137 MB local archived fixed-budget policies]
+|   |-- 58-... through 64-...              [Step-05B-1 through B7 mechanism audits]
+|   |-- 65-oos-pathwise-saa-dro-performance-audit/run-002/ [B8]
+|   |-- 66-oos-inventory-gain-distribution-audit/run-001/  [B9]
+|   `-- 67-current-project-architecture-audit/run-001/     [this map]
+|
+|-- docs/baseline/                         [older baseline repository documentation]
+|-- scripts/                               [post-processing/plot helpers]
+`-- *.zip                                  [local transfer archives, Git-ignored; not source of truth]
+
+Storage/protection notes
+- `.gitignore` excludes `/output_h2/`, `/terminalLoh_wdro/output/`, archives, caches, and logs.
+- The results tree intentionally mixes tracked lightweight audit artifacts with local-only MAT/workspace/raw/replay/process directories recorded by LARGE_FILE_MANIFEST files.
+- At task start Git reported 234 untracked entries. Large/failed/accepted local evidence was preserved in place.
+- No clean/reset/delete/move/overwrite operation was performed.
