@@ -1,0 +1,6 @@
+status=PASS
+experiment=E3_8h_htt_4over3
+terminal_mode=chi2_eta003
+train_log=C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\71-stage-duration-capacity-sensitivity\run-001\logs\E3_8h_htt_4over3_chi2_eta003_train.log
+eval_log=C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\71-stage-duration-capacity-sensitivity\run-001\logs\E3_8h_htt_4over3_chi2_eta003_eval.log
+completed_at=2026-08-12T04:54:48.5819270+08:00

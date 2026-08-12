@@ -1,0 +1,6 @@
+status=PASS
+experiment=E1_8h
+terminal_mode=chi2_eta003
+path_count=10000
+terminal_hit_count=6053
+completed_at=2026-08-12 00:45:04

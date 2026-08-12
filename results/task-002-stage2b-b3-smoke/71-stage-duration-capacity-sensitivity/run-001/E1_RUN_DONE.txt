@@ -1,0 +1,5 @@
+experiment=E1_8h
+saa_status=PASS
+dro_status=PASS
+group_pass=True
+completed_at=2026-08-12T00:45:06.4666196+08:00

@@ -360,6 +360,8 @@ SAA 与 DRO 不存在两套复制的 forward/backward/cut/model/eval 代码。
 - Stage 67 `run-001`：当前项目架构、调用链、接口和结果索引。
 - Stage 68 `run-004`：Step-05B-11 的 10000 条共样本库存增量与独立路径风险特征关联审计。
 - Stage 69 `run-003`：Step-05B-11A 的 SAA/DRO 对称 TerminalLOH 实现性与准备机会审计。
+- Stage 70 `run-001`：preparation-stage count 与 Delta I 档位的终端命中路径交叉审计。
+- Stage 71 `run-001`：6h→8h 有效制氢能力与 HTT 容量 E1/E2/E3 一小时固定预算敏感性实验；使用冻结 10000 条共样本 OOS，属于独立 sensitivity runs，不替换正式 6h 主线。
 
 ### 4.6 本地存储、保护与 Git 归档边界
 
@@ -439,6 +441,7 @@ g_i = 0,      其他情况
 - `eta=0.03` 是当前 Pearson chi-square 高保障对照候选，仍未统计校准或正式冻结；
 - Stage-57 `run-003` 的 SAA/DRO 都是一小时固定预算策略，`stop_flag=2`，不是正式收敛策略；
 - 两套策略的正式解释使用同一冻结 10000 条 OOS 路径做逐行配对。
+- Stage-71 的 E1/E2/E3 同样是 3600 秒固定预算、`stop_flag=2` 的独立策略，不是正式收敛解。E1 与 E2 的理论单 stage `r_max` 相同，但电价聚合和逐路径策略响应并不等价。
 
 ### 5.7 系统能力、信息与 HTT 解释边界
 
@@ -468,6 +471,7 @@ CVaR、终端灾后 recourse、MFCV/车辆路径/道路修复、灾后滚动优�
 6. 对剩余未兑现目标，如何进一步区分系统总能力不足、信息逐步揭示、局部 cut 近似和固定训练预算；
 7. 根目录 README 是否需要补充当前入口、Stage-67 架构地图及 Stage-65/66 主结果导航；
 8. wind_mc/roadSoft、Wasserstein/Dscale、灾后 recourse、CVaR、MFCV/路径/修复、配电网运行约束等保留为历史或中长期独立课题，不与当前解释任务混做。
+9. 若未来讨论真正的 8 h/stage 正式改模，需先明确 ordinary H2 demand 是否仍冻结为 kg/stage；Stage-71 仅采用“需求冻结”的敏感性口径，不自动替代正式 6 h 主线。
 
 ---
 
@@ -499,6 +503,7 @@ CVaR、终端灾后 recourse、MFCV/车辆路径/道路修复、灾后滚动优�
 - Stage 57 `run-003` 保存两套一小时固定预算策略及共同 10000 条 OOS 评价，两者均为 `stop_flag=2`，不是正式收敛结果；
 - Step-05B-1 至 B11 已完成 penalty、兑现率、required-extra、系统能力、信息逐步揭示、训练充分性、全状态能力、逐路径性能、库存增量分布和独立风险特征关联审计；
 - Stage 65 `run-002`、Stage 66 `run-001` 与 Stage 68 `run-004` 是当前逐路径、库存分布和风险特征关联主结果；
+- Stage 69/70 已补齐对称 TerminalLOH attainment 与 preparation-stage count×Delta I 交叉证据；Stage 71 `run-001` 已完成 E1/E2/E3 产能与 HTT 容量敏感性，但正式主线继续保持 6 h；
 - Stage 67 `run-001` 冻结当前仓库架构、真实调用链、TerminalLOH 接口和结果阶段地图；
 - 日常 `main_msp_h2_near.m` 仍保持 legacy TerminalLOH 默认，SAA/DRO lookup 仅通过独立 launcher/options 显式接入；
 - 历史 Wasserstein、DAC/Ctilde、Dscale/Cscale、extreme-aware、wind_mc/roadSoft/RiskCap-Mean 代码和结果继续保留，但不再代表当前研究主线。

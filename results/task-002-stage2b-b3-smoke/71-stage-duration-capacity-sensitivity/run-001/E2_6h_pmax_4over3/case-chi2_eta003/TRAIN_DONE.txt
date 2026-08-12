@@ -1,0 +1,7 @@
+status=PASS
+experiment=E2_6h_pmax_4over3
+terminal_mode=chi2_eta003
+stop_flag=2
+iterations=1165
+train_time_s=3602.0291731
+completed_at=2026-08-12 02:47:38

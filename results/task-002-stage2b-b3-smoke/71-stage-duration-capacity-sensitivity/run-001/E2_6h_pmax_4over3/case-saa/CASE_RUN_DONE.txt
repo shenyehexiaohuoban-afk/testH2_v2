@@ -1,0 +1,6 @@
+status=PASS
+experiment=E2_6h_pmax_4over3
+terminal_mode=saa
+train_log=C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\71-stage-duration-capacity-sensitivity\run-001\logs\E2_6h_pmax_4over3_saa_train.log
+eval_log=C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\71-stage-duration-capacity-sensitivity\run-001\logs\E2_6h_pmax_4over3_saa_eval.log
+completed_at=2026-08-12T01:47:27.3771443+08:00

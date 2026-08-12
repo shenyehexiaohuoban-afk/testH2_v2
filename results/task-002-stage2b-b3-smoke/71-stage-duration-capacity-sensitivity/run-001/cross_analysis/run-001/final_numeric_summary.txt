@@ -1,0 +1,8 @@
+Stage-71 automatic numeric summary
+
+Scope: descriptive common-OOS comparison; no causal claim.
+
+Baseline_6h: mean Delta production=15.270633318 kg; mean Delta HTT=8.763033783 kg; mean Delta I=15.514788166 kg; terminal-hit <=1=27.127044%; >10=66.991574%; >20=52.849827%; SAA/DRO gap=5.912029068/7.872231371 kg; Delta ordinary shortage=0.244154848 kg; Delta operating cost=809.155643307.
+E1_8h: mean Delta production=26.220984224 kg; mean Delta HTT=8.657885327 kg; mean Delta I=26.822375169 kg; terminal-hit <=1=1.932926%; >10=94.515116%; >20=84.883529%; SAA/DRO gap=2.154842910/2.349322818 kg; Delta ordinary shortage=0.601390945 kg; Delta operating cost=1303.323787904.
+E2_6h_pmax_4over3: mean Delta production=26.504104217 kg; mean Delta HTT=5.867925644 kg; mean Delta I=27.440625831 kg; terminal-hit <=1=3.171981%; >10=89.459772%; >20=76.837932%; SAA/DRO gap=2.125665002/2.333503872 kg; Delta ordinary shortage=0.936521614 kg; Delta operating cost=1301.413666652.
+E3_8h_htt_4over3: mean Delta production=26.389260271 kg; mean Delta HTT=8.279691318 kg; mean Delta I=26.947254655 kg; terminal-hit <=1=2.246820%; >10=94.564679%; >20=84.767884%; SAA/DRO gap=2.153348360/2.339013261 kg; Delta ordinary shortage=0.557994384 kg; Delta operating cost=1311.991549408.

@@ -1,0 +1,7 @@
+status=PASS
+experiment=E3_8h_htt_4over3
+terminal_mode=chi2_eta003
+stop_flag=2
+iterations=1140
+train_time_s=3601.6870155
+completed_at=2026-08-12 04:52:32

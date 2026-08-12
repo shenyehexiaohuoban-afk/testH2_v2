@@ -1,0 +1,5 @@
+experiment,dt_h,pmax1_kw,pmax2_kw,pmax3_kw,pmax4_kw,rmax1_kg,rmax2_kg,rmax3_kg,rmax4_kg,htt_capacity_kg_per_stage,training_budget_s,source
+Baseline_6h,6,300,200.0,120,150,35.1,23.4,14.04,17.55,160.0,3600,accepted Stage-57 run-003 / Stage-65 run-002
+E1_8h,8,300,200.0,120,150,46.8,31.2,18.72,23.4,160.0,3600,Stage-71 isolated sensitivity policy
+E2_6h_pmax_4over3,6,400,266.666666666667,160,200,46.8,31.2,18.72,23.4,160.0,3600,Stage-71 isolated sensitivity policy
+E3_8h_htt_4over3,8,300,200.0,120,150,46.8,31.2,18.72,23.4,213.333333333333,3600,Stage-71 isolated sensitivity policy

@@ -1,0 +1,7 @@
+status=PASS
+experiment=E2_6h_pmax_4over3
+terminal_mode=saa
+stop_flag=2
+iterations=1107
+train_time_s=3600.0155452
+completed_at=2026-08-12 01:45:16

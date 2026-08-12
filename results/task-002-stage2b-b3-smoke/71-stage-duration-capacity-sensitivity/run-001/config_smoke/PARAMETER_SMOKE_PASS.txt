@@ -1,0 +1,4 @@
+Stage-71 parameter smoke: PASS
+E1/E2 rmax identity: PASS
+ordinary demand frozen: PASS
+E3 continuous-flow HTT capacity: 213.333333333 kg/stage

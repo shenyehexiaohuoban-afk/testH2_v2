@@ -1,0 +1,5 @@
+experiment=E2_6h_pmax_4over3
+saa_status=PASS
+dro_status=PASS
+group_pass=True
+completed_at=2026-08-12T02:49:54.9730146+08:00

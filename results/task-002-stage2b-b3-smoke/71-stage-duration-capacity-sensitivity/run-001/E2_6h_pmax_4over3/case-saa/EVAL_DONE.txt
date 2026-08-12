@@ -1,0 +1,6 @@
+status=PASS
+experiment=E2_6h_pmax_4over3
+terminal_mode=saa
+path_count=10000
+terminal_hit_count=6053
+completed_at=2026-08-12 01:47:24

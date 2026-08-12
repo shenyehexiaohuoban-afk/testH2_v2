@@ -1,0 +1,7 @@
+status=PASS
+experiment=E1_8h
+terminal_mode=saa
+stop_flag=2
+iterations=1140
+train_time_s=3602.4174209
+completed_at=2026-08-11 23:37:35

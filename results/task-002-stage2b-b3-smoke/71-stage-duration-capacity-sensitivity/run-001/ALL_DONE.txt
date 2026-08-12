@@ -1,0 +1,6 @@
+status=PASS
+numerical_summary=C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\71-stage-duration-capacity-sensitivity\run-001\NUMERICAL_RUNS_DONE.txt
+cross_analysis=C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\71-stage-duration-capacity-sensitivity\run-001\cross_analysis\run-001
+main_log=C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\71-stage-duration-capacity-sensitivity\run-001\logs\sequential_runner.log
+completed_at=2026-08-12T04:54:58.3883081+08:00
+git_commit_push=NOT_PERFORMED_BY_RUNNER

@@ -1,0 +1,14 @@
+Stage-71 independent mechanical verification: PASS
+
+baseline_unmodified_and_frozen_hashes: PASS
+six_training_cases_stop_flag_2_and_3600s_budget: PASS
+six_common_oos_evaluations_10000_paths: PASS
+terminal_hit_count_and_path_identity: PASS (6053)
+E1_E2_rmax_identity: PASS ([46.8,31.2,18.72,23.4])
+E3_continuous_flow_htt_capacity: PASS (213.333333333333 kg/stage)
+ordinary_demand_and_200_2000_holding_identity: PASS
+stationwise_terminal_gap_reconstruction: PASS
+operating_cost_decomposition_and_reported_objective_separation: PASS
+Stage-70_bins_and_baseline_prep_shares: PASS
+postprocessing_replay_without_retraining: PASS
+figure_integrity: PASS

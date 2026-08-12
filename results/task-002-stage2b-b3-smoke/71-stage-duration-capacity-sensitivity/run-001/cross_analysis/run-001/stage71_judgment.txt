@@ -1,0 +1,57 @@
+Stage-71 stage-duration and effective-capacity sensitivity judgment
+
+Status: PASS after independent mechanical verification and visual QA
+
+Scope and frozen identities
+- Baseline is the accepted 6 h Stage-57/65 policy result and was not rerun or modified.
+- E1: 8 h/stage, original Pmax, HTT capacity 160 kg/stage.
+- E2: 6 h/stage, Pmax x 4/3, HTT capacity 160 kg/stage.
+- E3: E1 plus effective continuous-flow HTT capacity 213.333333 kg/stage.
+- E1 and E2 have identical theoretical r_max = [46.8, 31.2, 18.72, 23.4] kg/stage.
+- Ordinary demand, Markov/OOS paths, TerminalLOH, holding cost, and 200/2000 penalties are frozen.
+- Six policies use the same 10000x8 OOS paths and reproduce 6053 terminal-hit paths.
+- Every policy used a 3600-second fixed training budget and stopped with stop_flag=2; none is formally converged.
+
+Q1. Does 8 h pull up rapid terminal-hit paths?
+- Prep=2: Baseline mean/median Delta I is 0/0 kg and <=1 kg share is 100%. E1 changes these to 10.493/0 kg and 59.49%; >10 and >20 kg shares are both 40.51%.
+- Prep=3: Baseline mean/median is 5.764/0 kg and <=1 kg share is 74.30%. E1 changes these to 29.880/30.690 kg and 4.28%; >10 and >20 kg shares become 94.67% and 83.74%.
+- Descriptive judgment: E1 strongly pulls up prep=3 and partially pulls up prep=2. Prep=2 remains heterogeneous because its median stays zero and 59.49% remain <=1 kg.
+
+Q2. How close are E1 and E2, and is effective production capacity the main explanation?
+- Aggregate DRO-minus-SAA means are close: Delta production differs by +0.283 kg, Delta inventory by +0.618 kg, Delta operating cost by -1.910, and SAA/DRO mean terminal gaps differ by only about -0.029/-0.016 kg for E2 minus E1.
+- The path distributions are not equivalent. Prep=2 <=1 kg is 59.49% in E1 but 97.47% in E2; overall terminal-hit >20 kg is 84.88% versus 76.84%.
+- E1 uses 8 h stage-average prices [0.36375, 0.785, 0.75375, ...], while E2 uses 6 h prices [0.313333, 0.675, 0.79, 0.758333, ...]. Separate fixed-budget policy approximation can also contribute.
+- Bounded judgment: results are consistent with increased effective production capacity being important, but E1/E2 are not behaviorally equivalent, especially at prep=2. Production capacity alone does not explain all path-level differences. This is not strict causal proof.
+
+Q3. What is the marginal effect of raising HTT capacity in E3 relative to E1?
+- E3 minus E1 changes mean DRO-minus-SAA Delta inventory by only +0.125 kg, Delta production by +0.168 kg, Delta HTT by -0.378 kg, Delta shortage by -0.043 kg, and Delta operating cost by +8.668.
+- Terminal-hit <=1/>20 shares are 2.25%/84.77% in E3 versus 1.93%/84.88% in E1. Mean SAA/DRO gaps are 2.153/2.339 versus 2.155/2.349 kg.
+- Bounded judgment: in the current continuous-flow model, increasing effective HTT stage capacity from 160 to 213.333 kg/stage adds little marginal improvement beyond E1. This is not a real-vehicle trip or travel-time conclusion.
+
+Q4. Through how much production and HTT is the inventory improvement obtained?
+- Relative to Baseline, E1 SAA/DRO production rises by +34.692/+45.643 kg and final inventory by +29.506/+40.814 kg. Absolute HTT use falls by -18.639/-18.744 kg.
+- Relative to Baseline, E2 SAA/DRO production rises by +34.937/+46.170 kg and final inventory by +29.091/+41.017 kg. Absolute HTT falls by -15.489/-18.384 kg.
+- Relative to Baseline, E3 SAA/DRO production rises by +34.610/+45.729 kg and final inventory by +29.454/+40.887 kg. Absolute HTT falls by -18.097/-18.581 kg.
+- Within each scheme, DRO still uses more production and HTT than SAA. The sensitivity improvement versus Baseline is therefore primarily associated with more production, while less total redistribution is used in absolute terms under the newly learned policies.
+
+Q5. Does ordinary shortage newly deteriorate?
+- No overall deterioration versus Baseline is observed. Baseline SAA/DRO shortage is 12.252/12.496 kg; E1 is 7.066/7.667, E2 is 6.406/7.343, and E3 is 7.096/7.654 kg.
+- Within each sensitivity scheme, DRO retains a higher shortage than SAA: +0.601 kg in E1, +0.937 kg in E2, and +0.558 kg in E3. This reserve-service tradeoff remains descriptive.
+
+Q6. How does operating cost change?
+- Absolute modeled operating cost decreases relative to Baseline: E1 SAA/DRO by -895.353/-401.184; E2 by -1014.945/-522.687; E3 by -898.204/-395.368.
+- The within-scheme DRO-minus-SAA premium rises to 1303.324 in E1, 1301.414 in E2, and 1311.992 in E3 because DRO produces and redistributes more reserve than SAA.
+- E1 premium decomposition is production +948.905, HTT +230.973, holding +3.168, and ordinary-shortage penalty +120.278. Reported objective is not treated as operating/economic cost because it also contains terminal-gap penalty.
+
+Q7. Paper-use recommendation
+- Keep Baseline as the formal accepted mainline unless the modeling convention is explicitly changed.
+- Use E1 as the direct 8 h/stage sensitivity and the most relevant candidate when the research question truly changes MSP stage duration. Ordinary demand is deliberately frozen in kg/stage, so E1 is not a complete physical redesign of every quantity for a real 8 h horizon.
+- Use E2 as a production-capacity mechanism control. It is informative but not interchangeable with E1.
+- Use E3 as a secondary HTT-capacity sensitivity showing little marginal benefit under the current continuous-flow formulation.
+
+Validation and evidence boundaries
+- Data facts: all identities, means, shares, cost decompositions, and path counts are mechanically verified from archived CSV/MAT outputs.
+- Descriptive mechanism: higher effective production capacity is associated with larger reserve response and smaller terminal gaps; extra HTT capacity adds little beyond E1.
+- Causal claims not established: these are separately trained, stochastic, fixed-budget policies with different stage-price profiles. The experiment does not identify a pure causal effect of time, Pmax, or HTT capacity and does not prove formal optimality.
+- Statistical fallacy scan coverage: 11/11. No Simpson reversal is claimed; prep-stratified results are reported beside aggregates. No ecological or individual-level inference is made from group means. Selection is explicit for terminal-hit and prep subsets. No collider adjustment, diagnostic base-rate claim, regression-to-mean design, attrition/survivorship issue, significance fishing, or hidden regression/model path is used. Correlation/experimental contrasts are not converted into causal proof, and reverse-causal language is avoided.
+- Terminal gap remains sum_i max(0,T_i-I_i). Ordinary shortage, terminal gap, and W-stage shortage remain distinct. No W1-W3 evaluation was run.

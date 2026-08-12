@@ -1,0 +1,6 @@
+status=PASS
+experiment=E1_8h
+terminal_mode=saa
+train_log=C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\71-stage-duration-capacity-sensitivity\run-001\logs\E1_8h_saa_train.log
+eval_log=C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\71-stage-duration-capacity-sensitivity\run-001\logs\E1_8h_saa_eval.log
+completed_at=2026-08-11T23:42:33.4612920+08:00
