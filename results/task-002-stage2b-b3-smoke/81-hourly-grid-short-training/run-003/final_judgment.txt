@@ -1,0 +1,9 @@
+FINAL_JUDGMENT=FAIL
+
+The Stage-81 diagnostic bug was isolated to a wrapper-only elementwise multiplication. pv_cap_kw is a 4-by-1 site vector and phi48(tauVec) is an 8-by-1 hourly vector, so the failed expression attempted [4,1] .* [8,1]. The corrected diagnostic constructs an explicit 4-by-8 site-by-hour matrix using pv_cap_kw(:) * phi48(tauVec(:)).' and checks that its size matches the utilized-PV array.
+
+This repair does not modify the FA-MSP mathematical model, hourly-grid LP, Markov chain, TerminalLOH, cuts, voltage bounds, branch limits, PV input, load, tariff, site-bus mapping, dt_h, or c_d. A pre-diagnostic trained-policy checkpoint was added for future runs. The wrapper now clears the in-memory policy, reloads the checkpoint, verifies required objects, stop flag, cut count, strict four-dimensional cut structure, and empty stage7/8 operating libraries, and only then starts diagnostics.
+
+Run-002 SAA cannot be reused. It contains the LB trace, seed identity, diary, and completion metadata, but no trained modelLib, final cuts, policy checkpoint, or training workspace. The save statements were after diagnostic_forward, so the MATLAB process exited before the trained policy was written to disk. The process is no longer alive, and the policy cannot be reconstructed from the LB trace or random seed.
+
+Per the task gate, SAA was not retrained and DRO was not started. Therefore SAA/DRO voltage, branch, electrolyzer, PV, H2, and post-training cut diagnostics remain unavailable in this continuation.
