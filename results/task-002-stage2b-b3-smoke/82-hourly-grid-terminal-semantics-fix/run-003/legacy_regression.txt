@@ -1,0 +1,9 @@
+STATUS=PASS
+enable_hourly_grid=0
+idx_x=[1  2  3  4]
+idx_e=[5  6  7  8]
+idx_r=[9  10  11  12]
+forward_lb=7.56191403363
+cut_flag=1
+cut_count=1261
+cut_dimension_pass=1

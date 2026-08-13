@@ -1,0 +1,9 @@
+stage,expected_semantics,hourly_model_count,legacy_model_count,all_hourly_models_have_grid,hourly_models_all_empty,pass,within_hourly_operating_horizon
+1,HOURLY_OPERATING_LP,1,1,1,0,1,1
+2,HOURLY_OPERATING_LP,210,210,1,0,1,1
+3,HOURLY_OPERATING_LP,210,210,1,0,1,1
+4,HOURLY_OPERATING_LP,210,210,1,0,1,1
+5,HOURLY_OPERATING_LP,210,210,1,0,1,1
+6,HOURLY_OPERATING_LP,210,210,1,0,1,1
+7,TERMINALLOH_ANALYTIC_NO_LP,0,210,1,1,1,0
+8,ABSORBING_ZERO_NO_LP,0,210,1,1,1,0

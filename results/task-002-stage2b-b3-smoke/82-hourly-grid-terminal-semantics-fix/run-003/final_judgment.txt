@@ -1,0 +1,11 @@
+FINAL_JUDGMENT=PASS_READY_TO_RERUN_STAGE81
+stage1_6_hourly_grid_pass=1
+stage7_terminal_analytic_no_grid_pass=1
+stage8_absorbing_zero_no_grid_pass=1
+forward_terminal_pass=1
+backward_pass=1
+terminal_value_propagated_to_stage6_cut=1
+inventory_dual_pass=1
+cut_dimension=4
+legacy_regression_pass=1
+stage80_regression=PASS_RUN_003

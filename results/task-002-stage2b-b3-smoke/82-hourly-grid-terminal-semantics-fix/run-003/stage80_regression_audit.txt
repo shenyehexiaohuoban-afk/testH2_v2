@@ -1,0 +1,16 @@
+STATUS=PASS
+regression_run=results/task-002-stage2b-b3-smoke/80-hourly-grid-voltage-range-smoke/run-003
+reference_run=results/task-002-stage2b-b3-smoke/80-hourly-grid-voltage-range-smoke/run-002
+final_judgment=PASS_READY_FOR_SHORT_TRAINING
+base_grid_feasible_hours=48/48
+minimum_voltage_pu=0.915940163768
+minimum_voltage_bus=18
+minimum_voltage_hour=21
+maximum_true_branch_utilization=0.728225106375
+tight_branch=1->2
+integrated_lp_pass=1
+cut_dimension=4
+legacy_regression_pass=1
+exact_sha256_match_files=9_of_10_lightweight_diagnostics
+nonmatching_file=single_stage_integrated_smoke.txt
+nonmatching_reason=run-003 includes prev_inventory, production, and hourly electrolyzer energy lines that were absent from the tracked run-002 text file; all common lines are identical and the additional values match the previously accepted Stage-80 evidence.

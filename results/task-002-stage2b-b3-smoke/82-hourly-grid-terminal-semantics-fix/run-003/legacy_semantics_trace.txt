@@ -1,0 +1,28 @@
+LEGACY_SEMANTICS_AUDIT=PASS
+
+1. State classification
+- load_data_h2_near.m defines lf=7 (Nc-1) with a>1 as is_loh_demand_stage.
+- lf=8 (Nc) is is_terminal_landfall and is included in is_absorbing.
+
+2. Model-library behavior before hourly coupling
+- Legacy define_models_h2 constructed ordinary LP templates for every time index t=1..8, but only for definition-level non-absorbing and non-loh-demand states.
+- These stage7/8 ordinary templates were not the implementation of TerminalLOH or absorbing behavior. They were redundant templates for state identities that are unreachable at those time indices from the frozen initial state.
+
+3. Forward semantics
+- forward_pass_h2 checks is_loh_demand_stage before any update/solve call. It evaluates eval_terminal_loh_h2(prev_x,params,k), keeps inventory unchanged, and absorbs the path.
+- It checks is_absorbing before any update/solve call and carries inventory unchanged with zero operating action.
+- Therefore neither lf=7 TerminalLOH nor lf=8 END uses a normal operating LP in legacy forward execution.
+
+4. Backward semantics
+- Terminal states use terminal_value_and_subgradient_h2 analytically.
+- Absorbing states contribute Q=0 and g=0.
+- Ordinary stage models are used only for ordinary-value recursion.
+
+5. Stage-81 failure cause
+- Hourly define_models_h2 inherited the unconditional t=1..8 base-model construction.
+- build_integrated_hourly_stage_model_h2 correctly allows only the six 8-hour operating stages, so the redundant t=7 construction raised NonOperatingStage before training.
+
+6. Stage-82 repair
+- With enable_hourly_grid=true, ordinary LP templates are built only for stage1..6.
+- Backward starts at the first non-operating boundary, stage7, where TerminalLOH is analytic and absorbing states are zero.
+- No pseudo hourly grid is created for stage7/8; params.T, Markov, TerminalLOH, and the legacy-disabled path remain unchanged.

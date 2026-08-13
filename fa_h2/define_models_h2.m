@@ -7,7 +7,12 @@ function modelLib = define_models_h2(params)
 
 models = cell(params.T, params.K);
 
-for t = 1:params.T
+lastOperatingStage = params.T;
+if isfield(params, 'enable_hourly_grid') && params.enable_hourly_grid
+    lastOperatingStage = params.hourly_grid.n_operating_stages;
+end
+
+for t = 1:lastOperatingStage
     baseModel = build_stage_model_h2(params, t);
 
     if t == 1
@@ -28,4 +33,5 @@ end
 
 modelLib = struct();
 modelLib.models = models;
+modelLib.last_operating_stage = lastOperatingStage;
 end

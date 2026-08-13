@@ -1,0 +1,11 @@
+STATUS=PASS
+stage7_state_id=295
+stage8_state_id=296
+inventory_kg=[0  0  0  0]
+stage7_hourly_cost=1352317.04989
+stage7_legacy_cost=1352317.04989
+stage7_gradient=[-2000 -2000 -2000 -2000]
+stage7_parity=1
+stage8_hourly_cost=0
+stage8_legacy_cost=0
+stage8_zero_value_pass=1

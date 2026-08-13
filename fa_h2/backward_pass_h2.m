@@ -7,7 +7,16 @@ function [modelLib, cutviolFlag] = backward_pass_h2(modelLib, params, xval, thet
 
 cutviolFlag = 0;
 
-for t = params.T:-1:2
+lastOperatingStage = params.T;
+firstBackwardStage = params.T;
+if isfield(params, 'enable_hourly_grid') && params.enable_hourly_grid
+    lastOperatingStage = params.hourly_grid.n_operating_stages;
+    % The first non-operating boundary is the analytic TerminalLOH/
+    % absorbing stage.  No hourly operating LP exists beyond it.
+    firstBackwardStage = min(params.T, lastOperatingStage + 1);
+end
+
+for t = firstBackwardStage:-1:2
     Q = zeros(params.K, 1);
     gState = zeros(params.K, params.Ni);
     sample_n = in_sample(t - 1);
@@ -22,6 +31,11 @@ for t = params.T:-1:2
         elseif params.is_loh_demand_stage(k)
             [Q(k), grad] = terminal_value_and_subgradient_h2(x_trial, params, k);
             gState(k, :) = grad(:).';
+        elseif t > lastOperatingStage
+            % Definition-level ordinary states beyond the operating horizon
+            % are unreachable from the frozen Markov initial state.  They do
+            % not receive a pseudo hourly LP or contribute terminal value.
+            continue;
         else
             modelLib.models{t, k} = update_rhs_h2( ...
                 modelLib.models{t, k}, params, k, t, x_trial);

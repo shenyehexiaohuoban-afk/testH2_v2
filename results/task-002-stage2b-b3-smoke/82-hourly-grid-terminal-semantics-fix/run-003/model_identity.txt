@@ -1,0 +1,9 @@
+STATUS=PASS
+params_T=8
+hourly_operating_stages=6
+hourly_model_library_last_operating_stage=6
+stage1_6_hourly_grid_pass=1
+stage7_model_empty=1
+stage8_model_empty=1
+legacy_stage7_model_count=210
+legacy_stage8_model_count=210
