@@ -1,0 +1,6 @@
+status=PASS
+path_count=2
+directed_rows=120
+rows_per_active_path_stage=12
+reference_policy=C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\71-stage-duration-capacity-sensitivity\run-001\E1_8h\case-saa\native_output\h2_workspace.mat
+completed_at=2026-08-12 23:00:47

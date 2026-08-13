@@ -1,0 +1,23 @@
+﻿Stage-73 numerical runs summary
+run_id=run-001
+runner_pid=26868
+started_at=2026-08-12T23:02:07.5536037+08:00
+completed_at=2026-08-13T05:03:22.5041471+08:00
+H04_saa=PASS
+H04_saa.result_dir=C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\73-htt-transport-cost-sensitivity\run-001\H04\case-saa
+H04_saa.train_log=C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\73-htt-transport-cost-sensitivity\run-001\logs\H04_saa_train.log
+H04_chi2_eta003=PASS
+H04_chi2_eta003.result_dir=C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\73-htt-transport-cost-sensitivity\run-001\H04\case-chi2_eta003
+H04_chi2_eta003.train_log=C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\73-htt-transport-cost-sensitivity\run-001\logs\H04_chi2_eta003_train.log
+H02_saa=PASS
+H02_saa.result_dir=C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\73-htt-transport-cost-sensitivity\run-001\H02\case-saa
+H02_saa.train_log=C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\73-htt-transport-cost-sensitivity\run-001\logs\H02_saa_train.log
+H02_chi2_eta003=PASS
+H02_chi2_eta003.result_dir=C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\73-htt-transport-cost-sensitivity\run-001\H02\case-chi2_eta003
+H02_chi2_eta003.train_log=C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\73-htt-transport-cost-sensitivity\run-001\logs\H02_chi2_eta003_train.log
+H01_saa=PASS
+H01_saa.result_dir=C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\73-htt-transport-cost-sensitivity\run-001\H01\case-saa
+H01_saa.train_log=C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\73-htt-transport-cost-sensitivity\run-001\logs\H01_saa_train.log
+H01_chi2_eta003=PASS
+H01_chi2_eta003.result_dir=C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\73-htt-transport-cost-sensitivity\run-001\H01\case-chi2_eta003
+H01_chi2_eta003.train_log=C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\73-htt-transport-cost-sensitivity\run-001\logs\H01_chi2_eta003_train.log

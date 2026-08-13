@@ -1,0 +1,8 @@
+status=PASS
+experiment=H02
+terminal_mode=saa
+transport_distance_coefficient=0.2
+stop_flag=2
+iterations=1150
+train_time_s=3601.2602207
+completed_at=2026-08-13 02:02:44

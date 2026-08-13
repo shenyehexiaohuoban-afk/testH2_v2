@@ -1,0 +1,2 @@
+experiment,terminal_mode,transport_distance_coefficient,dt_h,time_limit_s,pmax1_kw,pmax2_kw,pmax3_kw,pmax4_kw,rmax1_kg,rmax2_kg,rmax3_kg,rmax4_kg,htt_capacity_kg_per_stage,beta_transport_multiplier,ordinary_demand_template_total_kg,holding_cost,ordinary_shortage_penalty,terminal_gap_penalty
+H02,saa,0.2,8,3600,300,200,120,150,46.8,31.2,18.72,23.4,160,2,144,0.05,200,2000

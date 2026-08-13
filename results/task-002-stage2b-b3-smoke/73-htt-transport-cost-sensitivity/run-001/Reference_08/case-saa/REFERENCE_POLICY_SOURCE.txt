@@ -1,0 +1,2 @@
+source=C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\71-stage-duration-capacity-sensitivity\run-001\E1_8h\case-saa\native_output\h2_workspace.mat
+retrained=false

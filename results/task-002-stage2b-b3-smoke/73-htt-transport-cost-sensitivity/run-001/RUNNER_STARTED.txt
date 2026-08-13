@@ -1,0 +1,4 @@
+﻿status=RUNNING
+run_id=run-001
+runner_pid=26868
+started_at=2026-08-12T23:02:07.5536037+08:00

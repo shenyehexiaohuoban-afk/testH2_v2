@@ -1,0 +1,9 @@
+scheme,method,path_stage_observations,path_stages_with_reciprocal_flow,reciprocal_path_stage_share,total_reciprocal_gross_flow_kg,reciprocal_share_of_total_htt,interpretation
+Reference_08,saa,35728,0,0.0,0.0,0.0,"simultaneous opposite-direction OD flow is an artifact screen, not a complete cycle proof"
+Reference_08,chi2_eta003,35728,0,0.0,0.0,0.0,"simultaneous opposite-direction OD flow is an artifact screen, not a complete cycle proof"
+H04,saa,35728,0,0.0,0.0,0.0,"simultaneous opposite-direction OD flow is an artifact screen, not a complete cycle proof"
+H04,chi2_eta003,35728,0,0.0,0.0,0.0,"simultaneous opposite-direction OD flow is an artifact screen, not a complete cycle proof"
+H02,saa,35728,0,0.0,0.0,0.0,"simultaneous opposite-direction OD flow is an artifact screen, not a complete cycle proof"
+H02,chi2_eta003,35728,0,0.0,0.0,0.0,"simultaneous opposite-direction OD flow is an artifact screen, not a complete cycle proof"
+H01,saa,35728,0,0.0,0.0,0.0,"simultaneous opposite-direction OD flow is an artifact screen, not a complete cycle proof"
+H01,chi2_eta003,35728,0,0.0,0.0,0.0,"simultaneous opposite-direction OD flow is an artifact screen, not a complete cycle proof"

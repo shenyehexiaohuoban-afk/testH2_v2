@@ -1,0 +1,8 @@
+status=PASS
+experiment=H02
+terminal_mode=chi2_eta003
+transport_distance_coefficient=0.2
+stop_flag=2
+iterations=1157
+train_time_s=3603.4435889
+completed_at=2026-08-13 03:02:58

@@ -1,0 +1,45 @@
+Stage-73 HTT transport-cost sensitivity judgment
+
+Status: PASS after common-OOS mechanical verification and visual QA.
+All H04/H02/H01 policies are independent one-hour fixed-budget policies with stop_flag=2; they are not formally converged.
+
+Q1. From which c_d interval does HTT become materially more active?
+- Relative to c_d=0.8, c_d=0.4 raises mean HTT from 13.367 to 23.319 kg/path for SAA and from 22.025 to 31.349 for DRO.
+- c_d=0.2 raises them further to 34.152/40.628, and c_d=0.1 to 45.666/47.256 kg/path.
+- Descriptively, activation is already clear in the 0.8-to-0.4 reduction and continues through 0.2 and 0.1. It is a graded response rather than one sharp threshold.
+
+Q2. Is the extra HTT mainly in stages 4-6?
+- Stage4-6 mean HTT rises from 4.068/6.006 kg/path at 0.8 to 17.156/16.348 at 0.1.
+- Late-stage redistribution therefore increases materially. However, only about 28%-41% of each scheme-method HTT increase versus Reference occurs in stages 4-6; stage 3 is also a major contributor. The increase is not exclusively a late-warning effect.
+
+Q3. Do directed OD flows show spatial reconfiguration toward high-demand stations?
+- Across all coefficients and both methods, the dominant arc is 3->1, followed mainly by 2->4 and 2->1. Aggregate net flows identify sites 3 and 2 as primary exporters and sites 1 and 4 as primary receivers.
+- This direction is consistent with a stronger redistribution role, but the archive does not prove that every transfer originated from a contemporaneously surplus site or was caused by the final TerminalLOH realization. That stronger causal claim is not made.
+
+Q4. Does lower transport cost reduce terminal spatial mismatch?
+- Mean terminal gap falls monotonically from 1.304/1.422 kg/path at 0.8 to 1.102/1.170 at 0.1.
+- Gap-positive paths fall from 485/544 to 418/456. Total statically coverable gap kg also falls.
+- The coverable percentage of the remaining gap falls too, so the residual gap is less dominated by simple final surplus-at-another-site mismatch. This remains a static terminal diagnostic, not proof of nonanticipative feasible recourse.
+
+Q5. Does more HTT replace redundant local production/inventory?
+- No direct substitution is observed. Relative to 0.8, H01 production is higher by 6.768/8.658 kg/path and final inventory is higher by 5.936/8.334 kg/path.
+- More redistribution accompanies slightly more production and inventory rather than replacing them. Simultaneous opposite-direction OD flow is zero within tolerance, so the additional HTT is not explained by immediate pairwise counterflow.
+
+Q6. What happens to shortage, terminal gap, and cost?
+- SAA ordinary shortage changes from 7.066 to 6.234 kg/path; DRO changes from 7.667 to 7.343.
+- Operating cost changes from 11365.69/12669.01 yuan/path at 0.8 to 11214.22/12445.96 at 0.1. H04 SAA is a small non-monotone exception, while H02/H01 are lower than Reference for both methods.
+
+Q7. Is c_d=0.8 a materially high economic friction?
+- Actual flow-weighted transport price is about 26.03-26.29 yuan/kg at 0.8, versus 12.51-12.86 at 0.4, 6.21-6.39 at 0.2, and 3.07-3.12 at 0.1.
+- At 0.8, stage-4 actual HTT price exceeds stage-4 local production marginal cash cost, while stage-5/6 movement is cheaper than local production before inventory opportunity value. Together with the monotone HTT response, this supports treating 0.8 as a material economic friction in the current model, not as pure causal identification.
+
+Q8. Which tested interval best exposes flexibility without obvious over-transfer?
+- No tested coefficient shows frequent capacity saturation: the maximum observed utilization is 81.70%, all q95 values are below 48.84%, and simultaneous reciprocal OD flow is zero within tolerance.
+- The descriptive elbow is around c_d=0.2: it already produces substantial overall and stage4-6 HTT activation, lower terminal gap, lower shortage, and lower operating cost than Reference. c_d=0.1 is a stronger low-cost stress case with further HTT and modest additional gap/cost improvement, not an observed pathological counterflow case.
+- This audit does not select a formal coefficient. A future focused experiment may treat 0.2 as the middle candidate and 0.1 as the lower-bound sensitivity, subject to model calibration and training-budget checks.
+
+Evidence boundaries and fallacy scan
+- Data facts: frozen path identities, means, stage totals, OD totals, costs, gaps, and utilization are mechanically verified.
+- Descriptive mechanism: lower direct transport friction is associated with more HTT and lower residual gap/cost in these independently trained policies.
+- Causal claims not established: all non-reference policies were trained separately for one hour and stopped by time budget; no formal convergence or pure parameter causal estimate is claimed.
+- Statistical fallacy scan coverage: 11/11. Aggregate and method/stage-stratified results are both reported; no individual inference from group means, selected-survivor omission, multiple-testing significance claim, regression-to-mean claim, collider adjustment, diagnostic base-rate inference, or reverse-causal claim is used. Static surplus-gap coverage is not converted into feasible recourse, and association is not written as proven causation.

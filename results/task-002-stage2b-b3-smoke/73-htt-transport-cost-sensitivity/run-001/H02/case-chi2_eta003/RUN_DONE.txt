@@ -1,0 +1,7 @@
+﻿status=PASS
+phase=training
+case=H02_chi2_eta003
+policy=C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\73-htt-transport-cost-sensitivity\run-001\H02\case-chi2_eta003\native_output\h2_workspace.mat
+parameter_identity=C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\73-htt-transport-cost-sensitivity\run-001\H02\case-chi2_eta003\parameter_identity.csv
+train_log=C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\73-htt-transport-cost-sensitivity\run-001\logs\H02_chi2_eta003_train.log
+completed_at=2026-08-13T03:02:58.7376157+08:00

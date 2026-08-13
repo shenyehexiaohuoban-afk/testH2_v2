@@ -1,0 +1,13 @@
+Stage-73 all work completed
+status=PASS
+run_id=run-001
+accepted_analysis=analysis/run-006
+numerical_runs=6 PASS one-hour fixed-budget policies
+reference_policy=Stage-71 E1 c_d=0.8 reused without retraining
+oos_evaluations=8 PASS, 10000 common paths each, 6053 terminal hits each
+path_stage_state_identity=PASS
+mechanical_verification=analysis/run-006/mechanical_verification.txt
+visual_qa=PASS, five requested figures inspected
+failed_postprocess_runs_preserved=analysis/run-001,analysis/run-002
+superseded_postprocess_runs_preserved=analysis/run-003,analysis/run-004,analysis/run-005
+completed_at=2026-08-13 09:20:55 +08:00

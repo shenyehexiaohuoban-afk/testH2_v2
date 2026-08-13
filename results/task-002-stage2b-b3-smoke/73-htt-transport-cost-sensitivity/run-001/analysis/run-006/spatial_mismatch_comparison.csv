@@ -1,0 +1,9 @@
+scheme,method,terminal_hits,gap_positive_paths,paths_with_other_site_surplus,spatial_mismatch_share,total_gap_kg,statically_coverable_gap_kg,coverable_share,fully_coverable_paths,partly_coverable_paths,no_surplus_paths,interpretation
+Reference_08,saa,6053,485,361,0.7443298969072165,13043.264136589729,2014.596660227074,0.1544549461798914,255,106,124,static terminal inventory only; not nonanticipative feasible recourse
+Reference_08,chi2_eta003,6053,544,423,0.7775735294117647,14220.451018688307,3550.9745232469427,0.24970899436173327,318,105,121,static terminal inventory only; not nonanticipative feasible recourse
+H04,saa,6053,443,321,0.7246049661399548,11802.769872809307,1493.6295623772933,0.12654907097852092,219,102,122,static terminal inventory only; not nonanticipative feasible recourse
+H04,chi2_eta003,6053,562,430,0.7651245551601423,12929.683228381055,2848.81174181594,0.22033113197720963,342,88,132,static terminal inventory only; not nonanticipative feasible recourse
+H02,saa,6053,433,297,0.6859122401847575,11096.069499969046,1194.9693160504428,0.10769302734213915,205,92,136,static terminal inventory only; not nonanticipative feasible recourse
+H02,chi2_eta003,6053,497,385,0.7746478873239436,12017.147633078363,2440.7075164683724,0.20310206639636252,275,110,112,static terminal inventory only; not nonanticipative feasible recourse
+H01,saa,6053,418,292,0.6985645933014354,11016.63440311566,1139.0732107958231,0.10339575310529295,193,99,126,static terminal inventory only; not nonanticipative feasible recourse
+H01,chi2_eta003,6053,456,332,0.7280701754385965,11702.40943527274,2262.8051256231524,0.1933623274881097,236,96,124,static terminal inventory only; not nonanticipative feasible recourse

@@ -1,0 +1,5 @@
+status=PASS
+scope=load_only_no_training_no_solver
+coefficients=0.8,0.4,0.2,0.1
+protected_E1_identity=PASS
+completed_at=2026-08-12 23:00:01

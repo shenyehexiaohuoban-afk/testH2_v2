@@ -1,0 +1,14 @@
+Stage-73 mechanical verification
+status=PASS
+path_counts=[10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000]
+terminal_hits=[6053, 6053, 6053, 6053, 6053, 6053, 6053, 6053]
+common_preparation_distribution=PASS
+common_path_stage_state_identity=PASS
+common_beta_effective_capacity_identity=PASS
+max_flow_cost_error=7.04858393874e-12
+max_case_total_closure_error=9.31322574615e-10
+max_utilization=0.817025071791
+max_spatial_mismatch_conservation_error=0
+max_simultaneous_reciprocal_flow_share=0
+policies=fixed_budget_stop_flag_2_not_formally_converged
+causal_interpretation=NOT_ESTABLISHED

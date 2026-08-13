@@ -1,0 +1,7 @@
+status=PASS
+scheme=Reference_08
+terminal_mode=chi2_eta003
+path_count=10000
+terminal_hit_count=6053
+directed_rows=428736
+completed_at=2026-08-13 05:07:54

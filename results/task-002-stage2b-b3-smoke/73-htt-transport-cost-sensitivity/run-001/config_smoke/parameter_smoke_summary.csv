@@ -1,0 +1,5 @@
+experiment,transport_distance_coefficient,dt_h,htt_capacity_kg_per_stage,beta_transport_multiplier,min_base_transport_cost,max_base_transport_cost,expanded_ordinary_demand_total_kg,holding_cost,ordinary_shortage_penalty,terminal_gap_penalty
+REFERENCE_08,0.8,8,160,2,6.4,22.5820966568516,288,0.05,200,2000
+H04,0.4,8,160,2,3.2,11.2910483284258,288,0.05,200,2000
+H02,0.2,8,160,2,1.6,5.64552416421289,288,0.05,200,2000
+H01,0.1,8,160,2,0.8,2.82276208210645,288,0.05,200,2000
