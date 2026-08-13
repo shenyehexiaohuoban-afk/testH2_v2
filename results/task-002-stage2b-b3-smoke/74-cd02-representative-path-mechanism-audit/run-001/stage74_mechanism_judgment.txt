@@ -1,0 +1,14 @@
+Stage-74 representative path mechanism judgment
+status=PASS
+selected_paths=5380,986,2017,9114,6826
+selection=mechanical fixed class rules before selected-path replay
+replay_scope=selected paths only; fixed saved policies and frozen OOS rows; no training/resampling/cuts
+selected_path_h02_stage3plus_htt_share=1.000000
+selected_path_top_od=31:241.539,24:114.145,34:99.789,21:99.473,14:48.841
+Q1=At c_d=0.2 HTT participates through directed stagewise transfers coupled to local production and inventory carryover; the exact path evidence is descriptive.
+Q2=Selected-path dominant OD directions are compared mechanically with the full-sample Stage-73 ranking; agreement supports representativeness but not universal behavior.
+Q3=The selected cases include stage3 activation, so adjustment need not wait until the terminal state is fully known; it remains a nonanticipative policy response to current state and cuts.
+Q4=SAA and DRO differ pathwise in production, HTT, final inventory, gap, shortage, and cost; no single path is generalized to the population.
+Q5=The c_d=0.8-to-0.2 comparison records the exact newly active stages and OD flows without retraining or resampling.
+Q6=The cases support a qualified descriptive statement that, as state information is revealed, the saved FA-MSP policies use HTT to reallocate hydrogen among sites; they do not prove a transport-cost causal effect or clairvoyant optimality.
+fallacy_scan=11 types checked: selection cherry-picking, aggregate-path conflation, state-average mixing, post-treatment selection, causal overclaim, fixed-budget convergence claim, gap-total substitution, static-recourse claim, path-probability misuse, cost double-counting, single-case generalization.

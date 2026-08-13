@@ -1,0 +1,17 @@
+Stage-74 mechanical verification
+status=PASS
+selected_path_ids=[5380, 986, 2017, 9114, 6826]
+selection_count=5
+detail_rows=120
+cases=4
+stages_per_case_path=6
+max_site_balance_error_kg=9.09494701773e-13
+max_directed_htt_closure_error_kg=9.94759830064e-14
+max_transport_cost_closure_error_yuan=2.27373675443e-13
+max_replay_vs_stage73_summary_error=9.09494701773e-13
+transition_probability_bounds=PASS
+figure_count=5
+training=false
+resampling=false
+new_cuts=false
+causal_interpretation=NOT_ESTABLISHED

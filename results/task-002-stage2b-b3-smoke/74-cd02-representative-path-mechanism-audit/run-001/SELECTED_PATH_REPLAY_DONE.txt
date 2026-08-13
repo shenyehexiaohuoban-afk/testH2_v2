@@ -1,0 +1,8 @@
+status=PASS
+selected_paths=5
+cases=H02_saa,H02_chi2_eta003,Reference_08_saa,Reference_08_chi2_eta003
+training=false
+resampling=false
+new_cuts=false
+scope=preselected_paths_only
+completed_at=2026-08-13 10:18:40

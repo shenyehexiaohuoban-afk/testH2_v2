@@ -1,0 +1,101 @@
+selection_class,path_id,class_rank,ranking_metric,ranking_value,eligibility_rule
+A,6826,1,late_htt_dro,125.63799456199116,terminal-hit; DRO terminal gap zero; rank late-stage HTT descending
+A,5380,2,late_htt_dro,119.11558717798553,terminal-hit; DRO terminal gap zero; rank late-stage HTT descending
+A,8474,3,late_htt_dro,119.01460422027849,terminal-hit; DRO terminal gap zero; rank late-stage HTT descending
+A,4752,4,late_htt_dro,118.27066853211632,terminal-hit; DRO terminal gap zero; rank late-stage HTT descending
+A,8283,5,late_htt_dro,118.11321927034624,terminal-hit; DRO terminal gap zero; rank late-stage HTT descending
+A,1369,6,late_htt_dro,117.85756008391303,terminal-hit; DRO terminal gap zero; rank late-stage HTT descending
+A,1888,7,late_htt_dro,117.82653427091594,terminal-hit; DRO terminal gap zero; rank late-stage HTT descending
+A,6834,8,late_htt_dro,117.61039873137778,terminal-hit; DRO terminal gap zero; rank late-stage HTT descending
+A,5736,9,late_htt_dro,117.35473954494458,terminal-hit; DRO terminal gap zero; rank late-stage HTT descending
+A,8513,10,late_htt_dro,117.1014979885713,terminal-hit; DRO terminal gap zero; rank late-stage HTT descending
+A,6490,11,late_htt_dro,114.9167580920198,terminal-hit; DRO terminal gap zero; rank late-stage HTT descending
+A,4344,12,late_htt_dro,114.55660469853802,terminal-hit; DRO terminal gap zero; rank late-stage HTT descending
+A,5368,13,late_htt_dro,112.94520714716465,terminal-hit; DRO terminal gap zero; rank late-stage HTT descending
+A,3410,14,late_htt_dro,112.71468890462818,terminal-hit; DRO terminal gap zero; rank late-stage HTT descending
+A,5067,15,late_htt_dro,112.71468890462818,terminal-hit; DRO terminal gap zero; rank late-stage HTT descending
+A,5649,16,late_htt_dro,112.71468890462818,terminal-hit; DRO terminal gap zero; rank late-stage HTT descending
+A,9361,17,late_htt_dro,112.71468890462818,terminal-hit; DRO terminal gap zero; rank late-stage HTT descending
+A,7173,18,late_htt_dro,112.22001679715402,terminal-hit; DRO terminal gap zero; rank late-stage HTT descending
+A,8724,19,late_htt_dro,112.22001679715402,terminal-hit; DRO terminal gap zero; rank late-stage HTT descending
+A,3203,20,late_htt_dro,111.7304475891777,terminal-hit; DRO terminal gap zero; rank late-stage HTT descending
+B,4737,1,focus_htt_dro,85.1576577124644,"terminal-hit; rank stage3+ flow on 3->1,2->4,2->1 descending"
+B,5380,2,focus_htt_dro,85.1576577124644,"terminal-hit; rank stage3+ flow on 3->1,2->4,2->1 descending"
+B,5422,3,focus_htt_dro,85.1576577124644,"terminal-hit; rank stage3+ flow on 3->1,2->4,2->1 descending"
+B,6826,4,focus_htt_dro,85.1576577124644,"terminal-hit; rank stage3+ flow on 3->1,2->4,2->1 descending"
+B,6885,5,focus_htt_dro,85.1576577124644,"terminal-hit; rank stage3+ flow on 3->1,2->4,2->1 descending"
+B,7134,6,focus_htt_dro,85.1576577124644,"terminal-hit; rank stage3+ flow on 3->1,2->4,2->1 descending"
+B,7691,7,focus_htt_dro,85.1576577124644,"terminal-hit; rank stage3+ flow on 3->1,2->4,2->1 descending"
+B,3318,8,focus_htt_dro,84.8301003476229,"terminal-hit; rank stage3+ flow on 3->1,2->4,2->1 descending"
+B,185,9,focus_htt_dro,78.9542614544412,"terminal-hit; rank stage3+ flow on 3->1,2->4,2->1 descending"
+B,1734,10,focus_htt_dro,78.9542614544412,"terminal-hit; rank stage3+ flow on 3->1,2->4,2->1 descending"
+B,4609,11,focus_htt_dro,78.9542614544412,"terminal-hit; rank stage3+ flow on 3->1,2->4,2->1 descending"
+B,5025,12,focus_htt_dro,78.9542614544412,"terminal-hit; rank stage3+ flow on 3->1,2->4,2->1 descending"
+B,5865,13,focus_htt_dro,78.9542614544412,"terminal-hit; rank stage3+ flow on 3->1,2->4,2->1 descending"
+B,6228,14,focus_htt_dro,78.9542614544412,"terminal-hit; rank stage3+ flow on 3->1,2->4,2->1 descending"
+B,7399,15,focus_htt_dro,78.9542614544412,"terminal-hit; rank stage3+ flow on 3->1,2->4,2->1 descending"
+B,7728,16,focus_htt_dro,78.9542614544412,"terminal-hit; rank stage3+ flow on 3->1,2->4,2->1 descending"
+B,9460,17,focus_htt_dro,78.9542614544412,"terminal-hit; rank stage3+ flow on 3->1,2->4,2->1 descending"
+B,9859,18,focus_htt_dro,78.9542614544412,"terminal-hit; rank stage3+ flow on 3->1,2->4,2->1 descending"
+B,5541,19,focus_htt_dro,78.63867306775407,"terminal-hit; rank stage3+ flow on 3->1,2->4,2->1 descending"
+B,1021,20,focus_htt_dro,78.5089507213196,"terminal-hit; rank stage3+ flow on 3->1,2->4,2->1 descending"
+C,986,1,delta_inventory,103.33615435960803,terminal-hit; rank DRO-minus-SAA final inventory descending
+C,1401,2,delta_inventory,103.33615435960803,terminal-hit; rank DRO-minus-SAA final inventory descending
+C,1561,3,delta_inventory,103.33615435960803,terminal-hit; rank DRO-minus-SAA final inventory descending
+C,1767,4,delta_inventory,103.33615435960803,terminal-hit; rank DRO-minus-SAA final inventory descending
+C,2070,5,delta_inventory,103.33615435960803,terminal-hit; rank DRO-minus-SAA final inventory descending
+C,2217,6,delta_inventory,103.33615435960803,terminal-hit; rank DRO-minus-SAA final inventory descending
+C,2319,7,delta_inventory,103.33615435960803,terminal-hit; rank DRO-minus-SAA final inventory descending
+C,2606,8,delta_inventory,103.33615435960803,terminal-hit; rank DRO-minus-SAA final inventory descending
+C,3363,9,delta_inventory,103.33615435960803,terminal-hit; rank DRO-minus-SAA final inventory descending
+C,3783,10,delta_inventory,103.33615435960803,terminal-hit; rank DRO-minus-SAA final inventory descending
+C,4167,11,delta_inventory,103.33615435960803,terminal-hit; rank DRO-minus-SAA final inventory descending
+C,4345,12,delta_inventory,103.33615435960803,terminal-hit; rank DRO-minus-SAA final inventory descending
+C,5295,13,delta_inventory,103.33615435960803,terminal-hit; rank DRO-minus-SAA final inventory descending
+C,6592,14,delta_inventory,103.33615435960803,terminal-hit; rank DRO-minus-SAA final inventory descending
+C,7667,15,delta_inventory,103.33615435960803,terminal-hit; rank DRO-minus-SAA final inventory descending
+C,7985,16,delta_inventory,103.33615435960803,terminal-hit; rank DRO-minus-SAA final inventory descending
+C,8032,17,delta_inventory,103.33615435960803,terminal-hit; rank DRO-minus-SAA final inventory descending
+C,8339,18,delta_inventory,103.33615435960803,terminal-hit; rank DRO-minus-SAA final inventory descending
+C,8693,19,delta_inventory,103.33615435960803,terminal-hit; rank DRO-minus-SAA final inventory descending
+C,9184,20,delta_inventory,103.33615435960803,terminal-hit; rank DRO-minus-SAA final inventory descending
+D,2017,1,statically_coverable_gap_dro,46.7681713867848,terminal-hit; positive DRO gap and other-site surplus; rank static coverable gap descending
+D,8138,2,statically_coverable_gap_dro,46.7681713867848,terminal-hit; positive DRO gap and other-site surplus; rank static coverable gap descending
+D,1607,3,statically_coverable_gap_dro,46.4348870441432,terminal-hit; positive DRO gap and other-site surplus; rank static coverable gap descending
+D,2503,4,statically_coverable_gap_dro,38.6923506836378,terminal-hit; positive DRO gap and other-site surplus; rank static coverable gap descending
+D,8986,5,statically_coverable_gap_dro,38.6923506836378,terminal-hit; positive DRO gap and other-site surplus; rank static coverable gap descending
+D,7258,6,statically_coverable_gap_dro,34.9063440937147,terminal-hit; positive DRO gap and other-site surplus; rank static coverable gap descending
+D,907,7,statically_coverable_gap_dro,32.3029052190345,terminal-hit; positive DRO gap and other-site surplus; rank static coverable gap descending
+D,5744,8,statically_coverable_gap_dro,32.3029052190338,terminal-hit; positive DRO gap and other-site surplus; rank static coverable gap descending
+D,1589,9,statically_coverable_gap_dro,31.2622241517685,terminal-hit; positive DRO gap and other-site surplus; rank static coverable gap descending
+D,9651,10,statically_coverable_gap_dro,30.2385952115556,terminal-hit; positive DRO gap and other-site surplus; rank static coverable gap descending
+D,1796,11,statically_coverable_gap_dro,28.7180578738839,terminal-hit; positive DRO gap and other-site surplus; rank static coverable gap descending
+D,195,12,statically_coverable_gap_dro,26.9258806817729,terminal-hit; positive DRO gap and other-site surplus; rank static coverable gap descending
+D,2527,13,statically_coverable_gap_dro,26.8170893661358,terminal-hit; positive DRO gap and other-site surplus; rank static coverable gap descending
+D,5503,14,statically_coverable_gap_dro,26.8170893661229,terminal-hit; positive DRO gap and other-site surplus; rank static coverable gap descending
+D,8633,15,statically_coverable_gap_dro,26.8170893661228,terminal-hit; positive DRO gap and other-site surplus; rank static coverable gap descending
+D,1038,16,statically_coverable_gap_dro,26.8170893661206,terminal-hit; positive DRO gap and other-site surplus; rank static coverable gap descending
+D,369,17,statically_coverable_gap_dro,26.8170893661162,terminal-hit; positive DRO gap and other-site surplus; rank static coverable gap descending
+D,3650,18,statically_coverable_gap_dro,26.8170893661162,terminal-hit; positive DRO gap and other-site surplus; rank static coverable gap descending
+D,6348,19,statically_coverable_gap_dro,26.8170893661162,terminal-hit; positive DRO gap and other-site surplus; rank static coverable gap descending
+D,9214,20,statically_coverable_gap_dro,26.8170893661162,terminal-hit; positive DRO gap and other-site surplus; rank static coverable gap descending
+E,9114,1,production_dro,550.68,terminal-hit; bottom-decile DRO HTT and zero gap; rank production descending
+E,134,2,production_dro,459.051594461041,terminal-hit; bottom-decile DRO HTT and zero gap; rank production descending
+E,2163,3,production_dro,459.051594461041,terminal-hit; bottom-decile DRO HTT and zero gap; rank production descending
+E,5668,4,production_dro,459.051594461041,terminal-hit; bottom-decile DRO HTT and zero gap; rank production descending
+E,9239,5,production_dro,459.051594461041,terminal-hit; bottom-decile DRO HTT and zero gap; rank production descending
+E,145,6,production_dro,459.051594461038,terminal-hit; bottom-decile DRO HTT and zero gap; rank production descending
+E,6568,7,production_dro,459.051594461038,terminal-hit; bottom-decile DRO HTT and zero gap; rank production descending
+E,2771,8,production_dro,455.216509559588,terminal-hit; bottom-decile DRO HTT and zero gap; rank production descending
+E,3615,9,production_dro,455.216509559588,terminal-hit; bottom-decile DRO HTT and zero gap; rank production descending
+E,4029,10,production_dro,455.216509559588,terminal-hit; bottom-decile DRO HTT and zero gap; rank production descending
+E,4135,11,production_dro,455.216509559588,terminal-hit; bottom-decile DRO HTT and zero gap; rank production descending
+E,1738,12,production_dro,450.44209136794,terminal-hit; bottom-decile DRO HTT and zero gap; rank production descending
+E,5988,13,production_dro,450.44209136794,terminal-hit; bottom-decile DRO HTT and zero gap; rank production descending
+E,6723,14,production_dro,450.44209136794,terminal-hit; bottom-decile DRO HTT and zero gap; rank production descending
+E,7812,15,production_dro,450.44209136794,terminal-hit; bottom-decile DRO HTT and zero gap; rank production descending
+E,821,16,production_dro,441.883329698226,terminal-hit; bottom-decile DRO HTT and zero gap; rank production descending
+E,9895,17,production_dro,435.531550269846,terminal-hit; bottom-decile DRO HTT and zero gap; rank production descending
+E,69,18,production_dro,430.56,terminal-hit; bottom-decile DRO HTT and zero gap; rank production descending
+E,201,19,production_dro,430.56,terminal-hit; bottom-decile DRO HTT and zero gap; rank production descending
+E,964,20,production_dro,430.56,terminal-hit; bottom-decile DRO HTT and zero gap; rank production descending

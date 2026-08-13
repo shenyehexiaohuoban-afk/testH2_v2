@@ -1,0 +1,9 @@
+scheme,method,file,bytes,sha256
+H02,saa,results\task-002-stage2b-b3-smoke\73-htt-transport-cost-sensitivity\run-001\H02\case-saa\stage73_oos_path_summary.csv,2691010,bb74e69b466af620885f9869c7828d293c08fd2c775263fb6b9222bb37dc0880
+H02,saa,results\task-002-stage2b-b3-smoke\73-htt-transport-cost-sensitivity\run-001\H02\case-saa\htt_directed_od_path_stage.csv,50805503,431495432101b57886a4c23777d5f1aed4930b274bbcc397bcc7fe878b30f517
+H02,chi2_eta003,results\task-002-stage2b-b3-smoke\73-htt-transport-cost-sensitivity\run-001\H02\case-chi2_eta003\stage73_oos_path_summary.csv,2938080,de553fb66761e1261c10c915494edc19a40d0c3a0f43013868ea8e04c8308794
+H02,chi2_eta003,results\task-002-stage2b-b3-smoke\73-htt-transport-cost-sensitivity\run-001\H02\case-chi2_eta003\htt_directed_od_path_stage.csv,54319648,9b01539d3d5d2d37b12e9be9e2d032a66b9cbb4f7e2fa0cd102d683cf61d6b65
+Reference_08,saa,results\task-002-stage2b-b3-smoke\73-htt-transport-cost-sensitivity\run-001\Reference_08\case-saa\stage73_oos_path_summary.csv,2770275,d7b43d47b534895c95334ede4496da5857b71390e6ed828c92fd0013df861170
+Reference_08,saa,results\task-002-stage2b-b3-smoke\73-htt-transport-cost-sensitivity\run-001\Reference_08\case-saa\htt_directed_od_path_stage.csv,53018867,fdba83c7a81f30fb998e2e34458e6426b022f661bcf39b299d00dcb97448cb7c
+Reference_08,chi2_eta003,results\task-002-stage2b-b3-smoke\73-htt-transport-cost-sensitivity\run-001\Reference_08\case-chi2_eta003\stage73_oos_path_summary.csv,3056238,c1d7dd6eac860a403a26a5ceeaa114b4e41b9929a07262e19b7666bfbafdb755
+Reference_08,chi2_eta003,results\task-002-stage2b-b3-smoke\73-htt-transport-cost-sensitivity\run-001\Reference_08\case-chi2_eta003\htt_directed_od_path_stage.csv,57171290,818086811b1b4cc785234af3bb16a3942a03b38124888df89fd979207d9fc5fe
