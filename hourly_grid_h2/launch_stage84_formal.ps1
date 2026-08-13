@@ -19,19 +19,40 @@ $env:STAGE84_RUN_ID = $RunId
 $env:STAGE84_FROZEN_COMMIT = $FrozenCommit
 try {
     $expr = "cd('$($repo.Replace('\','/'))'); addpath('hourly_grid_h2'); run_stage84_formal_training_oos_h2"
-    $p = Start-Process -FilePath $matlab -ArgumentList @('-batch', $expr) -WorkingDirectory $repo -WindowStyle Hidden -PassThru
+    $launchDir = Split-Path -Parent $runDir
+    if (-not (Test-Path -LiteralPath $launchDir)) { New-Item -ItemType Directory -Path $launchDir | Out-Null }
+    $attempt = 1
+    do {
+        $suffix = if ($attempt -eq 1) { '' } else { "-$('{0:D3}' -f $attempt)" }
+        $recordFile = Join-Path $launchDir "$RunId-launch-record$suffix.txt"
+        $matlabLog = Join-Path $launchDir "$RunId-matlab-launch$suffix.log"
+        $attempt++
+    } while ((Test-Path -LiteralPath $recordFile) -or (Test-Path -LiteralPath $matlabLog))
+    $psi = [System.Diagnostics.ProcessStartInfo]::new()
+    $psi.FileName = $matlab
+    $psi.WorkingDirectory = $repo
+    $psi.UseShellExecute = $false
+    $psi.CreateNoWindow = $true
+    $psi.RedirectStandardOutput = $false
+    $psi.RedirectStandardError = $false
+    $psi.ArgumentList.Add('-logfile')
+    $psi.ArgumentList.Add($matlabLog)
+    $psi.ArgumentList.Add('-batch')
+    $psi.ArgumentList.Add($expr)
+    $p = [System.Diagnostics.Process]::new()
+    $p.StartInfo = $psi
+    if (-not $p.Start()) { throw 'Failed to start MATLAB.' }
 } finally {
     $env:STAGE84_RUN_ID = $oldRun
     $env:STAGE84_FROZEN_COMMIT = $oldCommit
 }
-$launchDir = Split-Path -Parent $runDir
-if (-not (Test-Path -LiteralPath $launchDir)) { New-Item -ItemType Directory -Path $launchDir | Out-Null }
 $record = @(
-    "MATLAB_PID=$($p.Id)"
+    "START_PROCESS_PID=$($p.Id)"
     "START_TIME=$(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')"
     "RUN_DIR=$runDir"
     "FORMAL_FROZEN_COMMIT=$FrozenCommit"
     "RUN_ID=$RunId"
+    "MATLAB_LOG=$matlabLog"
 ) -join "`r`n"
-Set-Content -LiteralPath (Join-Path $launchDir "$RunId-launch-record.txt") -Value $record -Encoding UTF8
+Set-Content -LiteralPath $recordFile -Value $record -Encoding UTF8
 $record
