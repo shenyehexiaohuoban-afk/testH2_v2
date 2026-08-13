@@ -1,0 +1,3 @@
+method,hourly_grid,dt_h,initial_cuts,fresh_model,stage7_8_empty,checkpoint_write_reload,trace_status_write
+saa,1,8,0,1,1,1,1
+chi2_eta003,1,8,0,1,1,1,1

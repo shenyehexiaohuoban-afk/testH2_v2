@@ -1,0 +1,7 @@
+status=PASS
+method=chi2_eta003
+stop_flag=2
+iterations=17
+train_time_s=604.945052
+cut_count=16816
+completed_at=2026-08-13 19:27:10

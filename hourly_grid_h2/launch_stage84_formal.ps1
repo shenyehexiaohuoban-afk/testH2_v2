@@ -1,0 +1,37 @@
+param(
+    [Parameter(Mandatory=$true)][string]$FrozenCommit,
+    [string]$RunId = 'run-001'
+)
+
+$ErrorActionPreference = 'Stop'
+$repo = Split-Path -Parent $PSScriptRoot
+$matlab = 'D:\Program Files\MATLAB\R2022a\bin\matlab.exe'
+$runDir = Join-Path $repo "results\task-002-stage2b-b3-smoke\84-hourly-grid-formal-training-oos\$RunId"
+if (-not (Test-Path -LiteralPath $matlab)) { throw "MATLAB not found: $matlab" }
+if (Test-Path -LiteralPath $runDir) { throw "Refusing to overwrite $runDir" }
+$head = (git -C $repo rev-parse HEAD).Trim()
+if ($head -ne $FrozenCommit) { throw "HEAD $head does not match frozen commit $FrozenCommit" }
+if (Get-Process MATLAB -ErrorAction SilentlyContinue) { throw 'A MATLAB process is already running.' }
+
+$oldRun = $env:STAGE84_RUN_ID
+$oldCommit = $env:STAGE84_FROZEN_COMMIT
+$env:STAGE84_RUN_ID = $RunId
+$env:STAGE84_FROZEN_COMMIT = $FrozenCommit
+try {
+    $expr = "cd('$($repo.Replace('\','/'))'); addpath('hourly_grid_h2'); run_stage84_formal_training_oos_h2"
+    $p = Start-Process -FilePath $matlab -ArgumentList @('-batch', $expr) -WorkingDirectory $repo -WindowStyle Hidden -PassThru
+} finally {
+    $env:STAGE84_RUN_ID = $oldRun
+    $env:STAGE84_FROZEN_COMMIT = $oldCommit
+}
+$launchDir = Split-Path -Parent $runDir
+if (-not (Test-Path -LiteralPath $launchDir)) { New-Item -ItemType Directory -Path $launchDir | Out-Null }
+$record = @(
+    "MATLAB_PID=$($p.Id)"
+    "START_TIME=$(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')"
+    "RUN_DIR=$runDir"
+    "FORMAL_FROZEN_COMMIT=$FrozenCommit"
+    "RUN_ID=$RunId"
+) -join "`r`n"
+Set-Content -LiteralPath (Join-Path $launchDir "$RunId-launch-record.txt") -Value $record -Encoding UTF8
+$record

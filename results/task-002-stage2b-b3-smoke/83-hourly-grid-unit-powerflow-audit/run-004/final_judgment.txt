@@ -1,0 +1,8 @@
+FINAL_JUDGMENT=PASS_WITH_WARNING
+unit_chain_pass=true
+independent_reconstruction_pass=true
+model_size_duplicate_pass=true
+run004_detail_archive_warning=true
+training_started=false
+oos_started=false
+frozen_model_or_parameter_modified=false

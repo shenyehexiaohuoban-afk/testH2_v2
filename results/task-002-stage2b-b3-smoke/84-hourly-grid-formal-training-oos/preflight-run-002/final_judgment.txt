@@ -1,0 +1,3 @@
+PREFLIGHT=PASS
+long_training_started=false
+gurobi_solve_started=false

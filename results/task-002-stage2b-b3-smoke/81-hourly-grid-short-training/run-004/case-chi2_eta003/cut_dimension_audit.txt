@@ -1,0 +1,5 @@
+cut_count=16816
+cut_dimension=4
+cut_dimension_pass=1
+state_order=[I1,I2,I3,I4]
+stage7_8_terminal_pass=1

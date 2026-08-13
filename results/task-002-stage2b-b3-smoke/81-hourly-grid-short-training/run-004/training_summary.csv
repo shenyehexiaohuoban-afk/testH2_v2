@@ -1,0 +1,3 @@
+method,requested_budget_s,actual_wall_time_s,iterations,forward_passes,backward_passes,cut_count,forward_operating_solves,backward_operating_solves,final_LB,stop_flag,solver_errors,structural_pass
+saa,600,639.5686031,17,17,16,16816,53,16800,59653.6725834188,2,0,1
+chi2_eta003,600,604.945052,17,17,16,16816,53,16800,59803.8133237604,2,0,1

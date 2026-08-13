@@ -1,0 +1,33 @@
+STAGE83_HOURLY_GRID_UNIT_POWERFLOW_AUDIT
+FINAL_JUDGMENT=PASS_WITH_WARNING
+
+UNIT_CHAIN
+baseKV=12.66 kV line-to-line
+baseMVA=10 MVA
+Zbase=16.02756 ohm
+P/Q_internal=kW/kVAr
+R/X_internal=ohm
+voltage_drop=vj-vi+2*(rP+xQ)/(baseKV^2*1000)=0
+baseMVA_cancels_in_direct_ohm_kW_formula=true
+unit_audit_rows=20 all_pass=1
+
+INDEPENDENT_RECONSTRUCTION
+stage80_base_hour21_min_voltage=0.915940163768486 bus=18 max_v_error=4.44e-16
+stage80_hosting_hour21_max_branch_mva=4.95640698938082 branch=1->2 error=1.78e-15
+stage80_hosting_hour23_min_voltage=0.9 bus=18 error=0
+root_balance_max_abs_error_kw=9.09e-13
+root_balance_max_abs_error_kvar=9.09e-13
+
+MODEL_SIZE
+legacy_variables=37 legacy_rows=13 legacy_nnz=68
+hourly_variables=893 hourly_rows=2857 hourly_nnz=5312
+variable_ratio=24.1351 row_ratio=219.769 nnz_ratio=78.1176
+observed_training_slowdown_12_to_13x_scale_compatible=true
+abnormal_grid_row_inflation_found=false
+
+ARCHIVE_BOUNDARY
+run004_path_hour_detail_saved=false
+missing_run004_arrays=P_branch,Q_branch,v_sq,P_PV,P_EL,path_id,state_sequence
+run004_aggregate_extrema_equal_independently_reconstructed_stage80_hosting_extrema=true
+warning=1
+No training, OOS, frozen-model edit, or parameter edit was performed.

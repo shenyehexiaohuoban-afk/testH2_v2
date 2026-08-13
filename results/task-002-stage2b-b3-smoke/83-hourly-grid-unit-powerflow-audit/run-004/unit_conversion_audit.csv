@@ -1,0 +1,21 @@
+parameter,current_value,original_unit,source,conversion,model_unit,example,provenance,status
+baseKV,"12.66",kV line-to-line,C:\Users\chaos\Desktop\biye\test\testH2_v2\data\yuanqi\near_stage_msp_input.mat::NearStageInput.Grid,"kept as 12.66 kV in direct SI-equivalent voltage-drop coefficient",kV base,12.66,,PASS
+baseMVA,"10",MVA,C:\Users\chaos\Desktop\biye\test\testH2_v2\data\yuanqi\near_stage_msp_input.mat::NearStageInput.Grid,"reference only; cancels algebraically in direct ohm-kW formulation",MVA base,10,,PASS
+slack_bus,"1; v_sq=1",bus / p.u.^2,C:\Users\chaos\Desktop\biye\test\testH2_v2\data\yuanqi\near_stage_msp_input.mat::NearStageInput.Grid,"fixed equality v_sq(bus1)=1",bus / p.u.^2,bus1=1,,PASS
+branch_from_to,"33 buses; 32 active radial branches",bus indices,C:\Users\chaos\Desktop\biye\test\testH2_v2\data\yuanqi\near_stage_msp_input.mat::NearStageInput.Grid,"activeRows=branch_indices; edges=power_edges(activeRows,1:2)",directed branch index,branch1: 1->2,,PASS
+branch_R,"0.0922..1.5042",ohm,C:\Users\chaos\Desktop\biye\test\testH2_v2\data\yuanqi\near_stage_msp_input.mat::NearStageInput.Grid,"no numerical conversion; coefficient 2*r/(baseKV^2*1000)",ohm,branch1 R=0.0922,MAT field names declare ohm; generated_by=stage1_ieee33_ccp_nodal_lindistflow_v4_6_3.m; values match the standard IEEE-33 ohmic branch table,PASS
+branch_X,"0.0477..1.721",ohm,C:\Users\chaos\Desktop\biye\test\testH2_v2\data\yuanqi\near_stage_msp_input.mat::NearStageInput.Grid,"no numerical conversion; coefficient 2*x/(baseKV^2*1000)",ohm,branch1 X=0.0477,MAT field names declare ohm; generated_by=stage1_ieee33_ccp_nodal_lindistflow_v4_6_3.m; values match the standard IEEE-33 ohmic branch table,PASS
+Zbase_equivalence,"Zbase=16.02756 ohm; direct-vs-pu example error=0",ohm,C:\Users\chaos\Desktop\biye\test\testH2_v2\data\yuanqi\near_stage_msp_input.mat::NearStageInput.Grid,"rpu=r/Zbase, Ppu=P/(1000*baseMVA); baseMVA cancels exactly",equivalent p.u. coefficient,2*r1*3715/(12.66^2*1000)=0.00427417523316,,PASS
+base_P_load,"33 values; sum=3715",kW,C:\Users\chaos\Desktop\biye\test\testH2_v2\data\yuanqi\near_stage_msp_input.mat::NearStageInput.Grid,"multiply lambda48(tau); remain kW",kW,3715 kW at multiplier 1,,PASS
+base_Q_load,"33 values; sum=2300",kVAr,C:\Users\chaos\Desktop\biye\test\testH2_v2\data\yuanqi\near_stage_msp_input.mat::NearStageInput.Grid,"multiply lambda48(tau); remain kVAr",kVAr,2300 kVAr at multiplier 1,,PASS
+hourly_load_multiplier,"48 values = frozen 24 h profile repeated twice",dimensionless,hourly_grid_h2/load_hourly_grid_data_h2.m::lambda24/lambda48,"lambda48=repmat(lambda24,2,1)",dimensionless,hour21 multiplier=1,,PASS
+PV_capacity_profile,"4 x 200 kW; normalized phi48",kW and dimensionless,hourly_grid_h2/load_hourly_grid_data_h2.m::pv_cap_kw/phi48,"available=200*phi48(tau), remain kW",kW,hour15 per-site available=77.1168 kW,,PASS
+P_EL,"[300,200,120,150]",kW,C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\73-htt-transport-cost-sensitivity\run-001\H02\case-saa\sensitivity_input.mat::HydrogenDevice.el_cap_kw,"hourly LP variable remains kW",kW,total upper bound=770 kW,,PASS
+branch_Smax,"6",MVA,C:\Users\chaos\Desktop\biye\test\testH2_v2\data\yuanqi\near_stage_msp_input.mat::NearStageInput.Grid.branch_limit_mva,"6 MVA * 1000 = 6000 kVA",kVA RHS,octagon RHS uses 6000 kVA,,PASS
+squared_voltage,"v=V^2; bounds [0.81,1.21]; slack=1",p.u.^2,hourly_grid_h2/build_integrated_hourly_stage_model_h2.m,"bounds are squared once; diagnostics take sqrt once",p.u.^2,0.90^2=0.81; 1.10^2=1.21,,PASS
+typical_total_P_pu,"0.3715",p.u.,mechanical base conversion,"3715 kW/(1000*10 MVA)",p.u.,0.3715,,PASS
+typical_total_Q_pu,"0.23",p.u.,mechanical base conversion,"2300 kVAr/(1000*10 MVA)",p.u.,0.23,,PASS
+typical_Smax_pu,"0.6",p.u.,mechanical base conversion,"6 MVA/10 MVA",p.u.,0.6,,PASS
+typical_single_PV_pu,"0.02",p.u.,mechanical base conversion,"200 kW/(1000*10 MVA)",p.u.,0.02,,PASS
+typical_total_PEL_pu,"0.077",p.u.,mechanical base conversion,"770 kW/(1000*10 MVA)",p.u.,0.077,,PASS
+stage_hour_index,"tau=8*(stage-1)+(1:8), stages 1..6 only",integer hour,hourly_grid_h2/build_integrated_hourly_stage_model_h2.m,"no 48-hour loop inside a stage",global hour 1..48,stage3 -> hours17:24,,PASS

@@ -1,0 +1,15 @@
+method=chi2_eta003
+requested_budget_s=600
+seed=20260513
+source_commit=f84fa28a630ca1929120f796bd0a50dbaf3d578c
+input=C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\73-htt-transport-cost-sensitivity\run-001\H02\case-chi2_eta003\sensitivity_input.mat
+terminal_lookup=C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\53-35state-saa-vs-eta003-terminal-loh\run-024\terminal_loh_table_eta_003.csv
+enable_hourly_grid=true
+dt_h=8
+operating_stages=1-6
+stage7=TerminalLOH_analytic
+stage8=absorbing_zero
+voltage_pu=[0.90,1.10]
+branch_smax_mva=6
+site_bus=[24,14,18,31]
+c_d=0.2

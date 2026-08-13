@@ -1,0 +1,2 @@
+available_pv_mean_kwh_path,used_pv_mean_kwh_path,curtailed_pv_mean_kwh_path,pv_utilization_ratio,available_equals_used_plus_curtailed_max_error_kwh,pv_bound_max_violation_kw
+1888.69204,1888.69204,0,1,0,0

@@ -1,0 +1,18 @@
+FINAL_JUDGMENT=PASS_READY_FOR_FORMAL_TRAINING
+run=run-004
+saa_wall_time_s=639.5686031
+dro_wall_time_s=604.945052
+saa_iterations=17
+dro_iterations=17
+saa_cuts=16816
+dro_cuts=16816
+stage7_terminal_only=1
+stage8_absorbing_zero=1
+cut_dimension=4
+saa_min_voltage_pu=0.9 bus=18 hour=23
+dro_min_voltage_pu=0.9 bus=18 hour=23
+saa_max_branch_utilization=0.826067831563 branch=1->2 hour=21
+dro_max_branch_utilization=0.826067831563 branch=1->2 hour=21
+saa_pv_utilization=1
+dro_pv_utilization=1
+formal_oos_run=0

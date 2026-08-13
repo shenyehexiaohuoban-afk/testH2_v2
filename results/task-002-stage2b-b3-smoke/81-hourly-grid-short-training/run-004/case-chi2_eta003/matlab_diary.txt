@@ -1,0 +1,17 @@
+Stage81 H2 Iter 1: LB=7667.86475738 elapsed=0.144s
+Stage81 H2 Iter 2: LB=18014.048932 elapsed=33.802s
+Stage81 H2 Iter 3: LB=49535.997186 elapsed=71.121s
+Stage81 H2 Iter 4: LB=51301.590358 elapsed=107.315s
+Stage81 H2 Iter 5: LB=54459.4262361 elapsed=139.281s
+Stage81 H2 Iter 6: LB=54590.1371138 elapsed=178.407s
+Stage81 H2 Iter 7: LB=57531.0012769 elapsed=217.662s
+Stage81 H2 Iter 8: LB=57611.705141 elapsed=256.283s
+Stage81 H2 Iter 9: LB=57624.3740251 elapsed=295.663s
+Stage81 H2 Iter 10: LB=57724.6207745 elapsed=334.078s
+Stage81 H2 Iter 11: LB=57816.3174787 elapsed=369.430s
+Stage81 H2 Iter 12: LB=58594.2068213 elapsed=407.905s
+Stage81 H2 Iter 13: LB=58628.2247315 elapsed=447.259s
+Stage81 H2 Iter 14: LB=59130.7192487 elapsed=487.570s
+Stage81 H2 Iter 15: LB=59177.7345161 elapsed=526.550s
+Stage81 H2 Iter 16: LB=59803.3139419 elapsed=566.643s
+Stage81 H2 Iter 17: LB=59803.8133238 elapsed=604.945s

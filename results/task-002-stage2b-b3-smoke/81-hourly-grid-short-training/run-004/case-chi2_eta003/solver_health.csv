@@ -1,0 +1,2 @@
+forward_passes,backward_passes,forward_operating_solves,backward_operating_solves,inventory_dual_checks,terminal_hits,absorbing_hits,solver_errors,invalid_duals,balance_violations,grid_violations,stage7_hourly_calls,stage8_hourly_calls,wall_time_s,state_dimension
+17,16,53,16800,16800,8,0,0,0,0,0,0,0,604.945052,4

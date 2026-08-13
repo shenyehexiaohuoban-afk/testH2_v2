@@ -1,0 +1,2 @@
+diagnostic_paths,operating_solves,min_voltage_pu,min_voltage_bus,min_voltage_hour,max_voltage_pu,voltage_near_binding_count,max_true_s_mva,max_branch_utilization,tight_from,tight_to,tight_hour,branch_near_binding_count,max_eq_error,max_ineq_violation,max_inventory_error,max_htt_violation,terminal_semantics_errors
+40,151,0.9,18,23,1,55,4.95640698938082,0.82606783156347,1,2,21,0,4.83169060316868e-13,1.16415321826935e-10,9.9475983006414e-14,0,0

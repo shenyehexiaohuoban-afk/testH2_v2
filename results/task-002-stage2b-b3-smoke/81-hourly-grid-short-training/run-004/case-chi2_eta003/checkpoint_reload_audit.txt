@@ -1,0 +1,11 @@
+checkpoint=C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\81-hourly-grid-short-training\run-004\case-chi2_eta003\stage81_trained_policy_checkpoint.mat
+checkpoint_bytes=230041958
+has_required_fields=1
+method_match=1
+stop_flag=2
+iterations=17
+cut_count=16816
+cut_dimension=4
+cut_dimension_pass=1
+stage7_8_models_empty=1
+reload_pass=1

@@ -1,0 +1,7 @@
+snapshot,global_hour,reconstructed_min_v_pu,reconstructed_min_bus,saved_min_v_pu,saved_min_bus,max_v_sq_error,max_v_magnitude_or_summary_error_pu,reconstructed_max_v_pu,reconstructed_max_bus,evidence_scope,pass
+stage80_base_hour21,21,0.915940163768486,18,0.915940163768486,18,4.44089209850063e-16,4.44089209850063e-16,1,1,base_detail,1
+stage80_hosting_hour21,21,0.9,18,0.9,18,NaN,1.11022302462516e-16,1,1,hosting_summary,1
+stage80_hosting_hour23,23,0.9,18,0.9,18,NaN,0,1,1,hosting_summary,1
+stage80_base_hour15_pv_positive,15,0.934351791079408,33,0.934351791079408,33,4.44089209850063e-16,4.44089209850063e-16,1,1,base_detail,1
+stage81_saa_aggregate,23,0.9,18,0.9,18,NaN,0,1,1,aggregate_extreme_only,1
+stage81_dro_aggregate,23,0.9,18,0.9,18,NaN,0,1,1,aggregate_extreme_only,1

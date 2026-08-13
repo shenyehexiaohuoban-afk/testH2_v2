@@ -1,0 +1,2 @@
+method,iteration,cumulative_training_time_s,cycle_time_s,LB,LB_increment,relative_LB_increment,cumulative_cuts,cuts_added,forward_count,backward_count,forward_wall_time_s,backward_wall_time_s,number_of_stage_solves,latest_checkpoint_id
+chi2_eta003,1,0,0,NaN,NaN,NaN,0,0,0,0,0,0,0,NONE
