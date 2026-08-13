@@ -1,0 +1,7 @@
+P/Q branch variables: kW/kVAr
+base voltage: 12.66 kV line-to-line
+squared voltage drop: v_j=v_i-2*(r_ohm*P_kW+x_ohm*Q_kVAr)/(base_kV^2*1000)
+branch Smax: 6 MVA = 6000 kVA
+octagon a=0.9238795325 b=1.3065629649
+true-circle postcheck uses hypot(P,Q)/1000 <= 6 MVA
+PV and electrolyzer use unity power factor

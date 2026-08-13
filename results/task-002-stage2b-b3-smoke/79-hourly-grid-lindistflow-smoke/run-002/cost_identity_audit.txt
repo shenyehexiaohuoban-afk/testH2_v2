@@ -1,0 +1,5 @@
+hourly_procurement_cost=tariff(tau)*P_grid(tau)
+same_tariff_reapplied_to_P_EL=0
+electrolyzer_om_remains_separate_unit_cost=1
+ordinary electric load cost may be centered later only by a decision-independent fixed constant
+cost_identity_status=DESIGN_PASS_NOT_INTEGRATED_DUE_BASE_GRID_GATE

@@ -1,0 +1,3 @@
+STATUS=NOT_RUN_DUE_BASE_GRID_GATE
+No protected FA-MSP core file was modified before the gate failure.
+A numerical legacy regression was not run because the task mandates stopping after gate B.

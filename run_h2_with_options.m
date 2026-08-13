@@ -33,6 +33,9 @@ addpath(rootDir);
 addpath(fullfile(rootDir, 'fa_h2'));
 addpath(fullfile(rootDir, 'fa_h2', 'fuzhu'));
 addpath(fullfile(rootDir, 'utils'));
+if isfield(opts, 'enable_hourly_grid') && opts.enable_hourly_grid
+    addpath(fullfile(rootDir, 'hourly_grid_h2'));
+end
 
 rng(opts.seed, 'twister');
 

@@ -1,0 +1,17 @@
+STATUS=PASS
+solver_status=OPTIMAL
+stage=3
+state_id=57
+state=[2,1,1]
+min_voltage_pu=0.9
+max_voltage_pu=1
+max_true_s_mva=4.83659842094
+max_p_balance_error=2.84217094304e-13
+max_q_balance_error=1.84741111298e-13
+max_voltage_drop_error=1.11022302463e-16
+max_pv_bound_violation=0
+max_pel_bound_violation=0
+max_h2_conversion_error=0
+max_inventory_balance_error=0
+htt_total_kg=0
+htt_capacity_kg=160

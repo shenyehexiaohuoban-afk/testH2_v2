@@ -49,6 +49,26 @@ sol.vars.u_normal = sol.u_normal;
 sol.vars.z_normal = sol.z_normal;
 sol.vars.theta = sol.theta;
 
+if isfield(model, 'hourly_grid_enabled') && model.hourly_grid_enabled
+    sol.p_el_hourly_kw = reshape(xraw(model.idx.p_el_hourly), ...
+        size(model.idx.p_el_hourly));
+    sol.p_branch_kw = reshape(xraw(model.idx.p_branch), ...
+        size(model.idx.p_branch));
+    sol.q_branch_kvar = reshape(xraw(model.idx.q_branch), ...
+        size(model.idx.q_branch));
+    sol.v_sq = reshape(xraw(model.idx.v_sq), size(model.idx.v_sq));
+    sol.p_grid_kw = xraw(model.idx.p_grid);
+    sol.q_grid_kvar = xraw(model.idx.q_grid);
+    sol.p_pv_kw = reshape(xraw(model.idx.p_pv), size(model.idx.p_pv));
+    sol.vars.p_el_hourly_kw = sol.p_el_hourly_kw;
+    sol.vars.p_branch_kw = sol.p_branch_kw;
+    sol.vars.q_branch_kvar = sol.q_branch_kvar;
+    sol.vars.v_sq = sol.v_sq;
+    sol.vars.p_grid_kw = sol.p_grid_kw;
+    sol.vars.q_grid_kvar = sol.q_grid_kvar;
+    sol.vars.p_pv_kw = sol.p_pv_kw;
+end
+
 pi_ineq = result.pi(1:nIneq);
 pi_eq = result.pi(nIneq + (1:nEq));
 

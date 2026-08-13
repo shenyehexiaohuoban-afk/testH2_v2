@@ -39,6 +39,12 @@ opts.allow_default_terminal_impact = false;
 opts.use_tank_min = false;
 opts.store_eval_decisions = false;
 
+% Hourly IEEE-33 coupling is opt-in.  The accepted legacy path remains the
+% default and does not load or build any grid variables.
+opts.enable_hourly_grid = false;
+opts.hourly_grid_vmin_pu = 0.90;
+opts.hourly_grid_vmax_pu = 1.10;
+
 opts.runTraining = true;
 opts.runEvaluation = true;
 opts.regenOOS = false;

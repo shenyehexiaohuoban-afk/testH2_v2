@@ -1,0 +1,3 @@
+STATUS=NOT_RUN_DUE_BASE_GRID_GATE
+Legacy source inspection: idx.x remains four inventories and add_cut_h2 uses only idx.x.
+No hourly-grid dual/cut smoke was permitted after gate B failed.

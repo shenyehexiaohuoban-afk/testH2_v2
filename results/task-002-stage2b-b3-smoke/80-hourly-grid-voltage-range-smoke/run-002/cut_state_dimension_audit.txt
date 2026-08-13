@@ -1,0 +1,9 @@
+STATUS=PASS
+cut_slope_dimension=4
+site_order=Site1,Site2,Site3,Site4
+gradient=[-40.6153846154,-40.6153846154,-41.641025641,-41.641025641]
+finite_difference=-41.641025673
+extracted_dual=-41.641025641
+dual_error=3.19903321611e-08
+cut_non_state_nnz=0
+cut_resolve_status=OPTIMAL

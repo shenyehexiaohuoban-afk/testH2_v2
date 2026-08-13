@@ -5,6 +5,11 @@ function model = build_stage_model_h2(params, t)
 % normal H2 demand, production, storage, and HTT movement. TerminalLOH is
 % evaluated separately when lf=Nc-1; lf=Nc is zero-cost absorbing.
 
+if isfield(params, 'enable_hourly_grid') && params.enable_hourly_grid
+    model = build_integrated_hourly_stage_model_h2(params, t);
+    return;
+end
+
 Ni = params.Ni;
 
 idx = struct();

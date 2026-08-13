@@ -5,6 +5,12 @@ function model = update_rhs_h2(model, params, k_t, t, prev_x)
 % optional beta cost amplification. It does not use TargetLOH/TerminalLOH;
 % terminal reserve adequacy is handled outside the ordinary LP.
 
+if isfield(params, 'enable_hourly_grid') && params.enable_hourly_grid
+    model = update_integrated_hourly_stage_model_h2( ...
+        model, params, k_t, t, prev_x);
+    return;
+end
+
 if isempty(model)
     error('update_rhs_h2:MissingModel', ...
         'No non-terminal H2 model exists for stage %d and state %d.', t, k_t);

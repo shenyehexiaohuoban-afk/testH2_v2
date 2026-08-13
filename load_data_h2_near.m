@@ -197,6 +197,19 @@ params.fc_cap_kw = fc_cap_kw;
 params.eta_FC = eta_FC;
 params.h2_lhv_kWh_per_kg = h2_lhv_kWh_per_kg;
 params.dt_h = dt_h;
+params.enable_hourly_grid = logical(getOpt(opts, 'enable_hourly_grid', false));
+if params.enable_hourly_grid
+    if abs(dt_h - 8) > 1e-12
+        error('load_data_h2_near:HourlyGridRequires8h', ...
+            'Hourly grid coupling requires dt_h=8.');
+    end
+    gridOverrides = struct();
+    gridOverrides.vmin_pu = getOpt(opts, 'hourly_grid_vmin_pu', 0.90);
+    gridOverrides.vmax_pu = getOpt(opts, 'hourly_grid_vmax_pu', 1.10);
+    params.hourly_grid = load_hourly_grid_data_h2(params.rootDir, gridOverrides);
+else
+    params.hourly_grid = struct();
+end
 
 params.D_normal = D_normal;
 params.H_node_kg = H_node_kg;
