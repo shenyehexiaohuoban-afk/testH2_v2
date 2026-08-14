@@ -1953,3 +1953,11 @@
 - SAA and DRO each completed 3 paths, wrote/reloaded 3 path rows, 96 stage/site rows, and 3 hourly structs containing 104 operating-hour samples. All 19 hourly fields retained identical names/order/types and expected site/bus/branch dimensions; Stage1-6 hour mapping passed and Stage7/8 generated no hourly-grid records. Serialization, reload, common-path identity, model constraints, and terminal handling passed with zero recorded violations.
 - An actual-record serialization probe wrote paths1-2, reset the batch to a typed-empty slice, appended path3, safely wrote a second MAT batch, and reloaded both batches for each method. Both pre-reset and post-reset schema checks passed, proving append remains valid after the formal flush reset operation.
 - Checkpoint files and the common path bank retained their original byte sizes and modification times. SAA/DRO cut identities remained `645314/643212` with reported delta zero. Final run-002 judgment is `PASS_READY_TO_FREEZE_OOS_FIX`; results and code remain local and uncommitted/unpushed as required.
+
+### 2026-08-14 - task-002 Stage-84B full common-path OOS runner preflight
+
+- Stage-84A 的 19-field hourly-response schema 修复及 run-001/run-002 轻量证据已冻结并推送为 `4935f227c23010e2afd79475744da212ba4232a4`（`fix: preserve Stage84 OOS hourly response schema`）；正式训练身份仍为 `cd7084300b0a50ade053e6b45ea7a1701d52c307`。
+- 新增隔离的 Stage-84B evaluation/output/analysis runner：顺序评估既有 SAA 与 Pearson chi-square DRO `eta=0.03` final checkpoints，对两边复用同一冻结 `10000x8` common bank，不设置时间门、不训练、不新增 cuts；path/stage CSV 每100路径安全关闭一批，19-field hourly MAT v7.3 每25路径安全关闭并 reload 一批，全部 OOS 完成后才启动离线 paired analysis。
+- `preflight-run-001` 在 R2022a safe-write probe 处发现临时文件名 `.csv.tmp` 无法推断文本格式；该失败证据已保留，正式 OOS 未启动，Gurobi 未调用。Stage-84B output 层随后仅将临时 CSV 命名修正为 `.tmp.csv`，未修改 `fa_h2/`、优化模型、TerminalLOH、Markov、HTT、LinDistFlow、参数、checkpoint 或 common bank。
+- 非覆盖复核 `preflight-run-002` 为 `PREFLIGHT_PASS_READY_TO_FREEZE_RUNNER`：checkpoint method/training commit/cut counts/state order、Stage-84A accepted gate、typed-empty fix、冻结路径身份、Python依赖、CSV safe write/reload 与磁盘门槛全部 PASS；MATLAB `checkcode`、Python `py_compile` 和 PowerShell parser 均通过。
+- 根据 Stage-84A 三路径实测文件外推，SAA+DRO 原始输出约 `1.0803 GiB`，分析余量按至少 `1 GiB` 计，三倍安全要求约 `6.2408 GiB`；preflight 时 C 盘可用 `237.9030 GiB`。本条记录时正式 Stage-84B `run-001` 尚未启动，且没有删除、移动或覆盖任何历史输出。

@@ -1,0 +1,7 @@
+STATUS=PREFLIGHT_FAIL
+IDENTIFIER=MATLAB:writetable:FileType
+BOUNDARY=safe_write_probe
+MESSAGE=R2022a could not infer CSV output type from the temporary suffix .csv.tmp.
+FORMAL_OOS_STARTED=false
+GUROBI_SOLVE_STARTED=false
+HISTORY_ACTION=preserved_without_overwrite
