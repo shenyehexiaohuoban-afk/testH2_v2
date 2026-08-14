@@ -1,0 +1,3 @@
+method,training_commit,checkpoint_cuts,smoke_path_ids,completed_paths,path_records,stage_site_records,hourly_struct_records,hourly_samples,serialization_pass,reload_pass,schema_consistency_pass,path_identity_pass,stage_identity_pass,time_index_pass,no_stage7_8_hourly_records,constraint_violations,checkpoint_unchanged,cut_delta,pass
+saa,cd7084300b0a50ade053e6b45ea7a1701d52c307,645314,"1,2,3",3,3,96,3,104,1,1,1,1,1,1,1,0,1,0,1
+chi2_eta003,cd7084300b0a50ade053e6b45ea7a1701d52c307,643212,"1,2,3",3,3,96,3,104,1,1,1,1,1,1,1,0,1,0,1

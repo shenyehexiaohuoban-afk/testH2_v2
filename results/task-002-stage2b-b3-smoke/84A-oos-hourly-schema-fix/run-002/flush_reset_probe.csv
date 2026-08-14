@@ -1,0 +1,3 @@
+method,typed_empty_before_append,typed_empty_after_reset,records_before_reset,records_after_reset,reload_and_schema_pass,pass
+saa,1,1,2,1,1,1
+chi2_eta003,1,1,2,1,1,1

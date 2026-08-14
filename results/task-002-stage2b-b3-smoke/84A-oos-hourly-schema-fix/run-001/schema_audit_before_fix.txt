@@ -1,0 +1,62 @@
+STAGE=84A
+RUN=run-001
+AUDIT_PHASE=BEFORE_FIX
+TRAINING_COMMIT=cd7084300b0a50ade053e6b45ea7a1701d52c307
+FORMAL_FAILED_RUN=84-hourly-grid-formal-training-oos/run-001
+
+ROOT_CAUSE
+hourBatch is initialized and reset as struct([]), which has no fields.
+Each hr record is a scalar struct with the 19 fields listed below.
+The first subscripted assignment hourBatch(end+1)=hr therefore attempts to
+assign a fielded struct into a fieldless struct array and raises
+MATLAB:heterogeneousStrucAssignment. The same mismatch would recur after each
+25-record batch flush because the container is reset to struct([]) again.
+
+HR_SCHEMA_IN_FIELD_ORDER
+1 method: string scalar
+2 path_id: double scalar
+3 state_sequence: double 1x8
+4 global_hour: double 1xH
+5 stage: double 1xH
+6 markov_state: double 1xH
+7 p_el_kw: double 4xH
+8 h2_production_kg: double 4xH
+9 pv_available_kw: double 4xH
+10 pv_utilized_kw: double 4xH
+11 pv_curtailed_kw: double 4xH
+12 grid_import_kw: double 1xH
+13 bus_voltage_pu: double 33xH
+14 branch_p_kw: double 32xH
+15 branch_q_kvar: double 32xH
+16 branch_true_s_mva: double 32xH
+17 site_electrical_bus: double 1x4
+18 branch_from: double 1x32
+19 branch_to: double 1x32
+
+H is a multiple of 8 between 0 and 48 because paths can reach terminal or
+absorbing states before all six operating stages. Different H values are valid
+field values and do not constitute a struct schema difference.
+
+SCHEMA_CONSISTENCY_FINDINGS
+- empty_hour creates every field unconditionally and in one fixed order.
+- store_hour only appends to existing fields and never creates fields.
+- No operating-state or hourly branch adds or removes a field.
+- Empty hourly arrays are double and non-empty hourly arrays remain double.
+- Row/column orientation is explicitly fixed by initialization and append logic.
+- Stage 7 TerminalLOH and stage 8 absorbing handling do not call store_hour.
+- No additional hr schema mismatch was found.
+
+OUTPUT_CONTRACTS
+- Path-level CSV uses path_names() and is consumed by final comparison and
+  representative-path selection.
+- Stage/site CSV uses stage_names() and has no separate downstream reader.
+- Hourly MAT batches contain hourly_response plus metadata and currently have no
+  other repository reader. Batch MAT save already uses temp-file then move.
+- A typed-empty hourly-response struct array preserves all existing field names,
+  order, values, path IDs, state sequences, and downstream file names.
+
+PLANNED_MINIMUM_FIX
+Initialize the batch from an empty slice of the canonical empty_hour template,
+and reset flushed batches with an empty slice that preserves those fields.
+No optimization model, checkpoint, policy, cut, path bank, or numerical formula
+will be changed.

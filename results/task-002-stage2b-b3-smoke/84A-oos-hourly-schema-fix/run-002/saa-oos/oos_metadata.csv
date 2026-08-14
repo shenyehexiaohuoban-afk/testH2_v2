@@ -1,0 +1,2 @@
+method,requested_pure_time_s,actual_pure_time_s,completed_paths,constraint_violations,checkpoint,frozen_commit,stop_flag
+saa,Inf,1.6315319,3,0,C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\84-hourly-grid-formal-training-oos\run-001\checkpoints\saa\checkpoint_final.mat,cd7084300b0a50ade053e6b45ea7a1701d52c307,2

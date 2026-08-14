@@ -8,7 +8,8 @@ if string(c.checkpoint_metadata.method)~=method||p.Ni~=4
 end
 if ~exist(outDir,'dir'),mkdir(outDir);end
 pathRows=cell(0,numel(path_names()));stageRows=cell(0,numel(stage_names()));
-hourBatch=struct([]);batchId=0;pure=0;completed=0;viol=0;
+hourTemplate=empty_hour(NaN,method,zeros(1,p.T),p);
+hourBatch=hourTemplate([]);batchId=0;pure=0;completed=0;viol=0;
 write_oos_status(runDir,method,completed,pure,pid,commit);
 
 for q=1:size(pathBank,1)
@@ -18,7 +19,7 @@ for q=1:size(pathBank,1)
     stageRows=[stageRows;sr]; %#ok<AGROW>
     hourBatch(end+1)=hr; %#ok<AGROW>
     if numel(hourBatch)>=25
-        batchId=batchId+1;save_batch(outDir,batchId,hourBatch,p,method);hourBatch=struct([]);
+        batchId=batchId+1;save_batch(outDir,batchId,hourBatch,p,method);hourBatch=hourBatch([]);
     end
     writetable(cell2table(pathRows,'VariableNames',path_names()),fullfile(outDir,'oos_path_summary.csv'));
     writetable(cell2table(stageRows,'VariableNames',stage_names()),fullfile(outDir,'oos_stage_site_response.csv'));

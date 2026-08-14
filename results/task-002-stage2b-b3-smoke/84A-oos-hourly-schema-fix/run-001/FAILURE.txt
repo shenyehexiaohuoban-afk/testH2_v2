@@ -1,0 +1,12 @@
+STATUS=FAIL
+identifier=MATLAB:UndefinedFunction
+message=Function or variable 'run_stage84a_oos_schema_smoke_h2' not recognized.
+failure_boundary=MATLAB batch entry-point resolution
+checkpoint_loaded=false
+common_path_bank_loaded=false
+gurobi_solve_started=false
+training_started=false
+formal_timed_oos_started=false
+retry_performed=false
+launch_command=cd(repository_root); run_stage84a_oos_schema_smoke_h2;
+required_path_missing_at_launch=hourly_grid_h2
