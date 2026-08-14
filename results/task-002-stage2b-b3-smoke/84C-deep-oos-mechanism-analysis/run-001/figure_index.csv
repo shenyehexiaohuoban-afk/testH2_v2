@@ -1,0 +1,15 @@
+figure_filename,source_table_data,path_id,metric,purpose_cn,main_observation_cn
+figures/stage_dynamic_trajectories.png,stage_dynamic_summary.csv,,inventory/production/HTT/shortage,条件均值；path count 随 stage 变化，不是固定 cohort,Stage1-6 conditional paired 动态
+figures/stage_grid_pel_trajectories.png,stage_dynamic_summary.csv,,P_EL/grid/voltage/branch,条件均值；同时受时间演化和 surviving-path composition 影响,Stage1-6 Grid-H2 conditional paired 动态
+figures/hour48_grid_h2_timeseries.png,hour48_grid_summary.csv,,48h P_EL/grid/voltage/branch,每小时分母为该行 path_hour_count 个 observed operating records,48h 电解与电网压力条件时序
+figures/bus_voltage_q05_heatmap.png,bus_hour_voltage_summary.csv,,bus×hour q05 voltage,低压危险尾使用 q05 而非 q95,33-bus 低电压 q05 热图
+figures/branch_loading_q99.png,branch_loading_summary.csv,,branch utilization q99,判断 thermal limit 是否主要瓶颈,Branch 1→2 为主要高负载支路但未接近 6 MVA
+figures/terminal_target_actual_gap.png,terminal_target_actual_gap_decomposition.csv,,terminal decomposition,避免只比较 raw gap,Terminal-hit target、actual 与逐站 gap
+figures/htt_stage_net_roles.png,htt_stage_direction_summary.csv,,site in/out/net by stage,仅为站点 net-role switching；不是 stage-level source-destination arc switching,Site1/4 总体偏净接收，Site2/3 总体偏净输出
+figures/representative_path_1.png,representative_path_index.csv + Stage-84B stage/site,1,inventory/production/HTT/P_EL,机械代表路径，不重新求解,代表路径 1 的 paired stage 行为
+figures/representative_path_3.png,representative_path_index.csv + Stage-84B stage/site,3,inventory/production/HTT/P_EL,机械代表路径，不重新求解,代表路径 3 的 paired stage 行为
+figures/representative_path_9.png,representative_path_index.csv + Stage-84B stage/site,9,inventory/production/HTT/P_EL,机械代表路径，不重新求解,代表路径 9 的 paired stage 行为
+figures/representative_path_17.png,representative_path_index.csv + Stage-84B stage/site,17,inventory/production/HTT/P_EL,机械代表路径，不重新求解,代表路径 17 的 paired stage 行为
+figures/representative_path_23.png,representative_path_index.csv + Stage-84B stage/site,23,inventory/production/HTT/P_EL,机械代表路径，不重新求解,代表路径 23 的 paired stage 行为
+figures/representative_path_101.png,representative_path_index.csv + Stage-84B stage/site,101,inventory/production/HTT/P_EL,机械代表路径，不重新求解,代表路径 101 的 paired stage 行为
+figures/representative_path_131.png,representative_path_index.csv + Stage-84B stage/site,131,inventory/production/HTT/P_EL,机械代表路径，不重新求解,代表路径 131 的 paired stage 行为

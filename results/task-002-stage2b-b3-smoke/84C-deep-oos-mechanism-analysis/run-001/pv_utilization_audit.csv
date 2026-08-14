@@ -1,0 +1,3 @@
+method,path_count,zero_pv_path_count,positive_pv_path_count,aggregate_available_kwh,aggregate_used_kwh,aggregate_curtailed_kwh,aggregate_utilization,aggregate_curtailment_rate,positive_pv_pathwise_ratio_mean,positive_pv_pathwise_ratio_median,positive_pv_pathwise_ratio_min,corr_pv_used_total_p_el,corr_pv_used_grid_import,corr_pv_used_minimum_voltage,definition_cn
+saa,10000,1086,8914,17950107.937599994,17950107.937599994,0,1.0,0.0,1.0,1.0,1,-0.7452711384276792,0.9307102743153112,-0.7336887799108875,aggregate ratio 排除零分母歧义；pathwise ratio 仅统计 PV_available>0 paths
+chi2_eta003,10000,1086,8914,17950107.937599994,17950107.937599994,0,1.0,0.0,1.0,1.0,1,-0.7721989175611473,0.9298246076229183,-0.7330817960105842,aggregate ratio 排除零分母歧义；pathwise ratio 仅统计 PV_available>0 paths

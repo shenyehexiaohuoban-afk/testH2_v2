@@ -1,0 +1,9 @@
+method,site,path_count,paths_with_switch,switch_frequency,mean_switch_count,max_switch_count,definition_cn
+chi2_eta003,1,10000,2228,0.2228,0.2414,4,site-level net HTT role switching；不是 source-destination arc switching
+chi2_eta003,2,10000,1715,0.1715,0.1888,3,site-level net HTT role switching；不是 source-destination arc switching
+chi2_eta003,3,10000,3147,0.3147,0.3517,3,site-level net HTT role switching；不是 source-destination arc switching
+chi2_eta003,4,10000,1095,0.1095,0.1218,3,site-level net HTT role switching；不是 source-destination arc switching
+saa,1,10000,1467,0.1467,0.1545,3,site-level net HTT role switching；不是 source-destination arc switching
+saa,2,10000,2064,0.2064,0.234,3,site-level net HTT role switching；不是 source-destination arc switching
+saa,3,10000,1509,0.1509,0.1773,4,site-level net HTT role switching；不是 source-destination arc switching
+saa,4,10000,1611,0.1611,0.1754,3,site-level net HTT role switching；不是 source-destination arc switching

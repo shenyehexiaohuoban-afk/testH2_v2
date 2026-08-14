@@ -1,0 +1,7 @@
+method,frequency_type,numerator,denominator,frequency,definition_cn
+saa,fixed_48h_slot_frequency,11910,480000,0.0248125,受限小时数 / (10000 paths × 48 fixed horizon hours)；对应 Stage-84B 2.x% 指标
+saa,observed_operating_hour_frequency,11910,284328,0.041888241748965986,受限小时数 / 实际保存的 operating-hour records
+saa,path_level_ever_limited,7710,10000,0.771,至少一个小时受限的 path 数 / 10000 paths
+chi2_eta003,fixed_48h_slot_frequency,14146,480000,0.029470833333333335,受限小时数 / (10000 paths × 48 fixed horizon hours)；对应 Stage-84B 2.x% 指标
+chi2_eta003,observed_operating_hour_frequency,14146,284328,0.04975239863819251,受限小时数 / 实际保存的 operating-hour records
+chi2_eta003,path_level_ever_limited,7924,10000,0.7924,至少一个小时受限的 path 数 / 10000 paths

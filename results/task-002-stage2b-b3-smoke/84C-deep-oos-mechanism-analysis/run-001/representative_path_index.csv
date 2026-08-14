@@ -1,0 +1,21 @@
+path_id,state_sequence,selection_rule,relevant_stages_hours,main_observation_cn
+1,65-74-68-21-48-56-56-32,existing_stage84b_extreme_index,1-6 / terminal,lowest_voltage;lowest_voltage
+3,65-66-84-93-88-112-112-112,shared_prefix_length_5,6,prefix length 5 后分叉
+9,65-154-187-180-181-198-239-192,existing_stage84b_extreme_index,1-6 / terminal,highest_branch_utilization;highest_branch_utilization
+17,65-82-19-28-47-56-56-56,shared_prefix_length_3,4,prefix length 3 后分叉
+23,65-26-43-53-39-16-16-56,near_equal_negative_control,1-6 / terminal,SAA/DRO 行为近似一致的负对照
+101,65-82-108-110-111-32-48-24,shared_prefix_length_4,5,prefix length 4 后分叉
+131,65-131-196-245-231-248-256-224,existing_stage84b_extreme_index,1-6 / terminal,highest_ordinary_shortage;highest_ordinary_shortage
+287,65-108-109-102-111-88-120-192,earliest_inventory_divergence_over_1kg,2,最早出现超过 1 kg 的 paired inventory divergence
+875,65-100-78-63-80-64-96-64,existing_stage84b_extreme_index,1-6 / terminal,largest_dro_minus_saa_htt
+885,65-132-166-191-200-192-176-192,existing_stage84b_extreme_index,1-6 / terminal,largest_terminal_gap_improvement
+1046,65-82-163-158-151-224-224-224,largest_absolute_htt_difference,1-6 / terminal,最大 HTT 差异
+2003,65-123-189-256-192-240-232-272,site3_limited_but_net_export,1-6 / terminal,Site3 受限且仍为最大净输出之一
+3282,65-154-195-268-245-207-280-264,existing_stage84b_extreme_index,1-6 / terminal,highest_htt
+3837,65-82-155-140-165-206-199-272,existing_stage84b_extreme_index,1-6 / terminal,highest_site3_grid_limited_frequency
+4401,65-130-171-188-181-214-279-280,existing_stage84b_extreme_index,1-6 / terminal,highest_htt
+4469,65-132-175-248-256-272-312-320,existing_stage84b_extreme_index,1-6 / terminal,highest_total_cost;highest_terminal_gap;highest_total_cost;highest_terminal_gap
+7379,65-74-147-100-77-142-191-264,existing_stage84b_extreme_index,1-6 / terminal,highest_site3_grid_limited_frequency
+7582,65-140-215-264-248-272-248-176,existing_stage84b_extreme_index,1-6 / terminal,largest_terminal_gap_deterioration;largest_absolute_cost_difference
+8366,65-108-93-110-95-72-72-64,existing_stage84b_extreme_index,1-6 / terminal,largest_dro_minus_saa_production;largest_dro_minus_saa_final_inventory
+9629,65-124-190-271-312-264-280-264,risk_strengthens_then_eases,1-6 / terminal,风险强度先增强后缓和

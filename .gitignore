@@ -86,3 +86,20 @@ credentials/
 # Source, configuration, documentation, checks, and required input data are
 # intentionally not excluded. In particular, do not add broad rules for
 # MATLAB files, CSV files, MAT inputs, or FIG files.
+
+# Stage-84 formal policies/common bank: immutable local experiment inputs
+/results/task-002-stage2b-b3-smoke/84-hourly-grid-formal-training-oos/run-*/checkpoints/
+/results/task-002-stage2b-b3-smoke/84-hourly-grid-formal-training-oos/run-*/03-common-oos-paths/oos_path_bank.mat
+
+# Stage-84B reproducible raw OOS batches and combined path/stage responses
+/results/task-002-stage2b-b3-smoke/84B-full-common-oos-paired-analysis/run-*/01-saa-oos/hourly-batches/
+/results/task-002-stage2b-b3-smoke/84B-full-common-oos-paired-analysis/run-*/01-saa-oos/path-batches/
+/results/task-002-stage2b-b3-smoke/84B-full-common-oos-paired-analysis/run-*/01-saa-oos/stage-site-batches/
+/results/task-002-stage2b-b3-smoke/84B-full-common-oos-paired-analysis/run-*/01-saa-oos/oos_path_summary.csv
+/results/task-002-stage2b-b3-smoke/84B-full-common-oos-paired-analysis/run-*/01-saa-oos/oos_stage_site_response.csv
+/results/task-002-stage2b-b3-smoke/84B-full-common-oos-paired-analysis/run-*/02-dro-oos/hourly-batches/
+/results/task-002-stage2b-b3-smoke/84B-full-common-oos-paired-analysis/run-*/02-dro-oos/path-batches/
+/results/task-002-stage2b-b3-smoke/84B-full-common-oos-paired-analysis/run-*/02-dro-oos/stage-site-batches/
+/results/task-002-stage2b-b3-smoke/84B-full-common-oos-paired-analysis/run-*/02-dro-oos/oos_path_summary.csv
+/results/task-002-stage2b-b3-smoke/84B-full-common-oos-paired-analysis/run-*/02-dro-oos/oos_stage_site_response.csv
+/results/task-002-stage2b-b3-smoke/84B-full-common-oos-paired-analysis/run-*/03-analysis/paired_path_comparison.csv

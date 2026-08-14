@@ -1,0 +1,11 @@
+method,x,y,pearson_correlation,path_count,boundary_cn
+saa,total_htt_kg,terminal_target_total_kg,0.511781691026416,10000,path-level association；不是因果效应
+saa,total_htt_kg,total_terminal_inventory_kg,0.7943238948331045,10000,path-level association；不是因果效应
+saa,total_htt_kg,terminal_gap_kg,0.13316739090719543,10000,path-level association；不是因果效应
+saa,total_htt_kg,site3_grid_limited_frequency,0.7196820377311806,10000,path-level association；不是因果效应
+saa,total_htt_kg,ordinary_shortage_kg,0.5209759759935293,10000,path-level association；不是因果效应
+chi2_eta003,total_htt_kg,terminal_target_total_kg,0.5222766484810389,10000,path-level association；不是因果效应
+chi2_eta003,total_htt_kg,total_terminal_inventory_kg,0.8081340179922906,10000,path-level association；不是因果效应
+chi2_eta003,total_htt_kg,terminal_gap_kg,0.12256561612529554,10000,path-level association；不是因果效应
+chi2_eta003,total_htt_kg,site3_grid_limited_frequency,0.6689416101984623,10000,path-level association；不是因果效应
+chi2_eta003,total_htt_kg,ordinary_shortage_kg,0.49201602532830824,10000,path-level association；不是因果效应

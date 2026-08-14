@@ -1,0 +1,3 @@
+method,hourly_batch_count,hourly_struct_records,operating_hour_records,valid_path_hour_slots,site3_limited_hour_records,valid_slots,schema_version
+saa,400,10000,284328,284328,11910,284328,stage84b-hourly-v1
+chi2_eta003,400,10000,284328,284328,14146,284328,stage84b-hourly-v1

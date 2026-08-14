@@ -1,0 +1,33 @@
+method,direction,path_count,mean_kg,median_kg,q95_kg,max_kg,active_path_frequency,scope_cn
+saa,1_to_2,10000,0.3023090262531704,0.0,0.0,34.1254668782307,0.046,path-level 累计 source-destination arc；无法分解到 stage/state
+saa,1_to_3,10000,0.17656387519547012,0.0,0.0,54.0939841176263,0.0237,path-level 累计 source-destination arc；无法分解到 stage/state
+saa,1_to_4,10000,1.3917581207168426,0.0,13.520518426540143,34.5553099931434,0.127,path-level 累计 source-destination arc；无法分解到 stage/state
+saa,2_to_1,10000,7.464787451710347,6.67399167599311,20.794694242001636,42.6395484609496,0.6463,path-level 累计 source-destination arc；无法分解到 stage/state
+saa,2_to_3,10000,0.6138768934011732,0.0,3.0973188035986308,43.8612989392344,0.1265,path-level 累计 source-destination arc；无法分解到 stage/state
+saa,2_to_4,10000,8.876769829060866,5.90750806233973,22.1756030938427,73.5091672889692,0.6831,path-level 累计 source-destination arc；无法分解到 stage/state
+saa,3_to_1,10000,24.35362281622323,29.40866060473345,39.9576593630437,79.4677797719462,0.7773,path-level 累计 source-destination arc；无法分解到 stage/state
+saa,3_to_2,10000,1.1547208686215118,0.0,6.674248688304098,65.5794420347746,0.1722,path-level 累计 source-destination arc；无法分解到 stage/state
+saa,3_to_4,10000,0.7797637259724172,0.0,3.8554483509314,49.5072495584124,0.1892,path-level 累计 source-destination arc；无法分解到 stage/state
+saa,4_to_1,10000,0.641700779669415,0.0,4.95944308675834,39.1078843853389,0.1449,path-level 累计 source-destination arc；无法分解到 stage/state
+saa,4_to_2,10000,0.4105463818403288,0.0,0.448744577699639,45.0163994026975,0.0618,path-level 累计 source-destination arc；无法分解到 stage/state
+saa,4_to_3,10000,0.0825803437306676,0.0,0.0,22.3606277556287,0.0237,path-level 累计 source-destination arc；无法分解到 stage/state
+saa,site1_net_in_minus_out,10000,30.58948002543721,36.16456354166771,52.9217653137852,76.124899283337,0.7812,path-level net；正=净流入，负=净流出
+saa,site2_net_in_minus_out,10000,-15.0878578974573,-16.648490234677,0.0,15.192303802789603,0.7791,path-level net；正=净流入，负=净流出
+saa,site3_net_in_minus_out,10000,-25.41508629848979,-30.2080991047555,0.0,0.0,0.7816,path-level net；正=净流入，负=净流出
+saa,site4_net_in_minus_out,10000,9.913464170509766,5.63718352257493,35.0625378350518,69.82236355818594,0.7121,path-level net；正=净流入，负=净流出
+chi2_eta003,1_to_2,10000,0.41112843962386514,0.0,2.26356042669909,34.0608027101756,0.0645,path-level 累计 source-destination arc；无法分解到 stage/state
+chi2_eta003,1_to_3,10000,0.25518880360673285,0.0,0.373847940231869,26.0122237566815,0.0559,path-level 累计 source-destination arc；无法分解到 stage/state
+chi2_eta003,1_to_4,10000,2.4399600187549724,0.0,17.027994714995277,60.0008238121963,0.2158,path-level 累计 source-destination arc；无法分解到 stage/state
+chi2_eta003,2_to_1,10000,8.388269545229956,5.37573844734894,32.7858380836437,60.4804194933274,0.6932,path-level 累计 source-destination arc；无法分解到 stage/state
+chi2_eta003,2_to_3,10000,1.5618675415709204,0.0,8.043952337238569,54.2780511649002,0.2887,path-level 累计 source-destination arc；无法分解到 stage/state
+chi2_eta003,2_to_4,10000,10.490526591431228,10.4554375036163,24.8979131249991,50.3422473787066,0.743,path-level 累计 source-destination arc；无法分解到 stage/state
+chi2_eta003,3_to_1,10000,27.833287382014788,33.0211184982285,43.42050366197619,60.1811514528897,0.7817,path-level 累计 source-destination arc；无法分解到 stage/state
+chi2_eta003,3_to_2,10000,0.44458636639351146,0.0,3.498354914649402,27.3316087801071,0.1209,path-level 累计 source-destination arc；无法分解到 stage/state
+chi2_eta003,3_to_4,10000,0.46849344514691693,0.0,3.81228617015596,25.1186173304635,0.1363,path-level 累计 source-destination arc；无法分解到 stage/state
+chi2_eta003,4_to_1,10000,0.4267387208204499,0.0,2.4913017090500187,31.6091220217498,0.0899,path-level 累计 source-destination arc；无法分解到 stage/state
+chi2_eta003,4_to_2,10000,0.12797446918015817,0.0,0.0,20.531931166348,0.0293,path-level 累计 source-destination arc；无法分解到 stage/state
+chi2_eta003,4_to_3,10000,0.07698428386121549,0.0,0.0,20.531931166348,0.0198,path-level 累计 source-destination arc；无法分解到 stage/state
+chi2_eta003,site1_net_in_minus_out,10000,33.542018386080485,39.2437415659913,62.1681982110307,89.04633185927281,0.7817,path-level net；正=净流入，负=净流出
+chi2_eta003,site2_net_in_minus_out,10000,-19.456974403034952,-22.67664999973837,0.0,0.0,0.7814,path-level net；正=净流入，负=净流出
+chi2_eta003,site3_net_in_minus_out,10000,-26.852326564516424,-32.8182881403455,0.0,0.0,0.7817,path-level net；正=净流入，负=净流出
+chi2_eta003,site4_net_in_minus_out,10000,12.767282581471393,11.6554112054339,33.24214687060783,49.64448798740929,0.768,path-level net；正=净流入，负=净流出

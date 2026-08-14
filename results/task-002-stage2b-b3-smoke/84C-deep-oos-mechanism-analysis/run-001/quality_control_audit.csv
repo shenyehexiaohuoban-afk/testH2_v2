@@ -1,0 +1,11 @@
+check,pass,detail_cn
+required_files_exist,True,要求 22 个核心文件
+csv_reload,True,不可重载: none
+no_textual_nan_inf,True,异常文件: none
+figure_index_matches_files,True,缺失图: none；未索引图: none
+terminal_gap_reconstruction,True,"max errors=1.293e-12,1.208e-12 kg"
+stage84b_manifest_unchanged,True,sha256=35d188033abf89c77062f27257fd7a49a1cbe9bc1ab36bd700bab9a9002df685
+lineage_identity,True,三层 lineage 与冻结 commit 一致
+common_path_identity,True,10000 paired path/state identity
+no_optimization_invoked,True,脚本只读取 CSV/MAT 汇总，不导入或调用 Gurobi
+interpretation_boundary,True,SAA/DRO 为同一 FA-MSP；tail 非 W1-W3 EENS
