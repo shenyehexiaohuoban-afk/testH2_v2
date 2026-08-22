@@ -1,0 +1,2 @@
+unique_failure_topologies,topology_observations,cache_misses_unique_solves,cache_hits,cycle_detected,radial_forest_valid,source_component_deterministic,h2_site_component_deterministic,same_failure_mask_same_classification,source_bus,tie_order,topology_replay_sha256,gate
+160862,1575000,160862,1414138,NO,YES,YES,YES,YES_BY_SINGLE_CACHED_IDENTITY,1,8-21;9-15;12-22;18-33;25-29,4b3d73b4a10200e87456b52d2b58379c96e0f88c7ae2485d5d9baaadc1fcf798,PASS
