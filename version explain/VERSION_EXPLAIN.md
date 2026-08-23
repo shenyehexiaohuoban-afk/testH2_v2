@@ -284,3 +284,13 @@
 **结果：** Stage1 `120.12 -> 109.98 kg`（`-8.4416%`），站点变化为 `[0,-7.8,-2.34,0] kg`；Stage1/2/3 mean ending inventory 分别下降 `10.14/95.848/120.297 kg`。Stage2+3 production 未上移而是合计下降 `122.468 kg`，所以机制为 `LEVEL_REDUCTION`，不是 wait-and-see temporal shift。mean ordinary shortage `6.1403 -> 1.5418 kg`，mean terminal gap `6.3511 -> 5.5830 kg`，mean HTT `24.8328 -> 22.5113 kg`。综合判断 `EARLY_COMMITMENT_EFFECT=MODERATELY_REDUCED`。
 
 **工程边界：** run-001 为 adopted-audit 字段名 preflight 失败；run-002 在 path 6700 原生 heap corruption；run-003 完成全部 10000 OOS 和 `OOS_COMPLETE` 后在 MATLAB 退出阶段复现 `0xc0000374`。最终只做 external SHA 与 Python report-only recovery，没有再次加载 checkpoint。状态 `FORMAL_CONTROLLED_RETRAINING_DIAGNOSTIC / PASS`，`FULLY_CONVERGED=NO`，不是最终策略。
+
+### Stage89O：Stage89H vs Stage89N common-path 机制后处理
+
+**基于：** Stage89H accepted run-003、Stage89N accepted run-003、byte-identical 10000-path manifest/同一 OOS bank，以及 Stage85U-C/D 的 shared-prefix 与 PCR/WES accepted definitions。
+
+**改了什么：** 只新增参数化 Python 后处理器和 Stage89O 派生 CSV/figure/README；没有训练、OOS、checkpoint load、optimizer、TerminalLOH/W/model/penalty/demand/HTT/Pmax/tank/state transition 修改。首事件分类严格分开 a=1 physical dissipation、lf8 absorbing 与真正 Stage7。
+
+**结果：** first-event Stage7/a1/lf8 为 `6124/3497/379`。mean production `322.677→186.005 kg`，reserve level `STRONGLY_REDUCED / LEVEL_REDUCTION`。390 组 canonical PCR production median `0.876→0.903`、WES production `0.124→0.097`，综合 wait-and-see `WEAKENED`；1535 组 same-intensity/different-loc 的 4D inventory L1 mean `65.061→51.223 kg`，spatial adaptation `WEAKENED`。Stage7 mean gap proxy `10.371→9.117 kg`，但 S5/Stage6 arrival 恶化。q99 cost/gap `+3.29/+3.64%`，worst paired 1% 全为 Stage7、a4/a5=`51/49`，主因 reduced extreme buffer 加 terminal gap penalty。
+
+**解释边界：** lower inventory 与 shortage improvement 强共现但只记 `MODERATE_SIGNAL`，不作单因果。Stage89N accepted run-003 没有 hourly detail，paired hourly 输出只能是 stage aggregate。没有 W1-W3 actual recourse paired output，故 `REALIZED_DISASTER_RESILIENCE_CLAIM_ALLOWED=NO`。状态 `READ_ONLY_MECHANISM_DIAGNOSTIC / PASS`。

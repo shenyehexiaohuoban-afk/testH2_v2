@@ -243,4 +243,14 @@ Stage89M adopted W/TerminalLOH + correct-8h bridge
    ├─ ordinary shortage / mean terminal gap / HTT lower
    ├─ MODERATELY_REDUCED / LEVEL_REDUCTION
    └─ 10 iterations, loc4 only, fully converged = NO
+
+Stage89H accepted common-path baseline
++ Stage89N accepted common-path candidate
++ Stage85U-C/D shared-prefix and PCR/WES definitions
+└─ Stage89O run-005 read-only mechanism diagnostic            [PASS]
+   ├─ reserve level strongly reduced / level reduction
+   ├─ canonical wait-and-see effect size weakened
+   ├─ same-intensity different-loc spatial response weakened
+   ├─ mean adequacy proxy improves but late/q99 tail worsens
+   └─ actual W recourse closure = NO
 ```

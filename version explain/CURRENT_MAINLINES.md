@@ -10,6 +10,8 @@
 
 **CURRENT CONTROLLED RETRAINING DIAGNOSTIC:** Stage89N run-003 is the paired single-loc4, penalty1000, fresh 10-iteration test of adopted Stage89K. Stage1 is `109.98 kg` versus Stage89H `120.12 kg`; integrated judgment is `MODERATELY_REDUCED / LEVEL_REDUCTION`. It is not `CURRENT_FINAL_POLICY`, not fully converged, and does not replace the adopted W/TerminalLOH identities above.
 
+**CURRENT MECHANISM POSTPROCESSING EVIDENCE:** Stage89O run-005 performs no training/OOS/checkpoint load and uses the exact Stage89H/N common path bank. It separates `RESERVE_LEVEL_EFFECT=STRONGLY_REDUCED` from `WAIT_AND_SEE_EFFECT_SIZE=WEAKENED` and `SPATIAL_ADAPTATION_EFFECT=WEAKENED`. Mean TerminalLOH adequacy proxy improves, but late Stage7 arrival and q99 tails worsen. `ACTUAL_W_RECOURSE_CLOSURE=NO`; realized disaster resilience improvement is not an allowed claim.
+
 ## 1. W / TerminalLOH (SUPERSEDED STAGE88 PREDECESSOR)
 
 **SUPERSEDED HISTORICAL VERSION**

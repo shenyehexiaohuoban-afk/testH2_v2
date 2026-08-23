@@ -44,3 +44,4 @@
 "I14","Stage89L H2 island incremental ablation","NO","NO","NO","NO","NO","NO","NO","YES","YES","YES","YES","NO","NO","NO","NO"
 "I15","Stage89M formal adoption + 8h integration","NO","YES","YES","YES","YES","YES","YES","NO (SUPERSEDED)","YES","YES","NO","NO (DOCUMENTED ONLY)","NO","NO","YES CURRENT/ADOPTED"
 "I16","Stage89N adopted Stage89K loc4 retraining diagnostic","NO","YES","YES","YES","YES","YES","YES","NO (SUPERSEDED INPUT)","YES","YES","YES","YES","YES","NO","YES DIAGNOSTIC"
+"I17","Stage89O H-vs-N mechanism postprocessing","NO","YES EVIDENCE","YES EVIDENCE","YES EVIDENCE","YES EVIDENCE","YES EVIDENCE","YES EVIDENCE","MIXED POLICY INPUTS","YES","YES","NO","NO","READ-ONLY ACCEPTED OOS","NO","YES DIAGNOSTIC"

@@ -1,0 +1,9 @@
+﻿check,status,detail
+common_path_identity,PASS,ordered manifest byte-identical; shared bank
+unexpected_policy_input_diff,PASS,NO
+closure_available_data,PASS,1.0186340659856796e-09
+path_cohort_closure,PASS,10000
+shared_prefix_nonanticipativity,PASS,0.0
+source_immutability,PASS,13
+training_oos_checkpoint_optimizer,PASS,NO/NO/NO/NO
+actual_w_recourse_closure,PASS,NOT_AVAILABLE/NO

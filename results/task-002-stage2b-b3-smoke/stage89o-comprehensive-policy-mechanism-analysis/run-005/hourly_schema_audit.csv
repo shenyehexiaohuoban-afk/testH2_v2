@@ -1,0 +1,19 @@
+﻿variable,evidence,Stage89H,Stage89N,paired_analysis_status
+path_id,path/stage/site,DIRECT,DIRECT,AVAILABLE
+stage,stage/site,DIRECT,DIRECT,AVAILABLE
+hour,hour_system/hour_site,DIRECT,NOT_AVAILABLE,NOT_AVAILABLE_OR_PARTIAL
+"a,loc,lf",stage/site,DIRECT,DIRECT,AVAILABLE
+terminal_state_id,path,DIRECT,DIRECT,AVAILABLE
+P_EL by site,hour_site,DIRECT,NOT_AVAILABLE,NOT_AVAILABLE_OR_PARTIAL
+H2 production by site,site; hour_site,DIRECT_HOURLY,DIRECT_STAGE_ONLY,AVAILABLE
+ordinary demand/served/shortage,site; hour_site,DIRECT_HOURLY,DIRECT_STAGE_ONLY,AVAILABLE
+HTT in/out,site; hour_site,DIRECT_HOURLY,DIRECT_STAGE_ONLY,AVAILABLE
+ending inventory,site; hour_site,DIRECT_HOURLY,DIRECT_STAGE_ONLY,AVAILABLE
+beginning inventory,site,DIRECT_STAGE; RECOVERABLE_HOURLY,DIRECT_STAGE_ONLY,AVAILABLE
+I_pre,hour_site,DIRECT,NOT_AVAILABLE,NOT_AVAILABLE_OR_PARTIAL
+stage cost/components,stage/path,DIRECT,DIRECT,AVAILABLE
+TerminalLOH target/gap,path,DIRECT,DIRECT,AVAILABLE
+OOS total cost,path,DIRECT,DIRECT,AVAILABLE
+OD HTT flow,positive_htt_flows,POSITIVE_FLOWS_ONLY,NOT_AVAILABLE,NOT_AVAILABLE_OR_PARTIAL
+actual W recourse,none,NOT_AVAILABLE,NOT_AVAILABLE,NOT_AVAILABLE_OR_PARTIAL
+cut-envelope marginal value,none without checkpoint load,NOT_AVAILABLE,NOT_AVAILABLE,NOT_AVAILABLE_OR_PARTIAL

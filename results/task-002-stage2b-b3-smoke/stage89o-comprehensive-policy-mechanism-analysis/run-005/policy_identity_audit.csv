@@ -1,0 +1,19 @@
+﻿field,Stage89H,Stage89N,match,evidence
+W identity,Stage88 W provenance (indirect),Stage89J adopted W provenance (indirect),EXPECTED_DIFF,W is not a direct FA-MSP runtime input; it enters through TerminalLOH provenance
+TerminalLOH identity,57f6eff1402415808718c6a456b24d9ba96e668ce4dc6e339261e401ccd3f87d,2fa1958944110701239a109ebf46d959324a351f2f27c1c3fbd62f333066eaa8,EXPECTED_DIFF,Stage88 DRO CAP200 -> Stage89K adopted DRO; controlled mechanism input
+loc4 identity,loc4,loc4,YES,preflight gates
+dt_h,8,8,YES,formal 8h runtime audits and accepted READMEs
+hourly stage count,6x8=48,6x8=48,YES,formal 8h runtime audits
+training iterations,10,10,YES,preflight gates
+training seed,20260513,20260513,YES,training summaries
+ordinary shortage penalty,200,200,YES,preflight gates
+terminal-gap penalty,1000,1000,YES,preflight gates
+demand version,original-hourly-24h-repeat-v1,original-hourly-24h-repeat-v1,YES,Stage89F/Stage89M runtime identity
+HTT version,hourly directed end-of-hour arrival v1,hourly directed end-of-hour arrival v1,YES,Stage89F/Stage89M runtime identity
+Pmax kW,[300 200 120 150],[300 200 120 150],YES,preflight gates
+tank kg,[300 200 100 200],[300 200 100 200],YES,preflight gates
+initial inventory kg,[58.0445570448695 50.3081379386248 25.2621334423093 33.0235808462428],[58.0445570448695 50.3081379386248 25.2621334423093 33.0235808462428],YES,preflight gates
+OOS path bank SHA256,6bf3d1190a402ded052b8d3d08ed369042236e151f562bdd9fd4db7b8ff386c6,6bf3d1190a402ded052b8d3d08ed369042236e151f562bdd9fd4db7b8ff386c6,YES,C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\89H-stage85r-single-loc4-stage88-dro-gap1000-10iter-oos10000\run-003\oos\loc4\oos_path_bank.mat
+OOS path count,10000,10000,YES,OOS metadata
+OOS seed,20260817,20260817,YES,OOS metadata
+ordered path manifest bytes,a186e8d4ac870082d0925a05311ab8f4c5a0b70cb61b6fd06955a48a647b3941,a186e8d4ac870082d0925a05311ab8f4c5a0b70cb61b6fd06955a48a647b3941,YES,byte-identical accepted manifests

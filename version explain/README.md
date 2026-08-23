@@ -4,7 +4,7 @@
 
 ## 一页结论
 
-当前识别并登记 **88 个重要版本节点**。节点按“实际改变模型、数据、参数、接口、runner/checkpoint/OOS 流程，或形成重要诊断结论”筛选；纯图片重排和无独立语义的临时 run 没有强行拆成版本。完整字段见 `version_registry.csv`，多父继承见 `version_lineage.csv`。
+当前识别并登记 **90 个重要版本节点**。节点按“实际改变模型、数据、参数、接口、runner/checkpoint/OOS 流程，或形成重要诊断结论”筛选；纯图片重排和无独立语义的临时 run 没有强行拆成版本。完整字段见 `version_registry.csv`，多父继承见 `version_lineage.csv`。
 
 1. **当前 W / TerminalLOH 主线**已由 Stage89M 正式提升为 Stage89J accepted W + Stage89K accepted TerminalLOH，Stage89L 是 adoption evidence；唯一入口是 `terminalLoh_wdro/current_w_mainline_stage89/`。Stage88 仍原位保留为 superseded historical reproducible predecessor。
 2. **当前 FA-MSP 模型入口**是 Stage89F 建立的 `fa_msp/current_hourly_stage88_candidate/`：6 个运行阶段 × 8h，每阶段内部 8×1h；hourly IEEE33、original hourly H2 demand、hourly HTT；Stage7 为解析 TerminalLOH，Stage8 为零吸收边界；容量 `[300,200,100,200] kg`，Pmax `[300,200,120,150] kW`。
@@ -22,6 +22,7 @@
 14. **D04 双通道最小模型语义已冻结**：`D_res`、`A_elec`、静态 FC 等价切片容量与 road/electrical 共用一份累计 `T` 已在 9 个真实身份、54 个连续 LP 与 7/7 单元测试中通过。它仍是 `METHOD_PREVIEW / DIAGNOSTIC_ONLY`，不是正式 TerminalLOH。
 15. **Stage89I 支持集与计算量审计已完成**：全量 35×15000 冻结身份的 OLD `(D,Aroad,C)` byte-exact 计数逐 state 复现 Stage88 manifest。NEW `(Dres,Aroad,Aelec,C)` 总支持由 `457414` 增至 `457431`，倍率 median/q90/max 为 `1/1.000040/1.000868`；保守 LP 结构倍率 `1.126051`，风险 `LOW`，继续 exact grouping 并进入隔离 Stage89J candidate-bank construction 的建议均为 `YES`。该节点不是 current W、accepted TerminalLOH 或 formal W candidate。
 16. **Stage89J 正式隔离 candidate bank 已完成**：严格复用 35×15000 冻结身份、G1 五点电网 exposure、D03 确定性径向重构及 Stage88 三点 `Aroad/C`，生成 35 个 MATLAB-readable grouped bank。NEW `(Dres,Aroad,Aelec,C)` 总支持严格为 `457431`，160862 个唯一 topology 只分类一次；所有 `multiplicity/q_g`、Dres、Aelec、随机性 replay 与输出 SHA 门禁通过。它登记为 `FORMAL_W_CANDIDATE`，但仍是 `NOT CURRENT_W_MAINLINE`、`NOT ACCEPTED_TERMINALLOH`、`NOT MSP-ACCEPTED`。
+17. **Stage89O common-path 机制后处理已完成**：Stage89H/N accepted run 使用 byte-identical 10000-path manifest 和同一 bank；首事件 cohort 为 Stage7/a1/lf8=`6124/3497/379`。Stage89N reserve level 强下降且为 `LEVEL_REDUCTION`；Stage85U-D canonical PCR/WES 给出 `WAIT_AND_SEE_EFFECT_SIZE=WEAKENED`，same-intensity/different-loc 4D L1 response 亦减弱。mean TerminalLOH gap proxy 改善，但 S5/Stage6 arrival 与 q99 tail 恶化，worst1% 全为 Stage7 且集中 a4/a5。无 actual W recourse closure，禁止宣称 realized resilience improvement。
 
 ## Stage85H / 85H-A / 85R / 89F / 89G 的精确关系
 
@@ -59,7 +60,7 @@ penalty=1000 下 loc4 Stage1仍四站全满产，early inventory buildup=`CLEAR`
 - `VERSION_EXPLAIN.md`：主要版本的人话解释。
 - `VERSION_TREE.md`：模型、数据、runner 三套非单链谱系。
 - `6h_to_8h_history.md`：6h/8h 与 90.09/120.12 kg 的来龙去脉。
-- `version_registry.csv`：87 个版本节点的完整登记。
+- `version_registry.csv`：90 个版本节点的完整登记。
 - `version_lineage.csv`：多父继承关系。
 - `version_feature_matrix.csv`：主要版本功能矩阵。
 - `problem_fix_registry.csv`：历史问题、修复与回归。

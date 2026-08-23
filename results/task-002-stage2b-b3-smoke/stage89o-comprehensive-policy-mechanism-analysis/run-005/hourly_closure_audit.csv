@@ -1,0 +1,27 @@
+﻿policy,check,status,max_abs_residual,tolerance,evidence_resolution
+Stage89H,ordinary demand = served + shortage,PASS,9.720002580593246e-14,1e-08,STAGE_OR_PATH
+Stage89H,stage/site inventory closure,PASS,1.4210854715202004e-12,1e-08,STAGE_OR_PATH
+Stage89H,HTT system balance,PASS,9.521272659185342e-13,1e-08,STAGE_OR_PATH
+Stage89H,stage production aggregation,PASS,5.115907697472721e-13,1e-08,STAGE_OR_PATH
+Stage89H,stage beginning inventory aggregation,PASS,1.5347723092418164e-12,1e-08,STAGE_OR_PATH
+Stage89H,stage ending inventory aggregation,PASS,1.8189894035458565e-12,1e-08,STAGE_OR_PATH
+Stage89H,stage shortage aggregation,PASS,1.3500311979441904e-13,1e-08,STAGE_OR_PATH
+Stage89H,path objective closure,PASS,1.0186340659856796e-09,2e-08,STAGE_OR_PATH
+Stage89H,path cumulative production,PASS,1.3073986337985843e-12,1e-08,STAGE_OR_PATH
+Stage89H,path cumulative shortage,PASS,3.979039320256561e-13,1e-08,STAGE_OR_PATH
+Stage89H,path cumulative HTT,PASS,1.3073986337985843e-12,1e-08,STAGE_OR_PATH
+Stage89H,hourly production conversion closure,PASS,1.4210854715202004e-14,1e-08,ACCEPTED_HOURLY_FILE
+Stage89H,hourly inventory closure,NOT_RECOMPUTED,,1e-08,STAGE_CLOSURE_STRICT; HOUR_BEGIN_RECOVERABLE_BUT_NOT_NEEDED
+Stage89N,ordinary demand = served + shortage,PASS,9.947598300641403e-14,1e-08,STAGE_OR_PATH
+Stage89N,stage/site inventory closure,PASS,6.224354365258478e-12,1e-08,STAGE_OR_PATH
+Stage89N,HTT system balance,PASS,9.947598300641403e-13,1e-08,STAGE_OR_PATH
+Stage89N,stage production aggregation,PASS,5.115907697472721e-13,1e-08,STAGE_OR_PATH
+Stage89N,stage beginning inventory aggregation,PASS,1.3642420526593924e-12,1e-08,STAGE_OR_PATH
+Stage89N,stage ending inventory aggregation,PASS,1.3642420526593924e-12,1e-08,STAGE_OR_PATH
+Stage89N,stage shortage aggregation,PASS,1.2079226507921703e-13,1e-08,STAGE_OR_PATH
+Stage89N,path objective closure,PASS,1.0040821507573128e-09,2e-08,STAGE_OR_PATH
+Stage89N,path cumulative production,PASS,1.0231815394945443e-12,1e-08,STAGE_OR_PATH
+Stage89N,path cumulative shortage,PASS,9.947598300641403e-14,1e-08,STAGE_OR_PATH
+Stage89N,path cumulative HTT,PASS,1.0231815394945443e-12,1e-08,STAGE_OR_PATH
+Stage89N,hourly production conversion closure,NOT_AVAILABLE,,1e-08,NO_ACCEPTED_HOURLY_FILE
+Stage89N,hourly inventory closure,NOT_AVAILABLE,,1e-08,NO_ACCEPTED_HOURLY_FILE

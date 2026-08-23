@@ -1,0 +1,7 @@
+file,bytes,sha256,git_commit,reason
+early_a1_residual_inventory.csv,2238618,3524d7e114fa754d6e98ddda77e7da3382d15ab22a1fa2ab3d0b626881a525b2,NO,large path-level derived table retained locally
+paired_path_delta_master.csv,6177911,6f6dabdf8661aa20929202b52f52cdea93c216613369b93806af36f645216d41,NO,large 10000-path paired master retained locally
+path_cohort_master.csv,1593232,137a198b27ef5b94fd41980980fa9814c356dcf0f1db279b613514819f45012e,NO,large 10000-path cohort master retained locally
+shared_prefix_nonanticipativity_qa.csv,331847,97e8d28c6d233b19f6c45a8ba0381f5cbdfaf823b3235fdbdf0e209529f2064d,NO,raw pair-level QA retained locally; aggregate PASS is committed
+shared_prefix_pair_master.csv,433817,d94db1cc346bcc09c0dba21c2fb9f34cd1f32075abfe28eee2c63c71e4cd0181,NO,raw shared-prefix pair master retained locally; pair counts are committed
+shared_prefix_post_divergence_response.csv,1759552,eea0618d1c6d7946262ae3066c262dd2b47b06b8573bb05f0417336be0303fad,NO,large pair-response table retained locally; aggregated response summaries are committed

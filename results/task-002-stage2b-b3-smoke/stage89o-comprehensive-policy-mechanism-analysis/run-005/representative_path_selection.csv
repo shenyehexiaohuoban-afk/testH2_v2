@@ -1,0 +1,14 @@
+﻿selection_type,cohort,path_id,paired_path_id,pair_id,selection_value,selection_rule
+MEDIAN_BASELINE_PRODUCTION,EARLY_A1,32,,,224.907244044897,nearest baseline cumulative production to q50; tie=min path_id
+UPPER_QUARTILE_BASELINE_PRODUCTION,EARLY_A1,714,,,281.385,nearest baseline cumulative production to q75; tie=min path_id
+MEDIAN_BASELINE_PRODUCTION,EARLY_LF8,9301,,,363.665149175086,nearest baseline cumulative production to q50; tie=min path_id
+UPPER_QUARTILE_BASELINE_PRODUCTION,EARLY_LF8,4140,,,405.588091296347,nearest baseline cumulative production to q75; tie=min path_id
+MEDIAN_BASELINE_PRODUCTION,EARLY_STAGE7,691,,,368.762732339949,nearest baseline cumulative production to q50; tie=min path_id
+UPPER_QUARTILE_BASELINE_PRODUCTION,EARLY_STAGE7,3650,,,407.369220277202,nearest baseline cumulative production to q75; tie=min path_id
+MEDIAN_BASELINE_PRODUCTION,STAGE6_TO_A1,7330,,,437.608979341701,nearest baseline cumulative production to q50; tie=min path_id
+UPPER_QUARTILE_BASELINE_PRODUCTION,STAGE6_TO_A1,5015,,,461.873824944378,nearest baseline cumulative production to q75; tie=min path_id
+MEDIAN_BASELINE_PRODUCTION,STAGE6_TO_STAGE7,5226,,,453.000629901748,nearest baseline cumulative production to q50; tie=min path_id
+UPPER_QUARTILE_BASELINE_PRODUCTION,STAGE6_TO_STAGE7,2774,,,531.562875017099,nearest baseline cumulative production to q75; tie=min path_id
+LARGEST_POSITIVE_DELTA_COST,STAGE6_TO_STAGE7,7392,,,124942.75305414901,mechanical extreme paired DeltaCost; tie=min path_id
+LARGEST_NEGATIVE_DELTA_COST,EARLY_STAGE7,5557,,,-156192.55984964303,mechanical extreme paired DeltaCost; tie=min path_id
+CANONICAL_SHARED_PREFIX_PAIR,A1_VS_STAGE7,6966,842.0,190.0,4.0,nearest median common-prefix length; tie=min pair_id

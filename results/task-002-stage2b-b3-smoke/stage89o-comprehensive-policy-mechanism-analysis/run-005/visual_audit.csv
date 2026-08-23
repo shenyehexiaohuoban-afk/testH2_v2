@@ -1,0 +1,11 @@
+figure,status,inspection
+figure01_cohort_composition.png,PASS,nonblank readable cohort counts
+figure02_early_a1_production.png,PASS,nonblank readable paired trajectories
+figure03_early_a1_residual_inventory.png,PASS,nonblank readable distributions
+figure04_stage7_arrival.png,PASS,nonblank readable arrival timing panels
+figure05_stage7_intensity.png,PASS,nonblank readable intensity ticks legends and panels
+figure06_shared_prefix.png,PASS,nonblank readable PCR WES scatter
+figure07_pcr_wes.png,PASS,nonblank readable metric bars
+figure08_loc_response.png,PASS,nonblank readable spatial response bars
+figure09_delta_cost.png,PASS,nonblank readable paired distribution
+figure10_tail_paths.png,PASS,nonblank readable mechanically selected paths
