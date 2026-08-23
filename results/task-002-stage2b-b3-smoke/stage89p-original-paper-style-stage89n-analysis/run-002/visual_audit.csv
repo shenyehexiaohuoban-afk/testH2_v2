@@ -1,0 +1,13 @@
+figure,status,inspection_note
+figure01_training_progress.png,PASS,"All three panels render; axes, legends, and iteration trajectories are legible."
+figure02_production_by_stage.png,PASS,"Stagewise means and uncertainty bars are visible without clipping."
+figure03_cumulative_production.png,PASS,"Conditional and per-initial-path series are distinct and the legend is unobstructed."
+figure04_total_inventory_by_stage.png,PASS,"Inventory trajectory and uncertainty bars are readable."
+figure05_site_inventory_by_stage.png,PASS,"All four site series are distinguishable and the legend is clear."
+figure06_intensity_conditioned_production.png,PASS,"Discrete intensity categories and stage series render clearly; no smoothing is used."
+figure07_dissipation_timing.png,PASS,"Physical-dissipation timing groups and uncertainty bars are visible."
+figure08_stage7_arrival_timing.png,PASS,"Stage7 arrival groups form a readable discrete trajectory with uncertainty bars."
+figure09_h_vs_n_production.png,PASS,"Stage89H and Stage89N grouped bars are distinct across all six stages."
+figure10_h_vs_n_inventory.png,PASS,"Both inventory trajectories and the comparison legend are legible."
+figure11_primary_oos_results.png,PASS,"Economic and service panels render with readable units, legend, and Stage7 denominator footnote."
+figure12_location_conditioned_production.png,PASS,"Categorical location values and all stage series are visible; no ordinal interpretation is implied."

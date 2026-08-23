@@ -1,0 +1,7 @@
+field,value,evidence
+DATA_TIME_RESOLUTION,STAGE_AGGREGATE,Stage89N accepted run-003 stage/site CSV
+HOURLY_POLICY_CURVE_AVAILABLE,NO,Stage89N accepted run-003 has no accepted hourly output
+FAILED_RUN_HOURLY_DATA_USED,NO,Forbidden and not used
+POST_TERMINATION_ZERO_FILL_USED,NO,All stage means condition on active paths
+INTERPOLATION_OR_8X_REPLICATION_USED,NO,Forbidden and not used
+STATE_DECISION_TIMING,STATE_T_OBSERVED_BEFORE_DECISION_T,forward_pass/evaluate_path sample or read k_t before update_rhs/solve

@@ -4,7 +4,7 @@
 
 ## 一页结论
 
-当前识别并登记 **90 个重要版本节点**。节点按“实际改变模型、数据、参数、接口、runner/checkpoint/OOS 流程，或形成重要诊断结论”筛选；纯图片重排和无独立语义的临时 run 没有强行拆成版本。完整字段见 `version_registry.csv`，多父继承见 `version_lineage.csv`。
+当前识别并登记 **91 个重要版本节点**。节点按“实际改变模型、数据、参数、接口、runner/checkpoint/OOS 流程，或形成重要诊断结论”筛选；纯图片重排和无独立语义的临时 run 没有强行拆成版本。完整字段见 `version_registry.csv`，多父继承见 `version_lineage.csv`。
 
 1. **当前 W / TerminalLOH 主线**已由 Stage89M 正式提升为 Stage89J accepted W + Stage89K accepted TerminalLOH，Stage89L 是 adoption evidence；唯一入口是 `terminalLoh_wdro/current_w_mainline_stage89/`。Stage88 仍原位保留为 superseded historical reproducible predecessor。
 2. **当前 FA-MSP 模型入口**是 Stage89F 建立的 `fa_msp/current_hourly_stage88_candidate/`：6 个运行阶段 × 8h，每阶段内部 8×1h；hourly IEEE33、original hourly H2 demand、hourly HTT；Stage7 为解析 TerminalLOH，Stage8 为零吸收边界；容量 `[300,200,100,200] kg`，Pmax `[300,200,120,150] kW`。
@@ -23,6 +23,7 @@
 15. **Stage89I 支持集与计算量审计已完成**：全量 35×15000 冻结身份的 OLD `(D,Aroad,C)` byte-exact 计数逐 state 复现 Stage88 manifest。NEW `(Dres,Aroad,Aelec,C)` 总支持由 `457414` 增至 `457431`，倍率 median/q90/max 为 `1/1.000040/1.000868`；保守 LP 结构倍率 `1.126051`，风险 `LOW`，继续 exact grouping 并进入隔离 Stage89J candidate-bank construction 的建议均为 `YES`。该节点不是 current W、accepted TerminalLOH 或 formal W candidate。
 16. **Stage89J 正式隔离 candidate bank 已完成**：严格复用 35×15000 冻结身份、G1 五点电网 exposure、D03 确定性径向重构及 Stage88 三点 `Aroad/C`，生成 35 个 MATLAB-readable grouped bank。NEW `(Dres,Aroad,Aelec,C)` 总支持严格为 `457431`，160862 个唯一 topology 只分类一次；所有 `multiplicity/q_g`、Dres、Aelec、随机性 replay 与输出 SHA 门禁通过。它登记为 `FORMAL_W_CANDIDATE`，但仍是 `NOT CURRENT_W_MAINLINE`、`NOT ACCEPTED_TERMINALLOH`、`NOT MSP-ACCEPTED`。
 17. **Stage89O common-path 机制后处理已完成**：Stage89H/N accepted run 使用 byte-identical 10000-path manifest 和同一 bank；首事件 cohort 为 Stage7/a1/lf8=`6124/3497/379`。Stage89N reserve level 强下降且为 `LEVEL_REDUCTION`；Stage85U-D canonical PCR/WES 给出 `WAIT_AND_SEE_EFFECT_SIZE=WEAKENED`，same-intensity/different-loc 4D L1 response 亦减弱。mean TerminalLOH gap proxy 改善，但 S5/Stage6 arrival 与 q99 tail 恶化，worst1% 全为 Stage7 且集中 a4/a5。无 actual W recourse closure，禁止宣称 realized resilience improvement。
+18. **Stage89P 原论文风格主结果呈现已完成**：只读分析 Stage89N accepted run-003，并将 Stage89H 作为旧 TerminalLOH 辅助对照、Stage89O 仅作为 cohort/机制补充。Stage1–6 active-path mean production 为 `109.980/8.859/28.232/64.684/23.738/38.222 kg`；观察强度与制氢总体正相关但存在局部回摆，严格标为 `MODERATE_POSITIVE`。mean actual operating cost 为 `56182.450 yuan/path`（95% CI `55707.324–56657.576`）；真正进入 Stage7 的 6124 条路径 mean gap 为 `9.117 kg`。数据仅为 stage aggregate，10 轮不称收敛。
 
 ## Stage85H / 85H-A / 85R / 89F / 89G 的精确关系
 
@@ -60,7 +61,7 @@ penalty=1000 下 loc4 Stage1仍四站全满产，early inventory buildup=`CLEAR`
 - `VERSION_EXPLAIN.md`：主要版本的人话解释。
 - `VERSION_TREE.md`：模型、数据、runner 三套非单链谱系。
 - `6h_to_8h_history.md`：6h/8h 与 90.09/120.12 kg 的来龙去脉。
-- `version_registry.csv`：90 个版本节点的完整登记。
+- `version_registry.csv`：91 个版本节点的完整登记。
 - `version_lineage.csv`：多父继承关系。
 - `version_feature_matrix.csv`：主要版本功能矩阵。
 - `problem_fix_registry.csv`：历史问题、修复与回归。
@@ -105,3 +106,7 @@ Stage89J run-001 and Stage89K run-002 are formally adopted as the current W and 
 ## Stage89N controlled single-loc4 retraining diagnostic (2026-08-23)
 
 Stage89N `run-003` uses source HEAD `0da3c525...`, the Stage85R single-state runner mother, Stage85H-A clean-process lifecycle, Stage89F correct `6×8h`, and adopted Stage89K DRO eta=0.03. Training seed `20260513` and the accepted Stage89H run-003 loc4 OOS bank (seed `20260817`, 10000 paths) are exactly paired. Stage1 production moves from `120.12` to `109.98 kg` (`-8.4416%`); Stage1/2/3 mean ending inventory moves from `247.747/288.280/299.423` to `237.607/192.432/179.127 kg`. Mean ordinary shortage, terminal gap and HTT all decrease. The controlled judgment is `MODERATELY_REDUCED / LEVEL_REDUCTION`; this remains a 10-iteration single-location diagnostic, not a converged final policy. OOS completed before a native MATLAB exit fault; report-only recovery used no checkpoint reload.
+
+## Stage89P original-paper-style primary result presentation (2026-08-23)
+
+Stage89P `run-002` is read-only postprocessing of Stage89N accepted run-003, with Stage89H run-003 as the old-TerminalLOH control and Stage89O run-005 used only for validated cohorts and secondary explanation. It reports direct action-by-stage, inventory, observed-intensity/location action, random termination/Stage7 timing, economic/service statistics and 95% intervals in the result-analysis structure of Siddig and Song. The risk-intensity response is `MODERATE_POSITIVE`, not uniformly monotone; longer-lived a=1 and later-Stage7 paths accumulate more production. Mean actual operating cost is `56182.450 yuan/path`, ordinary shortage is `1.542 kg/path`, and the Stage7-conditional gap is `9.117 kg` across 6124 paths. All 12 figures and 16 CSV outputs passed independent hash, closure, parsing and visual QA. No training, OOS, checkpoint load, optimization or model change occurred; accepted data are stage aggregate and the ten-iteration policy is not converged.

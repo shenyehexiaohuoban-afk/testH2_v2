@@ -12,6 +12,8 @@
 
 **CURRENT MECHANISM POSTPROCESSING EVIDENCE:** Stage89O run-005 performs no training/OOS/checkpoint load and uses the exact Stage89H/N common path bank. It separates `RESERVE_LEVEL_EFFECT=STRONGLY_REDUCED` from `WAIT_AND_SEE_EFFECT_SIZE=WEAKENED` and `SPATIAL_ADAPTATION_EFFECT=WEAKENED`. Mean TerminalLOH adequacy proxy improves, but late Stage7 arrival and q99 tails worsen. `ACTUAL_W_RECOURSE_CLOSURE=NO`; realized disaster resilience improvement is not an allowed claim.
 
+**CURRENT PRIMARY RESULT PRESENTATION EVIDENCE:** Stage89P run-002 gives the direct original-paper-style presentation of the Stage89N controlled diagnostic: Stage1–6 production/inventory, observed-risk actions, termination timing, economic/service results and 95% intervals. The intensity response is `MODERATE_POSITIVE` with local reversals; mean actual operating cost is `56182.450 yuan/path`, and the mean terminal gap is `9.117 kg` conditional on the 6124 paths that truly enter Stage7. It is stage-aggregate, read-only evidence for a non-converged ten-iteration policy, not a new policy identity.
+
 ## 1. W / TerminalLOH (SUPERSEDED STAGE88 PREDECESSOR)
 
 **SUPERSEDED HISTORICAL VERSION**

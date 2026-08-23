@@ -294,3 +294,13 @@
 **结果：** first-event Stage7/a1/lf8 为 `6124/3497/379`。mean production `322.677→186.005 kg`，reserve level `STRONGLY_REDUCED / LEVEL_REDUCTION`。390 组 canonical PCR production median `0.876→0.903`、WES production `0.124→0.097`，综合 wait-and-see `WEAKENED`；1535 组 same-intensity/different-loc 的 4D inventory L1 mean `65.061→51.223 kg`，spatial adaptation `WEAKENED`。Stage7 mean gap proxy `10.371→9.117 kg`，但 S5/Stage6 arrival 恶化。q99 cost/gap `+3.29/+3.64%`，worst paired 1% 全为 Stage7、a4/a5=`51/49`，主因 reduced extreme buffer 加 terminal gap penalty。
 
 **解释边界：** lower inventory 与 shortage improvement 强共现但只记 `MODERATE_SIGNAL`，不作单因果。Stage89N accepted run-003 没有 hourly detail，paired hourly 输出只能是 stage aggregate。没有 W1-W3 actual recourse paired output，故 `REALIZED_DISASTER_RESILIENCE_CLAIM_ALLOWED=NO`。状态 `READ_ONLY_MECHANISM_DIAGNOSTIC / PASS`。
+
+### Stage89P：Stage89N 原论文风格主结果分析
+
+**基于：** Stage89N accepted run-003 为主策略，Stage89H accepted run-003 为旧 TerminalLOH 辅助对照，Stage89O accepted run-005 提供已验证的 Stage7/a1/lf8 cohort；H/N 的 10000-path manifest byte-identical。分析结构参考 Siddig and Song 的 action-by-stage、risk-state action、random termination、economic/service 与置信区间呈现，但不复刻论文数值或新增 benchmark solve。
+
+**改了什么：** 新增参数化只读 Python 分析器、16 个主 CSV、paper mapping、审计/清单和 12 张图。没有训练、OOS、checkpoint load、DRO solve、perfect-information solve、penalty sensitivity、TerminalLOH/W/model 或输入数据修改。accepted Stage89N 没有小时级输出，因此全部正式结果保持 `STAGE_AGGREGATE`，不插值、不复制 8 次，也不在终止后填零。
+
+**结果：** Stage1–6 active-path mean production 为 `109.980/8.859/28.232/64.684/23.738/38.222 kg`；ending inventory 为 `237.607/186.973/171.126/201.616/184.630/198.710 kg`。当前观察强度与 production 的加权趋势为正，但 a3–a5 存在局部回摆，故只标 `MODERATE_POSITIVE`。物理消散越晚、Stage7 越晚到达，累计制氢在直接 cohort 均值中越高。mean actual operating cost 为 `56182.450 yuan/path`（95% CI `55707.324–56657.576`）；ordinary shortage 为 `1.542 kg/path`，发生概率 `5.34%`；6124 条真实 Stage7 路径 mean terminal gap 为 `9.117 kg`（95% CI `8.328–9.905`），正缺口概率 `14.794%`。
+
+**解释边界：** 强度、位置和到达时序表是描述性条件均值，不是因果估计；小样本 terminal-state 对照标记 `DESCRIPTIVE_ONLY`。Stage89H→N 最直观变化是 reserve/production level 降低，而不是等量向后期转移。q99 与少数晚到 Stage7 的反向信号暂不放大。十轮稳定性为 `MIXED`、`FULLY_CONVERGED=NO`；需要 longer paired 1000/1500 training 才能判断这些局部异常是否稳定。状态 `READ_ONLY_PRIMARY_RESULT_PRESENTATION / PASS`。
