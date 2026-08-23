@@ -276,3 +276,11 @@
 **结果：** J/K/L prerequisite、35 个大 bank SHA、SAA/DRO 35-state mapping、Site4 200 kg tank/150 kW Pmax、未缩放初始库存全部 PASS。Stage1–6 各有 8 个 hourly periods，IEEE33/P_EL/original demand/production/inventory/HTT/PV active，Stage7 analytic、Stage8 absorbing；理论产能 120.12 kg，legacy 90.09 未触发。Stage7 value/subgradient、backward terminal cut、forward terminal evaluation 与五个 negative gates PASS。
 
 **边界：** Stage88→Stage89K 仍是 FULL CANDIDATE EFFECT，不是 H2 island-only effect。未训练、未 OOS、未建 checkpoint、未使用 multi-location adaptation、未改 forward/backward/cut mathematics。状态 `FORMAL_ADOPTION_AND_INTEGRATION / PASS`，ready for Stage89N single-loc4 fresh correct-8h training。
+
+### Stage89N：adopted Stage89K single-loc4 fresh 8h retraining
+
+**固定语义：** Stage85R mother runner、Stage85H-A clean lifecycle、Stage89F correct `6×8h`、Stage89K DRO eta=0.03、loc4、ordinary shortage 200、terminal gap 1000、seed 20260513、zero cuts、10 iterations；OOS 严格复用 Stage89H accepted seed 20260817 的 10000 条路径。
+
+**结果：** Stage1 `120.12 -> 109.98 kg`（`-8.4416%`），站点变化为 `[0,-7.8,-2.34,0] kg`；Stage1/2/3 mean ending inventory 分别下降 `10.14/95.848/120.297 kg`。Stage2+3 production 未上移而是合计下降 `122.468 kg`，所以机制为 `LEVEL_REDUCTION`，不是 wait-and-see temporal shift。mean ordinary shortage `6.1403 -> 1.5418 kg`，mean terminal gap `6.3511 -> 5.5830 kg`，mean HTT `24.8328 -> 22.5113 kg`。综合判断 `EARLY_COMMITMENT_EFFECT=MODERATELY_REDUCED`。
+
+**工程边界：** run-001 为 adopted-audit 字段名 preflight 失败；run-002 在 path 6700 原生 heap corruption；run-003 完成全部 10000 OOS 和 `OOS_COMPLETE` 后在 MATLAB 退出阶段复现 `0xc0000374`。最终只做 external SHA 与 Python report-only recovery，没有再次加载 checkpoint。状态 `FORMAL_CONTROLLED_RETRAINING_DIAGNOSTIC / PASS`，`FULLY_CONVERGED=NO`，不是最终策略。

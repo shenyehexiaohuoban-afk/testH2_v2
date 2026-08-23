@@ -1,0 +1,6 @@
+path,size_bytes,sha256,role,git_commit
+terminalLoh_wdro/output/stage89n_stage89k_adopted_loc4_fresh_8h_retraining/run-003/checkpoint_final.mat,305031307,bd112bf67018f94e13ad24e6e876494f9d06042f4630024e377192ed22262cdf,external checkpoint; single authoritative copy,NO
+results/task-002-stage2b-b3-smoke/stage89n-stage89k-adopted-loc4-fresh-8h-retraining/run-003/oos/loc4/oos_path_manifest.csv,318828,a186e8d4ac870082d0925a05311ab8f4c5a0b70cb61b6fd06955a48a647b3941,10000-path identity manifest,NO
+results/task-002-stage2b-b3-smoke/stage89n-stage89k-adopted-loc4-fresh-8h-retraining/run-003/oos/loc4/oos_path_summary.csv,3022384,78d224b6e480b0e08fd1a9d8dafcd8c0af33f2be3e92ca9b01c8495c3c51ca84,raw path-level OOS summary,NO
+results/task-002-stage2b-b3-smoke/stage89n-stage89k-adopted-loc4-fresh-8h-retraining/run-003/oos/loc4/oos_stage_summary.csv,6633453,527dca77aba0506ee1b86f5af5a7770b0263f8443685e190c5e3891b08848f78,raw path-stage OOS summary,NO
+results/task-002-stage2b-b3-smoke/stage89n-stage89k-adopted-loc4-fresh-8h-retraining/run-003/oos/loc4/oos_stage_site_summary.csv,18015657,879e887d3b3e1b1a37c852af14507ff9ddf74735c971fc149791fc3b23299ae5,raw path-stage-site OOS summary,NO

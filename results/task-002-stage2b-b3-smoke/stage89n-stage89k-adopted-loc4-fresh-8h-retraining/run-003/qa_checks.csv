@@ -1,0 +1,16 @@
+check,pass
+README.md,True
+prerequisite_identity_audit.csv,True
+stage89n_parameter_audit.csv,True
+formal_8h_runtime_audit.csv,True
+stage85r_stage89n_adapter_diff.md,True
+source_manifest.csv,True
+training_iteration_summary.csv,True
+early_commitment_summary.csv,True
+stage89h_vs_stage89n_training_comparison.csv,True
+checkpoint_lifecycle_audit.csv,True
+checkpoint_identity.csv,True
+oos_summary.csv,True
+oos_physical_metrics.csv,True
+stage89h_vs_stage89n_oos_comparison.csv,True
+mechanism_interpretation.md,True

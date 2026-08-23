@@ -1,0 +1,2 @@
+path,size_bytes,sha256,source_head,training_seed,stage,run,role
+C:\Users\chaos\Desktop\biye\test\testH2_v2\terminalLoh_wdro\output\stage89n_stage89k_adopted_loc4_fresh_8h_retraining\run-003\checkpoint_final.mat,305031307,bd112bf67018f94e13ad24e6e876494f9d06042f4630024e377192ed22262cdf,0da3c52526286050908e7e41d64cba1a399b103d,20260513,Stage89N,run-003,single authoritative trained policy checkpoint

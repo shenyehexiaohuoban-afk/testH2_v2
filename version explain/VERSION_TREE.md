@@ -230,4 +230,17 @@ Stage89J formal W candidate
    └─ no training/OOS/checkpoint/core modification
 ```
 
-Stage88 remains the superseded historical reproducible predecessor. Future Stage89N should use Stage85R single-state runner semantics plus Stage85H-A clean-process checkpoint lifecycle, Stage89F model, and adopted Stage89K DRO input.
+Stage88 remains the superseded historical reproducible predecessor.
+
+```text
+Stage89M adopted W/TerminalLOH + correct-8h bridge
++ Stage85R single-state runner mother
++ Stage85H-A clean checkpoint lifecycle
++ Stage89H paired loc4 baseline and OOS bank
+└─ Stage89N run-003 controlled retraining diagnostic          [PASS / NOT FINAL]
+   ├─ Stage1 120.12 -> 109.98 kg
+   ├─ Stage1-3 inventory materially lower; no later-production shift
+   ├─ ordinary shortage / mean terminal gap / HTT lower
+   ├─ MODERATELY_REDUCED / LEVEL_REDUCTION
+   └─ 10 iterations, loc4 only, fully converged = NO
+```

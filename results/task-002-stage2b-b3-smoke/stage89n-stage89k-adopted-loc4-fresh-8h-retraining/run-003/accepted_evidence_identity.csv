@@ -1,0 +1,7 @@
+path,bytes,sha256,required_token,pass
+C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\85O-economic-calibration-fresh-short-pilot\run-004\final_judgment.txt,384,a2f2e3ca45ef035b9a94a10abd4e22d56b7cc46facf8c38e647f851d55d7b59d,PROCEED_WITH_C0_ONLY_CANDIDATE,1
+C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\85O-economic-calibration-fresh-short-pilot\run-004\source_identity_hashes.csv,1670,7a57b64db21dd9cf4e5b78dcde0e5b895c99634c127ef915b79b2999f6a8e86f,,1
+C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\85P-shortage150-c0-5-fresh-short-pilot\run-002\final_judgment.txt,321,b2a7b442858d651c1d648a2fcc230c794acd8a22795fe829cefcd98d3bba5df9,NONMONOTONIC_PENALTY_RESPONSE_NEEDS_DIAGNOSTIC,1
+C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\85P-shortage150-c0-5-fresh-short-pilot\run-002\source_identity_hashes.csv,2814,983efbd6426177cf9f8c79c0f39caa270878a87bcbf8522b3973af0e515a4ad5,,1
+C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\85Q-p150-fragmentation-mechanism-diagnostic\run-001\final_judgment.txt,192,a9d685c5d36e53165049e6a84b79b2fc73705eea8bc62d1cc1163233db30f7ad,SHORT_TRAINING_ARTIFACT_CANNOT_BE_RULED_OUT,1
+C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\85Q-p150-fragmentation-mechanism-diagnostic\run-001\source_identity_hashes.csv,3269,d9273bc5c251a03811be64818942c89a284dbcf7e10369767ae17c1ed787faa9,,1

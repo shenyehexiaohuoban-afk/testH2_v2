@@ -103,3 +103,5 @@ params.dt_h = 8              -> active runtime stage duration
 - **当前 formal candidate**：Stage89G run-002；完成 final QA 前不提升为 accepted。
 - **不可作为 8h checkpoint 来源**：Stage89C、Stage89D、Stage89G run-001 旧 monolithic reload path。
 - **不可把 6h metadata 删除或伪改成 8h**：它仍是原始 demand block 的真实来源信息；应由 runtime options 显式覆盖并审计。
+
+Stage89N run-003 是当前 adopted Stage89K 在正确 8h runtime 上的受控训练证据：六个 operating stage 均为 8 个 hourly blocks，Stage1 theoretical cap 120.12 kg 且实际 policy 为 109.98 kg；`NormalDemand.stage_dt_h=6` 仍只作 source metadata。该结果不改变 Stage89F 模型入口，也不构成 fully converged policy。

@@ -8,6 +8,8 @@
 
 **ADOPTION EVIDENCE:** Stage89L accepted run-001 (`MIXED / MODERATE`, `RECOMMEND_ADOPT_STAGE89J_89K=YES`). Stage88 is preserved as the superseded reproducible predecessor. The sole navigation entry is `terminalLoh_wdro/current_w_mainline_stage89/`. Stage89M verified the Stage89F `6×8h=48h` hourly model, 120.12 kg Stage1 sentinel and strict Stage7/cut/forward integration without training/OOS/checkpoint or core changes.
 
+**CURRENT CONTROLLED RETRAINING DIAGNOSTIC:** Stage89N run-003 is the paired single-loc4, penalty1000, fresh 10-iteration test of adopted Stage89K. Stage1 is `109.98 kg` versus Stage89H `120.12 kg`; integrated judgment is `MODERATELY_REDUCED / LEVEL_REDUCTION`. It is not `CURRENT_FINAL_POLICY`, not fully converged, and does not replace the adopted W/TerminalLOH identities above.
+
 ## 1. W / TerminalLOH (SUPERSEDED STAGE88 PREDECESSOR)
 
 **SUPERSEDED HISTORICAL VERSION**
