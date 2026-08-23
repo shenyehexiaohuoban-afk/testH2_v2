@@ -1,0 +1,25 @@
+parameter,accepted_value,mechanical_source
+scenario_signature,"(Dres,Aroad,Aelec,C)",Stage89J candidate_schema.md
+sample_count_per_state,15000,Stage89J candidate manifest
+terminal_starting_states,35,Stage89J/Stage89K
+q_g,multiplicity/15000,Stage89J candidate_schema.md
+pearson_eta,0.03,Stage89K semantics audit
+tank_capacity_kg,"[300,200,100,200]",Stage89K semantics audit
+electrolyzer_pmax_kw,"[300,200,120,150]",Stage89F accepted input
+initial_inventory_kg,"[58.04455704486949,50.30813793862475,25.262133442309338,33.02358084624278]",Stage89F accepted input
+hydrogen_conversion_kg_per_kWh,0.0195,accepted NearStageInput
+fc_static_capacity,per-site one-hour slice metadata,Stage89J fc_static_capacity_metadata.csv
+c_H2_yuan_per_kg,32.5213675213675,Stage89K semantics audit
+M_H2_yuan_per_kg,1283.205,Stage89K semantics audit
+terminal_gap_penalty_in_TerminalLOH,ABSENT,Stage89K semantics audit
+ordinary_shortage_penalty_in_TerminalLOH,ABSENT,Stage89K semantics audit
+solver,gurobipy 12.0.1; Threads=1,Stage89K semantics audit
+feasibility_tolerance,1e-9,Stage89K semantics audit
+optimality_tolerance,1e-9,Stage89K semantics audit
+decomposition_gap,abs<=1e-4 yuan or relative<=1e-8,Stage89K semantics audit
+active_msp_dt_h,8,Stage89F model
+source_demand_stage_dt_h,6 (historical/source metadata only),NearStageInput.NormalDemand
+operating_stage_count,6,Stage89F model
+hours_per_operating_stage,"[8,8,8,8,8,8]",Stage89F model
+W1_W3_slice_semantics,three official one-hour post-landfall service slices; five hazard observations do not add time weight,Stage89J README
+exact_grouping,raw-byte equality; no rounding/tolerance/clustering/quantization,Stage89J candidate_schema.md

@@ -1,0 +1,4 @@
+request,loaded_mode,source_file,source_sha256,table_version,eta,default_mode_selected,pass
+DEFAULT,DRO,C:\Users\chaos\desktop\biye\test\testH2_v2\terminalLoh_wdro\current_w_mainline_stage89\terminal_tables\terminal_loh_stage89k_dro_eta003_adopted.csv,2fa1958944110701239a109ebf46d959324a351f2f27c1c3fbd62f333066eaa8,Stage89K,0.03,1,1
+EXPLICIT_SAA,SAA,C:\Users\chaos\desktop\biye\test\testH2_v2\terminalLoh_wdro\current_w_mainline_stage89\terminal_tables\terminal_loh_stage89k_saa_adopted.csv,3ef6d441dddcd15056b97da6e03944705a41900397ee7576e0e700c6237c7148,Stage89K,0,0,1
+EXPLICIT_DRO,DRO,C:\Users\chaos\desktop\biye\test\testH2_v2\terminalLoh_wdro\current_w_mainline_stage89\terminal_tables\terminal_loh_stage89k_dro_eta003_adopted.csv,2fa1958944110701239a109ebf46d959324a351f2f27c1c3fbd62f333066eaa8,Stage89K,0.03,0,1

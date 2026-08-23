@@ -1,0 +1,6 @@
+scope,pmax_kw,conversion_kg_per_kWh,active_hours,theoretical_max_kg,legacy_6h_sentinel_kg,pass
+Site1,300,0.0195,8,46.8,35.1,1
+Site2,200,0.0195,8,31.2,23.4,1
+Site3,120,0.0195,8,18.72,14.04,1
+Site4,150,0.0195,8,23.4,17.55,1
+TOTAL,770,0.0195,8,120.12,90.09,1

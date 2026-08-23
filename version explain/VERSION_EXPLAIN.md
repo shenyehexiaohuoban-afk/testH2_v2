@@ -265,3 +265,14 @@
 ## Git 与文档状态说明
 
 当前 Git HEAD 只到 Stage84C (`db532c4`)；Stage85+、current W bundle、Stage89F/G runner 位于 dirty/untracked 工作树。所有这些节点的“accepted/current”来自 result README、bundle manifest、launcher chain 与 `codex_rule/log.md`，并不等同“已提交”。Stage89G frozen-commit 门禁无法冻结 untracked runner 字节，是明确的 `DOCUMENTATION_CODE_MISMATCH / REPRODUCIBILITY_GAP`。
+
+
+### Stage89M：Stage89J/K 正式采用、单一 bundle 与正确 8h integration
+
+**基于：** Stage89J accepted W candidate、Stage89K accepted TerminalLOH candidate、Stage89L adoption evidence、Stage89F resolved 8h model；Stage85R/Stage85H-A 只作为未来 runner/checkpoint engineering lineage。
+
+**改了什么：** 将 Stage89J 提升为 CURRENT/ADOPTED W，将 Stage89K 提升为 CURRENT/ADOPTED TerminalLOH；Stage89L 保持 FORMAL_MECHANISM_ABLATION；Stage88 保留为 superseded historical predecessor。建立唯一 `current_w_mainline_stage89` 轻量 bundle、严格 Stage89K hash/version/capacity loader 和只读 integration regression。
+
+**结果：** J/K/L prerequisite、35 个大 bank SHA、SAA/DRO 35-state mapping、Site4 200 kg tank/150 kW Pmax、未缩放初始库存全部 PASS。Stage1–6 各有 8 个 hourly periods，IEEE33/P_EL/original demand/production/inventory/HTT/PV active，Stage7 analytic、Stage8 absorbing；理论产能 120.12 kg，legacy 90.09 未触发。Stage7 value/subgradient、backward terminal cut、forward terminal evaluation 与五个 negative gates PASS。
+
+**边界：** Stage88→Stage89K 仍是 FULL CANDIDATE EFFECT，不是 H2 island-only effect。未训练、未 OOS、未建 checkpoint、未使用 multi-location adaptation、未改 forward/backward/cut mathematics。状态 `FORMAL_ADOPTION_AND_INTEGRATION / PASS`，ready for Stage89N single-loc4 fresh correct-8h training。

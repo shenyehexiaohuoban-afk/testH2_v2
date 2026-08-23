@@ -1,0 +1,5 @@
+stage,accepted_run,previous_identity,adopted_identity,status
+Stage89J,results/task-002-stage2b-b3-smoke/stage89j-topology-h2-dual-channel-w-candidate/run-001,FORMAL_W_CANDIDATE,CURRENT_ADOPTED_W_MAINLINE,PASS
+Stage89K,results/task-002-stage2b-b3-smoke/stage89k-terminalLoh-dual-channel-candidate/run-002,FORMAL_TERMINALLOH_CANDIDATE,CURRENT_ADOPTED_TERMINALLOH,PASS
+Stage89L,results/task-002-stage2b-b3-smoke/stage89l-h2-island-incremental-ablation/run-001,FORMAL_MECHANISM_ABLATION,FORMAL_MECHANISM_ABLATION,PASS
+Stage88,terminalLoh_wdro/current_w_mainline_stage88,CURRENT W/TERMINALLOH CANDIDATE,SUPERSEDED_HISTORICAL_REPRODUCIBLE_PREDECESSOR,PASS

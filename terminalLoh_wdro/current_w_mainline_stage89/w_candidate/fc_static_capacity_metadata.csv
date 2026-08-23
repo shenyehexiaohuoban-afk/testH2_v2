@@ -1,0 +1,5 @@
+site_id,site_index,bus,fc_cap_kw,eta_FC,h2_lhv_kWh_per_kg,official_slice_duration_h,H_FC_cap_kg_per_slice,formula,parameter_kind,source
+Site1,1,24,300.0,0.55,33.33,1.0,16.365272890925453,fc_cap_kw*official_slice_duration_h/(eta_FC*h2_lhv_kWh_per_kg),STATIC_METADATA_NOT_EXACT_SIGNATURE,terminalLoh_wdro/current_w_mainline_stage88/msp_bridge/near_stage_msp_input_stage88_cap200_candidate.mat
+Site2,2,14,150.0,0.55,33.33,1.0,8.182636445462727,fc_cap_kw*official_slice_duration_h/(eta_FC*h2_lhv_kWh_per_kg),STATIC_METADATA_NOT_EXACT_SIGNATURE,terminalLoh_wdro/current_w_mainline_stage88/msp_bridge/near_stage_msp_input_stage88_cap200_candidate.mat
+Site3,3,18,120.0,0.55,33.33,1.0,6.546109156370182,fc_cap_kw*official_slice_duration_h/(eta_FC*h2_lhv_kWh_per_kg),STATIC_METADATA_NOT_EXACT_SIGNATURE,terminalLoh_wdro/current_w_mainline_stage88/msp_bridge/near_stage_msp_input_stage88_cap200_candidate.mat
+Site4,4,31,150.0,0.55,33.33,1.0,8.182636445462727,fc_cap_kw*official_slice_duration_h/(eta_FC*h2_lhv_kWh_per_kg),STATIC_METADATA_NOT_EXACT_SIGNATURE,terminalLoh_wdro/current_w_mainline_stage88/msp_bridge/near_stage_msp_input_stage88_cap200_candidate.mat

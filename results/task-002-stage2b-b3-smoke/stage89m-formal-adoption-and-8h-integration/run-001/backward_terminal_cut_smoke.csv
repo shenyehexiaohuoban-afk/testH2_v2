@@ -1,0 +1,2 @@
+predecessor_k,expected_terminal_value,g1,g2,g3,g4,alpha,rows_before,rows_after,max_cut_error,pass
+70,17257.5355240426,-112.8,-112.8,-112.8,-112.8,17257.5355240426,2088,2089,0,1

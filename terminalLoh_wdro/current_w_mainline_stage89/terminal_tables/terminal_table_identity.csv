@@ -1,0 +1,3 @@
+mode,path,sha256,TERMINALLOH_VERSION,state_count,site_count,eta,tank_cap_kg
+SAA,terminalLoh_wdro/current_w_mainline_stage89/terminal_tables/terminal_loh_stage89k_saa_adopted.csv,3ef6d441dddcd15056b97da6e03944705a41900397ee7576e0e700c6237c7148,Stage89K,35,4,0,"[300,200,100,200]"
+DRO,terminalLoh_wdro/current_w_mainline_stage89/terminal_tables/terminal_loh_stage89k_dro_eta003_adopted.csv,2fa1958944110701239a109ebf46d959324a351f2f27c1c3fbd62f333066eaa8,Stage89K,35,4,0.03,"[300,200,100,200]"

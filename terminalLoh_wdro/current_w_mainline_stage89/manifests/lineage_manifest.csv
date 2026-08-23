@@ -1,0 +1,6 @@
+child,parent,relationship,identity
+Stage89M,Stage89J,formal current W adoption,accepted run-001
+Stage89M,Stage89K,formal current TerminalLOH adoption,accepted run-002
+Stage89M,Stage89L,formal adoption evidence,accepted run-001
+Stage89M,Stage89F,correct 8h model architecture,resolved formal model
+Stage89M,Stage88,superseded reproducible predecessor,preserved in place

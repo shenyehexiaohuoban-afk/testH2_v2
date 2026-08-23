@@ -1,0 +1,2 @@
+state_id,intensity,loc,joint_state_k,target_total_kg,inventory_total_kg,forward_terminal_value,analytic_terminal_value,gap_total_kg,pass
+35,6,7,335,346.859686166604,86.714921541651,520289.529249906,520289.529249906,260.144764624953,1

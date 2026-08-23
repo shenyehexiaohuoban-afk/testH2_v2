@@ -1,0 +1,6 @@
+test,expected_identifier,observed_identifier,rejected,pass
+Stage89K table + Site4 tank=150,Stage89M:CapacityMismatch,Stage89M:CapacityMismatch,1,1
+Stage88 hash masquerading as Stage89K,Stage89M:SourceHashMismatch,Stage89M:SourceHashMismatch,1,1
+Stage53 legacy table,Stage89M:SourceHashMismatch,Stage89M:SourceHashMismatch,1,1
+legacy 6h runtime,Stage89M:Formal8hGate,Stage89M:Formal8hGate,1,1
+hourly variable count not equal to 8,Stage89M:Formal8hGate,Stage89M:Formal8hGate,1,1

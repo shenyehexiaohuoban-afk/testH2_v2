@@ -1,0 +1,2 @@
+copied_or_referenced,original_path,size_bytes,sha256,reason
+REFERENCED,results/task-002-stage2b-b3-smoke/stage89j-topology-h2-dual-channel-w-candidate/run-001/exact_group_summary.csv,19343621,ac0cf8948f878b48a9af78aef3c828e71c8748ad92c929986940fc37dad01221,19.3 MB exact-group index remains in accepted historical result

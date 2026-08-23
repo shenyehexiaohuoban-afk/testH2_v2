@@ -1,0 +1,7 @@
+gate,rows,status
+inventory_qa.csv,70,PASS
+fc_capacity_qa.csv,70,PASS
+probability_dro_qa.csv,70,PASS
+stage89k_solver_status,70,PASS
+stage89k_runner_sha256,1,219181470bbabddfe5307745b241f55b42bb2e46ccca73a7594b753deb9b6d0e
+case_c_reuse_only,70,PASS

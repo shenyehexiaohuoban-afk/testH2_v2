@@ -1,0 +1,4 @@
+file_or_directory,role,source_stage,source_run,relative_path,path_hint,size_bytes,file_count,sha256_or_aggregate_identity,required_for_rebuild,git_tracked
+Stage89J grouped candidate banks,adopted W bank body,Stage89J,run-001,terminalLoh_wdro/output/stage89j_topology_h2_dual_channel_w_candidate/run-001,repository-relative,1104251473,35,5e6c7e062d557b78a39f4f2cf1deedea6a51fc515f663a9222d97403ae362062,YES,NO
+Stage89K formal case arrays/checkpoints,accepted TerminalLOH solve evidence,Stage89K,run-002,terminalLoh_wdro/output/stage89k_terminalLoh_dual_channel_candidate/run-002,repository-relative,6782360,228,b9626428bf3e2623555436825e11e65e3846c981ef9b44b2a7879112cce997ce,NO,NO
+Stage89L road-only case arrays/checkpoints,accepted mechanism ablation evidence,Stage89L,run-001,terminalLoh_wdro/output/stage89l_h2_island_incremental_ablation/run-001,repository-relative,4031575,228,2010eb8881426ad57eef0deb5b85e41fb767ccb22ddba9149e20d749b728f775,NO,NO

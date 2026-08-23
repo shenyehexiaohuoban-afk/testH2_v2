@@ -1,0 +1,11 @@
+parameter,observed,expected,pass
+tank_capacity_kg,[300 200 100 200],[300 200 100 200],1
+pmax_kw,[300 200 120 150],[300 200 120 150],1
+site4_tank_kg,200,200,1
+site4_pmax_kw,150,150,1
+initial_inventory_kg,[58.044557044869492 50.308137938624753 25.262133442309338 33.02358084624278],[58.044557044869492 50.308137938624753 25.262133442309338 33.02358084624278],1
+initial_inventory_rescaled,NO,NO,1
+active_dt_h,8,8,1
+source_demand_stage_dt_h,6,6_METADATA_ONLY,1
+terminal_version,Stage89K,Stage89K,1
+default_bridge_mode,DRO,DRO,1

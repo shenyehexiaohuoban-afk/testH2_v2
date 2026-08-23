@@ -1,0 +1,5 @@
+prerequisite,accepted_run,expected_status,mechanical_result,evidence
+Stage89J,results/task-002-stage2b-b3-smoke/stage89j-topology-h2-dual-channel-w-candidate/run-001,FORMAL_W_CANDIDATE,PASS,README; 35 bank hashes; Dres/Aelec/q_g/replay QA
+Stage89K,results/task-002-stage2b-b3-smoke/stage89k-terminalLoh-dual-channel-candidate/run-002,FORMAL_TERMINALLOH_CANDIDATE,PASS,70 OPTIMAL; inventory/FC/probability/bank SHA QA
+Stage89L,results/task-002-stage2b-b3-smoke/stage89l-h2-island-incremental-ablation/run-001,FORMAL_MECHANISM_ABLATION,PASS,70 road-only OPTIMAL; Case C reuse; MIXED/MODERATE; adoption YES
+Stage89J large bank,terminalLoh_wdro/output/stage89j_topology_h2_dual_channel_w_candidate/run-001,35 files; 1104251473 bytes,PASS,5e6c7e062d557b78a39f4f2cf1deedea6a51fc515f663a9222d97403ae362062

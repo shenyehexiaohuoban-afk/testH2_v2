@@ -1,12 +1,12 @@
 # 全项目版本谱系审计
 
-审计时间：2026-08-20（Asia/Shanghai）。本目录是静态登记，不是新的模型版本；未运行 MATLAB、Gurobi、training、OOS、W bank 或 TerminalLOH 优化，也未改动任何模型、runner、结果或 checkpoint。
+当前登记截至：2026-08-23（Asia/Shanghai）。Stage89M 仅运行 loader / model construction / Stage7 / cut / forward minimal integration regression；未运行 FA-MSP training、OOS、W bank 或 TerminalLOH 优化，也未生成 checkpoint。
 
 ## 一页结论
 
-本次识别并登记 **85 个重要版本节点**。节点按“实际改变模型、数据、参数、接口、runner/checkpoint/OOS 流程，或形成重要诊断结论”筛选；纯图片重排和无独立语义的临时 run 没有强行拆成版本。完整字段见 `version_registry.csv`，多父继承见 `version_lineage.csv`。
+当前识别并登记 **88 个重要版本节点**。节点按“实际改变模型、数据、参数、接口、runner/checkpoint/OOS 流程，或形成重要诊断结论”筛选；纯图片重排和无独立语义的临时 run 没有强行拆成版本。完整字段见 `version_registry.csv`，多父继承见 `version_lineage.csv`。
 
-1. **当前 W / TerminalLOH 主线**已经核实为 `Stage87B -> Stage87C-A -> Stage87D-B H2 -> Stage88A CAP200 -> Stage88A1/88D/88E`，由 Stage89A 打包到 `terminalLoh_wdro/current_w_mainline_stage88/`。正式候选表是 35×4、Pearson flat chi-square DRO、`eta=0.03`、Site4 CAP200。
+1. **当前 W / TerminalLOH 主线**已由 Stage89M 正式提升为 Stage89J accepted W + Stage89K accepted TerminalLOH，Stage89L 是 adoption evidence；唯一入口是 `terminalLoh_wdro/current_w_mainline_stage89/`。Stage88 仍原位保留为 superseded historical reproducible predecessor。
 2. **当前 FA-MSP 模型入口**是 Stage89F 建立的 `fa_msp/current_hourly_stage88_candidate/`：6 个运行阶段 × 8h，每阶段内部 8×1h；hourly IEEE33、original hourly H2 demand、hourly HTT；Stage7 为解析 TerminalLOH，Stage8 为零吸收边界；容量 `[300,200,100,200] kg`，Pmax `[300,200,120,150] kW`。
 3. **训练/OOS runner 的主要历史母版**应以 Stage85R 为主：它已具备 8h、hourly IEEE33、original hourly demand、hourly HTT、fresh fixed-budget training、checkpoint、clean reload、common-bank 10k OOS。Stage89G 是针对 Stage89F/Stage88 输入和 loc1/4/7 三地 OOS 新写的适配 runner，不是 Stage85R checkpoint 的续跑。
 4. **checkpoint clean-process 机制来源**是 Stage85H-A：训练进程 save-and-exit，随后新 MATLAB 进程只加载一次 modelLib，并在 reload PASS 后才进入诊断/OOS。Stage89G run-002 明确复用了这个机制。
@@ -95,3 +95,8 @@ Stage89K `run-002` 直接读取 Stage89J 的 35 个 frozen grouped banks，在�
 ## Stage89L H2 electrical-island 增量消融登记（2026-08-22）
 
 Stage89L `run-001` 在同一 Stage89J bank、Stage89K economics/q/Pearson/tank/tolerance/shared-T 口径下，只将 `Aelec` 替换为同形状零数组，并完成 road-only 35 SAA + 35 DRO；Case C 直接只读复用 Stage89K run-002。70 个 Case-B 均 OPTIMAL，所有 inventory/demand/probability/no-electrical gates PASS。dual-minus-road-only mean T_total 为 SAA `+0.836403%`、DRO `+0.875626%`；约 9.27 kg electrical service 主要替代约 7.73 kg road service，并额外减少约 1.55 kg shortage。结论为 `MIXED / MODERATE`，`RECOMMEND_ADOPT_STAGE89J_89K=YES`，但不自动标记 CURRENT W、CURRENT TerminalLOH 或 MSP accepted；正式 adoption 留给 Stage89M。
+
+
+## Stage89M formal adoption and correct-8h integration (2026-08-23)
+
+Stage89J run-001 and Stage89K run-002 are formally adopted as the current W and TerminalLOH, supported by Stage89L run-001. The unique navigation bundle is `terminalLoh_wdro/current_w_mainline_stage89/`; Stage88 remains a reproducible superseded predecessor. Strict Stage89K SAA/DRO hash, 35-state order, four-site, CAP200 and negative-loader gates pass. The Stage89F model was mechanically rebuilt as six operating stages with eight hourly periods each; Stage1 theoretical cap is 120.12 kg and legacy 90.09 is rejected. Stage7 value/subgradient/cut/forward smoke passes. No training, OOS, checkpoint, multi-location adaptation, or forward/backward-core modification occurred.

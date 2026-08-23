@@ -1,0 +1,9 @@
+stage,role,hourly_period_count,p_el_variables,hourly_demand_equalities,h2_production_values,inventory_pre_htt_values,inventory_end_values,directed_htt_variables,p_branch_variables,q_branch_variables,voltage_variables,pv_variables,original_hourly_demand_active,hourly_grid_active,hourly_h2_active,hourly_htt_active,pass
+1,OPERATING,8,32,32,32,32,32,128,256,256,264,32,1,1,1,1,1
+2,OPERATING,8,32,32,32,32,32,128,256,256,264,32,1,1,1,1,1
+3,OPERATING,8,32,32,32,32,32,128,256,256,264,32,1,1,1,1,1
+4,OPERATING,8,32,32,32,32,32,128,256,256,264,32,1,1,1,1,1
+5,OPERATING,8,32,32,32,32,32,128,256,256,264,32,1,1,1,1,1
+6,OPERATING,8,32,32,32,32,32,128,256,256,264,32,1,1,1,1,1
+7,ANALYTIC_TERMINAL_LOH,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1
+8,ZERO_ABSORBING,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1

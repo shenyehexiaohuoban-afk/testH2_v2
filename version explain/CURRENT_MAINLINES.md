@@ -1,8 +1,16 @@
 # 当前主线
 
-## 1. W / TerminalLOH
+## 0. Stage89 adopted W / TerminalLOH (CURRENT)
 
-**CURRENT VERSION**
+**CURRENT W:** Stage89J accepted run-001, signature `(Dres,Aroad,Aelec,C)`, 35×15000 frozen draws and exact `q_g=multiplicity/15000`.
+
+**CURRENT TERMINALLOH:** Stage89K accepted run-002, 35×4 SAA/DRO tables, Pearson `eta=0.03`, tank `[300,200,100,200] kg`.
+
+**ADOPTION EVIDENCE:** Stage89L accepted run-001 (`MIXED / MODERATE`, `RECOMMEND_ADOPT_STAGE89J_89K=YES`). Stage88 is preserved as the superseded reproducible predecessor. The sole navigation entry is `terminalLoh_wdro/current_w_mainline_stage89/`. Stage89M verified the Stage89F `6×8h=48h` hourly model, 120.12 kg Stage1 sentinel and strict Stage7/cut/forward integration without training/OOS/checkpoint or core changes.
+
+## 1. W / TerminalLOH (SUPERSEDED STAGE88 PREDECESSOR)
+
+**SUPERSEDED HISTORICAL VERSION**
 
 Stage89A reproducibility bundle 所指向的 Stage88 CAP200 DRO candidate；实际生成谱系为：
 
@@ -179,4 +187,4 @@ Stage89K `stage89k-terminalLoh-dual-channel-candidate/run-002` 已在 Stage89J f
 
 ## Stage89L mechanism-ablation 非主线边界
 
-Stage89L `stage89l-h2-island-incremental-ablation/run-001` 以 Stage89J/89K 完全相同的 `Dres/Aroad/C/q_g`、CAP200、eta=0.03、shared-T、LP/decomposition 与 tolerances 为基础，仅关闭 `Aelec`，完成 road-only 35 SAA + 35 DRO；accepted Stage89K run-002 仅只读复用。dual-minus-road-only mean T_total 为 SAA `+0.836403%`、DRO `+0.875626%`，机制判断 `MIXED`、价值 `MODERATE`，建议 Stage89J/89K 进入 Stage89M formal adoption preparation。该建议不改变本文件第 1 节的 Stage88 current W/TerminalLOH，也不把 Stage89J/K/L 标记为 MSP accepted。
+Stage89L `stage89l-h2-island-incremental-ablation/run-001` 以 Stage89J/89K 完全相同的 `Dres/Aroad/C/q_g`、CAP200、eta=0.03、shared-T、LP/decomposition 与 tolerances 为基础，仅关闭 `Aelec`，完成 road-only 35 SAA + 35 DRO；accepted Stage89K run-002 仅只读复用。dual-minus-road-only mean T_total 为 SAA `+0.836403%`、DRO `+0.875626%`，机制判断 `MIXED`、价值 `MODERATE`。该建议已由 Stage89M 执行：Stage89J/K 当前身份见本文件第 0 节；Stage89L 仍保持 FORMAL_MECHANISM_ABLATION。
