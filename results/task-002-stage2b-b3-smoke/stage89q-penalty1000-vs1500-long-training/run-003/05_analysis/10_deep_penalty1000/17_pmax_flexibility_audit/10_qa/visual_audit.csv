@@ -1,0 +1,14 @@
+﻿figure,width,height,pixel_std,nonblank,manual_visual_status,manual_note
+01_Base与各候选不可恢复路径数.png,2141,1031,89.0430450439,True,PASS,contact sheet and key originals inspected; readable Chinese labels and no incoherent overlap
+02_四站125逐站扩容对比.png,1601,925,77.4516220093,True,PASS,contact sheet and key originals inspected; readable Chinese labels and no incoherent overlap
+03_四站150逐站扩容对比.png,1601,925,81.9424591064,True,PASS,contact sheet and key originals inspected; readable Chinese labels and no incoherent overlap
+04_Targeted与Uniform对比.png,1601,942,79.6715087891,True,PASS,contact sheet and key originals inspected; readable Chinese labels and no incoherent overlap
+05_每新增kW恢复效率.png,1780,925,94.9071273804,True,PASS,contact sheet and key originals inspected; readable Chinese labels and no incoherent overlap
+06_三类失败类型改善.png,1601,925,73.4012756348,True,PASS,contact sheet and key originals inspected; readable Chinese labels and no incoherent overlap
+07_普通与困难尾部改善.png,1601,925,66.7424850464,True,PASS,contact sheet and key originals inspected; readable Chinese labels and no incoherent overlap
+08_缺口频率与电解槽顶满及增益.png,1452,1065,43.5629272461,True,PASS,contact sheet and key originals inspected; readable Chinese labels and no incoherent overlap
+09_不可恢复窗口后移.png,1601,925,95.9760513306,True,PASS,contact sheet and key originals inspected; readable Chinese labels and no incoherent overlap
+10_逐站电网Hosting风险.png,1781,855,41.3915138245,True,PASS,contact sheet and key originals inspected; readable Chinese labels and no incoherent overlap
+11_救回路径强度位置分布.png,1417,924,53.0872688293,True,PASS,contact sheet and key originals inspected; readable Chinese labels and no incoherent overlap
+12_Pmax扩大等待窗口机制总结.png,2321,854,84.189704895,True,PASS,contact sheet and key originals inspected; readable Chinese labels and no incoherent overlap
+contact_sheet.png,1100,2100,67.3065185547,True,PASS,contact sheet and key originals inspected; readable Chinese labels and no incoherent overlap

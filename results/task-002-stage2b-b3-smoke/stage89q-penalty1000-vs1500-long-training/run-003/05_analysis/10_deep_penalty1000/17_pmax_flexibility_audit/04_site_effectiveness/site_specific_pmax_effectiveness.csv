@@ -1,0 +1,9 @@
+﻿site,candidate,relative_multiplier,added_kw,added_theoretical_kg_per_h,added_theoretical_8h_kg,recovered_paths_at_16h,recovered_paths_at_8h,recovered_paths_at_4h,recovery_events_3_checkpoints,RECOVERED_PATHS_PER_ADDED_KW,RECOVERED_PATHS_PER_ADDED_8H_KG,interpretation
+1,S1_125,1.25,75,1.4625,11.7,36,15,9,60,0.8,5.12820512821,aggregate optimistic total-quantity bound; not site-feasible or economic optimum
+1,S1_150,1.5,150,2.925,23.4,45,35,16,96,0.64,4.10256410256,aggregate optimistic total-quantity bound; not site-feasible or economic optimum
+2,S2_125,1.25,50,0.975,7.8,31,11,8,50,1,6.41025641026,aggregate optimistic total-quantity bound; not site-feasible or economic optimum
+2,S2_150,1.5,100,1.95,15.6,38,28,11,77,0.77,4.9358974359,aggregate optimistic total-quantity bound; not site-feasible or economic optimum
+3,S3_125,1.25,30,0.585,4.68,26,9,3,38,1.26666666667,8.11965811966,aggregate optimistic total-quantity bound; not site-feasible or economic optimum
+3,S3_150,1.5,60,1.17,9.36,31,11,8,50,0.833333333333,5.34188034188,aggregate optimistic total-quantity bound; not site-feasible or economic optimum
+4,S4_125,1.25,37.5,0.73125,5.85,31,9,8,48,1.28,8.20512820513,aggregate optimistic total-quantity bound; not site-feasible or economic optimum
+4,S4_150,1.5,75,1.4625,11.7,36,15,9,60,0.8,5.12820512821,aggregate optimistic total-quantity bound; not site-feasible or economic optimum

@@ -1,0 +1,14 @@
+﻿check,observed,expected,pass
+baseline_count_-16h,70,70,True
+baseline_path_set_-16h,d3bb0a3cc96be5aa4b849b45942edbd109add9212ec09d4f5522429155d6fe79,d3bb0a3cc96be5aa4b849b45942edbd109add9212ec09d4f5522429155d6fe79,True
+baseline_count_-8h,156,156,True
+baseline_path_set_-8h,ae68498f4f24d95d36352bdfde96cc3f5055bc50a82eab9443eb40de693485ff,ae68498f4f24d95d36352bdfde96cc3f5055bc50a82eab9443eb40de693485ff,True
+baseline_count_-4h,167,167,True
+baseline_path_set_-4h,084a0ac13d64ab7191220ac495ebe66b3713470797754bf2d76821053da5e98c,084a0ac13d64ab7191220ac495ebe66b3713470797754bf2d76821053da5e98c,True
+baseline_row_count,1419,1419,True
+baseline_real_checkpoint_count,1416,1416,True
+minus16_missing_without_padding,3,3,True
+baseline_all_path_status_match,1419,1419,True
+formula_semantics,current_end_inventory + remaining_hours*sum(Pmax)*0.0195 - final_total_target,same as 15_mechanism_deep_dive,True
+ordinary_demand_treatment,reported but omitted from strict upper bound because ordinary shortage is soft,same as previous,True
+tank_and_HTT_treatment,not used to tighten aggregate optimistic bound,same as previous,True

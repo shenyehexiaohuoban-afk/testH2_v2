@@ -1,0 +1,27 @@
+﻿check,observed,expected,tolerance,pass
+repository_preflight,6,6,exact,True
+accepted_raw_hashes,"{'path_summary/oos_path_summary.csv': '99ec55faba4e60e88b25d757deb1a8146515faf666d52979fe69c64362047502', 'path_summary/oos_stage_summary.csv': '969c373a9a2ff1b271cde6fda95a6fe8e64b10362518fe4b807c0dc86437c15d', 'path_summary/oos_stage_site_summary.csv': 'eab41bdf5d58fc971bc65af8c5745de3bd08cc25a0a4d44cc386aeba3f99c89e', 'hourly_site/oos_hour_site.csv': 'af3b3d5c4aa69e6d29b35a88008b4d82360c4b8391fc783141078f7ad68b0cda', 'grid_hourly/oos_hour_system.csv': 'b9eaa83ee3e8a720f3cb5afd5d54da050c2d3ef45c434efe74f8ba8b976b63c6'}","{'path_summary/oos_path_summary.csv': '99ec55faba4e60e88b25d757deb1a8146515faf666d52979fe69c64362047502', 'path_summary/oos_stage_summary.csv': '969c373a9a2ff1b271cde6fda95a6fe8e64b10362518fe4b807c0dc86437c15d', 'path_summary/oos_stage_site_summary.csv': 'eab41bdf5d58fc971bc65af8c5745de3bd08cc25a0a4d44cc386aeba3f99c89e', 'hourly_site/oos_hour_site.csv': 'af3b3d5c4aa69e6d29b35a88008b4d82360c4b8391fc783141078f7ad68b0cda', 'grid_hourly/oos_hour_system.csv': 'b9eaa83ee3e8a720f3cb5afd5d54da050c2d3ef45c434efe74f8ba8b976b63c6'}",exact,True
+terminal_hash,2fa1958944110701239a109ebf46d959324a351f2f27c1c3fbd62f333066eaa8,2fa1958944110701239a109ebf46d959324a351f2f27c1c3fbd62f333066eaa8,exact,True
+bank_identity,6bf3d1190a402ded052b8d3d08ed369042236e151f562bdd9fd4db7b8ff386c6/a186e8d4ac870082d0925a05311ab8f4c5a0b70cb61b6fd06955a48a647b3941,6bf3d1190a402ded052b8d3d08ed369042236e151f562bdd9fd4db7b8ff386c6/a186e8d4ac870082d0925a05311ab8f4c5a0b70cb61b6fd06955a48a647b3941,exact,True
+path_partition,10000/6124/473,10000/6124/473,exact,True
+failure_partition,"{'PURE_SPATIAL_MISMATCH': 203, 'MIXED_QUANTITY_AND_SPATIAL': 152, 'PURE_QUANTITY_SHORTFALL': 118}",118/203/152,exact,True
+no_zero_padding,285888,285888,exact,True
+relative_time_samples,"{4: 5203, 8: 5203, 16: 5203}","{4: 5203, 8: 5203, 16: 5203}",exact,True
+baseline_gate,13,13,exact,True
+candidate_vocabulary,"['B0', 'S1_125', 'S2_125', 'S3_125', 'S4_125', 'S1_150', 'S2_150', 'S3_150', 'S4_150', 'ALL_125', 'ALL_150']","['B0', 'S1_125', 'S2_125', 'S3_125', 'S4_125', 'S1_150', 'S2_150', 'S3_150', 'S4_150', 'ALL_125', 'ALL_150']",exact,True
+only_diagnostic_Pmax_changed,11,11,exact,True
+candidate_monotonicity,0,0,exact,True
+failure_monotonicity,0,0,exact,True
+window_rows,5203,5203,exact,True
+window_shift_nonnegative,0.0,>=0,exact,True
+previous_site_stats_reused,4,4,exact,True
+formal_Pmax_observed,"{1: 300.0, 2: 200.0, 3: 120.0, 4: 150.0}","{1: 300.0, 2: 200.0, 3: 120.0, 4: 150.0}",exact,True
+site_bus_mapping,"[24, 14, 18, 31]","[24, 14, 18, 31]",exact,True
+site3_voltage_warning,POTENTIALLY_VOLTAGE_LIMITED,POTENTIALLY_VOLTAGE_LIMITED,exact,True
+incremental_grid_not_guessed,1,1,exact,True
+recovered_detail_closure,795,795,exact,True
+tail_partition,473,473,exact,True
+ranking_rows,10,10,exact,True
+status_scope,YES,YES,exact,True
+no_forbidden_capabilities,[],[],exact,True
+raw_hashes_unchanged_after,"{'path_summary/oos_path_summary.csv': '99ec55faba4e60e88b25d757deb1a8146515faf666d52979fe69c64362047502', 'path_summary/oos_stage_summary.csv': '969c373a9a2ff1b271cde6fda95a6fe8e64b10362518fe4b807c0dc86437c15d', 'path_summary/oos_stage_site_summary.csv': 'eab41bdf5d58fc971bc65af8c5745de3bd08cc25a0a4d44cc386aeba3f99c89e', 'hourly_site/oos_hour_site.csv': 'af3b3d5c4aa69e6d29b35a88008b4d82360c4b8391fc783141078f7ad68b0cda', 'grid_hourly/oos_hour_system.csv': 'b9eaa83ee3e8a720f3cb5afd5d54da050c2d3ef45c434efe74f8ba8b976b63c6'}","{'path_summary/oos_path_summary.csv': '99ec55faba4e60e88b25d757deb1a8146515faf666d52979fe69c64362047502', 'path_summary/oos_stage_summary.csv': '969c373a9a2ff1b271cde6fda95a6fe8e64b10362518fe4b807c0dc86437c15d', 'path_summary/oos_stage_site_summary.csv': 'eab41bdf5d58fc971bc65af8c5745de3bd08cc25a0a4d44cc386aeba3f99c89e', 'hourly_site/oos_hour_site.csv': 'af3b3d5c4aa69e6d29b35a88008b4d82360c4b8391fc783141078f7ad68b0cda', 'grid_hourly/oos_hour_system.csv': 'b9eaa83ee3e8a720f3cb5afd5d54da050c2d3ef45c434efe74f8ba8b976b63c6'}",exact,True

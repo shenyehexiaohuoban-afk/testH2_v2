@@ -1,0 +1,7 @@
+﻿item,observed,expected,pass
+branch,task/002-stage2b-b3-smoke,task/002-stage2b-b3-smoke,True
+HEAD,84e9d1e109725c86c59a9722e6f7b68808510290,84e9d1e109725c86c59a9722e6f7b68808510290,True
+upstream,origin/task/002-stage2b-b3-smoke,origin/task/002-stage2b-b3-smoke,True
+ahead,0,0,True
+behind,0,0,True
+preexisting_tracked_dirty_count,7,7,True
