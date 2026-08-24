@@ -1,0 +1,35 @@
+﻿check,observed,expected,pass
+preflight_all_pass,12,12,True
+s4_recovered_-16h,31,31,True
+s4_recovered_-8h,9,9,True
+s4_recovered_-4h,8,8,True
+event_count,48,48,True
+event_path_union,44,44,True
+real_hour_count,704,704,True
+no_padded_zero_hours,True,True,True
+each_union_path_has_16_hours,16,16,True
+k_H2_mechanical,0.0195,0.0195,True
+base_Pmax_unchanged,"[300.0, 200.0, 120.0, 150.0]","[300, 200, 120, 150]",True
+candidate_Pmax,"[300.0, 200.0, 120.0, 187.5]","[300, 200, 120, 187.5]",True
+hourly_delta_definition,9.99875737761613e-11,<=1e-5,True
+no_double_counting,0.0,0,True
+full_hosting_81p392,0.8139204545454546,0.813920454545,True
+voltage_limited_18p608,0.18607954545454544,0.186079545455,True
+branch_violation_zero,0,0,True
+substation_violation_zero,0,0,True
+event_all_identifiable,48,48,True
+evaluator_vs_cumulative_kg,48,48,True
+required_alpha_bounds,"[0.027165636068368724, 0.9977270625641319]","[0,1]",True
+recoverability_evaluator_monotonicity,True,True,True
+pure_location_recovery_zero,0,0,True
+all_tail_groups_reported,"{'difficult4', 'normal95', 'extreme1'}","{'normal95', 'difficult4', 'extreme1'}",True
+normal95_recovered_zero,0,0,True
+not_identifiable_preserved,0,0,True
+no_grid_LP_rerun,False,False,True
+no_random_draw,False,False,True
+no_FA_MSP_solve,False,False,True
+no_forward_backward_cuts,False,False,True
+no_OOS_rerun,False,False,True
+no_parameter_writeback,False,False,True
+workflow_gate_evaluated,8,8,True
+required_figures,12,12,True

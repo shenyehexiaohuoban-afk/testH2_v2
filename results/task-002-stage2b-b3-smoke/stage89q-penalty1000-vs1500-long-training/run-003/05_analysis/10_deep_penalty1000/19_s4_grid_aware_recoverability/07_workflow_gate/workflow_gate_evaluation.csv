@@ -1,0 +1,9 @@
+﻿gate,observed,threshold,pass
+baseline_reproduction_all_pass,True,True,True
+raw_model_inputs_unchanged,True,True,True
+grid_aware_identifiable_rate,1.0,>=0.95,True
+overall_retention_ratio,0.8125,>=0.8,True
+difficult4_plus_extreme1_retention,0.8125,>=0.7,True
+no_branch_structural_bottleneck,True,True,True
+no_substation_structural_bottleneck,True,True,True
+no_broad_severe_voltage_recovery_loss,"{'removed_event_share': 0.1875, 'severe_path_hour_share': 0.18607954545454544}",both <= 0.2,True

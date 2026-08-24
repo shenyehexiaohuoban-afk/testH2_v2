@@ -1,0 +1,6 @@
+﻿threshold,value,purpose
+identifiable_rate_min,0.95,predeclared engineering workflow gate
+overall_retention_min,0.8,predeclared engineering workflow gate
+difficult_extreme_retention_min,0.7,predeclared engineering workflow gate
+broad_severe_loss_share_max,0.2,predeclared engineering workflow gate
+severe_missing_headroom_kw,20,predeclared engineering workflow gate

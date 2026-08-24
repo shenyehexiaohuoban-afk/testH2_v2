@@ -1,0 +1,16 @@
+﻿audit,metric,observed,expected,pass
+physical_base,base_unrecoverable_-16h,70,70,True
+physical_s4,s4_recovered_-16h,31,31,True
+physical_base,base_unrecoverable_-8h,156,156,True
+physical_s4,s4_recovered_-8h,9,9,True
+physical_base,base_unrecoverable_-4h,167,167,True
+physical_s4,s4_recovered_-4h,8,8,True
+grid_s4,candidate_increment_kw,37.5,37.5,True
+grid_s4,all_hour_full_hostable_ratio,0.9858476046563688,0.985847604656,True
+grid_s4,critical_final16_full_hostable_ratio,0.8139204545454546,0.813920454545,True
+grid_s4,critical_final16_voltage_limited_ratio,0.18607954545454544,0.186079545455,True
+grid_s4,critical_branch_limited_hours,0,0,True
+grid_s4,critical_substation_limited_hours,0,0,True
+identity,s4_recovered_union_path_count,44,44,True
+identity,s4_recovered_union_path_sha,4b718f488dce0eb6a44d24f42d74af2719518a3baf9f077e15dae4548ddfcb45,4b718f488dce0eb6a44d24f42d74af2719518a3baf9f077e15dae4548ddfcb45,True
+identity,critical_real_hour_count,704,704,True

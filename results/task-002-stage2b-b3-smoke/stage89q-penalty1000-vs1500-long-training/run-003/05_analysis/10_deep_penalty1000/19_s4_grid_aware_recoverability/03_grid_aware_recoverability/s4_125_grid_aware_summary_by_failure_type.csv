@@ -1,0 +1,4 @@
+﻿failure_type,hydrogen_side_recovered,grid_aware_identifiable,grid_aware_supported,grid_clipping_removed,not_identifiable,identifiable_rate,retention_ratio
+pure_quantity,14,14,12,2,0,1,0.857142857143
+pure_location,0,0,0,0,0,,
+mixed,34,34,27,7,0,1,0.794117647059

@@ -1,0 +1,4 @@
+﻿checkpoint_relative_hour,hydrogen_recovered_count,hydrogen_recovered_path_set_sha256,all_recovered_paths_have_grid_hours,expected_real_hours,observed_real_hours
+-16,31,c1b015c72e28ccbc02fad2d657c85903471fc699e9c4b7561fbd1ed9f3293375,True,496,496
+-8,9,5e01d23fb5cde158ccc6881571db41b101e20fd395733c933c2b0f9751ed5a27,True,72,72
+-4,8,4ac2ecd7d7cb5808f8040842ba9f48e0826548918fb241fbe222479eb14e32d3,True,32,32

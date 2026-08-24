@@ -1,0 +1,13 @@
+﻿figure,width_px,height_px,nonwhite_fraction,pass
+01_氢侧救回与电网保留.png,1518,895,0.254846497523,True
+02_三个检查点retention.png,1429,860,0.399166761599,True
+03_full_hosting与实际恢复支持.png,1339,895,0.44714182601,True
+04_所需kW与电网可用kW.png,1393,1073,0.0240652068758,True
+05_recovery_margin_kg分布.png,1429,897,0.213971928823,True
+06_voltage_clipping缺失kW.png,1429,897,0.0527573054728,True
+07_纯总量与混合retention.png,1429,895,0.296678147394,True
+08_tail_retention.png,1429,895,0.301471904797,True
+09_bus18恢复损失频次.png,1339,897,0.617300386401,True
+10_bus18电压裕度与恢复损失.png,1429,896,0.0284445916225,True
+11_path_level恢复窗口前后.png,1788,984,0.241244134337,True
+12_S4_125闭环机制图.png,1967,858,0.297877685778,True

@@ -1,0 +1,10 @@
+﻿scope,path_id,checkpoint_relative_hour,failure_type,tail_group,final_intensity,final_location,critical_bus,bus18_is_critical,minimum_limiting_voltage_pu,minimum_bus18_voltage_pu,minimum_voltage_margin_pu,voltage_shortfall_from_lower_bound_pu,required_extra_H2_kg,missing_grid_hostable_H2_kg,grid_clipped_hours
+lost_event,3349,-16,pure_quantity,difficult4,5,3,18,True,0.9,0.9,0,0,9.953488345,1.178488345,4
+lost_event,4711,-16,mixed,difficult4,5,3,18,True,0.9,0.9,0,0,9.953488345,1.178488345,4
+lost_event,7786,-16,mixed,difficult4,5,3,18,True,0.9,0.9,0,0,9.953488345,1.178488345,4
+lost_event,9428,-16,pure_quantity,extreme1,5,3,18,True,0.9,0.9,0,0,9.953488345,1.178488345,4
+lost_event,1432,-4,mixed,difficult4,4,4,18,True,0.9,0.9,0,0,2.899620417,2.899620417,4
+lost_event,1580,-4,mixed,difficult4,4,3,18,True,0.9,0.9,0,0,2.303203743,2.303203743,4
+lost_event,3997,-4,mixed,difficult4,4,4,18,True,0.9,0.9,0,0,2.899620417,2.899620417,4
+lost_event,8384,-4,mixed,difficult4,4,3,18,True,0.9,0.9,0,0,2.303203743,2.303203743,4
+lost_event,8440,-4,mixed,difficult4,4,4,18,True,0.9,0.9,0,0,2.899620417,2.899620417,4
