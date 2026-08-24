@@ -1,0 +1,15 @@
+﻿path_id,checkpoint_relative_hour,failure_type,tail_group,critical_bus,bus18_critical_hours,grid_clipped_hours,bus18_critical_frequency,site3_increment_necessary,site3_plus30_is_necessary_contribution,site3_ablation_removes_physical_recovery,minimum_voltage_pu,minimum_voltage_margin_pu,voltage_shortfall_from_lower_bound_pu,missing_recovery_support_kg,site3_effective_increment_summary
+1313,-16,mixed,difficult4,18,4,4,1,YES,YES,YES,0.9,0,0,16.2286190542,min=-94.5592;mean=5.02543;max=30;sum=80.4069 kW
+7564,-16,mixed,difficult4,18,4,4,1,YES,YES,YES,0.9,0,0,12.2158901882,min=-94.5592;mean=5.02543;max=30;sum=80.4069 kW
+668,-8,pure_quantity,difficult4,18,4,4,1,NO,NO,NO,0.9,0,0,5.24332193719,min=-94.5592;mean=-19.9491;max=30;sum=-159.593 kW
+1655,-8,mixed,difficult4,18,4,4,1,YES,YES,YES,0.9,0,0,18.1582109972,min=-94.5592;mean=-19.9491;max=30;sum=-159.593 kW
+4744,-8,mixed,difficult4,18,4,4,1,YES,YES,YES,0.9,0,0,16.8508328282,min=-94.5592;mean=-19.9491;max=30;sum=-159.593 kW
+8061,-8,mixed,difficult4,18,4,4,1,NO,NO,NO,0.9,0,0,9.72275231919,min=-94.5592;mean=-19.9491;max=30;sum=-159.593 kW
+477,-4,pure_quantity,difficult4,18,4,4,1,NO,NO,NO,0.9,0,0,5.67504523675,min=-120;mean=-86.1828;max=0;sum=-344.731 kW
+1432,-4,mixed,difficult4,18,4,4,1,NO,NO,NO,0.9,0,0,8.35168616419,min=-94.5592;mean=-69.8983;max=-52.4627;sum=-279.593 kW
+1580,-4,mixed,difficult4,18,4,4,1,NO,NO,NO,0.9,0,0,7.75526949019,min=-94.5592;mean=-69.8983;max=-52.4627;sum=-279.593 kW
+3269,-4,mixed,difficult4,18,4,4,1,YES,YES,YES,0.9,0,0,19.7934202952,min=-94.5592;mean=-69.8983;max=-52.4627;sum=-279.593 kW
+3997,-4,mixed,difficult4,18,4,4,1,NO,NO,NO,0.9,0,0,8.35168616419,min=-94.5592;mean=-69.8983;max=-52.4627;sum=-279.593 kW
+7392,-4,mixed,difficult4,18,4,4,1,NO,NO,NO,0.9,0,0,16.4720447372,min=-94.5592;mean=-69.8983;max=-52.4627;sum=-279.593 kW
+8384,-4,mixed,difficult4,18,4,4,1,NO,NO,NO,0.9,0,0,7.75526949019,min=-94.5592;mean=-69.8983;max=-52.4627;sum=-279.593 kW
+8440,-4,mixed,difficult4,18,4,4,1,NO,NO,NO,0.9,0,0,8.35168616419,min=-94.5592;mean=-69.8983;max=-52.4627;sum=-279.593 kW

@@ -1,0 +1,34 @@
+﻿check,observed,expected,pass
+repository_preflight,9,9,True
+Base_70_156_167,"[70, 156, 167]","[70, 156, 167]",True
+ALL_18_110_147,"[18, 110, 147]","[18, 110, 147]",True
+recovered_event_set_118,118,118,True
+unique_recovered_paths,99,99,True
+candidate_pmax,"[375.0, 250.0, 150.0, 187.5]","[375, 250, 150, 187.5]",True
+added_kW,192.5,192.5,True
+k_H2,0.0195,0.0195,True
+no_padded_hours,"[-16, -1]","[-16, -1]",True
+checkpoint_sample_n,"[52.0, 46.0, 20.0]","[52, 46, 20]",True
+joint_site_resolved_witness,1584,1584,True
+joint_total_matches_saved,4.755747795570652e-09,<=1e-5,True
+independent_headrooms_not_summed,True,True,True
+no_voltage_headroom_double_counting,True,True,True
+all_events_identifiable,118,118,True
+required_alpha_bounds,"[0.005292007026305595, 0.9551351680319676]","[0,1]",True
+recoverability_monotonicity,0,0,True
+pure_location_gain_zero,0,0,True
+branch_limited_zero,0,0,True
+substation_limited_zero,0,0,True
+ablation_rows,472,472,True
+S4_mechanically_read,39,39,True
+S4_retention_mechanically_read,0.8125,0.8125,True
+NOT_IDENTIFIABLE_preserved,True,True,True
+no_random_draw,True,True,True
+no_FA_MSP_training,True,True,True
+no_forward_backward,True,True,True
+no_cuts,True,True,True
+no_OOS_rerun,True,True,True
+no_TerminalLOH_HTT_grid_limit_write,True,True,True
+no_raw_overwrite_or_parameter_writeback,True,True,True
+workflow_gate_evaluated,8,8,True
+figure_count,14,14,True

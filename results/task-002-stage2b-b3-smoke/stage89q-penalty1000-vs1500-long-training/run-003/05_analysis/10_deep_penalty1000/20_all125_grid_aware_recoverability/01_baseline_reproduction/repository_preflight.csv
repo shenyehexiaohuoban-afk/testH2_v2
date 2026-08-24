@@ -1,0 +1,10 @@
+﻿check,observed,expected,pass
+branch,task/002-stage2b-b3-smoke,task/002-stage2b-b3-smoke,True
+HEAD_latest_G2_commit,8bb9c28d0a05dbf815c627a3da78f35143253a12,8bb9c28d0a05dbf815c627a3da78f35143253a12,True
+upstream,origin/task/002-stage2b-b3-smoke,origin/task/002-stage2b-b3-smoke,True
+ahead_behind,0	0,0	0,True
+preexisting_tracked_dirty_count_preserved,7,7,True
+preexisting_tracked_paths,M fa_h2/fuzhu/load_terminal_loh_lookup_h2.m |  M fa_h2/solve_stage_model_h2.m |  M h2_default_options.m |  M hourly_grid_h2/build_integrated_hourly_stage_model_h2.m |  M hourly_grid_h2/update_integrated_hourly_stage_model_h2.m |  M load_data_h2_near.m |  M terminalLoh_wdro/src/generate_step04CA2_formal_consequences_h2.m,informational,True
+input_hash_identity,16,16,True
+live_MATLAB_Gurobi_count,0,0,True
+MATLAB_Gurobi_records,9668:MATLAB.exe:stopped,stale stopped objects permitted,True

@@ -1,0 +1,24 @@
+﻿audit,metric,observed,expected,pass
+physical,base_unrecoverable_-16h,70,70,True
+physical,all125_unrecoverable_-16h,18,18,True
+physical,all125_recovered_-16h,52,52,True
+physical,base_unrecoverable_-8h,156,156,True
+physical,all125_unrecoverable_-8h,110,110,True
+physical,all125_recovered_-8h,46,46,True
+physical,base_unrecoverable_-4h,167,167,True
+physical,all125_unrecoverable_-4h,147,147,True
+physical,all125_recovered_-4h,20,20,True
+candidate,candidate_pmax_kw,"[375.0, 250.0, 150.0, 187.5]","[375, 250, 150, 187.5]",True
+candidate,added_total_kw,192.5,192.5,True
+identity,hydrogen_recovered_events,118,118,True
+identity,hydrogen_recovered_unique_paths,99,99,True
+identity,recovered_path_set_sha256,5e28b0339ca9fb313b0701ada7be936c3806f6a134ab40df0a7a51e7398e4f48,5e28b0339ca9fb313b0701ada7be936c3806f6a134ab40df0a7a51e7398e4f48,True
+grid,critical_real_hour_rows,1584,1584,True
+grid,pure_location_recovered,0,0,True
+stage89q_g,all_hour_joint_mean_hosting_ratio,0.9630173862776532,0.9630173862776531,True
+stage89q_g,all_hour_full_candidate_stress_feasible_ratio,0.85345659838818,0.85345659838818,True
+stage89q_g,recovered_final16_full_candidate_stress_feasible_ratio,0.7676767676767676,0.767676767676768,True
+stage89q_g,recovered_final16_site3_independent_hostable_ratio,0.8390151515151515,0.839015151515151,True
+stage89q_g,recovered_final16_critical_bus18_ratio,1.0,1.0,True
+stage89q_g,branch_limited_ratio,0.0,0.0,True
+stage89q_g,substation_limited_ratio,0.0,0.0,True

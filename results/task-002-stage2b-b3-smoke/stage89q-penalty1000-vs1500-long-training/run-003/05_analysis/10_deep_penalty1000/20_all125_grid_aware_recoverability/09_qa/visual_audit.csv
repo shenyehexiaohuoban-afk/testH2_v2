@@ -1,0 +1,15 @@
+﻿figure,width_px,height_px,nonblank,pass
+01_氢侧救回与电网保留.png,1285,781,True,True
+02_检查点retention.png,1285,781,True,True
+03_full_stress与实际支持.png,1285,781,True,True
+04_failure_type_retention.png,1285,780,True,True
+05_tail_retention.png,1285,781,True,True
+06_四站贡献.png,1285,781,True,True
+07_四站ablation_loss.png,1285,781,True,True
+08_Site3必要性与bus18.png,1285,781,True,True
+09_bus18电压裕度与恢复损失.png,1285,782,True,True
+10_grid_loss事件分布.png,1285,781,True,True
+11_两候选绝对保留.png,1285,780,True,True
+12_两候选单位kW效率.png,1285,780,True,True
+13_两候选tail_retention.png,1357,799,True,True
+14_两候选公平比较总结.png,2003,718,True,True

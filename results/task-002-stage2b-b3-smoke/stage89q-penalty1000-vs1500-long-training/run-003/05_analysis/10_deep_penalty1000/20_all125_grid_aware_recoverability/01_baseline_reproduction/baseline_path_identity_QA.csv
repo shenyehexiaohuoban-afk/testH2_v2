@@ -1,0 +1,4 @@
+﻿checkpoint_relative_hour,event_count,expected_real_event_hours,observed_real_event_hours,no_padded_zero_hours
+-16,52,832,832,True
+-8,46,368,368,True
+-4,20,80,80,True

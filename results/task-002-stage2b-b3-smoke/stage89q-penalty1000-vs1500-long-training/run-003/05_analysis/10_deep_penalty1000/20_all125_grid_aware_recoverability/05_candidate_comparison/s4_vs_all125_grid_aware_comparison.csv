@@ -1,0 +1,3 @@
+﻿candidate,added_total_kW,hydrogen_side_recovered_events,unique_recovered_paths,grid_aware_retained_events,grid_aware_unique_paths,overall_retention_ratio,retention_-16,retention_-8,retention_-4,pure_quantity_retained,mixed_retained,pure_location_retained,difficult4_retention,extreme1_retention,grid_loss_events,bus18_loss_events,retained_events_per_added_kW,retained_unique_paths_per_added_kW
+S4_125,37.5,48,44,39,38,0.8125,0.870967741935,1,0.375,12,27,0,0.80487804878,0.857142857143,9,9,1.04,1.01333333333
+ALL_125,192.5,118,99,104,89,0.881355932203,0.961538461538,0.913043478261,0.6,35,69,0,0.861386138614,1,14,14,0.54025974026,0.462337662338

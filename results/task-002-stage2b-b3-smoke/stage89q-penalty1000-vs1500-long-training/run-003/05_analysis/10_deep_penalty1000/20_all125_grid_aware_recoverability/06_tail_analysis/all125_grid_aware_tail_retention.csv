@@ -1,0 +1,4 @@
+﻿tail_group,hydrogen_side_recovered,grid_aware_identifiable,grid_aware_supported,grid_clipping_removed,not_identifiable,identifiable_rate,retention_ratio
+normal95,1,1,1,0,0,1,1
+difficult4,101,101,87,14,0,1,0.861386138614
+extreme1,16,16,16,0,0,1,1

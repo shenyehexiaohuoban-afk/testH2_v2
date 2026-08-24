@@ -1,0 +1,6 @@
+﻿threshold,value
+identifiable_rate_min,0.95
+overall_retention_min,0.8
+difficult_extreme_retention_min,0.7
+broad_severe_loss_share_max,0.2
+severe_missing_headroom_kw,20

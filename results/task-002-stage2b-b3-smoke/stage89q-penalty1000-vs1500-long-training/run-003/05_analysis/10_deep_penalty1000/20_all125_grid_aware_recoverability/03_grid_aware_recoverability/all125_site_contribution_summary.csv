@@ -1,0 +1,5 @@
+﻿site,site_increment_kw,recovered_events,essential_events,redundant_events,partially_substitutable_events,not_identifiable_events,essential_events_per_added_kw,ablation_loss_ratio
+1,75,118,35,0,83,0,0.466666666667,0.296610169492
+2,50,118,22,0,96,0,0.44,0.186440677966
+3,30,118,13,0,105,0,0.433333333333,0.110169491525
+4,37.5,118,22,0,96,0,0.586666666667,0.186440677966
