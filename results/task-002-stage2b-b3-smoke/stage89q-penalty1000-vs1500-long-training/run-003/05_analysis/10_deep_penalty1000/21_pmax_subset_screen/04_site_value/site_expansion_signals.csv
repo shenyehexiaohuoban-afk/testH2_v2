@@ -1,0 +1,5 @@
+﻿site,increment_kW,subset_pair_count,mean_additional_retained_events,total_additional_retained_events_across_pairs,mean_marginal_retained_events_per_kW,positive_pair_fraction,expansion_signal
+1,75,8,39.625,317,0.528333333333,1,STRONG
+2,50,8,25.625,205,0.5125,1,STRONG
+3,30,8,11.125,89,0.370833333333,1,MODERATE
+4,37.5,8,21.125,169,0.563333333333,1,STRONG

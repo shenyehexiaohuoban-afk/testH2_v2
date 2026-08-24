@@ -1,0 +1,9 @@
+﻿rule,definition
+site_signal,STRONG: mean marginal retained events/kW >= 0.40 and positive in >=75% subset pairs
+site_signal,MODERATE: mean marginal retained events/kW >= 0.20 and positive in >=50% subset pairs
+site_signal,WEAK: positive mean marginal retained events but lower than MODERATE
+site_signal,REDUNDANT: no positive marginal retained event in any subset pair
+minimal,Pareto non-base candidate with highest retained events/kW
+balanced,Pareto non-base candidate with minimum added kW among candidates reaching at least 80% of ALL retained gain
+max_gain,"maximum retained events, then minimum added kW"
+asymmetric_smoke_eligibility,>=80% of ALL retained events with <192.5 kW and nonuniform/non-S4 vector

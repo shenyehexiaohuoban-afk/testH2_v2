@@ -1,0 +1,5 @@
+﻿ALL_retained_gain_fraction_target,required_retained_events,minimum_added_kW,candidate,achieved_retained_events,achieved_fraction_of_ALL
+0.7,73,117.5,B0111,73,0.701923076923
+0.8,84,142.5,B1011,85,0.817307692308
+0.9,94,162.5,B1101,97,0.932692307692
+0.95,99,192.5,B1111,104,1

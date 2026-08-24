@@ -1,0 +1,4 @@
+﻿role,candidate,added_kW,grid_aware_retained_events,retained_events_per_added_kW,selection_basis
+BEST_MINIMAL_CANDIDATE,B0001,37.5,39,1.04,highest Pareto efficiency
+BEST_BALANCED_CANDIDATE,B1011,142.5,85,0.59649122807,minimum kW reaching at least 80% of ALL retained gain
+BEST_MAX_GAIN_CANDIDATE,B1111,192.5,104,0.54025974026,"maximum retained events, then minimum kW"

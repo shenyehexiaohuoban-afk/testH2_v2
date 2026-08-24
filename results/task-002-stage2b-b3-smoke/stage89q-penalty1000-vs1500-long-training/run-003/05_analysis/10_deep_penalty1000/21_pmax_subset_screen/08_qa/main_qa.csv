@@ -1,0 +1,22 @@
+﻿check,observed,expected,pass
+repository_preflight,10,10,True
+exactly_16_candidates,16,16,True
+no_duplicate_vectors,0,0,True
+formal_Base,"[300.0, 200.0, 120.0, 150.0]","[300, 200, 120, 150]",True
+formal_125,"[375.0, 250.0, 150.0, 187.5]","[375, 250, 150, 187.5]",True
+Base_70_156_167,"[70, 156, 167]","[70, 156, 167]",True
+pure_location_gain_zero,0,0,True
+S4_G2_anchor,"[48.0, 44.0, 39.0, 0.8125]","[48, 44, 39, 0.8125]",True
+ALL_G3_anchor,"[118.0, 99.0, 104.0, 89.0]","[118, 99, 104, 89]",True
+new_joint_candidates_exact,"{'B0110', 'B1001', 'B0011', 'B1010', 'B0101', 'B1101', 'B0111', 'B1100', 'B1011', 'B1110'}","{'B0110', 'B1001', 'B0011', 'B1010', 'B0101', 'B1101', 'B0111', 'B1100', 'B1011', 'B1110'}",True
+anchors_not_resolved,0,0,True
+joint_grid_feasibility_used,1120,1120,True
+no_independent_headroom_sum,['NO'],['NO'],True
+no_random_draw,[],[],True
+no_FA_MSP_training_OOS,True,True,True
+no_parameter_writeback_raw_overwrite,True,True,True
+all_events_identifiable,0,0,True
+site_pair_count,32,32,True
+subset_monotonic_retained,6.0,>=0,True
+Pareto_dominance_independent,16,16,True
+figure_count,8,8,True
