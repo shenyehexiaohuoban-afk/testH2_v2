@@ -1,0 +1,2 @@
+candidate_id,Pmax_kw,terminal_gap_penalty,training_seed,max_iterations,source_commit,TerminalLOH_sha256,dt_h,operating_stages,hours_per_stage,tank_capacity_kg,ordinary_demand_schema,HTT_hourly_capacity_kg,voltage_min_pu,voltage_max_pu,branch_limit_mva,active_model_count,model_bound_audit_pass
+ARM-B1011,[375 200 150 187.5],1000,20260513,10,b9a3c3b492fb6529e709f3f5d2248ea9c178d4bb,2fa1958944110701239a109ebf46d959324a351f2f27c1c3fbd62f333066eaa8,8,6,8,[300 200 100 200],original-hourly-24h-repeat-v1,160,0.9,1.1,6,1051,1

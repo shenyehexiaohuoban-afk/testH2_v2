@@ -1,0 +1,36 @@
+parameter,expected_change,pass,base,candidate,status
+P_joint,UNCHANGED,1,formal params,candidate params,PASS
+P_intensity,UNCHANGED,1,formal params,candidate params,PASS
+P_location,UNCHANGED,1,formal params,candidate params,PASS
+P_landfall,UNCHANGED,1,formal params,candidate params,PASS
+S,UNCHANGED,1,formal params,candidate params,PASS
+D_normal,UNCHANGED,1,formal params,candidate params,PASS
+x_0,UNCHANGED,1,formal params,candidate params,PASS
+x_cap,UNCHANGED,1,formal params,candidate params,PASS
+beta,UNCHANGED,1,formal params,candidate params,PASS
+TerminalLOH,UNCHANGED,1,formal params,candidate params,PASS
+cost_reserve_shortage,UNCHANGED,1,formal params,candidate params,PASS
+cost_normal_shortage,UNCHANGED,1,formal params,candidate params,PASS
+cost_holding,UNCHANGED,1,formal params,candidate params,PASS
+cost_el_om,UNCHANGED,1,formal params,candidate params,PASS
+cost_transport_base,UNCHANGED,1,formal params,candidate params,PASS
+htt_capacity_base,UNCHANGED,1,formal params,candidate params,PASS
+beta_transport_multiplier,UNCHANGED,1,formal params,candidate params,PASS
+site_to_site_road_km,UNCHANGED,1,formal params,candidate params,PASS
+hourly_grid.tariff48,UNCHANGED,1,formal grid,candidate grid,PASS
+hourly_grid.lambda48,UNCHANGED,1,formal grid,candidate grid,PASS
+hourly_grid.phi48,UNCHANGED,1,formal grid,candidate grid,PASS
+hourly_grid.p_load_base_kw,UNCHANGED,1,formal grid,candidate grid,PASS
+hourly_grid.q_load_base_kvar,UNCHANGED,1,formal grid,candidate grid,PASS
+hourly_grid.r_ohm,UNCHANGED,1,formal grid,candidate grid,PASS
+hourly_grid.x_ohm,UNCHANGED,1,formal grid,candidate grid,PASS
+hourly_grid.branch_smax_mva,UNCHANGED,1,formal grid,candidate grid,PASS
+hourly_grid.p_substation_max_kw,UNCHANGED,1,formal grid,candidate grid,PASS
+hourly_grid.pv_cap_kw,UNCHANGED,1,formal grid,candidate grid,PASS
+hourly_grid.vmin_pu,UNCHANGED,1,formal grid,candidate grid,PASS
+hourly_grid.vmax_pu,UNCHANGED,1,formal grid,candidate grid,PASS
+Pmax,ALLOWED,1,[300 200 120 150],[300 200 120 187.5],PASS
+max_iterations,ALLOWED,1,Stage89Q wall clock,10,PASS
+output_path,ALLOWED,1,Base output unchanged,C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\stage89q-pmax-dual-10iter-smoke\run-005\02_arm_b0001,PASS
+candidate_identity,ALLOWED,1,Base,ARM-B0001,PASS
+diagnostic_logging,ALLOWED,1,formal logging,smoke diagnostics,PASS

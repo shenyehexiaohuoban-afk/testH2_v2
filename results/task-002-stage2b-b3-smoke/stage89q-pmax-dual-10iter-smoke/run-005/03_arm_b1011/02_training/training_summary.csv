@@ -1,0 +1,2 @@
+candidate,completed_iterations,runtime_s,final_LB,cut_count,Stage1_production_kg,Stage1_site1_kg,Stage1_site2_kg,Stage1_site3_kg,Stage1_site4_kg,Stage1_end_inventory_kg,fresh_initial_cuts,Pmax_kw
+ARM-B1011,10,473.7928188,55743.1182680294,10510,117.73125,51.1875,23.4,17.55,25.59375,245.358731134483,0,[375 200 150 187.5]

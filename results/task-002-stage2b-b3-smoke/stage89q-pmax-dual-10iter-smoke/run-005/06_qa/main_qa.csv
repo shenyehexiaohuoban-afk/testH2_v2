@@ -1,0 +1,36 @@
+﻿check,status,pass
+branch / HEAD / upstream,PASS,True
+correct Stage89Q runner resolved,PASS,True
+current model identity verified,PASS,True
+candidate configs exact,PASS,True
+Pmax occurrence audit complete,PASS,True
+active Pmax sources identified,PASS,True
+parameter diff exact,PASS,True
+launcher Pmax exact,PASS,True
+loader Pmax exact,PASS,True
+model struct Pmax exact,PASS,True
+variable upper bounds exact,PASS,True
+forward Pmax exact,PASS,True
+backward Pmax exact,PASS,True
+checkpoint Pmax exact,PASS,True
+reload Pmax exact,PASS,True
+both fresh zero cuts,PASS,True
+both same seed,PASS,True
+both penalty1000,PASS,True
+both same TerminalLOH,PASS,True
+both same W,PASS,True
+both same solver settings,PASS,True
+both exactly 10 iterations,PASS,True
+no random draw beyond seeded training,PASS,True
+no OOS,PASS,True
+no Base retraining,PASS,True
+no raw overwrite,PASS,True
+failed runs preserved,PASS,True
+inventory QA,PASS,True
+grid QA,PASS,True
+HTT QA,PASS,True
+Stage7 QA,PASS,True
+no NaN/Inf,PASS,True
+checkpoint SHA,PASS,True
+clean reload,PASS,True
+manifests verified,PASS,True

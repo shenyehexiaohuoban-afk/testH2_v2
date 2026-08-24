@@ -1,0 +1,4 @@
+candidate=ARM-B0001
+pmax=[300 200 120 187.5]
+sha256=887b9d330a4c7968268ae564e8f188d7cc8b1b9d6279af8378fc52db58bf32b3
+status=PASS

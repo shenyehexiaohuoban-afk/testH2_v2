@@ -1,0 +1,17 @@
+check,observed_numeric,expected,pass
+dt_h,8,8,1
+operating_stages,6,6,1
+hours_per_operating_stage,8,8,1
+stage7_semantics,35,35 non-dissipated analytic TerminalLOH states,1
+stage8_semantics,1,absorbing,1
+tank_capacity,NaN,[300 200 100 200],1
+ordinary_demand_schema,NaN,original-hourly-24h-repeat-v1,1
+htt_hourly_capacity_benchmark,160,160,1
+terminal_gap_penalty,1000,1000,1
+base_pmax,NaN,[300 200 120 150],1
+training_seed,20260513,20260513,1
+grid_bus_count,33,33,1
+voltage_min,0.9,0.90,1
+voltage_max,1.1,1.10,1
+branch_limit_mva,6,6,1
+model_pmax_bounds,1,PASS,1

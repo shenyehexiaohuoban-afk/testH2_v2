@@ -1,0 +1,3 @@
+candidate=ARM-B0001
+completed_iterations=10
+fresh_initial_cuts=0

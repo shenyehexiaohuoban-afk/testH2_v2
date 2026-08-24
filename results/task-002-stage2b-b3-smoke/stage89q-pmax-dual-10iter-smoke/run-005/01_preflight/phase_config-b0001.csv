@@ -1,0 +1,2 @@
+"phase","arm","pmax","started_at","ended_at","duration_s","exit_code","log"
+"CONFIG","B0001","300,200,120,187.5","2026-08-24T22:03:49.5690823+08:00","2026-08-24T22:04:03.9227772+08:00","14.3536949","0","C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\stage89q-pmax-dual-10iter-smoke\run-005\01_preflight\config-b0001_native_stdout.log"

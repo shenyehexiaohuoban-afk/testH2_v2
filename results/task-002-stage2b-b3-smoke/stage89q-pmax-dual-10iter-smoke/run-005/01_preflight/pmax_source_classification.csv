@@ -1,0 +1,6 @@
+﻿classification,location,active,notes
+BASE_SOURCE_OF_TRUTH,NearStageInput.HydrogenDevice.el_cap_kw -> load_data_h2_near,True,formal Base loader input
+CANDIDATE_SOURCE_OF_TRUTH,STAGE89Q_PMAX_VECTOR -> task-local launcher pmax,True,only candidate override
+DERIVED_COPY,params.el_cap_kw -> params.hourly_grid.pmax_kw -> model.ub,True,asserted exact in all active models
+LEGACY_INACTIVE,historical Stage57/84/85/89H/89N runners,False,"searched, not modified or executed"
+PARAMETER_DUPLICATION_RISK,active call chain,True,"NO: hard-coded Base vectors are identity gates, not independent model inputs"

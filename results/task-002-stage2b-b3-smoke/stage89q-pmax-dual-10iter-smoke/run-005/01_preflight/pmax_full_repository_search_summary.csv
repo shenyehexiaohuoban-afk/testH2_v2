@@ -1,0 +1,13 @@
+﻿token,matching_text_files,total_matches,command
+Pmax,184,4460,rg --count-matches -F Pmax .
+P_max,9,33,rg --count-matches -F P_max .
+P_EL_max,9,21,rg --count-matches -F P_EL_max .
+PELmax,9,13,rg --count-matches -F PELmax .
+P_EL,161,2764,rg --count-matches -F P_EL .
+electrolyzer,368,4730,rg --count-matches -F electrolyzer .
+300,4962,4125243,rg --count-matches -F 300 .
+200,5330,5887949,rg --count-matches -F 200 .
+120,4319,3513033,rg --count-matches -F 120 .
+150,7250,7574496,rg --count-matches -F 150 .
+187.5,321,78213,rg --count-matches -F 187.5 .
+375,3381,1170051,rg --count-matches -F 375 .

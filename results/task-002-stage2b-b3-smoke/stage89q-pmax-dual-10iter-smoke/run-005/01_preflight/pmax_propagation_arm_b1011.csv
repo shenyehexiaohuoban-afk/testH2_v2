@@ -1,0 +1,12 @@
+﻿level,observed_Pmax_kw,expected_Pmax_kw,pass,evidence
+1_launcher_override,[375 200 150 187.5],[375 200 150 187.5],1,STAGE89Q_PMAX_VECTOR
+2_options_config,[375 200 150 187.5],[375 200 150 187.5],1,candidate wrapper output
+3_loader_output,[375 200 150 187.5],[375 200 150 187.5],1,formal loader then isolated override
+4_data_model_struct,[375 200 150 187.5],[375 200 150 187.5],1,derived grid identity copy
+5_variable_upper_bound,[375 200 150 187.5],[375 200 150 187.5],1,all active model idx.p_el_hourly bounds
+6_hourly_constraint_rhs,[375 200 150 187.5],[375 200 150 187.5],1,"P_EL limit encoded as variable upper bound, not b RHS"
+7_forward_model,[375 200 150 187.5],[375 200 150 187.5],1,same modelLib passed to forward_pass_h2
+8_backward_model,[375 200 150 187.5],[375 200 150 187.5],1,same modelLib passed to backward_pass_h2
+9_checkpoint_metadata,[375 200 150 187.5],[375 200 150 187.5],1,available after training
+10_result_metadata,[375 200 150 187.5],[375 200 150 187.5],1,available after training
+11_qa_identity,[375 200 150 187.5],[375 200 150 187.5],1,RELOAD_PASS

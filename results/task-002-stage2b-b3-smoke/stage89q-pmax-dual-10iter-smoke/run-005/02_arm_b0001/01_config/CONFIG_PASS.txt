@@ -1,0 +1,3 @@
+candidate=ARM-B0001
+pmax=[300 200 120 187.5]
+initial_cuts=0

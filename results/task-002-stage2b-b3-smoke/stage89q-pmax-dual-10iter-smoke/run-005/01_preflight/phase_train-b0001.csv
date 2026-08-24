@@ -1,0 +1,2 @@
+"phase","arm","pmax","started_at","ended_at","duration_s","exit_code","log"
+"TRAIN","B0001","300,200,120,187.5","2026-08-24T22:04:04.8664126+08:00","2026-08-24T22:13:10.4916778+08:00","545.6252652","0","C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\stage89q-pmax-dual-10iter-smoke\run-005\01_preflight\train-b0001_native_stdout.log"

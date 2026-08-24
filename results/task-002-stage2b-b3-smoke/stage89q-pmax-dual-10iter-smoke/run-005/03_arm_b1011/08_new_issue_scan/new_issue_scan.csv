@@ -1,0 +1,25 @@
+﻿candidate,issue,status,iteration,stage,site,hour/path,numeric_evidence,log_location
+ARM-B1011,model infeasibility,NO,,,1-4,fixed six-stage diagnostic path,all training and diagnostic solves completed,02_training/*_matlab.log and diagnostics CSV
+ARM-B1011,hourly grid infeasibility,NO,,1-6,1-4,fixed six-stage diagnostic path,minimum voltage 0.90895471 p.u.; no solve failure,02_training/*_matlab.log and diagnostics CSV
+ARM-B1011,new voltage bottleneck,NO,,,1-4,fixed six-stage diagnostic path,binding=False; fresh Base was not retrained,02_training/*_matlab.log and diagnostics CSV
+ARM-B1011,new branch bottleneck,NO,,,1-4,fixed six-stage diagnostic path,max utilization=0.758080473,02_training/*_matlab.log and diagnostics CSV
+ARM-B1011,substation bottleneck,NO,,,1-4,fixed six-stage diagnostic path,max utilization=0.832082612,02_training/*_matlab.log and diagnostics CSV
+ARM-B1011,tank saturation,NO,,1-6,1-4,fixed six-stage diagnostic path,binding hits=0; near-capacity hours=0,02_training/*_matlab.log and diagnostics CSV
+ARM-B1011,abnormal ordinary shortage,NO,,,1-4,fixed six-stage diagnostic path,diagnostic shortage=0 kg,02_training/*_matlab.log and diagnostics CSV
+ARM-B1011,abnormal HTT behavior,NO,,1-6,1-4,fixed six-stage diagnostic path,max utilization=0.019924166,02_training/*_matlab.log and diagnostics CSV
+ARM-B1011,NaN / Inf,NO,,,1-4,fixed six-stage diagnostic path,all saved numerical_finite flags true,02_training/*_matlab.log and diagnostics CSV
+ARM-B1011,numerical instability,NO,,,1-4,fixed six-stage diagnostic path,no blocking solver or residual failure,02_training/*_matlab.log and diagnostics CSV
+ARM-B1011,abnormal LB movement,NOT_IDENTIFIABLE,1-10,,1-4,fixed six-stage diagnostic path,10 iterations are not a convergence experiment,02_training/*_matlab.log and diagnostics CSV
+ARM-B1011,cut explosion,NO,,,1-4,fixed six-stage diagnostic path,final cut count=10510,02_training/*_matlab.log and diagnostics CSV
+ARM-B1011,abnormal runtime growth,NOT_IDENTIFIABLE,,,1-4,fixed six-stage diagnostic path,10 iterations only,02_training/*_matlab.log and diagnostics CSV
+ARM-B1011,abnormal memory growth,NOT_IDENTIFIABLE,,,1-4,fixed six-stage diagnostic path,no per-iteration memory telemetry,02_training/*_matlab.log and diagnostics CSV
+ARM-B1011,checkpoint corruption,NO,,,1-4,fixed six-stage diagnostic path,external SHA256=37244755f38656c4adb3ce4561cbe574f783f76ee4311f9ba40c74a22a988cc4,02_training/*_matlab.log and diagnostics CSV
+ARM-B1011,reload failure,NO,,,1-4,fixed six-stage diagnostic path,reload_pass=True,02_training/*_matlab.log and diagnostics CSV
+ARM-B1011,candidate Pmax lost on reload,NO,,,1-4,fixed six-stage diagnostic path,propagation_pass=True,02_training/*_matlab.log and diagnostics CSV
+ARM-B1011,one-site production domination,NOT_IDENTIFIABLE,,,1-4,fixed six-stage diagnostic path,requires long training and OOS distribution,02_training/*_matlab.log and diagnostics CSV
+ARM-B1011,excessive early production,NOT_IDENTIFIABLE,,,1-4,fixed six-stage diagnostic path,mechanism signal only at 10 iterations,02_training/*_matlab.log and diagnostics CSV
+ARM-B1011,added Pmax almost never used,NO,,,1-4,fixed six-stage diagnostic path,expanded-nameplate use observed=True,02_training/*_matlab.log and diagnostics CSV
+ARM-B1011,oscillatory site production,NOT_IDENTIFIABLE,,,1-4,fixed six-stage diagnostic path,single deterministic diagnostic path,02_training/*_matlab.log and diagnostics CSV
+ARM-B1011,new inventory imbalance,NOT_IDENTIFIABLE,,,1-4,fixed six-stage diagnostic path,requires long training and OOS,02_training/*_matlab.log and diagnostics CSV
+ARM-B1011,Stage7 interface issue,NO,,,1-4,fixed six-stage diagnostic path,analytic TerminalLOH identity and backward interface retained,02_training/*_matlab.log and diagnostics CSV
+ARM-B1011,native MATLAB exit/finalizer issue,NO,,,1-4,fixed six-stage diagnostic path,each phase returned zero and external live-resource gate passed,02_training/*_matlab.log and diagnostics CSV

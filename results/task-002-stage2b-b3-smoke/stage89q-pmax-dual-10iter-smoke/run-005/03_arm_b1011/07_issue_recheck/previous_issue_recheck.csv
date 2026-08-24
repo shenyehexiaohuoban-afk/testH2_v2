@@ -1,0 +1,11 @@
+﻿issue,B0001 status,B1011 status,evidence,can_conclude_at_10_iter
+early commitment,EARLY_SIGNAL_WORSE,EARLY_SIGNAL_WORSE,Base long-training reference 113.88 kg; smoke 115.83/117.731 kg,NO
+wait-and-see,NOT_IDENTIFIABLE_AT_10_ITER,NOT_IDENTIFIABLE_AT_10_ITER,late shares 0/0; early mechanism signal only,NO
+Pmax bottleneck,EARLY_SIGNAL_IMPROVED,EARLY_SIGNAL_IMPROVED,added capacity used True/True,NO
+bus18 voltage,NO_ENGINEERING_ISSUE,NO_ENGINEERING_ISSUE,bus18 minima 0.911291329/0.90895471,ENGINEERING_DIAGNOSTIC_ONLY
+line/substation,NO_ENGINEERING_ISSUE,NO_ENGINEERING_ISSUE,line max 0.746934/0.75808; substation 0.816725/0.832083,ENGINEERING_DIAGNOSTIC_ONLY
+tank saturation / oversupply,NO_ENGINEERING_ISSUE,NO_ENGINEERING_ISSUE,tank hits 0/0,NO
+ordinary demand,NO_ENGINEERING_ISSUE,NO_ENGINEERING_ISSUE,diagnostic shortage 0/0 kg,NO
+HTT,NO_ENGINEERING_ISSUE,NO_ENGINEERING_ISSUE,max utilization 0.0272367/0.0199242; aggregate 160 kg/h benchmark retained,ENGINEERING_DIAGNOSTIC_ONLY
+spatial mismatch,NOT_IDENTIFIABLE_AT_10_ITER,NOT_IDENTIFIABLE_AT_10_ITER,formal 203 pure-location OOS paths not rerun,NO
+pure quantity / mixed,NOT_IDENTIFIABLE_AT_10_ITER,NOT_IDENTIFIABLE_AT_10_ITER,formal 118/152 OOS cohorts not rerun,NO

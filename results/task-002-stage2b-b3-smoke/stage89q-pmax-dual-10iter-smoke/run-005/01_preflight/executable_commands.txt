@@ -1,0 +1,10 @@
+WORKING_DIRECTORY = C:\Users\chaos\Desktop\biye\test\testH2_v2
+POWERSHELL_SCRIPT = C:\Users\chaos\Desktop\biye\test\testH2_v2\fa_msp\current_hourly_stage89_adopted\launcher\orchestrate_stage89q_pmax_dual_10iter_smoke.ps1
+MATLAB_EXECUTABLE = D:\Program Files\MATLAB\R2022a\bin\matlab.exe
+MATLAB_LAUNCHER = C:\Users\chaos\Desktop\biye\test\testH2_v2\fa_msp\current_hourly_stage89_adopted\launcher\run_stage89q_pmax_dual_10iter_smoke_h2.m
+MATLAB_ARGUMENTS = -nojvm -nodesktop -nosplash -logfile <phase-log> -batch "addpath('fa_msp/current_hourly_stage89_adopted/launcher'); run_stage89q_pmax_dual_10iter_smoke_h2"
+ARM_B0001_COMMAND = STAGE89Q_PMAX_PHASE=TRAIN; STAGE89Q_PMAX_ARM=B0001; STAGE89Q_PMAX_VECTOR=300,200,120,187.5; & 'D:\Program Files\MATLAB\R2022a\bin\matlab.exe' -nojvm -nodesktop -nosplash -logfile <phase-log> -batch "addpath('fa_msp/current_hourly_stage89_adopted/launcher'); run_stage89q_pmax_dual_10iter_smoke_h2"
+ARM_B1011_COMMAND = STAGE89Q_PMAX_PHASE=TRAIN; STAGE89Q_PMAX_ARM=B1011; STAGE89Q_PMAX_VECTOR=375,200,150,187.5; & 'D:\Program Files\MATLAB\R2022a\bin\matlab.exe' -nojvm -nodesktop -nosplash -logfile <phase-log> -batch "addpath('fa_msp/current_hourly_stage89_adopted/launcher'); run_stage89q_pmax_dual_10iter_smoke_h2"
+B0001_OUTPUT_DIRECTORY = C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\stage89q-pmax-dual-10iter-smoke\run-005\02_arm_b0001
+B1011_OUTPUT_DIRECTORY = C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\stage89q-pmax-dual-10iter-smoke\run-005\03_arm_b1011
+FROZEN_COMMIT = b9a3c3b492fb6529e709f3f5d2248ea9c178d4bb
