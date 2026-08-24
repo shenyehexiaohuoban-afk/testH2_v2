@@ -1,0 +1,4 @@
+﻿scope,path_count,denominator,fraction_of_stage7,adequate_count,adequate_probability,positive_gap_count,positive_gap_probability,gap_if_positive_kg
+Stage7全部,6124,6124,1,5651,0.922762900065,473,0.0772370999347,45.6411871701
+目标为0,5001,6124,0.816623122142,5001,1,0,0,
+目标大于0,1123,6124,0.183376877858,650,0.578806767587,473,0.421193232413,45.6411871701

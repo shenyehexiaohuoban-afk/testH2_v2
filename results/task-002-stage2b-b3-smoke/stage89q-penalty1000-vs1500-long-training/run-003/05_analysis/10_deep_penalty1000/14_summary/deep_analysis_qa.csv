@@ -1,0 +1,8 @@
+﻿check,observed,expected,pass
+source_path_count,10000,10000,True
+termination_accounting,10000,10000,True
+stage7_count,6124,6124,True
+stage7_adequate_plus_shortfall,6124,6124,True
+surplus_gap_margin_identity,1.76214598469e-12,<=1e-07,True
+actual_cost_component_closure,9.02218744159e-10,<=1e-07,True
+reported_objective_closure,8.73114913702e-10,<=1e-07,True

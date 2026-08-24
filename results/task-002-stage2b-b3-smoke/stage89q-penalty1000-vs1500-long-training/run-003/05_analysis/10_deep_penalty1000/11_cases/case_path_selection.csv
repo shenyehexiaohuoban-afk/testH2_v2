@@ -1,0 +1,4 @@
+﻿case,selection_rule,path_id,state_sequence,termination_stage,terminal_a,terminal_loc,target_total,terminal_inventory_total,total_margin,terminal_site_gap,terminal_total_quantity_shortfall,terminal_spatial_component,terminal_gap_class,total_H2_production,ordinary_shortage_total,total_HTT,actual_operating_cost
+典型正目标达标,正目标达标路径中，总超额库存最接近其中位数；并列取path_id最小,3175,81-66-131-141-119-72-64-96,5,3,1,142.923283799,335.220415487,192.297131688,0,0,0,NO_GAP,351.592934353,0,36.0858640206,65044.2813962
+明显超额达标,正目标达标路径中总超额库存最大；并列取path_id最小,1889,81-155-196-181-190-223-216-264,6,4,7,11.1833565999,555.831576515,544.648219915,0,0,0,NO_GAP,586.201035379,45.4960659317,105.734272165,105269.098065
+最严重不足,Stage7终端逐站缺口最大；并列取path_id最小,3909,81-98-91-109-166-199-272-280,6,4,4,423.861526765,222.503267114,-201.358259651,201.358259651,201.358259651,5.68434188608e-14,PURE_QUANTITY_SHORTFALL,298.36879191,0,8.74449509479,82683.2767945

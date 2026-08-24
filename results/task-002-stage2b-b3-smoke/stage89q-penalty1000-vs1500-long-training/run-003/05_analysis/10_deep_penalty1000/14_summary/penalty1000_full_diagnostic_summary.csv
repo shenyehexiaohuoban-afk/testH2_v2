@@ -1,0 +1,63 @@
+﻿metric,value,unit,denominator
+all_path_count,10000,paths,all OOS
+termination_STAGE7_TERMINAL_CHECK_count,6124,paths,all OOS
+termination_PHYSICAL_DISSIPATION_A1_count,3497,paths,all OOS
+termination_LF8_ABSORBING_count,379,paths,all OOS
+stage7_count,6124,paths,all OOS
+zero_target_stage7_count,5001,paths,Stage7
+positive_target_stage7_count,1123,paths,Stage7
+overall_adequacy_rate,0.9227629000653168,fraction,Stage7
+positive_target_adequacy_rate,0.578806767586821,fraction,positive-target Stage7
+adequate_surplus_mean,169.33157308942063,kg,adequate Stage7
+adequate_surplus_median,158.391178490551,kg,adequate Stage7
+adequate_surplus_q25,136.518409272046,kg,adequate Stage7
+adequate_surplus_q75,171.212025241963,kg,adequate Stage7
+adequate_surplus_q90,246.77378730687587,kg,adequate Stage7
+adequate_surplus_q95,332.295415487249,kg,adequate Stage7
+adequate_surplus_q99,438.404684688197,kg,adequate Stage7
+adequate_surplus_max,579.808589606745,kg,adequate Stage7
+adequate_surplus_gt20kg_probability,0.9985843213590515,fraction,adequate Stage7
+adequate_surplus_gt50kg_probability,0.994337285436206,fraction,adequate Stage7
+adequate_surplus_gt100kg_probability,0.9423110953813484,fraction,adequate Stage7
+stage7_gap_probability,0.07723709993468321,fraction,Stage7
+stage7_gap_if_positive,45.641187170065606,kg,positive-gap Stage7
+stage7_gap_q95,145.3687976138904,kg,positive-gap Stage7
+stage7_gap_q99,183.05789919411052,kg,positive-gap Stage7
+PURE_SPATIAL_MISMATCH_count,203,paths,positive-gap Stage7
+MIXED_QUANTITY_AND_SPATIAL_count,152,paths,positive-gap Stage7
+PURE_QUANTITY_SHORTFALL_count,118,paths,positive-gap Stage7
+site1_deficit_occurrence_probability,0.5243128964059197,fraction,positive-gap Stage7
+site2_deficit_occurrence_probability,0.4418604651162791,fraction,positive-gap Stage7
+site3_deficit_occurrence_probability,0.642706131078224,fraction,positive-gap Stage7
+site4_deficit_occurrence_probability,0.6723044397463002,fraction,positive-gap Stage7
+top5_gap_contribution,0.944196621992345,fraction,Stage7 total gap
+ordinary_shortage_probability,0.055,fraction,all OOS
+ordinary_shortage_if_positive,36.44735762713637,kg,positive shortage paths
+ordinary_shortage_q95,75.21204979949012,kg,positive shortage paths
+ordinary_shortage_q99,98.5039340682744,kg,positive shortage paths
+dissipation_count,3497,paths,all OOS
+preventive_inventory_mean,24.511511089157015,kg,physical dissipation
+preventive_inventory_median,5.60813793862,kg,physical dissipation
+preventive_inventory_q25,5.60813793862,kg,physical dissipation
+preventive_inventory_q75,18.3262758297,kg,physical dissipation
+preventive_inventory_q90,91.4117596825,kg,physical dissipation
+preventive_inventory_q95,109.393178373,kg,physical dissipation
+preventive_inventory_q99,141.34942530248,kg,physical dissipation
+preventive_inventory_max,401.346430028,kg,physical dissipation
+mean_production,195.42809038866932,kg/path,all OOS
+mean_HTT,7.425903128043918,kg/path,all OOS
+actual_operating_cost_mean,56192.36967592401,yuan/path,all OOS
+actual_operating_cost_median,58228.7647361577,yuan/path,all OOS
+actual_operating_cost_q95,98829.162235261,yuan/path,all OOS
+actual_operating_cost_q99,110053.97164682003,yuan/path,all OOS
+mean_production_cost,55555.22310167054,yuan/path,all OOS
+mean_holding_cost,36.84369641615443,yuan/path,all OOS
+mean_HTT_cost,199.38194393698427,yuan/path,all OOS
+mean_ordinary_shortage_cost,400.9209338984997,yuan/path,all OOS
+ordinary_shortage_penalty_200_unconditional_mean,400.9209338984996,yuan/path,all OOS
+terminal_gap_penalty_1000_unconditional_mean,2158.8281531441035,yuan/path,all OOS
+任一电解槽达到功率上限,0.761627906977,fraction,positive-gap last16 path-hours
+最低电压达到0.90下限,0.0935517970402,fraction,positive-gap last16 path-hours
+线路容量达到上限,0.0,fraction,positive-gap last16 path-hours
+training_final_stage1,113.88,kg,iteration 346
+training_stability_assessment,MIXED_STABILITY: mostly 113.88 but occasional 109.98 in final windows; FULLY_CONVERGED=NO,text,training progress
