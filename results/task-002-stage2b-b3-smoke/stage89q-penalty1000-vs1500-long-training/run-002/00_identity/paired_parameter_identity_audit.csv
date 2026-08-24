@@ -1,0 +1,12 @@
+parameter,arm_a,arm_b,expected_relation,pass
+terminal_gap_penalty,1000,1500,EXPECTED_ONLY_DIFF,1
+normalized_parameter_struct,true,true,IDENTICAL,1
+normalized_options_struct,true,true,IDENTICAL,1
+training_seed,20260513,20260513,IDENTICAL,1
+terminal_table_sha256,2fa1958944110701239a109ebf46d959324a351f2f27c1c3fbd62f333066eaa8,2fa1958944110701239a109ebf46d959324a351f2f27c1c3fbd62f333066eaa8,IDENTICAL,1
+eta,0.03,0.03,IDENTICAL,1
+initial_state,81,81,IDENTICAL,1
+ordinary_shortage_penalty,200,200,IDENTICAL,1
+runtime_hours,48,48,IDENTICAL,1
+stage1_theoretical_cap_kg,120.12,120.12,IDENTICAL,1
+fresh_initial_cuts,0,0,IDENTICAL,1

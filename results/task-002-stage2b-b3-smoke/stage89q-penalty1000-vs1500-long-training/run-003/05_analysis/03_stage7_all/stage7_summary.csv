@@ -1,0 +1,11 @@
+﻿scope,metric,value,N
+all_paths,stage7_path_count,6124,10000
+stage7_paths,stage7_fraction_all_paths,0.6124,10000
+stage7_paths,mean_terminal_gap_kg,3.52519293459,6124
+stage7_paths,positive_gap_probability,0.0772370999347,6124
+positive_gap_paths,conditional_mean_gap_kg,45.6411871701,473
+positive_gap_paths,median,30.230384498,473
+positive_gap_paths,q25,12.1575597952,473
+positive_gap_paths,q75,65.977207099,473
+positive_gap_paths,q95,145.368797614,473
+positive_gap_paths,q99,183.057899194,473

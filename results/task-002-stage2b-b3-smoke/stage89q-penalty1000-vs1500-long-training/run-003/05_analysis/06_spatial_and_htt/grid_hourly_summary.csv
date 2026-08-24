@@ -1,0 +1,2 @@
+﻿grid_hour_row_count,active_path_count,mean_root_grid_import,max_root_grid_import,mean_total_P_EL_kW,max_total_P_EL_kW,minimum_voltage_pu,voltage_at_0p90_fraction,maximum_line_loading,line_at_capacity_fraction
+285888,10000,3297.54796431,4390.44078019,350.555229785,770,0.9,0.0141523953436,0.826067831563,0

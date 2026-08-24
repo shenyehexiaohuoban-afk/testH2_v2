@@ -1,0 +1,5 @@
+path,bytes,sha256,required_token,pass
+C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\stage89m-formal-adoption-and-8h-integration\run-001\README.md,5851,1343d2feb49dcc5fd96cb6eae12cc741321c502ad2bc47e4068ba2c5e26801af,STAGE89M_STATUS = PASS,1
+C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\stage89n-stage89k-adopted-loc4-fresh-8h-retraining\run-003\README.md,3301,739384abb877fc7b9996b9b46d472d4a346adf37332bb3c89cc1ded7f3894acf,STAGE89N_STATUS = PASS,1
+C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\stage89o-comprehensive-policy-mechanism-analysis\run-005\README.md,6559,82b6e24c43c8ffb8f9041aed4ad324b9cb2682e1393b53255e5d060b048dfb78,STAGE89O_STATUS = PASS,1
+C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\stage89p-original-paper-style-stage89n-analysis\run-002\README.md,12005,3acaa150c2ad22c287357295db157e7c30012d996bfe81a14a651b90b1eb0c7d,STAGE89P_STATUS = PASS,1

@@ -1,0 +1,2 @@
+"checkpoint_file","size_bytes","sha256","source_head","classification","accepted_for","warm_start_allowed"
+"C:\Users\chaos\Desktop\biye\test\testH2_v2\hourly_grid_h2\output\stage89q_penalty1000_vs1500_long_training\run-002\penalty1000\checkpoint\checkpoint_final.mat","332032355","b6533668ace2ec418f0cab9879aac3b2dc6c422ab5f9e078ad622cb29059328f","cfa789f262b323de1775e5e2376a2d23978753ef","post-restart validated recovery","TESTING_ONLY","False"

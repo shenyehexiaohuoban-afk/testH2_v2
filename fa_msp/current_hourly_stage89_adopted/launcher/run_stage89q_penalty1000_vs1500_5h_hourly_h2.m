@@ -35,7 +35,7 @@ if phase=="INIT"
     write_status(outDir,'RUNNING','INITIALIZED','NONE',0,0,pid,commit);return
 end
 if ~isfolder(outDir),error('Stage89Q:NotInitialized','Run is not initialized.');end
-if ismember(phase,["TRAIN","OOS"])
+if ismember(phase,["TRAIN","OOS","OOS_RECOVERED"])
     assert_arm(arm);logFile=fullfile(outDir,'logs',char(lower(phase)+"-"+lower(arm)+".txt"));
 else
     logFile=fullfile(outDir,'logs',char(lower(phase)+".txt"));
@@ -44,6 +44,8 @@ diary(logFile);cleanup=onCleanup(@()diary('off')); %#ok<NASGU>
 if phase=="TRAIN",train_arm(rootDir,outDir,arm,commit,pid);return;end
 if phase=="BANK",build_oos_bank(rootDir,outDir,commit,pid);return;end
 if phase=="OOS",evaluate_arm_oos(rootDir,outDir,arm,commit,pid);return;end
+if phase=="BANK_SINGLE",build_oos_bank(rootDir,outDir,commit,pid,false);return;end
+if phase=="OOS_RECOVERED",evaluate_arm_oos(rootDir,outDir,arm,commit,pid,true);return;end
 if phase=="SERIALIZER_SMOKE",serializer_smoke(rootDir,outDir,commit,pid);return;end
 error('Stage89Q:Phase','Unknown phase %s.',phase);
 end
@@ -114,8 +116,10 @@ write_status(outDir,'RUNNING','TRAIN_FINISHED',arm,iter,trainingWall,pid,commit)
 clear modelLib lib params p
 end
 
-function build_oos_bank(rootDir,outDir,commit,pid)
-assert_both_training_gate(outDir);bankDir=fullfile(outDir,'03_oos','common');
+function build_oos_bank(rootDir,outDir,commit,pid,requireBothTraining)
+if nargin<5,requireBothTraining=true;end
+if requireBothTraining,assert_both_training_gate(outDir);end
+bankDir=fullfile(outDir,'03_oos','common');
 bankFile=accepted_bank_path(rootDir);expectedSha="6bf3d1190a402ded052b8d3d08ed369042236e151f562bdd9fd4db7b8ff386c6";
 if sha256_file(bankFile)~=expectedSha,error('Stage89Q:BankIdentity','Accepted bank SHA mismatch.');end
 [p,~]=load_params(rootDir,1000);b=load(bankFile,'pathBank','seed');pathBank=double(b.pathBank);seed=double(b.seed);n=size(pathBank,1);
@@ -189,14 +193,30 @@ write_status(outDir,'RUNNING','SERIALIZER_SMOKE_PASS','NONE',1,0,pid,commit);
 clear lib p
 end
 
-function evaluate_arm_oos(rootDir,outDir,arm,commit,pid)
-assert_both_training_gate(outDir);[label,penalty]=arm_spec(arm);shortage=200;oosDir=oos_dir(rootDir,outDir,arm);
+function evaluate_arm_oos(rootDir,outDir,arm,commit,pid,recoveredSingleArm)
+if nargin<6,recoveredSingleArm=false;end
+if recoveredSingleArm
+    if arm~="P1000",error('Stage89Q:RecoveredArm','Recovered testing is restricted to P1000.');end
+    recoveryMarker=fullfile(outDir,'CHECKPOINT_RECOVERY_ACCEPTED.marker');
+    if ~isfile(recoveryMarker)||~contains(string(fileread(recoveryMarker)),"ACCEPTED_FOR_TESTING")
+        error('Stage89Q:RecoveryGate','Accepted checkpoint recovery marker is missing.');
+    end
+else
+    assert_both_training_gate(outDir);
+end
+[label,penalty]=arm_spec(arm);shortage=200;oosDir=oos_dir(rootDir,outDir,arm);
 if isfile(fullfile(oosDir,'oos_metadata.csv')),error('Stage89Q:OOSExists','OOS exists for %s.',label);end
 bankFile=accepted_bank_path(rootDir);bankIdentity=readtable(fullfile(outDir,'03_oos','common','bank_identity.csv'),'TextType','string');
 if ~isfile(bankFile)||height(bankIdentity)~=1||bankIdentity.path_count~=10000||sha256_file(bankFile)~=bankIdentity.bank_sha256
     error('Stage89Q:BankGate','Locked common bank failed for %s.',label);
 end
-b=load(bankFile,'pathBank');pathBank=double(b.pathBank);checkpoint=checkpoint_path(rootDir,outDir,arm);
+b=load(bankFile,'pathBank');pathBank=double(b.pathBank);
+if recoveredSingleArm
+    checkpoint=string(getenv('STAGE89Q_RECOVERED_CHECKPOINT'));
+    if checkpoint==""||~isfile(checkpoint),error('Stage89Q:RecoveryCheckpoint','Recovered checkpoint path is invalid.');end
+else
+    checkpoint=checkpoint_path(rootDir,outDir,arm);
+end
 checkpointHashBefore=lower(strtrim(string(getenv('STAGE89Q_CHECKPOINT_SHA256'))));
 if strlength(checkpointHashBefore)~=64,error('Stage89Q:ExternalHash','External checkpoint SHA-256 is required.');end
 if sha256_file(checkpoint)~=checkpointHashBefore,error('Stage89Q:ExternalHash','Checkpoint SHA mismatch before clean load.');end

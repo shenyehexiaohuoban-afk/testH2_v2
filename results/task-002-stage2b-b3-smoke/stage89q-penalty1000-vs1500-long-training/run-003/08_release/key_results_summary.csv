@@ -1,0 +1,15 @@
+﻿metric,value
+mean_total_production_kg,195.428090389
+mean_actual_operating_cost_yuan,56192.3696759
+ordinary_shortage_probability,0.055
+ordinary_shortage_if_positive_kg,36.4473576271
+ordinary_shortage_overall_mean_kg,2.00460466949
+stage7_path_count,6124
+stage7_shortfall_probability,0.0772370999347
+stage7_shortfall_if_positive_kg,45.6411871701
+pure_quantity_path_count,118
+pure_spatial_path_count,203
+mixed_path_count,152
+electrolyzer_binding_last16_fraction,0.761627906977
+voltage_binding_last16_fraction,0.0935517970402
+line_binding_last16_fraction,0

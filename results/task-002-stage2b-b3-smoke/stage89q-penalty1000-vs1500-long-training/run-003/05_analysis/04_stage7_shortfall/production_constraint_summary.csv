@@ -1,0 +1,4 @@
+﻿constraint,fraction_of_positive_gap_last16_path_hours,sample_path_hours
+任一电解槽达到功率上限,0.761627906977,7568
+最低电压达到0.90下限,0.0935517970402,7568
+线路容量达到上限,0,7568

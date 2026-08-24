@@ -1,0 +1,6 @@
+Exception: C:\Users\chaos\Desktop\biye\test\testH2_v2\fa_msp\current_hourly_stage89_adopted\launcher\orchestrate_stage89q_penalty1000_vs1500_5h_hourly.ps1:35
+Line |
+  35 |  … DE -ne 0) { throw "MATLAB phase $Phase $Arm failed with exit code $LA …
+     |                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | MATLAB phase TRAIN P1000 failed with exit code -1073740940;
+     | log=C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\stage89q-penalty1000-vs1500-long-training\run-002-train-p1000-matlab.log

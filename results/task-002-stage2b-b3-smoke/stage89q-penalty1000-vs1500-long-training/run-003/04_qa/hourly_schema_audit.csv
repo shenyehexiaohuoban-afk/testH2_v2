@@ -1,0 +1,10 @@
+﻿group,check,observed,expected,tolerance,pass
+schema,path_count,10000,10000,exact,True
+schema,ordered_path_id,True,1..10000,exact,True
+schema,stage_rows,35736,35736,exact,True
+schema,stage_site_rows,142944,142944,exact,True
+schema,hour_site_rows,1143552,1143552,exact,True
+schema,grid_hour_rows,285888,285888,exact,True
+schema,hour_bounds,1..48,1..48,exact,True
+schema,hour_unique,0,0,exact,True
+schema,system_hour_unique,0,0,exact,True

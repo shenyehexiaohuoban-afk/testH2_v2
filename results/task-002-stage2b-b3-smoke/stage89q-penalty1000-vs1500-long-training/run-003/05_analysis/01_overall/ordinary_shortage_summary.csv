@@ -1,0 +1,9 @@
+﻿scope,metric,value,N
+all_paths,overall_mean_shortage_kg,2.00460466949,10000
+all_paths,shortage_probability,0.055,10000
+positive_shortage_paths,conditional_mean_shortage_kg,36.4473576271,550
+positive_shortage_paths,median,39.0109281376,550
+positive_shortage_paths,q25,21.9577116029,550
+positive_shortage_paths,q75,45.4960659317,550
+positive_shortage_paths,q95,75.2120497995,550
+positive_shortage_paths,q99,98.5039340683,550

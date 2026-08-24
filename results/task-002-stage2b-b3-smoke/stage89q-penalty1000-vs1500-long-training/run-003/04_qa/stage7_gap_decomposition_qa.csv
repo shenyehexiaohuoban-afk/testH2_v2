@@ -1,0 +1,3 @@
+﻿check,max_absolute_residual,violation_count,pass
+G_site=G_total+G_spatial,9.66338120634e-13,0,True
+G_spatial_nonnegative,1.13686837722e-13,0,True

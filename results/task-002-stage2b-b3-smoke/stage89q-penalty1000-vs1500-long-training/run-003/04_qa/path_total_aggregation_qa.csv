@@ -1,0 +1,5 @@
+﻿level,metric,max_absolute_residual,median_absolute_residual,violation_count,pass
+stage_to_path,total_H2_production,1.02318153949e-12,1.42108547152e-14,0,True
+stage_to_path,ordinary_shortage_total,3.97903932026e-13,0,0,True
+stage_to_path,total_HTT,5.11590769747e-13,0,0,True
+stage_to_path,actual_operating_cost,5.67524693906e-10,2.18278728426e-11,0,True

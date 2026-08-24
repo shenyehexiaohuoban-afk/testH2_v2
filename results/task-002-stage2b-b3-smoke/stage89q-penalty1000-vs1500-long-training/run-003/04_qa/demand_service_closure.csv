@@ -1,0 +1,2 @@
+﻿check,row_count,max_absolute_residual,median_absolute_residual,violation_count,tolerance,pass
+served+shortage=demand,1143552,1.06581410364e-14,0,0,1e-07,True

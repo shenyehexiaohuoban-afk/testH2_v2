@@ -1,0 +1,3 @@
+﻿check,row_count,max_absolute_residual,median_absolute_residual,violation_count,tolerance,pass
+inventory_before_HTT,1143552,1.02318153949e-12,2.13162820728e-14,0,1e-07,True
+end_inventory,1143552,1.29318777908e-12,0,0,1e-07,True

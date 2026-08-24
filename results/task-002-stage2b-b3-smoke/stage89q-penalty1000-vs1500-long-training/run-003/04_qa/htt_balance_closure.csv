@@ -1,0 +1,3 @@
+﻿check,max_absolute_residual,median_absolute_residual,violation_count,pass
+site_HTT_in_equals_out,1.06581410364e-13,0,0,True
+sparse_OD_equals_system_HTT,1.06581410364e-13,0,0,True
