@@ -1,0 +1,36 @@
+﻿check,observed,expected,tolerance,pass
+repository_preflight,11,11,exact,True
+formal_Base_Pmax,"[300.0, 200.0, 120.0, 150.0]","[300, 200, 120, 150]",exact,True
+S4_125_Pmax,"[300.0, 200.0, 120.0, 187.5]","[300, 200, 120, 187.5]",exact,True
+ALL_125_Pmax,"[375.0, 250.0, 150.0, 187.5]","[375, 250, 150, 187.5]",exact,True
+site_bus_mapping,"[24, 14, 18, 31]","[24, 14, 18, 31]",exact,True
+IEEE33_identity,33/32/slack1,33/32/slack1,exact,True
+base_kv_baseMVA,12.66/10.0,12.66/10,exact,True
+voltage_bounds_unchanged,0.9/1.1,0.9/1.1,exact,True
+branch_limit_unchanged,6.0,6,exact,True
+grid_input_hash,536b25868e6d7cc812a331c0d3e0ffbd5f6958e6883bd39bcae3901c372abf24,536b25868e6d7cc812a331c0d3e0ffbd5f6958e6883bd39bcae3901c372abf24,exact,True
+formal_grid_source_hashes,"{'hourly_grid_h2/build_integrated_hourly_stage_model_hourly_htt_v1_h2.m': '06375232f352ef8da038321703eca4a44ca20ddb5f5c3a46a8d4c79306718f77', 'hourly_grid_h2/update_integrated_hourly_stage_model_hourly_htt_v1_h2.m': 'cd7e44e5fde0a08831f1b663040e9ee5346290d59003e1460e2f72619d21e49f', 'hourly_grid_h2/load_hourly_grid_data_h2.m': 'a3e02ffdbee71f089b5417083693ab145a88fdbb2fcb167af13ca842d02e8c63', 'hourly_grid_h2/add_branch_capacity_octagon_h2.m': 'eeaf2b4023d3bd369cf1a03c89f17eed19826b1f9b9a710d8b43890295cd5ddf', 'hourly_grid_h2/map_site_to_electrical_bus_h2.m': 'a9c385ab37d997264db0446217013ce5e1f6f2be414365e68ef229a2d8e4c102'}","{'hourly_grid_h2/build_integrated_hourly_stage_model_hourly_htt_v1_h2.m': '06375232f352ef8da038321703eca4a44ca20ddb5f5c3a46a8d4c79306718f77', 'hourly_grid_h2/update_integrated_hourly_stage_model_hourly_htt_v1_h2.m': 'cd7e44e5fde0a08831f1b663040e9ee5346290d59003e1460e2f72619d21e49f', 'hourly_grid_h2/load_hourly_grid_data_h2.m': 'a3e02ffdbee71f089b5417083693ab145a88fdbb2fcb167af13ca842d02e8c63', 'hourly_grid_h2/add_branch_capacity_octagon_h2.m': 'eeaf2b4023d3bd369cf1a03c89f17eed19826b1f9b9a710d8b43890295cd5ddf', 'hourly_grid_h2/map_site_to_electrical_bus_h2.m': 'a9c385ab37d997264db0446217013ce5e1f6f2be414365e68ef229a2d8e4c102'}",exact,True
+base_grid_QA_reproduction,23,23,exact,True
+real_hours_no_padding,285888,285888,exact,True
+unique_profile_count,1244,1244,exact,True
+S4_profile_solve_count,1244,1244,exact,True
+ALL_site_profile_solve_count,4976,4976,exact,True
+ALL_joint_profile_solve_count,1244,1244,exact,True
+candidate_increments_nonnegative,0.0,>=-1e-7,exact,True
+candidate_PEL_within_Pmax,True,True,exact,True
+hosting_voltage_QA,0.9,>=0.9-1e-7,exact,True
+hosting_voltage_upper_QA,1.0,<=1.1+1e-7,exact,True
+hosting_octagon_QA,0.0,<=1e-7,exact,True
+hosting_true_apparent_power_QA,5.051805905720711,<=6,exact,True
+hosting_balance_QA,1.5373302630905528e-10,<=1e-7,exact,True
+critical_window_subset_identity,"{'BASE_UNRECOVERABLE_-16H': {'path_count': 70, 'path_id_set_sha256': 'd3bb0a3cc96be5aa4b849b45942edbd109add9212ec09d4f5522429155d6fe79', 'window_start': -16}, 'BASE_UNRECOVERABLE_-8H': {'path_count': 156, 'path_id_set_sha256': 'ae68498f4f24d95d36352bdfde96cc3f5055bc50a82eab9443eb40de693485ff', 'window_start': -8}, 'BASE_UNRECOVERABLE_-4H': {'path_count': 167, 'path_id_set_sha256': '084a0ac13d64ab7191220ac495ebe66b3713470797754bf2d76821053da5e98c', 'window_start': -4}, 'ALL125_PHYSICALLY_RECOVERED': {'path_count': 99, 'path_id_set_sha256': '5e28b0339ca9fb313b0701ada7be936c3806f6a134ab40df0a7a51e7398e4f48', 'window_start': -16}, 'DIFFICULT4': {'path_count': 245, 'path_id_set_sha256': '1c6ab3947a3b5a11d22e15e63b3a517408342ee269e6c7e80af80059edd315d7', 'window_start': -16}, 'EXTREME1': {'path_count': 62, 'path_id_set_sha256': 'cbc39ca107dedc5bbdd6669aa3162278521fb813806ba6314975f97b5ab6303f', 'window_start': -16}, 'S4_125_PHYSICALLY_RECOVERED': {'path_count': 44, 'path_id_set_sha256': '4b718f488dce0eb6a44d24f42d74af2719518a3baf9f077e15dae4548ddfcb45', 'window_start': -16}}",fixed prior-audit path sets,exact,True
+critical_no_padded_zero_hours,1,1,exact,True
+classification_values,"{'S4_125_GRID_HOSTING': 'MIXED', 'ALL_125_GRID_HOSTING': 'MIXED'}",CLEAR/MIXED/LIMITED/NOT_IDENTIFIABLE,exact,True
+policy_actual_use_boundary,NOT_AVAILABLE_BEFORE_FRESH_RETRAINING,NOT_AVAILABLE_BEFORE_FRESH_RETRAINING,exact,True
+grid_LP_only,YES,YES,exact,True
+no_FA_training_OOS,YES/YES,YES/YES,exact,True
+no_FA_core_calls_in_analyzer,[],[],exact,True
+no_random_draw,[],[],exact,True
+figure_count,12,12,exact,True
+figure_dimensions_nonblank,True,True,exact,True
+raw_hashes_after,"{'path_summary/oos_path_summary.csv': '99ec55faba4e60e88b25d757deb1a8146515faf666d52979fe69c64362047502', 'path_summary/oos_stage_summary.csv': '969c373a9a2ff1b271cde6fda95a6fe8e64b10362518fe4b807c0dc86437c15d', 'path_summary/oos_stage_site_summary.csv': 'eab41bdf5d58fc971bc65af8c5745de3bd08cc25a0a4d44cc386aeba3f99c89e', 'hourly_site/oos_hour_site.csv': 'af3b3d5c4aa69e6d29b35a88008b4d82360c4b8391fc783141078f7ad68b0cda', 'grid_hourly/oos_hour_system.csv': 'b9eaa83ee3e8a720f3cb5afd5d54da050c2d3ef45c434efe74f8ba8b976b63c6'}","{'path_summary/oos_path_summary.csv': '99ec55faba4e60e88b25d757deb1a8146515faf666d52979fe69c64362047502', 'path_summary/oos_stage_summary.csv': '969c373a9a2ff1b271cde6fda95a6fe8e64b10362518fe4b807c0dc86437c15d', 'path_summary/oos_stage_site_summary.csv': 'eab41bdf5d58fc971bc65af8c5745de3bd08cc25a0a4d44cc386aeba3f99c89e', 'hourly_site/oos_hour_site.csv': 'af3b3d5c4aa69e6d29b35a88008b4d82360c4b8391fc783141078f7ad68b0cda', 'grid_hourly/oos_hour_system.csv': 'b9eaa83ee3e8a720f3cb5afd5d54da050c2d3ef45c434efe74f8ba8b976b63c6'}",exact,True

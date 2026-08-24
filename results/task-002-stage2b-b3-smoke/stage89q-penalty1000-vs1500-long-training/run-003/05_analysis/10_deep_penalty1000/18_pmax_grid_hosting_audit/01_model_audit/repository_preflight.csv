@@ -1,0 +1,12 @@
+﻿check,observed,expected,pass
+branch,task/002-stage2b-b3-smoke,task/002-stage2b-b3-smoke,True
+HEAD,aec109226f6a1cb211cac092136c10c16fcc67c1,aec109226f6a1cb211cac092136c10c16fcc67c1,True
+upstream,origin/task/002-stage2b-b3-smoke,origin/task/002-stage2b-b3-smoke,True
+ahead,0,0,True
+behind,0,0,True
+tracked_dirty_count_preserved,7,>=0; do not clean,True
+tracked_dirty_paths_preserved,M fa_h2/fuzhu/load_terminal_loh_lookup_h2.m |  M fa_h2/solve_stage_model_h2.m |  M h2_default_options.m |  M hourly_grid_h2/build_integrated_hourly_stage_model_h2.m |  M hourly_grid_h2/update_integrated_hourly_stage_model_h2.m |  M load_data_h2_near.m |  M terminalLoh_wdro/src/generate_step04CA2_formal_consequences_h2.m,informational,True
+untracked_file_count_preserved,14294,>=0; do not clean,True
+live_MATLAB_Gurobi_count,0,0,True
+MATLAB_Gurobi_process_records,9668:MATLAB.exe:stopped,stopped stale objects permitted; no live process,True
+raw_hashes_before,"{""grid_hourly/oos_hour_system.csv"": ""b9eaa83ee3e8a720f3cb5afd5d54da050c2d3ef45c434efe74f8ba8b976b63c6"", ""hourly_site/oos_hour_site.csv"": ""af3b3d5c4aa69e6d29b35a88008b4d82360c4b8391fc783141078f7ad68b0cda"", ""path_summary/oos_path_summary.csv"": ""99ec55faba4e60e88b25d757deb1a8146515faf666d52979fe69c64362047502"", ""path_summary/oos_stage_site_summary.csv"": ""eab41bdf5d58fc971bc65af8c5745de3bd08cc25a0a4d44cc386aeba3f99c89e"", ""path_summary/oos_stage_summary.csv"": ""969c373a9a2ff1b271cde6fda95a6fe8e64b10362518fe4b807c0dc86437c15d""}","{""grid_hourly/oos_hour_system.csv"": ""b9eaa83ee3e8a720f3cb5afd5d54da050c2d3ef45c434efe74f8ba8b976b63c6"", ""hourly_site/oos_hour_site.csv"": ""af3b3d5c4aa69e6d29b35a88008b4d82360c4b8391fc783141078f7ad68b0cda"", ""path_summary/oos_path_summary.csv"": ""99ec55faba4e60e88b25d757deb1a8146515faf666d52979fe69c64362047502"", ""path_summary/oos_stage_site_summary.csv"": ""eab41bdf5d58fc971bc65af8c5745de3bd08cc25a0a4d44cc386aeba3f99c89e"", ""path_summary/oos_stage_summary.csv"": ""969c373a9a2ff1b271cde6fda95a6fe8e64b10362518fe4b807c0dc86437c15d""}",True

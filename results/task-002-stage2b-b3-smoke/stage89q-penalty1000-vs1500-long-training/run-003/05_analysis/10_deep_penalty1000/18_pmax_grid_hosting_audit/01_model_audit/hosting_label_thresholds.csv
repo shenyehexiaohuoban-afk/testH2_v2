@@ -1,0 +1,5 @@
+﻿threshold,value,fixed_interpretation
+CLEAR_FULL_HOSTABLE_RATIO,0.95,candidate critical and all-hour full-hostable ratios must both meet threshold
+CLEAR_LIMITED_HOUR_RATIO,0.05,each voltage/branch/substation limited ratio must not exceed threshold
+LIMITED_FULL_HOSTABLE_RATIO,0.5,"below this critical full-hostable ratio, or above/equal systematic bottleneck ratio, is LIMITED"
+LIMITED_MEAN_HOSTING_RATIO,0.5,below this critical mean hosting ratio is LIMITED

@@ -1,0 +1,43 @@
+﻿check,observed,expected,tolerance,pass
+accepted_raw_hashes,"{'path_summary/oos_path_summary.csv': '99ec55faba4e60e88b25d757deb1a8146515faf666d52979fe69c64362047502', 'path_summary/oos_stage_summary.csv': '969c373a9a2ff1b271cde6fda95a6fe8e64b10362518fe4b807c0dc86437c15d', 'path_summary/oos_stage_site_summary.csv': 'eab41bdf5d58fc971bc65af8c5745de3bd08cc25a0a4d44cc386aeba3f99c89e', 'hourly_site/oos_hour_site.csv': 'af3b3d5c4aa69e6d29b35a88008b4d82360c4b8391fc783141078f7ad68b0cda', 'grid_hourly/oos_hour_system.csv': 'b9eaa83ee3e8a720f3cb5afd5d54da050c2d3ef45c434efe74f8ba8b976b63c6'}","{'path_summary/oos_path_summary.csv': '99ec55faba4e60e88b25d757deb1a8146515faf666d52979fe69c64362047502', 'path_summary/oos_stage_summary.csv': '969c373a9a2ff1b271cde6fda95a6fe8e64b10362518fe4b807c0dc86437c15d', 'path_summary/oos_stage_site_summary.csv': 'eab41bdf5d58fc971bc65af8c5745de3bd08cc25a0a4d44cc386aeba3f99c89e', 'hourly_site/oos_hour_site.csv': 'af3b3d5c4aa69e6d29b35a88008b4d82360c4b8391fc783141078f7ad68b0cda', 'grid_hourly/oos_hour_system.csv': 'b9eaa83ee3e8a720f3cb5afd5d54da050c2d3ef45c434efe74f8ba8b976b63c6'}",exact,True
+formal_Base_Pmax,"[300.0, 200.0, 120.0, 150.0]","[300.0, 200.0, 120.0, 150.0]",exact,True
+candidate_Pmax,"[300.0, 200.0, 120.0, 187.5]/[375.0, 250.0, 150.0, 187.5]",S4_125/ALL_125,exact,True
+site_bus_mapping,"[24, 14, 18, 31]","[24, 14, 18, 31]",exact,True
+formal_grid_bounds,0.9/1.1/6,0.9/1.1/6,exact,True
+real_hour_counts,285888/1143552,285888/1143552,exact,True
+no_padded_hours,285888,285888,exact,True
+raw_unique_electrical_profiles,1244,1244,exact,True
+base_reproduction_all_PASS,23,23,exact,True
+profile_output_counts,1244/4976/1244/1244,1244/4976/1244/1244,exact,True
+profile_weight_coverage,285888/285888,285888/285888,exact,True
+single_site_weight_coverage,"{1: 285888, 2: 285888, 3: 285888, 4: 285888}",285888 each,exact,True
+S4_arithmetic,True,True,exact,True
+ALL_site_arithmetic,True,True,exact,True
+ALL_joint_arithmetic,True,True,exact,True
+nonnegative_hosting,0.0,>=-1e-7,exact,True
+hosted_not_above_requested,True,True,exact,True
+S4_full_flag_identity,True,True,exact,True
+ALL_full_flag_identity,True,True,exact,True
+stress_interpretation_boundary,True,True,exact,True
+voltage_constraints,0.9,>=0.9-1e-7,exact,True
+octagon_constraints,0,<=1e-7,exact,True
+true_apparent_power_constraints,5.05180590572,<=6+1e-7,exact,True
+balance_residuals,1.53733026309e-10,<=1e-7,exact,True
+critical_subset_raw_identity,True,True,exact,True
+critical_real_hours_only,1,1,exact,True
+critical_detail_unique,0,0,exact,True
+critical_site_ratios_recomputed,True,True,exact,True
+decision_all_hour_ratios,0.9858476046563689/0.85345659838818,recomputed,exact,True
+summary_total_hours,285888.0/285888.0,285888/285888,exact,True
+physical_gain_copied_not_scaled,True,True,exact,True
+effective_gain_boundary,True,True,exact,True
+policy_actual_use_status,NOT_AVAILABLE_BEFORE_FRESH_RETRAINING,NOT_AVAILABLE_BEFORE_FRESH_RETRAINING,exact,True
+no_training_OOS_status,YES/YES,YES/YES,exact,True
+README_20_answers,22,>=20,exact,True
+README_required_boundaries,True,True,exact,True
+no_FA_core_or_random_capability,[],[],exact,True
+required_figure_count,12,12,exact,True
+figure_dimensions_nonblank,True,True,exact,True
+manual_visual_QA,{'PASS': 12},{'PASS': 12},exact,True
+manifest_hashes,True,True,exact,True
+accepted_raw_hashes_after,"{'path_summary/oos_path_summary.csv': '99ec55faba4e60e88b25d757deb1a8146515faf666d52979fe69c64362047502', 'path_summary/oos_stage_summary.csv': '969c373a9a2ff1b271cde6fda95a6fe8e64b10362518fe4b807c0dc86437c15d', 'path_summary/oos_stage_site_summary.csv': 'eab41bdf5d58fc971bc65af8c5745de3bd08cc25a0a4d44cc386aeba3f99c89e', 'hourly_site/oos_hour_site.csv': 'af3b3d5c4aa69e6d29b35a88008b4d82360c4b8391fc783141078f7ad68b0cda', 'grid_hourly/oos_hour_system.csv': 'b9eaa83ee3e8a720f3cb5afd5d54da050c2d3ef45c434efe74f8ba8b976b63c6'}","{'path_summary/oos_path_summary.csv': '99ec55faba4e60e88b25d757deb1a8146515faf666d52979fe69c64362047502', 'path_summary/oos_stage_summary.csv': '969c373a9a2ff1b271cde6fda95a6fe8e64b10362518fe4b807c0dc86437c15d', 'path_summary/oos_stage_site_summary.csv': 'eab41bdf5d58fc971bc65af8c5745de3bd08cc25a0a4d44cc386aeba3f99c89e', 'hourly_site/oos_hour_site.csv': 'af3b3d5c4aa69e6d29b35a88008b4d82360c4b8391fc783141078f7ad68b0cda', 'grid_hourly/oos_hour_system.csv': 'b9eaa83ee3e8a720f3cb5afd5d54da050c2d3ef45c434efe74f8ba8b976b63c6'}",exact,True

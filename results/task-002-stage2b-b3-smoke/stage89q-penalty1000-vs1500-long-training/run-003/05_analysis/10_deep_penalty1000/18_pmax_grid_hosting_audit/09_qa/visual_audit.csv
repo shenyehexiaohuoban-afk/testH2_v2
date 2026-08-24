@@ -1,0 +1,13 @@
+﻿figure,automatic_nonblank,manual_visual_status,manual_note
+01_S4_125增量headroom分布.png,True,PASS,Contact-sheet visual inspection: readable Chinese text; no overlap or clipping
+02_S4_125关键窗口hosting.png,True,PASS,Contact-sheet visual inspection: readable Chinese text; no overlap or clipping
+03_ALL_125四站增量headroom.png,True,PASS,Contact-sheet visual inspection: readable Chinese text; no overlap or clipping
+04_ALL_125_joint_hosting.png,True,PASS,Contact-sheet visual inspection: readable Chinese text; no overlap or clipping
+05_candidate_full_stress可行性.png,True,PASS,Contact-sheet visual inspection: readable Chinese text; no overlap or clipping
+06_voltage_margin分布.png,True,PASS,Contact-sheet visual inspection: readable Chinese text; no overlap or clipping
+07_Site3_bus18_hosting.png,True,PASS,Contact-sheet visual inspection: readable Chinese text; no overlap or clipping
+08_critical_bus频次.png,True,PASS,Single bar is data-supported bus18 concentration; layout is readable
+09_critical_branch频次.png,True,PASS,Single bar is data-supported branch1 concentration; layout is readable
+10_difficult_tail_hosting.png,True,PASS,Contact-sheet visual inspection: readable Chinese text; no overlap or clipping
+11_physical_flexibility_gain_vs_grid_hosting.png,True,PASS,Contact-sheet visual inspection: readable Chinese text; no overlap or clipping
+12_candidate_grid_hosting总结.png,True,PASS,Contact-sheet visual inspection: summary table and scope note are readable

@@ -1,0 +1,24 @@
+﻿check,reproduced,saved_or_expected,tolerance,pass
+real_decision_hour_count,285888,285888,0,True
+unique_electrical_profile_count,1244,1244,0,True
+saved_profile_invariance_max_span,0,0,1e-07,True
+voltage_lower_violation_count,0,0,0,True
+voltage_upper_violation_count,0,0,0,True
+minimum_voltage_pu,0.9,0.9,1e-07,True
+maximum_voltage_pu,1,1.0,1e-07,True
+min_voltage_profile_max_abs_residual,7.77156117238e-16,0,1e-07,True
+min_voltage_bus_mismatch_profiles,0,0,0,True
+maximum_true_apparent_power_mva,4.95640698938,4.95640698938082,1e-07,True
+true_apparent_power_profile_max_abs_residual,6.2172489379e-15,0,1e-07,True
+critical_branch_id_mismatch_profiles,0,0,0,True
+maximum_true_apparent_utilization,0.826067831563,0.82606783156347,1e-07,True
+maximum_octagon_utilization,0.853440280584,<=1,1e-07,True
+octagon_violation_hour_count,0,0,0,True
+true_line_limit_violation_hour_count,0,0,0,True
+root_import_profile_max_abs_residual_kw,5.91171556152e-12,0,1e-07,True
+pv_used_profile_max_abs_residual_kw,2.84217094304e-14,0,1e-07,True
+max_active_balance_residual_kw,8.81072992343e-13,<=1e-7,1e-07,True
+max_reactive_balance_residual_kvar,3.8369307731e-13,<=1e-7,1e-07,True
+max_voltage_drop_residual,1.11022302463e-16,<=1e-7,1e-07,True
+slack_voltage_residual,0,<=1e-7,1e-07,True
+electrolyzer_PEL_within_Base_Pmax,300,"sitewise <= [300,200,120,150]",1e-07,True

@@ -1,0 +1,3 @@
+﻿candidate,nameplate_expansion_kw,all_hour_full_hostable_ratio,critical_window_full_hostable_ratio,critical_window_mean_hosting_ratio,critical_voltage_limited_ratio,critical_branch_limited_ratio,full_simultaneous_stress_ratio,policy_actual_use,grid_hosting_label
+S4_125,37.5,0.985847604656,0.813920454545,0.813920454545,0.186079545455,0,0.985847604656,NOT_AVAILABLE_BEFORE_FRESH_RETRAINING,MIXED
+ALL_125,192.5,0.853456598388,0.767676767677,0.824525376105,0.232323232323,0,0.853456598388,NOT_AVAILABLE_BEFORE_FRESH_RETRAINING,MIXED
