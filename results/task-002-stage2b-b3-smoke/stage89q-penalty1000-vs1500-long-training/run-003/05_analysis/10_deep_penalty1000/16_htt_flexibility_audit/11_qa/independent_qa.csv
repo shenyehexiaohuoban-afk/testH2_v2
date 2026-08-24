@@ -1,0 +1,41 @@
+﻿check,observed,expected,tolerance,pass
+accepted_raw_hashes,"{'path_summary/oos_path_summary.csv': '99ec55faba4e60e88b25d757deb1a8146515faf666d52979fe69c64362047502', 'path_summary/oos_stage_summary.csv': '969c373a9a2ff1b271cde6fda95a6fe8e64b10362518fe4b807c0dc86437c15d', 'path_summary/oos_stage_site_summary.csv': 'eab41bdf5d58fc971bc65af8c5745de3bd08cc25a0a4d44cc386aeba3f99c89e', 'hourly_site/oos_hour_site.csv': 'af3b3d5c4aa69e6d29b35a88008b4d82360c4b8391fc783141078f7ad68b0cda', 'grid_hourly/oos_hour_system.csv': 'b9eaa83ee3e8a720f3cb5afd5d54da050c2d3ef45c434efe74f8ba8b976b63c6', 'htt_od/oos_positive_htt_flows.csv': '06a6586574a155eb4588cae691898b3ebda509a79e14e64c8453918b7262fe4a'}","{'path_summary/oos_path_summary.csv': '99ec55faba4e60e88b25d757deb1a8146515faf666d52979fe69c64362047502', 'path_summary/oos_stage_summary.csv': '969c373a9a2ff1b271cde6fda95a6fe8e64b10362518fe4b807c0dc86437c15d', 'path_summary/oos_stage_site_summary.csv': 'eab41bdf5d58fc971bc65af8c5745de3bd08cc25a0a4d44cc386aeba3f99c89e', 'hourly_site/oos_hour_site.csv': 'af3b3d5c4aa69e6d29b35a88008b4d82360c4b8391fc783141078f7ad68b0cda', 'grid_hourly/oos_hour_system.csv': 'b9eaa83ee3e8a720f3cb5afd5d54da050c2d3ef45c434efe74f8ba8b976b63c6', 'htt_od/oos_positive_htt_flows.csv': '06a6586574a155eb4588cae691898b3ebda509a79e14e64c8453918b7262fe4a'}",exact,True
+path_count,10000,10000,exact,True
+stage7_count,6124,6124,exact,True
+positive_target_partition,650+473,650+473,exact,True
+shortfall_partition,"{'PURE_SPATIAL_MISMATCH': 203, 'MIXED_QUANTITY_AND_SPATIAL': 152, 'PURE_QUANTITY_SHORTFALL': 118}",118/203/152,exact,True
+hourly_pre_inventory_balance,1.0182965581861936e-12,<=1e-07,1e-07,True
+hourly_end_inventory_balance,1.2967404927621828e-12,<=1e-07,1e-07,True
+hourly_HTT_capacity,-14.6321751040267,<=1e-07,1e-07,True
+no_zero_padding,285888,285888,exact,True
+utilization_hour_count,285888,285888,exact,True
+utilization_mean,0.00210766671007,0.0021076667100747314,1e-12,True
+relative_hour_rows,60,60,exact,True
+physical_row_count,1065,1065,exact,True
+physical_path_types,"{'pure_location', 'mixed'}","{'pure_location', 'mixed'}",exact,True
+physical_valid_counts_explicit,"{-16: 355, -8: 355, -4: 355}",reported,exact,True
+upper_summary_current_recompute,"{('mixed', -16): 0, ('mixed', -8): 0, ('mixed', -4): 0, ('pure_location', -16): 203, ('pure_location', -8): 203, ('pure_location', -4): 203}","{('mixed', -16): 0, ('mixed', -8): 0, ('mixed', -4): 0, ('pure_location', -16): 203, ('pure_location', -8): 203, ('pure_location', -4): 203}",exact,True
+sensitivity_monotone,True,True,exact,True
+expost_alignment_29_50,0.29503247265626853,0.295032472656,1e-12,True
+proxy_probability_closure,0,<=1e-12,1e-12,True
+proxy_and_expost_columns_separate,True,True,exact,True
+underdispatch_98,98,98,exact,True
+underdispatch_partition,98,98,exact,True
+underdispatch_allowed_classes,4,nine-class vocabulary,exact,True
+od_12_rows,12,12,exact,True
+od_total_flow,74259.03128049157,74259.03128043984,1e-07,True
+flexibility_473,473,473,exact,True
+readme_20_answers,21,21,exact,True
+readme_status_HTT_AGGREGATE_CAPACITY_BOTTLENECK,True,True,exact,True
+readme_status_HTT_TIMING_BOTTLENECK,True,True,exact,True
+readme_status_HTT_INFORMATION_LIMIT_SIGNAL,True,True,exact,True
+readme_status_HTT_SPATIAL_VALUE_SIGNAL,True,True,exact,True
+readme_status_RECOMMEND_HTT_CAPACITY_SENSITIVITY,True,True,exact,True
+figure_count,13,13,exact,True
+figure_dimensions,True,True,exact,True
+manual_visual_audit,True,True,exact,True
+manifest_paths_exist,0,0,exact,True
+manifest_hashes,0,0,exact,True
+lightweight_outputs,1653465,<25MiB,exact,True
+no_optimizer_or_random,[],[],exact,True
+raw_unchanged_during_independent_audit,"{'path_summary/oos_path_summary.csv': '99ec55faba4e60e88b25d757deb1a8146515faf666d52979fe69c64362047502', 'path_summary/oos_stage_summary.csv': '969c373a9a2ff1b271cde6fda95a6fe8e64b10362518fe4b807c0dc86437c15d', 'path_summary/oos_stage_site_summary.csv': 'eab41bdf5d58fc971bc65af8c5745de3bd08cc25a0a4d44cc386aeba3f99c89e', 'hourly_site/oos_hour_site.csv': 'af3b3d5c4aa69e6d29b35a88008b4d82360c4b8391fc783141078f7ad68b0cda', 'grid_hourly/oos_hour_system.csv': 'b9eaa83ee3e8a720f3cb5afd5d54da050c2d3ef45c434efe74f8ba8b976b63c6', 'htt_od/oos_positive_htt_flows.csv': '06a6586574a155eb4588cae691898b3ebda509a79e14e64c8453918b7262fe4a'}","{'path_summary/oos_path_summary.csv': '99ec55faba4e60e88b25d757deb1a8146515faf666d52979fe69c64362047502', 'path_summary/oos_stage_summary.csv': '969c373a9a2ff1b271cde6fda95a6fe8e64b10362518fe4b807c0dc86437c15d', 'path_summary/oos_stage_site_summary.csv': 'eab41bdf5d58fc971bc65af8c5745de3bd08cc25a0a4d44cc386aeba3f99c89e', 'hourly_site/oos_hour_site.csv': 'af3b3d5c4aa69e6d29b35a88008b4d82360c4b8391fc783141078f7ad68b0cda', 'grid_hourly/oos_hour_system.csv': 'b9eaa83ee3e8a720f3cb5afd5d54da050c2d3ef45c434efe74f8ba8b976b63c6', 'htt_od/oos_positive_htt_flows.csv': '06a6586574a155eb4588cae691898b3ebda509a79e14e64c8453918b7262fe4a'}",exact,True

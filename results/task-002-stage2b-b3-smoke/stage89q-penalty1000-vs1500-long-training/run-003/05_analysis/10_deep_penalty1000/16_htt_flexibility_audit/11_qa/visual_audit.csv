@@ -1,0 +1,14 @@
+﻿figure,width,height,nonblank_pixel_check,manual_legibility_check,manual_overlap_check,result,note
+01_HTT总运力利用率分布.png,1359,839,True,PASS,PASS,PASS,contact sheet and originals manually inspected
+02_Stage7前24小时HTT利用率.png,1513,918,True,PASS,PASS,PASS,contact sheet and originals manually inspected
+03_三类路径HTT时序.png,1514,917,True,PASS,PASS,PASS,contact sheet and originals manually inspected
+04_当前与无限HTT可恢复上界.png,1667,862,True,PASS,PASS,PASS,contact sheet and originals manually inspected
+05_HTT容量倍数敏感性.png,1667,862,True,PASS,PASS,PASS,contact sheet and originals manually inspected
+06_underdispatch重分类.png,2142,932,True,PASS,PASS,PASS,contact sheet and originals manually inspected
+07_有向OD总流量.png,1558,869,True,PASS,PASS,PASS,contact sheet and originals manually inspected
+08_盈余缺口OD热图.png,1112,899,True,PASS,PASS,PASS,contact sheet and originals manually inspected
+09_事后与信息一致性对照.png,1375,839,True,PASS,PASS,PASS,contact sheet and originals manually inspected
+10_purelocation物理限制分解.png,1380,840,True,PASS,PASS,PASS,contact sheet and originals manually inspected
+11_生产与空间灵活性分类.png,1611,875,True,PASS,PASS,PASS,contact sheet and originals manually inspected
+12_HTT机制总结.png,2041,866,True,PASS,PASS,PASS,contact sheet and originals manually inspected
+contact_sheet.png,1100,2220,True,PASS,PASS,PASS,contact sheet and originals manually inspected
