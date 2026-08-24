@@ -1,0 +1,21 @@
+﻿metric,value,denominator
+positive_target_paths,1123,Stage7
+positive_target_adequate,650,positive-target
+positive_target_shortfall,473,positive-target
+surplus_gt100_count,520,positive-target adequate
+surplus_gt200_count,312,positive-target adequate
+surplus_gt100_risk_weakened_signal_fraction,0.594230769231,surplus>100
+surplus_gt200_risk_weakened_signal_fraction,0.698717948718,surplus>200
+surplus_gt100_mean_stable_target_hour,-29.0884615385,surplus>100
+surplus_gt200_mean_stable_target_hour,-34.7756410256,surplus>200
+proven_unrecoverable_16h_count,70,473 shortfall
+proven_unrecoverable_8h_count,156,473 shortfall
+proven_unrecoverable_4h_count,167,473 shortfall
+most_common_deficit_site,4,473 shortfall
+most_common_surplus_site,2,473 shortfall
+pure_location_target_aligned_HTT_fraction,0.295032472656,pure-location realized HTT
+ordinary_shortage_terminal_adequate_count,326,Stage7
+ordinary_shortage_adequate_positive_inventory_growth_fraction,0.98773006135,326 paths
+surplus_cost_pearson,0.304464156441,650 positive-target adequate
+surplus_cost_spearman,0.332949919828,650 positive-target adequate
+hardest5_gap_contribution,0.944196621992,Stage7 total gap

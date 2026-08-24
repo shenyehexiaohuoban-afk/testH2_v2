@@ -1,0 +1,15 @@
+﻿check,observed,expected,pass
+formal_path_count,10000,10000,True
+ordered_path_bank_identity,True,True,True
+path_bank_mat_sha_identity,6bf3d1190a402ded052b8d3d08ed369042236e151f562bdd9fd4db7b8ff386c6,6bf3d1190a402ded052b8d3d08ed369042236e151f562bdd9fd4db7b8ff386c6,True
+path_bank_manifest_sha_identity,a186e8d4ac870082d0925a05311ab8f4c5a0b70cb61b6fd06955a48a647b3941,a186e8d4ac870082d0925a05311ab8f4c5a0b70cb61b6fd06955a48a647b3941,True
+electrolyzer_Pmax_identity,"{1: 300.0, 2: 200.0, 3: 120.0, 4: 150.0}","{1: 300.0, 2: 200.0, 3: 120.0, 4: 150.0}",True
+no_post_termination_zero_padding,True,True,True
+positive_target_accounting,650+473,650+473=1123,True
+surplus_gap_margin_identity,8.455458555545192e-13,<=1e-07,True
+actual_cost_component_closure,2.9103830456733704e-11,<=1e-07,True
+no_reoptimization,CSV_ONLY_NO_MATLAB_NO_GUROBI_NO_CHECKPOINT_LOAD,READ_ONLY_POSTPROCESSING,True
+raw_hashes_unchanged_during_analysis,True,True,True
+raw_hashes_match_accepted_manifest,True,True,True
+physical_reachability_claim_scope,NO_OR_NOT_IDENTIFIABLE_ONLY,NO_OR_NOT_IDENTIFIABLE_ONLY,True
+HTT_contemporaneous_error_claims,False,False,True

@@ -1,0 +1,47 @@
+﻿check,observed,expected,tolerance,pass
+raw_hashes_match_accepted,"{'path_summary/oos_path_summary.csv': '99ec55faba4e60e88b25d757deb1a8146515faf666d52979fe69c64362047502', 'hourly_site/oos_hour_site.csv': 'af3b3d5c4aa69e6d29b35a88008b4d82360c4b8391fc783141078f7ad68b0cda', 'htt_od/oos_positive_htt_flows.csv': '06a6586574a155eb4588cae691898b3ebda509a79e14e64c8453918b7262fe4a', 'grid_hourly/oos_hour_system.csv': 'b9eaa83ee3e8a720f3cb5afd5d54da050c2d3ef45c434efe74f8ba8b976b63c6'}","{'path_summary/oos_path_summary.csv': '99ec55faba4e60e88b25d757deb1a8146515faf666d52979fe69c64362047502', 'hourly_site/oos_hour_site.csv': 'af3b3d5c4aa69e6d29b35a88008b4d82360c4b8391fc783141078f7ad68b0cda', 'htt_od/oos_positive_htt_flows.csv': '06a6586574a155eb4588cae691898b3ebda509a79e14e64c8453918b7262fe4a', 'grid_hourly/oos_hour_system.csv': 'b9eaa83ee3e8a720f3cb5afd5d54da050c2d3ef45c434efe74f8ba8b976b63c6'}",exact,True
+path_bank_mat_sha,6bf3d1190a402ded052b8d3d08ed369042236e151f562bdd9fd4db7b8ff386c6,6bf3d1190a402ded052b8d3d08ed369042236e151f562bdd9fd4db7b8ff386c6,exact,True
+path_bank_manifest_sha,a186e8d4ac870082d0925a05311ab8f4c5a0b70cb61b6fd06955a48a647b3941,a186e8d4ac870082d0925a05311ab8f4c5a0b70cb61b6fd06955a48a647b3941,exact,True
+formal_path_count,10000,10000,exact,True
+stage7_count,6124,6124,exact,True
+positive_target_count,1123,1123,exact,True
+positive_target_partition,650+473,650+473,exact,True
+ordered_bank_identity,True,True,exact,True
+electrolyzer_Pmax_identity,"{1: 300.0, 2: 200.0, 3: 120.0, 4: 150.0}","{1: 300.0, 2: 200.0, 3: 120.0, 4: 150.0}",exact,True
+surplus_path_ids_exact,650,650,exact,True
+shortfall_path_ids_exact,473,473,exact,True
+surplus_values_recomputed,4.990283741790336e-10,<=1e-07,1e-07,True
+site_surplus_shortfall_identity,8.455458555545192e-13,<=1e-07,1e-07,True
+failure_mechanism_partition,118+203+152,118+203+152,exact,True
+recoverability_rows,1419,1419,exact,True
+recoverability_path_ids_exact,473,473,exact,True
+recoverability_claim_scope,"{'NO', 'NOT_IDENTIFIABLE'}","{'NO', 'NOT_IDENTIFIABLE'}",exact,True
+strict_unrecoverable_counts,"{4: 167, 8: 156, 16: 70}","{16: 70, 8: 156, 4: 167}",exact,True
+strict_unrecoverable_monotone,"[70, 156, 167]",nondecreasing toward Stage7,exact,True
+recoverability_summary_agrees,1419,1419,exact,True
+pure_location_aligned_HTT_fraction,0.2950324726551102,0.295032472656,1e-12,True
+ordinary_shortage_terminal_adequate_count,326,326,exact,True
+ordinary_shortage_surplus_gt50_count,321,321,exact,True
+ordinary_output_path_ids_exact,326,326,exact,True
+actual_cost_mean,56192.3696759,56192.36967592455,1e-07,True
+cost_component_closure,2.91038304567e-11,<=1e-07,1e-07,True
+terminal_penalty_separate,1,1,exact,True
+dissipation_path_ids_exact,3497,3497,exact,True
+no_post_termination_inference,True,True,exact,True
+hardest5_gap_contribution,0.9441966219919999,0.944196621992,1e-12,True
+worst_path_3909_in_cases,True,True,exact,True
+top5_shortfall_cases_exact,5,5,exact,True
+readme_answers_20_questions,19,20,exact,True
+readme_stops_before_1500,True,True,exact,True
+analysis_csv_count_before_independent_audit,32,32,exact,True
+numbered_figure_count,18,18,exact,True
+contact_sheet_exists,True,True,exact,True
+figure_dimensions,True,True,exact,True
+visual_audit_rows,19,19,exact,True
+visual_audit_all_pass,True,True,exact,True
+visual_audit_figure_identity,"{'04_高超额与不足最后24h制氢.png', '03_达标与不足最后24h库存.png', '08_HTT机制分类.png', 'contact_sheet.png', '06_四站缺口频率.png', '11_超额库存与成本.png', '01_正目标超额不足完整分布.png', '12_路径类型实际成本.png', '13_消散路径预防库存.png', '17_纯位置不足典型路径.png', '02_正目标超额分箱.png', '09_四站电解槽负荷.png', '07_站点错配组合.png', '16_超额200kg典型路径.png', '15_path3909时间线.png', '14_尾部机制对比.png', '18_最终机制总结.png', '10_普通缺氢最终储备四象限.png', '05_到达阶段与不足率.png'}","{'04_高超额与不足最后24h制氢.png', '03_达标与不足最后24h库存.png', '08_HTT机制分类.png', 'contact_sheet.png', '06_四站缺口频率.png', '11_超额库存与成本.png', '01_正目标超额不足完整分布.png', '12_路径类型实际成本.png', '13_消散路径预防库存.png', '17_纯位置不足典型路径.png', '02_正目标超额分箱.png', '09_四站电解槽负荷.png', '07_站点错配组合.png', '16_超额200kg典型路径.png', '15_path3909时间线.png', '14_尾部机制对比.png', '18_最终机制总结.png', '10_普通缺氢最终储备四象限.png', '05_到达阶段与不足率.png'}",exact,True
+manifest_paths_exist,0,0,exact,True
+manifest_hashes_match,0,0,exact,True
+no_large_analysis_artifact,988021,<25 MiB,exact,True
+no_zero_padding,True,True,exact,True
+raw_hashes_unchanged_during_audit,"{'path_summary/oos_path_summary.csv': '99ec55faba4e60e88b25d757deb1a8146515faf666d52979fe69c64362047502', 'hourly_site/oos_hour_site.csv': 'af3b3d5c4aa69e6d29b35a88008b4d82360c4b8391fc783141078f7ad68b0cda', 'htt_od/oos_positive_htt_flows.csv': '06a6586574a155eb4588cae691898b3ebda509a79e14e64c8453918b7262fe4a', 'grid_hourly/oos_hour_system.csv': 'b9eaa83ee3e8a720f3cb5afd5d54da050c2d3ef45c434efe74f8ba8b976b63c6'}","{'path_summary/oos_path_summary.csv': '99ec55faba4e60e88b25d757deb1a8146515faf666d52979fe69c64362047502', 'hourly_site/oos_hour_site.csv': 'af3b3d5c4aa69e6d29b35a88008b4d82360c4b8391fc783141078f7ad68b0cda', 'htt_od/oos_positive_htt_flows.csv': '06a6586574a155eb4588cae691898b3ebda509a79e14e64c8453918b7262fe4a', 'grid_hourly/oos_hour_system.csv': 'b9eaa83ee3e8a720f3cb5afd5d54da050c2d3ef45c434efe74f8ba8b976b63c6'}",exact,True

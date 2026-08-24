@@ -1,0 +1,20 @@
+figure,inspection_scope,text_rendering,no_overlap,axes_legends,result,notes
+01_正目标超额不足完整分布.png,contact_sheet,pass,pass,pass,PASS,distribution and zero reference readable
+02_正目标超额分箱.png,full_resolution,pass,pass,pass,PASS,numeric bin order fixed and verified
+03_达标与不足最后24h库存.png,contact_sheet,pass,pass,pass,PASS,two profiles and legend readable
+04_高超额与不足最后24h制氢.png,contact_sheet,pass,pass,pass,PASS,two profiles and legend readable
+05_到达阶段与不足率.png,contact_sheet,pass,pass,pass,PASS,small-N labels visible
+06_四站缺口频率.png,contact_sheet,pass,pass,pass,PASS,site labels and percentages visible
+07_站点错配组合.png,contact_sheet,pass,pass,pass,PASS,heatmap cells and color scale readable
+08_HTT机制分类.png,full_resolution,pass,pass,pass,PASS,mechanism labels translated to Chinese
+09_四站电解槽负荷.png,contact_sheet,pass,pass,pass,PASS,grouped bars and legend readable
+10_普通缺氢最终储备四象限.png,full_resolution,pass,pass,pass,PASS,multiline quadrant labels do not collide
+11_超额库存与成本.png,contact_sheet,pass,pass,pass,PASS,scatter cloud and axes readable
+12_路径类型实际成本.png,full_resolution,pass,pass,pass,PASS,all 15 group labels translated and visible
+13_消散路径预防库存.png,contact_sheet,pass,pass,pass,PASS,quantile labels visible
+14_尾部机制对比.png,contact_sheet,pass,pass,pass,PASS,three panels remain distinct
+15_path3909时间线.png,full_resolution,pass,pass,pass,PASS,five panels include total and four-site inventory production HTT shortage utilization intensity and location
+16_超额200kg典型路径.png,full_resolution,pass,pass,pass,PASS,five-panel timeline readable without overlap
+17_纯位置不足典型路径.png,full_resolution,pass,pass,pass,PASS,five-panel timeline readable without overlap
+18_最终机制总结.png,full_resolution,pass,pass,pass,PASS,four summary panels and labels readable
+contact_sheet.png,full_resolution,pass,pass,pass,PASS,all 18 thumbnails present and nonblank

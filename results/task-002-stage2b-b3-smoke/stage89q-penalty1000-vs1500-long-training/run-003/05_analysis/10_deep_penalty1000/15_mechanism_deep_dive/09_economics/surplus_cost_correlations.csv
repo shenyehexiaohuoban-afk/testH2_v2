@@ -1,0 +1,5 @@
+﻿x,y,N,pearson,spearman,interpretation
+final_surplus_kg,actual_operating_cost,650,0.304464156441,0.332949919828,CORRELATION_NOT_CAUSATION
+final_surplus_kg,total_H2_production,650,0.596975360975,0.583468203681,CORRELATION_NOT_CAUSATION
+final_surplus_kg,total_HTT,650,0.373200436179,0.464266203567,CORRELATION_NOT_CAUSATION
+final_surplus_kg,ordinary_shortage_total,650,0.0562707152702,0.0404212645004,CORRELATION_NOT_CAUSATION

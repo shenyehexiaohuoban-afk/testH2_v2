@@ -1,0 +1,11 @@
+﻿record_type,group,path_hour_count,voltage_binding_fraction,line_binding_fraction,mean_total_P_EL_when_voltage_binding_kW,mean_total_P_EL_when_not_voltage_binding_kW,mean_min_voltage_pu,q05_min_voltage_pu,causal_attribution,min_voltage_bus,binding_hour_count,fraction_of_group_binding_hours
+group_summary,adequate_positive_target,10400,0.0954807692308,0,691.847884572,612.887812735,0.916232782803,0.9,BUS_LEVEL_CAUSAL_ATTRIBUTION_NOT_AVAILABLE,,,
+binding_bus_frequency,adequate_positive_target,,,,,,,,BUS_LEVEL_CAUSAL_ATTRIBUTION_NOT_AVAILABLE,18,993,1
+group_summary,shortfall,7568,0.0935517970402,0,694.618186501,526.748500019,0.91806492549,0.9,BUS_LEVEL_CAUSAL_ATTRIBUTION_NOT_AVAILABLE,,,
+binding_bus_frequency,shortfall,,,,,,,,BUS_LEVEL_CAUSAL_ATTRIBUTION_NOT_AVAILABLE,18,708,1
+group_summary,pure_quantity,1888,0.0757415254237,0,700.307505225,458.910540859,0.919856132378,0.9,BUS_LEVEL_CAUSAL_ATTRIBUTION_NOT_AVAILABLE,,,
+binding_bus_frequency,pure_quantity,,,,,,,,BUS_LEVEL_CAUSAL_ATTRIBUTION_NOT_AVAILABLE,18,143,1
+group_summary,pure_location,3248,0.101908866995,0,691.435316205,577.141082587,0.916755338124,0.9,BUS_LEVEL_CAUSAL_ATTRIBUTION_NOT_AVAILABLE,,,
+binding_bus_frequency,pure_location,,,,,,,,BUS_LEVEL_CAUSAL_ATTRIBUTION_NOT_AVAILABLE,18,331,1
+group_summary,mixed,2432,0.0962171052632,0,695.643645863,513.728516119,0.91842337169,0.9,BUS_LEVEL_CAUSAL_ATTRIBUTION_NOT_AVAILABLE,,,
+binding_bus_frequency,mixed,,,,,,,,BUS_LEVEL_CAUSAL_ATTRIBUTION_NOT_AVAILABLE,18,234,1
