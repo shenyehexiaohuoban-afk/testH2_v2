@@ -1,0 +1,58 @@
+check_id,status,source,detail
+Base_path_summary_exists,PASS,Base,C:\Users\chaos\Desktop\biye\test\testH2_v2\hourly_grid_h2\output\stage89q_penalty1000_vs1500_long_training\run-003\penalty1000\path_summary\oos_path_summary.csv
+Base_metadata_exists,PASS,Base,C:\Users\chaos\Desktop\biye\test\testH2_v2\hourly_grid_h2\output\stage89q_penalty1000_vs1500_long_training\run-003\penalty1000\oos_metadata.csv
+Base_rows_10000,PASS,Base,rows=10000
+Base_metadata_completion,PASS,Base,requested=10000; completed=10000; pass=1
+B0001_path_summary_exists,PASS,B0001,C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\stage89q-pmax-b0001-exploratory-oos\run-001\04_oos_b0001\path_summary\oos_path_summary.csv
+B0001_metadata_exists,PASS,B0001,C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\stage89q-pmax-b0001-exploratory-oos\run-001\04_oos_b0001\oos_metadata.csv
+B0001_rows_10000,PASS,B0001,rows=10000
+B0001_metadata_completion,PASS,B0001,requested=10000; completed=10000; pass=1
+base_ordered_path_ids,PASS,Base,first=1; last=10000
+b0001_ordered_path_ids,PASS,B0001,first=1; last=10000
+common_ordered_path_ids,PASS,Base/B0001,max_id_diff=0
+common_identity_state_sequence,PASS,Base/B0001,equal=True
+common_identity_termination_type,PASS,Base/B0001,equal=True
+common_identity_path_id,PASS,Base/B0001,max_abs_diff=0
+common_identity_termination_stage,PASS,Base/B0001,max_abs_diff=0
+common_identity_termination_state,PASS,Base/B0001,max_abs_diff=0
+common_identity_operating_stage_count,PASS,Base/B0001,max_abs_diff=0
+common_identity_reached_stage7,PASS,Base/B0001,max_abs_diff=0
+common_identity_terminal_state_id,PASS,Base/B0001,max_abs_diff=0
+common_identity_terminal_a,PASS,Base/B0001,max_abs_diff=0
+common_identity_terminal_loc,PASS,Base/B0001,max_abs_diff=0
+common_identity_target_site1,PASS,Base/B0001,max_abs_diff=0
+common_identity_target_site2,PASS,Base/B0001,max_abs_diff=0
+common_identity_target_site3,PASS,Base/B0001,max_abs_diff=0
+common_identity_target_site4,PASS,Base/B0001,max_abs_diff=0
+common_identity_target_total,PASS,Base/B0001,max_abs_diff=0
+common_identity_final_a,PASS,Base/B0001,max_abs_diff=0
+common_identity_final_loc,PASS,Base/B0001,max_abs_diff=0
+common_identity_final_lf,PASS,Base/B0001,max_abs_diff=0
+terminal_target_unchanged_target_site1,PASS,Base/B0001,max_abs_diff=0
+terminal_target_unchanged_target_site2,PASS,Base/B0001,max_abs_diff=0
+terminal_target_unchanged_target_site3,PASS,Base/B0001,max_abs_diff=0
+terminal_target_unchanged_target_site4,PASS,Base/B0001,max_abs_diff=0
+terminal_target_unchanged_target_total,PASS,Base/B0001,max_abs_diff=0
+common_bank_sha256,PASS,Base/B0001,Base=6bf3d1190a402ded052b8d3d08ed369042236e151f562bdd9fd4db7b8ff386c6; B0001=6bf3d1190a402ded052b8d3d08ed369042236e151f562bdd9fd4db7b8ff386c6
+base_final_inventory_available,PASS,Base,finite_cells=40000/40000
+base_inventory_total_consistency,PASS,Base,max_abs_diff=1.53477e-12
+b0001_final_inventory_available,PASS,B0001,finite_cells=40000/40000
+b0001_inventory_total_consistency,PASS,B0001,max_abs_diff=1.7053e-12
+tail_cohort_counts,PASS,Base,difficult4=245; extreme1=62
+base_k_nonnegative,PASS,Base,min_raw_k=-1.13686837722e-13
+base_k_identity,PASS,Base,max_abs_error=1.13686837722e-13
+base_saved_site_gap_recompute,PASS,Base,max_abs_error=1.70530256582e-12
+base_saved_spatial_component_recompute,PASS,Base,max_abs_error=1.20081722343e-12
+b0001_k_nonnegative,PASS,B0001,min_raw_k=-1.13686837722e-13
+b0001_k_identity,PASS,B0001,max_abs_error=1.13686837722e-13
+b0001_saved_site_gap_recompute,PASS,B0001,max_abs_error=1.52056145453e-12
+b0001_saved_spatial_component_recompute,PASS,B0001,max_abs_error=9.80548975349e-13
+saturation_monotone_rebalanced,PASS,derived,mean rebalanced is nondecreasing across 40/80/160/inf
+saturation_inf_binding_zero,PASS,derived,infinity binding count is zero
+saturation_penalty_formula,PASS,derived,max_abs_error=2.91038e-11
+pathwise_output_rows,PASS,outputs,rows=20000
+distribution_output_rows,PASS,outputs,rows=16
+saturation_output_rows,PASS,outputs,rows=64
+comparison_output_rows,PASS,outputs,rows=56
+gt160_output_rows,PASS,outputs,rows=0
+read_only_scope,PASS,scope,analytical pandas audit only; no MATLAB/Gurobi/formal Stage7 LP/training/OOS rerun

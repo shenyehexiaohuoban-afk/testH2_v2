@@ -1,0 +1,1 @@
+policy,path_id,target_site1,target_site2,target_site3,target_site4,inventory_site1,inventory_site2,inventory_site3,inventory_site4,target_total,terminal_inventory_total,D_site_kg,S_site_kg,Q_total_kg,K_req_kg,failure_type,terminal_gap_class,tail_group,terminal_state_id,terminal_a,terminal_loc,termination_stage,termination_type
