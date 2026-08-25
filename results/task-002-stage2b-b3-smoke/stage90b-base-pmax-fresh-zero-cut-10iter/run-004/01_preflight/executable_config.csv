@@ -1,0 +1,2 @@
+"source_commit","candidate","pmax_kw","terminal_recourse_mode","K_terminal_kg","penalty","seed","iterations","fresh_zero_cuts"
+"25f4745c265a256bb1d886a2e4be10137be578fe","BASE-PMAX-STAGE90B","[300,200,120,150]","TERMINAL_REDISTRIBUTION","160","1000","20260513","10","True"

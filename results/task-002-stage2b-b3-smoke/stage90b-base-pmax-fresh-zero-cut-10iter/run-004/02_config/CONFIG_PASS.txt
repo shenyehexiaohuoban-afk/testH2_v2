@@ -1,0 +1,3 @@
+status=PASS
+initial_cuts=0
+K_terminal_kg=160

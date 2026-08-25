@@ -1,0 +1,9 @@
+key,value,notes
+candidate_id,BASE-PMAX-STAGE90B,only Stage90B candidate
+pmax_kw,"[300,200,120,150]",formal Stage89Q Base vector
+terminal_recourse_mode,TERMINAL_REDISTRIBUTION,frozen candidate mode
+K_terminal_kg,160,aggregate one-shot terminal capacity
+terminal_penalty_yuan_per_kg,1000,site-wise residual gap penalty
+training_seed,20260513,formal Stage89Q seed
+iterations,10,exact engineering smoke budget
+fresh_zero_cuts,true,no checkpoint or historical cuts

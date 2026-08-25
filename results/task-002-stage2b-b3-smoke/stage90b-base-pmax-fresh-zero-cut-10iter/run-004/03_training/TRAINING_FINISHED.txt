@@ -1,0 +1,4 @@
+status=PASS
+iterations=10
+initial_cuts=0
+final_cuts=10510

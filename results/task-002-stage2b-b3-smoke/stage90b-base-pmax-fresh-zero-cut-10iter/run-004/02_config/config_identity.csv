@@ -1,0 +1,11 @@
+check,observed,pass
+candidate_id,BASE-PMAX-STAGE90B,1
+terminal_recourse_mode,TERMINAL_REDISTRIBUTION,1
+K_terminal_kg,160,1
+terminal_penalty_yuan_per_kg,1000,1
+Pmax_kw,[300 200 120 150],1
+training_seed,20260513,1
+operating_stages,6,1
+hours_per_stage,8,1
+fresh_initial_cuts,0,1
+source_commit,25f4745c265a256bb1d886a2e4be10137be578fe,1

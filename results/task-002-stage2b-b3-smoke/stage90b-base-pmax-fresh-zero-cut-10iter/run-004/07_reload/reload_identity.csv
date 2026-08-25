@@ -1,0 +1,13 @@
+check,pass
+terminal_mode,1
+K_terminal_160,1
+penalty_1000,1
+params_Pmax,1
+hourly_grid_Pmax,1
+iterations_10,1
+fresh_zero_cuts,1
+metadata_K160,1
+metadata_penalty1000,1
+source_commit,1
+finite_LB,1
+LB_length_10,1
