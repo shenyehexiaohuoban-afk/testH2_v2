@@ -1,0 +1,9 @@
+role,path,bytes,sha256
+base_path,C:\Users\chaos\Desktop\biye\test\testH2_v2\hourly_grid_h2\output\stage89q_penalty1000_vs1500_long_training\run-003\penalty1000\path_summary\oos_path_summary.csv,4203429,99ec55faba4e60e88b25d757deb1a8146515faf666d52979fe69c64362047502
+b0001_path,C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\stage89q-pmax-b0001-exploratory-oos\run-001\04_oos_b0001\path_summary\oos_path_summary.csv,4362668,d8c2ed8e646261a4c3f478c9e45dafb7b897b00a101a38b122f99b2823675bf6
+base_checkpoint,C:\Users\chaos\Desktop\biye\test\testH2_v2\hourly_grid_h2\output\stage89q_penalty1000_vs1500_long_training\run-002\penalty1000\checkpoint\checkpoint_final.mat,332032355,b6533668ace2ec418f0cab9879aac3b2dc6c422ab5f9e078ad622cb29059328f
+b0001_checkpoint,C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\stage89q-pmax-b0001-exploratory-oos\run-001\02_training_b0001\checkpoint\checkpoint_final.mat,319167266,3c604ad761f30bca7a1c7ae11b469c6f258be94dff644e708c1336104c3c46ca
+terminal_evaluator,C:\Users\chaos\Desktop\biye\test\testH2_v2\fa_h2\fuzhu\eval_terminal_loh_h2.m,1135,3cdb8bdeba48e2c4263b247f5657972b41f65a216616eba754b152e7b1d8ed8d
+bank,C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\89H-stage85r-single-loc4-stage88-dro-gap1000-10iter-oos10000\run-003\oos\loc4\oos_path_bank.mat,108009,6bf3d1190a402ded052b8d3d08ed369042236e151f562bdd9fd4db7b8ff386c6
+bank_manifest,C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\stage89q-pmax-b0001-exploratory-oos\run-001\01_preflight\common_bank\oos_path_manifest.csv,318828,a186e8d4ac870082d0925a05311ab8f4c5a0b70cb61b6fd06955a48a647b3941
+run7_qa,C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\stage89q-b0001-c-mode-readonly-reanalysis\run-007\qa_summary.csv,1099,ca11a863fc27eba95727a0f62bff55df35286985700b79122be76a7f4c9b4b21

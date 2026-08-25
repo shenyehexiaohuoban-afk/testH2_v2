@@ -1,0 +1,16 @@
+issue,status,evidence,interpretation
+early_commitment,MIXED,time_formation_summary.csv,Shared-prefix action traces exist; future target is not known before revelation.
+low_target_overproduction,NEW_RISK,target_group_summary.csv,"Low-target production and surplus are reported, but no ideal-policy counterfactual."
+high_target_guarantee,WORSE,target_group_summary.csv,High-target observed site-wise failure is not improved under B0001.
+pure_quantity_shortage,IMPROVED,paired_kpi_with_ci.csv,Mean quantity component decreases; CI and migration table reported.
+pure_location_shortage,WORSE,terminal_type_transition.csv,Pure-location count increases.
+mixed_shortage,WORSE,terminal_type_transition.csv,Mixed count increases.
+physical_recoverability,NOT_IDENTIFIABLE,mechanism_identifiability.csv,No optimistic future-action feasibility certificate.
+Pmax_bottleneck,NOT_IDENTIFIABLE,mechanism_identifiability.csv,Observed binding/utilization only; no capacity relaxation.
+voltage_line,COMPLETED,time_formation_summary.csv,Observed voltage/line fields; causal attribution limited.
+substation,NOT_IDENTIFIABLE,mechanism_identifiability.csv,No explicit substation loading/capacity/binding field.
+tank_headroom,PARTIALLY_COMPLETED,mechanism_identifiability.csv,"Inventory and binding flags, no explicit headroom."
+HTT_information_and_alignment,NOT_IDENTIFIABLE,mechanism_identifiability.csv,OD/hour evidence without counterfactual timing/direction.
+tail_concentration,COMPLETED,tail_and_cost_summary.csv,Retrospective difficult/extreme/worst cohorts compared.
+actual_cost,MIXED,paired_kpi_with_ci.csv; tail_and_cost_summary.csv,Operating cost and penalty move in different directions.
+training_stability,NEW_RISK,run-007/analysis_control_card.md,B0001 remains UNSTABLE/FAIL.

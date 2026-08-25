@@ -1,0 +1,25 @@
+check,observed,expected,pass,evidence
+path_count,10000,10000,True,both path summaries
+ordered_path_id,True,True,True,path_id
+path_state_sequence_common,True,True,True,common-path terminal semantics
+path_termination_type_common,True,True,True,common-path terminal semantics
+path_termination_stage_common,True,True,True,common-path terminal semantics
+path_termination_state_common,True,True,True,common-path terminal semantics
+path_operating_stage_count_common,True,True,True,common-path terminal semantics
+path_reached_stage7_common,True,True,True,common-path terminal semantics
+path_physical_dissipation_a1_common,True,True,True,common-path terminal semantics
+path_lf8_absorbing_common,True,True,True,common-path terminal semantics
+path_terminal_state_id_common,True,True,True,common-path terminal semantics
+path_terminal_a_common,True,True,True,common-path terminal semantics
+path_terminal_loc_common,True,True,True,common-path terminal semantics
+path_target_site1_common,True,True,True,common-path terminal semantics
+path_target_site2_common,True,True,True,common-path terminal semantics
+path_target_site3_common,True,True,True,common-path terminal semantics
+path_target_site4_common,True,True,True,common-path terminal semantics
+path_target_total_common,True,True,True,common-path terminal semantics
+stage_state_id_common,True,True,True,ordered stage state history
+stage_a_common,True,True,True,ordered stage state history
+stage_loc_common,True,True,True,ordered stage state history
+stage_lf_common,True,True,True,ordered stage state history
+stage_beta_common,True,True,True,ordered stage state history
+stage_row_count,35736,35736,True,stage summaries

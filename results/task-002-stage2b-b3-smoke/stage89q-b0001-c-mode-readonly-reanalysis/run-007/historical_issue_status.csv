@@ -1,0 +1,12 @@
+issue,status,evidence,interpretation
+early_commitment,MIXED,site_time_mechanism_summary.csv,shared early production is observed; decision-time error is not identifiable
+low_target_overproduction,NEW_RISK,site_time_mechanism_summary.csv,S4 production increases and terminal surplus is not uniformly reduced
+pure_quantity_shortage,IMPROVED,paired_kpi_summary.csv,quantity component decreases on average
+pure_location_shortage,WORSE,terminal_type_transition.csv,pure-location and mixed counts increase
+mixed_shortage,WORSE,terminal_type_transition.csv,mixed failure count increases
+electrolyzer_Pmax_bottleneck,NOT_IDENTIFIABLE,site_time_mechanism_summary.csv,binding flags are available but no counterfactual capacity relaxation
+HTT_information_limitation,NOT_IDENTIFIABLE,site_time_mechanism_summary.csv,ex-post direction is not a decision-time policy error
+grid_voltage_line_substation,NOT_IDENTIFIABLE,site_time_mechanism_summary.csv,observational flags only; no causal intervention
+tank_saturation,NOT_IDENTIFIABLE,site_time_mechanism_summary.csv,binding flags do not identify the counterfactual
+training_stability,NEW_RISK,analysis_control_card.md,B0001 acceptance remains UNSTABLE/FAIL
+actual_cost,MIXED,paired_kpi_summary.csv,operating cost falls while terminal penalty exposure rises
