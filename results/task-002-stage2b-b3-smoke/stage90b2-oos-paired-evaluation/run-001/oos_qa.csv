@@ -1,0 +1,10 @@
+check,pass,status,expected,notes
+checkpoint_exists,1,PASS,1,"Saved run-004 checkpoint loaded"
+oos_source_exists,1,PASS,1,"data/OOS.csv"
+oos_rows_10000,1,PASS,1,"At least 10,000 rows"
+direct_mode_identity,1,PASS,1,"Direct evaluator mode"
+recourse_mode_identity,1,PASS,1,"Recourse evaluator mode"
+paired_path_count,1,PASS,1,"One paired row per OOS path"
+finite_outputs,1,PASS,1,"Finite path costs and differences"
+decisions_not_stored,1,PASS,1,"No path decision matrices retained"
+no_training,1,PASS,1,"Checkpoint-only OOS calls"
