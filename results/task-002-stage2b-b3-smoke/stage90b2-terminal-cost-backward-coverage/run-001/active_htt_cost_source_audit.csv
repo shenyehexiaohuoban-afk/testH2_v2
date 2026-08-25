@@ -1,0 +1,8 @@
+component,source,observed,expected,unit,status,notes
+active_options_c0,checkpoint opts.htt_base_service_cost_yuan_per_kg,0,0,yuan/kg,VERIFIED,"Stage90B loader option"
+active_params_c0,checkpoint p.htt_base_service_cost_yuan_per_kg,0,0,yuan/kg,VERIFIED,"Hourly and terminal code consume this field"
+near_input_base_cost_matrix,p.NearStageInput.HTT.site_to_site_base_cost_yuan_per_kg,0.8,0.8,yuan/(kg km),VERIFIED,"max matrix identity residual 3.5527136788e-15"
+beta_transport_multiplier,p.beta_transport_multiplier,2,2,dimensionless,VERIFIED,"Shared hourly/terminal multiplier"
+hourly_cost_formula,hourly_grid_h2/update_integrated_hourly_stage_model_hourly_htt_v1_h2.m,1,1,boolean,VERIFIED,"unitCost = c0 + baseCost*(1 + lambda*beta)"
+terminal_cost_formula,fa_h2/fuzhu/solve_terminal_redistribution_h2.m,1,1,boolean,VERIFIED,"Same base matrix, beta, and c0"
+historical_h02_c_d_note,hourly_grid_h2/run_stage85f_htt_cost_audit.py,0.2,0.2,yuan/(kg km),INACTIVE_REFERENCE,"Different inactive H02 sensitivity input"

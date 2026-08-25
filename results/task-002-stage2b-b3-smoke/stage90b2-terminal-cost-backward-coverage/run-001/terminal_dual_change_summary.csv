@@ -1,0 +1,19 @@
+metric,value,unit,definition
+backward_state_count,35,states,Saved Stage-7 backward state rows
+direct_gap_positive_state_count,22,states,Q_direct_gap > 0
+terminal_shipping_positive_state_count,11,states,Terminal redistribution > 0
+terminal_shipping_positive_rate,0.314285714285714,fraction,Backward shipping coverage
+residual_quantity_gap_state_count,18,states,Residual shortage after recourse > 0
+residual_quantity_gap_rate,0.514285714285714,fraction,Residual quantity-gap rate
+spatial_gap_fully_repaired_count,4,states,Old direct gap positive and new residual gap zero
+capacity_binding_state_count,0,states,K=160 binding in backward evaluator
+direct_value_mean_yuan,124534.027714511,yuan,Mean old direct gap value
+recourse_value_mean_yuan,119133.695276299,yuan,Mean new terminal recourse value
+value_reduction_mean_yuan,5400.3324382123,yuan,Mean Q_old - Q_new
+value_reduction_median_yuan,0,yuan,Median Q_old - Q_new
+value_reduction_max_yuan,37998.3801409773,yuan,Maximum Q_old - Q_new
+old_nonzero_dual_entry_count,63,entries,Legacy direct-gap subgradient entries
+new_nonzero_dual_entry_count,77,entries,Terminal LP inventory subgradient entries
+dual_changed_entry_count,21,entries,Absolute change > 1e-7
+dual_softened_from_minus_penalty_count,7,entries,Old -1000 entry becomes interior/nonzero LP dual
+backward_recompute_match_count,35,states,Recomputed LP agrees with saved run-004 row

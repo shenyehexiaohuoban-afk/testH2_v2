@@ -1,0 +1,10 @@
+check,pass,status,notes
+checkpoint_exists,1,PASS,run-004 checkpoint loaded
+forward_iteration5_row_exists,1,PASS,one stage-4/state-199 row found
+active_c0_identity,1,PASS,opts c0 equals params c0
+active_base_matrix_identity,1,PASS,base matrix is a scalar multiple of road distance
+iteration5_pair_total_explained,1,PASS,saved aggregate identifies the tied minimum-cost pair
+backward_row_count_35,1,PASS,Stage-7 backward coverage row count
+backward_recompute_matches_saved,1,PASS,Read-only LP replay against saved backward CSV
+finite_diagnostics,1,PASS,No NaN/Inf in backward diagnostics
+no_training_or_oos_run,1,PASS,Only checkpoint load and backward LP evaluations
