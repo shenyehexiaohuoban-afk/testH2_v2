@@ -1,0 +1,10 @@
+case_id,pass,value,expected_value,value_error,total_ship_kg,expected_ship_kg,gap_kg,expected_gap_kg,primal_residual,dual_residual,complementarity_residual,gradient_error,dual_capacity,notes
+A_adequate,1,0,0,0,0,0,0,0,0,0,0,0,0,x=0 and no residual gap
+B_spatial_mismatch,1,16,16,0,16,16,0,0,0,0,0,0,0,spatially misplaced inventory is rebalanced
+C_insufficient_total,1,11005,11005,0,5,5,11,11,0,0,0,0,0,redistribution cannot create hydrogen
+D_zero_capacity_fallback,1,16000,16000,0,0,0,16,16,0,0,0,0,0,K=0 exactly matches direct-gap value and gradient
+E_high_transport_cost,1,10000,10000,0,0,0,10,10,0,0,0,0,0,transport cost exceeds shortage penalty
+F_capacity_binding,1,11005,11005,0,5,5,11,11,0,0,0,0,-999,aggregate capacity binds and dual is reported
+G_dual_finite_difference,1,11025,11025,0,5,5,11,11,0,0,0,2.61934474110603e-09,0,finite difference vs terminal dual
+H_subcapacity_not_truncated,1,120,120,0,120,120,0,0,0,0,0,0,0,subcapacity mismatch is not artificially truncated
+I_capacity_binding_over160,1,60160,60160,0,160,160,60,60,0,0,0,0,-999,over160 mismatch binds aggregate terminal capacity

@@ -130,6 +130,12 @@ Q_HTT_kg = get_required_scalar(NearStageInput.HTT, 'Q_HTT_kg');
 htt_capacity_base = get_required_scalar(NearStageInput.HTT, 'base_capacity_kg_per_stage');
 htt_cost_base = get_required_matrix(NearStageInput.HTT, 'site_to_site_base_cost_yuan_per_kg');
 beta_transport_multiplier = get_required_scalar(NearStageInput.HTT, 'beta_transport_multiplier');
+htt_base_service_cost = getOpt(opts, 'htt_base_service_cost_yuan_per_kg', 0);
+if ~isscalar(htt_base_service_cost) || ~isfinite(htt_base_service_cost) || ...
+        htt_base_service_cost < 0
+    error('load_data_h2_near:BadHTTBaseServiceCost', ...
+        'opts.htt_base_service_cost_yuan_per_kg must be a finite nonnegative scalar.');
+end
 
 [beta, betaMode] = build_beta_h2(S, NearStageInput, opts);
 [TerminalLOH, terminalMode, terminalTemplateUsed, terminalLoadInfo] = build_terminal_loh_h2( ...
@@ -247,6 +253,7 @@ params.beta_original = beta;
 params.beta = beta;
 params.beta_source_mode = betaMode;
 params.beta_transport_multiplier = beta_transport_multiplier;
+params.htt_base_service_cost_yuan_per_kg = htt_base_service_cost;
 params.beta_enabled = getOpt(opts, 'beta_enabled', true);
 if ~islogical(params.beta_enabled) && ~(isnumeric(params.beta_enabled) && isscalar(params.beta_enabled))
     error('load_data_h2_near:BadBetaEnabled', 'opts.beta_enabled must be true or false.');
@@ -279,6 +286,25 @@ params.cost_normal_shortage = baseNormalPenalty * normalPenaltyMultiplier;
 params.cost_reserve_shortage = get_required_scalar(NearStageInput.Cost, 'reserve_shortage_penalty_yuan_per_kg');
 params.cost_transport = htt_cost_base;
 params.cost_transport_base = htt_cost_base;
+
+% Stage-90A is opt-in.  The default direct-gap path remains unchanged.
+recourseMode = upper(string(getOpt(opts, 'terminal_recourse_mode', 'DIRECT_GAP')));
+if ~ismember(recourseMode, ["DIRECT_GAP", "TERMINAL_REDISTRIBUTION"])
+    error('load_data_h2_near:BadTerminalRecourseMode', ...
+        'terminal_recourse_mode must be DIRECT_GAP or TERMINAL_REDISTRIBUTION.');
+end
+params.terminal_recourse_mode = char(recourseMode);
+params.terminal_recourse_enabled = recourseMode == "TERMINAL_REDISTRIBUTION";
+params.K_terminal_kg = double(getOpt(opts, 'K_terminal_kg', 0));
+if params.terminal_recourse_enabled && ...
+        (~isscalar(params.K_terminal_kg) || ~isfinite(params.K_terminal_kg) || ...
+         params.K_terminal_kg < 0)
+    error('load_data_h2_near:MissingTerminalCapacity', ...
+        ['TERMINAL_REDISTRIBUTION requires opts.K_terminal_kg. ', ...
+         'No terminal duration is selected implicitly.']);
+end
+params.terminal_capacity_mapping = char(string(getOpt(opts, ...
+    'terminal_capacity_mapping', 'UNSPECIFIED')));
 
 params.store_eval_decisions = getOpt(opts, 'store_eval_decisions', false);
 params.allow_zero_terminal_loh = getOpt(opts, 'allow_zero_terminal_loh', false);

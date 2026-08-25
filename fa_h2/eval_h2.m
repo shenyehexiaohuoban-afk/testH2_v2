@@ -27,6 +27,8 @@ stageCost = zeros(nbOS, params.T);
 normalShortage = zeros(nbOS, params.T);
 terminalReserveShortage = zeros(nbOS, params.T);
 terminalCost = zeros(nbOS, params.T);
+terminalRedistributionAmount = zeros(nbOS, params.T);
+terminalRedistributionCost = zeros(nbOS, params.T);
 hitLOHDemand = false(nbOS, 1);
 firstLOHDemandStage = zeros(nbOS, 1);
 transportAmount = zeros(nbOS, params.T);
@@ -70,6 +72,8 @@ for s = 1:nbOS
             stageCost(s, t) = tcost;
             terminalCost(s, t) = tcost;
             terminalReserveShortage(s, t) = sum(tinfo.shortage);
+            terminalRedistributionAmount(s, t) = tinfo.total_ship_kg;
+            terminalRedistributionCost(s, t) = tinfo.shipping_cost;
             xval(:, t) = prev_x;
             absorbed = true;
             hitLOHDemand(s) = true;
@@ -134,6 +138,18 @@ evalInfo.normal_shortage = normalShortage;
 evalInfo.reserve_shortage = terminalReserveShortage;
 evalInfo.terminal_reserve_shortage = terminalReserveShortage;
 evalInfo.terminal_cost = terminalCost;
+evalInfo.terminal_redistribution_amount = terminalRedistributionAmount;
+evalInfo.terminal_redistribution_cost = terminalRedistributionCost;
+if isfield(params, 'terminal_recourse_mode')
+    evalInfo.terminal_recourse_mode = params.terminal_recourse_mode;
+else
+    evalInfo.terminal_recourse_mode = 'DIRECT_GAP';
+end
+if isfield(params, 'K_terminal_kg')
+    evalInfo.K_terminal_kg = params.K_terminal_kg;
+else
+    evalInfo.K_terminal_kg = 0;
+end
 evalInfo.transport_amount = transportAmount;
 evalInfo.production_amount = productionAmount;
 evalInfo.final_loh = finalLOH;

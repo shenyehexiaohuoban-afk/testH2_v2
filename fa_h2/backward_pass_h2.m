@@ -2,8 +2,9 @@ function [modelLib, cutviolFlag] = backward_pass_h2(modelLib, params, xval, thet
 %BACKWARD_PASS_H2 Add shared cuts with lf=Nc-1 LOH demand-stage values.
 %
 % Ordinary non-terminal states use the inventory balance RHS dual. Terminal
-% LOH demand states use the analytic subgradient of the TerminalLOH shortage
-% penalty. lf=Nc is only the zero-cost absorbing boundary.
+% LOH demand states use the shared Stage-7 evaluator: either the legacy
+% direct-gap subgradient or the terminal redistribution LP dual. lf=Nc is
+% only the zero-cost absorbing boundary.
 
 cutviolFlag = 0;
 

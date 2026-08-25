@@ -65,6 +65,16 @@ end
 forwardInfo = struct();
 forwardInfo.stageCost = stageCost;
 forwardInfo.terminalShortage = terminalShortage;
+if isfield(params, 'terminal_recourse_mode')
+    forwardInfo.terminal_recourse_mode = params.terminal_recourse_mode;
+else
+    forwardInfo.terminal_recourse_mode = 'DIRECT_GAP';
+end
+if isfield(params, 'K_terminal_kg')
+    forwardInfo.K_terminal_kg = params.K_terminal_kg;
+else
+    forwardInfo.K_terminal_kg = 0;
+end
 forwardInfo.status = status;
 forwardInfo.in_sample = in_sample;
 end

@@ -2960,6 +2960,15 @@
 - Information closure preserves -16/-8/-4h current-state, inventory, production, HTT and empirical conditional terminal-loc frequencies. All new/recovered paths remain `NOT_YET_REVEALED_BEFORE_STAGE7` under the existing proxy, so the evidence supports a mixed information-limitation / allocation / HTT-alignment interpretation rather than a proven policy mistake.
 - The closure label remains `MIXED`: Site4 capacity/production structure, spatial/temporal reallocation limits, late information and unstable policy maturity all remain plausible. The data do not justify rejecting B0001 outright, and do not support claiming improved site-wise terminal reliability.
 
+# 2026-08-25 - Stage-90A terminal H2 redistribution candidate audit
+
+- Added an isolated Stage-90A candidate terminal recourse LP in `fa_h2/fuzhu/solve_terminal_redistribution_h2.m`. It uses direct continuous OD flows, donor availability from entering Stage7 inventory, residual site gaps, aggregate terminal capacity, and the formal HTT OD cost matrix. No road reachability, road mask, binary, or retransshipment constraint is introduced.
+- Added a shared Stage7 value/subgradient dispatch in `fa_h2/fuzhu/terminal_value_and_subgradient_h2.m`. `DIRECT_GAP` remains the default; `TERMINAL_REDISTRIBUTION` requires an explicit `K_terminal_kg`; `K_terminal_kg=0` takes the old analytic branch exactly. Forward, backward and OOS all call the same evaluator through `eval_terminal_loh_h2.m`.
+- Backward Stage6 slopes use the terminal LP RHS duals from donor-availability plus residual-gap rows, mapped to the existing four-dimensional inventory state. Case G central finite-difference versus dual error is `2.61934474111e-09`.
+- Added `h2_stage90a_candidate_options.m`, `run_stage90a_terminal_recourse_tests.m`, and the required Stage7 call-chain, touchpoint, formulation, dual, capacity-mapping, README and QA outputs. Deterministic Cases A-G pass `7/7`; maximum primal, dual-complementarity and LP residuals are zero in the saved QA, with maximum finite-difference error `2.61934474111e-09`.
+- Formal HTT mapping is mechanically identified as `(1-beta)*160 kg` per existing ordinary hour/stage, with `160 = N_HTT*Q_HTT = 2*80`. There is no terminal duration in the current MSP, so `TERMINAL_CAPACITY_MAPPING=NEEDS_ASSUMPTION`; no duration was silently selected and no training/OOS/formal smoke was run.
+- Default protected model behavior and accepted historical outputs were preserved. No commit or push was performed.
+
 ### 2026-08-25 - Stage-90A2 terminal redistribution capacity sufficiency audit
 
 - Per explicit user instruction, performed a read-only analytical audit using only the accepted Base penalty=1000 common-path OOS and exploratory B0001 common-path OOS path summaries. No training, OOS rerun, B1011 work, random draw, MATLAB/Gurobi/formal Stage7 LP call, model or Pmax change, or Stage90 adoption occurred.
@@ -2968,3 +2977,10 @@
 - Generated outputs under `results/task-002-stage2b-b3-smoke/stage90a2-terminal-capacity-sufficiency/run-001/`. QA is `57/57 PASS`; the K identity maximum absolute error is `1.1369e-13 kg`, saved site-gap/spatial-component recomputation errors are below `1.71e-12 kg`, and saturation monotonicity/penalty identities pass.
 - Base all-path `K_req` is mean `0.5215365811`, q99 `19.1835129161`, max `71.5722110211 kg`; B0001 is mean `0.8196739167`, q99 `24.8843139488`, max `133.4177451425 kg`. Base and B0001 both have `100%` coverage at `K_terminal=160 kg`; `K_req>160` count is zero in both arms. B0001 increases the exploratory mean/q99/max requirement, while remaining below 160 kg.
 - Final evidence labels are `K160_SUFFICIENCY=STRONG`, `K160_ALL_PATH_COVERAGE=YES`, `K160_PURE_LOCATION_COVERAGE=Base=100.000%; B0001=100.000%`, `K160_MIXED_SPATIAL_COVERAGE=Base=100.000%; B0001=100.000%`, `CAPACITY_SATURATION_BY_160=YES`, and `RECOMMEND_FREEZE_K_TERMINAL_160=YES`. These labels are frozen-scenario capacity evidence only and do not alter the formal model or imply that 160 kg is universally sufficient.
+
+# 2026-08-25 - Stage-90A3 frozen terminal recourse gate
+
+- Preserved the pre-existing dirty and untracked worktree; no unrelated files were staged. The Stage90A3 candidate now defaults to `TERMINAL_REDISTRIBUTION` with the explicitly frozen aggregate `K_terminal=160 kg`; the legacy `DIRECT_GAP` path and exact `K=0` fallback remain unchanged.
+- Added H/I deterministic checks. Cases A-I passed `9/9`; primal, dual, complementarity and finite-difference QA passed, with maximum finite-difference error `2.61934474110603e-09`. H confirms a sub-160 mismatch is not truncated; I confirms a >160 mismatch binds the aggregate capacity.
+- Added `audit_stage90a3_terminal_transport_cost_h2.m` and generated `results/task-002-stage2b-b3-smoke/stage90a3-terminal-recourse/run-001/`. The formal HTT source is `NearStageInput.HTT.site_to_site_base_cost_yuan_per_kg`; the active formula is `c0 + base_cost(i,j)*(1+2*beta)` with `c0=0` and `base_cost=0.2*distance_km`. Conservative Stage7-state unit-cost min/mean/max are `17.3714285714 / 50.2946042215 / 61.2942623543 yuan/kg`; all 12 directed OD costs are finite, nonnegative and below the frozen `1000 yuan/kg` terminal penalty.
+- Stage90B is isolated under `fa_msp/current_hourly_stage90_candidate/launcher/` and has not been run before the A3 commit/push gate.
