@@ -46,8 +46,8 @@ post-processing.
 13. Yes. `K_terminal_kg=0` takes the old direct-gap branch exactly, verified in
     Unit Case D.
 14. The existing four-dimensional state and zero-cut launch structure are
-    present, but the new candidate has not been trained and no fresh
-    zero-cut smoke was started.
+    present. Stage90B run-004 completed the fresh Base-Pmax zero-cut
+    10-iteration engineering smoke; this is an engineering signal only.
 15. Yes, Stage90B fresh zero-cut 10-iteration engineering smoke is the next step.
 
 ## Stage-90A labels
@@ -73,3 +73,14 @@ PASS, with capacity non-truncation and over-capacity binding checks included,
 and maximum finite-difference gradient error
 `2.61934474110603e-09` and zero primal/dual-complementarity residuals in the
 reported LP QA fields.
+
+## Stage-90B smoke result
+
+The final isolated run is under
+`results/task-002-stage2b-b3-smoke/stage90b-base-pmax-fresh-zero-cut-10iter/run-004`.
+It used `Pmax=[300,200,120,150] kW`, penalty `1000 yuan/kg`,
+`TERMINAL_REDISTRIBUTION`, and `K_terminal=160 kg` from fresh zero cuts for
+exactly 10 iterations. CONFIG/TRAIN/RELOAD passed, cuts grew to `10510`, and
+the terminal LP was exercised in forward, backward and one-path OOS calls.
+Terminal recourse was used once for `12.0568855823669 kg`; K160 was never
+binding. No wait-and-see or terminal-reliability improvement claim is made.
