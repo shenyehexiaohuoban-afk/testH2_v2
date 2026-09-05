@@ -1,0 +1,10 @@
+{
+  "SAA_SOURCE_TABLE_SHA256": "1e2968cf045ea883a60cd2e287f6f26ac6a23b735a432e5235c0e68b905ca4",
+  "SAA_ACTIVE_TABLE_SHA256": "b74433fe8a19caedb75ac3071225480e279c136f3d1285ba503a184f12c5fcdc",
+  "STATE_ORDER_IDENTICAL": true,
+  "MAX_ABS_T_DIFFERENCE": 0.0,
+  "MEAN_ABS_T_DIFFERENCE": 0.0,
+  "ALL_35x4_VALUES_IDENTICAL": true,
+  "SAA_ACTIVE_TABLE_VALUE_IDENTITY": "PASS",
+  "sha_difference_explanation": "Active table is a candidate-local quoted CSV wrapper: it preserves state/intensity/location/lfw and T1-T4 values, while adding candidate identity/mode/eta/tank/source metadata and omitting solver diagnostics and absolute grouped-bank paths."
+}

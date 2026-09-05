@@ -1,0 +1,7 @@
+{
+  "COST_IDENTITY_QA": "PASS",
+  "SAA_max_abs_error": 9.022187441587448e-10,
+  "DRO_max_abs_error": 8.985807653516531e-10,
+  "SAA_mean_abs_error": 6.105512539988922e-12,
+  "DRO_mean_abs_error": 6.811206532120195e-12
+}

@@ -1,0 +1,31 @@
+{
+  "deep_analysis_present": true,
+  "deep_analysis_script_present": true,
+  "deep_analysis_rerun": false,
+  "deep_analysis_qa": "PASS",
+  "lightweight_result_count": 28,
+  "lightweight_result_bytes": 45457,
+  "large_runtime_data_excluded": true,
+  "local_runtime_data_preserved": true,
+  "checkpoint_included": false,
+  "full_oos_raw_included": false,
+  "canonical_bank_included": false,
+  "grouped_bank_included": false,
+  "frozen_metrics": {
+    "target_positivity_migration_ZZ_ZP_PZ_PP": [8877, 104, 0, 1019],
+    "saa_positive_target": 1019,
+    "dro_positive_target": 1123,
+    "saa_mass_service_percent": 90.966282,
+    "dro_mass_service_percent": 92.777010,
+    "saa_mean_h2_production_kg_per_path": 116.441951,
+    "dro_mean_h2_production_kg_per_path": 166.925147,
+    "saa_mean_actual_operating_cost_yuan_per_path": 54203.474555,
+    "dro_mean_actual_operating_cost_yuan_per_path": 55266.251774,
+    "saa_absolute_terminal_site_gap_kg_per_path": 1.274284,
+    "dro_absolute_terminal_site_gap_kg_per_path": 1.528601,
+    "saa_positive_target_sitewise_full_adequate": "701/1019",
+    "dro_positive_target_sitewise_full_adequate": "677/1123"
+  },
+  "interpretation_boundary": "descriptive paired MSP policy propagation evidence; not final W-stage robustness validation",
+  "fully_converged": "NOT_ESTABLISHED"
+}

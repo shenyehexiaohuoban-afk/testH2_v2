@@ -1,0 +1,18 @@
+{
+  "SAA_SOLVER_SEMANTIC_AUDIT": "PASS",
+  "checks": {
+    "runner_calls_saa_optimizer": true,
+    "runner_fixed_recourse": true,
+    "runner_eta_zero_only_qa": true,
+    "runner_no_dro_optimizer": true,
+    "solver_has_preparation_term": true,
+    "solver_has_empirical_recourse_term": true,
+    "solver_reconstructs_q_expectation": true,
+    "q_is_group_multiplicity": true,
+    "six_duration_segments": true,
+    "duration_vector": true,
+    "duration_aware_wrapper": true,
+    "not_legacy_three_hour": true
+  },
+  "interpretation": "SAA uses solve_saa with q-weighted empirical recourse; solve_worst_probability is called only with eta=0 for a post-solve identity check, not as an adversarial optimization step."
+}

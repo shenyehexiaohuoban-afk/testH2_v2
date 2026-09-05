@@ -1,0 +1,22 @@
+{
+  "COMMON_OOS_BANK": true,
+  "BANK_SHA256": "6bf3d1190a402ded052b8d3d08ed369042236e151f562bdd9fd4db7b8ff386c6",
+  "PATH_COUNT_SAA": 10000,
+  "PATH_COUNT_DRO": 10000,
+  "ORDERED_PATH_IDS_IDENTICAL": true,
+  "STATE_SEQUENCES_IDENTICAL": true,
+  "TERMINATION_IDENTITY_QA": "PASS",
+  "TERMINATION_COLUMNS": [
+    "termination_type",
+    "termination_stage",
+    "termination_state",
+    "operating_stage_count",
+    "reached_stage7",
+    "physical_dissipation_a1",
+    "lf8_absorbing"
+  ],
+  "PATH_IDENTITY_QA": "PASS",
+  "physical_dissipation_count": 3497,
+  "other_absorption_count": 379,
+  "stage7_count": 6124
+}

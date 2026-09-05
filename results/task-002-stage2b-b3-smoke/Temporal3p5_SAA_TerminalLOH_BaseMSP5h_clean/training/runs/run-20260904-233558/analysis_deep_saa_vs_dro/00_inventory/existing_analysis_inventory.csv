@@ -1,0 +1,11 @@
+analysis_area,status,path
+summary,AVAILABLE,C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\Temporal3p5_SAA_TerminalLOH_BaseMSP5h_clean\training\runs\run-20260904-233558\analysis_native\00_plain_language_summary_zh.md
+target ledger,AVAILABLE,C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\Temporal3p5_SAA_TerminalLOH_BaseMSP5h_clean\training\runs\run-20260904-233558\analysis_native\terminal_target_change_by_state.csv
+service analysis,AVAILABLE,C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\Temporal3p5_SAA_TerminalLOH_BaseMSP5h_clean\training\runs\run-20260904-233558\analysis_native\mass_weighted_service_summary.csv
+economic analysis,AVAILABLE,C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\Temporal3p5_SAA_TerminalLOH_BaseMSP5h_clean\training\runs\run-20260904-233558\analysis_native\paired_kpi_with_ci.csv
+stage profile,AVAILABLE,C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\Temporal3p5_SAA_TerminalLOH_BaseMSP5h_clean\training\runs\run-20260904-233558\analysis_native\hourly_site_mechanism_summary.csv
+hourly profile,AVAILABLE,C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\Temporal3p5_SAA_TerminalLOH_BaseMSP5h_clean\training\runs\run-20260904-233558\analysis_native\hourly_site_paired_delta.csv
+classification,AVAILABLE,C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\Temporal3p5_SAA_TerminalLOH_BaseMSP5h_clean\training\runs\run-20260904-233558\analysis_native\terminal_classification_summary.csv
+path-level comparison,AVAILABLE,C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\Temporal3p5_SAA_TerminalLOH_BaseMSP5h_clean\training\runs\run-20260904-233558\analysis_native\path_transition_detail.csv
+migration,AVAILABLE,C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\Temporal3p5_SAA_TerminalLOH_BaseMSP5h_clean\training\runs\run-20260904-233558\analysis_native\terminal_type_transition.csv
+site-wise analysis,AVAILABLE,C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\Temporal3p5_SAA_TerminalLOH_BaseMSP5h_clean\training\runs\run-20260904-233558\analysis_native\station_level_service_summary.csv
