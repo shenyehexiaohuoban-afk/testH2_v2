@@ -1,0 +1,412 @@
+{
+  "historical_exact_source_identity": "NOT_PROVEN",
+  "historical_runtime_bytecode_equivalence": "PASS",
+  "forensic_evidence_level": "LEVEL_B",
+  "source_classification": "RECONSTRUCTED_BYTECODE_EQUIVALENT_SOURCE",
+  "reconstructed_source_path": "C:\\Users\\chaos\\Desktop\\biye\\test\\testH2_v2\\terminalLoh_wdro\\partial_temporal_refinement\\src\\run_duration_aware_stage89k_dro.py",
+  "reconstructed_source_sha256": "14436f4bad0f7f46d5d0a59f69c463a11efbfe9f255b6e26e7acfb1573985de8",
+  "historical_pyc_path": "C:\\Users\\chaos\\Desktop\\biye\\test\\testH2_v2\\terminalLoh_wdro\\partial_temporal_refinement\\src\\__pycache__\\run_duration_aware_stage89k_dro.cpython-39.pyc",
+  "historical_pyc_sha256": "58758bca8025c28cce78d3546b7d80db7f692da62d5cf203f73ced47de0c9a9f",
+  "historical_saa_table_sha256": "1e2968cf045ea883a60cd2e287f6f26ac6a23b735a432e5235c0e68b905ca4a3",
+  "active_wrapper_table_sha256": "b74433fe8a19caedb75ac3071225480e279c136f3d1285ba503a184f12c5fcdc",
+  "grouped_bank_identity": {
+    "manifest_path": "C:\\Users\\chaos\\Desktop\\biye\\test\\testH2_v2\\terminalLoh_wdro\\partial_temporal_refinement\\grouped_bank_3p5h\\six_segment_grouped_bank_manifest.csv",
+    "manifest_sha256": "c5a312ac9e605d12ef3fddcf8b2c24dfac286b2d9ef19b50f19df244b954e2d2",
+    "state_count": 35,
+    "multiplicity_sum_per_state": 15000,
+    "q_sum_per_state": 1.0,
+    "segment_state": [
+      "W0",
+      "W1",
+      "M12",
+      "W2",
+      "M23",
+      "W3"
+    ],
+    "segment_dt_h": [
+      1.0,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5
+    ],
+    "state_banks": [
+      {
+        "state_id": 1,
+        "path": "C:\\Users\\chaos\\Desktop\\biye\\test\\testH2_v2\\terminalLoh_wdro\\partial_temporal_refinement\\grouped_bank_3p5h\\state-001_six_segment_grouped.mat",
+        "bytes": 23994151,
+        "sha256": "8a89f21bfc5355d8c37e2e26d256076f893a0f712c5078cb0df572c78a232157",
+        "manifest_bytes": 23994151,
+        "manifest_sha256": "8a89f21bfc5355d8c37e2e26d256076f893a0f712c5078cb0df572c78a232157",
+        "multiplicity_sum": 15000.0,
+        "q_sum": 1.0
+      },
+      {
+        "state_id": 2,
+        "path": "C:\\Users\\chaos\\Desktop\\biye\\test\\testH2_v2\\terminalLoh_wdro\\partial_temporal_refinement\\grouped_bank_3p5h\\state-002_six_segment_grouped.mat",
+        "bytes": 25295373,
+        "sha256": "e9da295cd650cdccfcd82f46306e5f2e63c4e233eca40ba85c0e79620ac870d5",
+        "manifest_bytes": 25295373,
+        "manifest_sha256": "e9da295cd650cdccfcd82f46306e5f2e63c4e233eca40ba85c0e79620ac870d5",
+        "multiplicity_sum": 15000.0,
+        "q_sum": 1.0
+      },
+      {
+        "state_id": 3,
+        "path": "C:\\Users\\chaos\\Desktop\\biye\\test\\testH2_v2\\terminalLoh_wdro\\partial_temporal_refinement\\grouped_bank_3p5h\\state-003_six_segment_grouped.mat",
+        "bytes": 25946824,
+        "sha256": "f5bbac6689741ee1cfef4bed18fc102ce1b651e5d9e2ed5573d538738ad0ad5d",
+        "manifest_bytes": 25946824,
+        "manifest_sha256": "f5bbac6689741ee1cfef4bed18fc102ce1b651e5d9e2ed5573d538738ad0ad5d",
+        "multiplicity_sum": 15000.0,
+        "q_sum": 1.0
+      },
+      {
+        "state_id": 4,
+        "path": "C:\\Users\\chaos\\Desktop\\biye\\test\\testH2_v2\\terminalLoh_wdro\\partial_temporal_refinement\\grouped_bank_3p5h\\state-004_six_segment_grouped.mat",
+        "bytes": 25184301,
+        "sha256": "57fdda7ffab7fe991f6dfbfa8fa6c0c3d3541a6b922c62bc00854db83d3ec47c",
+        "manifest_bytes": 25184301,
+        "manifest_sha256": "57fdda7ffab7fe991f6dfbfa8fa6c0c3d3541a6b922c62bc00854db83d3ec47c",
+        "multiplicity_sum": 15000.0,
+        "q_sum": 1.0
+      },
+      {
+        "state_id": 5,
+        "path": "C:\\Users\\chaos\\Desktop\\biye\\test\\testH2_v2\\terminalLoh_wdro\\partial_temporal_refinement\\grouped_bank_3p5h\\state-005_six_segment_grouped.mat",
+        "bytes": 24255252,
+        "sha256": "6598bf55101ad5be129fa668ead5b907c9bc2b98bf9f2f54aef9ecdbbd179b01",
+        "manifest_bytes": 24255252,
+        "manifest_sha256": "6598bf55101ad5be129fa668ead5b907c9bc2b98bf9f2f54aef9ecdbbd179b01",
+        "multiplicity_sum": 15000.0,
+        "q_sum": 1.0
+      },
+      {
+        "state_id": 6,
+        "path": "C:\\Users\\chaos\\Desktop\\biye\\test\\testH2_v2\\terminalLoh_wdro\\partial_temporal_refinement\\grouped_bank_3p5h\\state-006_six_segment_grouped.mat",
+        "bytes": 21546281,
+        "sha256": "d7dfebfcb062cc9ab464670b7892b4fbb1c1c2492dad88f0e85059a3ee09547a",
+        "manifest_bytes": 21546281,
+        "manifest_sha256": "d7dfebfcb062cc9ab464670b7892b4fbb1c1c2492dad88f0e85059a3ee09547a",
+        "multiplicity_sum": 15000.0,
+        "q_sum": 1.0
+      },
+      {
+        "state_id": 7,
+        "path": "C:\\Users\\chaos\\Desktop\\biye\\test\\testH2_v2\\terminalLoh_wdro\\partial_temporal_refinement\\grouped_bank_3p5h\\state-007_six_segment_grouped.mat",
+        "bytes": 19046457,
+        "sha256": "57176bc08c29ff4042d1a40011600f92a60df0ab1209c6de784f6f3c1a88f96e",
+        "manifest_bytes": 19046457,
+        "manifest_sha256": "57176bc08c29ff4042d1a40011600f92a60df0ab1209c6de784f6f3c1a88f96e",
+        "multiplicity_sum": 15000.0,
+        "q_sum": 1.0
+      },
+      {
+        "state_id": 8,
+        "path": "C:\\Users\\chaos\\Desktop\\biye\\test\\testH2_v2\\terminalLoh_wdro\\partial_temporal_refinement\\grouped_bank_3p5h\\state-008_six_segment_grouped.mat",
+        "bytes": 50863283,
+        "sha256": "8696d2aba1c7220f95d02c00ff49591cc22d09ee3a495fcb09c8ef7a6693cfd4",
+        "manifest_bytes": 50863283,
+        "manifest_sha256": "8696d2aba1c7220f95d02c00ff49591cc22d09ee3a495fcb09c8ef7a6693cfd4",
+        "multiplicity_sum": 15000.0,
+        "q_sum": 1.0
+      },
+      {
+        "state_id": 9,
+        "path": "C:\\Users\\chaos\\Desktop\\biye\\test\\testH2_v2\\terminalLoh_wdro\\partial_temporal_refinement\\grouped_bank_3p5h\\state-009_six_segment_grouped.mat",
+        "bytes": 52668121,
+        "sha256": "b0096a82280533728e190fad170c0919f9564b3f14986f7faf91e6cc9271f60d",
+        "manifest_bytes": 52668121,
+        "manifest_sha256": "b0096a82280533728e190fad170c0919f9564b3f14986f7faf91e6cc9271f60d",
+        "multiplicity_sum": 15000.0,
+        "q_sum": 1.0
+      },
+      {
+        "state_id": 10,
+        "path": "C:\\Users\\chaos\\Desktop\\biye\\test\\testH2_v2\\terminalLoh_wdro\\partial_temporal_refinement\\grouped_bank_3p5h\\state-010_six_segment_grouped.mat",
+        "bytes": 53574515,
+        "sha256": "54d9e0668eabf8ba8dc4a88e9fb68d2719e4b22ccd556b845fdf007781e25521",
+        "manifest_bytes": 53574515,
+        "manifest_sha256": "54d9e0668eabf8ba8dc4a88e9fb68d2719e4b22ccd556b845fdf007781e25521",
+        "multiplicity_sum": 15000.0,
+        "q_sum": 1.0
+      },
+      {
+        "state_id": 11,
+        "path": "C:\\Users\\chaos\\Desktop\\biye\\test\\testH2_v2\\terminalLoh_wdro\\partial_temporal_refinement\\grouped_bank_3p5h\\state-011_six_segment_grouped.mat",
+        "bytes": 53073120,
+        "sha256": "1d05b1354afbb0fa420eba385d82eb69db256ccb91836ccecb8306f1789d1be0",
+        "manifest_bytes": 53073120,
+        "manifest_sha256": "1d05b1354afbb0fa420eba385d82eb69db256ccb91836ccecb8306f1789d1be0",
+        "multiplicity_sum": 15000.0,
+        "q_sum": 1.0
+      },
+      {
+        "state_id": 12,
+        "path": "C:\\Users\\chaos\\Desktop\\biye\\test\\testH2_v2\\terminalLoh_wdro\\partial_temporal_refinement\\grouped_bank_3p5h\\state-012_six_segment_grouped.mat",
+        "bytes": 50921966,
+        "sha256": "7649f391ad198d3a8762cf39469379737638a05f6c8c4ad11bca073b22d7b62c",
+        "manifest_bytes": 50921966,
+        "manifest_sha256": "7649f391ad198d3a8762cf39469379737638a05f6c8c4ad11bca073b22d7b62c",
+        "multiplicity_sum": 15000.0,
+        "q_sum": 1.0
+      },
+      {
+        "state_id": 13,
+        "path": "C:\\Users\\chaos\\Desktop\\biye\\test\\testH2_v2\\terminalLoh_wdro\\partial_temporal_refinement\\grouped_bank_3p5h\\state-013_six_segment_grouped.mat",
+        "bytes": 47257386,
+        "sha256": "2645c52499391e0c2a5d0933b7175eb4247864725c8984f67d6261cda4f1a63a",
+        "manifest_bytes": 47257386,
+        "manifest_sha256": "2645c52499391e0c2a5d0933b7175eb4247864725c8984f67d6261cda4f1a63a",
+        "multiplicity_sum": 15000.0,
+        "q_sum": 1.0
+      },
+      {
+        "state_id": 14,
+        "path": "C:\\Users\\chaos\\Desktop\\biye\\test\\testH2_v2\\terminalLoh_wdro\\partial_temporal_refinement\\grouped_bank_3p5h\\state-014_six_segment_grouped.mat",
+        "bytes": 43084004,
+        "sha256": "31e07a86e50d9a760b95126cc814351e061992fc8d6445b4111047a8fc47e9d0",
+        "manifest_bytes": 43084004,
+        "manifest_sha256": "31e07a86e50d9a760b95126cc814351e061992fc8d6445b4111047a8fc47e9d0",
+        "multiplicity_sum": 15000.0,
+        "q_sum": 1.0
+      },
+      {
+        "state_id": 15,
+        "path": "C:\\Users\\chaos\\Desktop\\biye\\test\\testH2_v2\\terminalLoh_wdro\\partial_temporal_refinement\\grouped_bank_3p5h\\state-015_six_segment_grouped.mat",
+        "bytes": 63764490,
+        "sha256": "3ec12d88b61ac945ea25992a2e855a3c0d8eb19db480081567f5ef375f62a3f0",
+        "manifest_bytes": 63764490,
+        "manifest_sha256": "3ec12d88b61ac945ea25992a2e855a3c0d8eb19db480081567f5ef375f62a3f0",
+        "multiplicity_sum": 15000.0,
+        "q_sum": 1.0
+      },
+      {
+        "state_id": 16,
+        "path": "C:\\Users\\chaos\\Desktop\\biye\\test\\testH2_v2\\terminalLoh_wdro\\partial_temporal_refinement\\grouped_bank_3p5h\\state-016_six_segment_grouped.mat",
+        "bytes": 64528793,
+        "sha256": "bb53b0d645b34d41c844a545e2e616cb86e105c68797839d2ff1e065e1c571d6",
+        "manifest_bytes": 64528793,
+        "manifest_sha256": "bb53b0d645b34d41c844a545e2e616cb86e105c68797839d2ff1e065e1c571d6",
+        "multiplicity_sum": 15000.0,
+        "q_sum": 1.0
+      },
+      {
+        "state_id": 17,
+        "path": "C:\\Users\\chaos\\Desktop\\biye\\test\\testH2_v2\\terminalLoh_wdro\\partial_temporal_refinement\\grouped_bank_3p5h\\state-017_six_segment_grouped.mat",
+        "bytes": 65057889,
+        "sha256": "9910ddd3f8211397cab16fe28e5e8f8edbfded488361d710d8035ff3eff5137f",
+        "manifest_bytes": 65057889,
+        "manifest_sha256": "9910ddd3f8211397cab16fe28e5e8f8edbfded488361d710d8035ff3eff5137f",
+        "multiplicity_sum": 15000.0,
+        "q_sum": 1.0
+      },
+      {
+        "state_id": 18,
+        "path": "C:\\Users\\chaos\\Desktop\\biye\\test\\testH2_v2\\terminalLoh_wdro\\partial_temporal_refinement\\grouped_bank_3p5h\\state-018_six_segment_grouped.mat",
+        "bytes": 64874172,
+        "sha256": "95d3c9f6c3ebbeb612bcad821a2de0be68c916113489b7646aea8e097642b7a2",
+        "manifest_bytes": 64874172,
+        "manifest_sha256": "95d3c9f6c3ebbeb612bcad821a2de0be68c916113489b7646aea8e097642b7a2",
+        "multiplicity_sum": 15000.0,
+        "q_sum": 1.0
+      },
+      {
+        "state_id": 19,
+        "path": "C:\\Users\\chaos\\Desktop\\biye\\test\\testH2_v2\\terminalLoh_wdro\\partial_temporal_refinement\\grouped_bank_3p5h\\state-019_six_segment_grouped.mat",
+        "bytes": 63550979,
+        "sha256": "edfd8a82f271d65bd97239b56027cc7a6f3948abc550f117f51dec3314f65f26",
+        "manifest_bytes": 63550979,
+        "manifest_sha256": "edfd8a82f271d65bd97239b56027cc7a6f3948abc550f117f51dec3314f65f26",
+        "multiplicity_sum": 15000.0,
+        "q_sum": 1.0
+      },
+      {
+        "state_id": 20,
+        "path": "C:\\Users\\chaos\\Desktop\\biye\\test\\testH2_v2\\terminalLoh_wdro\\partial_temporal_refinement\\grouped_bank_3p5h\\state-020_six_segment_grouped.mat",
+        "bytes": 61063533,
+        "sha256": "08a2ba1d9f50de4b0a0e94bb28aca931b5234ec30c0e33d5eb104a2e0c6a7e08",
+        "manifest_bytes": 61063533,
+        "manifest_sha256": "08a2ba1d9f50de4b0a0e94bb28aca931b5234ec30c0e33d5eb104a2e0c6a7e08",
+        "multiplicity_sum": 15000.0,
+        "q_sum": 1.0
+      },
+      {
+        "state_id": 21,
+        "path": "C:\\Users\\chaos\\Desktop\\biye\\test\\testH2_v2\\terminalLoh_wdro\\partial_temporal_refinement\\grouped_bank_3p5h\\state-021_six_segment_grouped.mat",
+        "bytes": 57724360,
+        "sha256": "8935555b9e27b76ede6bdd074f42b5abe0ad81c354161994d2dd375f66b709a3",
+        "manifest_bytes": 57724360,
+        "manifest_sha256": "8935555b9e27b76ede6bdd074f42b5abe0ad81c354161994d2dd375f66b709a3",
+        "multiplicity_sum": 15000.0,
+        "q_sum": 1.0
+      },
+      {
+        "state_id": 22,
+        "path": "C:\\Users\\chaos\\Desktop\\biye\\test\\testH2_v2\\terminalLoh_wdro\\partial_temporal_refinement\\grouped_bank_3p5h\\state-022_six_segment_grouped.mat",
+        "bytes": 65545739,
+        "sha256": "5bffde46d26fba3bf437a692d818f110db5236d2abcaa052b3482896f6aae5e0",
+        "manifest_bytes": 65545739,
+        "manifest_sha256": "5bffde46d26fba3bf437a692d818f110db5236d2abcaa052b3482896f6aae5e0",
+        "multiplicity_sum": 15000.0,
+        "q_sum": 1.0
+      },
+      {
+        "state_id": 23,
+        "path": "C:\\Users\\chaos\\Desktop\\biye\\test\\testH2_v2\\terminalLoh_wdro\\partial_temporal_refinement\\grouped_bank_3p5h\\state-023_six_segment_grouped.mat",
+        "bytes": 64149358,
+        "sha256": "b10a0f0bdea5d6450489f089cff9152761cb80a9893e78eca67b8e5bde5d54c4",
+        "manifest_bytes": 64149358,
+        "manifest_sha256": "b10a0f0bdea5d6450489f089cff9152761cb80a9893e78eca67b8e5bde5d54c4",
+        "multiplicity_sum": 15000.0,
+        "q_sum": 1.0
+      },
+      {
+        "state_id": 24,
+        "path": "C:\\Users\\chaos\\Desktop\\biye\\test\\testH2_v2\\terminalLoh_wdro\\partial_temporal_refinement\\grouped_bank_3p5h\\state-024_six_segment_grouped.mat",
+        "bytes": 63122917,
+        "sha256": "ccff1c2c9fcfd54c78f43134c8e258c8fa9fd3a24839576be64cfcba9542b460",
+        "manifest_bytes": 63122917,
+        "manifest_sha256": "ccff1c2c9fcfd54c78f43134c8e258c8fa9fd3a24839576be64cfcba9542b460",
+        "multiplicity_sum": 15000.0,
+        "q_sum": 1.0
+      },
+      {
+        "state_id": 25,
+        "path": "C:\\Users\\chaos\\Desktop\\biye\\test\\testH2_v2\\terminalLoh_wdro\\partial_temporal_refinement\\grouped_bank_3p5h\\state-025_six_segment_grouped.mat",
+        "bytes": 63557276,
+        "sha256": "4cf510ef818a197e36128273b4fa36247576a0dcc62a1d8d0dee588bc8dd5b62",
+        "manifest_bytes": 63557276,
+        "manifest_sha256": "4cf510ef818a197e36128273b4fa36247576a0dcc62a1d8d0dee588bc8dd5b62",
+        "multiplicity_sum": 15000.0,
+        "q_sum": 1.0
+      },
+      {
+        "state_id": 26,
+        "path": "C:\\Users\\chaos\\Desktop\\biye\\test\\testH2_v2\\terminalLoh_wdro\\partial_temporal_refinement\\grouped_bank_3p5h\\state-026_six_segment_grouped.mat",
+        "bytes": 65181322,
+        "sha256": "60ab6c02687f971a7bd632c469335827158b6e8ddce9e70f3b63d91770958ce5",
+        "manifest_bytes": 65181322,
+        "manifest_sha256": "60ab6c02687f971a7bd632c469335827158b6e8ddce9e70f3b63d91770958ce5",
+        "multiplicity_sum": 15000.0,
+        "q_sum": 1.0
+      },
+      {
+        "state_id": 27,
+        "path": "C:\\Users\\chaos\\Desktop\\biye\\test\\testH2_v2\\terminalLoh_wdro\\partial_temporal_refinement\\grouped_bank_3p5h\\state-027_six_segment_grouped.mat",
+        "bytes": 65704503,
+        "sha256": "57a3511c651bac305357b7125b8072cab92e49442d720005e9f8f150a4f57de0",
+        "manifest_bytes": 65704503,
+        "manifest_sha256": "57a3511c651bac305357b7125b8072cab92e49442d720005e9f8f150a4f57de0",
+        "multiplicity_sum": 15000.0,
+        "q_sum": 1.0
+      },
+      {
+        "state_id": 28,
+        "path": "C:\\Users\\chaos\\Desktop\\biye\\test\\testH2_v2\\terminalLoh_wdro\\partial_temporal_refinement\\grouped_bank_3p5h\\state-028_six_segment_grouped.mat",
+        "bytes": 64061950,
+        "sha256": "b7b25d90414d3578c6fba365b70862e284809d0daac94ab95b3357195bcacb2d",
+        "manifest_bytes": 64061950,
+        "manifest_sha256": "b7b25d90414d3578c6fba365b70862e284809d0daac94ab95b3357195bcacb2d",
+        "multiplicity_sum": 15000.0,
+        "q_sum": 1.0
+      },
+      {
+        "state_id": 29,
+        "path": "C:\\Users\\chaos\\Desktop\\biye\\test\\testH2_v2\\terminalLoh_wdro\\partial_temporal_refinement\\grouped_bank_3p5h\\state-029_six_segment_grouped.mat",
+        "bytes": 61781025,
+        "sha256": "1412caa5ea5e226344a71a60da906f8be4d4ca341e29f9a2edf532c3871ec944",
+        "manifest_bytes": 61781025,
+        "manifest_sha256": "1412caa5ea5e226344a71a60da906f8be4d4ca341e29f9a2edf532c3871ec944",
+        "multiplicity_sum": 15000.0,
+        "q_sum": 1.0
+      },
+      {
+        "state_id": 30,
+        "path": "C:\\Users\\chaos\\Desktop\\biye\\test\\testH2_v2\\terminalLoh_wdro\\partial_temporal_refinement\\grouped_bank_3p5h\\state-030_six_segment_grouped.mat",
+        "bytes": 57605876,
+        "sha256": "603dd5907b084f5e62991d2af163cdeec2576c90ac941d5b9d30b31f42a9f6e8",
+        "manifest_bytes": 57605876,
+        "manifest_sha256": "603dd5907b084f5e62991d2af163cdeec2576c90ac941d5b9d30b31f42a9f6e8",
+        "multiplicity_sum": 15000.0,
+        "q_sum": 1.0
+      },
+      {
+        "state_id": 31,
+        "path": "C:\\Users\\chaos\\Desktop\\biye\\test\\testH2_v2\\terminalLoh_wdro\\partial_temporal_refinement\\grouped_bank_3p5h\\state-031_six_segment_grouped.mat",
+        "bytes": 53323317,
+        "sha256": "bf85a05a5c55b5b40030a80f430d7cc8c4028c9f2547004346e3eda64e64c772",
+        "manifest_bytes": 53323317,
+        "manifest_sha256": "bf85a05a5c55b5b40030a80f430d7cc8c4028c9f2547004346e3eda64e64c772",
+        "multiplicity_sum": 15000.0,
+        "q_sum": 1.0
+      },
+      {
+        "state_id": 32,
+        "path": "C:\\Users\\chaos\\Desktop\\biye\\test\\testH2_v2\\terminalLoh_wdro\\partial_temporal_refinement\\grouped_bank_3p5h\\state-032_six_segment_grouped.mat",
+        "bytes": 55502956,
+        "sha256": "f344ca2a0386d700d3e80a407fb6df5f8bdf8799639e77de081b80706b56fa2f",
+        "manifest_bytes": 55502956,
+        "manifest_sha256": "f344ca2a0386d700d3e80a407fb6df5f8bdf8799639e77de081b80706b56fa2f",
+        "multiplicity_sum": 15000.0,
+        "q_sum": 1.0
+      },
+      {
+        "state_id": 33,
+        "path": "C:\\Users\\chaos\\Desktop\\biye\\test\\testH2_v2\\terminalLoh_wdro\\partial_temporal_refinement\\grouped_bank_3p5h\\state-033_six_segment_grouped.mat",
+        "bytes": 61345903,
+        "sha256": "4281e4dc97b907d34d6d38e857252bffc418e7bd0385df4f3f0e9203328f641b",
+        "manifest_bytes": 61345903,
+        "manifest_sha256": "4281e4dc97b907d34d6d38e857252bffc418e7bd0385df4f3f0e9203328f641b",
+        "multiplicity_sum": 15000.0,
+        "q_sum": 1.0
+      },
+      {
+        "state_id": 34,
+        "path": "C:\\Users\\chaos\\Desktop\\biye\\test\\testH2_v2\\terminalLoh_wdro\\partial_temporal_refinement\\grouped_bank_3p5h\\state-034_six_segment_grouped.mat",
+        "bytes": 66135492,
+        "sha256": "9cb9ee80616c1276c12f02de7b81c7f7854be4186bd2a17643e2fd344bba0521",
+        "manifest_bytes": 66135492,
+        "manifest_sha256": "9cb9ee80616c1276c12f02de7b81c7f7854be4186bd2a17643e2fd344bba0521",
+        "multiplicity_sum": 15000.0,
+        "q_sum": 1.0
+      },
+      {
+        "state_id": 35,
+        "path": "C:\\Users\\chaos\\Desktop\\biye\\test\\testH2_v2\\terminalLoh_wdro\\partial_temporal_refinement\\grouped_bank_3p5h\\state-035_six_segment_grouped.mat",
+        "bytes": 67121738,
+        "sha256": "bd33b48bcc0ba67b8a0330ceabc127609c7cea3c3187e9caebfa29251f3c59f5",
+        "manifest_bytes": 67121738,
+        "manifest_sha256": "bd33b48bcc0ba67b8a0330ceabc127609c7cea3c3187e9caebfa29251f3c59f5",
+        "multiplicity_sum": 15000.0,
+        "q_sum": 1.0
+      }
+    ]
+  },
+  "saa_probability_semantics": "q_g = multiplicity / 15000",
+  "eta": 0,
+  "state_count": 35,
+  "site_count": 4,
+  "segment_state": [
+    "W0",
+    "W1",
+    "M12",
+    "W2",
+    "M23",
+    "W3"
+  ],
+  "segment_dt_h": [
+    1.0,
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    0.5
+  ],
+  "reran_msp_training": false,
+  "reran_oos": false,
+  "modified_historical_output": false,
+  "modified_active_table": false,
+  "reconstruction_status": "PASS"
+}

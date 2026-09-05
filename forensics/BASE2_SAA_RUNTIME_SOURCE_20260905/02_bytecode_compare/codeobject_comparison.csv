@@ -1,0 +1,4 @@
+comparison,current_source_codeobject_sha256,first_difference,ignored_fields,match,pyc_codeobject_sha256
+strict,907edaefb2871be5430f535045446f84002bcfb5025ffe2c9d01f8c9239c31c6,"{""code_object"": ""<module>"", ""field"": ""co_consts"", ""pyc_value_sha256"": ""8f19932b90f70a683da7da6488e4bc87a2177f4f46d8e83abb41b1b13f4dde77"", ""source_value_sha256"": ""31a52cb2753371205fba0de21481eb852673532f5d6aac5cd419de9be61ade48""}",none,False,235ad15a9e6362760a5e50a1a4084e45ce8ebf1e7869bfbb7faa28447debd0e9
+normalized,6c1feeb2116bc7bc19c81cfac0a32210dad831900d2cc24b3cd1d27bd62435e6,null,co_filename,True,6c1feeb2116bc7bc19c81cfac0a32210dad831900d2cc24b3cd1d27bd62435e6
+semantic,991357ab2c246362b5ac69d3a3659f7387c0b0e9655a305782d67f3907a4b5c9,null,"co_filename,co_firstlineno,co_lnotab,co_linetable,co_exceptiontable",True,991357ab2c246362b5ac69d3a3659f7387c0b0e9655a305782d67f3907a4b5c9
