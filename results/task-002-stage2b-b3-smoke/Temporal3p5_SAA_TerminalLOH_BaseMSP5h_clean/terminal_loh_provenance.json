@@ -1,0 +1,21 @@
+{
+  "candidate_id": "TEMPORAL3P5_SAA_BASEMSP5H_CANDIDATE",
+  "table": "program/terminalLoh_wdro/current_w_mainline_stage89/terminal_tables/terminal_loh_temporal3p5_saa_candidate.csv",
+  "table_sha256": "b74433fe8a19caedb75ac3071225480e279c136f3d1285ba503a184f12c5fcdc",
+  "state_count": 35,
+  "site_count": 4,
+  "original_draws_per_state": 15000,
+  "probability_semantics": "q_g=multiplicity/15000; eta=0 direct empirical SAA",
+  "segment_state": ["W0", "W1", "M12", "W2", "M23", "W3"],
+  "segment_dt_h": [1.0, 0.5, 0.5, 0.5, 0.5, 0.5],
+  "grouped_bank_source": "terminalLoh_wdro/partial_temporal_refinement/grouped_bank_3p5h",
+  "optimal_count": "35/35",
+  "training_started": true,
+  "training_run": "training/runs/run-20260904-233558",
+  "training_checkpoint_sha256": "a1b1450519fc7ab9a0e4ae96f81aa397613990683f6ce39f7d2dd6d2984da18c",
+  "clean_reload": "PASS",
+  "oos_started": true,
+  "oos_paths": 10000,
+  "oos_metadata_pass": true,
+  "analysis_pass": true
+}

@@ -1,0 +1,6 @@
+CHECKPOINT=C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\Temporal3p5_SAA_TerminalLOH_BaseMSP5h_clean\training\runs\run-20260904-233558\training\checkpoint\checkpoint_final.mat
+SHA256=a1b1450519fc7ab9a0e4ae96f81aa397613990683f6ce39f7d2dd6d2984da18c
+TERMINALLOH_SHA256=b74433fe8a19caedb75ac3071225480e279c136f3d1285ba503a184f12c5fcdc
+MODE=FORMAL
+START=2026-09-04T23:35:58+08:00
+END=2026-09-05T04:43:04+08:00

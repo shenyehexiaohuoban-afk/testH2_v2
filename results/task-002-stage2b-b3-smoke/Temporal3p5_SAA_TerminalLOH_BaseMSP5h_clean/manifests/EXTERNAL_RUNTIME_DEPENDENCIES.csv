@@ -1,0 +1,2 @@
+asset,canonical_path,sha256,required_by,reason_not_copied,existence_check
+Gurobi MATLAB interface,D:/gurobi1201/win64/bin/gurobi_cl.exe,NOT_APPLICABLE_EXTERNAL_TOOL,solve_stage_model_h2 / gurobi,licensed shared runtime,PASS: gurobi_cl.exe exists; no unresolved asset

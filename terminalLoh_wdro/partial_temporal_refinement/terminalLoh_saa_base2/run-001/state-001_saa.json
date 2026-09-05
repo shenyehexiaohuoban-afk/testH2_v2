@@ -1,0 +1,21 @@
+{
+  "state_id": 1,
+  "a0": 2,
+  "loc0": 1,
+  "lfw0": 0,
+  "T1": 0.0,
+  "T2": 0.0,
+  "T3": 0.0,
+  "T4": 0.0,
+  "T_total": 0.0,
+  "objective": 158.85333333333259,
+  "empirical_expected_recourse": 158.85333333333335,
+  "solver_status": "OPTIMAL",
+  "grouped_bank": "C:\\Users\\chaos\\Desktop\\biye\\test\\testH2_v2\\terminalLoh_wdro\\partial_temporal_refinement\\grouped_bank_3p5h\\state-001_six_segment_grouped.mat",
+  "q_sum": 1.0,
+  "p_equals_q": "PASS",
+  "duration_qa": "PASS",
+  "inventory_qa": "PASS",
+  "cost_qa": "PASS",
+  "checks": "{\"demand_balance\": true, \"duration_once\": true, \"fc_capacity\": true, \"finite\": true, \"inventory\": true, \"objective_identity\": true, \"optimal\": true, \"p_equals_q\": true, \"p_sum\": true, \"q_sum\": true}"
+}

@@ -1,0 +1,23 @@
+﻿level,question,status,evidence
+LEVEL_1,policy and input identity,COMPLETED,qa_summary.csv; source_manifest.csv
+LEVEL_1,common ordered path bank,COMPLETED,qa_summary.csv; source_manifest.csv
+LEVEL_1,path termination ledger and active-period serialization,COMPLETED,termination_ledger.csv; raw_active_period_audit.csv
+LEVEL_1,readonly policy and numerical validity,COMPLETED,qa_summary.csv; oos_metadata.csv
+LEVEL_1,paired statistical uncertainty,COMPLETED_NORMAL_APPROX,paired_kpi_with_ci.csv; paired_binary_outcome_with_ci.csv
+LEVEL_2,zero/low/medium/high target performance,COMPLETED,target_group_performance.csv
+LEVEL_2,low-target overproduction and surplus,COMPLETED_DESCRIPTIVE,target_group_performance.csv; paired_kpi_with_ci.csv
+LEVEL_2,high-target adequacy and shortfall,COMPLETED,target_group_performance.csv
+LEVEL_2,shortfall incidence and mass-weighted service,COMPLETED,terminal_classification_summary.csv; mass_weighted_service_summary.csv
+LEVEL_2,path service distribution and severity,COMPLETED,path_service_distribution_detail.csv; service_severity_band_summary.csv
+LEVEL_2,quantity/location/mixed decomposition,COMPLETED,terminal_classification_summary.csv; mass_weighted_service_summary.csv
+LEVEL_2,path migration,COMPLETED,path_transition_detail.csv; terminal_type_transition.csv
+LEVEL_2,time formation and wait-and-see,COMPLETED_DESCRIPTIVE,hourly_site_mechanism_summary.csv; hourly_site_paired_delta.csv
+LEVEL_3,optimistic physical recoverability,COMPLETED_UPPER_BOUND,optimistic_physical_recoverability_summary.csv
+LEVEL_3,"Pmax, voltage, line, tank and HTT mechanisms",COMPLETED_DESCRIPTIVE,paired_mechanism_summary.csv; hourly_system_mechanism_summary.csv; htt_od_summary.csv
+LEVEL_3,substation capacity/headroom,NOT_IDENTIFIABLE,Raw stores import but not per-path frozen capacity/headroom
+LEVEL_3,ordinary demand and new side effects,COMPLETED_DESCRIPTIVE,paired_mechanism_summary.csv; historical_issue_status.csv
+LEVEL_3,Base-frozen tail groups,COMPLETED_RETROSPECTIVE,base_frozen_tail_assignment.csv; base_frozen_tail_summary.csv
+LEVEL_3,economics and cost components,COMPLETED,paired_kpi_with_ci.csv; paired_mechanism_summary.csv
+LEVEL_3,historical issue status and evidence boundaries,COMPLETED,historical_issue_status.csv
+LEVEL_3,single-mechanism causal attribution,NOT_IDENTIFIABLE,No independent constraint-relaxation counterfactual in this task
+LEVEL_4,"fresh holdout, sensitivity, perfect-information benchmark",DEFERRED,Mode C scope

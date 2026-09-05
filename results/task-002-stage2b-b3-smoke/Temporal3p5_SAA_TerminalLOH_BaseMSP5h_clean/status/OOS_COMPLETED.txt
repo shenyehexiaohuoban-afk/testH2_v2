@@ -1,0 +1,7 @@
+OOS_STATUS = COMPLETED
+MODE = C
+RUN_DIR = C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\Temporal3p5_SAA_TerminalLOH_BaseMSP5h_clean\training\runs\run-20260904-233558
+CHECKPOINT = C:\Users\chaos\Desktop\biye\test\testH2_v2\results\task-002-stage2b-b3-smoke\Temporal3p5_SAA_TerminalLOH_BaseMSP5h_clean\training\runs\run-20260904-233558\training\checkpoint\checkpoint_final.mat
+CHECKPOINT_SHA256 = a1b1450519fc7ab9a0e4ae96f81aa397613990683f6ce39f7d2dd6d2984da18c
+PATH_COUNT = 10000
+COMPLETED_AT = 2026-09-05T05:01:59.1169688+08:00

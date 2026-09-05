@@ -1,0 +1,59 @@
+{
+  "qa": "PASS",
+  "base_msp_identity_reused": true,
+  "only_terminal_loh_replaced": true,
+  "candidate_status": "NOT YET FORMALLY ADOPTED",
+  "checks": {
+    "canonical_base_exists": true,
+    "formal_5h_source_exists": true,
+    "common_program_files": 49,
+    "byte_identical_common_program_files": 47,
+    "changed_program_files_exact_set": true,
+    "candidate_added_files_exact_set": true,
+    "base_program_files_missing_from_candidate": [],
+    "loader_current_exact_authorized_transform": true,
+    "loader_terminal_exact_authorized_transform": true,
+    "formal_5h_runner_exact_authorized_transform": true,
+    "formal_runtime_utils_exact": true,
+    "nested_utils_inactive": true,
+    "frozen_terminal_table_exact": true,
+    "base_config_identity": true
+  },
+  "changed_program_files": [
+    "terminalLoh_wdro/current_w_mainline_stage89/msp_bridge/load_current_stage89_hourly_h2.m",
+    "terminalLoh_wdro/current_w_mainline_stage89/msp_bridge/load_stage89_adopted_terminal_loh_h2.m"
+  ],
+  "candidate_added_files": [
+    "terminalLoh_wdro/current_w_mainline_stage89/terminal_tables/terminal_loh_temporal3p5_dro_eta003_candidate.csv",
+    "utils/create_oos_paths.m",
+    "utils/mc_sample.m",
+    "utils/termination_check.m",
+    "utils/utils/create_oos_paths.m",
+    "utils/utils/mc_sample.m",
+    "utils/utils/termination_check.m"
+  ],
+  "runtime_utils": [
+    {
+      "file": "mc_sample.m",
+      "formal_sha256": "f75b68972510067143f49f24b1e497f6b6720ec898f0fd4345d6f099ab6eb2a9",
+      "active_sha256": "f75b68972510067143f49f24b1e497f6b6720ec898f0fd4345d6f099ab6eb2a9",
+      "nested_sha256": "f75b68972510067143f49f24b1e497f6b6720ec898f0fd4345d6f099ab6eb2a9",
+      "pass": true
+    },
+    {
+      "file": "termination_check.m",
+      "formal_sha256": "4898087fc9be724d8e4dafc4e1cf2cd617e63d7d62750c776bfed834cafb0525",
+      "active_sha256": "4898087fc9be724d8e4dafc4e1cf2cd617e63d7d62750c776bfed834cafb0525",
+      "nested_sha256": "4898087fc9be724d8e4dafc4e1cf2cd617e63d7d62750c776bfed834cafb0525",
+      "pass": true
+    },
+    {
+      "file": "create_oos_paths.m",
+      "formal_sha256": "5ba325de973c76242d511860d427931c091d4f95629e1aae116dc410ede4776b",
+      "active_sha256": "5ba325de973c76242d511860d427931c091d4f95629e1aae116dc410ede4776b",
+      "nested_sha256": "5ba325de973c76242d511860d427931c091d4f95629e1aae116dc410ede4776b",
+      "pass": true
+    }
+  ],
+  "terminal_loh_sha256": "70e02fe1b46d09b4cf77fcf1fbfa1f1c4ab98c8200c52b51d6bdd7ac2205dae5"
+}

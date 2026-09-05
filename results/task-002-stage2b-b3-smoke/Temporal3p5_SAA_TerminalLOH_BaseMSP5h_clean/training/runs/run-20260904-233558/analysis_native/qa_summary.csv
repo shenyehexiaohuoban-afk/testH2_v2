@@ -1,0 +1,16 @@
+﻿check,pass,value
+ordered_path_ids,True,1..10000
+ordered_state_sequences,True,10000/10000 identical
+equal_weight_semantics,True,fixed ordered Monte Carlo bank
+bank_sha,True,6bf3d1190a402ded052b8d3d08ed369042236e151f562bdd9fd4db7b8ff386c6
+terminal_formula,True,6.803446694902959e-12
+raw_active_period_no_zero_padding,True,20000/20000 paired arm-path records
+mass_gap_identity,True,1.0408340855860843e-17
+recoverability_shortfall_coverage,True,764
+tail_assignment_base_frozen,True,"Inherited Mode C rule: Base terminal_site_gap rank; NORMAL95, DIFFICULT4, EXTREME1, WORST_PATH; ties path_id"
+mass_service_capped,True,"min(inventory_i,target_i) / target_i"
+policy_readonly,True,a1b1450519fc7ab9a0e4ae96f81aa397613990683f6ce39f7d2dd6d2984da18c
+cuts_readonly,True,349983
+numerical_residual,True,eq=7.442935157087049e-13;ineq=8.73114913702011e-11
+candidate_checkpoint_sha,True,a1b1450519fc7ab9a0e4ae96f81aa397613990683f6ce39f7d2dd6d2984da18c
+formal_training_metadata,True,status\TRAINING_COMPLETED.txt

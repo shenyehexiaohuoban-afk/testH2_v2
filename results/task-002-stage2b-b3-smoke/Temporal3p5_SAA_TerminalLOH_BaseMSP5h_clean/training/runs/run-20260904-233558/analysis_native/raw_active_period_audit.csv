@@ -1,0 +1,3 @@
+﻿arm,path_count,passing_paths,failing_paths,max_operating_stage_count,post_termination_zero_padding,pass
+BASE,10000,10000,0,6,False,True
+CANDIDATE,10000,10000,0,6,False,True

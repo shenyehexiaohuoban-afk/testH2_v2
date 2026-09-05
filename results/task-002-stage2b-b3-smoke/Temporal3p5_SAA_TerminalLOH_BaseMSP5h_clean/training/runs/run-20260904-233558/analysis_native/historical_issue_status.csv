@@ -1,0 +1,17 @@
+﻿issue,status,base_value,candidate_value,delta,evidence,evidence_boundary
+low-target overproduction,IMPROVED,166.9251469580151,116.4419511847938,-50.48319577321608,paired_mechanism_summary.csv; target_group_performance.csv,Descriptive paired OOS association; no single-mechanism counterfactual.
+HTT aggregate capacity,IMPROVED,0.03837253449584292,0.02064081611496242,-0.017731718380880352,paired_mechanism_summary.csv; htt_od_summary.csv,Descriptive paired OOS association; no single-mechanism counterfactual.
+electrolyzer Pmax bottleneck,IMPROVED,0.4051014062499971,0.25897557291666673,-0.14612583333333332,paired_mechanism_summary.csv; hourly_site_mechanism_summary.csv,Descriptive paired OOS association; no single-mechanism counterfactual.
+voltage,IMPROVED,0.9093943410738335,0.912719918145877,0.0033255770720352464,paired_mechanism_summary.csv; hourly_system_mechanism_summary.csv,Descriptive paired OOS association; no single-mechanism counterfactual.
+line loading,IMPROVED,0.7342653803302028,0.7287639335495861,-0.005501446780562117,paired_mechanism_summary.csv; hourly_system_mechanism_summary.csv,Descriptive paired OOS association; no single-mechanism counterfactual.
+tank saturation,UNCHANGED,0.0,0.0,0.0,paired_mechanism_summary.csv; hourly_site_mechanism_summary.csv,Descriptive paired OOS association; no single-mechanism counterfactual.
+ordinary shortage,IMPROVED,1.1038071060246548,1.042537222745299,-0.06126988327935561,paired_mechanism_summary.csv; paired_kpi_with_ci.csv,Descriptive paired OOS association; no single-mechanism counterfactual.
+actual cost,IMPROVED,55266.25177354377,54203.47455482222,-1062.7772187243838,paired_mechanism_summary.csv; paired_kpi_with_ci.csv,Descriptive paired OOS association; no single-mechanism counterfactual.
+terminal mass-weighted service,WORSE,0.9277700957993614,0.9096628204664218,-0.018107275332939654,mass_weighted_service_summary.csv,Terminal target differs because TerminalLOH is the authorized changed input.
+pure quantity shortage,DESCRIPTIVE,1.1168546545222007,0.9811223710666387,-0.13573228345556104,terminal_classification_summary.csv; mass_weighted_service_summary.csv,Incidence and kg share are reported separately.
+pure location shortage,DESCRIPTIVE,0.41174672739755935,0.293162110500992,-0.11858461689656764,terminal_classification_summary.csv; mass_weighted_service_summary.csv,Incidence and kg share are reported separately.
+path migration,MIXED,,,,terminal_type_transition.csv; path_transition_detail.csv,33 aggregated transition rows; use detail for counts.
+substation capacity/headroom,NOT_IDENTIFIABLE,,,,Mode C raw stores root_grid_import but not per-path substation capacity/headroom.,Cannot infer binding without the frozen capacity field; minimum extra evidence is serialized capacity or utilization.
+HTT information limitation,NOT_IDENTIFIABLE,,,,htt_od_summary.csv,Observed actions do not identify the counterfactual value of additional information.
+checkpoint reliability,RESOLVED_ENGINEERING,1.0,1.0,0.0,qa_summary.csv; oos_metadata.csv,SHA and cut count unchanged through OOS.
+training stability,LONG_NOT_ASSESSED,,,,training metadata and trace,Fixed 5h completion is not a convergence certificate.

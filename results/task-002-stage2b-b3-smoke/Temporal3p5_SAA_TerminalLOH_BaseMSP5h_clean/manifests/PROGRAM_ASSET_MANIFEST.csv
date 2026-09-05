@@ -1,0 +1,7 @@
+relative_path,asset_role,source_kind,historical_data_included
+program/,canonical model program,framework source,NO
+program/data/yuanqi/near_stage_msp_input.mat,light model input,framework input,NO
+training/utils/,runtime utilities,framework source,NO
+training/,training launch and lifecycle,framework source,NO
+testing/,OOS launch and rule gate,framework source,NO
+analysis/,analysis source templates,framework source,NO

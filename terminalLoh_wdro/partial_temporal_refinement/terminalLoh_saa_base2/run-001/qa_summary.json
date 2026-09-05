@@ -1,0 +1,26 @@
+{
+  "SAA_OPTIMAL_COUNT": "35/35",
+  "SAA_PROBABILITY_QA": "PASS",
+  "SAA_DURATION_QA": "PASS",
+  "SAA_INVENTORY_QA": "PASS",
+  "SAA_COST_QA": "PASS",
+  "grouped_manifest": "C:\\Users\\chaos\\Desktop\\biye\\test\\testH2_v2\\terminalLoh_wdro\\partial_temporal_refinement\\grouped_bank_3p5h\\six_segment_grouped_bank_manifest.csv",
+  "segment_state": [
+    "W0",
+    "W1",
+    "M12",
+    "W2",
+    "M23",
+    "W3"
+  ],
+  "segment_dt_h": [
+    1.0,
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    0.5
+  ],
+  "original_draws_per_state": 15000,
+  "probability_semantics": "q_g=multiplicity/15000; eta=0 direct SAA"
+}
