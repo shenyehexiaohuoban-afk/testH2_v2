@@ -1,0 +1,52 @@
+{
+  "branch": "task/002-stage2b-b3-smoke",
+  "HEAD": "ad6eddf873010096aebb29f34338ccbc0eadccb4",
+  "upstream": "origin/task/002-stage2b-b3-smoke",
+  "ahead_behind": "0\t0",
+  "worktree_counts": {
+    "M ": 1,
+    " D": 13,
+    " M": 17,
+    "??": 22990
+  },
+  "tracked_changes": [
+    "M README.md",
+    " D audit_stage90a3_terminal_transport_cost_h2.m",
+    " M codex_rule/OOS_rule.md",
+    " M codex_rule/log.md",
+    " M fa_h2/backward_pass_h2.m",
+    " M fa_h2/eval_h2.m",
+    " M fa_h2/forward_pass_h2.m",
+    " M fa_h2/fuzhu/eval_terminal_loh_h2.m",
+    " M fa_h2/fuzhu/load_terminal_loh_lookup_h2.m",
+    " D fa_h2/fuzhu/solve_terminal_redistribution_h2.m",
+    " M fa_h2/fuzhu/terminal_value_and_subgradient_h2.m",
+    " M fa_h2/solve_stage_model_h2.m",
+    " M fa_msp/current_hourly_stage89_adopted/launcher/run_stage89q_pmax_dual_2p5h_10k_oos_h2.m",
+    " D fa_msp/current_hourly_stage90_candidate/README.md",
+    " D fa_msp/current_hourly_stage90_candidate/config/stage90b_base_pmax_config.csv",
+    " D fa_msp/current_hourly_stage90_candidate/launcher/audit_stage90b2_terminal_cost_backward_coverage_h2.m",
+    " D fa_msp/current_hourly_stage90_candidate/launcher/orchestrate_stage90b_base_pmax_fresh_zero_cut_10iter.ps1",
+    " D fa_msp/current_hourly_stage90_candidate/launcher/run_stage90b2_oos_paired_h2.m",
+    " D fa_msp/current_hourly_stage90_candidate/launcher/run_stage90b_base_pmax_fresh_zero_cut_10iter_h2.m",
+    " D fa_msp/current_hourly_stage90_candidate/launcher/write_oos_readme.m",
+    " D fa_msp/current_hourly_stage90_candidate/launcher/write_semantics_md.m",
+    " D fa_msp/current_hourly_stage90_candidate/launcher/write_summary_zh.m",
+    " M h2_default_options.m",
+    " D h2_stage90a_candidate_options.m",
+    " M hourly_grid_h2/build_integrated_hourly_stage_model_h2.m",
+    " M hourly_grid_h2/update_integrated_hourly_stage_model_h2.m",
+    " M load_data_h2_near.m",
+    " D run_stage90a_terminal_recourse_tests.m",
+    " M scripts/stage89q_b0001_c_mode_closeout.py",
+    " M scripts/stage89q_b0001_c_mode_readonly_reanalysis.py",
+    " M terminalLoh_wdro/src/generate_step04CA2_formal_consequences_h2.m"
+  ],
+  "processes": {
+    "ProcessId": 9668,
+    "Name": "MATLAB.exe",
+    "CreationDate": "/Date(1787513552189)/",
+    "CommandLine": null
+  },
+  "fetch": false
+}

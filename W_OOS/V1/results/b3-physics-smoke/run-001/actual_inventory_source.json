@@ -1,0 +1,18 @@
+{
+  "arm": "BASE2-DRO",
+  "path_id": 2,
+  "fields": [
+    "inventory_site1",
+    "inventory_site2",
+    "inventory_site3",
+    "inventory_site4"
+  ],
+  "inventory_kg": [
+    84.1553559615926,
+    58.5009093832021,
+    35.3376415005701,
+    45.9373084666148
+  ],
+  "sha256": "167cfdf5a509d8287c3ea77a52d607531163d2c15e9cf865e0f62fb36bc7c588",
+  "selection": "first ordered DRO path with all 4 inventories >=20kg; mechanical test selection only"
+}

@@ -1,0 +1,74 @@
+{
+  "task": "W_OOS/V1-B3",
+  "RUN_MODE": "A",
+  "MODE_SCOPE": "RESTRICTED_SCOPE",
+  "evidence": "ENGINEERING",
+  "training": "NOT_APPLICABLE",
+  "required_cases": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "regression_gate": "B2 matrices and original formal source; 1e-10 km existing tolerance; stop on failure",
+  "test_fixture_policy": "Explicit artificial unit cases requested by user; separate from one real W realization, not research data",
+  "source_scope": "All B1/B2/preflight lightweight artifacts and all B2 source-manifest inputs rehashed; no protected model writes",
+  "deferred": [
+    "optimization",
+    "demand/grid rescue validation",
+    "training",
+    "OOS",
+    "final parameter adoption"
+  ],
+  "contract": {
+    "version": "V1",
+    "stage": "B3",
+    "parameter_status": "PROVISIONAL_PARAMETER",
+    "fleet_size": 6,
+    "Pmax_kW": 220.0,
+    "Hcap_kg": 66.6,
+    "eta_FC": 0.55,
+    "LHV_kWh_per_kg": 33.33,
+    "v0_kmh": 40.0,
+    "site_anchors": [
+      24,
+      14,
+      18,
+      31
+    ],
+    "point_names": [
+      "W0",
+      "W1",
+      "M12",
+      "W2",
+      "M23",
+      "W3"
+    ],
+    "point_starts_h": [
+      0,
+      1,
+      1.5,
+      2,
+      2.5,
+      3
+    ],
+    "horizon_h": 3.5,
+    "accounting_dt_h": 0.5,
+    "closure_rule": "PROJECT_ASSUMPTION_FOR_B3: finish entered edge at entry-state duration; replan at every node using current state; never enter a closed edge",
+    "initial_inventory_mode": "OPTION_A_SITE_PLUS_ONBOARD_EQUALS_ACTUAL_MSP",
+    "refueling": "NONBINDING_REFUELING_V1_ASSUMPTION: zero-duration atomic transfer at site; reject insufficient station inventory or tank overflow",
+    "HTT": "OFF",
+    "traction_H2": "OFF_PROJECT_SIMPLIFICATION",
+    "simultaneous_event_order": "finish intervals, update road state, process vehicles by ascending ID and each vehicle action sequence",
+    "service_fuel_exhaustion": "stop generation at exact exhaustion; remain parked until requested service end",
+    "action_timing": "per-vehicle sequential queue; at_h is earliest start; no preemption",
+    "C_tolerance_km": 1e-10,
+    "mass_tolerance_kg": 1e-09
+  }
+}

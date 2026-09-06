@@ -1,0 +1,9 @@
+{
+  "file": "terminalLoh_wdro\\partial_temporal_refinement\\consequences\\state-001_five_point_consequence.h5",
+  "sha256": "7e71b3d23ab438b53d3e15f529948c1164c501e7ca0bef1d82814dfa77c16911",
+  "state_id": 1,
+  "path_id": 1,
+  "inventory_arm": "BASE2-DRO",
+  "inventory_path": 2,
+  "pairing": "mechanical independent smoke selection, no probabilistic pairing claim"
+}

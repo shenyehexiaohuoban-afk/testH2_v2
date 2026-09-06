@@ -1,0 +1,18 @@
+case,kind,description,event_rows,result
+CASE-1,ARTIFICIAL_UNIT_TEST_ONLY,13分钟精确到达；同一道路状态,12,PASS
+CASE-2,ARTIFICIAL_UNIT_TEST_ONLY,第18分钟出发，第31分钟到达；跨0.5h进度不清零,24,PASS
+CASE-3,ARTIFICIAL_UNIT_TEST_ONLY,跨W1→M12仍OPEN；当前边保留入边时长，下一边新后果值,42,PASS
+CASE-4,ARTIFICIAL_UNIT_TEST_ONLY,入边后关闭仍完成；返程重新规划，不再进入closed原边,48,PASS
+CASE-5-unreachable,ARTIFICIAL_UNIT_TEST_ONLY,下一边关闭，停在到达节点并标记UNREACHABLE,37,PASS
+CASE-5-reroute,ARTIFICIAL_UNIT_TEST_ONLY,下一边关闭，存在替代路径时重规划,48,PASS
+CASE-6,ARTIFICIAL_UNIT_TEST_ONLY,真实DRO路径Option-A初始逐站分账,6,PASS
+CASE-7,ARTIFICIAL_UNIT_TEST_ONLY,到站后零时长转移10kg,13,PASS
+CASE-8,ARTIFICIAL_UNIT_TEST_ONLY,人工资源边界：分别拒绝超罐与共享站库存不足，原子性不变账,8,PASS
+CASE-9,ARTIFICIAL_UNIT_TEST_ONLY,18分钟SERVICE后13分钟MOVE；220kW×0.3h=66kWh,24,PASS
+CASE-10,ARTIFICIAL_UNIT_TEST_ONLY,同站两车共享初始分配；同一时刻按车辆ID处理补氢，第二车拒绝重复占用,8,PASS
+EXTRA-fuel-exhaustion,ARTIFICIAL_UNIT_TEST_ONLY,1kg燃料精确耗尽后停止输出，保持原SERVICE请求结束时间,18,PASS
+EXTRA-offsite-refuel,ARTIFICIAL_UNIT_TEST_ONLY,非H2站禁止补氢；MOVE后动作顺序执行,13,PASS
+EXTRA-boundary-arrival,ARTIFICIAL_UNIT_TEST_ONLY,节点到达恰好等于1.5h；优先应用新closed状态,31,PASS
+EXTRA-horizon-in-transit,ARTIFICIAL_UNIT_TEST_ONLY,horizon截断保留在途位置和已完成进度,48,PASS
+EXTRA-concurrent-service,ARTIFICIAL_UNIT_TEST_ONLY,两车同时SERVICE，全局时钟与能量质量守恒,12,PASS
+FROZEN-INTEGRATION,FROZEN_W_STATE_001_PATH_00001,真实frozen W state001/path00001 + 真实DRO库存；固定动作，不是联合概率样本或OOS,259,PASS

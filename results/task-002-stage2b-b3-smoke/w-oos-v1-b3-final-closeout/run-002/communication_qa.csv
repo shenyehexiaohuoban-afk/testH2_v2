@@ -1,0 +1,7 @@
+check,result,evidence
+engineering_expression_coverage,PASS,10/10 completed engineering questions have Chinese conclusions and numeric evidence in issue_by_issue_result_ledger.csv
+deferred_and_not_applicable_coverage,PASS,4/4 excluded question groups explicitly retained with limits
+six_case_actual_evidence,PASS,key_event_ledger_rows.csv and key_action_event_rows.csv preserve source CSV line numbers
+assumptions_and_parameters,PASS,00_plain_language_summary_zh.md separates VERIFIED_EXISTING B2_VERIFIED PROJECT_ASSUMPTION_FOR_B3 PROVISIONAL_PARAMETER NOT_ESTABLISHED
+conclusion_boundary,PASS,No formal OOS optimizer optimum or rescue-performance claim
+COMMUNICATION_QA,PASS,Restricted-scope engineering closeout only

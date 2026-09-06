@@ -1,0 +1,2 @@
+# Preserve exact closeout artifact bytes across Git checkout platforms.
+* -text

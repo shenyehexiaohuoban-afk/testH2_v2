@@ -1,0 +1,5 @@
+{
+  "B2_C_REGRESSION_QA": "PASS",
+  "examples": 15,
+  "max_abs_diff_km": 0.0
+}

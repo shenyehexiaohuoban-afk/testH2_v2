@@ -1,0 +1,69 @@
+{
+  "B3_DETAILED_CLOSEOUT": "PASS",
+  "ANALYSIS_QA": "PASS",
+  "DATA_PRESERVATION_QA": "PASS",
+  "checks": 3469,
+  "failures": [],
+  "existing_B3_PHYSICS_ENGINE_SMOKE": "PASS",
+  "B3_RERUN": false,
+  "existing_worktree_preserved": true,
+  "source_count": 207,
+  "CASE2_arrival_min": 30.999999999999996,
+  "CASE4_enter_h": 1.4,
+  "CASE4_closure_h": 1.5,
+  "CASE4_next_node_h": 1.6166666666666665,
+  "CASE4_edge_entries": [
+    1,
+    2,
+    3
+  ],
+  "CASE6_partition": [
+    {
+      "site": "1",
+      "actual_inventory_kg": "84.1553559615926",
+      "station_initial_kg": "69.1553559615926",
+      "vehicle_initial_kg": "15.0",
+      "error_kg": "0.0"
+    },
+    {
+      "site": "2",
+      "actual_inventory_kg": "58.5009093832021",
+      "station_initial_kg": "55.5009093832021",
+      "vehicle_initial_kg": "3.0",
+      "error_kg": "0.0"
+    },
+    {
+      "site": "3",
+      "actual_inventory_kg": "35.3376415005701",
+      "station_initial_kg": "33.3376415005701",
+      "vehicle_initial_kg": "2.0",
+      "error_kg": "0.0"
+    },
+    {
+      "site": "4",
+      "actual_inventory_kg": "45.9373084666148",
+      "station_initial_kg": "37.9373084666148",
+      "vehicle_initial_kg": "8.0",
+      "error_kg": "0.0"
+    }
+  ],
+  "CASE6_max_error_kg": 0.0,
+  "CASE7_duration_h": 0,
+  "CASE7_transfer_kg": 10,
+  "CASE7_total_H2_kg": 223.9312153119796,
+  "CASE9_energy_kWh": 66.0,
+  "CASE9_used_H2_kg": 3.6003600360036003,
+  "CASE9_expected_H2_kg": 3.6003600360036,
+  "CASE9_error_kg": 4.440892098500626e-16,
+  "CASE10_station1_kg": [
+    20,
+    5,
+    1,
+    1
+  ],
+  "CASE10_total_H2_kg": 80,
+  "existing_cases": 17,
+  "existing_checks": 3875,
+  "max_mass_error_kg": 2.842170943040401e-14,
+  "max_C_diff_km": 0
+}

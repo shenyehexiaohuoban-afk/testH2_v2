@@ -1,0 +1,16 @@
+example,matrix_entries,site_entries,max_abs_diff_km,unreachable_mismatches,edge_time_QA
+C_MFCV_example_state01_M12.npz,1089,132,0.0,0,PASS
+C_MFCV_example_state01_M23.npz,1089,132,0.0,0,PASS
+C_MFCV_example_state01_W1.npz,1089,132,0.0,0,PASS
+C_MFCV_example_state01_W2.npz,1089,132,0.0,0,PASS
+C_MFCV_example_state01_W3.npz,1089,132,0.0,0,PASS
+C_MFCV_example_state18_M12.npz,1089,132,0.0,0,PASS
+C_MFCV_example_state18_M23.npz,1089,132,0.0,0,PASS
+C_MFCV_example_state18_W1.npz,1089,132,0.0,0,PASS
+C_MFCV_example_state18_W2.npz,1089,132,0.0,0,PASS
+C_MFCV_example_state18_W3.npz,1089,132,0.0,0,PASS
+C_MFCV_example_state35_M12.npz,1089,132,0.0,0,PASS
+C_MFCV_example_state35_M23.npz,1089,132,0.0,0,PASS
+C_MFCV_example_state35_W1.npz,1089,132,0.0,0,PASS
+C_MFCV_example_state35_W2.npz,1089,132,0.0,0,PASS
+C_MFCV_example_state35_W3.npz,1089,132,0.0,0,PASS

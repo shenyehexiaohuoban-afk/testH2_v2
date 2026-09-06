@@ -1,0 +1,9 @@
+check,result,evidence
+original_source_identity,PASS,207 unique files reconciled against historical manifests with previous log append explicitly identified
+source_before_after,PASS,207 SHA256 values unchanged during read-only verification
+tracked_dirty_preservation,PASS,All 31 original tracked status entries and existing content hashes unchanged
+untracked_preservation,PASS,23014 original untracked paths size and mtime fingerprint unchanged during verification
+independent_run,PASS,Original B3 run-001 unchanged; failed empty closeout run-001 retained; accepted closeout run-002 used
+numeric_traceability,PASS,Case inputs full original ledgers independent check CSV and source line extracts retained
+external_dependencies,PASS,REPRODUCIBILITY.md identifies protected local files required for full smoke reproduction
+DATA_PRESERVATION_QA,PASS,No original data or physics/config edits

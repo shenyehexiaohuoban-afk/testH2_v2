@@ -1,0 +1,1226 @@
+[
+  {
+    "case": "CASE-1",
+    "vehicles": [
+      {
+        "vehicle_id": 1,
+        "node": 1,
+        "state": "PARKED",
+        "status": "ARRIVED",
+        "onboard_H2_kg": 10.0,
+        "current_edge": null,
+        "move_physical_km": 8.666666666666666,
+        "move_equivalent_km": 8.666666666666666
+      },
+      {
+        "vehicle_id": 2,
+        "node": 24,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 5.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 3,
+        "node": 14,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 3.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 4,
+        "node": 18,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 2.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 5,
+        "node": 31,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 4.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 6,
+        "node": 31,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 4.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      }
+    ],
+    "station_H2_kg": [
+      69.1553559615926,
+      55.5009093832021,
+      33.3376415005701,
+      37.9373084666148
+    ],
+    "consumed_H2_kg": 0.0
+  },
+  {
+    "case": "CASE-2",
+    "vehicles": [
+      {
+        "vehicle_id": 1,
+        "node": 1,
+        "state": "PARKED",
+        "status": "ARRIVED",
+        "onboard_H2_kg": 10.0,
+        "current_edge": null,
+        "move_physical_km": 8.666666666666666,
+        "move_equivalent_km": 8.666666666666666
+      },
+      {
+        "vehicle_id": 2,
+        "node": 24,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 5.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 3,
+        "node": 14,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 3.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 4,
+        "node": 18,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 2.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 5,
+        "node": 31,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 4.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 6,
+        "node": 31,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 4.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      }
+    ],
+    "station_H2_kg": [
+      69.1553559615926,
+      55.5009093832021,
+      33.3376415005701,
+      37.9373084666148
+    ],
+    "consumed_H2_kg": 0.0
+  },
+  {
+    "case": "CASE-3",
+    "vehicles": [
+      {
+        "vehicle_id": 1,
+        "node": 2,
+        "state": "PARKED",
+        "status": "ARRIVED",
+        "onboard_H2_kg": 10.0,
+        "current_edge": null,
+        "move_physical_km": 12.666666666666666,
+        "move_equivalent_km": 14.666666666666666
+      },
+      {
+        "vehicle_id": 2,
+        "node": 24,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 5.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 3,
+        "node": 14,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 3.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 4,
+        "node": 18,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 2.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 5,
+        "node": 31,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 4.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 6,
+        "node": 31,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 4.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      }
+    ],
+    "station_H2_kg": [
+      69.1553559615926,
+      55.5009093832021,
+      33.3376415005701,
+      37.9373084666148
+    ],
+    "consumed_H2_kg": 0.0
+  },
+  {
+    "case": "CASE-4",
+    "vehicles": [
+      {
+        "vehicle_id": 1,
+        "node": 24,
+        "state": "PARKED",
+        "status": "ARRIVED",
+        "onboard_H2_kg": 10.0,
+        "current_edge": null,
+        "move_physical_km": 12.0,
+        "move_equivalent_km": 12.0
+      },
+      {
+        "vehicle_id": 2,
+        "node": 24,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 5.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 3,
+        "node": 14,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 3.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 4,
+        "node": 18,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 2.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 5,
+        "node": 31,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 4.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 6,
+        "node": 31,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 4.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      }
+    ],
+    "station_H2_kg": [
+      69.1553559615926,
+      55.5009093832021,
+      33.3376415005701,
+      37.9373084666148
+    ],
+    "consumed_H2_kg": 0.0
+  },
+  {
+    "case": "CASE-5-unreachable",
+    "vehicles": [
+      {
+        "vehicle_id": 1,
+        "node": 1,
+        "state": "PARKED",
+        "status": "UNREACHABLE",
+        "onboard_H2_kg": 10.0,
+        "current_edge": null,
+        "move_physical_km": 8.666666666666666,
+        "move_equivalent_km": 8.666666666666666
+      },
+      {
+        "vehicle_id": 2,
+        "node": 24,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 5.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 3,
+        "node": 14,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 3.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 4,
+        "node": 18,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 2.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 5,
+        "node": 31,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 4.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 6,
+        "node": 31,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 4.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      }
+    ],
+    "station_H2_kg": [
+      69.1553559615926,
+      55.5009093832021,
+      33.3376415005701,
+      37.9373084666148
+    ],
+    "consumed_H2_kg": 0.0
+  },
+  {
+    "case": "CASE-5-reroute",
+    "vehicles": [
+      {
+        "vehicle_id": 1,
+        "node": 2,
+        "state": "PARKED",
+        "status": "ARRIVED",
+        "onboard_H2_kg": 10.0,
+        "current_edge": null,
+        "move_physical_km": 20.666666666666664,
+        "move_equivalent_km": 20.666666666666664
+      },
+      {
+        "vehicle_id": 2,
+        "node": 24,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 5.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 3,
+        "node": 14,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 3.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 4,
+        "node": 18,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 2.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 5,
+        "node": 31,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 4.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 6,
+        "node": 31,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 4.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      }
+    ],
+    "station_H2_kg": [
+      69.1553559615926,
+      55.5009093832021,
+      33.3376415005701,
+      37.9373084666148
+    ],
+    "consumed_H2_kg": 0.0
+  },
+  {
+    "case": "CASE-6",
+    "vehicles": [
+      {
+        "vehicle_id": 1,
+        "node": 24,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 10.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 2,
+        "node": 24,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 5.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 3,
+        "node": 14,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 3.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 4,
+        "node": 18,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 2.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 5,
+        "node": 31,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 4.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 6,
+        "node": 31,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 4.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      }
+    ],
+    "station_H2_kg": [
+      69.1553559615926,
+      55.5009093832021,
+      33.3376415005701,
+      37.9373084666148
+    ],
+    "consumed_H2_kg": 0.0
+  },
+  {
+    "case": "CASE-7",
+    "vehicles": [
+      {
+        "vehicle_id": 1,
+        "node": 14,
+        "state": "PARKED",
+        "status": "ARRIVED",
+        "onboard_H2_kg": 20.0,
+        "current_edge": null,
+        "move_physical_km": 8.666666666666666,
+        "move_equivalent_km": 8.666666666666666
+      },
+      {
+        "vehicle_id": 2,
+        "node": 24,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 5.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 3,
+        "node": 14,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 3.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 4,
+        "node": 18,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 2.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 5,
+        "node": 31,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 4.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 6,
+        "node": 31,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 4.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      }
+    ],
+    "station_H2_kg": [
+      69.1553559615926,
+      45.5009093832021,
+      33.3376415005701,
+      37.9373084666148
+    ],
+    "consumed_H2_kg": 0.0
+  },
+  {
+    "case": "CASE-8",
+    "vehicles": [
+      {
+        "vehicle_id": 1,
+        "node": 24,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 10.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 2,
+        "node": 24,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 5.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 3,
+        "node": 14,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 3.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 4,
+        "node": 18,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 2.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 5,
+        "node": 31,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 4.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 6,
+        "node": 31,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 4.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      }
+    ],
+    "station_H2_kg": [
+      5.0,
+      17.0,
+      18.0,
+      12.0
+    ],
+    "consumed_H2_kg": 0.0
+  },
+  {
+    "case": "CASE-9",
+    "vehicles": [
+      {
+        "vehicle_id": 1,
+        "node": 1,
+        "state": "PARKED",
+        "status": "ARRIVED",
+        "onboard_H2_kg": 6.3996399639964,
+        "current_edge": null,
+        "move_physical_km": 8.666666666666666,
+        "move_equivalent_km": 8.666666666666666
+      },
+      {
+        "vehicle_id": 2,
+        "node": 24,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 5.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 3,
+        "node": 14,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 3.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 4,
+        "node": 18,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 2.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 5,
+        "node": 31,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 4.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 6,
+        "node": 31,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 4.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      }
+    ],
+    "station_H2_kg": [
+      69.1553559615926,
+      55.5009093832021,
+      33.3376415005701,
+      37.9373084666148
+    ],
+    "consumed_H2_kg": 3.6003600360036003
+  },
+  {
+    "case": "CASE-10",
+    "vehicles": [
+      {
+        "vehicle_id": 1,
+        "node": 24,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 14.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 2,
+        "node": 24,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 5.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 3,
+        "node": 14,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 3.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 4,
+        "node": 18,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 2.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 5,
+        "node": 31,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 4.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 6,
+        "node": 31,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 4.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      }
+    ],
+    "station_H2_kg": [
+      1.0,
+      17.0,
+      18.0,
+      12.0
+    ],
+    "consumed_H2_kg": 0.0
+  },
+  {
+    "case": "EXTRA-fuel-exhaustion",
+    "vehicles": [
+      {
+        "vehicle_id": 1,
+        "node": 24,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 0.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 2,
+        "node": 24,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 0.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 3,
+        "node": 14,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 0.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 4,
+        "node": 18,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 0.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 5,
+        "node": 31,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 0.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 6,
+        "node": 31,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 0.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      }
+    ],
+    "station_H2_kg": [
+      83.1553559615926,
+      58.5009093832021,
+      35.3376415005701,
+      45.9373084666148
+    ],
+    "consumed_H2_kg": 1.0
+  },
+  {
+    "case": "EXTRA-offsite-refuel",
+    "vehicles": [
+      {
+        "vehicle_id": 1,
+        "node": 1,
+        "state": "PARKED",
+        "status": "ARRIVED",
+        "onboard_H2_kg": 10.0,
+        "current_edge": null,
+        "move_physical_km": 8.666666666666666,
+        "move_equivalent_km": 8.666666666666666
+      },
+      {
+        "vehicle_id": 2,
+        "node": 24,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 5.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 3,
+        "node": 14,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 3.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 4,
+        "node": 18,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 2.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 5,
+        "node": 31,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 4.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 6,
+        "node": 31,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 4.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      }
+    ],
+    "station_H2_kg": [
+      69.1553559615926,
+      55.5009093832021,
+      33.3376415005701,
+      37.9373084666148
+    ],
+    "consumed_H2_kg": 0.0
+  },
+  {
+    "case": "EXTRA-boundary-arrival",
+    "vehicles": [
+      {
+        "vehicle_id": 1,
+        "node": 1,
+        "state": "PARKED",
+        "status": "UNREACHABLE",
+        "onboard_H2_kg": 10.0,
+        "current_edge": null,
+        "move_physical_km": 4.0,
+        "move_equivalent_km": 4.0
+      },
+      {
+        "vehicle_id": 2,
+        "node": 24,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 5.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 3,
+        "node": 14,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 3.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 4,
+        "node": 18,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 2.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 5,
+        "node": 31,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 4.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 6,
+        "node": 31,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 4.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      }
+    ],
+    "station_H2_kg": [
+      69.1553559615926,
+      55.5009093832021,
+      33.3376415005701,
+      37.9373084666148
+    ],
+    "consumed_H2_kg": 0.0
+  },
+  {
+    "case": "EXTRA-horizon-in-transit",
+    "vehicles": [
+      {
+        "vehicle_id": 1,
+        "node": null,
+        "state": "MOVING",
+        "status": "IN_TRANSIT",
+        "onboard_H2_kg": 10.0,
+        "current_edge": 1,
+        "move_physical_km": 4.000000000000001,
+        "move_equivalent_km": 4.000000000000001
+      },
+      {
+        "vehicle_id": 2,
+        "node": 24,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 5.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 3,
+        "node": 14,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 3.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 4,
+        "node": 18,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 2.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 5,
+        "node": 31,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 4.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 6,
+        "node": 31,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 4.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      }
+    ],
+    "station_H2_kg": [
+      69.1553559615926,
+      55.5009093832021,
+      33.3376415005701,
+      37.9373084666148
+    ],
+    "consumed_H2_kg": 0.0
+  },
+  {
+    "case": "EXTRA-concurrent-service",
+    "vehicles": [
+      {
+        "vehicle_id": 1,
+        "node": 24,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 6.3996399639964,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 2,
+        "node": 24,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 3.3634727109074545,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 3,
+        "node": 14,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 3.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 4,
+        "node": 18,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 2.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 5,
+        "node": 31,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 4.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 6,
+        "node": 31,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 4.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      }
+    ],
+    "station_H2_kg": [
+      69.1553559615926,
+      55.5009093832021,
+      33.3376415005701,
+      37.9373084666148
+    ],
+    "consumed_H2_kg": 5.236887325096146
+  },
+  {
+    "case": "FROZEN-INTEGRATION",
+    "vehicles": [
+      {
+        "vehicle_id": 1,
+        "node": 24,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 14.763112674903857,
+        "current_edge": null,
+        "move_physical_km": 31.125375427286492,
+        "move_equivalent_km": 31.12722441994407
+      },
+      {
+        "vehicle_id": 2,
+        "node": 31,
+        "state": "PARKED",
+        "status": "ARRIVED",
+        "onboard_H2_kg": 5.0,
+        "current_edge": null,
+        "move_physical_km": 27.31551176011214,
+        "move_equivalent_km": 27.31689368950938
+      },
+      {
+        "vehicle_id": 3,
+        "node": 14,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 2.181736355453728,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 4,
+        "node": 24,
+        "state": "PARKED",
+        "status": "ARRIVED",
+        "onboard_H2_kg": 2.0,
+        "current_edge": null,
+        "move_physical_km": 30.90101645292753,
+        "move_equivalent_km": 30.90288581054171
+      },
+      {
+        "vehicle_id": 5,
+        "node": 31,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 4.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      },
+      {
+        "vehicle_id": 6,
+        "node": 31,
+        "state": "PARKED",
+        "status": "IDLE",
+        "onboard_H2_kg": 4.0,
+        "current_edge": null,
+        "move_physical_km": 0.0,
+        "move_equivalent_km": 0.0
+      }
+    ],
+    "station_H2_kg": [
+      69.1553559615926,
+      45.5009093832021,
+      33.3376415005701,
+      37.9373084666148
+    ],
+    "consumed_H2_kg": 6.055150969642414
+  }
+]
