@@ -1,0 +1,3 @@
+path,change,protected_modules
+W_OOS/V1/src/b4_event_driven_restoration_smoke.py,added explicit B4C source dispatch/H2 coupling and complete identity-case serialization,"B3 engine, BASE2, frozen W, production dispatcher"
+codex_rule/log.md,appended verified B4C detailed closeout execution record,"core.md, longtask.md"

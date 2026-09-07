@@ -1,0 +1,27 @@
+{
+  "ISSUE_1": {
+    "classification": "MODEL_BUG",
+    "original_P_MFCV_field": "available capacity (active vehicle count * 220 kW), not actual dispatch",
+    "evidence": "run-001 source line 60 and MFCV_H2_ledger.csv"
+  },
+  "ISSUE_2": {
+    "classification": "MODEL_BUG",
+    "finding": "fixed FC dispatch variable and station H2 linkage were absent; station ledger was hard-coded zero"
+  },
+  "ISSUE_3": {
+    "classification": "MODEL_BUG",
+    "finding": "original runner had no fixed-FC actual dispatch, so Pmax was not an enforced output constraint"
+  },
+  "ISSUE_4": {
+    "classification": "MODEL_BUG",
+    "finding": "420 kW was bus24 load copied to served when eligible root existed; no source balance"
+  },
+  "ISSUE_5": {
+    "classification": "YES",
+    "finding": "root existence acted as unlimited source in original runner"
+  },
+  "CORRECTION": {
+    "status": "APPLIED",
+    "scope": "B4 local runner only; no B3, BASE2, frozen W, LinDistFlow main structure, or production dispatcher changes"
+  }
+}

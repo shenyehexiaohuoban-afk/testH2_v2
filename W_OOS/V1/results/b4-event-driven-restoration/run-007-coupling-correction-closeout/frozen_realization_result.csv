@@ -1,0 +1,2 @@
+case,state_id,path_id,point,failure_mask,source,scope
+FROZEN_REALIZATION_STATE1_PATH117_W2,1,117,W2,16777216,existing five-point HDF5 raw mask,single frozen realization; no W/OOS

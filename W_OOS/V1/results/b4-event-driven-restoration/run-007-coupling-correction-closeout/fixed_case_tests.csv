@@ -1,0 +1,14 @@
+case,result,intervals,detail
+CASE-1,PASS,1,B4C deterministic mandatory fixture
+CASE-2,PASS,3,B4C deterministic mandatory fixture
+CASE-3,PASS,3,B4C deterministic mandatory fixture
+CASE-4,PASS,3,B4C deterministic mandatory fixture
+CASE-5,PASS,4,B4C deterministic mandatory fixture
+CASE-6,PASS,4,B4C deterministic mandatory fixture
+CASE-7,PASS,3,B4C deterministic mandatory fixture
+CASE-8,PASS,1,B4C deterministic mandatory fixture
+CASE-9,PASS,1,B4C deterministic mandatory fixture
+CASE-10,PASS,2,B4C deterministic mandatory fixture
+CASE-11,PASS,1,B4C deterministic mandatory fixture
+CASE-12,PASS,3,B4C deterministic mandatory fixture
+CASE-13,PASS,4,event-time arrival vs half-hour delayed reporting

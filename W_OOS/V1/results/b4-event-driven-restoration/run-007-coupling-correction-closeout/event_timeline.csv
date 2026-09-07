@@ -1,0 +1,9 @@
+case,event_time_h,semantics
+GLOBAL,0,exact event interval boundary
+GLOBAL,1,exact event interval boundary
+GLOBAL,1.2166666666667,exact event interval boundary
+GLOBAL,1.5,exact event interval boundary
+GLOBAL,2,exact event interval boundary
+GLOBAL,2.5,exact event interval boundary
+GLOBAL,3,exact event interval boundary
+GLOBAL,3.5,exact event interval boundary

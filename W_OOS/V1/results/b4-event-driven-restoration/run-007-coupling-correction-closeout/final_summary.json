@@ -1,0 +1,32 @@
+{
+  "B4C_FORENSIC_AUDIT": "PASS",
+  "B4_COUPLING_CORRECTION": "PASS",
+  "B4_PHYSICS_MODEL_STATUS": "CORRECTED",
+  "H2_ELECTRICAL_COUPLING": "VERIFIED",
+  "FIXED_FC_CAPACITY_COUPLING": "VERIFIED",
+  "ROOT_SEMANTICS": "VERIFIED",
+  "B4_EVENT_DRIVEN_RESTORATION_SMOKE": "PASS",
+  "READY_FOR_ROLLING_MOBILITY_DISPATCH": "NO",
+  "original_MFCV_P_field_semantics": "AVAILABLE_CAPACITY",
+  "original_H2_zero_classification": "MODEL_BUG",
+  "original_fixed_FC_Pmax_enforced": false,
+  "case3_420_kW_cause": "root existence copied bus24 load into served ledger",
+  "fixed_FC_interval_binding": true,
+  "MFCV_interval_binding": true,
+  "case4_arrival_h": 1.2166666666667,
+  "system_H2_identity_max_error_kg": 1.5987211554602254e-14,
+  "root_fields": [
+    "eligible_real_roots",
+    "selected_topological_root",
+    "actual_injecting_sources"
+  ],
+  "frozen_realization": "PASS",
+  "case_count": 13,
+  "mandatory_cases": "CASE-1..CASE-13",
+  "no_training": true,
+  "no_rolling_mobility": true,
+  "no_commit": true,
+  "no_push": true,
+  "source_mat_sha256": "536b25868e6d7cc812a331c0d3e0ffbd5f6958e6883bd39bcae3901c372abf24",
+  "event_driven_vs_delayed_difference_kWh": 3.315000000000225
+}

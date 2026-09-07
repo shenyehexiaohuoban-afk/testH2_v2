@@ -1,0 +1,9 @@
+order,layer,actual_field,constraint,source_file,function
+1,event interval,interval_start_h/interval_end_h,exact sorted event boundaries,b4_event_driven_restoration_smoke.py,run_case
+2,topology/island,active branches/islands,Kruskal radial forest over healthy normal + tie edges,b4_event_driven_restoration_smoke.py,radial_tree
+3,root semantics,eligible_real_roots/selected_topological_root/actual_injecting_sources,one selected root per energized island,b4_event_driven_restoration_smoke.py,dispatch_interval
+4,LinDistFlow variables/source dispatch,"served P/Q, source P/Q, branch P/Q, squared voltage","nodal P/Q balance, voltage drop, branch octagon, source bounds and PF/H2 bounds",b4_event_driven_restoration_smoke.py,dispatch_interval
+5,fixed FC and MFCV dispatch,actual_P_kW/actual_Q_kvar,fixed FC 0<=P<=Pmax; MFCV SERVICE/non-MOVING/at-bus/onboard H2/Pmax=220; |Q|<=QFAC*P,b4_event_driven_restoration_smoke.py,dispatch_interval
+6,served load,served_P_kW/served_Q_kvar,LP nodal balance from utility/fixed FC/MFCV injections; root alone gives zero,b4_event_driven_restoration_smoke.py,dispatch_interval
+7,H2 coupling,H2_use_kg,P*duration/(0.55*33.33),b4_event_driven_restoration_smoke.py,dispatch_interval
+8,ledger serialization,before/use/after and available/actual fields,"interval rows, no event-only inventory",b4_event_driven_restoration_smoke.py,run
