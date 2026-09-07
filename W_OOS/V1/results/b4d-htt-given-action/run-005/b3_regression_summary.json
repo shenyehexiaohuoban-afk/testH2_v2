@@ -1,0 +1,8 @@
+{
+  "source_run": "W_OOS/V1/results/b3-physics-smoke/run-005",
+  "B3_REGRESSION": "PASS",
+  "B3_check_count": 3883,
+  "max_mass_error_kg": 2.842170943040401e-14,
+  "road_C_regression": "PASS",
+  "max_C_diff_km": 0.0
+}

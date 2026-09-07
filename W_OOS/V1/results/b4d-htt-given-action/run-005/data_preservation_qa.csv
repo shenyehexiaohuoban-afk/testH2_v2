@@ -1,0 +1,6 @@
+check,result,detail
+protected_source_hashes,PASS,5 protected B3/B4C/data files unchanged
+historical_runs,PASS,new run directories only; no overwrite/delete
+raw_ledgers,PASS,vehicle/movement/transfer/station/MFCV/HTT/electrical ledgers retained
+input_identity,PASS,B3/B4C regression source runs and SHA-256 manifest retained
+DATA_PRESERVATION_QA,PASS,local-only; no commit/push

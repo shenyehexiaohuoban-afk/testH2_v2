@@ -1,0 +1,4 @@
+action_id,batch_time_h,transfer_type,requested_kg,transferred_kg,status,reason,htt_id,mfcv_id,station_site,station_bus,station_H2_before_kg,station_H2_after_kg,HTT_cargo_before_kg,HTT_cargo_after_kg,MFCV_onboard_before_kg,MFCV_onboard_after_kg,system_H2_before_kg,system_H2_after_kg,system_H2_transfer_error_kg,case,batch_id
+C13-LOAD,0.0,STATION_TO_HTT,10.0,10.0,TRANSFERRED,,1,,1,24,10.0,0.0,0.0,10.0,,,10.0,10.0,0.0,CASE-13,C13-T0
+C13-UNLOAD,0.325,HTT_TO_STATION,10.0,10.0,TRANSFERRED,,1,,2,14,0.0,10.0,10.0,0.0,,,10.0,10.0,0.0,CASE-13,C13-ARRIVAL
+C13-MFCV-REFUEL,0.325,STATION_TO_MFCV,6.0,6.0,TRANSFERRED,,,1,2,14,10.0,4.0,,,0.0,6.0,10.0,10.0,0.0,CASE-13,C13-ARRIVAL

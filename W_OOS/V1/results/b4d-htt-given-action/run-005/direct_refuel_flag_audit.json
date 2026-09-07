@@ -1,0 +1,11 @@
+{
+  "ENABLE_HTT_TO_MFCV_REFUEL": false,
+  "interface_event_type": "HTT_TO_MFCV",
+  "interface_reserved": true,
+  "implementation_when_true": "NOT_IMPLEMENTED_RAISES",
+  "case12_colocation_bus": 1,
+  "case12_requested_kg": 5.0,
+  "case12_actual_kg": 0.0,
+  "case12_status": "DISABLED_DIRECT_REFUEL",
+  "case13_allowed_path": "HTT_TO_STATION then STATION_TO_MFCV"
+}

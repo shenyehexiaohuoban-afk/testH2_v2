@@ -1,0 +1,8 @@
+{
+  "source_run": "W_OOS/V1/results/b4-event-driven-restoration/run-008-b4d-regression",
+  "B4C_REGRESSION": "PASS",
+  "B4C_QA_count": 23,
+  "B4C_H2_identity_max_error_kg": 1.5987211554602254e-14,
+  "CASE3_fixed_FC_cap": "PASS",
+  "CASE4_MFCV_actual_dispatch_H2_coupling": "PASS"
+}

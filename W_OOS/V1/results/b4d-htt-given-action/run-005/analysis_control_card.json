@@ -1,0 +1,16 @@
+{
+  "OOS_ANALYSIS_PROTOCOL": "FOUR_LEVEL_ABCD_V1_4",
+  "RUN_MODE": "A",
+  "MODE_SCOPE": "RESTRICTED_SCOPE",
+  "FOCUS_QUESTIONS": "B4D given-action HTT continuous-time physics and station logistics",
+  "ACTIVE_LEVELS": "ENGINEERING_A",
+  "TRAINING_STATUS": "NOT_APPLICABLE",
+  "EVIDENCE_GRADE": "ENGINEERING",
+  "RESEARCH_QUESTION": "Can two explicit 80 kg HTTs move under B3 semantics and change B4C consequence only through lawful event-time station H2 transfers?",
+  "ALLOWED_CHANGE": "isolated B4D state/transfer/runner modules and new run artifacts",
+  "FROZEN_IDENTITIES": "B3 engine/road, B4C dispatch, BASE2, frozen W, scientific parameters",
+  "OOS_PATH_BANK": "NOT_APPLICABLE_HAND_CASE_SMOKE",
+  "NUMERICAL_TOLERANCE": 1e-09,
+  "UPGRADE_PERMISSION": "NO",
+  "FINAL_ALLOWED_CONCLUSION": "engineering verification only"
+}

@@ -1,0 +1,15 @@
+case,result,core_values,detail
+CASE-1,PASS,"{""station_delta_kg"": -30.0, ""cargo_delta_kg"": 30.0, ""duration_h"": 0.0}",empty HTT load; system H2 unchanged
+CASE-2,PASS,"{""cargo_before_kg"": 70.0, ""requested_kg"": 20.0, ""capacity_kg"": 80.0}",infeasible capacity request rejected without clipping
+CASE-3,PASS,"{""station_before_kg"": 15.0, ""requested_kg"": 30.0}",infeasible station request rejected; no negative inventory
+CASE-4,PASS,"{""arrival_h"": 0.325, ""target_before_arrival_kg"": 0.0, ""target_after_unload_kg"": 40.0}",target inventory changes only at exact B3 arrival
+CASE-5,PASS,"{""cargo_before_kg"": 80.0, ""unload_kg"": 30.0, ""cargo_after_kg"": 50.0}",partial unload retained cargo
+CASE-6,PASS,"{""arrival_B_h"": 0.325, ""arrival_C_h"": 0.55, ""B_unload_kg"": 30.0, ""C_unload_kg"": 20.0, ""final_cargo_kg"": 30.0}",A->B->C multi-stop verified
+CASE-7,PASS,"{""HTT1_arrival_h"": 0.325, ""HTT2_arrival_h"": 0.25, ""HTT1_final_cargo_kg"": 0.0, ""HTT2_final_cargo_kg"": 0.0}",two vehicle states/routes/cargo remain independent
+CASE-8,PASS,"{""available_kg"": 100.0, ""total_requested_kg"": 130.0, ""final_station_kg"": 100.0}",whole timestamp batch rejected atomically
+CASE-9,PASS,"{""entered_edges"": [1, 2, 3], ""first_edge_closed_at_h"": 1.5, ""final_node"": 24}","entered edge completed, then B3 rerouted without re-entering closed edge"
+CASE-10,PASS,"{""arrival_h"": 1.2166666666667, ""target_before_arrival_kg"": 0.0, ""unload_kg"": 40.0, ""event_EENS_kWh"": 785.00000000001, ""no_delivery_EENS_kWh"": 1470.0, ""EENS_reduction_kWh"": 684.99999999999, ""fixed_FC_H2_use_kg"": 37.367373100945905}",B4C recomputes at exact arrival; synthetic EENS decreases
+CASE-11,PASS,"{""P_HTT_kW"": 0.0, ""Q_HTT_kvar"": 0.0, ""electrical_source_rows"": 0}","HTT absent from roots, injectors, and P/Q dispatch"
+CASE-12,PASS,"{""colocation_bus"": 1, ""requested_direct_kg"": 5.0, ""actual_direct_kg"": 0.0, ""MFCV_final_kg"": 0.0}",direct-refuel schema exercised with flag OFF
+CASE-13,PASS,"{""arrival_h"": 0.325, ""HTT_to_station_kg"": 10.0, ""station_to_MFCV_kg"": 6.0, ""direct_kg"": 0.0}",station-mediated refuel recorded as two transfers
+CASE-14,PASS,"{""max_interval_diff"": 0.0, ""max_station_diff"": 0.0, ""max_MFCV_diff"": 0.0, ""max_final_station_diff"": 0.0}",no-op HTT framework equals B4C baseline

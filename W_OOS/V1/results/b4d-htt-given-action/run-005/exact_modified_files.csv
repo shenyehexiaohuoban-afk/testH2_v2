@@ -1,0 +1,5 @@
+path,change,protected_module
+W_OOS/V1/src/htt_state.py,new B3 motion adapter and explicit HTT state,False
+W_OOS/V1/src/htt_transfer.py,new atomic HTT/station/MFCV transfer ledger,False
+W_OOS/V1/src/b4d_htt_given_action_smoke.py,new B4D given-action runner,False
+codex_rule/log.md,append verified B4D execution record after closeout,False

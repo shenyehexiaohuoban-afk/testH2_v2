@@ -1,0 +1,21 @@
+question_id,active_level,status,reason,evidence
+B4D-Q01,ENGINEERING_A,COMPLETED,B4D restricted engineering smoke,fixed_case_tests.csv; QA_closeout.json; forensic ledgers
+B4D-Q02,ENGINEERING_A,COMPLETED,B4D restricted engineering smoke,fixed_case_tests.csv; QA_closeout.json; forensic ledgers
+B4D-Q03,ENGINEERING_A,COMPLETED,B4D restricted engineering smoke,fixed_case_tests.csv; QA_closeout.json; forensic ledgers
+B4D-Q04,ENGINEERING_A,COMPLETED,B4D restricted engineering smoke,fixed_case_tests.csv; QA_closeout.json; forensic ledgers
+B4D-Q05,ENGINEERING_A,COMPLETED,B4D restricted engineering smoke,fixed_case_tests.csv; QA_closeout.json; forensic ledgers
+B4D-Q06,ENGINEERING_A,COMPLETED,B4D restricted engineering smoke,fixed_case_tests.csv; QA_closeout.json; forensic ledgers
+B4D-Q07,ENGINEERING_A,COMPLETED,B4D restricted engineering smoke,fixed_case_tests.csv; QA_closeout.json; forensic ledgers
+B4D-Q08,ENGINEERING_A,COMPLETED,B4D restricted engineering smoke,fixed_case_tests.csv; QA_closeout.json; forensic ledgers
+B4D-Q09,ENGINEERING_A,COMPLETED,B4D restricted engineering smoke,fixed_case_tests.csv; QA_closeout.json; forensic ledgers
+B4D-Q10,ENGINEERING_A,COMPLETED,B4D restricted engineering smoke,fixed_case_tests.csv; QA_closeout.json; forensic ledgers
+B4D-Q11,ENGINEERING_A,COMPLETED,B4D restricted engineering smoke,fixed_case_tests.csv; QA_closeout.json; forensic ledgers
+B4D-Q12,ENGINEERING_A,COMPLETED,B4D restricted engineering smoke,fixed_case_tests.csv; QA_closeout.json; forensic ledgers
+B4D-Q13,ENGINEERING_A,COMPLETED,B4D restricted engineering smoke,fixed_case_tests.csv; QA_closeout.json; forensic ledgers
+B4D-Q14,ENGINEERING_A,COMPLETED,B4D restricted engineering smoke,fixed_case_tests.csv; QA_closeout.json; forensic ledgers
+B4D-Q15,ENGINEERING_A,COMPLETED,B4D restricted engineering smoke,fixed_case_tests.csv; QA_closeout.json; forensic ledgers
+B4D-Q16,ENGINEERING_A,COMPLETED,B4D restricted engineering smoke,fixed_case_tests.csv; QA_closeout.json; forensic ledgers
+B4D-Q17,ENGINEERING_A,COMPLETED,B4D restricted engineering smoke,fixed_case_tests.csv; QA_closeout.json; forensic ledgers
+B4D-Q18,ENGINEERING_A,COMPLETED,B4D restricted engineering smoke,fixed_case_tests.csv; QA_closeout.json; forensic ledgers
+B4D-Q19,ENGINEERING_A,COMPLETED,B4D restricted engineering smoke,fixed_case_tests.csv; QA_closeout.json; forensic ledgers
+B4D-Q20,ENGINEERING_A,COMPLETED,B4D restricted engineering smoke,fixed_case_tests.csv; QA_closeout.json; forensic ledgers

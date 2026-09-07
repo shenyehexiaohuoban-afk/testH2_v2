@@ -1,0 +1,23 @@
+{
+  "ENABLE_HTT": true,
+  "N_HTT": 2,
+  "HTT_FLEET_BENCHMARK": 2,
+  "HTT_CAPACITY_KG": 80.0,
+  "HTT_CAPACITY_BENCHMARK_KG": 80.0,
+  "HTT_FLEET_OPTIMALITY": "NOT_ESTABLISHED",
+  "HTT_LOAD_DURATION": 0.0,
+  "HTT_UNLOAD_DURATION": 0.0,
+  "INSTANTANEOUS_TRANSFER": true,
+  "PARTIAL_UNLOAD": true,
+  "ENABLE_HTT_TO_MFCV_REFUEL": false,
+  "HTT_TRACTION_ENERGY_MODEL": "NOT_MODELED_IN_B4D",
+  "H2_STATION_BUSES": [
+    24,
+    14,
+    18,
+    31
+  ],
+  "movement_engine": "W_OOS/V1/src/engine.py::Simulator",
+  "electrical_H2_evaluator": "W_OOS/V1/src/b4_event_driven_restoration_smoke.py::dispatch_interval",
+  "initial_location_status": "TEST_FIXTURE_INITIAL_LOCATION"
+}
