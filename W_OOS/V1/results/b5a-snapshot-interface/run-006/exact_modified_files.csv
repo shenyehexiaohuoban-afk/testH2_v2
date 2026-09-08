@@ -1,0 +1,4 @@
+path,change,protected_modules_modified
+W_OOS/V1/src/b4_event_driven_restoration_smoke.py,shared pure LinDistFlow core and duration-free dispatch_snapshot API,NO
+W_OOS/V1/src/b5a_snapshot_interface_smoke.py,standalone B5A read-only snapshot smoke runner and QA artifacts,NO
+codex_rule/log.md,append verified B5A snapshot-interface task record,NO

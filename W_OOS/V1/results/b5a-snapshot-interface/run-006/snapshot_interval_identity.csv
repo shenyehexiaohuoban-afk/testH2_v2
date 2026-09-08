@@ -1,0 +1,2 @@
+fixture,interval_dt_h,snapshot_P_served_kW,interval_P_served_kW,snapshot_P_shed_kW,interval_P_shed_kW,snapshot_Q_served_kvar,interval_Q_served_kvar,max_P_abs_diff_kW,max_Q_abs_diff_kvar,identity_result,difference_reason
+H2_ENERGY_NONBINDING,0.1,3715.0,3715.0,0.0,0.0,2293.588989435407,2293.588989435407,0.0,0.0,PASS,

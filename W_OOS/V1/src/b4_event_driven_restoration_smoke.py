@@ -124,9 +124,14 @@ def source_record(kind, resource_id, bus, pmax, p, q, h_before, h_use, h_after, 
                 H2_use_kg=float(h_use), H2_after_kg=float(h_after), station_site='' if site is None else int(site))
 
 
-def dispatch_interval(mask, start, end, vehicles, station):
-    """Solve one island-at-a-time LinDistFlow LP with explicit source variables."""
-    dt = float(end - start)
+def _dispatch_electrical(mask, real_sources):
+    """Solve the shared instantaneous LinDistFlow model without changing state.
+
+    ``real_sources`` entries preserve the established B4C ordering and have the
+    form ``(kind, id, bus, effective_pmax, resource_index, H2, reported_pmax,
+    station_site)``.  Interval and snapshot callers differ only in how they
+    derive ``effective_pmax``; topology, constraints, and objectives live here.
+    """
     grid = load_grid()
     p_load = np.asarray(grid.P_load_base_kw, dtype=float)
     q_load = np.asarray(grid.Q_load_base_kVAr, dtype=float)
@@ -136,7 +141,7 @@ def dispatch_interval(mask, start, end, vehicles, station):
     served_p = np.zeros(33); served_q = np.zeros(33)
     source_rows = []; root_rows = []; service_rows = []
     solved_voltage = np.ones(33); max_util = 0.0
-    active_vehicles = [v for v in vehicles if vehicle_active(v, start) and v['onboard_H2_kg'] > TOL]
+    flow_by_edge = {}
     branch_limit_kw = float(grid.branch_limit_mva) * 1000.0
     base_v2 = float(grid.base_kv) ** 2
 
@@ -145,13 +150,11 @@ def dispatch_interval(mask, start, end, vehicles, station):
         island_set = set(buses)
         edges = [(bid, u, v) for bid, (u, v) in active if u in island_set and v in island_set]
         eligible = []
-        if 1 in island_set: eligible.append(('UTILITY', 'UTILITY-BUS-1', 1, p_load.sum() * 2.0, 0, None))
-        for i, bus in enumerate(FC_BUSES):
-            if bus in island_set and station[i] > TOL:
-                h_before = float(station[i]); eligible.append(('FIXED_FC', 'FC-%d' % (i + 1), bus, min(FC_PMAX[i], h_before * H2_PER_KWH / dt), i, h_before))
-        for v in active_vehicles:
-            if int(v['bus']) in island_set:
-                eligible.append(('MFCV', 'MFCV-%d' % v['vehicle_id'], int(v['bus']), min(MFCV_PMAX, v['onboard_H2_kg'] * H2_PER_KWH / dt), v['vehicle_id'], v['onboard_H2_kg']))
+        if 1 in island_set:
+            utility_pmax = p_load.sum() * 2.0
+            eligible.append(('UTILITY', 'UTILITY-BUS-1', 1, utility_pmax, 0,
+                             None, utility_pmax, None))
+        eligible.extend(source for source in real_sources if source[2] in island_set)
 
         selected = eligible[0][2] if eligible else 'VIRTUAL_ROOT'
         # Variables: independent P/Q service fractions, source P/Q, branch P/Q, squared voltage.
@@ -222,29 +225,303 @@ def dispatch_interval(mask, start, end, vehicles, station):
             solver_status = 'OPTIMAL'
             equality_residual = float(np.max(np.abs(np.asarray(aeq_f) @ x - np.asarray(beq_f))))
             inequality_violation = float(max(0.0, np.max(np.asarray(aub) @ x - np.asarray(bub))))
-            for si, (kind, rid, bus, pmax, resource_idx, h_before) in enumerate(eligible):
+            for si, (kind, rid, bus, pmax, resource_idx, h_before,
+                     reported_pmax, station_site) in enumerate(eligible):
                 p = float(x[isp + si]); q = float(x[isq + si])
-                if kind == 'FIXED_FC':
-                    h_use = p * dt / H2_PER_KWH; station[resource_idx] -= h_use
-                    row = source_record(kind, rid, bus, FC_PMAX[resource_idx], p, q, h_before, h_use, station[resource_idx], resource_idx + 1)
-                elif kind == 'MFCV':
-                    vehicle = next(v for v in active_vehicles if v['vehicle_id'] == resource_idx)
-                    h_use = p * dt / H2_PER_KWH; vehicle['onboard_H2_kg'] -= h_use
-                    row = source_record(kind, rid, bus, MFCV_PMAX, p, q, h_before, h_use, vehicle['onboard_H2_kg'])
-                else:
-                    row = source_record(kind, rid, bus, pmax, p, q, 0, 0, 0)
+                h_value = 0.0 if h_before is None else float(h_before)
+                row = source_record(kind, rid, bus, reported_pmax, p, q,
+                                    h_value, 0.0, h_value, station_site)
                 injections.append(row); source_rows.append(dict(row))
             for j, bus in enumerate(buses):
                 served_p[bus - 1] = p_load[bus - 1] * x[izp + j]
                 served_q[bus - 1] = q_load[bus - 1] * x[izq + j]
                 solved_voltage[bus - 1] = math.sqrt(max(0.0, x[iv + j]))
             for ei in range(ne):
-                max_util = max(max_util, math.hypot(x[ipf + ei], x[iqf + ei]) / branch_limit_kw)
+                p_flow = float(x[ipf + ei]); q_flow = float(x[iqf + ei])
+                max_util = max(max_util, math.hypot(p_flow, q_flow) / branch_limit_kw)
+                bid, u, v = edges[ei]
+                flow_by_edge[(u, v)] = (p_flow, q_flow, bid)
         actual = [r['resource_id'] for r in injections if r['actual_P_kW'] > TOL]
         eligible_buses = sorted(set(int(e[2]) for e in eligible))
         root_rows.append(dict(island_buses=json.dumps(island), eligible_real_roots=json.dumps(eligible_buses), selected_topological_root=selected, actual_injecting_sources=json.dumps(actual), root_uniqueness=True, one_topological_root=True))
         service_rows.append(dict(island_buses=json.dumps(island), load_P_kW=float(p_load[[b - 1 for b in buses]].sum()), load_Q_kvar=float(q_load[[b - 1 for b in buses]].sum()), served_P_kW=float(served_p[[b - 1 for b in buses]].sum()), served_Q_kvar=float(served_q[[b - 1 for b in buses]].sum()), shed_P_kW=float(p_load[[b - 1 for b in buses]].sum() - served_p[[b - 1 for b in buses]].sum()), shed_Q_kvar=float(q_load[[b - 1 for b in buses]].sum() - served_q[[b - 1 for b in buses]].sum()), actual_source_P_kW=sum(r['actual_P_kW'] for r in injections), actual_source_Q_kvar=sum(r['actual_Q_kvar'] for r in injections), eligible_real_roots=json.dumps(eligible_buses), selected_topological_root=selected, actual_injecting_sources=json.dumps(actual), solver_status=solver_status, max_equality_residual=equality_residual, max_inequality_violation=inequality_violation))
-    return dict(active=active, islands=islands, served_p=served_p, served_q=served_q, sources=source_rows, roots=root_rows, services=service_rows, voltage=solved_voltage, max_util=max_util)
+    physical_edges = np.asarray(grid.power_edges, dtype=int)
+    active_by_endpoints = {
+        (int(u), int(v)): int(solver_bid) for solver_bid, (u, v) in active
+    }
+    branch_rows = []
+    for physical_bid, raw_edge in enumerate(physical_edges, start=1):
+        u, v = map(int, raw_edge[:2])
+        reverse = (v, u)
+        is_active = (u, v) in active_by_endpoints or reverse in active_by_endpoints
+        key = (u, v) if (u, v) in active_by_endpoints else reverse
+        p_flow, q_flow, solver_bid = flow_by_edge.get(key, (0.0, 0.0, active_by_endpoints.get(key, physical_bid)))
+        if key == reverse and is_active:
+            p_flow, q_flow = -p_flow, -q_flow
+        branch_rows.append(dict(
+            branch_id=physical_bid, from_bus=u, to_bus=v,
+            normally_closed=bool(raw_edge[2]),
+            failed=bool(physical_bid <= 32 and (mask >> (physical_bid - 1)) & 1),
+            status='CLOSED' if is_active else 'OPEN',
+            P_flow_kW=float(p_flow) if is_active else 0.0,
+            Q_flow_kvar=float(q_flow) if is_active else 0.0,
+            P_flow=float(p_flow) if is_active else 0.0,
+            Q_flow=float(q_flow) if is_active else 0.0,
+            branch_limit_kVA=branch_limit_kw,
+            solver_parameter_branch_id=int(solver_bid) if is_active else '',
+        ))
+
+    component_by_bus = {
+        bus: component_id
+        for component_id, island in enumerate(islands, start=1)
+        for bus in island
+    }
+    bus_rows = []
+    for bus in range(1, 34):
+        p_raw = float(p_load[bus - 1]); q_raw = float(q_load[bus - 1])
+        p_served = float(served_p[bus - 1]); q_served = float(served_q[bus - 1])
+        bus_rows.append(dict(
+            bus=bus, component_id=component_by_bus[bus],
+            P_load_kW=p_raw, Q_load_kvar=q_raw,
+            P_served_fraction=1.0 if p_raw <= TOL else p_served / p_raw,
+            Q_served_fraction=1.0 if q_raw <= TOL else q_served / q_raw,
+            P_served_kW=p_served, Q_served_kvar=q_served,
+            P_shed_kW=p_raw - p_served, Q_shed_kvar=q_raw - q_served,
+            voltage_pu=float(solved_voltage[bus - 1]),
+            P_load=p_raw, Q_load=q_raw,
+            served_fraction=1.0 if p_raw <= TOL else p_served / p_raw,
+            P_served=p_served, Q_served=q_served,
+            P_shed=p_raw - p_served, Q_shed=q_raw - q_served,
+            voltage=float(solved_voltage[bus - 1]),
+        ))
+
+    component_rows = []
+    for component_id, (island, service) in enumerate(zip(islands, service_rows), start=1):
+        island_set = set(island)
+        eligible_ids = [row['resource_id'] for row in source_rows if row['bus'] in island_set]
+        component_rows.append(dict(
+            component_id=component_id, buses=list(island),
+            total_P_load_kW=service['load_P_kW'],
+            total_Q_load_kvar=service['load_Q_kvar'],
+            total_P_served_kW=service['served_P_kW'],
+            total_Q_served_kvar=service['served_Q_kvar'],
+            total_P_shed_kW=service['shed_P_kW'],
+            total_Q_shed_kvar=service['shed_Q_kvar'],
+            total_load=service['load_P_kW'],
+            total_served=service['served_P_kW'],
+            total_shed=service['shed_P_kW'],
+            real_sources=eligible_ids,
+            actual_injecting_sources=json.loads(service['actual_injecting_sources']),
+        ))
+
+    totals = dict(
+        total_P_load_kW=float(p_load.sum()),
+        total_Q_load_kvar=float(q_load.sum()),
+        total_P_served_kW=float(served_p.sum()),
+        total_Q_served_kvar=float(served_q.sum()),
+        total_P_shed_kW=float(p_load.sum() - served_p.sum()),
+        total_Q_shed_kvar=float(q_load.sum() - served_q.sum()),
+    )
+    return dict(active=active, islands=islands, served_p=served_p,
+                served_q=served_q, sources=source_rows, roots=root_rows,
+                services=service_rows, voltage=solved_voltage,
+                max_util=max_util, totals=totals, buses=bus_rows,
+                bus_rows=bus_rows, branches=branch_rows,
+                branch_rows=branch_rows, components=component_rows,
+                component_rows=component_rows,
+                total_P_load=totals['total_P_load_kW'],
+                total_P_served=totals['total_P_served_kW'],
+                total_P_shed=totals['total_P_shed_kW'],
+                total_P_load_kW=totals['total_P_load_kW'],
+                total_P_served_kW=totals['total_P_served_kW'],
+                total_P_shed_kW=totals['total_P_shed_kW'])
+
+
+def dispatch_interval(mask, start, end, vehicles, station):
+    """Solve and account for one positive-duration electrical/H2 interval."""
+    dt = float(end - start)
+    real_sources = []
+    for i, bus in enumerate(FC_BUSES):
+        if station[i] > TOL:
+            h_before = float(station[i])
+            real_sources.append((
+                'FIXED_FC', 'FC-%d' % (i + 1), bus,
+                min(FC_PMAX[i], h_before * H2_PER_KWH / dt), i, h_before,
+                FC_PMAX[i], i + 1,
+            ))
+    active_vehicles = [
+        v for v in vehicles
+        if vehicle_active(v, start) and v['onboard_H2_kg'] > TOL
+    ]
+    for vehicle in active_vehicles:
+        h_before = float(vehicle['onboard_H2_kg'])
+        real_sources.append((
+            'MFCV', 'MFCV-%d' % vehicle['vehicle_id'], int(vehicle['bus']),
+            min(MFCV_PMAX, h_before * H2_PER_KWH / dt),
+            vehicle['vehicle_id'], h_before, MFCV_PMAX, None,
+        ))
+
+    result = _dispatch_electrical(mask, real_sources)
+    for row in result['sources']:
+        kind = row['resource_type']
+        if kind == 'FIXED_FC':
+            index = int(row['resource_id'].split('-')[1]) - 1
+            h_before = float(station[index])
+            h_use = row['actual_P_kW'] * dt / H2_PER_KWH
+            station[index] -= h_use
+            row.update(source_record(
+                kind, row['resource_id'], row['bus'], FC_PMAX[index],
+                row['actual_P_kW'], row['actual_Q_kvar'], h_before, h_use,
+                station[index], index + 1,
+            ))
+        elif kind == 'MFCV':
+            vehicle_id = int(row['resource_id'].split('-')[1])
+            vehicle = next(v for v in active_vehicles if v['vehicle_id'] == vehicle_id)
+            h_before = float(vehicle['onboard_H2_kg'])
+            h_use = row['actual_P_kW'] * dt / H2_PER_KWH
+            vehicle['onboard_H2_kg'] -= h_use
+            row.update(source_record(
+                kind, row['resource_id'], row['bus'], MFCV_PMAX,
+                row['actual_P_kW'], row['actual_Q_kvar'], h_before, h_use,
+                vehicle['onboard_H2_kg'],
+            ))
+    return result
+
+
+def _snapshot_vehicle_value(vehicle, name, default=None):
+    if isinstance(vehicle, dict):
+        return vehicle.get(name, default)
+    return getattr(vehicle, name, default)
+
+
+def _snapshot_vehicle_fields(vehicle):
+    state = _snapshot_vehicle_value(
+        vehicle, 'state', _snapshot_vehicle_value(vehicle, 'status', 'PARKED')
+    )
+    bus = _snapshot_vehicle_value(
+        vehicle, 'bus', _snapshot_vehicle_value(vehicle, 'current_node', None)
+    )
+    h2 = _snapshot_vehicle_value(
+        vehicle, 'onboard_H2_kg', _snapshot_vehicle_value(vehicle, 'H2_kg', 0.0)
+    )
+    moving = bool(_snapshot_vehicle_value(vehicle, 'moving', state == 'MOVING'))
+    vehicle_id = _snapshot_vehicle_value(vehicle, 'vehicle_id')
+    return vehicle_id, bus, state, float(h2), moving
+
+
+def _snapshot_vehicle_active(vehicle, current_time):
+    _, bus, state, _, moving = _snapshot_vehicle_fields(vehicle)
+    arrival = float(_snapshot_vehicle_value(vehicle, 'arrival', -np.inf))
+    departure = float(_snapshot_vehicle_value(vehicle, 'departure', np.inf))
+    return (bus is not None and arrival <= current_time < departure
+            and state == 'SERVICE' and not moving)
+
+
+def _snapshot_source_row(kind, resource_id, bus, pmax, available,
+                         dispatch_by_id, h2_kg=0.0, reason=''):
+    dispatch = dispatch_by_id.get(resource_id)
+    return dict(
+        source_type=kind, resource_type=kind, resource_id=resource_id,
+        bus=None if bus is None else int(bus), availability=bool(available),
+        availability_reason=reason, nameplate_Pmax_kW=float(pmax),
+        available_Pmax_kW=float(pmax) if available else 0.0,
+        actual_P_kW=0.0 if dispatch is None else float(dispatch['actual_P_kW']),
+        actual_Q_kvar=0.0 if dispatch is None else float(dispatch['actual_Q_kvar']),
+        P_dispatch=0.0 if dispatch is None else float(dispatch['actual_P_kW']),
+        Q_dispatch=0.0 if dispatch is None else float(dispatch['actual_Q_kvar']),
+        H2_kg=float(h2_kg), H2_use_kg=0.0,
+    )
+
+
+def dispatch_snapshot(mask, current_time, vehicles, station, htt_vehicles=None):
+    """Return current electrical feasibility without duration or state mutation."""
+    current_time = float(current_time)
+    if not np.isfinite(current_time):
+        raise ValueError('Snapshot current time must be finite')
+    station_values = np.asarray(station, dtype=float).reshape(-1)
+    if station_values.shape != (len(FC_BUSES),):
+        raise ValueError('Snapshot station inventory must contain four sites')
+    if not np.isfinite(station_values).all() or np.any(station_values < 0.0):
+        raise ValueError('Snapshot station inventory must be finite and nonnegative')
+
+    real_sources = []
+    fixed_availability = []
+    for i, bus in enumerate(FC_BUSES):
+        h2_kg = float(station_values[i])
+        available = h2_kg > TOL
+        fixed_availability.append(available)
+        if available:
+            real_sources.append((
+                'FIXED_FC', 'FC-%d' % (i + 1), bus, FC_PMAX[i], i,
+                h2_kg, FC_PMAX[i], i + 1,
+            ))
+
+    mfcv_availability = []
+    vehicle_values = vehicles.values() if isinstance(vehicles, dict) else vehicles
+    for vehicle in vehicle_values:
+        vehicle_id, bus, state, h2_kg, moving = _snapshot_vehicle_fields(vehicle)
+        if vehicle_id is None:
+            raise ValueError('Snapshot MFCV requires vehicle_id')
+        if not np.isfinite(h2_kg) or h2_kg < 0.0:
+            raise ValueError('Snapshot MFCV H2 must be finite and nonnegative')
+        active = _snapshot_vehicle_active(vehicle, current_time)
+        available = active and h2_kg > TOL
+        mfcv_availability.append((vehicle, vehicle_id, bus, state, moving,
+                                  active, available, h2_kg))
+        if available:
+            real_sources.append((
+                'MFCV', 'MFCV-%d' % vehicle_id,
+                int(bus), MFCV_PMAX, vehicle_id,
+                h2_kg, MFCV_PMAX, None,
+            ))
+
+    result = _dispatch_electrical(mask, real_sources)
+    dispatch_rows = result['sources']
+    dispatch_by_id = {row['resource_id']: row for row in dispatch_rows}
+    source_rows = [_snapshot_source_row(
+        'UTILITY', 'UTILITY-BUS-1', 1, p_load_sum() * 2.0, True,
+        dispatch_by_id, reason='UTILITY_AVAILABLE',
+    )]
+    for i, bus in enumerate(FC_BUSES):
+        available = fixed_availability[i]
+        source_rows.append(_snapshot_source_row(
+            'FIXED_FC', 'FC-%d' % (i + 1), bus, FC_PMAX[i], available,
+            dispatch_by_id, station_values[i],
+            'H2_POSITIVE' if available else 'H2_AT_OR_BELOW_TOL',
+        ))
+    for vehicle, vehicle_id, bus, state, moving, active, available, h2_kg in mfcv_availability:
+        if not active:
+            reason = 'MOVING' if moving or state == 'MOVING' else 'NOT_SERVICE_AT_BUS'
+        elif h2_kg <= TOL:
+            reason = 'H2_AT_OR_BELOW_TOL'
+        else:
+            reason = 'SERVICE_AT_BUS_WITH_H2'
+        source_rows.append(_snapshot_source_row(
+            'MFCV', 'MFCV-%d' % vehicle_id, bus,
+            MFCV_PMAX, available, dispatch_by_id, h2_kg, reason,
+        ))
+    htt_values = htt_vehicles.values() if isinstance(htt_vehicles, dict) else (htt_vehicles or [])
+    for htt in htt_values:
+        if isinstance(htt, dict):
+            vehicle_id = htt.get('vehicle_id')
+            bus = htt.get('bus', htt.get('current_node'))
+            h2_kg = htt.get('cargo_H2_kg', 0.0)
+        else:
+            vehicle_id = getattr(htt, 'vehicle_id')
+            bus = getattr(htt, 'current_node', None)
+            h2_kg = getattr(htt, 'cargo_H2_kg', 0.0)
+        if not np.isfinite(h2_kg) or h2_kg < 0.0:
+            raise ValueError('Snapshot HTT cargo must be finite and nonnegative')
+        source_rows.append(_snapshot_source_row(
+            'HTT', 'HTT-%s' % vehicle_id, bus, 0.0, False,
+            dispatch_by_id, h2_kg, 'LOGISTICS_ONLY_PQ_ZERO',
+        ))
+
+    result['source_dispatch'] = dispatch_rows
+    result['sources'] = source_rows
+    result['snapshot_time_h'] = current_time
+    result['snapshot_semantics'] = 'READ_ONLY_CURRENT_POWER_FEASIBILITY'
+    return result
 
 
 def case_definitions():

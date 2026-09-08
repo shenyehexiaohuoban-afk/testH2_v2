@@ -1,0 +1,185 @@
+{
+  "B3": {
+    "status": "PASS",
+    "source": "W_OOS/V1/results/b3-physics-smoke/run-006/physics_QA.json",
+    "sha256": "4d3906626b94851968055208fce03bb4a5cd363178c953daa45f4cc7fc3fef30",
+    "current_rerun": "NOT_RUN_BY_SNAPSHOT_SMOKE"
+  },
+  "B4C": {
+    "status": "PASS",
+    "source": "W_OOS/V1/results/b4-event-driven-restoration/run-009/final_summary.json",
+    "sha256": "49e44838179d9bdd45cf60d2e9d57b3fd70bb30c96f8b94786ededc4808d92dc",
+    "current_rerun": "NOT_RUN_BY_SNAPSHOT_SMOKE",
+    "historical_artifact_identity": {
+      "status": "PASS",
+      "baseline": "W_OOS/V1/results/b4-event-driven-restoration/run-008-b4d-regression",
+      "candidate": "W_OOS/V1/results/b4-event-driven-restoration/run-009",
+      "checked_file_count": 26,
+      "identical_file_count": 26,
+      "files": [
+        {
+          "file": "00_report_zh.md",
+          "baseline_sha256": "4d7fdb2dfc78600ec40a3ebd74c855f39774c65d00c93ce1158a2d93dd5e675e",
+          "candidate_sha256": "4d7fdb2dfc78600ec40a3ebd74c855f39774c65d00c93ce1158a2d93dd5e675e",
+          "status": "IDENTICAL"
+        },
+        {
+          "file": "EENS_event.csv",
+          "baseline_sha256": "6d2474448177befcb9699a17c47d6c45aa81674dc4a30abe432a52f12bfd7c43",
+          "candidate_sha256": "6d2474448177befcb9699a17c47d6c45aa81674dc4a30abe432a52f12bfd7c43",
+          "status": "IDENTICAL"
+        },
+        {
+          "file": "EENS_halfhour_reporting.csv",
+          "baseline_sha256": "ac5828b31ef5f2e368f203b4466b50c4eb1166703d67c85e0be9f0b8dece7348",
+          "candidate_sha256": "ac5828b31ef5f2e368f203b4466b50c4eb1166703d67c85e0be9f0b8dece7348",
+          "status": "IDENTICAL"
+        },
+        {
+          "file": "MFCV_H2_interval_ledger.csv",
+          "baseline_sha256": "47df8eb4c0d3a14b75675f5ebf3d9efdcb76224837a36f4ed4459425f5a49f66",
+          "candidate_sha256": "47df8eb4c0d3a14b75675f5ebf3d9efdcb76224837a36f4ed4459425f5a49f66",
+          "status": "IDENTICAL"
+        },
+        {
+          "file": "MFCV_H2_ledger.csv",
+          "baseline_sha256": "47df8eb4c0d3a14b75675f5ebf3d9efdcb76224837a36f4ed4459425f5a49f66",
+          "candidate_sha256": "47df8eb4c0d3a14b75675f5ebf3d9efdcb76224837a36f4ed4459425f5a49f66",
+          "status": "IDENTICAL"
+        },
+        {
+          "file": "QA_closeout.csv",
+          "baseline_sha256": "8c834e20f33c2e7db9e30ca14da925e6b847b559c37573c514acd15d55818c51",
+          "candidate_sha256": "8c834e20f33c2e7db9e30ca14da925e6b847b559c37573c514acd15d55818c51",
+          "status": "IDENTICAL"
+        },
+        {
+          "file": "QA_closeout.json",
+          "baseline_sha256": "85cbd96c97b9bc97d9d8a973df92a9d9c4abc6af6e6fe036fc5b06cdc86c5512",
+          "candidate_sha256": "85cbd96c97b9bc97d9d8a973df92a9d9c4abc6af6e6fe036fc5b06cdc86c5512",
+          "status": "IDENTICAL"
+        },
+        {
+          "file": "case3_forensic.csv",
+          "baseline_sha256": "10d8a2e89acebeee8cdaa3168d6d8f39d9549f8849de6a5d63d78e87f21bdfc4",
+          "candidate_sha256": "10d8a2e89acebeee8cdaa3168d6d8f39d9549f8849de6a5d63d78e87f21bdfc4",
+          "status": "IDENTICAL"
+        },
+        {
+          "file": "case4_forensic.csv",
+          "baseline_sha256": "4584ef2dcc514255df52c623c186f95a1dd287d2e8354f9b88fa1d6fa5cc478d",
+          "candidate_sha256": "4584ef2dcc514255df52c623c186f95a1dd287d2e8354f9b88fa1d6fa5cc478d",
+          "status": "IDENTICAL"
+        },
+        {
+          "file": "electrical_service_ledger.csv",
+          "baseline_sha256": "6b89fffcf4262fa5d032d09a8f9aa0af53b0474e896ba1872990ca67ff834517",
+          "candidate_sha256": "6b89fffcf4262fa5d032d09a8f9aa0af53b0474e896ba1872990ca67ff834517",
+          "status": "IDENTICAL"
+        },
+        {
+          "file": "event_interval_results.csv",
+          "baseline_sha256": "e900dce758e7d0b8c0165c8bb2a2197ebd2bc119afbfb5cbabadcaa45e6473be",
+          "candidate_sha256": "e900dce758e7d0b8c0165c8bb2a2197ebd2bc119afbfb5cbabadcaa45e6473be",
+          "status": "IDENTICAL"
+        },
+        {
+          "file": "event_timeline.csv",
+          "baseline_sha256": "3061efe0349344bea1b466d618531a30a72ee1bd582df67f04de1f5f95539375",
+          "candidate_sha256": "3061efe0349344bea1b466d618531a30a72ee1bd582df67f04de1f5f95539375",
+          "status": "IDENTICAL"
+        },
+        {
+          "file": "exact_modified_files.csv",
+          "baseline_sha256": "23a57f672a227db6572ec64406fac0f6e160e1c67367a44ce738351980894bed",
+          "candidate_sha256": "23a57f672a227db6572ec64406fac0f6e160e1c67367a44ce738351980894bed",
+          "status": "IDENTICAL"
+        },
+        {
+          "file": "final_summary.json",
+          "baseline_sha256": "49e44838179d9bdd45cf60d2e9d57b3fd70bb30c96f8b94786ededc4808d92dc",
+          "candidate_sha256": "49e44838179d9bdd45cf60d2e9d57b3fd70bb30c96f8b94786ededc4808d92dc",
+          "status": "IDENTICAL"
+        },
+        {
+          "file": "fixed_case_tests.csv",
+          "baseline_sha256": "0fbff552288588f41063d93270ac3fbaf3d04fccc625ab9a8854806203157bf2",
+          "candidate_sha256": "0fbff552288588f41063d93270ac3fbaf3d04fccc625ab9a8854806203157bf2",
+          "status": "IDENTICAL"
+        },
+        {
+          "file": "forensic_findings.json",
+          "baseline_sha256": "433459264ffdca049516ea5febefe564bd1c35f68f424cf812f3ed7f8f9af728",
+          "candidate_sha256": "433459264ffdca049516ea5febefe564bd1c35f68f424cf812f3ed7f8f9af728",
+          "status": "IDENTICAL"
+        },
+        {
+          "file": "frozen_realization_result.csv",
+          "baseline_sha256": "ce0854467c86d52a977972976a0c60e80e6c1828a5647d421a6e378324ac97a1",
+          "candidate_sha256": "ce0854467c86d52a977972976a0c60e80e6c1828a5647d421a6e378324ac97a1",
+          "status": "IDENTICAL"
+        },
+        {
+          "file": "inventory_source.json",
+          "baseline_sha256": "9ea4b77fc27c3b6ede71b7a0119cf961accd0edd73fba2ca615d3cdbd05c21b2",
+          "candidate_sha256": "9ea4b77fc27c3b6ede71b7a0119cf961accd0edd73fba2ca615d3cdbd05c21b2",
+          "status": "IDENTICAL"
+        },
+        {
+          "file": "island_root_ledger.csv",
+          "baseline_sha256": "5c21072a58344222c9b1da5714d4a29c714e10650c4947b8f9a476a73b46d02a",
+          "candidate_sha256": "5c21072a58344222c9b1da5714d4a29c714e10650c4947b8f9a476a73b46d02a",
+          "status": "IDENTICAL"
+        },
+        {
+          "file": "restricted_timeline_comparison.csv",
+          "baseline_sha256": "105d9e9f4c7ed32efcb09f8968f8ceb20a3b025c4f226dd448b3b8e3dc7c90e7",
+          "candidate_sha256": "105d9e9f4c7ed32efcb09f8968f8ceb20a3b025c4f226dd448b3b8e3dc7c90e7",
+          "status": "IDENTICAL"
+        },
+        {
+          "file": "root_ledger.csv",
+          "baseline_sha256": "5c21072a58344222c9b1da5714d4a29c714e10650c4947b8f9a476a73b46d02a",
+          "candidate_sha256": "5c21072a58344222c9b1da5714d4a29c714e10650c4947b8f9a476a73b46d02a",
+          "status": "IDENTICAL"
+        },
+        {
+          "file": "source_call_chain.csv",
+          "baseline_sha256": "846dfef885d5bcb61da609142debda3b295f1de435719e2366f03a296e012b2a",
+          "candidate_sha256": "846dfef885d5bcb61da609142debda3b295f1de435719e2366f03a296e012b2a",
+          "status": "IDENTICAL"
+        },
+        {
+          "file": "station_H2_interval_ledger.csv",
+          "baseline_sha256": "d9f1b931bc521c724970d52c5dd371d54dc3a976a7fcd3dbf20d35fa25883284",
+          "candidate_sha256": "d9f1b931bc521c724970d52c5dd371d54dc3a976a7fcd3dbf20d35fa25883284",
+          "status": "IDENTICAL"
+        },
+        {
+          "file": "station_H2_ledger.csv",
+          "baseline_sha256": "d9f1b931bc521c724970d52c5dd371d54dc3a976a7fcd3dbf20d35fa25883284",
+          "candidate_sha256": "d9f1b931bc521c724970d52c5dd371d54dc3a976a7fcd3dbf20d35fa25883284",
+          "status": "IDENTICAL"
+        },
+        {
+          "file": "system_H2_identity.csv",
+          "baseline_sha256": "74cf377d279c15d46b6b2c4861ffdba22317d7f623143c77e0a26f4f89fabdd3",
+          "candidate_sha256": "74cf377d279c15d46b6b2c4861ffdba22317d7f623143c77e0a26f4f89fabdd3",
+          "status": "IDENTICAL"
+        },
+        {
+          "file": "voltage_line_loading.csv",
+          "baseline_sha256": "940434cc580b022fc384b66afb1dcab3582786b48c9025c57873c7d7cd6d7cc9",
+          "candidate_sha256": "940434cc580b022fc384b66afb1dcab3582786b48c9025c57873c7d7cd6d7cc9",
+          "status": "IDENTICAL"
+        }
+      ]
+    }
+  },
+  "B4D": {
+    "status": "PASS",
+    "source": "W_OOS/V1/results/b4d-htt-given-action/run-006/final_summary.json",
+    "sha256": "8c815730db7021baae04ba13acfc5aa09c4ec364712fe06005c2692ad7eec467",
+    "current_rerun": "NOT_RUN_BY_SNAPSHOT_SMOKE"
+  }
+}

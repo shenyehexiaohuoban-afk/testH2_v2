@@ -1,0 +1,2 @@
+case,mask,snapshot_time_h,snapshot_semantics,bus23_P_load_kW,bus23_P_served_kW,bus23_P_shed_kW,bus23_Q_load_kvar,bus23_Q_served_kvar,bus23_voltage_pu,component_id,component_buses,component_total_P_shed_kW,total_P_load_kW,total_P_served_kW,total_P_shed_kW
+CASE-4,6291456,1.2166666666667,READ_ONLY_CURRENT_POWER_FEASIBILITY,90.0,90.0,0.0,50.0,43.58898943540673,1.0,2,[23],0.0,3715.0,3715.0,0.0
