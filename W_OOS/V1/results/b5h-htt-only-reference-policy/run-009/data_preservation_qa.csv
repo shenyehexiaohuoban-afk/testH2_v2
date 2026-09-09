@@ -1,0 +1,6 @@
+check,result,detail
+protected_sources,PASS,B3/B4C/B4D/B5A inputs unchanged
+historical_runs,PASS,new run directory only
+raw_ledgers,PASS,probe/decision/transfer/movement/electrical/island ledgers retained
+same_W_and_damage,PASS,"paired fixtures use identical road, mask, inventory"
+DATA_PRESERVATION_QA,PASS,local-only; no commit/push

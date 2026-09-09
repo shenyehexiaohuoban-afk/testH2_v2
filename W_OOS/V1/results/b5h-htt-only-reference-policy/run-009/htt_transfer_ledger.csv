@@ -1,0 +1,3 @@
+action_id,batch_time_h,transfer_type,requested_kg,transferred_kg,status,reason,htt_id,mfcv_id,station_site,station_bus,station_H2_before_kg,station_H2_after_kg,HTT_cargo_before_kg,HTT_cargo_after_kg,MFCV_onboard_before_kg,MFCV_onboard_after_kg,system_H2_before_kg,system_H2_after_kg,system_H2_transfer_error_kg,fixture,event
+FIXTURE-2_DEFICIT_REACHABLE-LOAD-1-0p0,0.0,STATION_TO_HTT,51.95974142868832,51.95974142868832,TRANSFERRED,,1,,2,14,100.0,48.04025857131168,0.0,51.95974142868832,,,100.0,100.0,0.0,FIXTURE-2_DEFICIT_REACHABLE,LOAD
+FIXTURE-2_DEFICIT_REACHABLE-UNLOAD-1,0.325,HTT_TO_STATION,51.95974142868832,51.95974142868832,TRANSFERRED,,1,,1,24,0.0,51.95974142868832,51.95974142868832,0.0,,,100.0,100.0,0.0,FIXTURE-2_DEFICIT_REACHABLE,UNLOAD

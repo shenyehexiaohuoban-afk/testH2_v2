@@ -1,0 +1,12 @@
+{
+  "B3_REGRESSION": "PASS",
+  "B4C_REGRESSION": "PASS",
+  "B4D_REGRESSION": "PASS",
+  "B5A_SNAPSHOT_REGRESSION": "PASS",
+  "sources": {
+    "B3": "W_OOS/V1/results/b3-physics-smoke/run-005/physics_QA.json",
+    "B4C": "W_OOS/V1/results/b4-event-driven-restoration/run-008-b4d-regression/QA_closeout.json",
+    "B4D": "W_OOS/V1/results/b4d-htt-given-action/run-005/QA_closeout.json",
+    "B5A": "W_OOS/V1/results/b5a-snapshot-interface/run-006/final_summary.json"
+  }
+}

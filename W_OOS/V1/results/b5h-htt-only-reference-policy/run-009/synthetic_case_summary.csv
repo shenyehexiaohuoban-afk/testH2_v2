@@ -1,0 +1,14 @@
+case,result,action,quantity_kg,expected,detail
+H1,PASS,STAY,0.0,STAY,all stations have no deficit
+H2,PASS,DISPATCH,51.95974142868832,DISPATCH,reachable surplus to deficit
+H3,PASS,DISPATCH,80.0,DISPATCH,80 kg capacity bound
+H4,PASS,DISPATCH,5.0,DISPATCH,source surplus bound
+H5,PASS,DISPATCH,50.0,DISPATCH,destination deficit bound
+H6,PASS,STAY,0.0,STAY,arrival at or after 3.5 h
+H7,PASS,STAY,0.0,STAY,road unreachable
+H9,PASS,DISPATCH,30.0,DISPATCH,loaded HTT partially unloads to deficit
+H8,PASS,DISPATCH,100.0,<=100,residual surplus prevents double spend
+H10,PASS,IDENTITY,0.0,zero residual,station + cargo + fixed FC use
+H11,PASS,P=Q=0,0.0,zero,HTT logistics-only state contract
+H12,PASS,MFCV OFF,0.0,zero,"no MFCV roots, movement, H2 use, or initial H2"
+H13,PASS,REPLAY,51.95974142868832,identical,deterministic policy replay

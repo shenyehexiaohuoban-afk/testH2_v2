@@ -1,0 +1,17 @@
+island_buses,eligible_real_roots,selected_topological_root,actual_injecting_sources,root_uniqueness,one_topological_root,fixture,policy,interval_start_h,interval_end_h
+"[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33]","[1, 14, 18, 24, 31]",1,"[""UTILITY-BUS-1""]",True,True,FIXTURE-1_NO_TRANSFER,OFF,0.0,3.5
+"[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33]","[1, 14, 18, 24, 31]",1,"[""UTILITY-BUS-1""]",True,True,FIXTURE-1_NO_TRANSFER,ON,0.0,3.5
+"[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 25, 26, 27, 28, 29, 30, 31, 32, 33]","[1, 14]",1,"[""UTILITY-BUS-1""]",True,True,FIXTURE-2_DEFICIT_REACHABLE,OFF,0.0,3.5
+[24],[],VIRTUAL_ROOT,[],True,True,FIXTURE-2_DEFICIT_REACHABLE,OFF,0.0,3.5
+"[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 25, 26, 27, 28, 29, 30, 31, 32, 33]","[1, 14]",1,"[""UTILITY-BUS-1""]",True,True,FIXTURE-2_DEFICIT_REACHABLE,ON,0.0,0.325
+[24],[],VIRTUAL_ROOT,[],True,True,FIXTURE-2_DEFICIT_REACHABLE,ON,0.0,0.325
+"[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 25, 26, 27, 28, 29, 30, 31, 32, 33]","[1, 14]",1,"[""UTILITY-BUS-1""]",True,True,FIXTURE-2_DEFICIT_REACHABLE,ON,0.325,3.5
+[24],[24],24,"[""FC-1""]",True,True,FIXTURE-2_DEFICIT_REACHABLE,ON,0.325,3.5
+"[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 25, 26, 27, 28, 29, 30, 31, 32, 33]","[1, 14]",1,"[""UTILITY-BUS-1""]",True,True,FIXTURE-3_ROAD_CONSTRAINED,OFF,0.0,1.0
+[24],[],VIRTUAL_ROOT,[],True,True,FIXTURE-3_ROAD_CONSTRAINED,OFF,0.0,1.0
+"[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 25, 26, 27, 28, 29, 30, 31, 32, 33]","[1, 14]",1,"[""UTILITY-BUS-1""]",True,True,FIXTURE-3_ROAD_CONSTRAINED,OFF,1.0,3.5
+[24],[],VIRTUAL_ROOT,[],True,True,FIXTURE-3_ROAD_CONSTRAINED,OFF,1.0,3.5
+"[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 25, 26, 27, 28, 29, 30, 31, 32, 33]","[1, 14]",1,"[""UTILITY-BUS-1""]",True,True,FIXTURE-3_ROAD_CONSTRAINED,ON,0.0,1.0
+[24],[],VIRTUAL_ROOT,[],True,True,FIXTURE-3_ROAD_CONSTRAINED,ON,0.0,1.0
+"[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 25, 26, 27, 28, 29, 30, 31, 32, 33]","[1, 14]",1,"[""UTILITY-BUS-1""]",True,True,FIXTURE-3_ROAD_CONSTRAINED,ON,1.0,3.5
+[24],[],VIRTUAL_ROOT,[],True,True,FIXTURE-3_ROAD_CONSTRAINED,ON,1.0,3.5

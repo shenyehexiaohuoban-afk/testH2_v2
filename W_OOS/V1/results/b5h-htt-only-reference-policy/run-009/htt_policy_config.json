@@ -1,0 +1,36 @@
+{
+  "HTT_ONLY_ARM": true,
+  "ENABLE_MFCV": false,
+  "MFCV_ENABLED": "NO",
+  "MFCV_DISPATCHER_IMPLEMENTED": "NO",
+  "HTT_COUNT": 2,
+  "HTT_CAPACITY_KG": 80.0,
+  "FC_BUSES": [
+    24,
+    14,
+    18,
+    31
+  ],
+  "FC_PMAX_kW": [
+    300.0,
+    150.0,
+    120.0,
+    150.0
+  ],
+  "eta": 0.55,
+  "LHV_kWh_per_kg": 33.33,
+  "horizon_h": 3.5,
+  "decision_triggers": [
+    "t=0",
+    "W structural state change",
+    "HTT arrival",
+    "load/unload completion"
+  ],
+  "policy": "EVENT_DRIVEN_DETERMINISTIC_SURPLUS_TO_DEFICIT_REFERENCE",
+  "empty_nonstation_reposition": "NOT_ESTABLISHED_IN_B5H_A",
+  "direct_refuel": "OFF",
+  "HTT_P": 0.0,
+  "HTT_Q": 0.0,
+  "road_state_event_field": "optional third structural-event tuple field, independent of electrical failure bitmask",
+  "optimality": "NOT_ESTABLISHED"
+}

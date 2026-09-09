@@ -1,0 +1,3 @@
+path,change,protected_module
+W_OOS/V1/src/b5h_htt_only_reference_policy_smoke.py,isolated B5H-A event-driven HTT-only policy and smoke runner,NO
+codex_rule/log.md,append verified B5H-A local-only execution record,NO
